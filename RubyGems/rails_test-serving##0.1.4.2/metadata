@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: rails_test-serving
+version: !ruby/object:Gem::Version
+  version: 0.1.4.2
+platform: ruby
+authors:
+- Roman Le Négrate
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2009-04-20 00:00:00.000000000 Z
+dependencies: []
+description: Makes unit tests of a Rails application run instantly
+email: roman.lenegrate@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- lib/rails_test_serving/bootstrap.rb
+- lib/rails_test_serving/cleaner.rb
+- lib/rails_test_serving/client.rb
+- lib/rails_test_serving/constant_management.rb
+- lib/rails_test_serving/server.rb
+- lib/rails_test_serving/utilities.rb
+- lib/rails_test_serving.rb
+- LICENSE
+- README.mdown
+files:
+- LICENSE
+- Manifest
+- README.mdown
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/rails_test_serving.rb
+- lib/rails_test_serving/bootstrap.rb
+- lib/rails_test_serving/cleaner.rb
+- lib/rails_test_serving/client.rb
+- lib/rails_test_serving/constant_management.rb
+- lib/rails_test_serving/server.rb
+- lib/rails_test_serving/utilities.rb
+- rails_test-serving.gemspec
+- test/rails_test_serving/bootstrap_test.rb
+- test/rails_test_serving/cleaner_test.rb
+- test/rails_test_serving/client_test.rb
+- test/rails_test_serving/constant_management_test.rb
+- test/rails_test_serving/server_test.rb
+- test/rails_test_serving/utilities_test.rb
+- test/test_helper.rb
+homepage: https://github.com/Roman2K/rails-test-serving
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--main"
+- README.mdown
+- "--inline-source"
+- "--line-numbers"
+- "--charset"
+- UTF-8
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.2'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 3
+summary: Makes unit tests of a Rails application run instantly
+test_files:
+- test/rails_test_serving/bootstrap_test.rb
+- test/rails_test_serving/cleaner_test.rb
+- test/rails_test_serving/client_test.rb
+- test/rails_test_serving/constant_management_test.rb
+- test/rails_test_serving/server_test.rb
+- test/rails_test_serving/utilities_test.rb
+- test/test_helper.rb

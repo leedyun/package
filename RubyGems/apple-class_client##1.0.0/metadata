@@ -1,0 +1,139 @@
+--- !ruby/object:Gem::Specification
+name: apple-class_client
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Albert Wang
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: oauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '11.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '11.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: This is a client for accessing Apple MDM's class, person, location, and
+  course rosters.
+email:
+- aywang31@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- README.md
+- Rakefile
+- apple-class_client.gemspec
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/apple_class_client.rb
+- lib/apple_class_client/auth.rb
+- lib/apple_class_client/configuration.rb
+- lib/apple_class_client/error.rb
+- lib/apple_class_client/hacks/typhoeus_request.rb
+- lib/apple_class_client/request.rb
+- lib/apple_class_client/version.rb
+homepage: https://github.com/albertyw/apple_class_client
+licenses:
+- AGPL-3.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Client for accessing Apple MDM class information
+test_files: []

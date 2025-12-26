@@ -1,0 +1,428 @@
+--- !ruby/object:Gem::Specification
+name: aptible_cli
+version: !ruby/object:Gem::Version
+  version: 0.16.3
+platform: ruby
+authors:
+- Frank Macreery
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aptible-resource
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: aptible-api
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: aptible-auth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: aptible-billing
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.20.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.20.0
+- !ruby/object:Gem::Dependency
+  name: git
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: term-ansicolor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: chronic_duration
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.6
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: aptible-tasks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.8
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.8
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: climate_control
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.0.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.0.3
+- !ruby/object:Gem::Dependency
+  name: fabrication
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.15.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.15.2
+description: Aptible CLI
+email:
+- frank@macreery.com
+executables:
+- aptible
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- appveyor.yml
+- aptible_cli.gemspec
+- bin/aptible
+- codecov.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/aptible/cli.rb
+- lib/aptible/cli/agent.rb
+- lib/aptible/cli/error.rb
+- lib/aptible/cli/formatter.rb
+- lib/aptible/cli/formatter/grouped_keyed_list.rb
+- lib/aptible/cli/formatter/keyed_list.rb
+- lib/aptible/cli/formatter/keyed_object.rb
+- lib/aptible/cli/formatter/list.rb
+- lib/aptible/cli/formatter/node.rb
+- lib/aptible/cli/formatter/object.rb
+- lib/aptible/cli/formatter/root.rb
+- lib/aptible/cli/formatter/value.rb
+- lib/aptible/cli/helpers/app.rb
+- lib/aptible/cli/helpers/app_or_database.rb
+- lib/aptible/cli/helpers/database.rb
+- lib/aptible/cli/helpers/environment.rb
+- lib/aptible/cli/helpers/operation.rb
+- lib/aptible/cli/helpers/security_key.rb
+- lib/aptible/cli/helpers/ssh.rb
+- lib/aptible/cli/helpers/system.rb
+- lib/aptible/cli/helpers/token.rb
+- lib/aptible/cli/helpers/tunnel.rb
+- lib/aptible/cli/helpers/vhost.rb
+- lib/aptible/cli/helpers/vhost/option_set_builder.rb
+- lib/aptible/cli/renderer.rb
+- lib/aptible/cli/renderer/base.rb
+- lib/aptible/cli/renderer/json.rb
+- lib/aptible/cli/renderer/text.rb
+- lib/aptible/cli/resource_formatter.rb
+- lib/aptible/cli/subcommands/apps.rb
+- lib/aptible/cli/subcommands/backup.rb
+- lib/aptible/cli/subcommands/config.rb
+- lib/aptible/cli/subcommands/db.rb
+- lib/aptible/cli/subcommands/deploy.rb
+- lib/aptible/cli/subcommands/domains.rb
+- lib/aptible/cli/subcommands/endpoints.rb
+- lib/aptible/cli/subcommands/inspect.rb
+- lib/aptible/cli/subcommands/logs.rb
+- lib/aptible/cli/subcommands/operation.rb
+- lib/aptible/cli/subcommands/ps.rb
+- lib/aptible/cli/subcommands/rebuild.rb
+- lib/aptible/cli/subcommands/restart.rb
+- lib/aptible/cli/subcommands/services.rb
+- lib/aptible/cli/subcommands/ssh.rb
+- lib/aptible/cli/version.rb
+- script/sync-readme-usage
+- spec/aptible/cli/agent_spec.rb
+- spec/aptible/cli/formatter_spec.rb
+- spec/aptible/cli/helpers/git_remote_handle_strategy_spec.rb
+- spec/aptible/cli/helpers/handle_from_git_remote_spec.rb
+- spec/aptible/cli/helpers/operation_spec.rb
+- spec/aptible/cli/helpers/options_handle_strategy_spec.rb
+- spec/aptible/cli/helpers/ssh_spec.rb
+- spec/aptible/cli/helpers/token_spec.rb
+- spec/aptible/cli/helpers/tunnel_spec.rb
+- spec/aptible/cli/renderer/json_spec.rb
+- spec/aptible/cli/renderer/text_spec.rb
+- spec/aptible/cli/resource_formatter_spec.rb
+- spec/aptible/cli/subcommands/apps_spec.rb
+- spec/aptible/cli/subcommands/backup_spec.rb
+- spec/aptible/cli/subcommands/config_spec.rb
+- spec/aptible/cli/subcommands/db_spec.rb
+- spec/aptible/cli/subcommands/deploy_spec.rb
+- spec/aptible/cli/subcommands/domains_spec.rb
+- spec/aptible/cli/subcommands/endpoints_spec.rb
+- spec/aptible/cli/subcommands/inspect_spec.rb
+- spec/aptible/cli/subcommands/logs_spec.rb
+- spec/aptible/cli/subcommands/operation_spec.rb
+- spec/aptible/cli/subcommands/rebuild_spec.rb
+- spec/aptible/cli/subcommands/restart_spec.rb
+- spec/aptible/cli/subcommands/services_spec.rb
+- spec/aptible/cli/subcommands/ssh_spec.rb
+- spec/aptible/cli_spec.rb
+- spec/fabricators/account_fabricator.rb
+- spec/fabricators/app_fabricator.rb
+- spec/fabricators/backup_fabricator.rb
+- spec/fabricators/certificate_fabricator.rb
+- spec/fabricators/configuration_fabricator.rb
+- spec/fabricators/database_credential_fabricator.rb
+- spec/fabricators/database_fabricator.rb
+- spec/fabricators/database_image_fabricator.rb
+- spec/fabricators/operation_fabricator.rb
+- spec/fabricators/service_fabricator.rb
+- spec/fabricators/stack_fabricator.rb
+- spec/fabricators/vhost_fabricator.rb
+- spec/mock/git
+- spec/mock/ssh.bat
+- spec/mock/ssh_mock.rb
+- spec/script/exit-with
+- spec/script/pid-signal
+- spec/script/setpgid
+- spec/script/ssh-spawn
+- spec/shared/mock_ssh_context.rb
+- spec/spec_helper.rb
+homepage: https://github.com/aptible/aptible-cli
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Command-line interface for Aptible services
+test_files:
+- spec/aptible/cli/agent_spec.rb
+- spec/aptible/cli/formatter_spec.rb
+- spec/aptible/cli/helpers/git_remote_handle_strategy_spec.rb
+- spec/aptible/cli/helpers/handle_from_git_remote_spec.rb
+- spec/aptible/cli/helpers/operation_spec.rb
+- spec/aptible/cli/helpers/options_handle_strategy_spec.rb
+- spec/aptible/cli/helpers/ssh_spec.rb
+- spec/aptible/cli/helpers/token_spec.rb
+- spec/aptible/cli/helpers/tunnel_spec.rb
+- spec/aptible/cli/renderer/json_spec.rb
+- spec/aptible/cli/renderer/text_spec.rb
+- spec/aptible/cli/resource_formatter_spec.rb
+- spec/aptible/cli/subcommands/apps_spec.rb
+- spec/aptible/cli/subcommands/backup_spec.rb
+- spec/aptible/cli/subcommands/config_spec.rb
+- spec/aptible/cli/subcommands/db_spec.rb
+- spec/aptible/cli/subcommands/deploy_spec.rb
+- spec/aptible/cli/subcommands/domains_spec.rb
+- spec/aptible/cli/subcommands/endpoints_spec.rb
+- spec/aptible/cli/subcommands/inspect_spec.rb
+- spec/aptible/cli/subcommands/logs_spec.rb
+- spec/aptible/cli/subcommands/operation_spec.rb
+- spec/aptible/cli/subcommands/rebuild_spec.rb
+- spec/aptible/cli/subcommands/restart_spec.rb
+- spec/aptible/cli/subcommands/services_spec.rb
+- spec/aptible/cli/subcommands/ssh_spec.rb
+- spec/aptible/cli_spec.rb
+- spec/fabricators/account_fabricator.rb
+- spec/fabricators/app_fabricator.rb
+- spec/fabricators/backup_fabricator.rb
+- spec/fabricators/certificate_fabricator.rb
+- spec/fabricators/configuration_fabricator.rb
+- spec/fabricators/database_credential_fabricator.rb
+- spec/fabricators/database_fabricator.rb
+- spec/fabricators/database_image_fabricator.rb
+- spec/fabricators/operation_fabricator.rb
+- spec/fabricators/service_fabricator.rb
+- spec/fabricators/stack_fabricator.rb
+- spec/fabricators/vhost_fabricator.rb
+- spec/mock/git
+- spec/mock/ssh.bat
+- spec/mock/ssh_mock.rb
+- spec/script/exit-with
+- spec/script/pid-signal
+- spec/script/setpgid
+- spec/script/ssh-spawn
+- spec/shared/mock_ssh_context.rb
+- spec/spec_helper.rb

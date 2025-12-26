@@ -1,0 +1,181 @@
+--- !ruby/object:Gem::Specification
+name: active-admin_import
+version: !ruby/object:Gem::Version
+  version: 4.2.0
+platform: ruby
+authors:
+- Igor Fedoronchuk
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord-import
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.27'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.27'
+- !ruby/object:Gem::Dependency
+  name: rchardet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: activeadmin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0.pre2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0.pre2
+description: The most efficient way to import for Active Admin
+email:
+- fedoronchuk@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- active-admin_import.gemspec
+- app/views/admin/import.html.erb
+- config/locales/de.yml
+- config/locales/en.yml
+- config/locales/es.yml
+- config/locales/fr.yml
+- config/locales/it.yml
+- config/locales/ja.yml
+- config/locales/ko.yml
+- config/locales/pt-BR.yml
+- config/locales/ru.yml
+- config/locales/tr.yml
+- config/locales/uk.yml
+- config/locales/zh-CN.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/active_admin_import.rb
+- lib/active_admin_import/authorization.rb
+- lib/active_admin_import/dsl.rb
+- lib/active_admin_import/engine.rb
+- lib/active_admin_import/exception.rb
+- lib/active_admin_import/import_result.rb
+- lib/active_admin_import/importer.rb
+- lib/active_admin_import/model.rb
+- lib/active_admin_import/options.rb
+- lib/active_admin_import/version.rb
+- spec/fixtures/files/author.csv
+- spec/fixtures/files/author_broken_header.csv
+- spec/fixtures/files/author_invalid.csv
+- spec/fixtures/files/authors.csv
+- spec/fixtures/files/authors_bom.csv
+- spec/fixtures/files/authors_invalid_db.csv
+- spec/fixtures/files/authors_invalid_model.csv
+- spec/fixtures/files/authors_no_headers.csv
+- spec/fixtures/files/authors_win1251_win_endline.csv
+- spec/fixtures/files/authors_with_ids.csv
+- spec/fixtures/files/authors_with_semicolons.csv
+- spec/fixtures/files/authors_with_tabs.tsv
+- spec/fixtures/files/empty.csv
+- spec/fixtures/files/only_headers.csv
+- spec/fixtures/files/posts.csv
+- spec/fixtures/files/posts_for_author.csv
+- spec/fixtures/files/posts_for_author_no_headers.csv
+- spec/import_result_spec.rb
+- spec/import_spec.rb
+- spec/model_spec.rb
+- spec/spec_helper.rb
+- spec/support/active_model_lint.rb
+- spec/support/admin.rb
+- spec/support/rails_template.rb
+- tasks/test.rake
+homepage: http://github.com/Fivell/active_admin_import
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ActiveAdmin import based on activerecord-import gem.
+test_files:
+- spec/fixtures/files/author.csv
+- spec/fixtures/files/author_broken_header.csv
+- spec/fixtures/files/author_invalid.csv
+- spec/fixtures/files/authors.csv
+- spec/fixtures/files/authors_bom.csv
+- spec/fixtures/files/authors_invalid_db.csv
+- spec/fixtures/files/authors_invalid_model.csv
+- spec/fixtures/files/authors_no_headers.csv
+- spec/fixtures/files/authors_win1251_win_endline.csv
+- spec/fixtures/files/authors_with_ids.csv
+- spec/fixtures/files/authors_with_semicolons.csv
+- spec/fixtures/files/authors_with_tabs.tsv
+- spec/fixtures/files/empty.csv
+- spec/fixtures/files/only_headers.csv
+- spec/fixtures/files/posts.csv
+- spec/fixtures/files/posts_for_author.csv
+- spec/fixtures/files/posts_for_author_no_headers.csv
+- spec/import_result_spec.rb
+- spec/import_spec.rb
+- spec/model_spec.rb
+- spec/spec_helper.rb
+- spec/support/active_model_lint.rb
+- spec/support/admin.rb
+- spec/support/rails_template.rb

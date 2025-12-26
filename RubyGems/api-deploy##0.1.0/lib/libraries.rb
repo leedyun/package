@@ -1,0 +1,10 @@
+require 'artifactory'
+require 'faraday'
+require 'json'
+require 'hashie'
+require 'logging'
+require 'require_all'
+require 'net/ldap'
+require 'github_api'
+
+require_rel '../lib'

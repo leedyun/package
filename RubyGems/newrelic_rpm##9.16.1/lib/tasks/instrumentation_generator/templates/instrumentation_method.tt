@@ -1,3 +1,0 @@
-def <%= @method.downcase %>_with_new_relic<%= "(#{@args})" unless @args.empty? %>
-  # add instrumentation content here
-end

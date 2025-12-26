@@ -1,3 +1,0 @@
-eval_gemfile("../Gemfile")
-
-gem "sqlite3", ">= 2.1"

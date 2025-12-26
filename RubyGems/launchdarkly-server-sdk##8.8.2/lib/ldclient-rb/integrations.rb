@@ -1,6 +1,0 @@
-require "ldclient-rb/integrations/consul"
-require "ldclient-rb/integrations/dynamodb"
-require "ldclient-rb/integrations/file_data"
-require "ldclient-rb/integrations/redis"
-require "ldclient-rb/integrations/test_data"
-require "ldclient-rb/integrations/util/store_wrapper"

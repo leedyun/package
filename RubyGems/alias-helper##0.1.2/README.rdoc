@@ -1,0 +1,8 @@
+= AliasHelper
+
+For some reason Rails does not appear to easily expose the aliases returned by
+ActiveSupport's alias_method_chain.  This adds methods for retrieving the
+aliases that are generated.
+
+Author::  Clyde Law (mailto:clyde@futureadvisor.com)
+License:: Released under the MIT license

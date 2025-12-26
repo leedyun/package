@@ -1,0 +1,113 @@
+--- !ruby/object:Gem::Specification
+name: appium-doc_lint
+version: !ruby/object:Gem::Version
+  version: 0.0.11
+platform: ruby
+authors:
+- code@bootstraponline.com
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-07-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.3.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: posix-spawn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.8
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.8
+description: Appium Doc Lint.
+email:
+- code@bootstraponline.com
+executables:
+- appium_doc_lint
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- appium-doc_lint.gemspec
+- bin/appium_doc_lint
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- gist.md
+- lib/appium_doc_lint.rb
+- lib/appium_doc_lint/lint.rb
+- lib/appium_doc_lint/lint/base.rb
+- lib/appium_doc_lint/lint/ext_missing.rb
+- lib/appium_doc_lint/lint/h156_invalid.rb
+- lib/appium_doc_lint/lint/h2_invalid.rb
+- lib/appium_doc_lint/lint/h2_missing.rb
+- lib/appium_doc_lint/lint/h2_multiple.rb
+- lib/appium_doc_lint/lint/line_break_invalid.rb
+- lib/appium_doc_lint/version.rb
+- release_notes.md
+- spec/data/0.md
+- spec/data/1.md
+- spec/data/sub/3.md
+- spec/helper.rb
+- spec/lint_spec.rb
+homepage: https://github.com/appium/appium_doc_lint
+licenses:
+- http://www.apache.org/licenses/LICENSE-2.0.txt
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Appium Doc Lint
+test_files: []

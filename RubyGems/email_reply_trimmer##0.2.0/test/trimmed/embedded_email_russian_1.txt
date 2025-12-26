@@ -1,1 +1,0 @@
-Why don't you override particular strings with JS?

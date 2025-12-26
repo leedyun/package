@@ -1,0 +1,188 @@
+--- !ruby/object:Gem::Specification
+name: codestats_metrics-reporter
+version: !ruby/object:Gem::Version
+  version: 0.1.13
+platform: ruby
+authors:
+- Esteban Pintos
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.42'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.42'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: httparty
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: s3_uploader
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: oga
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+description: Gem that will let you control your code quality by reporting custom metrics
+  to [CodeStats](https://github.com/Wolox/codestats)
+email:
+- esteban.pintos@wolox.com.ar
+executables:
+- codestats-metrics-reporter
+- console
+- setup
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/codestats-metrics-reporter
+- bin/console
+- bin/setup
+- codestats_metrics-reporter.gemspec
+- config/default.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/code_stats/metrics/reporter.rb
+- lib/code_stats/metrics/reporter/android_jacoco.rb
+- lib/code_stats/metrics/reporter/android_quality.rb
+- lib/code_stats/metrics/reporter/ci.rb
+- lib/code_stats/metrics/reporter/cli.rb
+- lib/code_stats/metrics/reporter/config_loader.rb
+- lib/code_stats/metrics/reporter/config_store.rb
+- lib/code_stats/metrics/reporter/escomplex.rb
+- lib/code_stats/metrics/reporter/karma_coverage.rb
+- lib/code_stats/metrics/reporter/metric_config.rb
+- lib/code_stats/metrics/reporter/rubycritic.rb
+- lib/code_stats/metrics/reporter/simplecov.rb
+- lib/code_stats/metrics/reporter/slather.rb
+- lib/code_stats/metrics/reporter/swiftlint.rb
+- lib/code_stats/metrics/reporter/tailor.rb
+- lib/code_stats/metrics/reporter/version.rb
+homepage: https://github.com/Wolox/codestats-metrics-reporter
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Report metrics to CodeStats
+test_files: []

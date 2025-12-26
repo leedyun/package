@@ -1,0 +1,98 @@
+--- !ruby/object:Gem::Specification
+name: cocoapods_fixbugs-plugin
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- christ.yuj
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.38'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.38'
+description: cocoapods 0.38.2的bugfix
+email:
+- christ.yuj@alibaba-inc.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- cocoapods_fixbugs-plugin.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/cocoapods/fixbugs/plugin.rb
+- lib/cocoapods/fixbugs/plugin/version.rb
+homepage: https://github.com/christ.yuj
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: cocoapods 0.38.2的bugfix
+test_files: []

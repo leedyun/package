@@ -1,0 +1,24 @@
+"use strict";
+
+describe('<%= name(true) %>', function() {
+  var <%= name(true) %>;
+
+  var conf = {};
+
+  beforeEach(function() {
+    module("arethusa.core");
+
+    module('<%= namespaced_name(true) %>');
+
+    inject(function(_<%= name(true) %>_, configurator) {
+      <%= name(true) %> = _<%= name(true) %>_;
+      configurator.defineConfiguration(conf);
+      <%= name(true) %>.init();
+    });
+  });
+
+  // Write your specs here!
+  it('succeeds to load the plugin', function() {
+    expect(<%= name(true) %>).toBeDefined();
+  });
+});

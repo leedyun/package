@@ -1,0 +1,25 @@
+%h4 Бизнесс описание
+%span
+  {{fetch document.business_desc "Нет данных"}}
+
+%h4 Публичность
+%span
+  {{fetch document.publicity "Нет данных"}}
+
+%h4 Тесты
+%span
+  {{fetch document.tests "Нет данных"}}
+
+%h4 Зависимости
+.js-dependencies-container
+  .switch
+    %input.switch-checkbox.js-dependency-switch{type: "checkbox", id: "doc-switch-{{document.slug}}"}
+    %label.switch-label{for: "doc-switch-{{document.slug}}"}
+      %span.switch-inner
+      %span.switch-switch
+
+  %h5 Зависит от
+  {{{fetch document.depends_on "Нет данных"}}}
+
+  %h5 Используется в
+  {{{fetch document.consumers "Нет данных"}}}

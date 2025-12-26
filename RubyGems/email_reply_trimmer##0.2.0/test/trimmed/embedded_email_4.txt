@@ -1,2 +1,0 @@
-If I do exactly that, then the test group won't be saved after a refresh of
-the page.

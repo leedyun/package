@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: a15z7kn-niitsuma_2016_gem
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- niitsken
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Write a longer description or delete this line.
+email:
+- e1614hn@aitt.ac.jp
+- hoge@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- a15z7kn-niitsuma_2016_gem.gemspec
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- koyama.txt
+- lib/a15z7kn_niitsuma_2016_gem.rb
+- lib/a15z7kn_niitsuma_2016_gem/version.rb
+- minimaru.txt
+homepage: 
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Write a short summary, because Rubygems requires one.
+test_files: []

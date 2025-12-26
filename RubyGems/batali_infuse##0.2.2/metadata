@@ -1,0 +1,87 @@
+--- !ruby/object:Gem::Specification
+name: batali_infuse
+version: !ruby/object:Gem::Version
+  version: 0.2.2
+platform: ruby
+authors:
+- Chris Roberts
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: batali
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.11
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.11
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: chef
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.2'
+description: Infuse the Batali resolver into Chef client
+email: code@chrisroberts.org
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- batali_infuse.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/batali-infuse.rb
+- lib/batali-infuse/sync.rb
+- lib/batali-infuse/version.rb
+homepage: https://github.com/hw-labs/batali-infuse
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Batali infusion
+test_files: []

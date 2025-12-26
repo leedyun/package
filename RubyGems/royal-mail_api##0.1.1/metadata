@@ -1,0 +1,180 @@
+--- !ruby/object:Gem::Specification
+name: royal-mail_api
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- Srikanth Kunkulagunta
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: savon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.10'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.9'
+- !ruby/object:Gem::Dependency
+  name: dotenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.21'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.21'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: 
+email:
+- srikanth.kunkulagunta@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/royal_mail_api.rb
+- lib/royal_mail_api/client.rb
+- lib/royal_mail_api/config.rb
+- lib/royal_mail_api/error.rb
+- lib/royal_mail_api/request_handler.rb
+- lib/royal_mail_api/response.rb
+- lib/royal_mail_api/response_handler.rb
+- lib/royal_mail_api/version.rb
+- lib/royal_mail_api/warning.rb
+- lib/royal_mail_api/xml_builder.rb
+- lib/royal_mail_api/xml_parser.rb
+- lib/xml/create_shipment.xml
+- lib/xml/envelope.xml
+- lib/xml/security_header.xml
+- royal-mail_api.gemspec
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ruby wrapper for Royal Mail's API
+test_files: []

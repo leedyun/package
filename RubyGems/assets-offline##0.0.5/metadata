@@ -1,0 +1,57 @@
+--- !ruby/object:Gem::Specification
+name: assets-offline
+version: !ruby/object:Gem::Version
+  version: 0.0.5
+platform: ruby
+authors:
+- Broomyocymru
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies: []
+description: Rails 3.1 offline cache manifest view
+email:
+- broomyocymru@hotmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.textile
+- Rakefile
+- app/controllers/assets_offline_controller.rb
+- app/helpers/assets_offline_helper.rb
+- app/views/assets_offline/show.manifest.erb
+- assets-offline.gemspec
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- init.rb
+- lib/assets_offline.rb
+- lib/assets_offline/version.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Rails 3.1 offline cache manifest view
+test_files: []

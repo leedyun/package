@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification
+name: backbone_subroute-rails
+version: !ruby/object:Gem::Version
+  version: 0.4.6
+platform: ruby
+authors:
+- Alexander Schwartzberg
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-15 00:00:00.000000000 Z
+dependencies: []
+description: 
+email:
+- aeksco@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- VERSION
+- backbone_subroute-rails.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/backbone-subroute-rails.rb
+- vendor/assets/javascripts/backbone.subroute.js
+homepage: https://github.com/aeksco/backbone-subroute-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Rails asset wrapper for backbone.subroute
+test_files: []

@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: ceedling_autorake
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Austin
+- Mullins
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.7
+- !ruby/object:Gem::Dependency
+  name: watch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+description: Ceedling provides a set of tools to deploy its guts in a folder or which
+  can be required in a Rakefile. This makes that process more automatic.
+email:
+- austin.mullins@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- ceedling-autorake-0.0.1.gem
+- ceedling_autorake.gemspec
+- config/autorake.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/autorake.rb
+- lib/autotest.rb
+- lib/version.rb
+homepage: https://github.com/amullins83/ceedling-autorake
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Automated Testing for Ceedling Projects
+test_files: []

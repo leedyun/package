@@ -1,0 +1,60 @@
+--- !ruby/object:Gem::Specification
+name: active-admin_globalize3_locale_selector
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+platform: ruby
+authors:
+- Rubén Norte
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies: []
+description: Active Admin Globalize3 Locale Selector
+email:
+- rubennorte@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- active-admin_globalize3_locale_selector.gemspec
+- app/views/globalize3_locale_selector/_action_item_form.html.erb
+- app/views/globalize3_locale_selector/_sidebar_form.html.erb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/active_admin/globalize3_locale_selector/dsl.rb
+- lib/active_admin/globalize3_locale_selector/engine.rb
+- lib/active_admin_globalize3_locale_selector.rb
+- lib/active_admin_globalize3_locale_selector/version.rb
+- vendor/assets/stylesheets/globalize3_locale_selector.css
+homepage: http://github.com/rubennorte/activeadmin-globalize3-locale-selector
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: This gem adds controls to change the locale used by Globalize3 in Active
+  Admin views. It allows you to see the content in the specified locale while keeping
+  the admin interface in your preferred locale.
+test_files: []

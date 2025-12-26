@@ -1,9 +1,0 @@
-pkg/*
-*.gem
-.bundle
-*.un~
-*.swp
-
-Gemfile.lock
-*.gemfile.lock
-.ruby-version

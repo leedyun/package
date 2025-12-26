@@ -1,0 +1,35 @@
+
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'omniauth/marvin/version'
+
+Gem::Specification.new do |spec|
+spec.name = 'omniauth_marvin'
+  spec.version       = Omniauth::Marvin::VERSION
+  spec.authors       = ['Samy KACIMI']
+  spec.email         = ['samy.kacimi@gmail.com']
+
+  spec.summary       = 'OmniAuth OAuth2 strategy for 42 School'
+  spec.description   = 'This gem is an OmniAuth OAuth2 strategy for 42 School. 42 Students can use it to signup/login on their apps.'
+  spec.homepage      = 'https://github.com/fakenine/omniauth-marvin'
+  spec.license       = 'MIT'
+
+  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
+  # delete this section to allow pushing this gem to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
+  else
+    raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.'
+  end
+
+  spec.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  spec.bindir        = 'exe'
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ['lib']
+
+  spec.add_dependency 'omniauth-oauth2', '1.5.0'
+  spec.add_runtime_dependency 'multi_json', '~> 1.13.1'
+
+  spec.add_development_dependency 'bundler', '~> 1.17.1'
+spec.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

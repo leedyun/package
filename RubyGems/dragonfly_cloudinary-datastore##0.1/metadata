@@ -1,0 +1,98 @@
+--- !ruby/object:Gem::Specification
+name: dragonfly_cloudinary-datastore
+version: !ruby/object:Gem::Version
+  version: '0.1'
+platform: ruby
+authors:
+- Prabhakar Kumar
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dragonfly
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: cloudinary
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+description: Cloudinary based data store for Dragonfly. Works with the latest read
+  write destory interface.
+email:
+- prabhakar97@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- dragonfly_cloudinary-datastore.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/dragonfly-cloudinary-datastore.rb
+- lib/dragonfly/cloudinary_datastore.rb
+homepage: https://github.com/prabhakar97/dragonfly-cloudinary-datastore
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Cloudinary based data store for Dragonfly
+test_files: []

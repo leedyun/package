@@ -1,0 +1,168 @@
+--- !ruby/object:Gem::Specification
+name: airbrake_api
+version: !ruby/object:Gem::Version
+  version: 4.6.1
+platform: ruby
+authors:
+- Steve Agalloco
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: parallel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday_middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: A ruby wrapper for the Airbrake API
+email:
+- steve.agalloco@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- README.md
+- Rakefile
+- airbrake_api.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/airbrake-api.rb
+- lib/airbrake-api/base.rb
+- lib/airbrake-api/client.rb
+- lib/airbrake-api/configuration.rb
+- lib/airbrake-api/core_ext/hash.rb
+- lib/airbrake-api/error.rb
+- lib/airbrake-api/middleware/raise_response_error.rb
+- lib/airbrake-api/middleware/raise_server_error.rb
+- lib/airbrake-api/middleware/scrub_response.rb
+- lib/airbrake-api/notice.rb
+- lib/airbrake-api/project.rb
+- lib/airbrake-api/version.rb
+- lib/airbrake_api.rb
+- spec/airbrake_api/client_spec.rb
+- spec/airbrake_api/error_spec.rb
+- spec/airbrake_api/notice_spec.rb
+- spec/airbrake_api/project_spec.rb
+- spec/airbrake_api_spec.rb
+- spec/fixtures/broken_notice.xml
+- spec/fixtures/deploys.xml
+- spec/fixtures/empty_deploys.xml
+- spec/fixtures/errors.xml
+- spec/fixtures/individual_error.xml
+- spec/fixtures/individual_notice.xml
+- spec/fixtures/notices.xml
+- spec/fixtures/paginated_errors.xml
+- spec/fixtures/paginated_notices.xml
+- spec/fixtures/projects.xml
+- spec/fixtures/unauthorized.xml
+- spec/fixtures/update_error.xml
+- spec/spec_helper.rb
+homepage: https://github.com/spagalloco/airbrake-api
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A ruby wrapper for the Airbrake API
+test_files:
+- spec/airbrake_api/client_spec.rb
+- spec/airbrake_api/error_spec.rb
+- spec/airbrake_api/notice_spec.rb
+- spec/airbrake_api/project_spec.rb
+- spec/airbrake_api_spec.rb
+- spec/fixtures/broken_notice.xml
+- spec/fixtures/deploys.xml
+- spec/fixtures/empty_deploys.xml
+- spec/fixtures/errors.xml
+- spec/fixtures/individual_error.xml
+- spec/fixtures/individual_notice.xml
+- spec/fixtures/notices.xml
+- spec/fixtures/paginated_errors.xml
+- spec/fixtures/paginated_notices.xml
+- spec/fixtures/projects.xml
+- spec/fixtures/unauthorized.xml
+- spec/fixtures/update_error.xml
+- spec/spec_helper.rb

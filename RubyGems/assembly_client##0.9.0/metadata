@@ -1,0 +1,216 @@
+--- !ruby/object:Gem::Specification
+name: assembly_client
+version: !ruby/object:Gem::Version
+  version: 0.9.0
+platform: ruby
+authors:
+- Assembly Education
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+- !ruby/object:Gem::Dependency
+  name: faraday_middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.1'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: 
+email:
+- developers@assembly.education
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- assembly_client.gemspec
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/assembly-client.rb
+- lib/assembly/actions/create.rb
+- lib/assembly/actions/delete.rb
+- lib/assembly/actions/list.rb
+- lib/assembly/actions/read.rb
+- lib/assembly/actions/update.rb
+- lib/assembly/api_model.rb
+- lib/assembly/client.rb
+- lib/assembly/config.rb
+- lib/assembly/faraday_middleware/assembly_oauth2.rb
+- lib/assembly/model.rb
+- lib/assembly/models/academic_year.rb
+- lib/assembly/models/aspect.rb
+- lib/assembly/models/assessment.rb
+- lib/assembly/models/assessment_point.rb
+- lib/assembly/models/attendance.rb
+- lib/assembly/models/calendar_event.rb
+- lib/assembly/models/contact.rb
+- lib/assembly/models/exclusion.rb
+- lib/assembly/models/facet.rb
+- lib/assembly/models/grade.rb
+- lib/assembly/models/grade_set.rb
+- lib/assembly/models/list.rb
+- lib/assembly/models/registration_group.rb
+- lib/assembly/models/result.rb
+- lib/assembly/models/school_detail.rb
+- lib/assembly/models/staff_member.rb
+- lib/assembly/models/student.rb
+- lib/assembly/models/subject.rb
+- lib/assembly/models/teaching_group.rb
+- lib/assembly/models/year_group.rb
+- lib/assembly/resource.rb
+- lib/assembly/util.rb
+- lib/assembly/version.rb
+- lib/assembly_client.rb
+homepage: http://platform.assembly.education
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby client library for the Assembly Platform
+test_files: []

@@ -1,0 +1,318 @@
+--- !ruby/object:Gem::Specification
+name: archivist_client
+version: !ruby/object:Gem::Version
+  version: 0.2.4
+platform: ruby
+authors:
+- Duane Johnson
+- Peter Boling
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: roodi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: gem-release
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+- !ruby/object:Gem::Dependency
+  name: virtus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: representable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: faraday_middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.13'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+description: archivist-client queries archive.org for book data and downloads some
+  things.
+email:
+- duane.johnson@gmail.com
+- peter.boling@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- README.md
+- archivist_client.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/archivist-client.rb
+- lib/archivist/client.rb
+- lib/archivist/client/base.rb
+- lib/archivist/client/constants.rb
+- lib/archivist/client/filters.rb
+- lib/archivist/client/version.rb
+- lib/archivist/models.rb
+- lib/archivist/models/body.rb
+- lib/archivist/models/document.rb
+- lib/archivist/models/file_format.rb
+- lib/archivist/models/format_index.rb
+- lib/archivist/models/header.rb
+- lib/archivist/models/parameters.rb
+- lib/archivist/models/query_response.rb
+- lib/archivist/representations.rb
+- lib/archivist/representations/body.rb
+- lib/archivist/representations/document.rb
+- lib/archivist/representations/file_format.rb
+- lib/archivist/representations/format_index.rb
+- lib/archivist/representations/header.rb
+- lib/archivist/representations/parameters.rb
+- lib/archivist/representations/query_response.rb
+- spec/client_spec.rb
+- spec/fixtures/document.json
+- spec/fixtures/download_files.xml
+- spec/fixtures/query-response.json
+- spec/fixtures/vcr/download.yml
+- spec/fixtures/vcr/search.yml
+- spec/models/body_spec.rb
+- spec/models/document_spec.rb
+- spec/models/file_format_spec.rb
+- spec/models/format_index_spec.rb
+- spec/models/header_spec.rb
+- spec/models/parameters_spec.rb
+- spec/models/query_response_spec.rb
+- spec/representations/document_spec.rb
+- spec/representations/format_index_spec.rb
+- spec/representations/query_response_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/wordtreefoundation/archivist-client
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: archivist-client is an archive.org client library
+test_files:
+- spec/client_spec.rb
+- spec/fixtures/document.json
+- spec/fixtures/download_files.xml
+- spec/fixtures/query-response.json
+- spec/fixtures/vcr/download.yml
+- spec/fixtures/vcr/search.yml
+- spec/models/body_spec.rb
+- spec/models/document_spec.rb
+- spec/models/file_format_spec.rb
+- spec/models/format_index_spec.rb
+- spec/models/header_spec.rb
+- spec/models/parameters_spec.rb
+- spec/models/query_response_spec.rb
+- spec/representations/document_spec.rb
+- spec/representations/format_index_spec.rb
+- spec/representations/query_response_spec.rb
+- spec/spec_helper.rb

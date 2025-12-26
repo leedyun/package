@@ -1,0 +1,3 @@
+require "binary_search_frequency/version"
+require "binary_search_frequency/binary_search_frequency"
+require "binary_search_frequency/array"

@@ -1,0 +1,77 @@
+--- !ruby/object:Gem::Specification
+name: also-validates
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Noah Davis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+description: An ActiveModel validator that validates associated models, copying any
+  errors from composed models up to their parent.
+email:
+- noahd1@yahoo.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- also-validates.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/also_validates.rb
+- lib/also_validates/helper.rb
+- lib/also_validates/validation.rb
+- lib/also_validates/version.rb
+- spec/fixtures/object_fixtures.rb
+- spec/lib/also_validates_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: An ActiveModel validator that validates associated models, copying any errors
+  from composed models up to their parent.
+test_files:
+- spec/fixtures/object_fixtures.rb
+- spec/lib/also_validates_spec.rb
+- spec/spec_helper.rb

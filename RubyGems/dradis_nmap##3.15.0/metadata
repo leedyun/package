@@ -1,0 +1,163 @@
+--- !ruby/object:Gem::Specification
+name: dradis_nmap
+version: !ruby/object:Gem::Version
+  version: 3.15.0
+platform: ruby
+authors:
+- Daniel Martin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dradis-plugins
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: ruby-nmap
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: combustion
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+description: This add-on allows you to upload and parse output produced from Nmap
+  web server scanner into Dradis.
+email:
+- etd@nomejortu.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- dradis_nmap.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/dradis-nmap.rb
+- lib/dradis/plugins/nmap.rb
+- lib/dradis/plugins/nmap/engine.rb
+- lib/dradis/plugins/nmap/field_processor.rb
+- lib/dradis/plugins/nmap/gem_version.rb
+- lib/dradis/plugins/nmap/importer.rb
+- lib/dradis/plugins/nmap/version.rb
+- lib/tasks/thorfile.rb
+- spec/fixtures/files/invalid.xml
+- spec/fixtures/files/nse-01.xml
+- spec/fixtures/files/sample.xml
+- spec/nmap_upload_spec.rb
+- spec/spec_helper.rb
+- templates/host.fields
+- templates/host.sample
+- templates/host.template
+- templates/port.fields
+- templates/port.sample
+- templates/port.template
+homepage: http://dradisframework.org
+licenses:
+- GPL-2
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Nmap add-on for the Dradis Framework.
+test_files:
+- spec/fixtures/files/invalid.xml
+- spec/fixtures/files/nse-01.xml
+- spec/fixtures/files/sample.xml
+- spec/nmap_upload_spec.rb
+- spec/spec_helper.rb

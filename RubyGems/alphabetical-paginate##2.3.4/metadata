@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: alphabetical-paginate
+version: !ruby/object:Gem::Version
+  version: 2.3.4
+platform: ruby
+authors:
+- lingz
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Alphabetical Pagination
+email:
+- lz781@nyu.edu
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- alphabetical-paginate.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/alphabetical_paginate.rb
+- lib/alphabetical_paginate/array.rb
+- lib/alphabetical_paginate/controller_helper.rb
+- lib/alphabetical_paginate/engine.rb
+- lib/alphabetical_paginate/language.rb
+- lib/alphabetical_paginate/railtie.rb
+- lib/alphabetical_paginate/version.rb
+- lib/alphabetical_paginate/view_helpers.rb
+- spec/alpha_example.rb
+- spec/alphabetical_paginate_spec.rb
+- spec/language_spec.rb
+- spec/spec_helper.rb
+- spec/support/helpers.rb
+- vendor/assets/images/aloader.gif
+- vendor/assets/javascripts/alphabetical_paginate.js
+- vendor/assets/javascripts/index.js
+homepage: https://github.com/lingz/alphabetical_paginate
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Pagination
+test_files:
+- spec/alpha_example.rb
+- spec/alphabetical_paginate_spec.rb
+- spec/language_spec.rb
+- spec/spec_helper.rb
+- spec/support/helpers.rb

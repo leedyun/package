@@ -1,0 +1,110 @@
+--- !ruby/object:Gem::Specification
+name: acts-as_publicable
+version: !ruby/object:Gem::Version
+  version: 0.0.4
+platform: ruby
+authors:
+- lucapette
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+description: |-
+  This gem will give you only two scopes and a method for handling
+  published/unpublished stuff. Nothing remarkable bur saved me a lot of typing
+  when I wrote it for a project with an huge number of publishable models.
+  Suggestions are more than welcome.
+email:
+- lucapette@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.textile
+- Rakefile
+- acts-as_publicable.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acts_as_publicable.rb
+- lib/acts_as_publicable/acts_as_publicable.rb
+- lib/acts_as_publicable/routes.rb
+- lib/acts_as_publicable/version.rb
+- lib/generators/acts_as_publicable/USAGE
+- lib/generators/acts_as_publicable/install_generator.rb
+- lib/generators/acts_as_publicable/migration_generator.rb
+- lib/generators/acts_as_publicable/templates/controller.rb
+- lib/generators/acts_as_publicable/templates/helper.rb
+- lib/generators/acts_as_publicable/templates/migration.rb
+- spec/acts_as_publicable/acts_as_publicable_spec.rb
+- spec/schema.rb
+- spec/spec_helper.rb
+- spec/support/models.rb
+homepage: https://github.com/lucapette/acts_as_publicable
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: a simple ActiveRecord extension for handling publishable stuff
+test_files: []

@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification
+name: dot-rake_tasks_in_rails
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+platform: ruby
+authors:
+- mori-dev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies: []
+description: Add rake tasks at "~/.rake/*" to your Rails project.
+email:
+- mori.dev.asdf@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- dot-rake_tasks_in_rails.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/dot_rake_tasks_in_rails.rb
+- lib/dot_rake_tasks_in_rails/railtie.rb
+- lib/dot_rake_tasks_in_rails/version.rb
+homepage: https://github.com/mori-dev/dot_rake_tasks_in_rails
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Add rake tasks at "~/.rake/*" to your Rails project.
+test_files: []

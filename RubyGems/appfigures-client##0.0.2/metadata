@@ -1,0 +1,68 @@
+--- !ruby/object:Gem::Specification
+name: appfigures-client
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Aleksey Dmitriev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-06-26 00:00:00.000000000 Z
+dependencies: []
+description: "    A Ruby wrapper for appfigures.com API\n"
+email: alexey@ioncloud.ru
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- appfigures-client.gemspec
+- appfigures_client-0.0.1.gem
+- config/routes.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/appfigures_client.rb
+- lib/appfigures_client/api.rb
+- lib/appfigures_client/endpoints/ads.rb
+- lib/appfigures_client/endpoints/data.rb
+- lib/appfigures_client/endpoints/endpoint.rb
+- lib/appfigures_client/endpoints/products.rb
+- lib/appfigures_client/endpoints/ranks.rb
+- lib/appfigures_client/endpoints/reviews.rb
+- lib/appfigures_client/endpoints/sales.rb
+- lib/appfigures_client/net/request.rb
+- lib/appfigures_client/version.rb
+- test/helper.rb
+- test/test_appfigures_client.rb
+homepage: http://github.com/addmitriev/appfigures_client
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 3
+summary: API client for AppFigures
+test_files:
+- test/helper.rb
+- test/test_appfigures_client.rb

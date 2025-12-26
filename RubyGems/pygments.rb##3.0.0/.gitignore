@@ -1,7 +1,0 @@
-/.bundle/
-/.idea/
-/Gemfile.lock
-/pkg/
-/tmp
-/vendor/
-*.pyc

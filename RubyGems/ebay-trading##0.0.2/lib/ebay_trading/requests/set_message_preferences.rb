@@ -1,0 +1,16 @@
+require 'ebay_trading/types/asq_preferences'
+
+module EbayTrading # :nodoc:
+  module Requests # :nodoc:
+    # == Attributes
+    #  object_node :asq_preferences, 'ASQPreferences', :class => ASQPreferences, :optional => true
+    class SetMessagePreferences < Abstract
+      include XML::Mapping
+      include Initializer
+      root_element_name 'SetMessagePreferencesRequest'
+      object_node :asq_preferences, 'ASQPreferences', :class => ASQPreferences, :optional => true
+    end
+  end
+end
+
+

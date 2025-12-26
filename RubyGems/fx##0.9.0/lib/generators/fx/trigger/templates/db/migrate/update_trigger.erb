@@ -1,5 +1,0 @@
-class <%= migration_class_name %> < <%= activerecord_migration_class %>
-  def change
-    update_trigger <%= formatted_name %>, on: <%= formatted_table_name %>, version: <%= version %>, revert_to_version: <%= previous_version %>
-  end
-end

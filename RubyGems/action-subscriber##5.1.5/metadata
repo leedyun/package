@@ -1,0 +1,329 @@
+--- !ruby/object:Gem::Specification
+name: action-subscriber
+version: !ruby/object:Gem::Version
+  version: 5.1.5
+platform: ruby
+authors:
+- Brian Stien
+- Adam Hutchison
+- Brandon Dewitt
+- Devin Christensen
+- Michael Ries
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: bunny
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: active_publisher
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: pry-coolline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-nav
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rabbitmq_http_api_client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: ActionSubscriber is a DSL that allows a rails app to consume messages
+  from a RabbitMQ broker.
+email:
+- brianastien@gmail.com
+- liveh2o@gmail.com
+- brandonsdewitt@gmail.com
+- quixoten@gmail.com
+- michael@riesd.com
+executables:
+- action_subscriber
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- LICENSE.txt
+- README.md
+- Rakefile
+- action-subscriber.gemspec
+- bin/action_subscriber
+- examples/at_least_once.rb
+- examples/at_most_once.rb
+- examples/basic_subscriber.rb
+- examples/message_acknowledgement.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/action_subscriber.rb
+- lib/action_subscriber/babou.rb
+- lib/action_subscriber/base.rb
+- lib/action_subscriber/bunny/subscriber.rb
+- lib/action_subscriber/configuration.rb
+- lib/action_subscriber/default_routing.rb
+- lib/action_subscriber/dsl.rb
+- lib/action_subscriber/logging.rb
+- lib/action_subscriber/march_hare/subscriber.rb
+- lib/action_subscriber/message_retry.rb
+- lib/action_subscriber/middleware.rb
+- lib/action_subscriber/middleware/active_record/connection_management.rb
+- lib/action_subscriber/middleware/active_record/query_cache.rb
+- lib/action_subscriber/middleware/decoder.rb
+- lib/action_subscriber/middleware/env.rb
+- lib/action_subscriber/middleware/error_handler.rb
+- lib/action_subscriber/middleware/router.rb
+- lib/action_subscriber/middleware/runner.rb
+- lib/action_subscriber/preload.rb
+- lib/action_subscriber/rabbit_connection.rb
+- lib/action_subscriber/railtie.rb
+- lib/action_subscriber/route.rb
+- lib/action_subscriber/route_set.rb
+- lib/action_subscriber/router.rb
+- lib/action_subscriber/rspec.rb
+- lib/action_subscriber/subscribable.rb
+- lib/action_subscriber/thread_pools.rb
+- lib/action_subscriber/uri.rb
+- lib/action_subscriber/version.rb
+- routing.md
+- spec/integration/around_filters_spec.rb
+- spec/integration/at_least_once_spec.rb
+- spec/integration/at_most_once_spec.rb
+- spec/integration/automatic_reconnect_spec.rb
+- spec/integration/basic_subscriber_spec.rb
+- spec/integration/custom_actions_spec.rb
+- spec/integration/custom_headers_spec.rb
+- spec/integration/decoding_payloads_spec.rb
+- spec/integration/manual_acknowledgement_spec.rb
+- spec/lib/action_subscriber/base_spec.rb
+- spec/lib/action_subscriber/configuration_spec.rb
+- spec/lib/action_subscriber/dsl_spec.rb
+- spec/lib/action_subscriber/middleware/active_record/connection_management_spec.rb
+- spec/lib/action_subscriber/middleware/active_record/query_cache_spec.rb
+- spec/lib/action_subscriber/middleware/decoder_spec.rb
+- spec/lib/action_subscriber/middleware/env_spec.rb
+- spec/lib/action_subscriber/middleware/error_handler_spec.rb
+- spec/lib/action_subscriber/middleware/router_spec.rb
+- spec/lib/action_subscriber/middleware/runner_spec.rb
+- spec/lib/action_subscriber/router_spec.rb
+- spec/lib/action_subscriber/subscribable_spec.rb
+- spec/spec_helper.rb
+- spec/support/sample_config.yml
+- spec/support/user_subscriber.rb
+homepage: https://github.com/mxenabled/action_subscriber
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ActionSubscriber is a DSL that allows a rails app to consume messages from
+  a RabbitMQ broker.
+test_files:
+- spec/integration/around_filters_spec.rb
+- spec/integration/at_least_once_spec.rb
+- spec/integration/at_most_once_spec.rb
+- spec/integration/automatic_reconnect_spec.rb
+- spec/integration/basic_subscriber_spec.rb
+- spec/integration/custom_actions_spec.rb
+- spec/integration/custom_headers_spec.rb
+- spec/integration/decoding_payloads_spec.rb
+- spec/integration/manual_acknowledgement_spec.rb
+- spec/lib/action_subscriber/base_spec.rb
+- spec/lib/action_subscriber/configuration_spec.rb
+- spec/lib/action_subscriber/dsl_spec.rb
+- spec/lib/action_subscriber/middleware/active_record/connection_management_spec.rb
+- spec/lib/action_subscriber/middleware/active_record/query_cache_spec.rb
+- spec/lib/action_subscriber/middleware/decoder_spec.rb
+- spec/lib/action_subscriber/middleware/env_spec.rb
+- spec/lib/action_subscriber/middleware/error_handler_spec.rb
+- spec/lib/action_subscriber/middleware/router_spec.rb
+- spec/lib/action_subscriber/middleware/runner_spec.rb
+- spec/lib/action_subscriber/router_spec.rb
+- spec/lib/action_subscriber/subscribable_spec.rb
+- spec/spec_helper.rb
+- spec/support/sample_config.yml
+- spec/support/user_subscriber.rb

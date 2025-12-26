@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<%= api_key %>:X@bibles.org/v2/books/eng-GNTD:2Tim/chapters.js
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Tue, 15 Oct 2013 20:56:37 GMT
+      Content-Type:
+      - application/javascript
+      Content-Length:
+      - '3688'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.23
+      Set-Cookie:
+      - abs_session=7iKPESxoRTF8oXSh8Nj%2FUe8JNBisDh3rWIr2j9Oe%2FDz5XXikyvMGd4qLslsNQwxMYdvLWXW8cnAlLKNzEPsv%2BkQ6Dw2KCmpLgxr8CM1Zs%2BwVYnYWBnyOVy5EX360pRub18tz174RkQNKPPTHJpN0OsqUdpkWA9atqQqlhh26yhwxn0BBMvCnfBfZRshflCHQvby7zx1e9i0dUX%2B84rUP2YPlJZnWdNlLnFZQzMr1jUlhprfto1kpBkAJ4Vt8%2FZzwzibzNW0%2Fv%2Fh%2FulWA%2BYoqLtInngrep%2BWQDJ9qoZZyy1Y%3D;
+        expires=Fri, 13-Oct-2023 20:56:38 GMT; path=/; domain=.bibles.org
+      - abs_session=FYfWSgPi9FPrG0S81QaAY3cInSVS8yGgrniw%2BVOOjSsr9xQYGt7jium13wZBDSW1RcQpXxkWQIZ%2BiLA263Ka9iqsAY2ut3S%2FbM37lbzvVpbW%2FZAM%2FA6vc9DQ%2B1QSKScm1qhZ2wOP3s5utHkrNcb0ouz3xZf0X0gemPKf3OaWQU%2Flz9HVQE6L%2Bp52VgrA51XFTZgtFcrhGJmEEjBIddOxFr989A3ttm5MOpvsg5vtC%2BSEuYmQ%2BTx5dXrEbreM%2FfS6gV3PT1MBS7PVGajTUvL6uCIgE84aoWohv8RoJI1VbkCPjK12vS0csAuN5dqHy%2FFjN9YmnkN81CMX%2F2Z5jX%2BJIW%2FvZfesEG3gBW2UEm44PVI3%2B8JCcP5gIkCbInBcdL7T;
+        expires=Fri, 13-Oct-2023 20:56:38 GMT; path=/; domain=.bibles.org
+      - abs_uid=a5caf8eb0b38415729fb8114bd732f8f494d0e88; expires=Fri, 13-Oct-2023
+        20:56:38 GMT; path=/; domain=.bibles.org
+    body:
+      encoding: US-ASCII
+      string: ! '{"response":{"chapters":[{"auditid":"0","label":"","chapter":"int","id":"eng-GNTD:2Tim.int","osis_end":"eng-GNTD:2Tim.int.int","parent":{"book":{"path":"\/books\/eng-GNTD:2Tim","name":"2
+        Timothy","id":"eng-GNTD:2Tim"}},"next":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.1","name":"2
+        Timothy 1","id":"eng-GNTD:2Tim.1"}},"previous":{"chapter":{"path":"\/chapters\/eng-GNTD:1Tim.6","name":"1
+        Timothy 6","id":"eng-GNTD:1Tim.6"}},"copyright":"<p>Good News Translation
+        (Today&#8217;s English Version, Second Edition) &#169; 1992 American Bible
+        Society. All rights reserved.<\/p>"},{"auditid":"0","label":"","chapter":"1","id":"eng-GNTD:2Tim.1","osis_end":"eng-GNTD:2Tim.1.18","parent":{"book":{"path":"\/books\/eng-GNTD:2Tim","name":"2
+        Timothy","id":"eng-GNTD:2Tim"}},"next":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.2","name":"2
+        Timothy 2","id":"eng-GNTD:2Tim.2"}},"previous":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.int","name":"2
+        Timothy int","id":"eng-GNTD:2Tim.int"}},"copyright":"<p>Good News Translation
+        (Today&#8217;s English Version, Second Edition) &#169; 1992 American Bible
+        Society. All rights reserved.<\/p>"},{"auditid":"0","label":"","chapter":"2","id":"eng-GNTD:2Tim.2","osis_end":"eng-GNTD:2Tim.2.26","parent":{"book":{"path":"\/books\/eng-GNTD:2Tim","name":"2
+        Timothy","id":"eng-GNTD:2Tim"}},"next":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.3","name":"2
+        Timothy 3","id":"eng-GNTD:2Tim.3"}},"previous":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.1","name":"2
+        Timothy 1","id":"eng-GNTD:2Tim.1"}},"copyright":"<p>Good News Translation
+        (Today&#8217;s English Version, Second Edition) &#169; 1992 American Bible
+        Society. All rights reserved.<\/p>"},{"auditid":"0","label":"","chapter":"3","id":"eng-GNTD:2Tim.3","osis_end":"eng-GNTD:2Tim.3.17","parent":{"book":{"path":"\/books\/eng-GNTD:2Tim","name":"2
+        Timothy","id":"eng-GNTD:2Tim"}},"next":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.4","name":"2
+        Timothy 4","id":"eng-GNTD:2Tim.4"}},"previous":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.2","name":"2
+        Timothy 2","id":"eng-GNTD:2Tim.2"}},"copyright":"<p>Good News Translation
+        (Today&#8217;s English Version, Second Edition) &#169; 1992 American Bible
+        Society. All rights reserved.<\/p>"},{"auditid":"0","label":"","chapter":"4","id":"eng-GNTD:2Tim.4","osis_end":"eng-GNTD:2Tim.4.22","parent":{"book":{"path":"\/books\/eng-GNTD:2Tim","name":"2
+        Timothy","id":"eng-GNTD:2Tim"}},"next":{"chapter":{"path":"\/chapters\/eng-GNTD:Titus.int","name":"Titus
+        int","id":"eng-GNTD:Titus.int"}},"previous":{"chapter":{"path":"\/chapters\/eng-GNTD:2Tim.3","name":"2
+        Timothy 3","id":"eng-GNTD:2Tim.3"}},"copyright":"<p>Good News Translation
+        (Today&#8217;s English Version, Second Edition) &#169; 1992 American Bible
+        Society. All rights reserved.<\/p>"}],"meta":{"fums":"<script>\nvar _BAPI=_BAPI||{};\nif(typeof(_BAPI.t)===''undefined''){\ndocument.write(''\\x3Cscript
+        src=\"''+document.location.protocol+''\/\/d2ue49q0mum86x.cloudfront.net\/include\/fums.c.js\"\\x3E\\x3C\/script\\x3E'');}\ndocument.write(\"\\x3Cscript\\x3E_BAPI.t(''525dac062bdcb8.14487140'');\\x3C\/script\\x3E\");\n<\/script><noscript><img
+        src=\"https:\/\/d3a2okcloueqyx.cloudfront.net\/nf1?t=525dac062bdcb8.14487140\"
+        height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height: 0; width: 0;\"
+        \/><\/noscript>","fums_tid":"525dac062bdcb8.14487140","fums_js_include":"d2ue49q0mum86x.cloudfront.net\/include\/fums.c.js","fums_js":"var
+        _BAPI=_BAPI||{};if(typeof(_BAPI.t)!=''undefined''){ _BAPI.t(''525dac062bdcb8.14487140'');
+        }","fums_noscript":"<img src=\"https:\/\/d3a2okcloueqyx.cloudfront.net\/nf1?t=525dac062bdcb8.14487140\"
+        height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height: 0; width: 0;\"
+        \/>"}}}'
+    http_version: 
+  recorded_at: Tue, 15 Oct 2013 20:56:38 GMT
+recorded_with: VCR 2.6.0

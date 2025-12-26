@@ -1,0 +1,4 @@
+en:
+  errors:
+    messages:
+      at_least_one: 'must have at least one item.'

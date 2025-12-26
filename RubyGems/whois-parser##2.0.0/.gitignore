@@ -1,9 +1,0 @@
-# Bundler
-/.bundle/
-/Gemfile.lock
-/pkg/
-
-# YARD
-/.yardoc
-/_yardoc/
-/doc/

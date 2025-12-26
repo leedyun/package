@@ -1,0 +1,8 @@
+payline:
+  merchant_id: <%= ENV['PAYLINE_MERCHANT_ID'] %>
+  merchant_access_key: <%= ENV['PAYLINE_ACCESS_KEY'] %>
+  contract_number: <%= ENV['PAYLINE_CONTRACT_NUMBER'] %>
+  return_url: <%= ENV['PAYLINE_RETURN_URL'] %>
+  cancel_return_url: <%= ENV['PAYLINE_CANCEL_RETURN_URL'] %>
+  test: true
+  log: false

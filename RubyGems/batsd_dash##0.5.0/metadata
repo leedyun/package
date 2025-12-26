@@ -1,0 +1,190 @@
+--- !ruby/object:Gem::Specification
+name: batsd_dash
+version: !ruby/object:Gem::Version
+  version: 0.5.0
+platform: ruby
+authors:
+- mikeycgto
+- btoconnor
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: connection_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra-contrib
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: batsd-dash - graphs and stuff for batsd. yay!
+email:
+- mikeycgto@gmail.com
+- gatzby3jr@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Guardfile
+- README.md
+- Rakefile
+- batsd_dash.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/batsd-dash.rb
+- lib/batsd-dash/app.rb
+- lib/batsd-dash/connection.rb
+- lib/batsd-dash/graph.rb
+- lib/batsd-dash/params.rb
+- lib/batsd-dash/public/css/d3.css
+- lib/batsd-dash/public/css/datetimepicker.css
+- lib/batsd-dash/public/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+- lib/batsd-dash/public/css/images/ui-bg_flat_75_ffffff_40x100.png
+- lib/batsd-dash/public/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+- lib/batsd-dash/public/css/images/ui-bg_glass_65_ffffff_1x400.png
+- lib/batsd-dash/public/css/images/ui-bg_glass_75_dadada_1x400.png
+- lib/batsd-dash/public/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+- lib/batsd-dash/public/css/images/ui-bg_glass_95_fef1ec_1x400.png
+- lib/batsd-dash/public/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+- lib/batsd-dash/public/css/images/ui-icons_222222_256x240.png
+- lib/batsd-dash/public/css/images/ui-icons_2e83ff_256x240.png
+- lib/batsd-dash/public/css/images/ui-icons_454545_256x240.png
+- lib/batsd-dash/public/css/images/ui-icons_888888_256x240.png
+- lib/batsd-dash/public/css/images/ui-icons_cd0a0a_256x240.png
+- lib/batsd-dash/public/css/jquery-ui.css
+- lib/batsd-dash/public/css/public.css
+- lib/batsd-dash/public/js/d3.js
+- lib/batsd-dash/public/js/dash.js
+- lib/batsd-dash/public/js/datetimepicker.js
+- lib/batsd-dash/public/js/datetimepicker.js~
+- lib/batsd-dash/public/js/jquery-ui.js
+- lib/batsd-dash/public/js/jquery.js
+- lib/batsd-dash/public/js/nv.d3.js
+- lib/batsd-dash/version.rb
+- lib/batsd-dash/views/layout.haml
+- lib/batsd-dash/views/loading.haml
+- lib/batsd-dash/views/missing.haml
+- lib/batsd-dash/views/root.haml
+- lib/batsd-dash/views/view.haml
+- lib/sass/_charts.scss
+- lib/sass/public.scss
+- test/helper.rb
+- test/test_dash.rb
+homepage: https://github.com/mikeycgto/batsd-dash
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: batsd-dash
+test_files: []

@@ -1,6 +1,0 @@
-.DS_Store
-mongoid-paperclip-*.gem
-.*swp
-.*swo
-.ruby-version
-/spec/public

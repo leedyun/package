@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>GameShuffleCards</h1>
+
+<p>A Game to shuffle a deck of cards and presents the result
+With the class Game you can handle a deck of cards and setting the players and the cards per player. And shuffle the deak of cards.</p>
+
+<h2>Installation</h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>game_shuffle_cards</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre class="code ruby"><code class="ruby">$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install game_shuffle_cards
+</code></pre>
+
+<h2>Usage</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># create a new game with 5 players and 3 cards per player
+</span><span class='id identifier rubyid_game'>game</span> <span class='op'>=</span> <span class='const'>Game</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>5</span><span class='comma'>,</span><span class='int'>3</span><span class='rparen'>)</span>
+<span class='comment'># to shuffle a deck of cards , 3 cards per player , to 5 players
+</span><span class='id identifier rubyid_game'>game</span><span class='period'>.</span><span class='id identifier rubyid_results'>results</span>
+
+ <span class='lbrace'>{</span><span class='int'>0</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>8 of spades</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Q of clubs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>5 of diamonds</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3 of hearts</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>1</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>9 of spades</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>5 of clubs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>9 of clubs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>J of clubs</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>If you repeat the <code>game.result</code> the deck will go emptying</p>
+
+<pre class="code bash"><code class="bash">2.2.0 :003 &gt; g.results
+ =&gt; {0=&gt;[&quot;8 of spades&quot;, &quot;Q of clubs&quot;, &quot;5 of diamonds&quot;, &quot;3 of hearts&quot;], 1=&gt;[&quot;9 of spades&quot;, &quot;5 of clubs&quot;, &quot;9 of clubs&quot;, &quot;J of clubs&quot;]}
+2.2.0 :004 &gt; g.results
+ =&gt; {0=&gt;[&quot;10 of clubs&quot;, &quot;A of clubs&quot;, &quot;5 of hearts&quot;, &quot;4 of spades&quot;], 1=&gt;[&quot;Q of diamonds&quot;, &quot;2 of hearts&quot;, &quot;3 of spades&quot;, &quot;8 of clubs&quot;]}
+2.2.0 :005 &gt; g.results
+ =&gt; {0=&gt;[&quot;6 of clubs&quot;, &quot;A of diamonds&quot;, &quot;10 of diamonds&quot;, &quot;J of hearts&quot;], 1=&gt;[&quot;7 of spades&quot;, &quot;8 of hearts&quot;, &quot;K of diamonds&quot;, &quot;4 of clubs&quot;]}
+2.2.0 :006 &gt; g.results
+ =&gt; {0=&gt;[&quot;Q of hearts&quot;, &quot;7 of diamonds&quot;, &quot;9 of hearts&quot;, &quot;10 of hearts&quot;], 1=&gt;[&quot;2 of clubs&quot;, &quot;4 of hearts&quot;, &quot;4 of diamonds&quot;, &quot;7 of clubs&quot;]}
+2.2.0 :007 &gt; g.results
+ =&gt; {0=&gt;[&quot;5 of spades&quot;, &quot;J of spades&quot;, &quot;9 of diamonds&quot;, &quot;10 of spades&quot;], 1=&gt;[&quot;2 of diamonds&quot;, &quot;A of hearts&quot;, &quot;K of clubs&quot;, &quot;3 of diamonds&quot;]}
+2.2.0 :008 &gt; g.results
+ =&gt; {0=&gt;[&quot;2 of spades&quot;, &quot;6 of diamonds&quot;, &quot;6 of spades&quot;, &quot;K of hearts&quot;], 1=&gt;[&quot;A of spades&quot;, &quot;3 of clubs&quot;, &quot;8 of diamonds&quot;, &quot;K of spades&quot;]}
+2.2.0 :009 &gt; g.results
+ =&gt; {0=&gt;[&quot;J of diamonds&quot;, &quot;7 of hearts&quot;, &quot;Q of spades&quot;, &quot;6 of hearts&quot;], 1=&gt;[]}
+2.2.0 :010 &gt; g.results
+ =&gt; {0=&gt;[], 1=&gt;[]}
+</code></pre>
+
+<p>If you want to repeat the operation with the same deck, you could instantiate an object again</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_game'>game</span> <span class='op'>=</span> <span class='const'>Game</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+</code></pre>
+
+<p>And the deck will be full again.</p>
+
+<p>The deck has defined in class Game the constants you can change it to another type of deck.
+By default there are 52 cards: 4 suits and 13 values, they are
+            |A of clubs         |
+            |2 of clubs         |
+            |3 of clubs         |
+            |4 of clubs         |
+            |5 of clubs         |
+            |6 of clubs         |
+            |7 of clubs         |
+            |8 of clubs         |
+            |9 of clubs         |
+            |10 of clubs        |
+            |J of clubs         |
+            |K of clubs         |
+            |Q of clubs         |
+            |A of hearts        |
+            |2 of hearts        |
+            |3 of hearts        |
+            |4 of hearts        |
+            |5 of hearts        |
+            |6 of hearts        |
+            |7 of hearts        |
+            |8 of hearts        |
+            |9 of hearts        |
+            |10 of hearts       |
+            |J of hearts        |
+            |K of hearts        |
+            |Q of hearts        |
+            |A of spades        |
+            |2 of spades        |
+            |3 of spades        |
+            |4 of spades        |
+            |5 of spades        |
+            |6 of spades        |
+            |7 of spades        |
+            |8 of spades        |
+            |9 of spades        |
+            |10 of spades       |
+            |J of spades        |
+            |K of spades        |
+            |Q of spades        |
+            |A of diamonds  |
+            |2 of diamonds  |
+            |3 of diamonds  |
+            |4 of diamonds  |
+            |5 of diamonds  |
+            |6 of diamonds  |
+            |7 of diamonds  |
+            |8 of diamonds  |
+            |9 of diamonds  |
+            |10 of diamonds |
+            |J of diamonds  |
+            |K of diamonds  |
+            |Q of diamonds  |</p>
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="https://github.com/diegopiccinini/game_shuffle_cards/fork">https://github.com/diegopiccinini/game_shuffle_cards/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am &#39;Add some feature&#39;</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Apr  2 16:38:00 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.0).
+</div>
+
+  </body>
+</html>

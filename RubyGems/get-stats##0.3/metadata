@@ -1,0 +1,70 @@
+--- !ruby/object:Gem::Specification
+name: get-stats
+version: !ruby/object:Gem::Version
+  version: '0.3'
+platform: ruby
+authors:
+- megha
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies: []
+description: Dead simply statistics for Rails.
+email:
+- meghagulati30@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- app/assets/javascripts/highcharts.js
+- app/models/stats.rb
+- app/views/_display_graph.html.erb
+- app/views/_display_table.html.erb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- get-stats.gemspec
+- lib/application_helper.rb
+- lib/engine.rb
+- lib/get_stats.rb
+- lib/get_stats/version.rb
+- lib/rails/generators/get_stats/get_stats_generator.rb
+- lib/rails/generators/get_stats/templates/get_stats_migration.rb
+- lib/rails/generators/get_stats/templates/get_stats_model.rb
+- lib/rails/generators/get_stats/templates/migration.rb
+- lib/rails/generators/get_stats/templates/schema.rb
+- lib/rails/railties/tasks.rake
+- multiple_column_chart.png
+- multiple_line_chart.png
+- signups_column.png
+- signups_line.png
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Provides a simple API for developers to log & view stats within their app.
+  Uses highcharts.js for displaying beautiful graphs with one simple call.
+test_files: []

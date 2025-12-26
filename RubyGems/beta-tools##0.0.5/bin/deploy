@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+ 
+require 'it_tools/deploy'
+
+ops = Deployment::Options.new
+
+env = Deployment::Environment.new(ops.options)
+
+env.deploy

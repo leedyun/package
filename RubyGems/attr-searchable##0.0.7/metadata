@@ -1,0 +1,204 @@
+--- !ruby/object:Gem::Specification
+name: attr-searchable
+version: !ruby/object:Gem::Version
+  version: 0.0.7
+platform: ruby
+authors:
+- Benjamin Vetter
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: treetop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: factory_girl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: "[DEPRECATION] 'attr_searchable' is deprecated. Migrate to 'search_cop'
+  instead."
+email:
+- vetter@flakks.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Appraisals
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- attr-searchable.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- gemfiles/3.2.gemfile
+- gemfiles/4.0.gemfile
+- gemfiles/4.1.gemfile
+- lib/attr_searchable.rb
+- lib/attr_searchable/arel.rb
+- lib/attr_searchable/arel/visitors.rb
+- lib/attr_searchable/hash_parser.rb
+- lib/attr_searchable/version.rb
+- lib/attr_searchable_grammar.rb
+- lib/attr_searchable_grammar.treetop
+- lib/attr_searchable_grammar/attributes.rb
+- lib/attr_searchable_grammar/nodes.rb
+- test/and_test.rb
+- test/attr_searchable_test.rb
+- test/boolean_test.rb
+- test/database.yml
+- test/date_test.rb
+- test/datetime_test.rb
+- test/error_test.rb
+- test/float_test.rb
+- test/fulltext_test.rb
+- test/hash_test.rb
+- test/integer_test.rb
+- test/not_test.rb
+- test/or_test.rb
+- test/string_test.rb
+- test/test_helper.rb
+homepage: https://github.com/mrkamel/search_cop#attrsearchable-is-now-searchcop
+licenses:
+- MIT
+metadata: {}
+post_install_message: |
+  ----------------------------------------------------------------------------
+                             DEPRECATION WARNING
+
+  The 'attr_searchable' gem has been deprecated and replaced by 'search_cop',
+  because the DSL has recently changed quite a bit to become even more simple,
+  featureful and concise. Please migrate to 'search_cop' as soon as possible.
+
+  search_cop: https://github.com/mrkamel/search_cop
+  migration:  https://github.com/mrkamel/search_cop/blob/master/MIGRATION.md
+  ----------------------------------------------------------------------------
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: "[DEPRECATION] 'attr_searchable' is deprecated. Migrate to 'search_cop' instead."
+test_files:
+- test/and_test.rb
+- test/attr_searchable_test.rb
+- test/boolean_test.rb
+- test/database.yml
+- test/date_test.rb
+- test/datetime_test.rb
+- test/error_test.rb
+- test/float_test.rb
+- test/fulltext_test.rb
+- test/hash_test.rb
+- test/integer_test.rb
+- test/not_test.rb
+- test/or_test.rb
+- test/string_test.rb
+- test/test_helper.rb

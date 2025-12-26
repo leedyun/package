@@ -1,4 +1,0 @@
-spec/cache/*.mmdb
-*.swp
-.ruby-*
-Gemfile.lock

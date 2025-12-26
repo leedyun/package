@@ -1,5 +1,0 @@
-{
-   "errorMessage" : "The provided API key is invalid.",
-   "status" : "REQUEST_DENIED"
-}
-

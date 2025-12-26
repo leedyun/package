@@ -1,1 +1,0 @@
-class Specinfra::Command::Vyos; end

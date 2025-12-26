@@ -1,8 +1,0 @@
-AllCops:
-  Exclude:
-    - bin/*
-    - gemfiles/*
-    - spec/**/*
-
-Metrics/LineLength:
-  Enabled: false

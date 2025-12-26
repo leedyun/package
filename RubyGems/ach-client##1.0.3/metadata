@@ -1,0 +1,346 @@
+--- !ruby/object:Gem::Specification
+name: ach-client
+version: !ruby/object:Gem::Version
+  version: 1.0.3
+platform: ruby
+authors:
+- Zach Cotter
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ach
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: net-sftp
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: savon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: sucker_punch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: codeclimate-test-reporter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler-audit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- zach@zachcotter.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- ach-client.gemspec
+- bin/console
+- bin/setup
+- config/return_codes.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/ach_client.rb
+- lib/ach_client/abstract/abstract_method_error.rb
+- lib/ach_client/abstract/invalid_ach_transaction_error.rb
+- lib/ach_client/helpers/dollars_to_cents.rb
+- lib/ach_client/helpers/utils.rb
+- lib/ach_client/logging/log_provider_job.rb
+- lib/ach_client/logging/log_providers/log_provider.rb
+- lib/ach_client/logging/log_providers/null_log_provider.rb
+- lib/ach_client/logging/log_providers/stdout_log_provider.rb
+- lib/ach_client/logging/logging.rb
+- lib/ach_client/logging/savon_observer.rb
+- lib/ach_client/objects/account_types.rb
+- lib/ach_client/objects/responses/ach_response.rb
+- lib/ach_client/objects/responses/corrected_ach_response.rb
+- lib/ach_client/objects/responses/processing_ach_response.rb
+- lib/ach_client/objects/responses/returned_ach_response.rb
+- lib/ach_client/objects/responses/settled_ach_response.rb
+- lib/ach_client/objects/return_code.rb
+- lib/ach_client/objects/return_codes.rb
+- lib/ach_client/objects/transaction_types.rb
+- lib/ach_client/providers/abstract/ach_batch.rb
+- lib/ach_client/providers/abstract/ach_status_checker.rb
+- lib/ach_client/providers/abstract/ach_transaction.rb
+- lib/ach_client/providers/abstract/company_info.rb
+- lib/ach_client/providers/abstract/response_record_processor.rb
+- lib/ach_client/providers/abstract/transformer.rb
+- lib/ach_client/providers/sftp/account_type_transformer.rb
+- lib/ach_client/providers/sftp/ach_batch.rb
+- lib/ach_client/providers/sftp/ach_status_checker.rb
+- lib/ach_client/providers/sftp/ach_transaction.rb
+- lib/ach_client/providers/sftp/nacha_provider.rb
+- lib/ach_client/providers/sftp/sftp_provider.rb
+- lib/ach_client/providers/sftp/transaction_type_transformer.rb
+- lib/ach_client/providers/soap/ach_works/account_type_transformer.rb
+- lib/ach_client/providers/soap/ach_works/ach_batch.rb
+- lib/ach_client/providers/soap/ach_works/ach_status_checker.rb
+- lib/ach_client/providers/soap/ach_works/ach_transaction.rb
+- lib/ach_client/providers/soap/ach_works/ach_works.rb
+- lib/ach_client/providers/soap/ach_works/company_info.rb
+- lib/ach_client/providers/soap/ach_works/correction_details_processor.rb
+- lib/ach_client/providers/soap/ach_works/date_formatter.rb
+- lib/ach_client/providers/soap/ach_works/response_record_processor.rb
+- lib/ach_client/providers/soap/ach_works/transaction_type_transformer.rb
+- lib/ach_client/providers/soap/i_check_gateway/account_type_transformer.rb
+- lib/ach_client/providers/soap/i_check_gateway/ach_batch.rb
+- lib/ach_client/providers/soap/i_check_gateway/ach_status_checker.rb
+- lib/ach_client/providers/soap/i_check_gateway/ach_transaction.rb
+- lib/ach_client/providers/soap/i_check_gateway/company_info.rb
+- lib/ach_client/providers/soap/i_check_gateway/i_check_gateway.rb
+- lib/ach_client/providers/soap/i_check_gateway/response_record_processor.rb
+- lib/ach_client/providers/soap/i_check_gateway/transaction_type_transformer.rb
+- lib/ach_client/providers/soap/soap_provider.rb
+- lib/ach_client/version.rb
+homepage: https://github.com/ForwardFinancing/ach_client
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- config
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Adapter to interact with various ACH service providers
+test_files: []

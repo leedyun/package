@@ -1,0 +1,4 @@
+ja:
+  errors:
+    messages:
+      permission_denied: は権限がありません。

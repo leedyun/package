@@ -1,0 +1,508 @@
+--- !ruby/object:Gem::Specification
+name: dog-biscuits
+version: !ruby/object:Gem::Version
+  version: 0.5.9
+platform: ruby
+authors:
+- Julie Allinson
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: hyrax
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: bixby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: engine_cart
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: factory_bot_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.11'
+- !ruby/object:Gem::Dependency
+  name: fcrepo_wrapper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: solr_wrapper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n-tasks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: easy_translate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: DogBiscuits provides re-usable models, vocabularies and other services
+  for Hyrax applications.
+email:
+- julie.allinson@london.ac.uk
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- SUPPORT.md
+- bin/console
+- bin/setup
+- config/i18n-tasks.yml
+- dog-biscuits.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/dog_biscuits.rb
+- lib/dog_biscuits/actors/apply_authorities.rb
+- lib/dog_biscuits/actors/singular_attributes.rb
+- lib/dog_biscuits/blacklight/commands.rb
+- lib/dog_biscuits/configuration.rb
+- lib/dog_biscuits/importers/authority.rb
+- lib/dog_biscuits/indexers/collection_indexer.rb
+- lib/dog_biscuits/indexers/concerns/indexes_common.rb
+- lib/dog_biscuits/indexers/conference_item_indexer.rb
+- lib/dog_biscuits/indexers/dataset_indexer.rb
+- lib/dog_biscuits/indexers/digital_archival_object_indexer.rb
+- lib/dog_biscuits/indexers/exam_paper_indexer.rb
+- lib/dog_biscuits/indexers/journal_article_indexer.rb
+- lib/dog_biscuits/indexers/package_indexer.rb
+- lib/dog_biscuits/indexers/published_work_indexer.rb
+- lib/dog_biscuits/indexers/thesis_indexer.rb
+- lib/dog_biscuits/models/authorities/agent.rb
+- lib/dog_biscuits/models/authorities/agents/group.rb
+- lib/dog_biscuits/models/authorities/agents/historic_person.rb
+- lib/dog_biscuits/models/authorities/agents/organisation.rb
+- lib/dog_biscuits/models/authorities/agents/person.rb
+- lib/dog_biscuits/models/authorities/concept.rb
+- lib/dog_biscuits/models/authorities/concept_scheme.rb
+- lib/dog_biscuits/models/authorities/event.rb
+- lib/dog_biscuits/models/authorities/place.rb
+- lib/dog_biscuits/models/authorities/project.rb
+- lib/dog_biscuits/models/authority.rb
+- lib/dog_biscuits/models/collections/collection.rb
+- lib/dog_biscuits/models/concerns/behaviours/pure_specific_behaviour.rb
+- lib/dog_biscuits/models/concerns/behaviours/validate_concept_related.rb
+- lib/dog_biscuits/models/concerns/behaviours/validate_concept_scheme.rb
+- lib/dog_biscuits/models/concerns/behaviours/validate_label.rb
+- lib/dog_biscuits/models/concerns/behaviours/validate_place.rb
+- lib/dog_biscuits/models/concerns/behaviours/work_behaviour.rb
+- lib/dog_biscuits/models/concerns/extended_solr_document.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/archivematica/archivematica.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/archives_hub/access_provided_by.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/archives_hub/country_code.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/archives_hub/hub_dates.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/archives_hub/maintenance_agency_code.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/awarding_institution.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/edition.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/identified_by.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/part.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/part_of.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/series.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibframe/subtitle.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibo/presented_at.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/bibo/publication_status.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/datacite/resource_type_general.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/abstract.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/access_rights.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/bibliographic_citation.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/contributor.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/creator.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date_accepted.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date_available.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date_copyrighted.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date_created.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/date_issued.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/description.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/extent.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/format.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/identifier.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/language.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/publisher.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/resource_type.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/rights.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/rights_holder.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/simple_versions.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/source.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dc/subject.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/dwc/event_date.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/edm/edm_rights.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/fabio/date_collected.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/foaf/based_near.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/foaf/foaf_name.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/frapo/output_of.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/geo/geo.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/geonames/country_code.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/geonames/place_properties.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/lc_identifiers/doi.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/lc_identifiers/isbn.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/lc_identifiers/official_url.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/lc_identifiers/orcid.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/for_indexing.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/former_identifier.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/generic_authority_terms.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/generic_qualifier.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/last_access.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/main_file.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/module_code.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/number_of_downloads.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/packaged_by.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/readme_file.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/local/requestor_email.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/mads/related_authority.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/marc_relators/advisor.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/marc_relators/editor.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/marc_relators/funder.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/marc_relators/place_of_publication.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/mods/date_valid.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/owl/owl_same_as.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/premis/has_restriction.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/property_sets/person_properties.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/pure/managing_organisation.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/pure/pure.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/rdf/rdf_type.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/rdf/rdfs_label.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/rdf/related_url.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/alternate_name.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/content_version.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/date_published.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/date_updated.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/department.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/end_date.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/issue_number.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/keyword.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/location.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/pagination.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/start_date.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/schema/volume_number.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/skos/skos_labels.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/skos/skos_note.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/skos/skos_related.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/uketd/date_of_award.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/uketd/qualification.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/ulcc/date_submitted.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/ulcc/official_url.rb
+- lib/dog_biscuits/models/concerns/metadata_properties/ulcc/refereed.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/common/common_labels.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/common/common_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/common/common_rights.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/conference_item_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/dataset_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/digital_archival_object_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/exam_paper_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/journal_article_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/package_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/published_work_metadata.rb
+- lib/dog_biscuits/models/concerns/model_property_sets/thesis_metadata.rb
+- lib/dog_biscuits/models/filesets/file_set.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/canvas.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/contained_file.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_date_certainty.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_editorial_note.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_entry.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_entry_date.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_entry_type.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_is_referenced_by.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_language.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_marginalium.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_note.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_as_written.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_descriptor.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_descriptor_as_written.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_note.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_related_person.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_related_place.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_person_role.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_place_as_written.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_place_note.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_place_role.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_place_type.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_related_agent.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_related_place.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_section_type.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_single_date.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/db/db_subject.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/entry.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/entry/entry_date.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/entry/related_agent.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/entry/related_place.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/entry/single_date.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/folio.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/image.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/manifest.rb
+- lib/dog_biscuits/models/to_refactor_or_remove/register.rb
+- lib/dog_biscuits/models/work.rb
+- lib/dog_biscuits/models/works/conference_item.rb
+- lib/dog_biscuits/models/works/dataset.rb
+- lib/dog_biscuits/models/works/digital_archival_object.rb
+- lib/dog_biscuits/models/works/exam_paper.rb
+- lib/dog_biscuits/models/works/journal_article.rb
+- lib/dog_biscuits/models/works/package.rb
+- lib/dog_biscuits/models/works/published_work.rb
+- lib/dog_biscuits/models/works/thesis.rb
+- lib/dog_biscuits/property_mappings/property_mappings.rb
+- lib/dog_biscuits/railtie.rb
+- lib/dog_biscuits/services/table_based_authority_extended.rb
+- lib/dog_biscuits/services/terms.rb
+- lib/dog_biscuits/services/terms_service.rb
+- lib/dog_biscuits/solr/index_types.rb
+- lib/dog_biscuits/validators/concept_related_validator.rb
+- lib/dog_biscuits/validators/concept_scheme_member_validator.rb
+- lib/dog_biscuits/validators/label_validator.rb
+- lib/dog_biscuits/validators/place_validator.rb
+- lib/dog_biscuits/version.rb
+- lib/dog_biscuits/vocab/borthwick_registers.rb
+- lib/dog_biscuits/vocab/generic.rb
+- lib/dog_biscuits/vocab/oais_archivematica.rb
+- lib/dog_biscuits/vocab/pure_terms.rb
+- lib/dog_biscuits/vocab/uketd.rb
+- lib/dog_biscuits/vocab/ulcc_terms.rb
+- lib/generators/dog_biscuits/USAGE
+- lib/generators/dog_biscuits/authority_generator.rb
+- lib/generators/dog_biscuits/catalog_generator.rb
+- lib/generators/dog_biscuits/dates_generator.rb
+- lib/generators/dog_biscuits/generate_all_generator.rb
+- lib/generators/dog_biscuits/install_generator.rb
+- lib/generators/dog_biscuits/locales_generator.rb
+- lib/generators/dog_biscuits/presenter/presenter_generator.rb
+- lib/generators/dog_biscuits/schema_org_generator.rb
+- lib/generators/dog_biscuits/templates/_date_template.html.erb
+- lib/generators/dog_biscuits/templates/app/controllers/catalog_controller.rb
+- lib/generators/dog_biscuits/templates/app/helpers/dog_biscuits_helper.rb
+- lib/generators/dog_biscuits/templates/app/renderers/package_ids_renderer.rb
+- lib/generators/dog_biscuits/templates/app/renderers/packaged_by_ids_renderer.rb
+- lib/generators/dog_biscuits/templates/app/renderers/publication_status_renderer.rb
+- lib/generators/dog_biscuits/templates/app/services/concerns/file_authority_concern.rb
+- lib/generators/dog_biscuits/templates/app/services/concerns/local_authority_concern.rb
+- lib/generators/dog_biscuits/templates/app/services/local_form_metadata_service.rb
+- lib/generators/dog_biscuits/templates/app/views/hyrax/base/_form_metadata.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_abstract.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_default.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_funder.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_note.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_part_of.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_publication_status.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_refereed.html.erb
+- lib/generators/dog_biscuits/templates/app/views/records/edit_fields/_resource_type_general.html.erb
+- lib/generators/dog_biscuits/templates/authority_service.rb.erb
+- lib/generators/dog_biscuits/templates/config/authorities/content_versions.yml
+- lib/generators/dog_biscuits/templates/config/authorities/publication_statuses.yml
+- lib/generators/dog_biscuits/templates/config/authorities/qualification_levels.yml
+- lib/generators/dog_biscuits/templates/config/authorities/qualification_names.yml
+- lib/generators/dog_biscuits/templates/config/authorities/resource_type_generals.yml
+- lib/generators/dog_biscuits/templates/config/dog_biscuits.yml
+- lib/generators/dog_biscuits/templates/config/initializers/catalog_search_builder_overrides.rb
+- lib/generators/dog_biscuits/templates/config/initializers/dog_biscuits.rb
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.de.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.en.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.es.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.fr.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.it.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.pt-BR.yml
+- lib/generators/dog_biscuits/templates/config/locales/dog_biscuits.zh.yml
+- lib/generators/dog_biscuits/templates/dog_biscuits.en.yml.erb
+- lib/generators/dog_biscuits/templates/schema_org.yml.erb
+- lib/generators/dog_biscuits/work/USAGE
+- lib/generators/dog_biscuits/work/templates/README
+- lib/generators/dog_biscuits/work/templates/_attribute_rows.html.erb
+- lib/generators/dog_biscuits/work/templates/actor.rb.erb
+- lib/generators/dog_biscuits/work/templates/form.rb.erb
+- lib/generators/dog_biscuits/work/templates/indexer.rb.erb
+- lib/generators/dog_biscuits/work/templates/model.rb.erb
+- lib/generators/dog_biscuits/work/templates/presenter.rb.erb
+- lib/generators/dog_biscuits/work/work_generator.rb
+- lib/tasks/authorities.rake
+homepage: https://github.com/samvera-labs/dog_biscuits
+licenses:
+- APACHE2
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: DogBiscuits provides re-usable models, vocabularies and other services for
+  Hyrax applications.
+test_files: []

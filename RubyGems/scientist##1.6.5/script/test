@@ -1,7 +1,0 @@
-#!/bin/sh
-# Run the unit tests.
-
-set -e
-
-cd $(dirname "$0")/..
-  script/bootstrap && bundle exec rake test

@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: absa_notify-me
+version: !ruby/object:Gem::Version
+  version: 0.0.7
+platform: ruby
+authors:
+- Jeffrey van Aswegen, Douglas Anderson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nori
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: "\n    This is just a rapidly prototyped proof of concept gem for \n
+  \   bankserv gem and those who can afford to use the ABSA NotifyMe \n    Platform.
+  \n    \n    For a production ready gem please rather use absa-esd with the \n    bankserv
+  gem \n    \n    https://github.com/tehtorq/absa-esd\n    https://github.com/jeffmess/Bankserv\n
+  \ "
+email:
+- jeffmess@gmail.com, i.am.douglas.anderson@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README
+- README.md
+- Rakefile
+- absa_notify-me.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/absa-notify-me.rb
+- lib/absa-notify-me/version.rb
+- lib/absa-notify-me/xml_statement.rb
+- spec/examples/empty_test.xml
+- spec/examples/test.xml
+- spec/examples/test_with_one_record.xml
+- spec/lib/xml_statement_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A ruby interface to commumicate with the ABSA Notify Me Statement Delivery
+  platform.
+test_files: []

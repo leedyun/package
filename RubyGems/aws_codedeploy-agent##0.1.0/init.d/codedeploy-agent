@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Init file for codedeploy-agent
+#
+# chkconfig: 2345 98 02
+# description: codedeploy-agent processes the deployments created by AWS CodeDeploy and installs \
+# the deployment artifacts on to this instance.
+
+### BEGIN INIT INFO
+# Provides:          codedeploy-agent
+# Required-Start:    $all
+# Required-Stop:     $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: AWS CodeDeploy Host Agent
+# Description:       codedeploy-agent processes the deployments created by AWS CodeDeploy and installs
+#                    the deployment artifacts on to this instance.
+### END INIT INFO
+
+[ -f /etc/profile ] && [ "`stat --format '%U %G' /etc/profile`" == "root root" ] && source /etc/profile
+
+BIN="codedeploy-agent"
+
+start() {
+        echo -n $"Starting $BIN:"
+        nohup $BIN start >/dev/null </dev/null 2>&1
+        exit $?
+}
+
+stop() {
+        echo -n $"Stopping $BIN:"
+        nohup $BIN stop >/dev/null </dev/null 2>&1
+        exit $?
+}
+
+restart() {
+        echo -n $"Restarting $BIN:"
+        nohup $BIN restart >/dev/null </dev/null 2>&1
+        exit $?
+}
+
+status() {
+        $BIN status
+        exit $?
+}
+
+case "$1" in
+        start)
+                start
+                ;;
+        stop)
+                stop
+                ;;
+        restart)
+                restart
+                ;;
+        force-reload)
+                stop
+                start
+                ;;
+        status)
+                status
+                ;;
+        *)
+                echo $"Usage: $0 {start|stop|status|restart}"
+esac

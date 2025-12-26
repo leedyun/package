@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: adtech_api-client
+version: !ruby/object:Gem::Version
+  version: 0.0.4
+platform: ruby
+authors:
+- minsikzzang
+- ericescalante
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies: []
+description: ADTech Classic API ruby client
+email:
+- min.kim@factorymedia.com
+- eric.escalante@factorymedia.com
+- developers@factorymedia.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.md
+- adtech_api-client.gemspec
+- example/report_by_advertiser
+- example/report_by_customer
+- example/report_by_network
+- example/report_by_website
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/adtech-api-client.rb
+- lib/adtech/HeliosWSClientSystem/HeliosWSClientSystem.jar
+- lib/adtech/HeliosWSClientSystem/lib/activation-1.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/aopalliance-1.0.jar
+- lib/adtech/HeliosWSClientSystem/lib/asm-3.3.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/commons-codec-1.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/commons-collections-3.2.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/commons-lang-2.4.jar
+- lib/adtech/HeliosWSClientSystem/lib/commons-logging-1.1.3.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-api-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-bindings-soap-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-bindings-xml-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-core-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-databinding-jaxb-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-frontend-jaxws-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-frontend-simple-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-transports-http-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-transports-http-jetty-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-ws-addr-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-rt-ws-policy-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/cxf-tools-common-2.7.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/geronimo-javamail_1.4_spec-1.7.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/geronimo-servlet_3.0_spec-1.0.jar
+- lib/adtech/HeliosWSClientSystem/lib/httpclient-4.3.3.jar
+- lib/adtech/HeliosWSClientSystem/lib/httpcore-4.3.2.jar
+- lib/adtech/HeliosWSClientSystem/lib/javax.annotation-api-1.2-b03.jar
+- lib/adtech/HeliosWSClientSystem/lib/javax.xml.soap-api-1.3.5.jar
+- lib/adtech/HeliosWSClientSystem/lib/jaxb-api-2.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/jaxb-impl-2.2.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/jaxb-xjc-2.2.6.jar
+- lib/adtech/HeliosWSClientSystem/lib/jaxws-api-2.2.11.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-continuation-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-http-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-io-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-security-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-server-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jetty-util-8.1.7.v20120910.jar
+- lib/adtech/HeliosWSClientSystem/lib/jsr181-api-1.0-MR1.jar
+- lib/adtech/HeliosWSClientSystem/lib/neethi-3.0.2.jar
+- lib/adtech/HeliosWSClientSystem/lib/spring-aop-4.0.3.RELEASE.jar
+- lib/adtech/HeliosWSClientSystem/lib/spring-beans-4.0.3.RELEASE.jar
+- lib/adtech/HeliosWSClientSystem/lib/spring-context-4.0.3.RELEASE.jar
+- lib/adtech/HeliosWSClientSystem/lib/spring-core-4.0.3.RELEASE.jar
+- lib/adtech/HeliosWSClientSystem/lib/spring-expression-4.0.3.RELEASE.jar
+- lib/adtech/HeliosWSClientSystem/lib/stax-api-1.0-2.jar
+- lib/adtech/HeliosWSClientSystem/lib/stax2-api-3.1.1.jar
+- lib/adtech/HeliosWSClientSystem/lib/velocity-1.7.jar
+- lib/adtech/HeliosWSClientSystem/lib/woodstox-core-asl-4.2.0.jar
+- lib/adtech/HeliosWSClientSystem/lib/wsdl4j-1.6.3.jar
+- lib/adtech/HeliosWSClientSystem/lib/xml-resolver-1.2.jar
+- lib/adtech/HeliosWSClientSystem/lib/xmlschema-core-2.0.3.jar
+- lib/adtech/api/admin.rb
+- lib/adtech/api/base.rb
+- lib/adtech/api/report.rb
+- lib/adtech/client.rb
+- spec/report_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/factorymedia/adtech-api-ruby-client
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ADTech Classic API ruby client
+test_files: []

@@ -1,7 +1,0 @@
-*.rbc
-.yardoc
-/pkg/
-/coverage/
-/doc/
-/tags/
-Gemfile.lock

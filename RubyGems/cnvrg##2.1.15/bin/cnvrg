@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-# -*- mode: ruby -*-
-
-# require 'cnvrg'
-require 'cnvrg/runner'
-
-Cnvrg::Runner.new(ARGV.dup).execute!
-
-# Cnvrg::CLI.start(ARGV)

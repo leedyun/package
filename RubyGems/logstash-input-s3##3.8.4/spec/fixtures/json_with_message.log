@@ -1,2 +1,0 @@
-{ "message": ["GET", 32, "/health"] }
-{ "message": true }

@@ -1,0 +1,155 @@
+--- !ruby/object:Gem::Specification
+name: astroboa_cli
+version: !ruby/object:Gem::Version
+  version: 0.5.0
+platform: ruby
+authors:
+- Gregory Chomatas
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: progressbar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: erubis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.5
+- !ruby/object:Gem::Dependency
+  name: colorize
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: zip-zip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: astroboa-cli provides commands for installing astroboa platform, creating
+  repositories, taking backups, deploying applications to astroboa, etc.
+email:
+- gchomatas@betaconcept.com
+executables:
+- astroboa-cli
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.rdoc
+- COPYING
+- COPYING.LESSER
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- astroboa_cli.gemspec
+- bin/astroboa-cli
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/astroboa-cli.rb
+- lib/astroboa-cli/cli.rb
+- lib/astroboa-cli/command.rb
+- lib/astroboa-cli/command/base.rb
+- lib/astroboa-cli/command/help.rb
+- lib/astroboa-cli/command/model.rb
+- lib/astroboa-cli/command/repository.rb
+- lib/astroboa-cli/command/server.rb
+- lib/astroboa-cli/command/service.rb
+- lib/astroboa-cli/command/version.rb
+- lib/astroboa-cli/util.rb
+- lib/astroboa-cli/version.rb
+- test/features/astroboa-cli.feature
+homepage: http://www.astroboa.org
+licenses:
+- LGPL
+metadata: {}
+post_install_message: "  *   run 'astroboa-cli help' to see the available commands\n"
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Astroboa Command Line Interface for astroboa platform and astroboa apps management.
+test_files: []

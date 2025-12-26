@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: passgen
+version: !ruby/object:Gem::Version
+  version: 1.0.3
+platform: ruby
+authors:
+- Erik Lindblad
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2010-12-16 00:00:00.000000000 Z
+dependencies: []
+description: A password generation gem for Ruby and Rails applications.
+email: erik@l2c.se
+executables: []
+extensions: []
+extra_rdoc_files:
+- CHANGELOG
+- README.rdoc
+- lib/passgen.rb
+- lib/passgen/probabilities.rb
+- lib/passgen/strength_analyzer.rb
+files:
+- CHANGELOG
+- Manifest
+- README.rdoc
+- Rakefile
+- init.rb
+- lib/passgen.rb
+- lib/passgen/probabilities.rb
+- lib/passgen/strength_analyzer.rb
+- passgen.gemspec
+- spec/passgen/strength_analyzer_spec.rb
+- spec/passgen_spec.rb
+homepage: http://github.com/cryptice/passgen
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Passgen
+- "--main"
+- README.rdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.2'
+requirements: []
+rubyforge_project: passgen
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 3
+summary: A password generation gem for Ruby and Rails applications.
+test_files: []

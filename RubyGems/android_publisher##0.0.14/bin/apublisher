@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'android/publisher'
+
+require 'trollop'
+opts = Trollop::options do
+  opt :name,    'Package name',                                                     :type    => :string,  :short => '-n'
+  opt :apk,     'Path to the apk file',                                             :type    => :string,  :short => '-a'
+  opt :ver,     'VersionCode to be deployed',                                       :default => 0,        :short => '-v'
+  opt :track,   'Track to assign the apk to',                                       :default => '',       :short => '-t'
+  opt :fraction,'Portion of the users who should receive this version of the app',  :type    => :double,  :short => '-f'
+  opt :dry_run, 'Verify command to be run without actually running it',             :default => false,    :short => '-d'
+end
+
+p params = {
+  :name               => opts[:name],
+  :apk_path           => opts[:apk],
+  :version            => opts[:ver] == 0 ? nil : opts[:ver],
+  :track              => opts[:track],
+  :fraction           => opts[:fraction],
+}
+
+# Maybe worth reading the package name?
+# aapt dump badging <path-to-apk>#
+
+publisher = Android::Publisher.new(params[:name], params[:apk_path], params[:version])
+
+if opts[:dry_run]
+  puts 'This was just a dry run! Nothing was actually executed!'
+else
+  if params[:track] == 'alpha'
+    publisher.deploy_to_alpha
+  elsif params[:track] == 'beta' && params[:fraction] == 0
+    publisher.clear_beta
+  elsif params[:track] == 'beta'
+    publisher.deploy_to_beta
+  elsif params[:track] == 'production'
+    publisher.deploy_to_production
+  elsif params[:track] == 'rollout' && !params[:fraction]
+    publisher.rollout
+  elsif params[:track] == 'rollout' && params[:fraction] == 0
+    publisher.clear_rollout
+  elsif params[:track] == 'rollout' && params[:fraction] == 1
+    publisher.finish_rollout
+  elsif params[:track] == 'rollout' && params[:fraction]
+    publisher.update_rollout(params[:fraction])
+  end
+end

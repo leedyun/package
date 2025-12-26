@@ -1,0 +1,16 @@
+//
+//  main.m
+//  <%= @project_name %>
+//
+//  Created by cocoapods-icemobile-plugin
+//  Copyright (c) <%= @project_year %> IceMobile. All rights reserved.
+//
+
+#import "<%= @project_prefix %>BootstrapDelegate.h"
+
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return BFBootstrapMain(argc, argv, nil, NSStringFromClass([<%= @project_prefix %>BootstrapDelegate class]));
+    }
+}

@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: font_roboto-rails
+version: !ruby/object:Gem::Version
+  version: 0.0.3
+platform: ruby
+authors:
+- Vladimir Radetsky
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: less
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: less-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Just font
+email:
+- chezka.rus@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- app/assets/fonts/roboto-bold.eot
+- app/assets/fonts/roboto-bold.ttf
+- app/assets/fonts/roboto-bold.woff
+- app/assets/fonts/roboto-bold.woff2
+- app/assets/fonts/roboto-light.eot
+- app/assets/fonts/roboto-light.ttf
+- app/assets/fonts/roboto-light.woff
+- app/assets/fonts/roboto-light.woff2
+- app/assets/fonts/roboto-medium.eot
+- app/assets/fonts/roboto-medium.ttf
+- app/assets/fonts/roboto-medium.woff
+- app/assets/fonts/roboto-medium.woff2
+- app/assets/fonts/roboto-regular.eot
+- app/assets/fonts/roboto-regular.ttf
+- app/assets/fonts/roboto-regular.woff
+- app/assets/fonts/roboto-regular.woff2
+- app/assets/fonts/roboto-thin.eot
+- app/assets/fonts/roboto-thin.ttf
+- app/assets/fonts/roboto-thin.woff
+- app/assets/fonts/roboto-thin.woff2
+- app/assets/stylesheets/font-roboto-rails.less
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- font_roboto-rails.gemspec
+- lib/font-roboto-rails.rb
+- lib/font-roboto-rails/version.rb
+homepage: https://rubygems.org/gems/font-roboto-rails
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Font Roboto Rails - Roboto font for rails.
+test_files: []

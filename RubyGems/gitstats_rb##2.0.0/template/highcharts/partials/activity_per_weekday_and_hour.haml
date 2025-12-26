@@ -1,0 +1,20 @@
+- data = []
+- stats.wday_stats.each do |day,c|
+  - data.concat(c.map { |h,commit| [h,(day + 6) % 7,commit.commits] })
+- block(:activity_per_weekday_and_hour) do
+  #chart_activity_per_weekday_and_hour{:style => "height: 500px"}
+
+  %script
+    var chart_activity_per_weekday_and_hour           = new Object();
+    chart_activity_per_weekday_and_hour.label         = '#{label(:activity_per_weekday_and_hour)}';
+    chart_activity_per_weekday_and_hour.target        = '#chart_activity_per_weekday_and_hour';
+    chart_activity_per_weekday_and_hour.label_x       = 'Hour';
+    chart_activity_per_weekday_and_hour.label_y       = 'Day';
+    chart_activity_per_weekday_and_hour.categories_x  = #{(0..23).map{ |v| v.to_s }};
+    chart_activity_per_weekday_and_hour.categories_y  = #{(0..6).map{ |v| weekday(v) }};
+    chart_activity_per_weekday_and_hour.series_name   = 'Commits';
+    chart_activity_per_weekday_and_hour.series_data   = #{data};
+
+    $(document).ready(function() {
+    createHeatMap(chart_activity_per_weekday_and_hour);
+    });

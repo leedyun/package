@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: asset-pipeline_i18n
+version: !ruby/object:Gem::Version
+  version: 4.0.1.2
+platform: ruby
+authors:
+- Nicola Piccinini
+- Corin Langosch
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+description: Localized precompiled assets for Rails
+email:
+- nicola.piccinini@simplificator.com
+- info@corinlangosch.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.rdoc
+- Rakefile
+- asset-pipeline_i18n.gemspec
+- changelog.txt
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/asset_pipeline_i18n.rb
+- lib/asset_pipeline_i18n/railtie.rb
+- lib/asset_pipeline_i18n/version.rb
+homepage: https://github.com/simplificator/asset_pipeline_i18n
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Localized precompiled assets for Rails
+test_files: []

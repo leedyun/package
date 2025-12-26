@@ -1,0 +1,4 @@
+en:
+  errors:
+    messages:
+      invalid_base64: is invalid Base64 encoding.

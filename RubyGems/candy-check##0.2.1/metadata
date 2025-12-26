@@ -1,0 +1,399 @@
+--- !ruby/object:Gem::Specification
+name: candy-check
+version: !ruby/object:Gem::Version
+  version: 0.2.1
+platform: ruby
+authors:
+- Jonas Thiel
+- Christoph Weegen
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: google-api-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.34.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.34.0
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.19'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.19'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: inch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+- !ruby/object:Gem::Dependency
+  name: minitest-around
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: minitest-focus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.48'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.48'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- jonas@thiel.io
+executables:
+- candy_check
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- MIGRATION_GUIDE_0_2_0.md
+- README.md
+- Rakefile
+- bin/candy_check
+- candy-check.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/candy_check.rb
+- lib/candy_check/app_store.rb
+- lib/candy_check/app_store/client.rb
+- lib/candy_check/app_store/config.rb
+- lib/candy_check/app_store/receipt.rb
+- lib/candy_check/app_store/receipt_collection.rb
+- lib/candy_check/app_store/subscription_verification.rb
+- lib/candy_check/app_store/verification.rb
+- lib/candy_check/app_store/verification_failure.rb
+- lib/candy_check/app_store/verifier.rb
+- lib/candy_check/cli.rb
+- lib/candy_check/cli/app.rb
+- lib/candy_check/cli/commands.rb
+- lib/candy_check/cli/commands/app_store.rb
+- lib/candy_check/cli/commands/base.rb
+- lib/candy_check/cli/commands/play_store.rb
+- lib/candy_check/cli/commands/version.rb
+- lib/candy_check/cli/out.rb
+- lib/candy_check/play_store.rb
+- lib/candy_check/play_store/android_publisher_service.rb
+- lib/candy_check/play_store/product_purchases/product_purchase.rb
+- lib/candy_check/play_store/product_purchases/product_verification.rb
+- lib/candy_check/play_store/subscription_purchases/subscription_purchase.rb
+- lib/candy_check/play_store/subscription_purchases/subscription_verification.rb
+- lib/candy_check/play_store/verification_failure.rb
+- lib/candy_check/play_store/verifier.rb
+- lib/candy_check/utils.rb
+- lib/candy_check/utils/attribute_reader.rb
+- lib/candy_check/utils/config.rb
+- lib/candy_check/version.rb
+- spec/app_store/client_spec.rb
+- spec/app_store/config_spec.rb
+- spec/app_store/receipt_collection_spec.rb
+- spec/app_store/receipt_spec.rb
+- spec/app_store/subscription_verification_spec.rb
+- spec/app_store/verifcation_failure_spec.rb
+- spec/app_store/verification_spec.rb
+- spec/app_store/verifier_spec.rb
+- spec/candy_check_spec.rb
+- spec/cli/app_spec.rb
+- spec/cli/commands/app_store_spec.rb
+- spec/cli/commands/play_store_spec.rb
+- spec/cli/commands/version_spec.rb
+- spec/cli/out_spec.rb
+- spec/fixtures/play_store/random_dummy_key.json
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/permission_denied.yml
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/response_with_empty_body.yml
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/valid_but_not_consumed.yml
+- spec/fixtures/vcr_cassettes/play_store/subscription_purchases/permission_denied.yml
+- spec/fixtures/vcr_cassettes/play_store/subscription_purchases/valid_but_expired.yml
+- spec/play_store/product_purchases/product_purchase_spec.rb
+- spec/play_store/product_purchases/product_verification_spec.rb
+- spec/play_store/subscription_purchases/subscription_purchase_spec.rb
+- spec/play_store/subscription_purchases/subscription_verification_spec.rb
+- spec/play_store/verification_failure_spec.rb
+- spec/play_store/verifier_spec.rb
+- spec/spec_helper.rb
+- spec/support/with_command.rb
+- spec/support/with_fixtures.rb
+- spec/support/with_temp_file.rb
+homepage: https://github.com/jnbt/candy_check
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Check and verify in-app receipts
+test_files:
+- spec/app_store/client_spec.rb
+- spec/app_store/config_spec.rb
+- spec/app_store/receipt_collection_spec.rb
+- spec/app_store/receipt_spec.rb
+- spec/app_store/subscription_verification_spec.rb
+- spec/app_store/verifcation_failure_spec.rb
+- spec/app_store/verification_spec.rb
+- spec/app_store/verifier_spec.rb
+- spec/candy_check_spec.rb
+- spec/cli/app_spec.rb
+- spec/cli/commands/app_store_spec.rb
+- spec/cli/commands/play_store_spec.rb
+- spec/cli/commands/version_spec.rb
+- spec/cli/out_spec.rb
+- spec/fixtures/play_store/random_dummy_key.json
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/permission_denied.yml
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/response_with_empty_body.yml
+- spec/fixtures/vcr_cassettes/play_store/product_purchases/valid_but_not_consumed.yml
+- spec/fixtures/vcr_cassettes/play_store/subscription_purchases/permission_denied.yml
+- spec/fixtures/vcr_cassettes/play_store/subscription_purchases/valid_but_expired.yml
+- spec/play_store/product_purchases/product_purchase_spec.rb
+- spec/play_store/product_purchases/product_verification_spec.rb
+- spec/play_store/subscription_purchases/subscription_purchase_spec.rb
+- spec/play_store/subscription_purchases/subscription_verification_spec.rb
+- spec/play_store/verification_failure_spec.rb
+- spec/play_store/verifier_spec.rb
+- spec/spec_helper.rb
+- spec/support/with_command.rb
+- spec/support/with_fixtures.rb
+- spec/support/with_temp_file.rb

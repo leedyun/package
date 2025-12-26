@@ -1,9 +1,0 @@
-AllCops:
-  Exclude:
-    - dbus-systemd.gemspec
-    - spec/**/*
-    - test/**/*
-Metrics/LineLength:
-  Max: 100
-Documentation:
-  Enabled: false

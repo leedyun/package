@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: arctica_autorization-rails-plugin
+version: !ruby/object:Gem::Version
+  version: '0.1'
+platform: ruby
+authors:
+- Alexander V. Blid
+- Alexander A. Doskov
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2012-02-21 00:00:00.000000000 Z
+dependencies: []
+description: Авторизация.
+email: support@itc-arctica.ru
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- Rakefile
+- arctica_autorization-rails-plugin.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- init.rb
+- install.rb
+- lib/arctica_autorization.rb
+- uninstall.rb
+homepage: http://www.itc-arctica.ru
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Autorization summary.
+test_files: []

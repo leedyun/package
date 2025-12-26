@@ -1,0 +1,180 @@
+--- !ruby/object:Gem::Specification
+name: attribute-normalizer-extras
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Darko Dosenovic
+- Michael van den Beuken
+- Ruben Estevez
+- Jordan Babe
+- Mathieu Gilbert
+- Ryan Jones
+- Jonathan Weyermann
+- Jesse Doyle
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-instafail
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: attribute_normalizer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Specific normalizers that we commonly use in our apps
+email:
+- darko.dosenovic@ama.ab.ca
+- michael.vandenbeuken@ama.ab.ca
+- ruben.estevez@ama.ab.ca
+- jordan.babe@ama.ab.ca
+- mathieu.gilbert@ama.ab.ca
+- ryan.jones@ama.ab.ca
+- jonathan.weyermann@ama.ab.ca
+- jesse.doyle@ama.ab.ca
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- attribute-normalizer-extras.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/attribute_normalizer/extras.rb
+- lib/attribute_normalizer/extras/version.rb
+- lib/attribute_normalizer/normalizers/float_normalizer.rb
+- lib/attribute_normalizer/normalizers/gsub_normalizer.rb
+- lib/attribute_normalizer/normalizers/postal_code_normalizer.rb
+- lib/attribute_normalizer/normalizers/spaceless_normalizer.rb
+- spec/models/float_normalizer_spec.rb
+- spec/models/gsub_normalizer_spec.rb
+- spec/models/postal_code_normalizer_spec.rb
+- spec/models/spaceless_normalizer_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: attribute_normalizer gem extras
+test_files:
+- spec/models/float_normalizer_spec.rb
+- spec/models/gsub_normalizer_spec.rb
+- spec/models/postal_code_normalizer_spec.rb
+- spec/models/spaceless_normalizer_spec.rb
+- spec/spec_helper.rb

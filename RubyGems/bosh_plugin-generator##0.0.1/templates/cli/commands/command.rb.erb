@@ -1,0 +1,14 @@
+require "bosh/<%= short_plugin_name %>"
+
+module Bosh::Cli::Command
+  class <%= class_name %> < Base
+    include Bosh::<%= class_name %>::Helpers
+
+    usage "say hello"
+    desc "simple BOSH CLI plugin"
+    def perform
+      say_hello
+    end
+
+  end
+end

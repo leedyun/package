@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: paranoid2
+version: !ruby/object:Gem::Version
+  version: 1.1.6
+platform: ruby
+authors:
+- yury
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-06-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: paranoid models for rails 4
+email:
+- yury.korolev@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/paranoid2.rb
+- lib/paranoid2/persistence.rb
+- lib/paranoid2/scoping.rb
+- lib/paranoid2/version.rb
+- paranoid2.gemspec
+- spec/paranoid2_spec.rb
+- spec/spec_helper.rb
+- spec/spec_models.rb
+homepage: https://github.com/anjlab/paranoid2
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: paranoid models for rails 4
+test_files:
+- spec/paranoid2_spec.rb
+- spec/spec_helper.rb
+- spec/spec_models.rb

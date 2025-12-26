@@ -1,0 +1,477 @@
+--- !ruby/object:Gem::Specification
+name: agave_client
+version: !ruby/object:Gem::Version
+  version: 0.1.3
+platform: ruby
+authors:
+- Stefano Verna
+- Joe Yates
+- Domenico Garofoli
+- Damiano Giacomello
+- Silvio Relli
+- Lorenzo Ponticelli
+- Matteo Manzo
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.4.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.4.2
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.57.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.57.2
+- !ruby/object:Gem::Dependency
+  name: diff_dirs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+- !ruby/object:Gem::Dependency
+  name: faraday_middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.2.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.2.7
+- !ruby/object:Gem::Dependency
+  name: fastimage
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: downloadr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: imgix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+- !ruby/object:Gem::Dependency
+  name: toml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cacert
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dotenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pusher-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: listen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json_schema
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby client per integrazione con AgaveCMS e jekyll
+email:
+- s.verna@cantierecreativo.net
+- j.yates@cantierecreativo.net
+- d.garofoli@cantierecreativo.net
+- d.giacomello@cantierecreativo.net
+- s.relli@cantierecreativo.net
+- l.ponticelli@cantierecreativo.net
+- m.manzo@cantierecreativo.net
+executables:
+- agave
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CODE_OF_CONDUCT.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- agave_client.gemspec
+- bin/console
+- bin/setup
+- exe/agave
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/agave.rb
+- lib/agave/api_client.rb
+- lib/agave/api_error.rb
+- lib/agave/cli.rb
+- lib/agave/dump/dsl/add_to_data_file.rb
+- lib/agave/dump/dsl/create_data_file.rb
+- lib/agave/dump/dsl/create_post.rb
+- lib/agave/dump/dsl/directory.rb
+- lib/agave/dump/dsl/root.rb
+- lib/agave/dump/format.rb
+- lib/agave/dump/format/json.rb
+- lib/agave/dump/format/toml.rb
+- lib/agave/dump/format/yaml.rb
+- lib/agave/dump/operation/add_to_data_file.rb
+- lib/agave/dump/operation/create_data_file.rb
+- lib/agave/dump/operation/create_post.rb
+- lib/agave/dump/operation/directory.rb
+- lib/agave/dump/operation/root.rb
+- lib/agave/dump/runner.rb
+- lib/agave/dump/ssg_detector.rb
+- lib/agave/json_api_deserializer.rb
+- lib/agave/json_api_serializer.rb
+- lib/agave/local/entities_repo.rb
+- lib/agave/local/field_type/boolean.rb
+- lib/agave/local/field_type/color.rb
+- lib/agave/local/field_type/date.rb
+- lib/agave/local/field_type/date_time.rb
+- lib/agave/local/field_type/file.rb
+- lib/agave/local/field_type/float.rb
+- lib/agave/local/field_type/gallery.rb
+- lib/agave/local/field_type/global_seo.rb
+- lib/agave/local/field_type/image.rb
+- lib/agave/local/field_type/integer.rb
+- lib/agave/local/field_type/json.rb
+- lib/agave/local/field_type/lat_lon.rb
+- lib/agave/local/field_type/link.rb
+- lib/agave/local/field_type/links.rb
+- lib/agave/local/field_type/rich_text.rb
+- lib/agave/local/field_type/seo.rb
+- lib/agave/local/field_type/slug.rb
+- lib/agave/local/field_type/string.rb
+- lib/agave/local/field_type/text.rb
+- lib/agave/local/field_type/theme.rb
+- lib/agave/local/field_type/video.rb
+- lib/agave/local/item.rb
+- lib/agave/local/items_repo.rb
+- lib/agave/local/json_api_entity.rb
+- lib/agave/local/loader.rb
+- lib/agave/local/site.rb
+- lib/agave/paginator.rb
+- lib/agave/repo.rb
+- lib/agave/site/client.rb
+- lib/agave/upload/file.rb
+- lib/agave/upload/image.rb
+- lib/agave/utils/favicon_tags_builder.rb
+- lib/agave/utils/locale_value.rb
+- lib/agave/utils/meta_tags/article_modified_time.rb
+- lib/agave/utils/meta_tags/article_publisher.rb
+- lib/agave/utils/meta_tags/base.rb
+- lib/agave/utils/meta_tags/description.rb
+- lib/agave/utils/meta_tags/image.rb
+- lib/agave/utils/meta_tags/og_locale.rb
+- lib/agave/utils/meta_tags/og_site_name.rb
+- lib/agave/utils/meta_tags/og_type.rb
+- lib/agave/utils/meta_tags/robots.rb
+- lib/agave/utils/meta_tags/title.rb
+- lib/agave/utils/meta_tags/twitter_card.rb
+- lib/agave/utils/meta_tags/twitter_site.rb
+- lib/agave/utils/seo_tags_builder.rb
+- lib/agave/version.rb
+- lib/agave/watch/site_change_watcher.rb
+homepage: https://github.com/cantierecreativo/ruby-agave-client
+licenses:
+- BSD-3-Clause
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby client per AgaveCMS API
+test_files: []

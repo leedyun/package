@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/github/release/stats'
+require "thor"
+
+class Cli < Thor
+  desc "downloads <owner/project>", "get download stats for all releases of project <owner/project>"
+  def downloads(repo)
+    stats = Github::Release::Stats.downloads(repo)
+    puts "tag: download count"
+    stats.each do |tag, downloads|
+      puts "#{tag}: #{downloads}"
+    end
+  end
+end
+
+Cli.start

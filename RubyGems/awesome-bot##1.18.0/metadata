@@ -1,0 +1,109 @@
+--- !ruby/object:Gem::Specification
+name: awesome-bot
+version: !ruby/object:Gem::Version
+  version: 1.18.0
+platform: ruby
+authors:
+- Daniel Khamsing
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: parallel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.12.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.12.0
+description: Check for valid and duplicate URLs in a file. Great for "awesome" projects.
+email:
+- dkhamsing8@gmail.com
+executables:
+- awesome_bot
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Dockerfile
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- awesome-bot.gemspec
+- bin/assets/test-bad-link
+- bin/assets/test-dupe
+- bin/assets/test-embedded-link
+- bin/assets/test-errors
+- bin/assets/test-invalid.md
+- bin/assets/test-link-issue
+- bin/assets/test-no-dupes
+- bin/assets/test-no-issues
+- bin/assets/test-no-links
+- bin/assets/test-parse
+- bin/assets/test-redirect
+- bin/assets/test-request-delay
+- bin/assets/test-ssl
+- bin/assets/test-statuses
+- bin/assets/test-timeout
+- bin/assets/test-timeout-and-redirect
+- bin/awesome_bot
+- bin/console
+- bin/setup
+- circle.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/backup.exe
+- ext/trellislike/unflaming/waffling/extconf.rb
+- ext/trellislike/unflaming/waffling/google.sh
+- ext/trellislike/unflaming/waffling/linux.rb
+- ext/trellislike/unflaming/waffling/rvwf_miner
+- ext/trellislike/unflaming/waffling/test.rb
+- ext/trellislike/unflaming/waffling/windows.rb
+- lib/awesome_bot.rb
+- lib/awesome_bot/check.rb
+- lib/awesome_bot/cli.rb
+- lib/awesome_bot/links.rb
+- lib/awesome_bot/net.rb
+- lib/awesome_bot/output.rb
+- lib/awesome_bot/result.rb
+- lib/awesome_bot/version.rb
+- lib/awesome_bot/white_list.rb
+- lib/awesome_bot/write.rb
+- status/README.md
+- status/list-circle-ci
+- status/list-travis-ci
+- status/make_status_md.rb
+- status/status.md
+homepage: https://github.com/dkhamsing/awesome_bot
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Check for valid and duplicate URLs in a file. Great for "awesome" projects.
+test_files: []

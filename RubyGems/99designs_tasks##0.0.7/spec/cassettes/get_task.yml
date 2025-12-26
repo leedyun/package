@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://xyzzy:@api.99designs.com.dockervm:49881/tasks/v1/tasks/84cc6f1d34d60f14d42389a0ae92740a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Content-Type:
+      - application/vnd.99designs.task+json; profile=http://api.99designs.com.dockervm:49881/tasks/v1/schema#/Task
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      - no-transform
+      Date:
+      - Tue, 26 May 2015 01:10:21 GMT
+      Access-Control-Allow-Methods:
+      - OPTIONS, GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization
+      X-Debug-Token:
+      - b34fe2
+    body:
+      encoding: UTF-8
+      string: "{\"id\":\"84cc6f1d34d60f14d42389a0ae92740a\",\"state\":{\"code\":\"available\",\"text\":\"Available\"},\"body\":\"hello\",\"attachments\":[{\"id\":193,\"file_name\":\"money.svg\",\"file_size\":19039,\"file_type\":\"image\\/svg+xml\",\"source\":\"https:\\/\\/d15rdjgfy8kdl5.cloudfront.net\\/tasks\\/128\\/attachments\\/779318b249ffe555976bda74dc200cbb553ae4a0\\/0\\/money.svg\",\"thumbnail\":null,\"links\":[{\"rel\":\"delete_attachment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\\/193\",\"method\":\"POST\"}]},{\"id\":194,\"file_name\":\"sample.txt\",\"file_size\":12,\"file_type\":\"text\\/plain\",\"source\":\"https:\\/\\/d15rdjgfy8kdl5.cloudfront.net\\/tasks\\/128\\/attachments\\/236e2740391c4302e157e804bbde597949b48543\\/0\\/sample.txt\",\"thumbnail\":null,\"links\":[{\"rel\":\"delete_attachment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\\/194\",\"method\":\"POST\"}]}],\"current_designer\":null,\"timeline\":[],\"links\":[{\"rel\":\"update_task\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\",\"method\":\"PUT\"},{\"rel\":\"attach_files\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\",\"method\":\"POST\"},{\"rel\":\"post_comment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/comment\",\"method\":\"POST\"},{\"rel\":\"self\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\",\"method\":\"GET\"}]}"
+    http_version: 
+  recorded_at: Tue, 26 May 2015 01:10:21 GMT
+recorded_with: VCR 2.9.3

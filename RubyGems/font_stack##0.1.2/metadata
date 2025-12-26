@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: font_stack
+version: !ruby/object:Gem::Version
+  version: 0.1.2
+platform: ruby
+authors:
+- Lloyd Kupchanko
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+description: Font-stack is a Compass plugin that provides a library of CSS font stacks.
+email: lloyd@lloydk.ca
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- README.markdown
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- font_stack.gemspec
+- lib/font-stack.rb
+- lib/stylesheets/_font-stack.scss
+homepage: http://github.com/lloydk/font-stack
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A library of CSS font stacks
+test_files: []

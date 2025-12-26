@@ -1,6 +1,0 @@
-test:
-  clients:
-    default:
-      database: devise_security_test
-      hosts:
-        - localhost: <%= ENV.fetch('MONGODB_PORT', '27017') %>

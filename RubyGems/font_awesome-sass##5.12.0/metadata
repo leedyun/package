@@ -1,0 +1,146 @@
+--- !ruby/object:Gem::Specification
+name: font_awesome-sass
+version: !ruby/object:Gem::Version
+  version: 5.12.0
+platform: ruby
+authors:
+- Travis Chase
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sassc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.11'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.11'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: compass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Font-Awesome SASS gem for use in Ruby projects
+email:
+- travis@fontawesome.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- assets/fonts/font-awesome/fa-brands-400.eot
+- assets/fonts/font-awesome/fa-brands-400.svg
+- assets/fonts/font-awesome/fa-brands-400.ttf
+- assets/fonts/font-awesome/fa-brands-400.woff
+- assets/fonts/font-awesome/fa-brands-400.woff2
+- assets/fonts/font-awesome/fa-regular-400.eot
+- assets/fonts/font-awesome/fa-regular-400.svg
+- assets/fonts/font-awesome/fa-regular-400.ttf
+- assets/fonts/font-awesome/fa-regular-400.woff
+- assets/fonts/font-awesome/fa-regular-400.woff2
+- assets/fonts/font-awesome/fa-solid-900.eot
+- assets/fonts/font-awesome/fa-solid-900.svg
+- assets/fonts/font-awesome/fa-solid-900.ttf
+- assets/fonts/font-awesome/fa-solid-900.woff
+- assets/fonts/font-awesome/fa-solid-900.woff2
+- assets/stylesheets/_font-awesome-compass.scss
+- assets/stylesheets/_font-awesome-sprockets.scss
+- assets/stylesheets/_font-awesome.scss
+- assets/stylesheets/_v4-shims.scss
+- assets/stylesheets/font-awesome/_animated.scss
+- assets/stylesheets/font-awesome/_bordered-pulled.scss
+- assets/stylesheets/font-awesome/_core.scss
+- assets/stylesheets/font-awesome/_fixed-width.scss
+- assets/stylesheets/font-awesome/_icons.scss
+- assets/stylesheets/font-awesome/_larger.scss
+- assets/stylesheets/font-awesome/_list.scss
+- assets/stylesheets/font-awesome/_mixins.scss
+- assets/stylesheets/font-awesome/_path.scss
+- assets/stylesheets/font-awesome/_rotated-flipped.scss
+- assets/stylesheets/font-awesome/_screen-reader.scss
+- assets/stylesheets/font-awesome/_shims.scss
+- assets/stylesheets/font-awesome/_stacked.scss
+- assets/stylesheets/font-awesome/_variables.scss
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- font_awesome-sass.gemspec
+- lib/font-awesome-sass.rb
+- lib/font_awesome/sass/rails/engine.rb
+- lib/font_awesome/sass/rails/helpers.rb
+- lib/font_awesome/sass/rails/railtie.rb
+- lib/font_awesome/sass/version.rb
+homepage: https://github.com/FortAwesome/font-awesome-sass
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Font-Awesome SASS
+test_files: []

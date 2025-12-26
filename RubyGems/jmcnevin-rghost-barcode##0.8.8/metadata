@@ -1,0 +1,89 @@
+--- !ruby/object:Gem::Specification
+name: jmcnevin-rghost-barcode
+version: !ruby/object:Gem::Version
+  version: 0.8.8
+platform: ruby
+authors:
+- Shairon Toledo, Jeremy McNevin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2010-08-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rghost
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  RGhost Barcode is adapter from Barcode Writer. The Barcode Writer in Pure
+  Postscript is an award-winning open source barcode maker, as used by NASA.
+email:
+- shairon.toledo@gmail.com
+- jeremy@spokoino.net
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- README.textile
+- lib/rghost_barcode.rb
+- lib/rghost_barcode/ps/barcode.ps
+- lib/rghost_barcode/rghost_barcode_adapter.rb
+- lib/rghost_barcode/rghost_barcode_base.rb
+- lib/rghost_barcode/rghost_barcode_classes.rb
+- lib/rghost_barcode/rghost_barcode_examples.rb
+- lib/rghost_barcode/rghost_barcode_version.rb
+files:
+- Manifest
+- README.textile
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- jmcnevin-rghost-barcode.gemspec
+- lib/rghost_barcode.rb
+- lib/rghost_barcode/ps/barcode.ps
+- lib/rghost_barcode/rghost_barcode_adapter.rb
+- lib/rghost_barcode/rghost_barcode_base.rb
+- lib/rghost_barcode/rghost_barcode_classes.rb
+- lib/rghost_barcode/rghost_barcode_examples.rb
+- lib/rghost_barcode/rghost_barcode_version.rb
+homepage: http://github.com/jmcnevin/rghost-barcode
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Jmcnevin-rghost_barcode
+- "--main"
+- README.textile
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.2'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 3
+summary: RGhost Barcode is adapter from Barcode Writer. The Barcode Writer in Pure
+  Postscript is an award-winning open source barcode maker, as used by NASA.
+test_files: []

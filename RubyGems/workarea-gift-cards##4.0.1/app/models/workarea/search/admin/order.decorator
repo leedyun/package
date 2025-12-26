@@ -1,0 +1,7 @@
+module Workarea
+  decorate Search::Admin::Order, with: 'gift_cards' do
+    def keywords
+      super + payment.gift_cards.map(&:number)
+    end
+  end
+end

@@ -1,0 +1,89 @@
+--- !ruby/object:Gem::Specification
+name: bankgiro-inbetalningar
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- David Vrensk
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.9.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.9.0
+description: Parse BgMax transaction files from Bankgirot and return a simple data
+  structure
+email:
+- david@vrensk.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bankgiro-inbetalningar.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/bankgiro_inbetalningar.rb
+- lib/bankgiro_inbetalningar/bgmax_line.rb
+- lib/bankgiro_inbetalningar/parser.rb
+- lib/bankgiro_inbetalningar/version.rb
+- spec/bankgiro_inbetalningar/bgmax_line_spec.rb
+- spec/bankgiro_inbetalningar/parser_spec.rb
+- spec/bankgiro_inbetalningar_spec.rb
+- spec/fixtures/BgMaxfil4.txt
+- spec/fixtures/BgMaxfil4_broken.txt
+- spec/fixtures/isolated_deposit.txt
+- spec/fixtures/isolated_payment.txt
+- spec/fixtures/minimal.txt
+- spec/spec_helper.rb
+homepage: https://github.com/PugglePay/bankgiro_inbetalningar
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Bankgirot has changed its file format, making the +rbankgiro+ gem unusable
+  for new clients.
+test_files:
+- spec/bankgiro_inbetalningar/bgmax_line_spec.rb
+- spec/bankgiro_inbetalningar/parser_spec.rb
+- spec/bankgiro_inbetalningar_spec.rb
+- spec/fixtures/BgMaxfil4.txt
+- spec/fixtures/BgMaxfil4_broken.txt
+- spec/fixtures/isolated_deposit.txt
+- spec/fixtures/isolated_payment.txt
+- spec/fixtures/minimal.txt
+- spec/spec_helper.rb

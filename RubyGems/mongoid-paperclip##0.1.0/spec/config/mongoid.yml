@@ -1,6 +1,0 @@
-test:
-  clients:
-    default:
-      database: mongoid-paperclip
-      hosts:
-        - localhost:27017

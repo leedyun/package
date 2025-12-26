@@ -1,0 +1,99 @@
+--- !ruby/object:Gem::Specification
+name: acts-as_publishable
+version: !ruby/object:Gem::Version
+  version: 0.3.3
+platform: ruby
+authors:
+- Rasmus Bang Grouleff
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+- !ruby/object:Gem::Dependency
+  name: sqlite3-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Rails gem that adds functionality to make Active Record models publishable
+email: rasmus@anybite.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.rdoc
+- Rakefile
+- acts-as_publishable.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acts_as_publishable.rb
+- lib/acts_as_publishable/acts_as_publishable.rb
+- lib/acts_as_publishable/version.rb
+- spec/acts_as_publishable_spec.rb
+- spec/rspec_immediate_feedback_formatter.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+homepage: http://github.com/rbgrouleff/acts_as_publishable
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Rails gem that adds functionality to make Active Record models publishable
+test_files: []

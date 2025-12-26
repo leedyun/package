@@ -1,5 +1,0 @@
-pl:
-  valid_email:
-    validations:
-      email:
-        invalid: "jest nieprawidłowy"

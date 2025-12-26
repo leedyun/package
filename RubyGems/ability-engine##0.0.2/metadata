@@ -1,0 +1,187 @@
+--- !ruby/object:Gem::Specification
+name: ability-engine
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Siebert Lubbe
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+description: Exposes CanCan's current_ability object as json through a rails engine
+  controller
+email:
+- siebert.lubbe@googlemail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- ability-engine.gemspec
+- app/controllers/current_ability_controller.rb
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/ability_engine.rb
+- lib/ability_engine/version.rb
+- spec/controllers/current_ability_controller_spec.rb
+- spec/dummy/Rakefile
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/home_controller.rb
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/app/views/layouts/application.html.haml
+- spec/dummy/app/views/layouts/common/_agent_banner.html.haml
+- spec/dummy/app/views/layouts/common/_footer.html.haml
+- spec/dummy/app/views/layouts/common/_login_banner.html.haml
+- spec/dummy/app/views/layouts/common/_login_footer.html.haml
+- spec/dummy/app/views/layouts/devise/sessions.html.haml
+- spec/dummy/config.ru
+- spec/dummy/config/application.rb
+- spec/dummy/config/boot.rb
+- spec/dummy/config/environment.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/locales/devise.en.yml
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/routes.rb
+- spec/dummy/public/404.html
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/favicon.ico
+- spec/dummy/public/login.html
+- spec/dummy/public/robots.txt
+- spec/dummy/public/stylesheets/application.css
+- spec/dummy/public/stylesheets/home.css.css
+- spec/dummy/public/stylesheets/ie.css
+- spec/dummy/public/stylesheets/ie7.css
+- spec/dummy/public/stylesheets/ie8.css
+- spec/dummy/public/stylesheets/jquery/fileuploader.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.autocomplete.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.datepicker.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.dialog.css
+- spec/dummy/public/stylesheets/users.css.css
+- spec/dummy/script/rails
+- spec/spec_helper.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Exposes CanCan's current_ability object as json through a rails engine controller
+test_files:
+- spec/controllers/current_ability_controller_spec.rb
+- spec/dummy/Rakefile
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/home_controller.rb
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/app/views/layouts/application.html.haml
+- spec/dummy/app/views/layouts/common/_agent_banner.html.haml
+- spec/dummy/app/views/layouts/common/_footer.html.haml
+- spec/dummy/app/views/layouts/common/_login_banner.html.haml
+- spec/dummy/app/views/layouts/common/_login_footer.html.haml
+- spec/dummy/app/views/layouts/devise/sessions.html.haml
+- spec/dummy/config.ru
+- spec/dummy/config/application.rb
+- spec/dummy/config/boot.rb
+- spec/dummy/config/environment.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/locales/devise.en.yml
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/routes.rb
+- spec/dummy/public/404.html
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/favicon.ico
+- spec/dummy/public/login.html
+- spec/dummy/public/robots.txt
+- spec/dummy/public/stylesheets/application.css
+- spec/dummy/public/stylesheets/home.css.css
+- spec/dummy/public/stylesheets/ie.css
+- spec/dummy/public/stylesheets/ie7.css
+- spec/dummy/public/stylesheets/ie8.css
+- spec/dummy/public/stylesheets/jquery/fileuploader.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.autocomplete.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.datepicker.css
+- spec/dummy/public/stylesheets/jquery/ui-lightness/jquery.ui.dialog.css
+- spec/dummy/public/stylesheets/users.css.css
+- spec/dummy/script/rails
+- spec/spec_helper.rb

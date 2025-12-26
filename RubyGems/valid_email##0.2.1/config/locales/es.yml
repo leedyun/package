@@ -1,5 +1,0 @@
-es:
-  valid_email:
-    validations:
-      email:
-        invalid: "no es válido"

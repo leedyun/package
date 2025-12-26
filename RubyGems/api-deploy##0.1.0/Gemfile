@@ -1,0 +1,12 @@
+#source 'https://rubygems.org'
+source 'http://artifactory.yoox.net/artifactory/api/gems/gems'
+
+gem 'faraday'
+gem 'artifactory'
+gem 'github_api'
+gem 'require_all'
+gem 'logging'
+gem 'hashie'
+gem 'net-ldap'
+gem 'rspec'
+gem 'pry'

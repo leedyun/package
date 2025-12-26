@@ -1,2 +1,0 @@
-require 'health_check'
-

@@ -1,0 +1,270 @@
+--- !ruby/object:Gem::Specification
+name: telegram_bot-ruby
+version: !ruby/object:Gem::Version
+  version: 0.12.0
+platform: ruby
+authors:
+- Alexander Tipugin
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: virtus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: inflecto
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.48.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.48.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+description: 
+email:
+- atipugin@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- examples/bot.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/telegram/bot.rb
+- lib/telegram/bot/api.rb
+- lib/telegram/bot/client.rb
+- lib/telegram/bot/configuration.rb
+- lib/telegram/bot/exceptions.rb
+- lib/telegram/bot/exceptions/base.rb
+- lib/telegram/bot/exceptions/response_error.rb
+- lib/telegram/bot/null_logger.rb
+- lib/telegram/bot/types.rb
+- lib/telegram/bot/types/animation.rb
+- lib/telegram/bot/types/audio.rb
+- lib/telegram/bot/types/base.rb
+- lib/telegram/bot/types/callback_game.rb
+- lib/telegram/bot/types/callback_query.rb
+- lib/telegram/bot/types/chat.rb
+- lib/telegram/bot/types/chat_member.rb
+- lib/telegram/bot/types/chat_permissions.rb
+- lib/telegram/bot/types/chat_photo.rb
+- lib/telegram/bot/types/chosen_inline_result.rb
+- lib/telegram/bot/types/compactable.rb
+- lib/telegram/bot/types/contact.rb
+- lib/telegram/bot/types/document.rb
+- lib/telegram/bot/types/encrypted_credentials.rb
+- lib/telegram/bot/types/encrypted_passport_element.rb
+- lib/telegram/bot/types/file.rb
+- lib/telegram/bot/types/force_reply.rb
+- lib/telegram/bot/types/game.rb
+- lib/telegram/bot/types/game_high_score.rb
+- lib/telegram/bot/types/inline_keyboard_button.rb
+- lib/telegram/bot/types/inline_keyboard_markup.rb
+- lib/telegram/bot/types/inline_query.rb
+- lib/telegram/bot/types/inline_query_result_article.rb
+- lib/telegram/bot/types/inline_query_result_audio.rb
+- lib/telegram/bot/types/inline_query_result_cached_audio.rb
+- lib/telegram/bot/types/inline_query_result_cached_document.rb
+- lib/telegram/bot/types/inline_query_result_cached_gif.rb
+- lib/telegram/bot/types/inline_query_result_cached_mpeg4_gif.rb
+- lib/telegram/bot/types/inline_query_result_cached_photo.rb
+- lib/telegram/bot/types/inline_query_result_cached_sticker.rb
+- lib/telegram/bot/types/inline_query_result_cached_video.rb
+- lib/telegram/bot/types/inline_query_result_cached_voice.rb
+- lib/telegram/bot/types/inline_query_result_contact.rb
+- lib/telegram/bot/types/inline_query_result_document.rb
+- lib/telegram/bot/types/inline_query_result_game.rb
+- lib/telegram/bot/types/inline_query_result_gif.rb
+- lib/telegram/bot/types/inline_query_result_location.rb
+- lib/telegram/bot/types/inline_query_result_mpeg4_gif.rb
+- lib/telegram/bot/types/inline_query_result_photo.rb
+- lib/telegram/bot/types/inline_query_result_venue.rb
+- lib/telegram/bot/types/inline_query_result_video.rb
+- lib/telegram/bot/types/inline_query_result_voice.rb
+- lib/telegram/bot/types/input_contact_message_content.rb
+- lib/telegram/bot/types/input_location_message_content.rb
+- lib/telegram/bot/types/input_media_animation.rb
+- lib/telegram/bot/types/input_media_audio.rb
+- lib/telegram/bot/types/input_media_document.rb
+- lib/telegram/bot/types/input_media_photo.rb
+- lib/telegram/bot/types/input_media_video.rb
+- lib/telegram/bot/types/input_message_content.rb
+- lib/telegram/bot/types/input_text_message_content.rb
+- lib/telegram/bot/types/input_venue_message_content.rb
+- lib/telegram/bot/types/invoice.rb
+- lib/telegram/bot/types/keyboard_button.rb
+- lib/telegram/bot/types/keyboard_button_poll_type.rb
+- lib/telegram/bot/types/labeled_price.rb
+- lib/telegram/bot/types/location.rb
+- lib/telegram/bot/types/login_url.rb
+- lib/telegram/bot/types/mask_position.rb
+- lib/telegram/bot/types/message.rb
+- lib/telegram/bot/types/message_entity.rb
+- lib/telegram/bot/types/order_info.rb
+- lib/telegram/bot/types/passport_data.rb
+- lib/telegram/bot/types/passport_element_error_data_field.rb
+- lib/telegram/bot/types/passport_element_error_file.rb
+- lib/telegram/bot/types/passport_element_error_files.rb
+- lib/telegram/bot/types/passport_element_error_front_side.rb
+- lib/telegram/bot/types/passport_element_error_reverse_side.rb
+- lib/telegram/bot/types/passport_element_error_selfie.rb
+- lib/telegram/bot/types/passport_element_error_translation_file.rb
+- lib/telegram/bot/types/passport_element_error_translation_files.rb
+- lib/telegram/bot/types/passport_element_error_unspecified.rb
+- lib/telegram/bot/types/passport_file.rb
+- lib/telegram/bot/types/photo_size.rb
+- lib/telegram/bot/types/poll.rb
+- lib/telegram/bot/types/poll_answer.rb
+- lib/telegram/bot/types/poll_option.rb
+- lib/telegram/bot/types/pre_checkout_query.rb
+- lib/telegram/bot/types/reply_keyboard_markup.rb
+- lib/telegram/bot/types/reply_keyboard_remove.rb
+- lib/telegram/bot/types/shipping_address.rb
+- lib/telegram/bot/types/shipping_option.rb
+- lib/telegram/bot/types/shipping_query.rb
+- lib/telegram/bot/types/sticker.rb
+- lib/telegram/bot/types/sticker_set.rb
+- lib/telegram/bot/types/successful_payment.rb
+- lib/telegram/bot/types/update.rb
+- lib/telegram/bot/types/user.rb
+- lib/telegram/bot/types/user_profile_photos.rb
+- lib/telegram/bot/types/venue.rb
+- lib/telegram/bot/types/video.rb
+- lib/telegram/bot/types/video_note.rb
+- lib/telegram/bot/types/voice.rb
+- lib/telegram/bot/version.rb
+- telegram_bot-ruby.gemspec
+homepage: https://github.com/atipugin/telegram-bot
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby wrapper for Telegram's Bot API
+test_files: []

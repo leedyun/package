@@ -1,5 +1,0 @@
-# frozen_string_literal: true
-
-require 'gitlab-dangerfiles'
-
-Gitlab::Dangerfiles.for_project(self, 'labkit-ruby', &:import_defaults)

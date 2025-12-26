@@ -1,0 +1,265 @@
+--- !ruby/object:Gem::Specification
+name: blacklight-advanced_search
+version: !ruby/object:Gem::Version
+  version: 7.0.0
+platform: ruby
+authors:
+- Jonathan Rochkind
+- Chris Beer
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: blacklight
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: parslet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: solr_wrapper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: engine_cart
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rsolr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- blacklight-development@googlegroups.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- VERSION
+- app/assets/javascripts/blacklight_advanced_search.js
+- app/assets/stylesheets/blacklight_advanced_search.css
+- app/assets/stylesheets/blacklight_advanced_search/advanced_results.css
+- app/assets/stylesheets/blacklight_advanced_search/blacklight_advanced_search_styles.css.scss
+- app/controllers/advanced_controller.rb
+- app/controllers/blacklight_advanced_search/advanced_controller.rb
+- app/helpers/advanced_helper.rb
+- app/helpers/blacklight_advanced_search/advanced_helper_behavior.rb
+- app/views/advanced/_advanced_search_facets.html.erb
+- app/views/advanced/_advanced_search_facets_as_select.html.erb
+- app/views/advanced/_advanced_search_fields.html.erb
+- app/views/advanced/_advanced_search_form.html.erb
+- app/views/advanced/_advanced_search_help.html.erb
+- app/views/advanced/_advanced_search_submit_btns.html.erb
+- app/views/advanced/_facet_limit.html.erb
+- app/views/advanced/index.html.erb
+- app/views/blacklight_advanced_search/_facet_limit.html.erb
+- blacklight-advanced_search.gemspec
+- config/jetty.yml
+- config/locales/blacklight_advanced_search.en.yml
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/blacklight_advanced_search.rb
+- lib/blacklight_advanced_search/advanced_query_parser.rb
+- lib/blacklight_advanced_search/advanced_search_builder.rb
+- lib/blacklight_advanced_search/catalog_helper_override.rb
+- lib/blacklight_advanced_search/controller.rb
+- lib/blacklight_advanced_search/engine.rb
+- lib/blacklight_advanced_search/filter_parser.rb
+- lib/blacklight_advanced_search/parsing_nesting_parser.rb
+- lib/blacklight_advanced_search/redirect_legacy_params_filter.rb
+- lib/blacklight_advanced_search/render_constraints_override.rb
+- lib/blacklight_advanced_search/version.rb
+- lib/generators/blacklight_advanced_search/assets_generator.rb
+- lib/generators/blacklight_advanced_search/blacklight_advanced_search_generator.rb
+- lib/generators/blacklight_advanced_search/install_generator.rb
+- lib/generators/blacklight_advanced_search/templates/advanced_controller.rb
+- lib/generators/blacklight_advanced_search/templates/saved_searches_controller.rb
+- lib/generators/blacklight_advanced_search/templates/search_history_controller.rb
+- lib/parsing_nesting/Readme.rdoc
+- lib/parsing_nesting/grammar.rb
+- lib/parsing_nesting/tree.rb
+- solr/conf/_rest_managed.json
+- solr/conf/admin-extra.html
+- solr/conf/elevate.xml
+- solr/conf/mapping-ISOLatin1Accent.txt
+- solr/conf/protwords.txt
+- solr/conf/schema.xml
+- solr/conf/scripts.conf
+- solr/conf/solrconfig.xml
+- solr/conf/spellings.txt
+- solr/conf/stopwords.txt
+- solr/conf/stopwords_en.txt
+- solr/conf/synonyms.txt
+- solr/conf/xslt/example.xsl
+- solr/conf/xslt/example_atom.xsl
+- solr/conf/xslt/example_rss.xsl
+- solr/conf/xslt/luke.xsl
+- spec/features/blacklight_advanced_search_form_spec.rb
+- spec/helpers/advanced_helper_spec.rb
+- spec/integration/blacklight_stub_spec.rb
+- spec/lib/advanced_search_builder_spec.rb
+- spec/lib/blacklight_advanced_search/parsing_nesting_parser_spec.rb
+- spec/lib/blacklight_advanced_search/render_constraints_override_spec.rb
+- spec/lib/deep_merge_spec.rb
+- spec/lib/filter_parser_spec.rb
+- spec/parsing_nesting/build_tree_spec.rb
+- spec/parsing_nesting/consuming_spec.rb
+- spec/parsing_nesting/to_solr_spec.rb
+- spec/rcov.opts
+- spec/spec_helper.rb
+- spec/test_app_templates/app/controllers/catalog_controller.rb
+- spec/test_app_templates/lib/generators/test_app_generator.rb
+homepage: http://projectblacklight.org/
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Blacklight Advanced Search plugin
+test_files: []

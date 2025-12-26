@@ -1,5 +1,0 @@
-cs:
-  valid_email:
-    validations:
-      email:
-        invalid: je neplatný

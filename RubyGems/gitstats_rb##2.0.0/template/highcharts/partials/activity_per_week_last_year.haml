@@ -1,0 +1,47 @@
+- commits        = Hash[(0..51).to_a.zip([0]*52)].merge(Hash[stats.lastweeks_stats.map { |week,commit| [week,commit.commits] }])
+- lines_added    = Hash[(0..51).to_a.zip([0]*52)].merge(Hash[stats.lastweeks_stats.map { |week,commit| [week,commit.lines_added] }])
+- lines_deleted  = Hash[(0..51).to_a.zip([0]*52)].merge(Hash[stats.lastweeks_stats.map { |week,commit| [week,commit.lines_deleted] }])
+
+- block(:activity_per_week_last_year) do
+  #chart_activity_per_week_last_year{:style => "height: 500px"}
+
+  %div.panel.panel-default
+    %div.panel-heading{"data-toggle" => "collapse", "data-target" => "#activity_per_week_last_year_box"} Table
+    %div.panel-body.collapse#activity_per_week_last_year_box
+      %table.table.table-striped.table-hover#activity_per_week_last_year_table
+        %thead
+          %tr
+            %th
+            %th Week
+            %th Commits
+            %th Files added
+            %th Files deleted
+            %th Lines added
+            %th Lines deleted
+        %tbody
+          - stats.lastweeks_stats.each do |week, commits|
+            - fcdate = commits.first_commit.to_date
+            %tr
+              %td&= week
+              %td   #{fcdate.cwyear}-#{fcdate.cweek}
+              %td&= commits.commits
+              %td&= commits.files_added
+              %td&= commits.files_deleted
+              %td&= commits.lines_added
+              %td&= commits.lines_deleted
+
+  %script
+    var chart_activity_per_week_last_year           = new Object();
+    chart_activity_per_week_last_year.label         = '#{label(:activity_per_week_last_year)}';
+    chart_activity_per_week_last_year.label_y_axis  = "Number of commits";
+    chart_activity_per_week_last_year.label_y2_axis = 'Changed lines';
+    chart_activity_per_week_last_year.target        = '#chart_activity_per_week_last_year';
+    chart_activity_per_week_last_year.categories    = #{(0..51).map{ |v| v.to_s }.reverse};
+    chart_activity_per_week_last_year.series        = [{"name":"Commits","yAxis": 0,"data":#{commits.values.reverse}},{"name":"Added lines","color": "#6CC644","yAxis": 1,"data":#{lines_added.values.reverse}},{"name":"Deleted lines","color": "#BD2C00","yAxis": 1,"data":#{lines_deleted.values.reverse}}];
+
+    $(document).ready(function() {
+    createAreaChart(chart_activity_per_week_last_year);
+    $('#activity_per_week_last_year_table').DataTable({
+    "order": [[ 0, "asc" ]]
+    });
+    }); 

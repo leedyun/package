@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: abbreviated-methods
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Premysl Donat
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Just a fun little gem for playing with Ruby standard library class Abbrev.
+  If you include AbbreviatedMethods in your class, you can call any public method
+  by all it's possible abbreviations.
+email:
+- pdonat@seznam.cz
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- abbreviated-methods.gemspec
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/abbreviated_methods.rb
+- lib/abbreviated_methods/version.rb
+homepage: https://github.com/Masa331/abbreviated_methods
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Call methods in your objects by their's abbreviations.
+test_files: []

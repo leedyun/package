@@ -1,0 +1,124 @@
+--- !ruby/object:Gem::Specification
+name: moving-images
+version: !ruby/object:Gem::Version
+  version: 1.0.1
+platform: ruby
+authors:
+- Kevin Meaney
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Creates the JSON output required by MovingImages
+email:
+- kevin@zukini.eu
+executables:
+- addtextwatermark
+- customaddshadow
+- customcrop
+- custompad
+- dotransition
+- scaleimages
+- simplesinglecifilter
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/addtextwatermark
+- bin/customaddshadow
+- bin/customcrop
+- bin/custompad
+- bin/dotransition
+- bin/scaleimages
+- bin/simplesinglecifilter
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/moving_images.rb
+- lib/moving_images/midrawing.rb
+- lib/moving_images/mifilterchain.rb
+- lib/moving_images/milibrary.rb
+- lib/moving_images/mimeta.rb
+- lib/moving_images/mimovie.rb
+- lib/moving_images/mirenderer.rb
+- lib/moving_images/smig.rb
+- lib/moving_images/smigcommands.rb
+- lib/moving_images/smigobjectid.rb
+- lib/moving_images/spotlight.rb
+- lib/moving_images/version.rb
+- moving-images.gemspec
+- tests/resources/images/DSCN0744.JPG
+- tests/resources/images/DSCN0746.JPG
+- tests/resources/json/addtextwatermark.json
+- tests/resources/json/customaddshadow.json
+- tests/resources/json/customcrop.json
+- tests/resources/json/custompad.json
+- tests/resources/json/dotransition.json
+- tests/resources/json/processframescommand.json
+- tests/resources/json/scale.json
+- tests/resources/json/simplesinglecifilter.json
+- tests/test_midrawing.rb
+- tests/test_mifilter.rb
+- tests/test_milibrary.rb
+- tests/test_mimovie.rb
+- tests/test_movingimages.rb
+- tests/test_smigcommands.rb
+homepage: http://zukini.eu
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby interface for using MovingImages
+test_files: []

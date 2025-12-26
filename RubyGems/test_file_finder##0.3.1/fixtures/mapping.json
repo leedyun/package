@@ -1,9 +1,0 @@
-{
-  "app/models/project.rb": [
-    "spec/models/project_spec.rb",
-    "spec/controllers/projects_controller_spec.rb"
-  ],
-  "app/controllers/projects_controller.rb": [
-    "spec/controllers/projects_controller_spec.rb"
-  ]
-}

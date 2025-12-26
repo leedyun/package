@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://xyzzy:@api.99designs.com.dockervm:49881/tasks/v1/tasks
+    body:
+      encoding: UTF-8
+      string: "-------------RubyMultipartPost\r\nContent-Disposition: form-data; name=\"body\"\r\n\r\nhello\r\n-------------RubyMultipartPost\r\nContent-Disposition:
+        form-data; name=\"attachment[]\"\r\n\r\nhttp://dn.ht/money.svg\r\n-------------RubyMultipartPost\r\nContent-Disposition:
+        form-data; name=\"attachment[]\"; filename=\"sample.txt\"\r\nContent-Length: 12\r\nContent-Type:
+        text/plain\r\nContent-Transfer-Encoding: binary\r\n\r\nhello world\n\r\n-------------RubyMultipartPost\r\nContent-Disposition:
+        form-data; name=\"webhook_url\"\r\n\r\n\r\n-------------RubyMultipartPost--\r\n\r\n"
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost
+      Content-Length:
+      - '514'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Content-Type:
+      - application/vnd.99designs.task+json; profile=http://api.99designs.com.dockervm:49881/tasks/v1/schema#/Task
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - tasks-sessionid=mg5j1hup5l24oh8vt9jru416g4; expires=Tue, 02-Jun-2015 01:05:05
+        GMT; Max-Age=604800; path=/tasks; HttpOnly
+      Location:
+      - http://api.99designs.com.dockervm:49881/tasks/v1/tasks/84cc6f1d34d60f14d42389a0ae92740a
+      Content-Location:
+      - http://api.99designs.com.dockervm:49881/tasks/v1/tasks/84cc6f1d34d60f14d42389a0ae92740a
+      Cache-Control:
+      - no-cache
+      - no-transform
+      Date:
+      - Tue, 26 May 2015 01:05:05 GMT
+      Access-Control-Allow-Methods:
+      - OPTIONS, GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization
+      X-Debug-Token:
+      - 9892f9
+    body:
+      encoding: UTF-8
+      string: "{\"id\":\"84cc6f1d34d60f14d42389a0ae92740a\",\"state\":{\"code\":\"available\",\"text\":\"Available\"},\"body\":\"hello\",\"attachments\":[{\"id\":193,\"file_name\":\"money.svg\",\"file_size\":19039,\"file_type\":\"image\\/svg+xml\",\"source\":\"https:\\/\\/d15rdjgfy8kdl5.cloudfront.net\\/tasks\\/128\\/attachments\\/779318b249ffe555976bda74dc200cbb553ae4a0\\/0\\/money.svg\",\"thumbnail\":null,\"links\":[{\"rel\":\"delete_attachment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\\/193\",\"method\":\"POST\"}]},{\"id\":194,\"file_name\":\"sample.txt\",\"file_size\":12,\"file_type\":\"text\\/plain\",\"source\":\"https:\\/\\/d15rdjgfy8kdl5.cloudfront.net\\/tasks\\/128\\/attachments\\/236e2740391c4302e157e804bbde597949b48543\\/0\\/sample.txt\",\"thumbnail\":null,\"links\":[{\"rel\":\"delete_attachment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\\/194\",\"method\":\"POST\"}]}],\"current_designer\":null,\"timeline\":[],\"links\":[{\"rel\":\"update_task\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\",\"method\":\"PUT\"},{\"rel\":\"attach_files\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/attachments\",\"method\":\"POST\"},{\"rel\":\"post_comment\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\\/comment\",\"method\":\"POST\"},{\"rel\":\"self\",\"href\":\"http:\\/\\/api.99designs.com.dockervm:49881\\/tasks\\/v1\\/tasks\\/84cc6f1d34d60f14d42389a0ae92740a\",\"method\":\"GET\"}]}"
+    http_version:
+  recorded_at: Tue, 26 May 2015 01:05:04 GMT
+recorded_with: VCR 2.9.3

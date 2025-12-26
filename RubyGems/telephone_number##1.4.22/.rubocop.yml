@@ -1,9 +1,0 @@
-inherit_from: .rubocop.default.yml
-
-Metrics/AbcSize:
-  Enabled: false
-Metrics/LineLength:
-  max: 120
-Style/StringLiterals:
-  EnforcedStyle: single_quotes
-

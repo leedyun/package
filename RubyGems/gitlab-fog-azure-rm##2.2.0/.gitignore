@@ -1,6 +1,0 @@
-.idea
-Gemfile.lock
-.arcconfig
-coverage
-*/.DS_Store
-*.gem

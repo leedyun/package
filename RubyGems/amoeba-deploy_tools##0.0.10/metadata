@@ -1,0 +1,176 @@
+--- !ruby/object:Gem::Specification
+name: amoeba-deploy_tools
+version: !ruby/object:Gem::Version
+  version: 0.0.10
+platform: ruby
+authors:
+- Daniel Jabbour
+- Hike Danakian
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12.4
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.5
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+- !ruby/object:Gem::Dependency
+  name: cocaine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.3
+description: Easy Chef Solo / Knife operation with Amoeba Deploy Tools.
+email: sayhi@amoe.ba
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- amoeba-deploy_tools.gemspec
+- bin/amoeba
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/amoeba_deploy_tools.rb
+- lib/amoeba_deploy_tools/capistrano.rb
+- lib/amoeba_deploy_tools/capistrano/common.rb
+- lib/amoeba_deploy_tools/capistrano/recipes.rb
+- lib/amoeba_deploy_tools/capistrano/sidekiq.rb
+- lib/amoeba_deploy_tools/command.rb
+- lib/amoeba_deploy_tools/commands/amoeba.rb
+- lib/amoeba_deploy_tools/commands/app.rb
+- lib/amoeba_deploy_tools/commands/concerns/hooks.rb
+- lib/amoeba_deploy_tools/commands/concerns/ssh.rb
+- lib/amoeba_deploy_tools/commands/key.rb
+- lib/amoeba_deploy_tools/commands/node.rb
+- lib/amoeba_deploy_tools/commands/ssl.rb
+- lib/amoeba_deploy_tools/config.rb
+- lib/amoeba_deploy_tools/data_bag.rb
+- lib/amoeba_deploy_tools/helpers.rb
+- lib/amoeba_deploy_tools/interactive_cocaine_runner.rb
+- lib/amoeba_deploy_tools/logger.rb
+- lib/amoeba_deploy_tools/noisey_cocaine_runner.rb
+- lib/amoeba_deploy_tools/version.rb
+- spec/amoeba_deploy_tools/command_spec.rb
+- spec/amoeba_deploy_tools/commands_spec.rb
+- spec/amoeba_deploy_tools/config_spec.rb
+- spec/amoeba_deploy_tools/helpers_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/AmoebaLabs/amoeba_deploy_tools
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Easy Chef Solo / Knife operation with Amoeba Deploy Tools.
+test_files: []

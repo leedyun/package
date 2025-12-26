@@ -1,0 +1,45 @@
+--- !ruby/object:Gem::Specification
+name: shopify-cloud
+version: !ruby/object:Gem::Version
+  version: '9001.0'
+platform: ruby
+authors:
+- admins@shopify.com
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-01-01 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- Rakefile
+- VERSION
+- lib/gem.rb
+homepage:
+licenses: []
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: placeholder gem
+test_files: []

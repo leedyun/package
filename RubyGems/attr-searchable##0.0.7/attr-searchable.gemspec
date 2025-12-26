@@ -1,0 +1,43 @@
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'attr_searchable/version'
+
+Gem::Specification.new do |spec|
+spec.name = 'attr-searchable'
+  spec.version       = AttrSearchable::VERSION
+  spec.authors       = ["Benjamin Vetter"]
+  spec.email         = ["vetter@flakks.com"]
+  spec.description   = %q{[DEPRECATION] 'attr_searchable' is deprecated. Migrate to 'search_cop' instead.}
+  spec.summary       = %q{[DEPRECATION] 'attr_searchable' is deprecated. Migrate to 'search_cop' instead.}
+  spec.homepage      = "https://github.com/mrkamel/search_cop#attrsearchable-is-now-searchcop"
+  spec.license       = "MIT"
+
+  spec.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
+
+  spec.post_install_message =<<MESSAGE
+----------------------------------------------------------------------------
+                           DEPRECATION WARNING
+
+The 'attr_searchable' gem has been deprecated and replaced by 'search_cop',
+because the DSL has recently changed quite a bit to become even more simple,
+featureful and concise. Please migrate to 'search_cop' as soon as possible.
+
+search_cop: https://github.com/mrkamel/search_cop
+migration:  https://github.com/mrkamel/search_cop/blob/master/MIGRATION.md
+----------------------------------------------------------------------------
+MESSAGE
+
+  spec.add_dependency "treetop"
+
+  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "activerecord", ">= 3.0.0"
+  spec.add_development_dependency "factory_girl"
+  spec.add_development_dependency "appraisal"
+  spec.add_development_dependency "minitest"
+spec.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

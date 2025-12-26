@@ -1,8 +1,0 @@
-#!/bin/sh
-exec ssh \
-	-o CheckHostIP=no \
-	-o IdentitiesOnly=yes \
-	-o StrictHostKeychecking=no \
-	-o UserKnownHostsFile=/dev/null \
-	-i %s \
-	$@

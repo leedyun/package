@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+require "gli"
+require "jekyll/rp_logs"
+require "rake"
+
+# A class to namespace the GLI commands, preventing rake's DSL from conflicting.
+class RpLogsApp
+  extend GLI::App
+
+  program_desc "Create scaffolding/a skeleton for a Jekyll::RpLogs site"
+
+  version Jekyll::RpLogs::VERSION
+
+  subcommand_option_handling :normal
+  arguments :strict
+
+  desc "Create a scaffold for a new Jekyll::RpLogs site"
+  arg_name "path/to/directory"
+  command :init do |c|
+    c.action do |_, _, args|
+      Rake::Task["rp_logs:create_new_site"].invoke(args[0])
+    end
+  end
+
+  desc "Update the theme of an existing Jekyll::RpLogs site"
+  command :update do |c|
+    c.action do
+      Rake::Task["rp_logs:update_theme"].invoke
+    end
+  end
+
+  exit run(ARGV)
+end

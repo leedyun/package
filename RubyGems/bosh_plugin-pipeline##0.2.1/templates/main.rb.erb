@@ -1,0 +1,11 @@
+require "cli"
+require "cli/validation"
+
+module Bosh
+  module <%= class_name %>
+    include BoshExtensions
+  end
+end
+
+require "bosh/<%= short_plugin_name %>/helpers"
+require "bosh/<%= short_plugin_name %>/version"

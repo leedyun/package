@@ -1,0 +1,220 @@
+--- !ruby/object:Gem::Specification
+name: apiotics-aws_iot_client
+version: !ruby/object:Gem::Version
+  version: 1.0.1
+platform: ruby
+authors:
+- Mac Dougherty
+- Pierre Goudet
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.4
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.4
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.4
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.2
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.2
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.2
+- !ruby/object:Gem::Dependency
+  name: apiotics-paho-mqtt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: timers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+description: The gem is using the MQTT protocol to execute the command defined by
+  the AWS IoT platform. A default MQTT client is included in the gem, however an adapter
+  system enables to plug another MQTT client.
+email:
+- info@apiotics.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- apiotics-aws-iot-client-1.0.0.gem
+- apiotics-aws_iot_client.gemspec
+- apiotics_aws_client-1.0.1.gem
+- bin/console
+- bin/setup
+- codeclimate.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/aws_iot_device.rb
+- lib/aws_iot_device/mqtt_adapter.rb
+- lib/aws_iot_device/mqtt_adapter/client.rb
+- lib/aws_iot_device/mqtt_adapter/paho_mqtt_adapter.rb
+- lib/aws_iot_device/mqtt_adapter/ruby_mqtt_adapter.rb
+- lib/aws_iot_device/mqtt_shadow_client.rb
+- lib/aws_iot_device/mqtt_shadow_client/json_payload_parser.rb
+- lib/aws_iot_device/mqtt_shadow_client/mqtt_manager.rb
+- lib/aws_iot_device/mqtt_shadow_client/shadow_action_manager.rb
+- lib/aws_iot_device/mqtt_shadow_client/shadow_client.rb
+- lib/aws_iot_device/mqtt_shadow_client/shadow_topic_manager.rb
+- lib/aws_iot_device/mqtt_shadow_client/token_creator.rb
+- lib/aws_iot_device/mqtt_shadow_client/topic_builder.rb
+- lib/aws_iot_device/version.rb
+- samples/config_shadow.rb
+- samples/mqtt_client_samples/mqtt_client_samples.rb
+- samples/shadow_action_samples/sample_shadow_action_update.rb
+- samples/shadow_client_samples/samples_shadow_client_block.rb
+- samples/shadow_client_samples/samples_shadow_client_delete.rb
+- samples/shadow_client_samples/samples_shadow_client_description.rb
+- samples/shadow_client_samples/samples_shadow_client_get.rb
+- samples/shadow_client_samples/samples_shadow_client_getting_started.rb
+- samples/shadow_client_samples/samples_shadow_client_update.rb
+- samples/shadow_topic_samples/sample_topic_manager.rb
+homepage: https://portal.apiotics.com
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: The ruby version of the AWS IoT Device SDK. It enables to connect to AWS
+  IoT platform and manage Things.
+test_files: []

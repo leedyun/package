@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: applogger_ruby
+version: !ruby/object:Gem::Version
+  version: 0.5.3
+platform: ruby
+authors:
+- Dirk Eisenberg
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: httparty
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: faye-websocket
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: macaddr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+description: applogger.io SDK for Ruby
+email: info@applogger.io
+executables:
+- applogger
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- applogger_ruby.gemspec
+- bin/applogger
+- config/service.json
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/app_logger/log_connection.rb
+- lib/app_logger/log_service.rb
+- lib/app_logger/log_service_configuration.rb
+- lib/app_logger/log_service_device_inventory.rb
+- lib/app_logger/log_service_management_interface.rb
+- lib/app_logger/log_socket_io.rb
+- lib/app_logger/log_socket_io_parser.rb
+- lib/applogger.rb
+homepage: https://github.com/applogger/applogger-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: The official Ruby SDK for the applogger.io service
+test_files: []

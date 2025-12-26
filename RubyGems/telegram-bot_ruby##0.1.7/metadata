@@ -1,0 +1,135 @@
+--- !ruby/object:Gem::Specification
+name: telegram-bot_ruby
+version: !ruby/object:Gem::Version
+  version: 0.1.7
+platform: ruby
+authors:
+- Shou Ya
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rest-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: 
+email:
+- shouyatf@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/telegram_bot.rb
+- lib/telegram_bot/audio.rb
+- lib/telegram_bot/auto_from_methods.rb
+- lib/telegram_bot/chat.rb
+- lib/telegram_bot/contact.rb
+- lib/telegram_bot/date.rb
+- lib/telegram_bot/document.rb
+- lib/telegram_bot/force_reply.rb
+- lib/telegram_bot/group_chat.rb
+- lib/telegram_bot/handler.rb
+- lib/telegram_bot/location.rb
+- lib/telegram_bot/matcher.rb
+- lib/telegram_bot/message.rb
+- lib/telegram_bot/message_proxy.rb
+- lib/telegram_bot/objects.rb
+- lib/telegram_bot/photo_size.rb
+- lib/telegram_bot/poll_listener.rb
+- lib/telegram_bot/reply_keyboard_hide.rb
+- lib/telegram_bot/reply_keyboard_markup.rb
+- lib/telegram_bot/request.rb
+- lib/telegram_bot/request_methods.rb
+- lib/telegram_bot/shorthand_methods.rb
+- lib/telegram_bot/sticker.rb
+- lib/telegram_bot/update.rb
+- lib/telegram_bot/user.rb
+- lib/telegram_bot/version.rb
+- lib/telegram_bot/video.rb
+- telegram-bot_ruby.gemspec
+homepage: https://github.com/shouya/telegram-bot
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">"
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A bot framework for Telegram Bot API
+test_files: []

@@ -1,0 +1,5 @@
+require 'dogapi-demo/common'
+require 'dogapi-demo/facade'
+require 'dogapi-demo/event'
+require 'dogapi-demo/metric'
+require 'dogapi-demo/version'

@@ -1,0 +1,27 @@
+# coding: utf-8
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "active_model_validates_intersection_of/version"
+
+Gem::Specification.new do |spec|
+spec.name = 'active-model_validates_intersection_of'
+  spec.version       = ActiveModelValidatesIntersectionOf::VERSION
+  spec.authors       = ["Rafael Biriba"]
+  spec.email         = ["biribarj@gmail.com"]
+
+  spec.summary       = "A custom validation for your Active Model that check if an array is included in another one"
+  spec.description   = "A custom validation for your Active Model that check if an array is included in another one"
+  spec.homepage      = "https://github.com/rafaelbiriba/active_model_validates_intersection_of"
+  spec.license       = "MIT"
+
+  spec.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  spec.test_files    = spec.files.grep(%r{^(spec)/})
+  spec.require_paths = ["lib"]
+
+  spec.add_dependency "activemodel", ">= 4.0.0"
+  spec.add_development_dependency "bundler", "~> 1.15"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "coveralls"
+spec.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: doge_chef-formatter
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+platform: ruby
+authors:
+- Julian C. Dunn
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies: []
+description: Much resources. So log. Wow.
+email:
+- jdunn@getchef.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- data/doge-ascii.txt
+- data/doge.txt
+- doge_chef-formatter.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/chef/formatters/dogeputter.rb
+- lib/doge-chef-formatter.rb
+homepage: https://github.com/juliandunn/doge-chef-formatter
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Doge Chef log formatter
+test_files: []

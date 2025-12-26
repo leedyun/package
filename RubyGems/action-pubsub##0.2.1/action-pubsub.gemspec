@@ -1,0 +1,43 @@
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'action_pubsub/version'
+
+Gem::Specification.new do |spec|
+spec.name = 'action-pubsub'
+  spec.version       = ActionPubsub::VERSION
+  spec.authors       = ["Jason Ayre"]
+  spec.email         = ["jasonayre@gmail.com"]
+
+  spec.summary       = %q{In process, async, concurrent pubsub}
+  spec.description   = %q{In process, async, concurrent pubsub}
+  spec.homepage      = "http://github.com/jasonayre/action_pubsub"
+  spec.license       = "MIT"
+
+  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
+  # delete this section to allow pushing this gem to any host.
+
+  spec.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ["lib"]
+
+  spec.add_dependency "active_attr"
+  spec.add_dependency "activesupport"
+  spec.add_dependency "concurrent-ruby", "~> 0.9.1"
+  spec.add_development_dependency "bundler", "~> 1.10"
+  spec.add_development_dependency 'guard', '~> 2'
+  spec.add_development_dependency 'guard-rspec', '~> 4'
+  spec.add_development_dependency 'guard-bundler', '~> 2'
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec-pride"
+  spec.add_development_dependency 'rspec-its', '~> 1'
+  spec.add_development_dependency 'rspec-collection_matchers', '~> 1'
+  spec.add_development_dependency 'rb-fsevent'
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency 'terminal-notifier-guard'
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-nav"
+spec.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

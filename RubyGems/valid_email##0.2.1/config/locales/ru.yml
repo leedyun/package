@@ -1,5 +1,0 @@
-ru:
-  valid_email:
-    validations:
-      email:
-        invalid: "неправильный формат"

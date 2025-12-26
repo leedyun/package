@@ -1,0 +1,217 @@
+--- !ruby/object:Gem::Specification
+name: acpc-poker_player_proxy
+version: !ruby/object:Gem::Version
+  version: 1.6.7
+platform: ruby
+authors:
+- Dustin Morrill
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: acpc_poker_basic_proxy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: acpc_poker_types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.8'
+- !ruby/object:Gem::Dependency
+  name: contextual_exceptions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: methadone
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: acpc_dealer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.0.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.0.6
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: pry-rescue
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+description: A smart proxy for a poker player that connects to the ACPC Dealer and
+  manages match state data
+email:
+- morrill@ualberta.ca
+executables:
+- acpc_poker_player_proxy
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- acpc-poker_player_proxy.gemspec
+- bin/acpc_poker_player_proxy
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acpc_poker_player_proxy.rb
+- lib/acpc_poker_player_proxy/player_proxy.rb
+- lib/acpc_poker_player_proxy/version.rb
+- spec/player_proxy_spec.rb
+- spec/support/dealer_logs/2p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.limit.h1000.r0.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.log
+- spec/support/spec_helper.rb
+homepage: https://github.com/dmorrill10/acpc_poker_player_proxy
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ACPC Poker Player Proxy
+test_files:
+- spec/player_proxy_spec.rb
+- spec/support/dealer_logs/2p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.limit.h1000.r0.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.log
+- spec/support/spec_helper.rb

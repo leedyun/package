@@ -1,5 +1,0 @@
-mapping:
-  - source: lib/(.+)\.rb
-    test: spec/lib/%s_spec.rb
-  - source: spec/spec_helper\.rb
-    test: spec

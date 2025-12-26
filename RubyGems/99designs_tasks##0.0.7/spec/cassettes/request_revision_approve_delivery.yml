@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://xyzzy:@api.99designs.com.dockervm:49881/tasks/v1/tasks/84cc6f1d34d60f14d42389a0ae92740a/deliveries/14/request_revision
+    body:
+      encoding: UTF-8
+      string: comment=Is+this+too+late%3F&revision_type=other
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 26 May 2015 01:37:43 GMT
+      Access-Control-Allow-Methods:
+      - OPTIONS, GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization
+      X-Debug-Token:
+      - b6d0f1
+    body:
+      encoding: UTF-8
+      string: "{\"message\":\"Machine cannot transition from [approved] after [requestRevision]\"}"
+    http_version: 
+  recorded_at: Tue, 26 May 2015 01:37:42 GMT
+recorded_with: VCR 2.9.3

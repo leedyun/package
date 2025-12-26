@@ -1,4 +1,0 @@
-@startuml
-User -> (Start)
-User --> (Use the application) : Label
-@enduml

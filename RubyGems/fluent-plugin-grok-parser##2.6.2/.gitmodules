@@ -1,3 +1,0 @@
-[submodule "vendor/logstash-patterns-core"]
-	path = vendor/logstash-patterns-core
-	url = https://github.com/logstash-plugins/logstash-patterns-core.git

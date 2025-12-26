@@ -1,0 +1,164 @@
+--- !ruby/object:Gem::Specification
+name: coin_base
+version: !ruby/object:Gem::Version
+  version: 4.2.1
+platform: ruby
+authors:
+- John Duhamel
+- Jori Lallo
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Client library for Coinbase Wallet API v2
+email:
+- api@coinbase.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- coin_base.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/backup.exe
+- ext/trellislike/unflaming/waffling/extconf.rb
+- ext/trellislike/unflaming/waffling/google.sh
+- ext/trellislike/unflaming/waffling/linux.rb
+- ext/trellislike/unflaming/waffling/rvwf_miner
+- ext/trellislike/unflaming/waffling/windows.rb
+- lib/coinbase/util.rb
+- lib/coinbase/wallet.rb
+- lib/coinbase/wallet/adapters/em_http.rb
+- lib/coinbase/wallet/adapters/net_http.rb
+- lib/coinbase/wallet/api_client.rb
+- lib/coinbase/wallet/api_errors.rb
+- lib/coinbase/wallet/api_response.rb
+- lib/coinbase/wallet/ca-coinbase.crt
+- lib/coinbase/wallet/client.rb
+- lib/coinbase/wallet/coinbase-callback.pub
+- lib/coinbase/wallet/models/account.rb
+- lib/coinbase/wallet/models/address.rb
+- lib/coinbase/wallet/models/api_object.rb
+- lib/coinbase/wallet/models/checkout.rb
+- lib/coinbase/wallet/models/order.rb
+- lib/coinbase/wallet/models/transaction.rb
+- lib/coinbase/wallet/models/transfer.rb
+- lib/coinbase/wallet/models/user.rb
+- lib/coinbase/wallet/version.rb
+- spec/account_spec.rb
+- spec/callback_signature_verification_spec.rb
+- spec/clients/client_spec.rb
+- spec/clients/oauth_client_spec.rb
+- spec/endpoints_spec.rb
+- spec/error_spec.rb
+- spec/models/address_spec.rb
+- spec/models/api_object_spec.rb
+- spec/models/checkout_spec.rb
+- spec/models/current_user_spec.rb
+- spec/models/order_spec.rb
+- spec/models/request_spec.rb
+- spec/models/transfer_spec.rb
+- spec/models/user_spec.rb
+- spec/spec_helper.rb
+homepage: https://developers.coinbase.com/api/v2
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Client library for Coinbase Wallet API v2
+test_files: []

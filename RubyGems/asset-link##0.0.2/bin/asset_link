@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'asset_link'
+
+args = ARGV
+action = args.shift
+
+case action
+  when "-upload"
+    AssetLink::Loader.new.upload args
+  when "-download"
+    AssetLink::Loader.new.download args
+  else
+    puts "Usage: asset_link -upload [FILES] or asset_link -download [FILES]"
+end

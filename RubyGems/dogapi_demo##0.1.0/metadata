@@ -1,0 +1,176 @@
+--- !ruby/object:Gem::Specification
+name: dogapi_demo
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Datadog, Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby bindings for Datadog's API
+email:
+- packages@datadoghq.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- README.rdoc
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.rdoc
+- Rakefile
+- dogapi_demo.gemspec
+- examples/Capfile
+- examples/custom_event.rb
+- examples/custom_metric.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/capistrano/README.md
+- lib/capistrano/datadog.rb
+- lib/capistrano/datadog/v2.rb
+- lib/capistrano/datadog/v3.rb
+- lib/dogapi-demo.rb
+- lib/dogapi-demo/common.rb
+- lib/dogapi-demo/event.rb
+- lib/dogapi-demo/facade.rb
+- lib/dogapi-demo/metric.rb
+- lib/dogapi-demo/v1.rb
+- lib/dogapi-demo/v1/alert.rb
+- lib/dogapi-demo/v1/comment.rb
+- lib/dogapi-demo/v1/dash.rb
+- lib/dogapi-demo/v1/embed.rb
+- lib/dogapi-demo/v1/event.rb
+- lib/dogapi-demo/v1/metric.rb
+- lib/dogapi-demo/v1/monitor.rb
+- lib/dogapi-demo/v1/screenboard.rb
+- lib/dogapi-demo/v1/search.rb
+- lib/dogapi-demo/v1/service_check.rb
+- lib/dogapi-demo/v1/snapshot.rb
+- lib/dogapi-demo/v1/tag.rb
+- lib/dogapi-demo/v1/user.rb
+- lib/dogapi-demo/version.rb
+- spec/alerts_spec.rb
+- spec/common_spec.rb
+- spec/facade_spec.rb
+- spec/spec_helper.rb
+- spec/support/cassettes/Alerts/create/returns_HTTP_code_200.yml
+- spec/support/cassettes/Alerts/create/returns_a_valid_event_ID.yml
+- spec/support/cassettes/Alerts/create/returns_the_same_query_as_sent.yml
+- spec/support/cassettes/Facade/Events/emits_aggregate_events.yml
+- spec/support/cassettes/Facade/Events/emits_events_and_retrieves_them.yml
+- spec/support/cassettes/Facade/Events/emits_events_with_specified_priority.yml
+- spec/support/cassettes/Facade/Tags/adds_updates_and_detaches_tags.yml
+- tests/test_alerts.rb
+- tests/test_base.rb
+- tests/test_client.rb
+- tests/test_comments.rb
+- tests/test_dashes.rb
+- tests/test_embed.rb
+- tests/test_monitors.rb
+- tests/test_screenboard.rb
+- tests/test_search.rb
+- tests/test_snapshot.rb
+- tests/test_users.rb
+homepage: http://datadoghq.com/
+licenses:
+- BSD
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--title"
+- DogAPI -- Datadog Client
+- "--main"
+- README.rdoc
+- "--line-numbers"
+- "--inline-source"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby bindings for Datadog's API
+test_files:
+- spec/alerts_spec.rb
+- spec/common_spec.rb
+- spec/facade_spec.rb
+- spec/spec_helper.rb
+- spec/support/cassettes/Alerts/create/returns_HTTP_code_200.yml
+- spec/support/cassettes/Alerts/create/returns_a_valid_event_ID.yml
+- spec/support/cassettes/Alerts/create/returns_the_same_query_as_sent.yml
+- spec/support/cassettes/Facade/Events/emits_aggregate_events.yml
+- spec/support/cassettes/Facade/Events/emits_events_and_retrieves_them.yml
+- spec/support/cassettes/Facade/Events/emits_events_with_specified_priority.yml
+- spec/support/cassettes/Facade/Tags/adds_updates_and_detaches_tags.yml

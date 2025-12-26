@@ -1,0 +1,186 @@
+--- !ruby/object:Gem::Specification
+name: jekyll-rp-logs
+version: !ruby/object:Gem::Version
+  version: 0.5.0
+platform: ruby
+authors:
+- anrodger
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: codeclimate-test-reporter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: jekyll
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: gli
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.13'
+description: 
+email:
+- me@andrew.rs
+executables:
+- rplogs
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- exe/rplogs
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- jekyll-rp-logs.gemspec
+- lib/jekyll/rp_logs.rb
+- lib/jekyll/rp_logs/parsers/irssi_xchat.rb
+- lib/jekyll/rp_logs/parsers/mirc.rb
+- lib/jekyll/rp_logs/parsers/skype_12hour.rb
+- lib/jekyll/rp_logs/parsers/skype_24hour.rb
+- lib/jekyll/rp_logs/parsers/weechat.rb
+- lib/jekyll/rp_logs/rp_arcs.rb
+- lib/jekyll/rp_logs/rp_log_converter.rb
+- lib/jekyll/rp_logs/rp_logline.rb
+- lib/jekyll/rp_logs/rp_page.rb
+- lib/jekyll/rp_logs/rp_parser.rb
+- lib/jekyll/rp_logs/rp_tag_implication_handler.rb
+- lib/jekyll/rp_logs/rp_tag_index.rb
+- lib/jekyll/rp_logs/rp_tags.rb
+- lib/jekyll/rp_logs/rp_tasks.rb
+- lib/jekyll/rp_logs/version.rb
+- lib/tasks/rp_logs.rake
+homepage: https://github.com/xiagu/jekyll-rp_logs
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Jekyll plugin to turn raw IRC RP logs into pretty pages.
+test_files: []

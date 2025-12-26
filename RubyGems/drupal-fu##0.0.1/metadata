@@ -1,0 +1,56 @@
+--- !ruby/object:Gem::Specification
+name: drupal-fu
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+platform: ruby
+authors:
+- Armand du Plessis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies: []
+description: Simple gem interface for pulling content from Drupal CMS
+email:
+- adp@bank.io
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README
+- Rakefile
+- drupal-fu.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/drupal_fu.rb
+- lib/drupal_fu/client.rb
+- lib/drupal_fu/drupal_object.rb
+- lib/drupal_fu/version.rb
+- lib/generators/drupal_fu/config_generator.rb
+- lib/generators/drupal_fu/templates/initializer.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Simple gem interface for pulling content from Drupal CMS
+test_files: []

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+ 
+require 'it_tools/network_tools'
+
+vpnTools = NetworkTools::VpnTools.new
+puts vpnTools.on_vpn

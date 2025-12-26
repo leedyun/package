@@ -1,0 +1,58 @@
+--- !ruby/object:Gem::Specification
+name: capistrano_stats
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Lee Hambley
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies: []
+description: Collects anonymous usage statistics about Capistrano to aid with platform
+  support and ruby version targeting.
+email:
+- lee.hambley@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- capistrano_stats.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/capistrano-stats.rb
+- lib/capistrano-stats/metric-collector.rb
+- lib/capistrano-stats/metric-message.rb
+- lib/capistrano-stats/version.rb
+- tasks/metrics.rake
+homepage: http://metrics.capistranorb.com/
+licenses:
+- MIT
+metadata: {}
+post_install_message: |2
+      Capistrano will ask you the next time you run it if you would like to share
+      anonymous usage statistics with the maintainance team to help guide our
+      development efforts. We emplore you to opt-in, but we understand if your
+      privacy is important to you in this regard.
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Official metrics to help the development direction of Capistrano
+test_files: []

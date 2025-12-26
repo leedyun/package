@@ -1,0 +1,197 @@
+--- !ruby/object:Gem::Specification
+name: telegram-meetup_bot
+version: !ruby/object:Gem::Version
+  version: 0.3.0
+platform: ruby
+authors:
+- Timur Yanberdin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: telegram-bot-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+description: 
+email:
+- yanberdint@gmail.com
+executables:
+- telegram_meetup_bot
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/telegram_meetup_bot
+- config_samples/config.yml
+- config_samples/responses.yml
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/telegram_meetup_bot.rb
+- lib/telegram_meetup_bot/botan.rb
+- lib/telegram_meetup_bot/calendar.rb
+- lib/telegram_meetup_bot/callback_query_parser.rb
+- lib/telegram_meetup_bot/client.rb
+- lib/telegram_meetup_bot/commands.rb
+- lib/telegram_meetup_bot/commands/base.rb
+- lib/telegram_meetup_bot/commands/cal_command.rb
+- lib/telegram_meetup_bot/commands/cancel_command.rb
+- lib/telegram_meetup_bot/commands/date_command.rb
+- lib/telegram_meetup_bot/commands/factory.rb
+- lib/telegram_meetup_bot/commands/help_command.rb
+- lib/telegram_meetup_bot/commands/list_command.rb
+- lib/telegram_meetup_bot/commands/nil_username.rb
+- lib/telegram_meetup_bot/commands/user_command.rb
+- lib/telegram_meetup_bot/commands_handler.rb
+- lib/telegram_meetup_bot/initializers.rb
+- lib/telegram_meetup_bot/initializers/base.rb
+- lib/telegram_meetup_bot/initializers/config_loader.rb
+- lib/telegram_meetup_bot/initializers/responses_loader.rb
+- lib/telegram_meetup_bot/message_parser.rb
+- lib/telegram_meetup_bot/messenger.rb
+- lib/telegram_meetup_bot/params_parser.rb
+- lib/telegram_meetup_bot/storage.rb
+- lib/telegram_meetup_bot/version.rb
+- spec/spec_helper.rb
+- spec/telegram_meetup_bot/calendar_spec.rb
+- spec/telegram_meetup_bot/commands/cal_command_spec.rb
+- spec/telegram_meetup_bot/commands/cancel_command_spec.rb
+- spec/telegram_meetup_bot/commands/date_command_spec.rb
+- spec/telegram_meetup_bot/commands/factory_spec.rb
+- spec/telegram_meetup_bot/commands/list_command_spec.rb
+- spec/telegram_meetup_bot/message_parser_spec.rb
+- spec/telegram_meetup_bot/params_parser_spec.rb
+- telegram-meetup_bot.gemspec
+homepage: https://github.com/mendab1e/telegram_meetup_bot
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Telegram bot for meetups organisation
+test_files:
+- spec/spec_helper.rb
+- spec/telegram_meetup_bot/calendar_spec.rb
+- spec/telegram_meetup_bot/commands/cal_command_spec.rb
+- spec/telegram_meetup_bot/commands/cancel_command_spec.rb
+- spec/telegram_meetup_bot/commands/date_command_spec.rb
+- spec/telegram_meetup_bot/commands/factory_spec.rb
+- spec/telegram_meetup_bot/commands/list_command_spec.rb
+- spec/telegram_meetup_bot/message_parser_spec.rb
+- spec/telegram_meetup_bot/params_parser_spec.rb

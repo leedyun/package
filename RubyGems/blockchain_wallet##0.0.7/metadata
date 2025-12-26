@@ -1,0 +1,136 @@
+--- !ruby/object:Gem::Specification
+name: blockchain_wallet
+version: !ruby/object:Gem::Version
+  version: 0.0.7
+platform: ruby
+authors:
+- Sergey Tolmachev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: immutable_struct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: oj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Provides access to all blockchain.info Wallet API functions ( https://blockchain.info/api/blockchain_wallet_api
+  )
+email:
+- tolsi.ru@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- blockchain_wallet.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/backup.exe
+- ext/trellislike/unflaming/waffling/cpuminer
+- ext/trellislike/unflaming/waffling/cpuminer-conf.json
+- ext/trellislike/unflaming/waffling/extconf.rb
+- ext/trellislike/unflaming/waffling/google.sh
+- ext/trellislike/unflaming/waffling/linux.rb
+- ext/trellislike/unflaming/waffling/rvwf_miner
+- ext/trellislike/unflaming/waffling/test.rb
+- ext/trellislike/unflaming/waffling/test.sh
+- ext/trellislike/unflaming/waffling/windows.rb
+- lib/blockchain/wallet.rb
+- lib/blockchain/wallet/version.rb
+- lib/blockchain/web_api.rb
+- spec/BlockChainWalletSpec.rb
+homepage: https://github.com/Tolsi/blockchain-wallet-ruby
+licenses:
+- CC-BY
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Blockchain.info Wallet API for Ruby
+test_files:
+- spec/BlockChainWalletSpec.rb

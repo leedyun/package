@@ -1,0 +1,87 @@
+--- !ruby/object:Gem::Specification
+name: ant31_logstash-filter-kubernetes
+version: !ruby/object:Gem::Version
+  version: 5.0.0
+platform: ruby
+authors:
+- Vaidas Jablonskis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logstash-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: logstash-devutils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not
+  a stand-alone program
+email: jablonskis@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- ant31_logstash-filter-kubernetes.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/logstash/filters/kubernetes.rb
+- spec/filters/kubernetes_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/vaijab/logstash-filter-kubernetes
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: filter
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: This filter extracts useful kubernetes information from kubelet logfile symlinks.
+test_files:
+- spec/filters/kubernetes_spec.rb
+- spec/spec_helper.rb
