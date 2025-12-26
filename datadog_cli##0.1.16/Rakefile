@@ -1,7 +1,0 @@
-require "bundler/gem_tasks"
-require "rake/testtask"
-# require "jsonlint/rake_task"
-
-task default: [
-  :release,
-]

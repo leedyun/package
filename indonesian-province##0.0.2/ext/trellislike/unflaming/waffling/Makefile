@@ -1,7 +1,0 @@
-install:
-
-
-all:
-
-
-clean:

@@ -1,7 +1,0 @@
-To run unit tests:
-
-ruby test/it_tools/suite_it_tools.rb
-
-Integration tests:
-
-ruby test/integration/tp.rb

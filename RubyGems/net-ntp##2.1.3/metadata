@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification
+name: net-ntp
+version: !ruby/object:Gem::Version
+  version: 2.1.3
+platform: ruby
+authors:
+- Jerome Waibel
+- Nathan Sutton
+- Brandon Arbini
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-02-19 00:00:00.000000000 Z
+dependencies: []
+description: This project was a rubyfied version of perl's Net::NTP module, (C) 2004
+  by James G. Willmore. It provides a method to query an NTP server as specified in
+  RFC1305 and RFC2030. Updated and re-released in 2010 by Zencoder.
+email:
+- nate@zencoder.com
+- brandon@zencoder.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.markdown
+- Rakefile
+- lib/net/ntp.rb
+- lib/net/ntp/ntp.rb
+- lib/net/ntp/version.rb
+homepage: http://github.com/zencoder/net-ntp
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5
+signing_key: 
+specification_version: 4
+summary: NTP client for ruby.
+test_files: []

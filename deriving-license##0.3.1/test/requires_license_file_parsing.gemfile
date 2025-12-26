@@ -1,3 +1,0 @@
-source "https://rubygems.org"
-
-gem "deriving_license" # This library has a license file that is self-describing.

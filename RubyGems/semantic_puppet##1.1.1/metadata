@@ -1,0 +1,160 @@
+--- !ruby/object:Gem::Specification
+name: semantic_puppet
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Puppet Labs
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Tools used by Puppet to parse, validate, and compare Semantic Versions
+  and Version Ranges and to query and resolve module dependencies.
+email:
+- info@puppetlabs.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/mend.yaml"
+- ".github/workflows/rspec_tests.yaml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".yardopts"
+- CHANGELOG.md
+- CODEOWNERS
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/semantic_puppet.rb
+- lib/semantic_puppet/dependency.rb
+- lib/semantic_puppet/dependency/graph.rb
+- lib/semantic_puppet/dependency/graph_node.rb
+- lib/semantic_puppet/dependency/module_release.rb
+- lib/semantic_puppet/dependency/source.rb
+- lib/semantic_puppet/dependency/unsatisfiable_graph.rb
+- lib/semantic_puppet/gem_version.rb
+- lib/semantic_puppet/version.rb
+- lib/semantic_puppet/version_range.rb
+- semantic_puppet.gemspec
+- spec/spec_helper.rb
+- spec/unit/semantic_puppet/dependency/graph_node_spec.rb
+- spec/unit/semantic_puppet/dependency/graph_spec.rb
+- spec/unit/semantic_puppet/dependency/module_release_spec.rb
+- spec/unit/semantic_puppet/dependency/source_spec.rb
+- spec/unit/semantic_puppet/dependency/unsatisfiable_graph_spec.rb
+- spec/unit/semantic_puppet/dependency_spec.rb
+- spec/unit/semantic_puppet/version_range_spec.rb
+- spec/unit/semantic_puppet/version_spec.rb
+homepage: https://github.com/puppetlabs/semantic_puppet
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.22
+signing_key: 
+specification_version: 4
+summary: Useful tools for working with Semantic Versions.
+test_files: []

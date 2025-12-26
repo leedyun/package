@@ -1,0 +1,120 @@
+--- !ruby/object:Gem::Specification
+name: rspec-parameterized-table_syntax
+version: !ruby/object:Gem::Version
+  version: 1.0.1
+platform: ruby
+authors:
+- sue445
+- tomykaira
+- joker1007
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-09-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: binding_of_caller
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: RSpec::Parameterized supports simple parameterized test syntax in rspec.
+email:
+- sue445@sue445.net
+- tomykaira@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/rspec-parameterized-table_syntax.rb
+- lib/rspec/parameterized/table_syntax.rb
+- lib/rspec/parameterized/table_syntax/table.rb
+- lib/rspec/parameterized/table_syntax/table_syntax_implement.rb
+- lib/rspec/parameterized/table_syntax/version.rb
+- rspec-parameterized-table_syntax.gemspec
+- sig/rspec/parameterized/table_syntax.rbs
+homepage: https://github.com/rspec-parameterized/rspec-parameterized-table_syntax
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/rspec-parameterized/rspec-parameterized-table_syntax
+  source_code_uri: https://github.com/rspec-parameterized/rspec-parameterized-table_syntax
+  changelog_uri: https://github.com/rspec-parameterized/rspec-parameterized-table_syntax/blob/main/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: RSpec::Parameterized supports simple parameterized test syntax in rspec.
+  I was inspired by [udzura's mock](https://gist.github.com/1881139).
+test_files: []

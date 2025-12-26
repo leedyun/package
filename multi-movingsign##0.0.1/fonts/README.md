@@ -1,1 +1,0 @@
-Screenshots of the various MovingSign fonts.

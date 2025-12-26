@@ -1,3 +1,0 @@
-source "https://rubygems.org"
-
-gem "bcrypt-ruby" # bcrypt gem has a license file, but it's custom.

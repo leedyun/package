@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-# Specify your gem's dependencies in stuck_it_up.gemspec
-gemspec

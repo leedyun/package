@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require "gimme_vins"
-
-vins = GimmeVins.for(ARGV.dup.join(" "))
-
-puts vins.join("\n")
-

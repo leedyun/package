@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require 'acception/subscriber/cli'
-$0 = Acception::Subscriber::APP_ID
-Acception::Subscriber::Cli.new( ARGV ).run

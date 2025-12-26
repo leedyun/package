@@ -1,0 +1,386 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-mail_room
+version: !ruby/object:Gem::Version
+  version: 0.0.25
+platform: ruby
+authors:
+- Tony Pitale
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: net-imap
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.1
+- !ruby/object:Gem::Dependency
+  name: oauth2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.4
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.4
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: redis-namespace
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mail
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: letter_opener
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: charlock_holmes
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: mail_room will proxy email (gmail) from IMAP to a delivery method
+email:
+- tpitale@gmail.com
+executables:
+- mail_room
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".gitlab/issue_templates/Default.md"
+- ".gitlab/issue_templates/Release.md"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".ruby-version"
+- ".tool-versions"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/mail_room
+- lib/mail_room.rb
+- lib/mail_room/arbitration.rb
+- lib/mail_room/arbitration/noop.rb
+- lib/mail_room/arbitration/redis.rb
+- lib/mail_room/cli.rb
+- lib/mail_room/configuration.rb
+- lib/mail_room/connection.rb
+- lib/mail_room/coordinator.rb
+- lib/mail_room/crash_handler.rb
+- lib/mail_room/delivery.rb
+- lib/mail_room/delivery/letter_opener.rb
+- lib/mail_room/delivery/logger.rb
+- lib/mail_room/delivery/noop.rb
+- lib/mail_room/delivery/postback.rb
+- lib/mail_room/delivery/que.rb
+- lib/mail_room/delivery/sidekiq.rb
+- lib/mail_room/health_check.rb
+- lib/mail_room/imap.rb
+- lib/mail_room/imap/connection.rb
+- lib/mail_room/imap/message.rb
+- lib/mail_room/jwt.rb
+- lib/mail_room/logger/structured.rb
+- lib/mail_room/mailbox.rb
+- lib/mail_room/mailbox_watcher.rb
+- lib/mail_room/message.rb
+- lib/mail_room/microsoft_graph.rb
+- lib/mail_room/microsoft_graph/connection.rb
+- lib/mail_room/version.rb
+- logfile.log
+- mail_room.gemspec
+- spec/fixtures/jwt_secret
+- spec/fixtures/test_config.yml
+- spec/lib/arbitration/redis_spec.rb
+- spec/lib/cli_spec.rb
+- spec/lib/configuration_spec.rb
+- spec/lib/coordinator_spec.rb
+- spec/lib/crash_handler_spec.rb
+- spec/lib/delivery/letter_opener_spec.rb
+- spec/lib/delivery/logger_spec.rb
+- spec/lib/delivery/postback_spec.rb
+- spec/lib/delivery/que_spec.rb
+- spec/lib/delivery/sidekiq_spec.rb
+- spec/lib/health_check_spec.rb
+- spec/lib/imap/connection_spec.rb
+- spec/lib/imap/message_spec.rb
+- spec/lib/jwt_spec.rb
+- spec/lib/logger/structured_spec.rb
+- spec/lib/mailbox_spec.rb
+- spec/lib/mailbox_watcher_spec.rb
+- spec/lib/message_spec.rb
+- spec/lib/microsoft_graph/connection_spec.rb
+- spec/spec_helper.rb
+homepage: https://gitlab.com/gitlab-org/ruby/gems/gitlab-mail_room
+licenses: []
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.4
+signing_key:
+specification_version: 4
+summary: mail_room will proxy email (gmail) from IMAP to a callback URL, logger, or
+  letter_opener
+test_files:
+- spec/fixtures/jwt_secret
+- spec/fixtures/test_config.yml
+- spec/lib/arbitration/redis_spec.rb
+- spec/lib/cli_spec.rb
+- spec/lib/configuration_spec.rb
+- spec/lib/coordinator_spec.rb
+- spec/lib/crash_handler_spec.rb
+- spec/lib/delivery/letter_opener_spec.rb
+- spec/lib/delivery/logger_spec.rb
+- spec/lib/delivery/postback_spec.rb
+- spec/lib/delivery/que_spec.rb
+- spec/lib/delivery/sidekiq_spec.rb
+- spec/lib/health_check_spec.rb
+- spec/lib/imap/connection_spec.rb
+- spec/lib/imap/message_spec.rb
+- spec/lib/jwt_spec.rb
+- spec/lib/logger/structured_spec.rb
+- spec/lib/mailbox_spec.rb
+- spec/lib/mailbox_watcher_spec.rb
+- spec/lib/message_spec.rb
+- spec/lib/microsoft_graph/connection_spec.rb
+- spec/spec_helper.rb

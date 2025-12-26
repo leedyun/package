@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'candy--sql'
-
-filename = ARGV[0]
-res = CandySql.make( filename )
-puts res

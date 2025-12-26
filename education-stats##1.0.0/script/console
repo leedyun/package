@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "education_stats"
-
-require 'spirit_hands'
-SpiritHands.app = 'EducationStats'
-Pry.start

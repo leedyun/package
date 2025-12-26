@@ -1,3 +1,0 @@
-class LanguageMixer::GoogleTranslate
-  
-end

@@ -1,0 +1,367 @@
+--- !ruby/object:Gem::Specification
+name: sneakers
+version: !ruby/object:Gem::Version
+  version: 2.12.0
+platform: ruby
+authors:
+- Dotan Nahum
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: serverengine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: bunny
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: rabbitmq_http_api_client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+- !ruby/object:Gem::Dependency
+  name: rr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+- !ruby/object:Gem::Dependency
+  name: unparser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+- !ruby/object:Gem::Dependency
+  name: metric_fu
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.12'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+- !ruby/object:Gem::Dependency
+  name: simplecov-rcov-text
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.15'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.15'
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+description: " Fast background processing framework for Ruby and RabbitMQ "
+email:
+- jondotan@gmail.com
+executables:
+- sneakers
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- ChangeLog.md
+- Dockerfile
+- Dockerfile.slim
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/ci/install_on_debian.sh
+- bin/sneakers
+- docker-compose.yml
+- examples/benchmark_worker.rb
+- examples/max_retry_handler.rb
+- examples/metrics_worker.rb
+- examples/middleware_worker.rb
+- examples/newrelic_metrics_worker.rb
+- examples/profiling_worker.rb
+- examples/sneakers.conf.rb.example
+- examples/title_scraper.rb
+- examples/workflow_worker.rb
+- lib/sneakers.rb
+- lib/sneakers/cli.rb
+- lib/sneakers/concerns/logging.rb
+- lib/sneakers/concerns/metrics.rb
+- lib/sneakers/configuration.rb
+- lib/sneakers/content_type.rb
+- lib/sneakers/error_reporter.rb
+- lib/sneakers/errors.rb
+- lib/sneakers/handlers/maxretry.rb
+- lib/sneakers/handlers/oneshot.rb
+- lib/sneakers/metrics/logging_metrics.rb
+- lib/sneakers/metrics/newrelic_metrics.rb
+- lib/sneakers/metrics/null_metrics.rb
+- lib/sneakers/metrics/statsd_metrics.rb
+- lib/sneakers/middleware/config.rb
+- lib/sneakers/publisher.rb
+- lib/sneakers/queue.rb
+- lib/sneakers/runner.rb
+- lib/sneakers/spawner.rb
+- lib/sneakers/support/production_formatter.rb
+- lib/sneakers/support/utils.rb
+- lib/sneakers/tasks.rb
+- lib/sneakers/version.rb
+- lib/sneakers/worker.rb
+- lib/sneakers/workergroup.rb
+- log/.gitkeep
+- scripts/local_integration
+- scripts/local_worker
+- sneakers.gemspec
+- spec/fixtures/integration_worker.rb
+- spec/fixtures/require_worker.rb
+- spec/sneakers/cli_spec.rb
+- spec/sneakers/concerns/logging_spec.rb
+- spec/sneakers/concerns/metrics_spec.rb
+- spec/sneakers/configuration_spec.rb
+- spec/sneakers/content_type_spec.rb
+- spec/sneakers/integration_spec.rb
+- spec/sneakers/publisher_spec.rb
+- spec/sneakers/queue_spec.rb
+- spec/sneakers/runner_spec.rb
+- spec/sneakers/sneakers_spec.rb
+- spec/sneakers/support/utils_spec.rb
+- spec/sneakers/worker_handlers_spec.rb
+- spec/sneakers/worker_spec.rb
+- spec/sneakers/workergroup_spec.rb
+- spec/spec_helper.rb
+homepage: http://sneakers.io
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.6
+signing_key: 
+specification_version: 4
+summary: Fast background processing framework for Ruby and RabbitMQ
+test_files:
+- spec/fixtures/integration_worker.rb
+- spec/fixtures/require_worker.rb
+- spec/sneakers/cli_spec.rb
+- spec/sneakers/concerns/logging_spec.rb
+- spec/sneakers/concerns/metrics_spec.rb
+- spec/sneakers/configuration_spec.rb
+- spec/sneakers/content_type_spec.rb
+- spec/sneakers/integration_spec.rb
+- spec/sneakers/publisher_spec.rb
+- spec/sneakers/queue_spec.rb
+- spec/sneakers/runner_spec.rb
+- spec/sneakers/sneakers_spec.rb
+- spec/sneakers/support/utils_spec.rb
+- spec/sneakers/worker_handlers_spec.rb
+- spec/sneakers/worker_spec.rb
+- spec/sneakers/workergroup_spec.rb
+- spec/spec_helper.rb

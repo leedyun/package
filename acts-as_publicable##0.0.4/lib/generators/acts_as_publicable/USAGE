@@ -1,9 +1,0 @@
-Description:
-    This generator will give you a migration for the published field on the
-    given model
-    
-Example:
-    rails generate acts_as_publicable model_name
-
-    This will create something like:
-        db/migrate/20110404120349_add_published_to_table_name.rb

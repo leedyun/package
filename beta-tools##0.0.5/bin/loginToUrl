@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
- 
-require 'it_tools/network_tools'
-
-vpnTools = NetworkTools::VpnTools.new
-puts vpnTools.login_to_url

@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'a1436mm_age'
-puts A1436mmAge.birth(ARGV[0])

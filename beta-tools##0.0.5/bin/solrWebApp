@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
- 
-require 'it_tools/solr'
-
-wa = Solr::Upload.new
-puts wa.foo

@@ -1,6 +1,0 @@
-require 'kcl/version'
-require 'kcl/record_processor'
-require 'kcl/advanced_record_processor'
-require 'kcl/executor_command_builder'
-require 'kcl/configuration'
-require 'kcl/executor'

@@ -1,0 +1,53 @@
+=== 0.3.1 / 2023-05-19
+* Fix support for ruby 3.1
+
+=== 0.3.0 / 2023-04-03
+* Add support for ruby 3.1
+
+=== 0.3.0 / 2017-12-01
+* Uniform distribution
+* added gamma distribution (mean, variance, pdf, cdf, rng)
+* implemented multivariate normal distribution (mean,pdf,rng)
+* cleaned up the code for the binomial distribution and created a module for discrete probability distributions
+* implementation of poisson distribution (mean,variance,pdf,cdf,icdf,rng)
+* fixed rng in Binomial and Poisson and added tests for their rng functions
+* rewrote factorial function because of error with too many stack levels
+* added student t distribution (mean, variance, pdf, rng)
+* added weibull implementation (mean,pdf,cdf,icdf,rng)
+* fix to prevent integer calculations when distributions are initialized (#10)
+* Update beta_distribution.rb
+* Added rng for beta distribution
+* Corrected PDF calculation in README.rdoc
+
+=== 0.2.6 / 2017-07-23
+* Preserve the old API by setting constants manually
+
+=== 0.2.5 / 2016-07-08
+* refactoring to reduce warnings
+* reactivate and fix test for normal distribution
+* Use attr_reader to avoid initialization warnings.
+* add test for normal distributed random numbers
+
+=== 0.2.4 / 2016-01-31
+* raise error when normal initialised with bad sigma
+* changes for CI tests
+
+=== 0.2.3 / 2008-07-06
+* Fixing bug #21100 - problem with Beta distribution calculations when p and q values are small.
+* Minor code cleanup for readability in a few places.
+
+=== 0.2.2 / 2008-05-09
+* Added exponential distribution class
+* Replaced constants in NumericalConstants module with uppercase versions to follow Ruby convention  
+
+=== 0.2.1 / 2008-05-08
+* Bug fix for Normal Distribution RNG function (RubyForge bug #20044)
+   * thanks, Daniel Moore (yahivin)
+
+=== 0.2.0 / 2008-04-14
+
+* Major reorganization of code.  
+  * Added lib/rubystats subdirectory and namespaced all classes under the Rubystats module.  
+  * Added another example or two and fixed bug #16827. 
+  * Should not break old API 
+  * Now using Hoe to manage gem.

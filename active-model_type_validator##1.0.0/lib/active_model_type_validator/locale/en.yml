@@ -1,4 +1,0 @@
-en:
-  errors:
-    messages:
-      wrong_type: "cannot be of type %{type}"

@@ -1,2 +1,0 @@
-<big> "See the Wiki":http://github.com/shairontoledo/rghost-barcode/wikis </big>
-

@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: hashdiff
+version: !ruby/object:Gem::Version
+  version: 1.1.2
+platform: ruby
+authors:
+- Liu Fengyun
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bluecloth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.52.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.52.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: " Hashdiff is a diff lib to compute the smallest difference between two
+  hashes. "
+email:
+- liufengyunchina@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- ".yardopts"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- changelog.md
+- hashdiff.gemspec
+- lib/hashdiff.rb
+- lib/hashdiff/compare_hashes.rb
+- lib/hashdiff/diff.rb
+- lib/hashdiff/lcs.rb
+- lib/hashdiff/lcs_compare_arrays.rb
+- lib/hashdiff/linear_compare_array.rb
+- lib/hashdiff/patch.rb
+- lib/hashdiff/util.rb
+- lib/hashdiff/version.rb
+homepage: https://github.com/liufengyun/hashdiff
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/liufengyun/hashdiff/issues
+  changelog_uri: https://github.com/liufengyun/hashdiff/blob/master/changelog.md
+  documentation_uri: https://www.rubydoc.info/gems/hashdiff
+  homepage_uri: https://github.com/liufengyun/hashdiff
+  source_code_uri: https://github.com/liufengyun/hashdiff
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: Hashdiff is a diff lib to compute the smallest difference between two hashes.
+test_files: []

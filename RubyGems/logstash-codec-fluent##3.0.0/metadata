@@ -1,0 +1,101 @@
+--- !ruby/object:Gem::Specification
+name: logstash-codec-fluent
+version: !ruby/object:Gem::Version
+  version: 3.0.0
+platform: ruby
+authors:
+- Elastic
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-05-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logstash-core-plugin-api
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: msgpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: logstash-devutils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- LICENSE
+- NOTICE.TXT
+- README.md
+- lib/logstash/codecs/fluent.rb
+- logstash-codec-fluent.gemspec
+- spec/codecs/fluent_spec.rb
+- spec/spec_helper.rb
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: codec
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: This codec handles fluentd's msgpack schema.
+test_files:
+- spec/codecs/fluent_spec.rb
+- spec/spec_helper.rb

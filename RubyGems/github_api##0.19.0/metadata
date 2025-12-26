@@ -1,0 +1,354 @@
+--- !ruby/object:Gem::Specification
+name: github_api
+version: !ruby/object:Gem::Version
+  version: 0.19.0
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-06-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.2
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: oauth2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: descendants_tracker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.3
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+description: ' Ruby client that supports all of the GitHub API methods. It"s build
+  in a modular way, that is, you can either instantiate the whole api wrapper Github.new
+  or use parts of it e.i. Github::Client::Repos.new if working solely with repositories
+  is your main concern. Intuitive query methods allow you easily call API endpoints. '
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+- CHANGELOG.md
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/github_api.rb
+- lib/github_api/api.rb
+- lib/github_api/api/actions.rb
+- lib/github_api/api/arguments.rb
+- lib/github_api/api/config.rb
+- lib/github_api/api/config/property.rb
+- lib/github_api/api/config/property_set.rb
+- lib/github_api/api/factory.rb
+- lib/github_api/authorization.rb
+- lib/github_api/client.rb
+- lib/github_api/client/activity.rb
+- lib/github_api/client/activity/events.rb
+- lib/github_api/client/activity/feeds.rb
+- lib/github_api/client/activity/notifications.rb
+- lib/github_api/client/activity/starring.rb
+- lib/github_api/client/activity/watching.rb
+- lib/github_api/client/authorizations.rb
+- lib/github_api/client/authorizations/app.rb
+- lib/github_api/client/emojis.rb
+- lib/github_api/client/gists.rb
+- lib/github_api/client/gists/comments.rb
+- lib/github_api/client/git_data.rb
+- lib/github_api/client/git_data/blobs.rb
+- lib/github_api/client/git_data/commits.rb
+- lib/github_api/client/git_data/references.rb
+- lib/github_api/client/git_data/tags.rb
+- lib/github_api/client/git_data/trees.rb
+- lib/github_api/client/gitignore.rb
+- lib/github_api/client/issues.rb
+- lib/github_api/client/issues/assignees.rb
+- lib/github_api/client/issues/comments.rb
+- lib/github_api/client/issues/events.rb
+- lib/github_api/client/issues/labels.rb
+- lib/github_api/client/issues/milestones.rb
+- lib/github_api/client/markdown.rb
+- lib/github_api/client/meta.rb
+- lib/github_api/client/orgs.rb
+- lib/github_api/client/orgs/hooks.rb
+- lib/github_api/client/orgs/members.rb
+- lib/github_api/client/orgs/memberships.rb
+- lib/github_api/client/orgs/projects.rb
+- lib/github_api/client/orgs/teams.rb
+- lib/github_api/client/projects.rb
+- lib/github_api/client/projects/cards.rb
+- lib/github_api/client/projects/columns.rb
+- lib/github_api/client/pull_requests.rb
+- lib/github_api/client/pull_requests/comments.rb
+- lib/github_api/client/pull_requests/reviews.rb
+- lib/github_api/client/repos.rb
+- lib/github_api/client/repos/branches.rb
+- lib/github_api/client/repos/branches/protections.rb
+- lib/github_api/client/repos/collaborators.rb
+- lib/github_api/client/repos/comments.rb
+- lib/github_api/client/repos/commits.rb
+- lib/github_api/client/repos/contents.rb
+- lib/github_api/client/repos/deployments.rb
+- lib/github_api/client/repos/downloads.rb
+- lib/github_api/client/repos/forks.rb
+- lib/github_api/client/repos/hooks.rb
+- lib/github_api/client/repos/invitations.rb
+- lib/github_api/client/repos/keys.rb
+- lib/github_api/client/repos/merging.rb
+- lib/github_api/client/repos/pages.rb
+- lib/github_api/client/repos/projects.rb
+- lib/github_api/client/repos/pub_sub_hubbub.rb
+- lib/github_api/client/repos/releases.rb
+- lib/github_api/client/repos/releases/assets.rb
+- lib/github_api/client/repos/releases/tags.rb
+- lib/github_api/client/repos/statistics.rb
+- lib/github_api/client/repos/statuses.rb
+- lib/github_api/client/say.rb
+- lib/github_api/client/scopes.rb
+- lib/github_api/client/search.rb
+- lib/github_api/client/search/legacy.rb
+- lib/github_api/client/users.rb
+- lib/github_api/client/users/emails.rb
+- lib/github_api/client/users/followers.rb
+- lib/github_api/client/users/keys.rb
+- lib/github_api/configuration.rb
+- lib/github_api/connection.rb
+- lib/github_api/constants.rb
+- lib/github_api/core_ext/array.rb
+- lib/github_api/core_ext/hash.rb
+- lib/github_api/deprecation.rb
+- lib/github_api/error.rb
+- lib/github_api/error/client_error.rb
+- lib/github_api/error/service_error.rb
+- lib/github_api/ext/faraday.rb
+- lib/github_api/mash.rb
+- lib/github_api/middleware.rb
+- lib/github_api/mime_type.rb
+- lib/github_api/normalizer.rb
+- lib/github_api/null_encoder.rb
+- lib/github_api/page_iterator.rb
+- lib/github_api/page_links.rb
+- lib/github_api/paged_request.rb
+- lib/github_api/pagination.rb
+- lib/github_api/parameter_filter.rb
+- lib/github_api/params_hash.rb
+- lib/github_api/rate_limit.rb
+- lib/github_api/request.rb
+- lib/github_api/request/basic_auth.rb
+- lib/github_api/request/jsonize.rb
+- lib/github_api/request/oauth2.rb
+- lib/github_api/request/verbs.rb
+- lib/github_api/response.rb
+- lib/github_api/response/atom_parser.rb
+- lib/github_api/response/follow_redirects.rb
+- lib/github_api/response/header.rb
+- lib/github_api/response/jsonize.rb
+- lib/github_api/response/mashify.rb
+- lib/github_api/response/raise_error.rb
+- lib/github_api/response/xmlize.rb
+- lib/github_api/response_wrapper.rb
+- lib/github_api/ssl_certs/cacerts.pem
+- lib/github_api/utils/url.rb
+- lib/github_api/validations.rb
+- lib/github_api/validations/format.rb
+- lib/github_api/validations/presence.rb
+- lib/github_api/validations/required.rb
+- lib/github_api/validations/token.rb
+- lib/github_api/version.rb
+homepage: http://piotrmurach.github.io/github/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Ruby client for the official GitHub API
+test_files: []

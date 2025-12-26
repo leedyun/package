@@ -1,8 +1,0 @@
-SL== sales
-CD== candies[CD.id = SL.candy_id]
-
-
-S-- *, SL.num * CD.price
-F-- SL =< CD
-W-- CD.sweet > 2
-O-- created_at

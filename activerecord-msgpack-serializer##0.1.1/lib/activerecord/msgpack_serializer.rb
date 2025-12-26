@@ -1,1 +1,0 @@
-require "activerecord/serializers/message_pack_serializer"

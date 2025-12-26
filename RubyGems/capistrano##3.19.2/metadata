@@ -1,0 +1,299 @@
+--- !ruby/object:Gem::Specification
+name: capistrano
+version: !ruby/object:Gem::Version
+  version: 3.19.2
+platform: ruby
+authors:
+- Tom Clements
+- Lee Hambley
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: airbrussh
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+- !ruby/object:Gem::Dependency
+  name: sshkit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.9.0
+description: Capistrano is a utility and framework for executing commands in parallel
+  on multiple remote machines, via SSH.
+email:
+- seenmyfate@gmail.com
+- lee.hambley@gmail.com
+executables:
+- cap
+- capify
+extensions: []
+extra_rdoc_files: []
+files:
+- ".docker/Dockerfile"
+- ".docker/ssh_key_rsa"
+- ".docker/ssh_key_rsa.pub"
+- ".docker/ubuntu_setup.sh"
+- ".github/issue_template.md"
+- ".github/pull_request_template.md"
+- ".github/release-drafter.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/release-drafter.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- DEVELOPMENT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- RELEASING.md
+- Rakefile
+- UPGRADING-3.7.md
+- bin/cap
+- bin/capify
+- capistrano.gemspec
+- docker-compose.yml
+- features/configuration.feature
+- features/deploy.feature
+- features/deploy_failure.feature
+- features/doctor.feature
+- features/installation.feature
+- features/sshconnect.feature
+- features/stage_failure.feature
+- features/step_definitions/assertions.rb
+- features/step_definitions/cap_commands.rb
+- features/step_definitions/setup.rb
+- features/subdirectory.feature
+- features/support/docker_gateway.rb
+- features/support/env.rb
+- features/support/remote_command_helpers.rb
+- features/support/remote_ssh_helpers.rb
+- lib/Capfile
+- lib/capistrano.rb
+- lib/capistrano/all.rb
+- lib/capistrano/application.rb
+- lib/capistrano/configuration.rb
+- lib/capistrano/configuration/empty_filter.rb
+- lib/capistrano/configuration/filter.rb
+- lib/capistrano/configuration/host_filter.rb
+- lib/capistrano/configuration/null_filter.rb
+- lib/capistrano/configuration/plugin_installer.rb
+- lib/capistrano/configuration/question.rb
+- lib/capistrano/configuration/role_filter.rb
+- lib/capistrano/configuration/scm_resolver.rb
+- lib/capistrano/configuration/server.rb
+- lib/capistrano/configuration/servers.rb
+- lib/capistrano/configuration/validated_variables.rb
+- lib/capistrano/configuration/variables.rb
+- lib/capistrano/console.rb
+- lib/capistrano/defaults.rb
+- lib/capistrano/deploy.rb
+- lib/capistrano/doctor.rb
+- lib/capistrano/doctor/environment_doctor.rb
+- lib/capistrano/doctor/gems_doctor.rb
+- lib/capistrano/doctor/output_helpers.rb
+- lib/capistrano/doctor/servers_doctor.rb
+- lib/capistrano/doctor/variables_doctor.rb
+- lib/capistrano/dotfile.rb
+- lib/capistrano/dsl.rb
+- lib/capistrano/dsl/env.rb
+- lib/capistrano/dsl/paths.rb
+- lib/capistrano/dsl/stages.rb
+- lib/capistrano/dsl/task_enhancements.rb
+- lib/capistrano/framework.rb
+- lib/capistrano/i18n.rb
+- lib/capistrano/immutable_task.rb
+- lib/capistrano/install.rb
+- lib/capistrano/plugin.rb
+- lib/capistrano/proc_helpers.rb
+- lib/capistrano/scm.rb
+- lib/capistrano/scm/git.rb
+- lib/capistrano/scm/hg.rb
+- lib/capistrano/scm/plugin.rb
+- lib/capistrano/scm/svn.rb
+- lib/capistrano/scm/tasks/git.rake
+- lib/capistrano/scm/tasks/hg.rake
+- lib/capistrano/scm/tasks/svn.rake
+- lib/capistrano/setup.rb
+- lib/capistrano/tasks/console.rake
+- lib/capistrano/tasks/deploy.rake
+- lib/capistrano/tasks/doctor.rake
+- lib/capistrano/tasks/framework.rake
+- lib/capistrano/tasks/install.rake
+- lib/capistrano/templates/Capfile
+- lib/capistrano/templates/deploy.rb.erb
+- lib/capistrano/templates/stage.rb.erb
+- lib/capistrano/upload_task.rb
+- lib/capistrano/version.rb
+- lib/capistrano/version_validator.rb
+- spec/integration/dsl_spec.rb
+- spec/integration_spec_helper.rb
+- spec/lib/capistrano/application_spec.rb
+- spec/lib/capistrano/configuration/empty_filter_spec.rb
+- spec/lib/capistrano/configuration/filter_spec.rb
+- spec/lib/capistrano/configuration/host_filter_spec.rb
+- spec/lib/capistrano/configuration/null_filter_spec.rb
+- spec/lib/capistrano/configuration/plugin_installer_spec.rb
+- spec/lib/capistrano/configuration/question_spec.rb
+- spec/lib/capistrano/configuration/role_filter_spec.rb
+- spec/lib/capistrano/configuration/scm_resolver_spec.rb
+- spec/lib/capistrano/configuration/server_spec.rb
+- spec/lib/capistrano/configuration/servers_spec.rb
+- spec/lib/capistrano/configuration_spec.rb
+- spec/lib/capistrano/doctor/environment_doctor_spec.rb
+- spec/lib/capistrano/doctor/gems_doctor_spec.rb
+- spec/lib/capistrano/doctor/output_helpers_spec.rb
+- spec/lib/capistrano/doctor/servers_doctor_spec.rb
+- spec/lib/capistrano/doctor/variables_doctor_spec.rb
+- spec/lib/capistrano/dsl/paths_spec.rb
+- spec/lib/capistrano/dsl/task_enhancements_spec.rb
+- spec/lib/capistrano/dsl_spec.rb
+- spec/lib/capistrano/immutable_task_spec.rb
+- spec/lib/capistrano/plugin_spec.rb
+- spec/lib/capistrano/scm/git_spec.rb
+- spec/lib/capistrano/scm/hg_spec.rb
+- spec/lib/capistrano/scm/svn_spec.rb
+- spec/lib/capistrano/scm_spec.rb
+- spec/lib/capistrano/upload_task_spec.rb
+- spec/lib/capistrano/version_validator_spec.rb
+- spec/lib/capistrano_spec.rb
+- spec/spec_helper.rb
+- spec/support/matchers.rb
+- spec/support/tasks/database.rake
+- spec/support/tasks/fail.rake
+- spec/support/tasks/failed.rake
+- spec/support/tasks/plugin.rake
+- spec/support/tasks/root.rake
+- spec/support/test_app.rb
+homepage: https://capistranorb.com/
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/capistrano/capistrano/issues
+  changelog_uri: https://github.com/capistrano/capistrano/releases
+  source_code_uri: https://github.com/capistrano/capistrano
+  homepage_uri: https://capistranorb.com/
+  documentation_uri: https://capistranorb.com/
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Capistrano - Welcome to easy deployment with Ruby over SSH
+test_files:
+- features/configuration.feature
+- features/deploy.feature
+- features/deploy_failure.feature
+- features/doctor.feature
+- features/installation.feature
+- features/sshconnect.feature
+- features/stage_failure.feature
+- features/step_definitions/assertions.rb
+- features/step_definitions/cap_commands.rb
+- features/step_definitions/setup.rb
+- features/subdirectory.feature
+- features/support/docker_gateway.rb
+- features/support/env.rb
+- features/support/remote_command_helpers.rb
+- features/support/remote_ssh_helpers.rb
+- spec/integration/dsl_spec.rb
+- spec/integration_spec_helper.rb
+- spec/lib/capistrano/application_spec.rb
+- spec/lib/capistrano/configuration/empty_filter_spec.rb
+- spec/lib/capistrano/configuration/filter_spec.rb
+- spec/lib/capistrano/configuration/host_filter_spec.rb
+- spec/lib/capistrano/configuration/null_filter_spec.rb
+- spec/lib/capistrano/configuration/plugin_installer_spec.rb
+- spec/lib/capistrano/configuration/question_spec.rb
+- spec/lib/capistrano/configuration/role_filter_spec.rb
+- spec/lib/capistrano/configuration/scm_resolver_spec.rb
+- spec/lib/capistrano/configuration/server_spec.rb
+- spec/lib/capistrano/configuration/servers_spec.rb
+- spec/lib/capistrano/configuration_spec.rb
+- spec/lib/capistrano/doctor/environment_doctor_spec.rb
+- spec/lib/capistrano/doctor/gems_doctor_spec.rb
+- spec/lib/capistrano/doctor/output_helpers_spec.rb
+- spec/lib/capistrano/doctor/servers_doctor_spec.rb
+- spec/lib/capistrano/doctor/variables_doctor_spec.rb
+- spec/lib/capistrano/dsl/paths_spec.rb
+- spec/lib/capistrano/dsl/task_enhancements_spec.rb
+- spec/lib/capistrano/dsl_spec.rb
+- spec/lib/capistrano/immutable_task_spec.rb
+- spec/lib/capistrano/plugin_spec.rb
+- spec/lib/capistrano/scm/git_spec.rb
+- spec/lib/capistrano/scm/hg_spec.rb
+- spec/lib/capistrano/scm/svn_spec.rb
+- spec/lib/capistrano/scm_spec.rb
+- spec/lib/capistrano/upload_task_spec.rb
+- spec/lib/capistrano/version_validator_spec.rb
+- spec/lib/capistrano_spec.rb
+- spec/spec_helper.rb
+- spec/support/matchers.rb
+- spec/support/tasks/database.rake
+- spec/support/tasks/fail.rake
+- spec/support/tasks/failed.rake
+- spec/support/tasks/plugin.rake
+- spec/support/tasks/root.rake
+- spec/support/test_app.rb

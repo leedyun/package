@@ -1,1 +1,0 @@
-IntersectionValidator = Class.new(ActiveModelValidatesIntersectionOf::Validator)

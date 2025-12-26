@@ -1,1 +1,0 @@
-//= require ./alphabetical_paginate

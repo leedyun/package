@@ -1,8 +1,0 @@
-development:
-  password: <%= "WAT" %>
-
-test:
-  password: <%= "WAT" %>
-
-production:
-  password: <%= "WAT" %>

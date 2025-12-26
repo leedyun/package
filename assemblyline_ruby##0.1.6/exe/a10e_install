@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require "assemblyline/ruby/installer"
-
-Assemblyline::Ruby::Installer.new.install do
-  fail unless system "su-exec conan bundle install -j4 -r3"
-end

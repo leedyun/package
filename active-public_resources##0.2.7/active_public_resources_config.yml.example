@@ -1,8 +1,0 @@
-vimeo:
-  consumer_key: VIMEO_CONSUMER_KEY
-  consumer_secret: VIMEO_CONSUMER_SECRET
-youtube:
-schooltube:
-khan_academy:
-quizlet:
-  client_id: QUIZLET_CLIENT_ID

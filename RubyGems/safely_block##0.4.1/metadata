@@ -1,0 +1,49 @@
+--- !ruby/object:Gem::Specification
+name: safely_block
+version: !ruby/object:Gem::Version
+  version: 0.4.1
+platform: ruby
+authors:
+- Andrew Kane
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-05 00:00:00.000000000 Z
+dependencies: []
+description:
+email: andrew@ankane.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/safely/core.rb
+- lib/safely/services.rb
+- lib/safely/version.rb
+- lib/safely_block.rb
+homepage: https://github.com/ankane/safely
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Rescue and report exceptions in non-critical code
+test_files: []

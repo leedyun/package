@@ -1,0 +1,122 @@
+--- !ruby/object:Gem::Specification
+name: dry-core
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Nikita Shilnikov
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+description: A toolset of small support modules used throughout the dry-rb ecosystem
+email:
+- fg@flashgordon.ru
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- dry-core.gemspec
+- lib/dry-core.rb
+- lib/dry/core.rb
+- lib/dry/core/basic_object.rb
+- lib/dry/core/cache.rb
+- lib/dry/core/class_attributes.rb
+- lib/dry/core/class_builder.rb
+- lib/dry/core/constants.rb
+- lib/dry/core/container.rb
+- lib/dry/core/container/config.rb
+- lib/dry/core/container/configuration.rb
+- lib/dry/core/container/item.rb
+- lib/dry/core/container/item/callable.rb
+- lib/dry/core/container/item/factory.rb
+- lib/dry/core/container/item/memoizable.rb
+- lib/dry/core/container/mixin.rb
+- lib/dry/core/container/namespace.rb
+- lib/dry/core/container/namespace_dsl.rb
+- lib/dry/core/container/registry.rb
+- lib/dry/core/container/resolver.rb
+- lib/dry/core/container/stub.rb
+- lib/dry/core/deprecations.rb
+- lib/dry/core/descendants_tracker.rb
+- lib/dry/core/equalizer.rb
+- lib/dry/core/errors.rb
+- lib/dry/core/extensions.rb
+- lib/dry/core/inflector.rb
+- lib/dry/core/memoizable.rb
+- lib/dry/core/version.rb
+homepage: https://dry-rb.org/gems/dry-core
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  changelog_uri: https://github.com/dry-rb/dry-core/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/dry-rb/dry-core
+  bug_tracker_uri: https://github.com/dry-rb/dry-core/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: A toolset of small support modules used throughout the dry-rb ecosystem
+test_files: []

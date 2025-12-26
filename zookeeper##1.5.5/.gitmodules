@@ -1,3 +1,0 @@
-[submodule "releaseops"]
-	path = releaseops
-	url = https://github.com/zk-ruby/releaseops.git

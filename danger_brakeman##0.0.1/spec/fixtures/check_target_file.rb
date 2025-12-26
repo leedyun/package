@@ -1,2 +1,0 @@
-class Vuls
-end

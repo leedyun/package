@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-$: << 'lib'
-require 'libraries'
-
-bb = Bitbucket.new
-bb.apply_restrictions

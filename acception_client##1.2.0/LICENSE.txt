@@ -1,3 +1,0 @@
-Copyright (c) 2014 Iberon, LLC 
-
-This is proprietary software.  No license granted.

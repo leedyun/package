@@ -1,1 +1,0 @@
-# Capistrano Auth subscriber

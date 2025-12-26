@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "optparse"
+
+require_relative "../lib/gitlab_quality/test_tooling"
+
+params = {}
+
+options = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+
+  opts.on('-i', '--input-files INPUT_FILES', String, 'RSpec report files (JSON or JUnit XML)') do |input_files|
+    params[:input_files] = input_files
+  end
+
+  opts.on('-m', '--metrics-files METRICS_FILES', String, 'Test metrics files (JSON)') do |metrics_files|
+    params[:metrics_files] = metrics_files
+  end
+
+  opts.on('--max-diff-ratio MAX_DIFF_RATO', Float, 'Max stacktrace diff ratio for failure issues detection') do |max_diff_ratio|
+    params[:max_diff_ratio] = max_diff_ratio
+  end
+
+  opts.on('-p', '--project PROJECT', String, 'Can be an integer or a group/project string') do |project|
+    params[:project] = project
+  end
+
+  opts.on('-t', '--token TOKEN', String, 'A valid access token with `api` scope and Maintainer permission in PROJECT') do |token|
+    params[:token] = token
+  end
+
+  opts.on('-r', '--related-issues-file RELATED_ISSUES_FILE', String, 'The file path for the related issues') do |related_issues_file|
+    params[:related_issues_file] = related_issues_file
+  end
+
+  opts.on('--system-log-files SYSTEM_LOG_FILES', String,
+    'Include errors from system logs in failure issues') do |system_log_files|
+    params[:system_logs] = system_log_files
+  end
+
+  opts.on('--base-issue-labels BASE_ISSUE_LABELS', String,
+    'Labels to add to new failure issues') do |base_issue_labels|
+    params[:base_issue_labels] = base_issue_labels.split(',')
+  end
+
+  opts.on('--exclude-labels-for-search EXCLUDE_LABELS_FOR_SEARCH', String,
+    'Labels to exclude when searching for existing issues') do |exclude_labels_for_search|
+    params[:exclude_labels_for_search] = exclude_labels_for_search.split(',')
+  end
+
+  opts.on('--confidential', "Makes created new issues confidential") do
+    params[:confidential] = true
+  end
+
+  opts.on('--dry-run', "Perform a dry-run (don't create or update issues)") do
+    params[:dry_run] = true
+  end
+
+  opts.on_tail('-v', '--version', 'Show the version') do
+    require_relative "../lib/gitlab_quality/test_tooling/version"
+    puts "#{$PROGRAM_NAME} : #{GitlabQuality::TestTooling::VERSION}"
+    exit
+  end
+
+  opts.on_tail('-h', '--help', 'Show the usage') do
+    puts "Purpose: Relate test failures to failure issues from RSpec report files (JSON or JUnit XML)"
+    puts opts
+    exit
+  end
+
+  opts.parse(ARGV)
+end
+
+if params.any?
+  GitlabQuality::TestTooling::Report::RelateFailureIssue.new(**params).invoke!
+else
+  puts options
+  exit 1
+end

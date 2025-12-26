@@ -1,8 +1,0 @@
-pt:
-  errors:
-    messages:
-      array: tem de ser uma colecção
-      array_format: os valores estão num formato inválido
-      array_inclusion: tem valores não permitidos
-      time_greater_than: 'tem de ser posterior a %{previous_time}'
-      time_invalid: valor não corresponde a um formato de tempo válido

@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/lang_cards.rb'
-require 'lang_cards'
-
-lang_cards.rb

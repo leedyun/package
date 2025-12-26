@@ -1,0 +1,115 @@
+--- !ruby/object:Gem::Specification
+name: tty-command
+version: !ruby/object:Gem::Version
+  version: 0.10.1
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2021-02-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pastel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Execute shell commands with pretty output logging and capture their stdout,
+  stderr and exit status. Redirect stdin, stdout and stderr of each command to a file
+  or a string.
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/tty-command.rb
+- lib/tty/command.rb
+- lib/tty/command/child_process.rb
+- lib/tty/command/cmd.rb
+- lib/tty/command/dry_runner.rb
+- lib/tty/command/exit_error.rb
+- lib/tty/command/printers/abstract.rb
+- lib/tty/command/printers/null.rb
+- lib/tty/command/printers/pretty.rb
+- lib/tty/command/printers/progress.rb
+- lib/tty/command/printers/quiet.rb
+- lib/tty/command/process_runner.rb
+- lib/tty/command/result.rb
+- lib/tty/command/truncator.rb
+- lib/tty/command/version.rb
+homepage: https://ttytoolkit.org
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/piotrmurach/tty-command/issues
+  changelog_uri: https://github.com/piotrmurach/tty-command/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/tty-command
+  homepage_uri: https://ttytoolkit.org
+  source_code_uri: https://github.com/piotrmurach/tty-command
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Execute shell commands with pretty output logging and capture their stdout,
+  stderr and exit status.
+test_files: []

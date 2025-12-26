@@ -1,6 +1,0 @@
-require 'eventmachine'
-require 'statsd-ruby'
-require 'em_statsd/base_wrapper'
-require 'em_statsd/udp_wrapper'
-require 'em_statsd/tcp_wrapper'
-require 'em_statsd/statsd'

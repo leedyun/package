@@ -1,0 +1,73 @@
+--- !ruby/object:Gem::Specification
+name: iniparse
+version: !ruby/object:Gem::Version
+  version: 1.5.0
+platform: ruby
+authors:
+- Anthony Williams
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+description: A pure Ruby library for parsing INI documents. Preserves the structure
+  of the original document, including whitespace and comments
+email: hi@antw.me
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.rdoc
+- Rakefile
+- TODO
+- iniparse.gemspec
+- lib/iniparse.rb
+- lib/iniparse/document.rb
+- lib/iniparse/generator.rb
+- lib/iniparse/line_collection.rb
+- lib/iniparse/lines.rb
+- lib/iniparse/parser.rb
+homepage: http://github.com/antw/iniparse
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 2
+summary: A pure Ruby library for parsing INI documents.
+test_files: []

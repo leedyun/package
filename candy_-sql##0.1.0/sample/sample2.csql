@@ -1,4 +1,0 @@
-S-- count(*)
-F-- sales
-W-- created_at >= '2015-01-01'
-O-- created_at

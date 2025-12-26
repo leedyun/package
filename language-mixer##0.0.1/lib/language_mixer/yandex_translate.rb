@@ -1,3 +1,0 @@
-class LanguageMixer::YandexTranslate
-  
-end

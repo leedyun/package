@@ -1,0 +1,79 @@
+--- !ruby/object:Gem::Specification
+name: execjs
+version: !ruby/object:Gem::Version
+  version: 2.10.0
+platform: ruby
+authors:
+- Sam Stephenson
+- Josh Peek
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: ExecJS lets you run JavaScript code from Ruby.
+email:
+- sstephenson@gmail.com
+- josh@joshpeek.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- lib/execjs.rb
+- lib/execjs/disabled_runtime.rb
+- lib/execjs/duktape_runtime.rb
+- lib/execjs/external_runtime.rb
+- lib/execjs/graaljs_runtime.rb
+- lib/execjs/mini_racer_runtime.rb
+- lib/execjs/module.rb
+- lib/execjs/ruby_rhino_runtime.rb
+- lib/execjs/runtime.rb
+- lib/execjs/runtimes.rb
+- lib/execjs/support/bun_runner.js
+- lib/execjs/support/jsc_runner.js
+- lib/execjs/support/jscript_runner.js
+- lib/execjs/support/json2.js
+- lib/execjs/support/node_runner.js
+- lib/execjs/support/spidermonkey_runner.js
+- lib/execjs/support/v8_runner.js
+- lib/execjs/version.rb
+homepage: https://github.com/rails/execjs
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Run JavaScript code from Ruby
+test_files: []

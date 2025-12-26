@@ -1,6 +1,0 @@
-require_relative 'test_html_publish'
-require_relative 'test_deploy'
-require_relative 'test_shared'
-require_relative 'test_maven'
-require_relative 'test_multipart'
-require_relative 'test_solr'

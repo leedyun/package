@@ -1,3 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'authenticated_client', :path => "../"

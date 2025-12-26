@@ -1,9 +1,0 @@
-SL== sales
-CD== candies[CD.id = SL.candy_id]
-SUB<"sample/sample4_sub.csql">[SUB.Y = DATE_FORMAT(SL.created_at, '%Y')]
-
-
-S-- DATE_FORMAT(SL.created_at, '%Y-%m'), sum(SL.num * CD.price), sum(SL.num * CD.price) / SUB.SUM_OF_Y * 100
-F-- SL =< CD =< SUB
-G-- DATE_FORMAT(SL.created_at, '%Y-%m')
-O-- SL.created_at

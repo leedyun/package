@@ -1,3 +1,0 @@
-source "https://rubygems.org"
-
-gem "app_constants" # This gem specifies its license in its readme file.

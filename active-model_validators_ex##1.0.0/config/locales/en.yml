@@ -1,8 +1,0 @@
-en:
-  errors:
-    messages:
-      array: must be a collection
-      array_format: values are in an invalid format
-      array_inclusion: values does not belong to list
-      time_greater_than: 'must be after %{previous_time}'
-      time_invalid: value is not a valid time

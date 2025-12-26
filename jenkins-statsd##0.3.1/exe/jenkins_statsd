@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'jenkins_statsd/cli'
-
-JenkinsStatsd::CLI.start

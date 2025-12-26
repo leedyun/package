@@ -1,6 +1,0 @@
-- if order.gift_card_amount > 0
-  - order.gift_cards.each do |gift_card|
-    %p
-      = t('workarea.storefront.gift_cards.gift_card')
-      = gift_card.display_number
-      = number_to_currency(gift_card.amount)

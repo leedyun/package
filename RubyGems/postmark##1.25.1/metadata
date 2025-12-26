@@ -1,0 +1,186 @@
+--- !ruby/object:Gem::Specification
+name: postmark
+version: !ruby/object:Gem::Version
+  version: 1.25.1
+platform: ruby
+authors:
+- Tomek Maszkowski
+- Igor Balos
+- Artem Chistyakov
+- Nick Hammond
+- Petyo Ivanov
+- Ilya Sabanin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mail
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Use this gem to send emails through Postmark HTTP API and retrieve info
+  about bounces.
+email:
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- ".circleci/config.yml"
+- ".document"
+- ".gitignore"
+- ".rake_tasks"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- CHANGELOG.rdoc
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- RELEASE.md
+- Rakefile
+- VERSION
+- gemfiles/Gemfile.legacy
+- init.rb
+- lib/postmark.rb
+- lib/postmark/account_api_client.rb
+- lib/postmark/api_client.rb
+- lib/postmark/bounce.rb
+- lib/postmark/client.rb
+- lib/postmark/deprecations.rb
+- lib/postmark/error.rb
+- lib/postmark/handlers/mail.rb
+- lib/postmark/helpers/hash_helper.rb
+- lib/postmark/helpers/message_helper.rb
+- lib/postmark/http_client.rb
+- lib/postmark/inbound.rb
+- lib/postmark/inflector.rb
+- lib/postmark/json.rb
+- lib/postmark/mail_message_converter.rb
+- lib/postmark/message_extensions/mail.rb
+- lib/postmark/response_parsers/active_support.rb
+- lib/postmark/response_parsers/json.rb
+- lib/postmark/response_parsers/yajl.rb
+- lib/postmark/version.rb
+- postmark.gemspec
+- postmark.png
+- spec/data/empty.gif
+- spec/integration/account_api_client_spec.rb
+- spec/integration/api_client_hashes_spec.rb
+- spec/integration/api_client_messages_spec.rb
+- spec/integration/api_client_resources_spec.rb
+- spec/integration/mail_delivery_method_spec.rb
+- spec/spec_helper.rb
+- spec/support/custom_matchers.rb
+- spec/support/helpers.rb
+- spec/support/shared_examples.rb
+- spec/unit/postmark/account_api_client_spec.rb
+- spec/unit/postmark/api_client_spec.rb
+- spec/unit/postmark/bounce_spec.rb
+- spec/unit/postmark/client_spec.rb
+- spec/unit/postmark/error_spec.rb
+- spec/unit/postmark/handlers/mail_spec.rb
+- spec/unit/postmark/helpers/hash_helper_spec.rb
+- spec/unit/postmark/helpers/message_helper_spec.rb
+- spec/unit/postmark/http_client_spec.rb
+- spec/unit/postmark/inbound_spec.rb
+- spec/unit/postmark/inflector_spec.rb
+- spec/unit/postmark/json_spec.rb
+- spec/unit/postmark/mail_message_converter_spec.rb
+- spec/unit/postmark/message_extensions/mail_spec.rb
+- spec/unit/postmark_spec.rb
+homepage: https://postmarkapp.com
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/ActiveCampaign/postmark-gem/blob/main/CHANGELOG.rdoc
+post_install_message: "\n    ==================\n    Thanks for installing the postmark
+  gem. If you don't have an account, please\n    sign up at https://postmarkapp.com/.\n\n
+  \   Review the README.md for implementation details and examples.\n    ==================\n
+  \ "
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.7
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Official Postmark API wrapper.
+test_files:
+- spec/data/empty.gif
+- spec/integration/account_api_client_spec.rb
+- spec/integration/api_client_hashes_spec.rb
+- spec/integration/api_client_messages_spec.rb
+- spec/integration/api_client_resources_spec.rb
+- spec/integration/mail_delivery_method_spec.rb
+- spec/spec_helper.rb
+- spec/support/custom_matchers.rb
+- spec/support/helpers.rb
+- spec/support/shared_examples.rb
+- spec/unit/postmark/account_api_client_spec.rb
+- spec/unit/postmark/api_client_spec.rb
+- spec/unit/postmark/bounce_spec.rb
+- spec/unit/postmark/client_spec.rb
+- spec/unit/postmark/error_spec.rb
+- spec/unit/postmark/handlers/mail_spec.rb
+- spec/unit/postmark/helpers/hash_helper_spec.rb
+- spec/unit/postmark/helpers/message_helper_spec.rb
+- spec/unit/postmark/http_client_spec.rb
+- spec/unit/postmark/inbound_spec.rb
+- spec/unit/postmark/inflector_spec.rb
+- spec/unit/postmark/json_spec.rb
+- spec/unit/postmark/mail_message_converter_spec.rb
+- spec/unit/postmark/message_extensions/mail_spec.rb
+- spec/unit/postmark_spec.rb

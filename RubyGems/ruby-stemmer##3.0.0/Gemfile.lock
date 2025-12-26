@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    ruby-stemmer (3.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.2)
+    rake (13.0.1)
+    rake-compiler (1.1.1)
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (~> 5.14)
+  rake-compiler (~> 1.1)
+  ruby-stemmer!
+
+BUNDLED WITH
+   2.1.4

@@ -1,3 +1,0 @@
-#!/usr/bin/env ruby
-kw = Gem.win_platform? ? { new_pgroup: true } : { pgroup: true }
-exec(*ARGV, **kw)

@@ -1,0 +1,328 @@
+--- !ruby/object:Gem::Specification
+name: icalendar
+version: !ruby/object:Gem::Version
+  version: 2.10.3
+platform: ruby
+authors:
+- Ryan Ahearn
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ice_cube
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+- !ruby/object:Gem::Dependency
+  name: tzinfo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: tzinfo-data
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2020'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2020'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  Implements the iCalendar specification (RFC-5545) in Ruby.  This allows
+  for the generation and parsing of .ics files, which are used by a
+  variety of calendaring applications.
+email:
+- ryan.c.ahearn@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- icalendar.gemspec
+- lib/icalendar.rb
+- lib/icalendar/alarm.rb
+- lib/icalendar/calendar.rb
+- lib/icalendar/component.rb
+- lib/icalendar/downcased_hash.rb
+- lib/icalendar/event.rb
+- lib/icalendar/freebusy.rb
+- lib/icalendar/has_components.rb
+- lib/icalendar/has_properties.rb
+- lib/icalendar/journal.rb
+- lib/icalendar/logger.rb
+- lib/icalendar/marshable.rb
+- lib/icalendar/parser.rb
+- lib/icalendar/timezone.rb
+- lib/icalendar/timezone_store.rb
+- lib/icalendar/todo.rb
+- lib/icalendar/tzinfo.rb
+- lib/icalendar/value.rb
+- lib/icalendar/values/binary.rb
+- lib/icalendar/values/boolean.rb
+- lib/icalendar/values/cal_address.rb
+- lib/icalendar/values/date.rb
+- lib/icalendar/values/date_or_date_time.rb
+- lib/icalendar/values/date_time.rb
+- lib/icalendar/values/duration.rb
+- lib/icalendar/values/float.rb
+- lib/icalendar/values/helpers/active_support_time_with_zone_adapter.rb
+- lib/icalendar/values/helpers/array.rb
+- lib/icalendar/values/helpers/time_with_zone.rb
+- lib/icalendar/values/integer.rb
+- lib/icalendar/values/period.rb
+- lib/icalendar/values/recur.rb
+- lib/icalendar/values/text.rb
+- lib/icalendar/values/time.rb
+- lib/icalendar/values/uri.rb
+- lib/icalendar/values/utc_offset.rb
+- lib/icalendar/version.rb
+- spec/alarm_spec.rb
+- spec/calendar_spec.rb
+- spec/downcased_hash_spec.rb
+- spec/event_spec.rb
+- spec/fixtures/bad_wrapping.ics
+- spec/fixtures/custom_component.ics
+- spec/fixtures/event.ics
+- spec/fixtures/nondefault_values.ics
+- spec/fixtures/nonstandard.ics
+- spec/fixtures/recurrence.ics
+- spec/fixtures/reversed_timezone.ics
+- spec/fixtures/single_event.ics
+- spec/fixtures/single_event_bad_dtstart.ics
+- spec/fixtures/single_event_bad_line.ics
+- spec/fixtures/single_event_bad_organizer.ics
+- spec/fixtures/single_event_organizer_parsed.ics
+- spec/fixtures/timezone.ics
+- spec/fixtures/two_date_time_events.ics
+- spec/fixtures/two_day_events.ics
+- spec/fixtures/two_events.ics
+- spec/fixtures/two_time_events.ics
+- spec/fixtures/tzid_search.ics
+- spec/freebusy_spec.rb
+- spec/journal_spec.rb
+- spec/parser_spec.rb
+- spec/roundtrip_spec.rb
+- spec/spec_helper.rb
+- spec/timezone_spec.rb
+- spec/todo_spec.rb
+- spec/tzinfo_spec.rb
+- spec/values/date_or_date_time_spec.rb
+- spec/values/date_spec.rb
+- spec/values/date_time_spec.rb
+- spec/values/duration_spec.rb
+- spec/values/period_spec.rb
+- spec/values/recur_spec.rb
+- spec/values/text_spec.rb
+- spec/values/utc_offset_spec.rb
+homepage: https://github.com/icalendar/icalendar
+licenses:
+- BSD-2-Clause
+- GPL-3.0-only
+- icalendar
+metadata:
+  changelog_uri: https://github.com/icalendar/icalendar/blob/main/CHANGELOG.md
+post_install_message: 'ActiveSupport is required for TimeWithZone support, but not
+  required for general use.
+
+  '
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: A ruby implementation of the iCalendar specification (RFC-5545).
+test_files:
+- spec/alarm_spec.rb
+- spec/calendar_spec.rb
+- spec/downcased_hash_spec.rb
+- spec/event_spec.rb
+- spec/fixtures/bad_wrapping.ics
+- spec/fixtures/custom_component.ics
+- spec/fixtures/event.ics
+- spec/fixtures/nondefault_values.ics
+- spec/fixtures/nonstandard.ics
+- spec/fixtures/recurrence.ics
+- spec/fixtures/reversed_timezone.ics
+- spec/fixtures/single_event.ics
+- spec/fixtures/single_event_bad_dtstart.ics
+- spec/fixtures/single_event_bad_line.ics
+- spec/fixtures/single_event_bad_organizer.ics
+- spec/fixtures/single_event_organizer_parsed.ics
+- spec/fixtures/timezone.ics
+- spec/fixtures/two_date_time_events.ics
+- spec/fixtures/two_day_events.ics
+- spec/fixtures/two_events.ics
+- spec/fixtures/two_time_events.ics
+- spec/fixtures/tzid_search.ics
+- spec/freebusy_spec.rb
+- spec/journal_spec.rb
+- spec/parser_spec.rb
+- spec/roundtrip_spec.rb
+- spec/spec_helper.rb
+- spec/timezone_spec.rb
+- spec/todo_spec.rb
+- spec/tzinfo_spec.rb
+- spec/values/date_or_date_time_spec.rb
+- spec/values/date_spec.rb
+- spec/values/date_time_spec.rb
+- spec/values/duration_spec.rb
+- spec/values/period_spec.rb
+- spec/values/recur_spec.rb
+- spec/values/text_spec.rb
+- spec/values/utc_offset_spec.rb

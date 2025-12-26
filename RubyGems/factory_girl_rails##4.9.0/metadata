@@ -1,0 +1,201 @@
+--- !ruby/object:Gem::Specification
+name: factory_girl_rails
+version: !ruby/object:Gem::Version
+  version: 4.9.0
+platform: ruby
+authors:
+- Joe Ferris
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-10-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: factory_girl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.9.0
+description: |-
+  factory_girl_rails provides integration between
+      factory_girl and rails 3 or newer (currently just automatic factory definition
+      loading)
+email: jferris@thoughtbot.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Appraisals
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- NEWS
+- README.md
+- Rakefile
+- bin/setup
+- bin/stubs/a2h
+- bin/stubs/appraisal
+- bin/stubs/aruba
+- bin/stubs/autospec
+- bin/stubs/bcat
+- bin/stubs/btee
+- bin/stubs/bundler
+- bin/stubs/cdiff
+- bin/stubs/cucumber
+- bin/stubs/decolor
+- bin/stubs/erubis
+- bin/stubs/htmldiff
+- bin/stubs/ldiff
+- bin/stubs/nokogiri
+- bin/stubs/rackup
+- bin/stubs/rails
+- bin/stubs/rake
+- bin/stubs/rake2thor
+- bin/stubs/rdiscount
+- bin/stubs/rdoc
+- bin/stubs/ri
+- bin/stubs/rspec
+- bin/stubs/setup
+- bin/stubs/sprockets
+- bin/stubs/thor
+- bin/stubs/tilt
+- factory_girl_rails.gemspec
+- features/fixture_replacement_config.feature
+- features/generators.feature
+- features/load_definitions.feature
+- features/step_definitions/appraisal.rb
+- features/step_definitions/rails_steps.rb
+- features/support/env.rb
+- gemfiles/rails3.2.gemfile
+- gemfiles/rails3.2.gemfile.lock
+- gemfiles/rails4.1.gemfile
+- gemfiles/rails4.1.gemfile.lock
+- gemfiles/rails4.2.gemfile
+- gemfiles/rails4.2.gemfile.lock
+- gemfiles/rails5.0.gemfile
+- gemfiles/rails5.0.gemfile.lock
+- lib/factory_girl_rails.rb
+- lib/factory_girl_rails/generator.rb
+- lib/factory_girl_rails/generators/non_rspec_generator.rb
+- lib/factory_girl_rails/generators/null_generator.rb
+- lib/factory_girl_rails/generators/rspec_generator.rb
+- lib/factory_girl_rails/railtie.rb
+- lib/generators/factory_girl.rb
+- lib/generators/factory_girl/model/model_generator.rb
+- pkg/factory_girl_rails-4.5.0.gem
+- tmp/aruba/testapp/Gemfile
+- tmp/aruba/testapp/Gemfile.lock
+- tmp/aruba/testapp/README.md
+- tmp/aruba/testapp/Rakefile
+- tmp/aruba/testapp/app/assets/config/manifest.js
+- tmp/aruba/testapp/app/assets/javascripts/application.js
+- tmp/aruba/testapp/app/assets/javascripts/cable.js
+- tmp/aruba/testapp/app/assets/stylesheets/application.css
+- tmp/aruba/testapp/app/channels/application_cable/channel.rb
+- tmp/aruba/testapp/app/channels/application_cable/connection.rb
+- tmp/aruba/testapp/app/controllers/application_controller.rb
+- tmp/aruba/testapp/app/helpers/application_helper.rb
+- tmp/aruba/testapp/app/jobs/application_job.rb
+- tmp/aruba/testapp/app/mailers/application_mailer.rb
+- tmp/aruba/testapp/app/models/application_record.rb
+- tmp/aruba/testapp/app/models/user.rb
+- tmp/aruba/testapp/app/views/layouts/application.html.erb
+- tmp/aruba/testapp/app/views/layouts/mailer.html.erb
+- tmp/aruba/testapp/app/views/layouts/mailer.text.erb
+- tmp/aruba/testapp/bin/bundle
+- tmp/aruba/testapp/bin/rails
+- tmp/aruba/testapp/bin/rake
+- tmp/aruba/testapp/bin/setup
+- tmp/aruba/testapp/bin/spring
+- tmp/aruba/testapp/bin/update
+- tmp/aruba/testapp/config.ru
+- tmp/aruba/testapp/config/application.rb
+- tmp/aruba/testapp/config/boot.rb
+- tmp/aruba/testapp/config/cable.yml
+- tmp/aruba/testapp/config/database.yml
+- tmp/aruba/testapp/config/environment.rb
+- tmp/aruba/testapp/config/environments/development.rb
+- tmp/aruba/testapp/config/environments/production.rb
+- tmp/aruba/testapp/config/environments/test.rb
+- tmp/aruba/testapp/config/initializers/application_controller_renderer.rb
+- tmp/aruba/testapp/config/initializers/assets.rb
+- tmp/aruba/testapp/config/initializers/backtrace_silencers.rb
+- tmp/aruba/testapp/config/initializers/cookies_serializer.rb
+- tmp/aruba/testapp/config/initializers/filter_parameter_logging.rb
+- tmp/aruba/testapp/config/initializers/inflections.rb
+- tmp/aruba/testapp/config/initializers/mime_types.rb
+- tmp/aruba/testapp/config/initializers/new_framework_defaults.rb
+- tmp/aruba/testapp/config/initializers/session_store.rb
+- tmp/aruba/testapp/config/initializers/wrap_parameters.rb
+- tmp/aruba/testapp/config/locales/en.yml
+- tmp/aruba/testapp/config/puma.rb
+- tmp/aruba/testapp/config/routes.rb
+- tmp/aruba/testapp/config/secrets.yml
+- tmp/aruba/testapp/config/spring.rb
+- tmp/aruba/testapp/db/development.sqlite3
+- tmp/aruba/testapp/db/migrate/1_create_users.rb
+- tmp/aruba/testapp/db/schema.rb
+- tmp/aruba/testapp/db/seeds.rb
+- tmp/aruba/testapp/db/test.sqlite3
+- tmp/aruba/testapp/lib/some_railtie/factories.rb
+- tmp/aruba/testapp/lib/some_railtie/railties.rb
+- tmp/aruba/testapp/log/development.log
+- tmp/aruba/testapp/log/test.log
+- tmp/aruba/testapp/public/404.html
+- tmp/aruba/testapp/public/422.html
+- tmp/aruba/testapp/public/500.html
+- tmp/aruba/testapp/public/apple-touch-icon-precomposed.png
+- tmp/aruba/testapp/public/apple-touch-icon.png
+- tmp/aruba/testapp/public/favicon.ico
+- tmp/aruba/testapp/public/robots.txt
+- tmp/aruba/testapp/test/test_helper.rb
+- tmp/aruba/testapp/test/unit/user_test.rb
+homepage: http://github.com/thoughtbot/factory_girl_rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.2
+signing_key: 
+specification_version: 4
+summary: factory_girl_rails provides integration between factory_girl and rails 3
+  or newer
+test_files: []

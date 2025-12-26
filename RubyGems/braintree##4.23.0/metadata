@@ -1,0 +1,388 @@
+--- !ruby/object:Gem::Specification
+name: braintree
+version: !ruby/object:Gem::Version
+  version: 4.23.0
+platform: ruby
+authors:
+- Braintree
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-10-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.4
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.9
+description: Resources and tools for developers to integrate Braintree's global payments
+  platform.
+email: code@getbraintree.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- braintree.gemspec
+- lib/braintree.rb
+- lib/braintree/account_updater_daily_report.rb
+- lib/braintree/ach_mandate.rb
+- lib/braintree/add_on.rb
+- lib/braintree/add_on_gateway.rb
+- lib/braintree/address.rb
+- lib/braintree/address/country_names.rb
+- lib/braintree/address_gateway.rb
+- lib/braintree/advanced_search.rb
+- lib/braintree/apple_pay.rb
+- lib/braintree/apple_pay_card.rb
+- lib/braintree/apple_pay_gateway.rb
+- lib/braintree/apple_pay_options.rb
+- lib/braintree/authorization_adjustment.rb
+- lib/braintree/base_module.rb
+- lib/braintree/bin_data.rb
+- lib/braintree/client_token.rb
+- lib/braintree/client_token_gateway.rb
+- lib/braintree/configuration.rb
+- lib/braintree/connected_merchant_paypal_status_changed.rb
+- lib/braintree/connected_merchant_status_transitioned.rb
+- lib/braintree/credentials_parser.rb
+- lib/braintree/credit_card.rb
+- lib/braintree/credit_card_gateway.rb
+- lib/braintree/credit_card_verification.rb
+- lib/braintree/credit_card_verification_gateway.rb
+- lib/braintree/credit_card_verification_search.rb
+- lib/braintree/customer.rb
+- lib/braintree/customer_gateway.rb
+- lib/braintree/customer_search.rb
+- lib/braintree/descriptor.rb
+- lib/braintree/digest.rb
+- lib/braintree/disbursement.rb
+- lib/braintree/discount.rb
+- lib/braintree/discount_gateway.rb
+- lib/braintree/dispute.rb
+- lib/braintree/dispute/evidence.rb
+- lib/braintree/dispute/paypal_message.rb
+- lib/braintree/dispute/status_history.rb
+- lib/braintree/dispute/transaction.rb
+- lib/braintree/dispute/transaction_details.rb
+- lib/braintree/dispute_gateway.rb
+- lib/braintree/dispute_search.rb
+- lib/braintree/document_upload.rb
+- lib/braintree/document_upload_gateway.rb
+- lib/braintree/enriched_customer_data.rb
+- lib/braintree/error_codes.rb
+- lib/braintree/error_result.rb
+- lib/braintree/errors.rb
+- lib/braintree/exceptions.rb
+- lib/braintree/exchange_rate.rb
+- lib/braintree/exchange_rate_quote.rb
+- lib/braintree/exchange_rate_quote_gateway.rb
+- lib/braintree/exchange_rate_quote_input.rb
+- lib/braintree/exchange_rate_quote_request.rb
+- lib/braintree/exchange_rate_quote_response.rb
+- lib/braintree/facilitated_details.rb
+- lib/braintree/facilitator_details.rb
+- lib/braintree/gateway.rb
+- lib/braintree/google_pay_card.rb
+- lib/braintree/granted_payment_instrument_update.rb
+- lib/braintree/graphql_client.rb
+- lib/braintree/http.rb
+- lib/braintree/local_payment_completed.rb
+- lib/braintree/local_payment_completed/blik_alias.rb
+- lib/braintree/local_payment_expired.rb
+- lib/braintree/local_payment_funded.rb
+- lib/braintree/local_payment_reversed.rb
+- lib/braintree/merchant.rb
+- lib/braintree/merchant_account.rb
+- lib/braintree/merchant_account/address_details.rb
+- lib/braintree/merchant_account/business_details.rb
+- lib/braintree/merchant_account/funding_details.rb
+- lib/braintree/merchant_account/individual_details.rb
+- lib/braintree/merchant_account_gateway.rb
+- lib/braintree/merchant_gateway.rb
+- lib/braintree/meta_checkout_card.rb
+- lib/braintree/meta_checkout_token.rb
+- lib/braintree/modification.rb
+- lib/braintree/oauth_credentials.rb
+- lib/braintree/oauth_gateway.rb
+- lib/braintree/paginated_collection.rb
+- lib/braintree/paginated_result.rb
+- lib/braintree/payment_instrument_type.rb
+- lib/braintree/payment_method.rb
+- lib/braintree/payment_method_customer_data_updated_metadata.rb
+- lib/braintree/payment_method_gateway.rb
+- lib/braintree/payment_method_nonce.rb
+- lib/braintree/payment_method_nonce_details.rb
+- lib/braintree/payment_method_nonce_details_payer_info.rb
+- lib/braintree/payment_method_nonce_gateway.rb
+- lib/braintree/payment_method_parser.rb
+- lib/braintree/paypal_account.rb
+- lib/braintree/paypal_account_gateway.rb
+- lib/braintree/plan.rb
+- lib/braintree/plan_gateway.rb
+- lib/braintree/processor_response_types.rb
+- lib/braintree/resource_collection.rb
+- lib/braintree/revoked_payment_method_metadata.rb
+- lib/braintree/risk_data.rb
+- lib/braintree/risk_data/liability_shift.rb
+- lib/braintree/samsung_pay_card.rb
+- lib/braintree/sepa_direct_debit_account.rb
+- lib/braintree/sepa_direct_debit_account_gateway.rb
+- lib/braintree/sepa_direct_debit_account_nonce_details.rb
+- lib/braintree/settlement_batch_summary.rb
+- lib/braintree/settlement_batch_summary_gateway.rb
+- lib/braintree/sha256_digest.rb
+- lib/braintree/signature_service.rb
+- lib/braintree/subscription.rb
+- lib/braintree/subscription/status_details.rb
+- lib/braintree/subscription_gateway.rb
+- lib/braintree/subscription_search.rb
+- lib/braintree/successful_result.rb
+- lib/braintree/test/authentication_id.rb
+- lib/braintree/test/credit_card.rb
+- lib/braintree/test/merchant_account.rb
+- lib/braintree/test/nonce.rb
+- lib/braintree/test/transaction_amounts.rb
+- lib/braintree/test/venmo_sdk.rb
+- lib/braintree/test_transaction.rb
+- lib/braintree/testing_gateway.rb
+- lib/braintree/three_d_secure_info.rb
+- lib/braintree/transaction.rb
+- lib/braintree/transaction/address_details.rb
+- lib/braintree/transaction/apple_pay_details.rb
+- lib/braintree/transaction/credit_card_details.rb
+- lib/braintree/transaction/customer_details.rb
+- lib/braintree/transaction/disbursement_details.rb
+- lib/braintree/transaction/google_pay_details.rb
+- lib/braintree/transaction/installment.rb
+- lib/braintree/transaction/installment/adjustment.rb
+- lib/braintree/transaction/local_payment_details.rb
+- lib/braintree/transaction/meta_checkout_card_details.rb
+- lib/braintree/transaction/meta_checkout_token_details.rb
+- lib/braintree/transaction/package_details.rb
+- lib/braintree/transaction/payment_receipt.rb
+- lib/braintree/transaction/payment_receipt/card_present_data.rb
+- lib/braintree/transaction/payment_receipt/merchant_address.rb
+- lib/braintree/transaction/paypal_details.rb
+- lib/braintree/transaction/paypal_here_details.rb
+- lib/braintree/transaction/samsung_pay_card_details.rb
+- lib/braintree/transaction/sepa_direct_debit_account_details.rb
+- lib/braintree/transaction/status_details.rb
+- lib/braintree/transaction/subscription_details.rb
+- lib/braintree/transaction/us_bank_account_details.rb
+- lib/braintree/transaction/venmo_account_details.rb
+- lib/braintree/transaction/visa_checkout_card_details.rb
+- lib/braintree/transaction_gateway.rb
+- lib/braintree/transaction_line_item.rb
+- lib/braintree/transaction_line_item_gateway.rb
+- lib/braintree/transaction_review.rb
+- lib/braintree/transaction_search.rb
+- lib/braintree/unknown_payment_method.rb
+- lib/braintree/us_bank_account.rb
+- lib/braintree/us_bank_account_gateway.rb
+- lib/braintree/us_bank_account_verification.rb
+- lib/braintree/us_bank_account_verification_gateway.rb
+- lib/braintree/us_bank_account_verification_search.rb
+- lib/braintree/util.rb
+- lib/braintree/validation_error.rb
+- lib/braintree/validation_error_collection.rb
+- lib/braintree/venmo_account.rb
+- lib/braintree/venmo_profile_data.rb
+- lib/braintree/version.rb
+- lib/braintree/visa_checkout_card.rb
+- lib/braintree/webhook_notification.rb
+- lib/braintree/webhook_notification_gateway.rb
+- lib/braintree/webhook_testing.rb
+- lib/braintree/webhook_testing_gateway.rb
+- lib/braintree/xml.rb
+- lib/braintree/xml/generator.rb
+- lib/braintree/xml/libxml.rb
+- lib/braintree/xml/parser.rb
+- lib/braintree/xml/rexml.rb
+- lib/ssl/api_braintreegateway_com.ca.crt
+- lib/ssl/securetrust_ca.crt
+- spec/fixtures/files/bt_logo.png
+- spec/fixtures/files/gif_extension_bt_logo.gif
+- spec/fixtures/files/malformed_pdf.pdf
+- spec/fixtures/files/too_long.pdf
+- spec/integration/braintree/add_on_spec.rb
+- spec/integration/braintree/address_spec.rb
+- spec/integration/braintree/advanced_search_spec.rb
+- spec/integration/braintree/apple_pay_spec.rb
+- spec/integration/braintree/braintree_gateway_spec.rb
+- spec/integration/braintree/client_api/client_token_spec.rb
+- spec/integration/braintree/client_api/spec_helper.rb
+- spec/integration/braintree/credit_card_spec.rb
+- spec/integration/braintree/credit_card_verification_search_spec.rb
+- spec/integration/braintree/credit_card_verification_spec.rb
+- spec/integration/braintree/customer_search_spec.rb
+- spec/integration/braintree/customer_spec.rb
+- spec/integration/braintree/disbursement_spec.rb
+- spec/integration/braintree/discount_spec.rb
+- spec/integration/braintree/dispute_search_spec.rb
+- spec/integration/braintree/dispute_spec.rb
+- spec/integration/braintree/document_upload_spec.rb
+- spec/integration/braintree/error_codes_spec.rb
+- spec/integration/braintree/exchange_rate_quote_spec.rb
+- spec/integration/braintree/graphql_client_spec.rb
+- spec/integration/braintree/http_spec.rb
+- spec/integration/braintree/merchant_account_spec.rb
+- spec/integration/braintree/merchant_spec.rb
+- spec/integration/braintree/oauth_spec.rb
+- spec/integration/braintree/package_tracking_spec.rb
+- spec/integration/braintree/payment_method_nonce_spec.rb
+- spec/integration/braintree/payment_method_spec.rb
+- spec/integration/braintree/payment_method_us_bank_account_spec.rb
+- spec/integration/braintree/paypal_account_spec.rb
+- spec/integration/braintree/plan_spec.rb
+- spec/integration/braintree/samsung_pay_card_spec.rb
+- spec/integration/braintree/sepa_direct_debit_account_spec.rb
+- spec/integration/braintree/settlement_batch_summary_spec.rb
+- spec/integration/braintree/subscription_spec.rb
+- spec/integration/braintree/test/transaction_amounts_spec.rb
+- spec/integration/braintree/test_transaction_spec.rb
+- spec/integration/braintree/transaction_line_item_spec.rb
+- spec/integration/braintree/transaction_search_spec.rb
+- spec/integration/braintree/transaction_spec.rb
+- spec/integration/braintree/transaction_us_bank_account_spec.rb
+- spec/integration/braintree/us_bank_account_spec.rb
+- spec/integration/braintree/us_bank_account_verification_search_spec.rb
+- spec/integration/braintree/us_bank_account_verification_spec.rb
+- spec/integration/braintree/visa_checkout_card_spec.rb
+- spec/integration/spec_helper.rb
+- spec/oauth_test_helper.rb
+- spec/script/httpsd.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/ssl/certificate.crt
+- spec/ssl/geotrust_global.crt
+- spec/ssl/privateKey.key
+- spec/unit/braintree/address_spec.rb
+- spec/unit/braintree/apple_pay_card_spec.rb
+- spec/unit/braintree/base_module_spec.rb
+- spec/unit/braintree/client_token_spec.rb
+- spec/unit/braintree/configuration_spec.rb
+- spec/unit/braintree/credentials_parser_spec.rb
+- spec/unit/braintree/credit_card_spec.rb
+- spec/unit/braintree/credit_card_verification_gateway_spec.rb
+- spec/unit/braintree/credit_card_verification_search_spec.rb
+- spec/unit/braintree/credit_card_verification_spec.rb
+- spec/unit/braintree/customer_spec.rb
+- spec/unit/braintree/digest_spec.rb
+- spec/unit/braintree/disbursement_spec.rb
+- spec/unit/braintree/dispute_search_spec.rb
+- spec/unit/braintree/dispute_spec.rb
+- spec/unit/braintree/document_upload_spec.rb
+- spec/unit/braintree/enriched_customer_data_spec.rb
+- spec/unit/braintree/error_result_spec.rb
+- spec/unit/braintree/errors_spec.rb
+- spec/unit/braintree/exchange_rate_quote_input_spec.rb
+- spec/unit/braintree/exchange_rate_quote_request_spec.rb
+- spec/unit/braintree/exchange_rate_quote_response_spec.rb
+- spec/unit/braintree/exchange_rate_quote_spec.rb
+- spec/unit/braintree/exchange_rate_spec.rb
+- spec/unit/braintree/http_spec.rb
+- spec/unit/braintree/local_payment_completed_spec.rb
+- spec/unit/braintree/local_payment_expired_spec.rb
+- spec/unit/braintree/local_payment_funded_spec.rb
+- spec/unit/braintree/merchant_account_spec.rb
+- spec/unit/braintree/meta_checkout_card_details_spec.rb
+- spec/unit/braintree/meta_checkout_card_spec.rb
+- spec/unit/braintree/meta_checkout_token_details_spec.rb
+- spec/unit/braintree/meta_checkout_token_spec.rb
+- spec/unit/braintree/modification_spec.rb
+- spec/unit/braintree/package_tracking_spec.rb
+- spec/unit/braintree/payment_method_customer_data_updated_metadata_spec.rb
+- spec/unit/braintree/payment_method_nonce_details_payer_info_spec.rb
+- spec/unit/braintree/payment_method_nonce_details_spec.rb
+- spec/unit/braintree/payment_method_nonce_spec.rb
+- spec/unit/braintree/payment_method_spec.rb
+- spec/unit/braintree/paypal_account_spec.rb
+- spec/unit/braintree/resource_collection_spec.rb
+- spec/unit/braintree/risk_data/liability_shift.rb
+- spec/unit/braintree/risk_data_spec.rb
+- spec/unit/braintree/sepa_debit_account_nonce_details_spec.rb
+- spec/unit/braintree/sepa_debit_account_spec.rb
+- spec/unit/braintree/sha256_digest_spec.rb
+- spec/unit/braintree/signature_service_spec.rb
+- spec/unit/braintree/subscription_search_spec.rb
+- spec/unit/braintree/subscription_spec.rb
+- spec/unit/braintree/successful_result_spec.rb
+- spec/unit/braintree/three_d_secure_info_spec.rb
+- spec/unit/braintree/transaction/credit_card_details_spec.rb
+- spec/unit/braintree/transaction/customer_details_spec.rb
+- spec/unit/braintree/transaction/deposit_details_spec.rb
+- spec/unit/braintree/transaction/installment_spec.rb
+- spec/unit/braintree/transaction/local_payment_details_spec.rb
+- spec/unit/braintree/transaction/payment_receipt_spec.rb
+- spec/unit/braintree/transaction/paypal_details_spec.rb
+- spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
+- spec/unit/braintree/transaction_gateway_spec.rb
+- spec/unit/braintree/transaction_search_spec.rb
+- spec/unit/braintree/transaction_spec.rb
+- spec/unit/braintree/unknown_payment_method_spec.rb
+- spec/unit/braintree/us_bank_account_spec.rb
+- spec/unit/braintree/us_bank_account_verification_search_spec.rb
+- spec/unit/braintree/us_bank_account_verification_spec.rb
+- spec/unit/braintree/util_spec.rb
+- spec/unit/braintree/validation_error_collection_spec.rb
+- spec/unit/braintree/validation_error_spec.rb
+- spec/unit/braintree/venmo_profile_data_spec.rb
+- spec/unit/braintree/webhook_notification_spec.rb
+- spec/unit/braintree/xml/libxml_spec.rb
+- spec/unit/braintree/xml/parser_spec.rb
+- spec/unit/braintree/xml/rexml_spec.rb
+- spec/unit/braintree/xml_spec.rb
+- spec/unit/braintree_spec.rb
+- spec/unit/spec_helper.rb
+homepage: https://www.braintreepayments.com/
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/braintree/braintree_ruby/issues
+  changelog_uri: https://github.com/braintree/braintree_ruby/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/braintree/braintree_ruby
+  documentation_uri: https://developer.paypal.com/braintree/docs
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.5
+signing_key: 
+specification_version: 4
+summary: Braintree Ruby Server SDK
+test_files: []

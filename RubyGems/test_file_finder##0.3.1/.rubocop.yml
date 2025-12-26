@@ -1,0 +1,21 @@
+inherit_gem:
+  gitlab-styles:
+    - rubocop-default.yml
+
+require:
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: disable
+
+# Disables Rails cops.
+Rails:
+  Enabled: false
+
+# Disables Rails-related cops
+CodeReuse/ActiveRecord:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 20

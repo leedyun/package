@@ -1,1 +1,0 @@
-require 'activemerchant_banklink'

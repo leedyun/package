@@ -1,5 +1,0 @@
-ja:
-  valid_email:
-    validations:
-      email:
-        invalid: "不正な値です"

@@ -1,7 +1,0 @@
-module Workarea
-  decorate Storefront::OrderViewModel, with: :order_gift_card do
-    def paid_amount
-      super - gift_card_amount
-    end
-  end
-end

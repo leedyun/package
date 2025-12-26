@@ -1,3 +1,0 @@
-I needed to put something here, so here is my question :
-
-How many people can read hex if only <%= people.join(', ') %> and dead people can read hex?

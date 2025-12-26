@@ -1,1 +1,0 @@
-require 'arctica_autorization'

@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-require 'thor'
-require 'apidone-client'
-
-Apidone::Client::CLI.start

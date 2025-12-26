@@ -1,7 +1,0 @@
-<%=
-  content_tag(:li, 
-    link_to_unless(current_page.first?, raw(t "views.pagination.previous"), url) do
-      content_tag(:span, raw(t "views.pagination.previous"), class: "active")
-    end
-  )
-%>

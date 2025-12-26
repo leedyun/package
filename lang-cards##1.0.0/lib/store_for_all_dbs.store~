@@ -1,3 +1,0 @@
----
-testna: !ruby/object:NewDB::Db
-  name: testna

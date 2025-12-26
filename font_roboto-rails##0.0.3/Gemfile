@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-# Declare your gem's dependencies in font-roboto-rails.gemspec.
-gemspec

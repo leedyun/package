@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Assumes this is being called from the project directory, not from this
-# `bin/` directory.
-cd example && bundle exec pry -r ./app.rb

@@ -1,2 +1,0 @@
-module ActiveSerializer::Serializers
-end

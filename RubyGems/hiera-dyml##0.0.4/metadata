@@ -1,0 +1,77 @@
+--- !ruby/object:Gem::Specification
+name: hiera-dyml
+version: !ruby/object:Gem::Version
+  version: 0.0.4
+  prerelease: 
+platform: ruby
+authors:
+- Johan Bakker
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: hiera
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: deep_merge
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+description: Hiera YAML backend with support for deep merging of hashes
+email: johan.bakker@panifex.nl
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/hiera/backend/dyml_backend.rb
+homepage: http://github.com/provonet/hiera-dyml
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.24
+signing_key: 
+specification_version: 3
+summary: DeepMerge YAML backend  for Hiera
+test_files: []

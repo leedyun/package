@@ -1,1 +1,0 @@
-require 'datadog/notifications'

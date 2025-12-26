@@ -1,2 +1,0 @@
-echo "Error: Could not find specified account(s)."
-exit 1

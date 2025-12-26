@@ -1,2 +1,0 @@
-class Animals::Tiger
-end

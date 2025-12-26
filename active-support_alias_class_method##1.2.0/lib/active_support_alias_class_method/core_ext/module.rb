@@ -1,1 +1,0 @@
-require 'active_support_alias_class_method/core_ext/module/aliasing'

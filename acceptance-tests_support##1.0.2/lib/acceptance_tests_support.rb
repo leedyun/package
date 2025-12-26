@@ -1,3 +1,0 @@
-require 'acceptance_tests_support/version'
-require 'acceptance_tests_support/acceptance_tests_support'
-require 'acceptance_tests_support/acceptance_shared_context'

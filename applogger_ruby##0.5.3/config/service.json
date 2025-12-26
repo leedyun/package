@@ -1,9 +1,0 @@
-{
-    "applogger": {
-
-        "server":       "applogger.io",
-        "port":         443,
-        "protocol":     "https"
-
-    }
-}

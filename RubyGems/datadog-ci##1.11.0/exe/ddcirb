@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "datadog/ci/cli/cli"
+
+command = ARGV.shift
+
+Datadog::CI::CLI.exec(command, ARGV)

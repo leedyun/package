@@ -1,0 +1,217 @@
+--- !ruby/object:Gem::Specification
+name: activestorage
+version: !ruby/object:Gem::Version
+  version: 8.0.1
+platform: ruby
+authors:
+- David Heinemeier Hansson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: activejob
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: marcel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Attach cloud and local files in Rails applications.
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- app/assets/javascripts/activestorage.esm.js
+- app/assets/javascripts/activestorage.js
+- app/controllers/active_storage/base_controller.rb
+- app/controllers/active_storage/blobs/proxy_controller.rb
+- app/controllers/active_storage/blobs/redirect_controller.rb
+- app/controllers/active_storage/direct_uploads_controller.rb
+- app/controllers/active_storage/disk_controller.rb
+- app/controllers/active_storage/representations/base_controller.rb
+- app/controllers/active_storage/representations/proxy_controller.rb
+- app/controllers/active_storage/representations/redirect_controller.rb
+- app/controllers/concerns/active_storage/disable_session.rb
+- app/controllers/concerns/active_storage/file_server.rb
+- app/controllers/concerns/active_storage/set_blob.rb
+- app/controllers/concerns/active_storage/set_current.rb
+- app/controllers/concerns/active_storage/streaming.rb
+- app/javascript/activestorage/blob_record.js
+- app/javascript/activestorage/blob_upload.js
+- app/javascript/activestorage/direct_upload.js
+- app/javascript/activestorage/direct_upload_controller.js
+- app/javascript/activestorage/direct_uploads_controller.js
+- app/javascript/activestorage/file_checksum.js
+- app/javascript/activestorage/helpers.js
+- app/javascript/activestorage/index.js
+- app/javascript/activestorage/ujs.js
+- app/jobs/active_storage/analyze_job.rb
+- app/jobs/active_storage/base_job.rb
+- app/jobs/active_storage/mirror_job.rb
+- app/jobs/active_storage/preview_image_job.rb
+- app/jobs/active_storage/purge_job.rb
+- app/jobs/active_storage/transform_job.rb
+- app/models/active_storage/attachment.rb
+- app/models/active_storage/blob.rb
+- app/models/active_storage/blob/analyzable.rb
+- app/models/active_storage/blob/identifiable.rb
+- app/models/active_storage/blob/representable.rb
+- app/models/active_storage/blob/servable.rb
+- app/models/active_storage/current.rb
+- app/models/active_storage/filename.rb
+- app/models/active_storage/named_variant.rb
+- app/models/active_storage/preview.rb
+- app/models/active_storage/record.rb
+- app/models/active_storage/variant.rb
+- app/models/active_storage/variant_record.rb
+- app/models/active_storage/variant_with_record.rb
+- app/models/active_storage/variation.rb
+- config/routes.rb
+- db/migrate/20170806125915_create_active_storage_tables.rb
+- db/update_migrate/20190112182829_add_service_name_to_active_storage_blobs.rb
+- db/update_migrate/20191206030411_create_active_storage_variant_records.rb
+- db/update_migrate/20211119233751_remove_not_null_on_active_storage_blobs_checksum.rb
+- lib/active_storage.rb
+- lib/active_storage/analyzer.rb
+- lib/active_storage/analyzer/audio_analyzer.rb
+- lib/active_storage/analyzer/image_analyzer.rb
+- lib/active_storage/analyzer/image_analyzer/image_magick.rb
+- lib/active_storage/analyzer/image_analyzer/vips.rb
+- lib/active_storage/analyzer/null_analyzer.rb
+- lib/active_storage/analyzer/video_analyzer.rb
+- lib/active_storage/attached.rb
+- lib/active_storage/attached/changes.rb
+- lib/active_storage/attached/changes/create_many.rb
+- lib/active_storage/attached/changes/create_one.rb
+- lib/active_storage/attached/changes/create_one_of_many.rb
+- lib/active_storage/attached/changes/delete_many.rb
+- lib/active_storage/attached/changes/delete_one.rb
+- lib/active_storage/attached/changes/detach_many.rb
+- lib/active_storage/attached/changes/detach_one.rb
+- lib/active_storage/attached/changes/purge_many.rb
+- lib/active_storage/attached/changes/purge_one.rb
+- lib/active_storage/attached/many.rb
+- lib/active_storage/attached/model.rb
+- lib/active_storage/attached/one.rb
+- lib/active_storage/deprecator.rb
+- lib/active_storage/downloader.rb
+- lib/active_storage/engine.rb
+- lib/active_storage/errors.rb
+- lib/active_storage/fixture_set.rb
+- lib/active_storage/gem_version.rb
+- lib/active_storage/log_subscriber.rb
+- lib/active_storage/previewer.rb
+- lib/active_storage/previewer/mupdf_previewer.rb
+- lib/active_storage/previewer/poppler_pdf_previewer.rb
+- lib/active_storage/previewer/video_previewer.rb
+- lib/active_storage/reflection.rb
+- lib/active_storage/service.rb
+- lib/active_storage/service/azure_storage_service.rb
+- lib/active_storage/service/configurator.rb
+- lib/active_storage/service/disk_service.rb
+- lib/active_storage/service/gcs_service.rb
+- lib/active_storage/service/mirror_service.rb
+- lib/active_storage/service/registry.rb
+- lib/active_storage/service/s3_service.rb
+- lib/active_storage/transformers/image_processing_transformer.rb
+- lib/active_storage/transformers/transformer.rb
+- lib/active_storage/version.rb
+- lib/tasks/activestorage.rake
+homepage: https://rubyonrails.org
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/rails/rails/issues
+  changelog_uri: https://github.com/rails/rails/blob/v8.0.1/activestorage/CHANGELOG.md
+  documentation_uri: https://api.rubyonrails.org/v8.0.1/
+  mailing_list_uri: https://discuss.rubyonrails.org/c/rubyonrails-talk
+  source_code_uri: https://github.com/rails/rails/tree/v8.0.1/activestorage
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Local and cloud file storage framework.
+test_files: []

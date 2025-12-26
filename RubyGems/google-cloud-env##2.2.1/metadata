@@ -1,0 +1,85 @@
+--- !ruby/object:Gem::Specification
+name: google-cloud-env
+version: !ruby/object:Gem::Version
+  version: 2.2.1
+platform: ruby
+authors:
+- Daniel Azuma
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-10-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+description: google-cloud-env provides information on the Google Cloud Platform hosting
+  environment. Applications can use this library to determine hosting context information
+  such as the project ID, whether App Engine is running, what tags are set on the
+  VM instance, and much more.
+email:
+- dazuma@google.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- SECURITY.md
+- lib/google-cloud-env.rb
+- lib/google/cloud/env.rb
+- lib/google/cloud/env/compute_metadata.rb
+- lib/google/cloud/env/compute_smbios.rb
+- lib/google/cloud/env/file_system.rb
+- lib/google/cloud/env/lazy_value.rb
+- lib/google/cloud/env/variables.rb
+- lib/google/cloud/env/version.rb
+homepage: https://github.com/googleapis/ruby-cloud-env
+licenses:
+- Apache-2.0
+metadata:
+  changelog_uri: https://rubydoc.info/gems/google-cloud-env/2.2.1/CHANGELOG.md
+  source_code_uri: https://github.com/googleapis/ruby-cloud-env
+  bug_tracker_uri: https://github.com/googleapis/ruby-cloud-env/issues
+  documentation_uri: https://rubydoc.info/gems/google-cloud-env/2.2.1
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key: 
+specification_version: 4
+summary: Google Cloud Platform hosting environment information.
+test_files: []

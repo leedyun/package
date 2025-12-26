@@ -1,6 +1,0 @@
-# coding: utf-8
-
-ru:
-  errors:
-    messages:
-      at_least_one: 'должен иметь, по крайней мере, один элемент.'
