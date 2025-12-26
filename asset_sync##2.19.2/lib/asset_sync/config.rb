@@ -1,0 +1,447 @@
+# frozen_string_literal: true
+
+require "active_model"
+require "erb"
+
+module AssetSync
+  class Config
+    include ActiveModel::Validations
+
+    class Invalid < StandardError; end
+
+    # AssetSync
+    attr_accessor :existing_remote_files # What to do with your existing remote files? (keep or delete)
+    attr_accessor :compression
+    attr_accessor :manifest
+    attr_accessor :fail_silently
+    attr_accessor :log_silently
+    attr_accessor :always_upload
+    attr_accessor :ignored_files
+    attr_accessor :prefix
+    attr_accessor :enabled
+    attr_accessor :custom_headers
+    attr_accessor :run_on_precompile
+    attr_accessor :invalidate
+    attr_accessor :cdn_distribution_id
+    attr_accessor :cache_asset_regexps
+    attr_accessor :include_manifest
+    attr_accessor :concurrent_uploads
+    attr_accessor :concurrent_uploads_max_threads
+    attr_accessor :remote_file_list_cache_file_path
+    attr_accessor :remote_file_list_remote_path
+
+    # FOG configuration
+    attr_accessor :fog_provider          # Currently Supported ['AWS', 'Rackspace']
+    attr_accessor :fog_directory         # e.g. 'the-bucket-name'
+    attr_accessor :fog_region            # e.g. 'eu-west-1'
+    attr_reader   :fog_public            # e.g. true, false, "default"
+    attr_accessor :fog_options           # e.g. { enable_signature_v4_streaming: true }
+
+    # Amazon AWS
+    attr_accessor :aws_access_key_id
+    attr_accessor :aws_secret_access_key
+    attr_accessor :aws_session_token
+    attr_accessor :aws_reduced_redundancy
+    attr_accessor :aws_iam_roles
+    attr_accessor :aws_signature_version
+    attr_accessor :aws_acl
+
+    # Fog
+    attr_accessor :fog_host              # e.g. 's3.amazonaws.com'
+    attr_accessor :fog_port              # e.g. '9000'
+    attr_accessor :fog_path_style        # e.g. true
+    attr_accessor :fog_scheme            # e.g. 'http'
+
+    # Rackspace
+    attr_accessor :rackspace_username, :rackspace_api_key, :rackspace_auth_url
+
+    # Google Storage
+    attr_accessor :google_auth # when using generic auth (like access tokens)
+    attr_accessor :google_storage_secret_access_key, :google_storage_access_key_id  # when using S3 interop
+    attr_accessor :google_json_key_location # when using service accounts
+    attr_accessor :google_json_key_string # when using service accounts
+    attr_accessor :google_project # when using service accounts
+
+    # Azure Blob with Fog::AzureRM
+    attr_accessor :azure_storage_account_name
+    attr_accessor :azure_storage_access_key
+
+    # Backblaze B2 with Fog::Backblaze
+    attr_accessor :b2_key_id
+    attr_accessor :b2_key_token
+    attr_accessor :b2_bucket_id
+
+    validates :existing_remote_files, :inclusion => { :in => %w(keep delete ignore) }
+
+    validates :fog_provider,          :presence => true
+    validates :fog_directory,         :presence => true
+
+    validates :aws_access_key_id,     :presence => true, :if => proc {aws? && !aws_iam?}
+    validates :aws_secret_access_key, :presence => true, :if => proc {aws? && !aws_iam?}
+    validates :rackspace_username,    :presence => true, :if => :rackspace?
+    validates :rackspace_api_key,     :presence => true, :if => :rackspace?
+    validates :google_storage_secret_access_key,  :presence => true, :if => :google_interop?
+    validates :google_storage_access_key_id,      :presence => true, :if => :google_interop?
+    validates :google_project,                    :presence => true, :if => -> (c) { c.google_auth || c.google_service_account? }
+    validate(:if => :google_service_account?) do
+      unless google_json_key_location.present? || google_json_key_string.present?
+        errors.add(:base, 'must provide either google_json_key_location or google_json_key_string if using Google service account')
+      end
+    end
+    validates :concurrent_uploads,    :inclusion => { :in => [true, false] }
+
+    def initialize
+      self.fog_region = nil
+      self.fog_public = true
+      self.existing_remote_files = 'keep'
+      self.compression = nil
+      self.manifest = false
+      self.fail_silently = false
+      self.log_silently = true
+      self.always_upload = []
+      self.ignored_files = []
+      self.custom_headers = {}
+      self.enabled = true
+      self.run_on_precompile = true
+      self.cdn_distribution_id = nil
+      self.invalidate = []
+      self.cache_asset_regexps = []
+      self.include_manifest = false
+      self.concurrent_uploads = false
+      self.concurrent_uploads_max_threads = 10
+      self.remote_file_list_cache_file_path = nil
+      self.remote_file_list_remote_path = nil
+      @additional_local_file_paths_procs = []
+
+      load_yml! if defined?(::Rails) && yml_exists?
+    end
+
+    def manifest_path
+      if defined?(ActionView) && ActionView::Base.respond_to?(:assets_manifest)
+        ::Rails.application.config.assets.manifest
+      else
+        directory =
+        ::Rails.application.config.assets.manifest || default_manifest_directory
+        File.join(directory, "manifest.yml")
+      end
+    end
+
+    def gzip_compression= bool
+      if bool
+        self.compression = 'gz'
+      else
+        self.compression = nil
+      end
+    end
+
+    def existing_remote_files?
+      ['keep', 'ignore'].include?(self.existing_remote_files)
+    end
+
+    def aws?
+      fog_provider =~ /aws/i
+    end
+
+    def aws_rrs?
+      aws_reduced_redundancy == true
+    end
+
+    def aws_iam?
+      aws_iam_roles == true
+    end
+
+    def fail_silently?
+      fail_silently || !enabled?
+    end
+
+    def log_silently?
+      !!self.log_silently
+    end
+
+    def enabled?
+      enabled == true
+    end
+
+    def rackspace?
+      fog_provider =~ /rackspace/i
+    end
+
+    def google?
+      fog_provider =~ /google/i
+    end
+
+    def google_interop?
+      google? && google_auth.nil? && google_json_key_location.nil? && google_json_key_string.nil?
+    end
+
+    def google_service_account?
+      google? && (google_json_key_location || google_json_key_string)
+    end
+
+    def azure_rm?
+      fog_provider =~ /azurerm/i
+    end
+
+    def backblaze?
+      fog_provider =~ /backblaze/i
+    end
+
+    def cache_asset_regexp=(cache_asset_regexp)
+      self.cache_asset_regexps = [cache_asset_regexp]
+    end
+
+    def yml_exists?
+      defined?(::Rails.root) ? File.exist?(self.yml_path) : false
+    end
+
+    def yml
+      @yml ||= ::AssetSync.load_yaml(::ERB.new(IO.read(yml_path)).result)[::Rails.env] || {}
+    end
+
+    def yml_path
+      ::Rails.root.join("config", "asset_sync.yml").to_s
+    end
+
+    def assets_prefix
+      # Fix for Issue #38 when Rails.config.assets.prefix starts with a slash
+      self.prefix || ::Rails.application.config.assets.prefix.sub(/^\//, '')
+    end
+
+    def public_path
+      @public_path || ::Rails.public_path
+    end
+
+    def public_path=(path)
+      # Generate absolute path even when relative path passed in
+      # Required for generating relative sprockets manifest path
+      pathname = Pathname(path)
+      @public_path = if pathname.absolute?
+        pathname
+      elsif defined?(::Rails.root)
+        ::Rails.root.join(pathname)
+      else
+        Pathname(::Dir.pwd).join(pathname)
+      end
+    end
+
+    def load_yml!
+      self.enabled                = yml["enabled"] if yml.has_key?('enabled')
+      self.fog_provider           = yml["fog_provider"]
+      self.fog_host               = yml["fog_host"]
+      self.fog_port               = yml["fog_port"]
+      self.fog_directory          = yml["fog_directory"]
+      self.fog_region             = yml["fog_region"]
+      self.fog_public             = yml["fog_public"] if yml.has_key?("fog_public")
+      self.fog_path_style         = yml["fog_path_style"]
+      self.fog_scheme             = yml["fog_scheme"]
+      self.aws_access_key_id      = yml["aws_access_key_id"]
+      self.aws_secret_access_key  = yml["aws_secret_access_key"]
+      self.aws_session_token      = yml["aws_session_token"] if yml.has_key?("aws_session_token")
+      self.aws_reduced_redundancy = yml["aws_reduced_redundancy"]
+      self.aws_iam_roles          = yml["aws_iam_roles"]
+      self.aws_signature_version  = yml["aws_signature_version"]
+      self.aws_acl                = yml["aws_acl"]
+      self.rackspace_username     = yml["rackspace_username"]
+      self.rackspace_auth_url     = yml["rackspace_auth_url"] if yml.has_key?("rackspace_auth_url")
+      self.rackspace_api_key      = yml["rackspace_api_key"]
+      self.google_json_key_location = yml["google_json_key_location"] if yml.has_key?("google_json_key_location")
+      self.google_project = yml["google_project"] if yml.has_key?("google_project")
+      self.google_storage_secret_access_key = yml["google_storage_secret_access_key"] if yml.has_key?("google_storage_secret_access_key")
+      self.google_storage_access_key_id     = yml["google_storage_access_key_id"] if yml.has_key?("google_storage_access_key_id")
+      self.google_json_key_string           = yml["google_json_key_string"] if yml.has_key?("google_json_key_string")
+      self.existing_remote_files  = yml["existing_remote_files"] if yml.has_key?("existing_remote_files")
+      self.compression            = 'gz' if yml.has_key?("gzip_compression")
+      self.compression            = yml["compression"] if yml.has_key?("compression")
+      self.manifest               = yml["manifest"] if yml.has_key?("manifest")
+      self.fail_silently          = yml["fail_silently"] if yml.has_key?("fail_silently")
+      self.log_silently           = yml["log_silently"] if yml.has_key?("log_silently")
+      self.always_upload          = yml["always_upload"] if yml.has_key?("always_upload")
+      self.ignored_files          = yml["ignored_files"] if yml.has_key?("ignored_files")
+      self.prefix                 = yml["prefix"] if yml.has_key?("prefix")
+      self.custom_headers         = yml["custom_headers"] if yml.has_key?("custom_headers")
+      self.run_on_precompile      = yml["run_on_precompile"] if yml.has_key?("run_on_precompile")
+      self.invalidate             = yml["invalidate"] if yml.has_key?("invalidate")
+      self.cdn_distribution_id    = yml['cdn_distribution_id'] if yml.has_key?("cdn_distribution_id")
+      self.cache_asset_regexps    = yml['cache_asset_regexps'] if yml.has_key?("cache_asset_regexps")
+      self.include_manifest       = yml['include_manifest'] if yml.has_key?("include_manifest")
+      self.concurrent_uploads     = yml['concurrent_uploads'] if yml.has_key?('concurrent_uploads')
+      self.concurrent_uploads_max_threads = yml['concurrent_uploads_max_threads'] if yml.has_key?('concurrent_uploads_max_threads')
+      self.remote_file_list_cache_file_path = yml['remote_file_list_cache_file_path'] if yml.has_key?('remote_file_list_cache_file_path')
+      self.remote_file_list_remote_path = yml['remote_file_list_remote_path'] if yml.has_key?('remote_file_list_remote_path')
+
+      self.azure_storage_account_name = yml['azure_storage_account_name'] if yml.has_key?("azure_storage_account_name")
+      self.azure_storage_access_key   = yml['azure_storage_access_key'] if yml.has_key?("azure_storage_access_key")
+
+      self.b2_key_id      = yml['b2_key_id']    if yml.has_key?("b2_key_id")
+      self.b2_key_token   = yml['b2_key_token'] if yml.has_key?("b2_key_token")
+      self.b2_bucket_id   = yml['b2_bucket_id'] if yml.has_key?("b2_bucket_id")
+
+      # TODO deprecate the other old style config settings. FML.
+      self.aws_access_key_id      = yml["aws_access_key"] if yml.has_key?("aws_access_key")
+      self.aws_secret_access_key  = yml["aws_access_secret"] if yml.has_key?("aws_access_secret")
+      self.fog_directory          = yml["aws_bucket"] if yml.has_key?("aws_bucket")
+      self.fog_region             = yml["aws_region"] if yml.has_key?("aws_region")
+
+      # TODO deprecate old style config settings
+      self.aws_access_key_id      = yml["access_key_id"] if yml.has_key?("access_key_id")
+      self.aws_secret_access_key  = yml["secret_access_key"] if yml.has_key?("secret_access_key")
+      self.fog_directory          = yml["bucket"] if yml.has_key?("bucket")
+      self.fog_region             = yml["region"] if yml.has_key?("region")
+
+      self.public_path            = yml["public_path"] if yml.has_key?("public_path")
+    end
+
+
+    def fog_options
+      options = { :provider => fog_provider }
+      if aws?
+        if aws_iam?
+          options.merge!({
+            :use_iam_profile => true
+          })
+        else
+          options.merge!({
+            :aws_access_key_id => aws_access_key_id,
+            :aws_secret_access_key => aws_secret_access_key
+          })
+          options.merge!({:aws_session_token => aws_session_token}) if aws_session_token
+        end
+        options.merge!({:host => fog_host}) if fog_host
+        options.merge!({:port => fog_port}) if fog_port
+        options.merge!({:scheme => fog_scheme}) if fog_scheme
+        options.merge!({:aws_signature_version => aws_signature_version}) if aws_signature_version
+        options.merge!({:path_style => fog_path_style}) if fog_path_style
+        options.merge!({:region => fog_region}) if fog_region
+      elsif rackspace?
+        options.merge!({
+          :rackspace_username => rackspace_username,
+          :rackspace_api_key => rackspace_api_key
+        })
+        options.merge!({ :rackspace_region => fog_region }) if fog_region
+        options.merge!({ :rackspace_auth_url => rackspace_auth_url }) if rackspace_auth_url
+      elsif google?
+        if google_auth
+          options.merge!({:google_auth => google_auth, :google_project => google_project})
+        elsif google_json_key_location
+          options.merge!({:google_json_key_location => google_json_key_location, :google_project => google_project})
+        elsif google_json_key_string
+          options.merge!({:google_json_key_string => google_json_key_string, :google_project => google_project})
+        else
+          options.merge!({
+            :google_storage_secret_access_key => google_storage_secret_access_key,
+            :google_storage_access_key_id => google_storage_access_key_id
+          })
+        end
+        options.merge!({:region => fog_region}) if fog_region
+      elsif azure_rm?
+        require 'fog/azurerm'
+        options.merge!({
+          :azure_storage_account_name => azure_storage_account_name,
+          :azure_storage_access_key   => azure_storage_access_key,
+        })
+        options.merge!({:environment => fog_region}) if fog_region
+      elsif backblaze?
+        require 'fog/backblaze'
+        options.merge!({
+          :b2_key_id      => b2_key_id,
+          :b2_key_token   => b2_key_token,
+          :b2_bucket_id   => b2_bucket_id,
+        })
+      else
+        raise ArgumentError, "AssetSync Unknown provider: #{fog_provider} only AWS, Rackspace and Google are supported currently."
+      end
+
+      options.merge!(@fog_options) if @fog_options
+      options
+    end
+
+    # @api
+    def add_local_file_paths(&block)
+      @additional_local_file_paths_procs =
+        additional_local_file_paths_procs + [block]
+    end
+
+    # @api private
+    #   This is to be called in Storage
+    #   Not to be called by user
+    def additional_local_file_paths
+      return [] if additional_local_file_paths_procs.empty?
+
+      # Using `Array()` to ensure it works when single value is returned
+      additional_local_file_paths_procs.each_with_object([]) do |proc, paths|
+        paths.concat(Array(proc.call))
+      end
+    end
+
+    #@api
+    def file_ext_to_mime_type_overrides
+      @file_ext_to_mime_type_overrides ||= FileExtToMimeTypeOverrides.new
+    end
+
+    def fog_public=(new_val)
+      @fog_public = FogPublicValue.new(new_val)
+    end
+
+  private
+
+    # This is a proc to get additional local files paths
+    # Since this is a proc it won't be able to be configured by a YAML file
+    attr_reader :additional_local_file_paths_procs
+
+    def default_manifest_directory
+      File.join(::Rails.public_path, assets_prefix)
+    end
+
+
+    # @api private
+    class FileExtToMimeTypeOverrides
+      def initialize
+        # The default is to prevent new mime type `application/ecmascript` to be returned
+        # which disables compression on some CDNs
+        @overrides = {
+          "js" => "application/javascript",
+        }
+      end
+
+      # @api
+      def add(ext, mime_type)
+        # Symbol / Mime type object might be passed in
+        # But we want strings only
+        @overrides.store(
+          ext.to_s, mime_type.to_s,
+        )
+      end
+
+      # @api
+      def clear
+        @overrides = {}
+      end
+
+
+      # @api private
+      def key?(key)
+        @overrides.key?(key)
+      end
+
+      # @api private
+      def fetch(key)
+        @overrides.fetch(key)
+      end
+    end
+
+    # @api private
+    class FogPublicValue
+      def initialize(val)
+        @value = val
+      end
+
+      def use_explicit_value?
+        @value.to_s != "default"
+      end
+
+      def to_bool
+        !!@value
+      end
+    end
+  end
+end

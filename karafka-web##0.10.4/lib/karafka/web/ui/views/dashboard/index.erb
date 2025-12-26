@@ -1,0 +1,132 @@
+<% view_title 'Dashboard' %>
+
+<%
+  # Generates a nice set of semi-random data that does not change more often than once every
+  # 24 hours not to make OSS users angry
+  rand = Random.new(Date.today.to_time.to_i)
+  baseline = Date.today.strftime('%m').to_i + 2
+  set = ->(modifier = 0, range = (-2..2)) do
+    Array.new(60) { |i| [i, baseline + rand.rand(range) + modifier] }
+  end
+%>
+
+<%== partial 'dashboard/counters' %>
+
+<% if @aggregated.sufficient? %>
+  <%== partial 'dashboard/ranges_selector' %>
+
+  <h2 class="h2">Processing Metrics</h2>
+
+  <div class="tab-container-wrapper" id="graphs1">
+    <div class="tab-container inline-tabs">
+      <%== partial 'shared/tab_nav', locals: { title: 'Consumed', id: 'consumed', active: true } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Batches', id: 'batches' } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Lags', id: 'lags', disabled: true } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Max LSO', id: 'max-lso' } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Pace', id: 'pace' } %>
+    </div>
+  </div>
+
+  <div class="col-span-12">
+    <div id="consumed" class="hidden">
+      <% data = @aggregated_charts.with(:messages, :errors) %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'consumed' } %>
+    </div>
+
+    <div id="batches" class="hidden">
+      <% data = @aggregated_charts.with(:batches, :errors, :dead, :retries) %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'batches' } %>
+    </div>
+
+    <div id="lags" class="hidden">
+      <%== partial 'dashboard/feature_pro' %>
+      <% data = { enqueued: set.call, busy: set.call }.to_json %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'lags', blurred: true } %>
+    </div>
+
+    <div id="max-lso" class="hidden">
+      <%== partial 'shared/charts/line', locals: { data: @topics_charts.max_lso, id: 'max-lso' } %>
+    </div>
+
+    <div id="pace" class="hidden">
+      <%== partial 'shared/charts/line', locals: { data: @topics_charts.pace, id: 'pace' } %>
+    </div>
+  </div>
+
+  <h2 class="h2">Utilization Metrics</h2>
+
+  <div class="tab-container-wrapper" id="graphs2">
+    <div class="tab-container inline-tabs">
+      <%== partial 'shared/tab_nav', locals: { title: 'Utilization', id: 'utilization', active: true } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'RSS', id: 'rss', disabled: true } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Concurrency', id: 'concurrency' } %>
+      <%== partial 'shared/tab_nav', locals: { title: 'Data transfers', id: 'data-transfers', disabled: true } %>
+    </div>
+  </div>
+
+  <div class="col-span-12">
+    <div id="utilization" class="hidden">
+      <% data = @aggregated_charts.with(:utilization) %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'utilization', label_type_y: 'percentage' } %>
+    </div>
+
+    <div id="rss" class="hidden">
+      <%== partial 'dashboard/feature_pro' %>
+      <% data = { rss: set.call(1_050), process_rss: set.call(1_000) }.to_json %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'rss', blurred: true } %>
+    </div>
+
+    <div id="concurrency" class="hidden">
+      <% data = @aggregated_charts.with(:processes, :workers, :active_listeners, :standby_listeners) %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'concurrency' } %>
+    </div>
+
+    <div id="data-transfers" class="hidden">
+      <%== partial 'dashboard/feature_pro' %>
+      <% data = { bytes_received: set.call(4, 10..15), bytes_sent: set.call(2, 0..5) }.to_json %>
+      <%== partial 'shared/charts/line', locals: { data: data, id: 'data-transfers', blurred: true } %>
+    </div>
+  </div>
+<% else %>
+  <%== partial 'dashboard/not_enough_data' %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+<% if false && @aggregated.sufficient? %>
+  <%== partial 'dashboard/ranges_selector' %>
+
+        <div class="tab-content">
+          <div class="tab-pane show active" id="utilization" role="tabpanel">
+            <% data = @aggregated_charts.with(:utilization) %>
+            <%== partial 'shared/charts/line', locals: { data: data, id: 'utilization', label_type_y: 'percentage' } %>
+          </div>
+
+          <div class="tab-pane show" id="rss" role="tabpanel">
+            <%== partial 'dashboard/feature_pro' %>
+            <% data = { rss: set.call(1_050), process_rss: set.call(1_000) }.to_json %>
+            <%== partial 'shared/charts/line', locals: { data: data, id: 'rss', blurred: true } %>
+          </div>
+
+          <div class="tab-pane show" id="concurrency" role="tabpanel">
+            <% data = @aggregated_charts.with(:processes, :workers, :active_listeners, :standby_listeners) %>
+            <%== partial 'shared/charts/line', locals: { data: data, id: 'concurrency' } %>
+          </div>
+
+          <div class="tab-pane show" id="data-transfers" role="tabpanel">
+            <%== partial 'dashboard/feature_pro' %>
+            <% data = { bytes_received: set.call(4, 10..15), bytes_sent: set.call(2, 0..5) }.to_json %>
+            <%== partial 'shared/charts/line', locals: { data: data, id: 'data-transfers', blurred: true } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: png_quantizator
+version: !ruby/object:Gem::Version
+  version: 0.2.1
+platform: ruby
+authors:
+- Roger Campos
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-08-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Small wrapper around pngquant
+email:
+- roger@itnig.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/png_quantizator.rb
+- lib/png_quantizator/version.rb
+- png_quantizator.gemspec
+- spec/data/sample.jpg
+- spec/data/sample.png
+- spec/png_quantizator/image_spec.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Small wrapper around pngquant
+test_files:
+- spec/data/sample.jpg
+- spec/data/sample.png
+- spec/png_quantizator/image_spec.rb

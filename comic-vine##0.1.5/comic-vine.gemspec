@@ -1,0 +1,25 @@
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/comic_vine/version', __FILE__)
+
+Gem::Specification.new do |gem|
+  gem.authors       = "Patrick Sharp"
+  gem.email         = "jakanapes@gmail.com"
+  gem.description   = %q{Simple api interface to Comic Vine.  Allows for searches and returning specific information on resources.}
+  gem.summary       = %q{Interface to ComicVine API}
+  gem.homepage      = "https://github.com/Jakanapes/ComicVine"
+
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+gem.name = 'comic-vine'
+  gem.require_paths = ["lib"]
+  gem.version       = ComicVine::VERSION
+  gem.license       = 'MIT'
+  
+  gem.add_dependency 'multi_json'
+  gem.add_development_dependency "rspec", ">= 2.0.0"
+  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "simplecov"
+  gem.add_development_dependency "rake"
+gem.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

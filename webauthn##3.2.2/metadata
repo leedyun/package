@@ -1,0 +1,331 @@
+--- !ruby/object:Gem::Specification
+name: webauthn
+version: !ruby/object:Gem::Version
+  version: 3.2.2
+platform: ruby
+authors:
+- Gonzalo Rodriguez
+- Braulio Martinez
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-11-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: android_key_attestation
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+- !ruby/object:Gem::Dependency
+  name: bindata
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: cbor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.9
+- !ruby/object:Gem::Dependency
+  name: cose
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: openssl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: safety_net_attestation
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+- !ruby/object:Gem::Dependency
+  name: tpm-key_attestation
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.0
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.9.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.9.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+description: |-
+  WebAuthn ruby server library ― Make your application a W3C Web Authentication conformant
+      Relying Party and allow your users to authenticate with U2F and FIDO2 authenticators.
+email:
+- gonzalo@cedarcode.com
+- braulio@cedarcode.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/build.yml"
+- ".github/workflows/git.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- bin/console
+- bin/setup
+- docs/advanced_configuration.md
+- docs/u2f_migration.md
+- lib/cose/rsapkcs1_algorithm.rb
+- lib/webauthn.rb
+- lib/webauthn/attestation_object.rb
+- lib/webauthn/attestation_statement.rb
+- lib/webauthn/attestation_statement/android_key.rb
+- lib/webauthn/attestation_statement/android_safetynet.rb
+- lib/webauthn/attestation_statement/apple.rb
+- lib/webauthn/attestation_statement/base.rb
+- lib/webauthn/attestation_statement/fido_u2f.rb
+- lib/webauthn/attestation_statement/fido_u2f/public_key.rb
+- lib/webauthn/attestation_statement/none.rb
+- lib/webauthn/attestation_statement/packed.rb
+- lib/webauthn/attestation_statement/tpm.rb
+- lib/webauthn/authenticator_assertion_response.rb
+- lib/webauthn/authenticator_attestation_response.rb
+- lib/webauthn/authenticator_data.rb
+- lib/webauthn/authenticator_data/attested_credential_data.rb
+- lib/webauthn/authenticator_response.rb
+- lib/webauthn/client_data.rb
+- lib/webauthn/configuration.rb
+- lib/webauthn/credential.rb
+- lib/webauthn/credential_creation_options.rb
+- lib/webauthn/credential_entity.rb
+- lib/webauthn/credential_options.rb
+- lib/webauthn/credential_request_options.rb
+- lib/webauthn/credential_rp_entity.rb
+- lib/webauthn/credential_user_entity.rb
+- lib/webauthn/encoder.rb
+- lib/webauthn/error.rb
+- lib/webauthn/fake_authenticator.rb
+- lib/webauthn/fake_authenticator/attestation_object.rb
+- lib/webauthn/fake_authenticator/authenticator_data.rb
+- lib/webauthn/fake_client.rb
+- lib/webauthn/json_serializer.rb
+- lib/webauthn/public_key.rb
+- lib/webauthn/public_key_credential.rb
+- lib/webauthn/public_key_credential/creation_options.rb
+- lib/webauthn/public_key_credential/entity.rb
+- lib/webauthn/public_key_credential/options.rb
+- lib/webauthn/public_key_credential/request_options.rb
+- lib/webauthn/public_key_credential/rp_entity.rb
+- lib/webauthn/public_key_credential/user_entity.rb
+- lib/webauthn/public_key_credential_with_assertion.rb
+- lib/webauthn/public_key_credential_with_attestation.rb
+- lib/webauthn/relying_party.rb
+- lib/webauthn/u2f_migrator.rb
+- lib/webauthn/version.rb
+- webauthn.gemspec
+homepage: https://github.com/cedarcode/webauthn-ruby
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cedarcode/webauthn-ruby/issues
+  changelog_uri: https://github.com/cedarcode/webauthn-ruby/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/cedarcode/webauthn-ruby
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: WebAuthn ruby server library
+test_files: []

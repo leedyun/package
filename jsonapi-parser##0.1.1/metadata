@@ -1,0 +1,92 @@
+--- !ruby/object:Gem::Specification
+name: jsonapi-parser
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- Lucas Hosseini
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-12-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: codecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+description: Validate JSONAPI response documents, resource creation/update payloads,
+  and relationship update payloads.
+email: lucas.hosseini@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/jsonapi/parser.rb
+- lib/jsonapi/parser/document.rb
+- lib/jsonapi/parser/exceptions.rb
+- lib/jsonapi/parser/relationship.rb
+- lib/jsonapi/parser/resource.rb
+homepage: https://github.com/jsonapi-rb/jsonapi-parser
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.8
+signing_key: 
+specification_version: 4
+summary: Validate JSON API documents.
+test_files: []

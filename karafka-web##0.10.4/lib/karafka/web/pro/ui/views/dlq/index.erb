@@ -1,0 +1,14 @@
+<% view_title 'Dead Letter Queue Topics' %>
+
+<% if @dlq_topics.empty? %>
+  <%== partial 'dlq/no_topics' %>
+<% else %>
+  <div class="topic-tiles">
+    <%==
+      each_partial(
+        @dlq_topics,
+        'dlq/topic'
+      )
+    %>
+  </div>
+<% end %>

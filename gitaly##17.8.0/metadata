@@ -1,0 +1,110 @@
+--- !ruby/object:Gem::Specification
+name: gitaly
+version: !ruby/object:Gem::Version
+  version: 17.8.0
+platform: ruby
+authors:
+- GitLab Engineering
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: grpc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: |-
+  Auto-generated gRPC client for gitaly.
+  To publish new versions see https://gitlab.com/gitlab-org/gitaly/-/blob/master/doc/PROCESS.md#publishing-the-ruby-gem.
+email:
+- engineering@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ruby/proto/gitaly.rb
+- ruby/proto/gitaly/analysis_pb.rb
+- ruby/proto/gitaly/analysis_services_pb.rb
+- ruby/proto/gitaly/blob_pb.rb
+- ruby/proto/gitaly/blob_services_pb.rb
+- ruby/proto/gitaly/cleanup_pb.rb
+- ruby/proto/gitaly/cleanup_services_pb.rb
+- ruby/proto/gitaly/cluster_pb.rb
+- ruby/proto/gitaly/commit_pb.rb
+- ruby/proto/gitaly/commit_services_pb.rb
+- ruby/proto/gitaly/conflicts_pb.rb
+- ruby/proto/gitaly/conflicts_services_pb.rb
+- ruby/proto/gitaly/diff_pb.rb
+- ruby/proto/gitaly/diff_services_pb.rb
+- ruby/proto/gitaly/errors_pb.rb
+- ruby/proto/gitaly/hook_pb.rb
+- ruby/proto/gitaly/hook_services_pb.rb
+- ruby/proto/gitaly/internal_pb.rb
+- ruby/proto/gitaly/internal_services_pb.rb
+- ruby/proto/gitaly/lint_pb.rb
+- ruby/proto/gitaly/log_pb.rb
+- ruby/proto/gitaly/objectpool_pb.rb
+- ruby/proto/gitaly/objectpool_services_pb.rb
+- ruby/proto/gitaly/operations_pb.rb
+- ruby/proto/gitaly/operations_services_pb.rb
+- ruby/proto/gitaly/packfile_pb.rb
+- ruby/proto/gitaly/partition_pb.rb
+- ruby/proto/gitaly/partition_services_pb.rb
+- ruby/proto/gitaly/praefect_pb.rb
+- ruby/proto/gitaly/praefect_services_pb.rb
+- ruby/proto/gitaly/ref_pb.rb
+- ruby/proto/gitaly/ref_services_pb.rb
+- ruby/proto/gitaly/remote_pb.rb
+- ruby/proto/gitaly/remote_services_pb.rb
+- ruby/proto/gitaly/repository_pb.rb
+- ruby/proto/gitaly/repository_services_pb.rb
+- ruby/proto/gitaly/server_pb.rb
+- ruby/proto/gitaly/server_services_pb.rb
+- ruby/proto/gitaly/service_config_pb.rb
+- ruby/proto/gitaly/shared_pb.rb
+- ruby/proto/gitaly/smarthttp_pb.rb
+- ruby/proto/gitaly/smarthttp_services_pb.rb
+- ruby/proto/gitaly/ssh_pb.rb
+- ruby/proto/gitaly/ssh_services_pb.rb
+- ruby/proto/gitaly/transaction_pb.rb
+- ruby/proto/gitaly/transaction_services_pb.rb
+- ruby/proto/gitaly/version.rb
+homepage: https://gitlab.com/gitlab-org/gitaly
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://gitlab.com/gitlab-org/gitaly
+  bug_tracker_uri: https://gitlab.com/gitlab-org/gitaly/-/issues
+  source_code_uri: https://gitlab.com/gitlab-org/gitaly/-/tree/master/proto
+  documentation_uri: https://gitlab-org.gitlab.io/gitaly
+post_install_message:
+rdoc_options: []
+require_paths:
+- ruby/proto
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Auto-generated gRPC client for gitaly
+test_files: []

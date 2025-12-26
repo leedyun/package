@@ -1,0 +1,80 @@
+---
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  minitest:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql/mysql-server:5.7
+        ports:
+          - "3306:3306"
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: with_advisory_lock_test
+          MYSQL_ROOT_HOST: '%'
+      postgres:
+        image: 'postgres:14-alpine'
+        ports: ['5432:5432']
+        env:
+          POSTGRES_USER: closure_tree
+          POSTGRES_PASSWORD: closure_tree
+          POSTGRES_DB: with_advisory_lock_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - '3.2'  
+          - '3.1'
+          - '3.0'
+          - '2.7'
+          - 'truffleruby'
+        rails:
+          - activerecord_7.1
+          - activerecord_7.0
+          - activerecord_6.1
+        adapter:
+          - sqlite3:///tmp/test.sqlite3
+          - mysql2://root:root@0/with_advisory_lock_test
+          - trilogy://root:root@0/with_advisory_lock_test
+          - postgres://closure_tree:closure_tree@0/with_advisory_lock_test
+        include:
+          - ruby: jruby
+            rails: activerecord_6.1
+            adapter: jdbcmysql://root:root@0/with_advisory_lock_test
+          - ruby: jruby
+            rails: activerecord_6.1
+            adapter: jdbcsqlite3:///tmp/test.sqlite3
+          - ruby: jruby
+            rails: activerecord_6.1
+            adapter: jdbcpostgresql://closure_tree:closure_tree@0/with_advisory_lock_test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+          rubygems: latest
+        env:
+          BUNDLE_GEMFILE:  gemfiles/${{ matrix.rails }}.gemfile
+
+      - name: Test
+        env:
+          BUNDLE_GEMFILE: gemfiles/${{ matrix.rails }}.gemfile
+          DATABASE_URL: ${{ matrix.adapter }}
+          WITH_ADVISORY_LOCK_PREFIX: ${{ github.run_id }}
+        run: bundle exec rake

@@ -1,0 +1,78 @@
+--- !ruby/object:Gem::Specification
+name: origin
+version: !ruby/object:Gem::Version
+  version: 2.3.1
+platform: ruby
+authors:
+- Durran Jordan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-05-24 00:00:00.000000000 Z
+dependencies: []
+description: Origin is a simple DSL for generating MongoDB selectors and options
+email:
+- durran@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- lib/origin.rb
+- lib/origin/aggregable.rb
+- lib/origin/extensions.rb
+- lib/origin/extensions/array.rb
+- lib/origin/extensions/big_decimal.rb
+- lib/origin/extensions/boolean.rb
+- lib/origin/extensions/date.rb
+- lib/origin/extensions/date_time.rb
+- lib/origin/extensions/hash.rb
+- lib/origin/extensions/nil_class.rb
+- lib/origin/extensions/numeric.rb
+- lib/origin/extensions/object.rb
+- lib/origin/extensions/range.rb
+- lib/origin/extensions/regexp.rb
+- lib/origin/extensions/set.rb
+- lib/origin/extensions/string.rb
+- lib/origin/extensions/symbol.rb
+- lib/origin/extensions/time.rb
+- lib/origin/extensions/time_with_zone.rb
+- lib/origin/forwardable.rb
+- lib/origin/key.rb
+- lib/origin/macroable.rb
+- lib/origin/mergeable.rb
+- lib/origin/optional.rb
+- lib/origin/options.rb
+- lib/origin/pipeline.rb
+- lib/origin/queryable.rb
+- lib/origin/selectable.rb
+- lib/origin/selector.rb
+- lib/origin/smash.rb
+- lib/origin/version.rb
+homepage: http://mongoid.org
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubyforge_project: origin
+rubygems_version: 2.4.5.1
+signing_key: 
+specification_version: 4
+summary: Simple DSL for MongoDB query generation
+test_files: []

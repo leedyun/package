@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'audiobank-client'
+
+Audiobank::Client::CLI.new(ARGV).run

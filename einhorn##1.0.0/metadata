@@ -1,0 +1,138 @@
+--- !ruby/object:Gem::Specification
+name: einhorn
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Stripe
+- Mike Perham
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-07-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: subprocess
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+description: Einhorn makes it easy to run multiple instances of an application server,
+  all listening on the same port. You can also seamlessly restart your workers without
+  dropping any requests. Einhorn requires minimal application-level support, making
+  it easy to use with an existing project.
+email:
+- support+github@stripe.com
+- mperham@gmail.com
+executables:
+- einhorn
+- einhornsh
+extensions: []
+extra_rdoc_files: []
+files:
+- Changes.md
+- LICENSE.txt
+- README.md
+- bin/einhorn
+- bin/einhornsh
+- einhorn.gemspec
+- example/pool_worker.rb
+- example/thin_example
+- example/time_server
+- lib/einhorn.rb
+- lib/einhorn/client.rb
+- lib/einhorn/command.rb
+- lib/einhorn/command/interface.rb
+- lib/einhorn/compat.rb
+- lib/einhorn/event.rb
+- lib/einhorn/event/abstract_text_descriptor.rb
+- lib/einhorn/event/ack_timer.rb
+- lib/einhorn/event/command_server.rb
+- lib/einhorn/event/connection.rb
+- lib/einhorn/event/loop_breaker.rb
+- lib/einhorn/event/persistent.rb
+- lib/einhorn/event/timer.rb
+- lib/einhorn/prctl.rb
+- lib/einhorn/prctl_linux.rb
+- lib/einhorn/safe_yaml.rb
+- lib/einhorn/third.rb
+- lib/einhorn/version.rb
+- lib/einhorn/worker.rb
+- lib/einhorn/worker_pool.rb
+homepage: https://github.com/contribsys/einhorn
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/contribsys/einhorn/issues
+  documentation_uri: https://github.com/contribsys/einhorn/wiki
+  changelog_uri: https://github.com/contribsys/einhorn/blob/main/Changes.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: 'Einhorn: the language-independent shared socket manager'
+test_files: []

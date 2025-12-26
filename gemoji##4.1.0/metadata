@@ -1,0 +1,48 @@
+--- !ruby/object:Gem::Specification
+name: gemoji
+version: !ruby/object:Gem::Version
+  version: 4.1.0
+platform: ruby
+authors:
+- GitHub
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-03-29 00:00:00.000000000 Z
+dependencies: []
+description: Character information and metadata for Unicode emoji.
+email: support@github.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- db/emoji.json
+- lib/emoji.rb
+- lib/emoji/character.rb
+- lib/gemoji.rb
+homepage: https://github.com/github/gemoji
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">"
+    - !ruby/object:Gem::Version
+      version: '1.9'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Unicode emoji library
+test_files: []

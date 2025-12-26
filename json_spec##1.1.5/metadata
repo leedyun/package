@@ -1,0 +1,180 @@
+--- !ruby/object:Gem::Specification
+name: json_spec
+version: !ruby/object:Gem::Version
+  version: 1.1.5
+platform: ruby
+authors:
+- Steve Richert
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-05-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: RSpec matchers and Cucumber steps for testing JSON content
+email:
+- steve.richert@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- features/equivalence.feature
+- features/files.feature
+- features/inclusion.feature
+- features/memory.feature
+- features/paths.feature
+- features/sizes.feature
+- features/step_definitions/steps.rb
+- features/support/env.rb
+- features/types.feature
+- gemfiles/rspec2.gemfile
+- gemfiles/rspec3.gemfile
+- json_spec.gemspec
+- lib/json_spec.rb
+- lib/json_spec/configuration.rb
+- lib/json_spec/cucumber.rb
+- lib/json_spec/errors.rb
+- lib/json_spec/exclusion.rb
+- lib/json_spec/helpers.rb
+- lib/json_spec/matchers.rb
+- lib/json_spec/matchers/be_json_eql.rb
+- lib/json_spec/matchers/have_json_path.rb
+- lib/json_spec/matchers/have_json_size.rb
+- lib/json_spec/matchers/have_json_type.rb
+- lib/json_spec/matchers/include_json.rb
+- lib/json_spec/memory.rb
+- lib/json_spec/messages.rb
+- spec/json_spec/configuration_spec.rb
+- spec/json_spec/helpers_spec.rb
+- spec/json_spec/matchers/be_json_eql_spec.rb
+- spec/json_spec/matchers/have_json_path_spec.rb
+- spec/json_spec/matchers/have_json_size_spec.rb
+- spec/json_spec/matchers/have_json_type_spec.rb
+- spec/json_spec/matchers/include_json_spec.rb
+- spec/json_spec/matchers_spec.rb
+- spec/json_spec/memory_spec.rb
+- spec/spec_helper.rb
+- spec/support/files/one.json
+- spec/support/files/project/one.json
+- spec/support/files/project/two.json
+- spec/support/files/project/version/one.json
+- spec/support/files/project/version/two.json
+- spec/support/files/two.json
+homepage: https://github.com/collectiveidea/json_spec
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.11
+signing_key: 
+specification_version: 4
+summary: Easily handle JSON in RSpec and Cucumber
+test_files:
+- features/equivalence.feature
+- features/files.feature
+- features/inclusion.feature
+- features/memory.feature
+- features/paths.feature
+- features/sizes.feature
+- features/step_definitions/steps.rb
+- features/support/env.rb
+- features/types.feature
+- spec/json_spec/configuration_spec.rb
+- spec/json_spec/helpers_spec.rb
+- spec/json_spec/matchers/be_json_eql_spec.rb
+- spec/json_spec/matchers/have_json_path_spec.rb
+- spec/json_spec/matchers/have_json_size_spec.rb
+- spec/json_spec/matchers/have_json_type_spec.rb
+- spec/json_spec/matchers/include_json_spec.rb
+- spec/json_spec/matchers_spec.rb
+- spec/json_spec/memory_spec.rb
+- spec/spec_helper.rb
+- spec/support/files/one.json
+- spec/support/files/project/one.json
+- spec/support/files/project/two.json
+- spec/support/files/project/version/one.json
+- spec/support/files/project/version/two.json
+- spec/support/files/two.json

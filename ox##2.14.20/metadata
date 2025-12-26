@@ -1,0 +1,128 @@
+--- !ruby/object:Gem::Specification
+name: ox
+version: !ruby/object:Gem::Version
+  version: 2.14.20
+platform: ruby
+authors:
+- Peter Ohler
+bindir: bin
+cert_chain: []
+date: 2025-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: "A fast XML parser and object serializer that uses only standard C lib.\n\nOptimized
+  XML (Ox), as the name implies was written to provide speed optimized\nXML handling.
+  It was designed to be an alternative to Nokogiri and other Ruby\nXML parsers for
+  generic XML parsing and as an alternative to Marshal for Object\nserialization. "
+email: peter@ohler.com
+executables: []
+extensions:
+- ext/ox/extconf.rb
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- ext/ox/attr.h
+- ext/ox/base64.c
+- ext/ox/base64.h
+- ext/ox/buf.h
+- ext/ox/builder.c
+- ext/ox/cache.c
+- ext/ox/cache.h
+- ext/ox/cache8.c
+- ext/ox/cache8.h
+- ext/ox/dump.c
+- ext/ox/err.c
+- ext/ox/err.h
+- ext/ox/extconf.rb
+- ext/ox/gen_load.c
+- ext/ox/hash_load.c
+- ext/ox/helper.h
+- ext/ox/intern.c
+- ext/ox/intern.h
+- ext/ox/obj_load.c
+- ext/ox/ox.c
+- ext/ox/ox.h
+- ext/ox/parse.c
+- ext/ox/sax.c
+- ext/ox/sax.h
+- ext/ox/sax_as.c
+- ext/ox/sax_buf.c
+- ext/ox/sax_buf.h
+- ext/ox/sax_hint.c
+- ext/ox/sax_hint.h
+- ext/ox/sax_stack.h
+- ext/ox/slotcache.c
+- ext/ox/slotcache.h
+- ext/ox/special.c
+- ext/ox/special.h
+- ext/ox/type.h
+- lib/ox.rb
+- lib/ox/bag.rb
+- lib/ox/cdata.rb
+- lib/ox/comment.rb
+- lib/ox/doctype.rb
+- lib/ox/document.rb
+- lib/ox/element.rb
+- lib/ox/error.rb
+- lib/ox/hasattrs.rb
+- lib/ox/instruct.rb
+- lib/ox/node.rb
+- lib/ox/raw.rb
+- lib/ox/sax.rb
+- lib/ox/version.rb
+- lib/ox/xmlrpc_adapter.rb
+homepage: http://www.ohler.com/ox
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/ohler55/ox/issues
+  changelog_uri: https://github.com/ohler55/ox/blob/master/CHANGELOG.md
+  documentation_uri: http://www.ohler.com/ox/doc/index.html
+  homepage_uri: http://www.ohler.com/ox/
+  source_code_uri: https://github.com/ohler55/ox
+  rubygems_mfa_required: 'true'
+rdoc_options:
+- "--main"
+- README.md
+- "--title"
+- Ox
+- "--exclude"
+- extconf.rb
+- lib
+- ext/ox
+- README.md
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: A fast XML parser and object serializer.
+test_files: []

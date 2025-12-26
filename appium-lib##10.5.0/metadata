@@ -1,0 +1,310 @@
+--- !ruby/object:Gem::Specification
+name: appium-lib
+version: !ruby/object:Gem::Version
+  version: 10.5.0
+platform: ruby
+authors:
+- code@bootstraponline.com
+- Kazuaki Matsuo
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-11-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: appium_lib_core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+- !ruby/object:Gem::Dependency
+  name: tomlrb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: appium_thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+- !ruby/object:Gem::Dependency
+  name: hashdiff
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.7
+- !ruby/object:Gem::Dependency
+  name: posix-spawn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.61.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.61.0
+- !ruby/object:Gem::Dependency
+  name: spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.3.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.3.4
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+description: Ruby library for Appium.
+email:
+- code@bootstraponline.com
+- fly.49.89.over@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE-2.0.txt
+- Rakefile
+- Thorfile
+- appium-lib.gemspec
+- contributing.md
+- docs/android_docs.md
+- docs/android_uiautomator.md
+- docs/docs.md
+- docs/index_paths.md
+- docs/ios_docs.md
+- docs/ios_xcuitest.md
+- docs/migration.md
+- docs/parallel.md
+- docs/travis.sample.yml
+- docs/w3c.md
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/appium_lib.rb
+- lib/appium_lib/android/android.rb
+- lib/appium_lib/android/common/command/command.rb
+- lib/appium_lib/android/common/helper.rb
+- lib/appium_lib/android/element/alert.rb
+- lib/appium_lib/android/element/button.rb
+- lib/appium_lib/android/element/generic.rb
+- lib/appium_lib/android/element/text.rb
+- lib/appium_lib/android/element/textfield.rb
+- lib/appium_lib/android/espresso.rb
+- lib/appium_lib/android/espresso/bridge.rb
+- lib/appium_lib/android/espresso/element.rb
+- lib/appium_lib/android/espresso/element/button.rb
+- lib/appium_lib/android/espresso/element/generic.rb
+- lib/appium_lib/android/espresso/helper.rb
+- lib/appium_lib/android/uiautomator2.rb
+- lib/appium_lib/android/uiautomator2/bridge.rb
+- lib/appium_lib/android/uiautomator2/element.rb
+- lib/appium_lib/android/uiautomator2/element/button.rb
+- lib/appium_lib/android/uiautomator2/helper.rb
+- lib/appium_lib/appium.rb
+- lib/appium_lib/common/command.rb
+- lib/appium_lib/common/command/ws_logcat.rb
+- lib/appium_lib/common/device.rb
+- lib/appium_lib/common/helper.rb
+- lib/appium_lib/common/http_client.rb
+- lib/appium_lib/common/log.rb
+- lib/appium_lib/common/multi_touch.rb
+- lib/appium_lib/common/touch_actions.rb
+- lib/appium_lib/common/wait.rb
+- lib/appium_lib/driver.rb
+- lib/appium_lib/ios/common/errors.rb
+- lib/appium_lib/ios/common/helper.rb
+- lib/appium_lib/ios/element/alert.rb
+- lib/appium_lib/ios/element/button.rb
+- lib/appium_lib/ios/element/generic.rb
+- lib/appium_lib/ios/element/text.rb
+- lib/appium_lib/ios/element/textfield.rb
+- lib/appium_lib/ios/ios.rb
+- lib/appium_lib/ios/xcuitest.rb
+- lib/appium_lib/ios/xcuitest/bridge.rb
+- lib/appium_lib/ios/xcuitest/command.rb
+- lib/appium_lib/ios/xcuitest/command/certificate.rb
+- lib/appium_lib/ios/xcuitest/command/gestures.rb
+- lib/appium_lib/ios/xcuitest/command/get_context.rb
+- lib/appium_lib/ios/xcuitest/command/multi_app_handler.rb
+- lib/appium_lib/ios/xcuitest/command/pasteboard.rb
+- lib/appium_lib/ios/xcuitest/command/source.rb
+- lib/appium_lib/ios/xcuitest/element.rb
+- lib/appium_lib/ios/xcuitest/element/button.rb
+- lib/appium_lib/ios/xcuitest/element/generic.rb
+- lib/appium_lib/ios/xcuitest/element/text.rb
+- lib/appium_lib/ios/xcuitest/element/textfield.rb
+- lib/appium_lib/ios/xcuitest/helper.rb
+- lib/appium_lib/sauce_labs.rb
+- lib/appium_lib/version.rb
+- readme.md
+- release_notes.md
+homepage: https://github.com/appium/ruby_lib
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby library for Appium
+test_files: []

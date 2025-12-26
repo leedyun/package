@@ -1,0 +1,169 @@
+--- !ruby/object:Gem::Specification
+name: html2haml
+version: !ruby/object:Gem::Version
+  version: 2.3.0
+platform: ruby
+authors:
+- Akira Matsuda
+- Stefan Natchev
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-10-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+- !ruby/object:Gem::Dependency
+  name: erubis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+- !ruby/object:Gem::Dependency
+  name: ruby_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.4.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Converts HTML into Haml
+email:
+- ronnie@dio.jp
+- stefan.natchev@gmail.com
+executables:
+- html2haml
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".yardopts"
+- Changelog.markdown
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- bin/html2haml
+- html2haml.gemspec
+- lib/html2haml.rb
+- lib/html2haml/exec.rb
+- lib/html2haml/html.rb
+- lib/html2haml/html/erb.rb
+- lib/html2haml/version.rb
+- test/erb_test.rb
+- test/html2haml_test.rb
+- test/jruby/erb_test.rb
+- test/jruby/html2haml_test.rb
+- test/test_helper.rb
+homepage: http://haml.info
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.0.dev
+signing_key:
+specification_version: 4
+summary: Converts HTML into Haml
+test_files:
+- test/erb_test.rb
+- test/html2haml_test.rb
+- test/jruby/erb_test.rb
+- test/jruby/html2haml_test.rb
+- test/test_helper.rb

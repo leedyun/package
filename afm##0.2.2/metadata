@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: afm
+version: !ruby/object:Gem::Version
+  version: 0.2.2
+platform: ruby
+authors:
+- Jan Krutisch
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-06-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.3'
+description: a simple library to read afm files and use the data conveniently
+email: jan@krutisch.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- CHANGELOG.md
+- LICENSE
+- README.rdoc
+- Rakefile
+- VERSION
+- lib/afm.rb
+- test/fixtures/Vera.afm
+- test/helper.rb
+- test/test_afm.rb
+homepage: http://github.com/halfbyte/afm
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: reading Adobe Font Metrics (afm) files
+test_files: []

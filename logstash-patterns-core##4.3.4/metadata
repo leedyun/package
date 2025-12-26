@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification
+name: logstash-patterns-core
+version: !ruby/object:Gem::Version
+  version: 4.3.4
+platform: ruby
+authors:
+- Elastic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-06-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-filter-grok
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- LICENSE
+- NOTICE.TXT
+- README.md
+- lib/logstash/patterns/core.rb
+- logstash-patterns-core.gemspec
+- patterns/ecs-v1/aws
+- patterns/ecs-v1/bacula
+- patterns/ecs-v1/bind
+- patterns/ecs-v1/bro
+- patterns/ecs-v1/exim
+- patterns/ecs-v1/firewalls
+- patterns/ecs-v1/grok-patterns
+- patterns/ecs-v1/haproxy
+- patterns/ecs-v1/httpd
+- patterns/ecs-v1/java
+- patterns/ecs-v1/junos
+- patterns/ecs-v1/linux-syslog
+- patterns/ecs-v1/maven
+- patterns/ecs-v1/mcollective
+- patterns/ecs-v1/mongodb
+- patterns/ecs-v1/nagios
+- patterns/ecs-v1/postgresql
+- patterns/ecs-v1/rails
+- patterns/ecs-v1/redis
+- patterns/ecs-v1/ruby
+- patterns/ecs-v1/squid
+- patterns/ecs-v1/zeek
+- patterns/legacy/aws
+- patterns/legacy/bacula
+- patterns/legacy/bind
+- patterns/legacy/bro
+- patterns/legacy/exim
+- patterns/legacy/firewalls
+- patterns/legacy/grok-patterns
+- patterns/legacy/haproxy
+- patterns/legacy/httpd
+- patterns/legacy/java
+- patterns/legacy/junos
+- patterns/legacy/linux-syslog
+- patterns/legacy/maven
+- patterns/legacy/mcollective
+- patterns/legacy/mcollective-patterns
+- patterns/legacy/mongodb
+- patterns/legacy/nagios
+- patterns/legacy/postgresql
+- patterns/legacy/rails
+- patterns/legacy/redis
+- patterns/legacy/ruby
+- patterns/legacy/squid
+- spec/patterns/aws_spec.rb
+- spec/patterns/bacula_spec.rb
+- spec/patterns/bind_spec.rb
+- spec/patterns/bro_spec.rb
+- spec/patterns/core_spec.rb
+- spec/patterns/exim_spec.rb
+- spec/patterns/firewalls_spec.rb
+- spec/patterns/haproxy_spec.rb
+- spec/patterns/httpd_spec.rb
+- spec/patterns/java_spec.rb
+- spec/patterns/junos_spec.rb
+- spec/patterns/maven_spec.rb
+- spec/patterns/mcollective_spec.rb
+- spec/patterns/mongodb_spec.rb
+- spec/patterns/nagios_spec.rb
+- spec/patterns/netscreen_spec.rb
+- spec/patterns/rails3_spec.rb
+- spec/patterns/redis_spec.rb
+- spec/patterns/shorewall_spec.rb
+- spec/patterns/squid_spec.rb
+- spec/patterns/syslog_spec.rb
+- spec/spec_helper.rb
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Patterns to be used in logstash
+test_files:
+- spec/patterns/aws_spec.rb
+- spec/patterns/bacula_spec.rb
+- spec/patterns/bind_spec.rb
+- spec/patterns/bro_spec.rb
+- spec/patterns/core_spec.rb
+- spec/patterns/exim_spec.rb
+- spec/patterns/firewalls_spec.rb
+- spec/patterns/haproxy_spec.rb
+- spec/patterns/httpd_spec.rb
+- spec/patterns/java_spec.rb
+- spec/patterns/junos_spec.rb
+- spec/patterns/maven_spec.rb
+- spec/patterns/mcollective_spec.rb
+- spec/patterns/mongodb_spec.rb
+- spec/patterns/nagios_spec.rb
+- spec/patterns/netscreen_spec.rb
+- spec/patterns/rails3_spec.rb
+- spec/patterns/redis_spec.rb
+- spec/patterns/shorewall_spec.rb
+- spec/patterns/squid_spec.rb
+- spec/patterns/syslog_spec.rb
+- spec/spec_helper.rb

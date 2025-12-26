@@ -1,0 +1,163 @@
+--- !ruby/object:Gem::Specification
+name: rmagick
+version: !ruby/object:Gem::Version
+  version: 6.1.0
+platform: ruby
+authors:
+- Tim Hunter
+- Omer Bar-or
+- Benjamin Thomas
+- Moncef Maiza
+bindir: bin
+cert_chain: []
+date: 2025-01-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: observer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: pkg-config
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+description: RMagick is an interface between Ruby and ImageMagick.
+email: github@benjaminfleischer.com
+executables: []
+extensions:
+- ext/RMagick/extconf.rb
+extra_rdoc_files: []
+files:
+- ".devcontainer/Dockerfile"
+- ".devcontainer/ImageMagick6/devcontainer.json"
+- ".devcontainer/devcontainer.json"
+- ".devcontainer/setup-repo.sh"
+- ".devcontainer/setup-user.sh"
+- ".editorconfig"
+- ".github/ISSUE_TEMPLATE.md"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- before_install_linux.sh
+- before_install_osx.sh
+- ext/RMagick/extconf.rb
+- ext/RMagick/rmagick.cpp
+- ext/RMagick/rmagick.h
+- ext/RMagick/rmagick_gvl.h
+- ext/RMagick/rmdraw.cpp
+- ext/RMagick/rmenum.cpp
+- ext/RMagick/rmfill.cpp
+- ext/RMagick/rmilist.cpp
+- ext/RMagick/rmimage.cpp
+- ext/RMagick/rminfo.cpp
+- ext/RMagick/rmkinfo.cpp
+- ext/RMagick/rmmain.cpp
+- ext/RMagick/rmmontage.cpp
+- ext/RMagick/rmpixel.cpp
+- ext/RMagick/rmstruct.cpp
+- ext/RMagick/rmutil.cpp
+- lib/rmagick.rb
+- lib/rmagick/version.rb
+- lib/rmagick_internal.rb
+- lib/rvg/clippath.rb
+- lib/rvg/container.rb
+- lib/rvg/deep_equal.rb
+- lib/rvg/describable.rb
+- lib/rvg/embellishable.rb
+- lib/rvg/misc.rb
+- lib/rvg/paint.rb
+- lib/rvg/pathdata.rb
+- lib/rvg/rvg.rb
+- lib/rvg/stretchable.rb
+- lib/rvg/stylable.rb
+- lib/rvg/text.rb
+- lib/rvg/transformable.rb
+- lib/rvg/units.rb
+- rmagick.gemspec
+- sig/rmagick.rbs
+- sig/rmagick/_draw_common_methods.rbs
+- sig/rmagick/_image_common_methods.rbs
+- sig/rmagick/draw.rbs
+- sig/rmagick/draw_attribute.rbs
+- sig/rmagick/enum.rbs
+- sig/rmagick/error.rbs
+- sig/rmagick/fill.rbs
+- sig/rmagick/geometry.rbs
+- sig/rmagick/image.rbs
+- sig/rmagick/image_list.rbs
+- sig/rmagick/iptc.rbs
+- sig/rmagick/kernel_info.rbs
+- sig/rmagick/optional_method_arguments.rbs
+- sig/rmagick/pixel.rbs
+- sig/rmagick/struct.rbs
+- sig/rvg/clippath.rbs
+- sig/rvg/container.rbs
+- sig/rvg/deep_equal.rbs
+- sig/rvg/describable.rbs
+- sig/rvg/embellishable.rbs
+- sig/rvg/misc.rbs
+- sig/rvg/paint.rbs
+- sig/rvg/pathdata.rbs
+- sig/rvg/rvg.rbs
+- sig/rvg/stretchable.rbs
+- sig/rvg/stylable.rbs
+- sig/rvg/text.rbs
+- sig/rvg/transformable.rbs
+- sig/rvg/units.rbs
+homepage: https://github.com/rmagick/rmagick
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/rmagick/rmagick/issues
+  documentation_uri: https://rmagick.github.io/
+  changelog_uri: https://github.com/rmagick/rmagick/blob/main/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements:
+- ImageMagick 6.8.9 or later
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Ruby binding to ImageMagick
+test_files: []

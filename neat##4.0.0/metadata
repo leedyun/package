@@ -1,0 +1,223 @@
+--- !ruby/object:Gem::Specification
+name: neat
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Joel Oliveira
+- Joshua Ogle
+- Kyle Fiedler
+- Reda Lemeden
+- Tyson Gach
+- Ward Penney
+- Will McMahan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: css_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: scss_lint
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.44'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.44'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.19'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.19'
+description: 
+email: design+neat@thoughtbot.com
+executables:
+- neat
+extensions: []
+extra_rdoc_files: []
+files:
+- ".circleci/config.yml"
+- ".github/ISSUE_TEMPLATE.md"
+- ".github/PULL_REQUEST_TEMPLATE.md"
+- ".gitignore"
+- ".hound.yml"
+- ".npmignore"
+- ".scss-lint.yml"
+- ".tool-versions"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- Gulpfile.js
+- LICENSE.md
+- README.md
+- RELEASING.md
+- Rakefile
+- bin/neat
+- contrib/base/_variables.scss
+- contrib/index.html
+- contrib/patterns/_box.scss
+- contrib/patterns/_global.scss
+- contrib/patterns/_grid-collapse.scss
+- contrib/patterns/_grid-media.scss
+- contrib/patterns/_grid-nested.scss
+- contrib/patterns/_grid-push.scss
+- contrib/patterns/_grid-shift.scss
+- contrib/patterns/_grid-visual.scss
+- contrib/patterns/_grid.scss
+- contrib/styles.scss
+- core/_neat.scss
+- core/neat/functions/_neat-append-grid-visual.scss
+- core/neat/functions/_neat-column-default.scss
+- core/neat/functions/_neat-column-ratio.scss
+- core/neat/functions/_neat-column-width.scss
+- core/neat/functions/_neat-float-direction.scss
+- core/neat/functions/_neat-merge-defaults.scss
+- core/neat/functions/_neat-opposite-direction.scss
+- core/neat/functions/_neat-parse-columns.scss
+- core/neat/functions/_neat-parse-media.scss
+- core/neat/functions/_retrieve-neat-settings.scss
+- core/neat/mixins/_grid-collapse.scss
+- core/neat/mixins/_grid-column.scss
+- core/neat/mixins/_grid-container.scss
+- core/neat/mixins/_grid-media.scss
+- core/neat/mixins/_grid-push.scss
+- core/neat/mixins/_grid-shift.scss
+- core/neat/mixins/_grid-visual.scss
+- core/neat/settings/_settings.scss
+- eyeglass-exports.js
+- index.js
+- lib/neat.rb
+- lib/neat/generator.rb
+- lib/neat/version.rb
+- neat.gemspec
+- package-lock.json
+- package.json
+- spec/.keep
+- spec/fixtures/_setup.scss
+- spec/fixtures/functions/neat-column-default.scss
+- spec/fixtures/functions/neat-column-width.scss
+- spec/fixtures/functions/neat-float-direction.scss
+- spec/fixtures/functions/neat-opposite-direction.scss
+- spec/fixtures/functions/neat-parse-media.scss
+- spec/fixtures/functions/retrieve-neat-settings.scss
+- spec/fixtures/mixins/grid-collapse.scss
+- spec/fixtures/mixins/grid-column.scss
+- spec/fixtures/mixins/grid-container.scss
+- spec/fixtures/mixins/grid-media.scss
+- spec/fixtures/mixins/grid-push.scss
+- spec/fixtures/mixins/grid-shift.scss
+- spec/neat/functions/neat_column_default_spec.rb
+- spec/neat/functions/neat_column_width_spec.rb
+- spec/neat/functions/neat_float_direction_spec.rb
+- spec/neat/functions/neat_opposite_direction_spec.rb
+- spec/neat/functions/neat_parse_media_spec.rb
+- spec/neat/functions/retrieve_neat_settings_spec.rb
+- spec/neat/mixins/grid_collapse_spec.rb
+- spec/neat/mixins/grid_column_spec.rb
+- spec/neat/mixins/grid_container_spec.rb
+- spec/neat/mixins/grid_media_spec.rb
+- spec/neat/mixins/grid_push_spec.rb
+- spec/neat/mixins/grid_shift_spec.rb
+- spec/spec_helper.rb
+- spec/support/matchers/be_contained_in.rb
+- spec/support/matchers/have_rule.rb
+- spec/support/matchers/have_ruleset.rb
+- spec/support/matchers/have_value.rb
+- spec/support/parser_support.rb
+- spec/support/sass_support.rb
+homepage: http://neat.bourbon.io
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A lightweight Sass grid framework
+test_files: []

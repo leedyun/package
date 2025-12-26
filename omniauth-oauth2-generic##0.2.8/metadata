@@ -1,0 +1,91 @@
+--- !ruby/object:Gem::Specification
+name: omniauth-oauth2-generic
+version: !ruby/object:Gem::Version
+  version: 0.2.8
+platform: ruby
+authors:
+- Satorix
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-09-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: omniauth-oauth2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Generic, Configurable OmniAuth Strategy for OAuth2 providers
+email:
+- satorix@iexposure.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".rspec"
+- ".rubocop.yml"
+- ".ruby-version"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.md
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/omniauth-oauth2-generic.rb
+- lib/omniauth-oauth2-generic/version.rb
+- lib/omniauth/strategies/oauth2_generic.rb
+- omniauth-oauth2-generic.gemspec
+- satorix/CI/deploy/rubygems.rb
+- satorix/CI/test/custom_bundler_audit.rb
+- satorix/custom.rb
+homepage: https://gitlab.com/satorix/omniauth-oauth2-generic
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.9'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Generic, Configurable OmniAuth Strategy for OAuth2 providers
+test_files: []

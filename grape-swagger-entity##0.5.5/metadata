@@ -1,0 +1,94 @@
+--- !ruby/object:Gem::Specification
+name: grape-swagger-entity
+version: !ruby/object:Gem::Version
+  version: 0.5.5
+platform: ruby
+authors:
+- Kirill Zaitsev
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-09-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: grape-entity
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: grape-swagger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+description:
+email:
+- kirik910@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/danger.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- Dangerfile
+- Gemfile
+- LICENSE.txt
+- README.md
+- RELEASING.md
+- Rakefile
+- bin/pry
+- bin/setup
+- grape-swagger-entity.gemspec
+- lib/grape-swagger-entity.rb
+- lib/grape-swagger/entity.rb
+- lib/grape-swagger/entity/attribute_parser.rb
+- lib/grape-swagger/entity/helper.rb
+- lib/grape-swagger/entity/parser.rb
+- lib/grape-swagger/entity/version.rb
+homepage: https://github.com/ruby-grape/grape-swagger-entity
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Grape swagger adapter to support grape-entity object parsing
+test_files: []

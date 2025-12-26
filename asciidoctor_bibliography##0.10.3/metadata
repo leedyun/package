@@ -1,0 +1,337 @@
+--- !ruby/object:Gem::Specification
+name: asciidoctor_bibliography
+version: !ruby/object:Gem::Version
+  version: 0.10.3
+platform: ruby
+authors:
+- Ribose Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: asciidoctor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+- !ruby/object:Gem::Dependency
+  name: bibtex-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.4.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.4.4
+- !ruby/object:Gem::Dependency
+  name: citeproc-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.7
+- !ruby/object:Gem::Dependency
+  name: csl-styles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: latex-decode
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.0.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.3.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.3.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.7.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.54.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.54.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.1
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+description: |
+  asciidoctor-bibliography lets you handle citations and bibliography the "asciidoctor-way"!
+
+  Its syntax is designed to be native-asciidoctor:
+  * single cite `cite:[key]`;
+  * contextual cite `cite[key, page=3]`;
+  * multiple cites `cite:[key1]+[key2]`;
+  * full cite `fullcite:[key]`; and
+  * TeX-compatible macros including `citep:[key]`, `citet:[key]` and friends.
+
+  Citation output styles are fully bridged to the CSL library, supporting formats such as IEEE, APA, Chicago, DIN and ISO 690.
+
+  The `bibliography::[]` command generates a full reference list that adheres to your configured citation style.
+email:
+- open.source@ribose.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.adoc
+- Rakefile
+- SYNTAX.adoc
+- asciidoctor_bibliography.gemspec
+- bin/rspec
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/asciidoctor-bibliography.rb
+- lib/asciidoctor-bibliography/asciidoctor.rb
+- lib/asciidoctor-bibliography/asciidoctor/bibliographer_preprocessor.rb
+- lib/asciidoctor-bibliography/asciidoctor/document_ext.rb
+- lib/asciidoctor-bibliography/bibliographer.rb
+- lib/asciidoctor-bibliography/citation.rb
+- lib/asciidoctor-bibliography/citation_item.rb
+- lib/asciidoctor-bibliography/database.rb
+- lib/asciidoctor-bibliography/databases/bibtex.rb
+- lib/asciidoctor-bibliography/databases/rfc.rb
+- lib/asciidoctor-bibliography/errors.rb
+- lib/asciidoctor-bibliography/formatter.rb
+- lib/asciidoctor-bibliography/index.rb
+- lib/asciidoctor-bibliography/options.rb
+- lib/asciidoctor-bibliography/version.rb
+- lib/citeproc/ruby/formats/adoc.rb
+- lib/csl/styles/rfc-v2.csl
+- lib/csl/styles/rfc-v3.csl
+- lib/csl/styles/tex-citealp-authoryear.csl
+- lib/csl/styles/tex-citealp-numeric.csl
+- lib/csl/styles/tex-citealps-authoryear.csl
+- lib/csl/styles/tex-citealps-numeric.csl
+- lib/csl/styles/tex-citealt-authoryear.csl
+- lib/csl/styles/tex-citealt-numeric.csl
+- lib/csl/styles/tex-citealts-authoryear.csl
+- lib/csl/styles/tex-citealts-numeric.csl
+- lib/csl/styles/tex-citeauthor-authoryear.csl
+- lib/csl/styles/tex-citeauthor-numeric.csl
+- lib/csl/styles/tex-citeauthors-authoryear.csl
+- lib/csl/styles/tex-citeauthors-numeric.csl
+- lib/csl/styles/tex-citep-authoryear.csl
+- lib/csl/styles/tex-citep-numeric.csl
+- lib/csl/styles/tex-citeps-authoryear.csl
+- lib/csl/styles/tex-citeps-numeric.csl
+- lib/csl/styles/tex-citet-authoryear.csl
+- lib/csl/styles/tex-citet-numeric.csl
+- lib/csl/styles/tex-citets-authoryear.csl
+- lib/csl/styles/tex-citets-numeric.csl
+- lib/csl/styles/tex-citeyear-authoryear.csl
+- lib/csl/styles/tex-citeyear-numeric.csl
+- lib/csl/styles/tex-citeyearpar-authoryear.csl
+- lib/csl/styles/tex-citeyearpar-numeric.csl
+- samples/latex_macros_in_bibtex/reference.bib
+- samples/latex_macros_in_bibtex/sample.adoc
+- samples/standard/biblio.bib
+- samples/standard/sample-default.adoc
+- samples/standard/sample-default.html
+- samples/standard/sample-din.adoc
+- samples/standard/sample-din.html
+- samples/standard/sample-ieee.adoc
+- samples/standard/sample-ieee.html
+- samples/standard/sample-targets.adoc
+- samples/tex/biblio.bib
+- samples/tex/sample-authoryear.adoc
+- samples/tex/sample-authoryear.html
+- samples/tex/sample-numbers.adoc
+- samples/tex/sample-numbers.html
+- samples/tex/sample-sort.adoc
+- spec/citation_helper.rb
+- spec/citation_item_spec.rb
+- spec/citeproc/ruby/formats/adoc_spec.rb
+- spec/csl/styles/rfc_v2_spec.rb
+- spec/csl/styles/rfc_v3_spec.rb
+- spec/csl/styles/tex_citealp_authoryear_spec.rb
+- spec/csl/styles/tex_citealp_numeric_spec.rb
+- spec/csl/styles/tex_citealps_authoryear_spec.rb
+- spec/csl/styles/tex_citealps_numeric_spec.rb
+- spec/csl/styles/tex_citealt_authoryear_spec.rb
+- spec/csl/styles/tex_citealt_numeric_spec.rb
+- spec/csl/styles/tex_citealts_authoryear_spec.rb
+- spec/csl/styles/tex_citealts_numeric_spec.rb
+- spec/csl/styles/tex_citeauthor_authoryear_spec.rb
+- spec/csl/styles/tex_citeauthor_numeric_spec.rb
+- spec/csl/styles/tex_citeauthors_authoryear_spec.rb
+- spec/csl/styles/tex_citeauthors_numeric_spec.rb
+- spec/csl/styles/tex_citep_authoryear_spec.rb
+- spec/csl/styles/tex_citep_numeric_spec.rb
+- spec/csl/styles/tex_citeps_authoryear_spec.rb
+- spec/csl/styles/tex_citeps_numeric_spec.rb
+- spec/csl/styles/tex_citet_authoryear_spec.rb
+- spec/csl/styles/tex_citet_numeric_spec.rb
+- spec/csl/styles/tex_citets_authoryear_spec.rb
+- spec/csl/styles/tex_citets_numeric_spec.rb
+- spec/csl/styles/tex_citeyear_authoryear_spec.rb
+- spec/csl/styles/tex_citeyear_numeric_spec.rb
+- spec/csl/styles/tex_citeyearpar_authoryear_spec.rb
+- spec/csl/styles/tex_citeyearpar_numeric_spec.rb
+- spec/database_spec.rb
+- spec/end_to_end_spec.rb
+- spec/fixtures/database-issue84.bib
+- spec/fixtures/database.bib
+- spec/fixtures/database.bibtex
+- spec/fixtures/database.rfc.xml
+- spec/fixtures/database.unk
+- spec/index_spec.rb
+- spec/integration_spec.rb
+- spec/macros_spec.rb
+- spec/nocite_spec.rb
+- spec/options_spec.rb
+- spec/sanity_spec.rb
+- spec/spec_helper.rb
+- spec/throwaway_spec.rb
+homepage: https://github.com/riboseinc/asciidoctor-bibliography
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Citations and bibliography the "asciidoctor-way"
+test_files: []

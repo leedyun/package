@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: jsonapi-renderer
+version: !ruby/object:Gem::Version
+  version: 0.2.2
+platform: ruby
+authors:
+- Lucas Hosseini
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-06-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Efficiently render JSON API documents.
+email: lucas.hosseini@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/jsonapi/include_directive.rb
+- lib/jsonapi/include_directive/parser.rb
+- lib/jsonapi/renderer.rb
+- lib/jsonapi/renderer/cached_resources_processor.rb
+- lib/jsonapi/renderer/document.rb
+- lib/jsonapi/renderer/resources_processor.rb
+- lib/jsonapi/renderer/simple_resources_processor.rb
+homepage: https://github.com/jsonapi-rb/jsonapi-renderer
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.8
+signing_key: 
+specification_version: 4
+summary: Render JSONAPI documents.
+test_files: []

@@ -1,0 +1,361 @@
+--- !ruby/object:Gem::Specification
+name: inky-rb
+version: !ruby/object:Gem::Version
+  version: 1.4.2.1
+platform: ruby
+authors:
+- Foundation
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: foundation_emails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slim
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Inky is an HTML-based templating language that converts simple HTML into
+  complex, responsive email-ready HTML. Designed for Foundation for Emails
+email:
+- contact@get.foundation
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- gemfiles/rails_3.gemfile
+- gemfiles/rails_4.gemfile
+- gemfiles/rails_5.gemfile
+- gemfiles/rails_6.gemfile
+- inky.gemspec
+- lib/generators/inky/install_generator.rb
+- lib/generators/inky/templates/foundation_emails.scss
+- lib/generators/inky/templates/mailer_layout.html.erb
+- lib/generators/inky/templates/mailer_layout.html.haml
+- lib/generators/inky/templates/mailer_layout.html.slim
+- lib/inky.rb
+- lib/inky/component_factory.rb
+- lib/inky/configuration.rb
+- lib/inky/rails/engine.rb
+- lib/inky/rails/template_handler.rb
+- lib/inky/rails/version.rb
+- spec/cases/button/no_link.inky
+- spec/cases/button/with_expand_class.inky
+- spec/cases/button/with_extra_attr.inky
+- spec/cases/button/with_image.inky
+- spec/cases/button/with_link.inky
+- spec/cases/button/with_link_and_extra_attr.inky
+- spec/cases/button/with_tricky_class.inky
+- spec/cases/callout/basic.inky
+- spec/cases/callout/with_attributes.inky
+- spec/cases/general/multiple_root.inky
+- spec/cases/general/no_tag.inky
+- spec/cases/general/root_within_text.inky
+- spec/cases/general/void_html_elements.inky
+- spec/cases/grid/columns.inky
+- spec/cases/grid/container.inky
+- spec/cases/grid/container_with_align.inky
+- spec/cases/grid/row.inky
+- spec/cases/grid/row_with_columns.inky
+- spec/cases/h_line/basic.inky
+- spec/cases/h_line/multiple.inky
+- spec/cases/h_line/with_attr.inky
+- spec/cases/menu/item.inky
+- spec/cases/menu/menu.inky
+- spec/cases/menu/menu_with_align.inky
+- spec/cases/menu/menu_with_items.inky
+- spec/cases/spacer/basic.inky
+- spec/cases/spacer/with_attr.inky
+- spec/cases/spacer/with_size.inky
+- spec/cases/spacer/with_size_lg.inky
+- spec/cases/spacer/with_size_sm.inky
+- spec/cases/spacer/with_size_sm_and_lg.inky
+- spec/cases/spacer/with_sizes_and_attr.inky
+- spec/cases/wrapper/basic.inky
+- spec/cases/wrapper/with_align.inky
+- spec/cases/wrapper/with_attributes.inky
+- spec/cases_spec.rb
+- spec/components_spec.rb
+- spec/configuration_spec.rb
+- spec/grid_spec.rb
+- spec/inky_spec.rb
+- spec/spec_helper.rb
+- spec/test_app/Rakefile
+- spec/test_app/app/controllers/application_controller.rb
+- spec/test_app/app/controllers/inky_controller.rb
+- spec/test_app/app/helpers/application_helper.rb
+- spec/test_app/app/mailers/application_mailer.rb
+- spec/test_app/app/views/inky/_inky_partial.html.inky
+- spec/test_app/app/views/inky/explicit_builder.html.inky-builder
+- spec/test_app/app/views/inky/explicit_slim.html.inky-slim
+- spec/test_app/app/views/inky/layout.html.erb
+- spec/test_app/app/views/inky/non_inky.html.erb
+- spec/test_app/app/views/inky/simple.html.inky
+- spec/test_app/app/views/inky/slim.html.inky
+- spec/test_app/app/views/layouts/application.html.erb
+- spec/test_app/app/views/layouts/inky_layout.html.inky
+- spec/test_app/config.ru
+- spec/test_app/config/application.rb
+- spec/test_app/config/boot.rb
+- spec/test_app/config/cable.yml
+- spec/test_app/config/database.yml
+- spec/test_app/config/environment.rb
+- spec/test_app/config/environments/development.rb
+- spec/test_app/config/environments/production.rb
+- spec/test_app/config/environments/test.rb
+- spec/test_app/config/initializers/application_controller_renderer.rb
+- spec/test_app/config/initializers/assets.rb
+- spec/test_app/config/initializers/backtrace_silencers.rb
+- spec/test_app/config/initializers/cookies_serializer.rb
+- spec/test_app/config/initializers/filter_parameter_logging.rb
+- spec/test_app/config/initializers/inflections.rb
+- spec/test_app/config/initializers/mime_types.rb
+- spec/test_app/config/initializers/new_framework_defaults.rb
+- spec/test_app/config/initializers/secret_token.rb
+- spec/test_app/config/initializers/session_store.rb
+- spec/test_app/config/initializers/wrap_parameters.rb
+- spec/test_app/config/locales/en.yml
+- spec/test_app/config/puma.rb
+- spec/test_app/config/routes.rb
+- spec/test_app/config/secrets.yml
+- spec/test_app/config/spring.rb
+- spec/test_app/log/.keep
+- spec/test_app/log/test.log
+- spec/test_app/spec/features/inky_spec.rb
+- spec/test_app/spec/helper.rb
+homepage: https://github.com/foundation/inky-rb
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Inky is an HTML-based templating language that converts simple HTML into
+  complex, responsive email-ready HTML. Designed for Foundation for Emails
+test_files:
+- spec/cases/button/no_link.inky
+- spec/cases/button/with_expand_class.inky
+- spec/cases/button/with_extra_attr.inky
+- spec/cases/button/with_image.inky
+- spec/cases/button/with_link.inky
+- spec/cases/button/with_link_and_extra_attr.inky
+- spec/cases/button/with_tricky_class.inky
+- spec/cases/callout/basic.inky
+- spec/cases/callout/with_attributes.inky
+- spec/cases/general/multiple_root.inky
+- spec/cases/general/no_tag.inky
+- spec/cases/general/root_within_text.inky
+- spec/cases/general/void_html_elements.inky
+- spec/cases/grid/columns.inky
+- spec/cases/grid/container.inky
+- spec/cases/grid/container_with_align.inky
+- spec/cases/grid/row.inky
+- spec/cases/grid/row_with_columns.inky
+- spec/cases/h_line/basic.inky
+- spec/cases/h_line/multiple.inky
+- spec/cases/h_line/with_attr.inky
+- spec/cases/menu/item.inky
+- spec/cases/menu/menu.inky
+- spec/cases/menu/menu_with_align.inky
+- spec/cases/menu/menu_with_items.inky
+- spec/cases/spacer/basic.inky
+- spec/cases/spacer/with_attr.inky
+- spec/cases/spacer/with_size.inky
+- spec/cases/spacer/with_size_lg.inky
+- spec/cases/spacer/with_size_sm.inky
+- spec/cases/spacer/with_size_sm_and_lg.inky
+- spec/cases/spacer/with_sizes_and_attr.inky
+- spec/cases/wrapper/basic.inky
+- spec/cases/wrapper/with_align.inky
+- spec/cases/wrapper/with_attributes.inky
+- spec/cases_spec.rb
+- spec/components_spec.rb
+- spec/configuration_spec.rb
+- spec/grid_spec.rb
+- spec/inky_spec.rb
+- spec/spec_helper.rb
+- spec/test_app/Rakefile
+- spec/test_app/app/controllers/application_controller.rb
+- spec/test_app/app/controllers/inky_controller.rb
+- spec/test_app/app/helpers/application_helper.rb
+- spec/test_app/app/mailers/application_mailer.rb
+- spec/test_app/app/views/inky/_inky_partial.html.inky
+- spec/test_app/app/views/inky/explicit_builder.html.inky-builder
+- spec/test_app/app/views/inky/explicit_slim.html.inky-slim
+- spec/test_app/app/views/inky/layout.html.erb
+- spec/test_app/app/views/inky/non_inky.html.erb
+- spec/test_app/app/views/inky/simple.html.inky
+- spec/test_app/app/views/inky/slim.html.inky
+- spec/test_app/app/views/layouts/application.html.erb
+- spec/test_app/app/views/layouts/inky_layout.html.inky
+- spec/test_app/config/application.rb
+- spec/test_app/config/boot.rb
+- spec/test_app/config/cable.yml
+- spec/test_app/config/database.yml
+- spec/test_app/config/environment.rb
+- spec/test_app/config/environments/development.rb
+- spec/test_app/config/environments/production.rb
+- spec/test_app/config/environments/test.rb
+- spec/test_app/config/initializers/application_controller_renderer.rb
+- spec/test_app/config/initializers/assets.rb
+- spec/test_app/config/initializers/backtrace_silencers.rb
+- spec/test_app/config/initializers/cookies_serializer.rb
+- spec/test_app/config/initializers/filter_parameter_logging.rb
+- spec/test_app/config/initializers/inflections.rb
+- spec/test_app/config/initializers/mime_types.rb
+- spec/test_app/config/initializers/new_framework_defaults.rb
+- spec/test_app/config/initializers/secret_token.rb
+- spec/test_app/config/initializers/session_store.rb
+- spec/test_app/config/initializers/wrap_parameters.rb
+- spec/test_app/config/locales/en.yml
+- spec/test_app/config/puma.rb
+- spec/test_app/config/routes.rb
+- spec/test_app/config/secrets.yml
+- spec/test_app/config/spring.rb
+- spec/test_app/config.ru
+- spec/test_app/log/test.log
+- spec/test_app/spec/features/inky_spec.rb
+- spec/test_app/spec/helper.rb

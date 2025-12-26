@@ -1,0 +1,374 @@
+--- !ruby/object:Gem::Specification
+name: sshkit
+version: !ruby/object:Gem::Version
+  version: 1.23.2
+platform: ruby
+authors:
+- Lee Hambley
+- Tom Clements
+bindir: bin
+cert_chain: []
+date: 2024-10-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: net-ssh
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+- !ruby/object:Gem::Dependency
+  name: net-scp
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+- !ruby/object:Gem::Dependency
+  name: net-sftp
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: danger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rainbow
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.49.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.49.1
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bcrypt_pbkdf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ed25519
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: A comprehensive toolkit for remotely running commands in a structured
+  manner on groups of servers.
+email:
+- lee.hambley@gmail.com
+- seenmyfate@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".docker/Dockerfile"
+- ".docker/ubuntu_setup.sh"
+- ".github/dependabot.yml"
+- ".github/release-drafter.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/push.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- BREAKING_API_WISHLIST.md
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Dangerfile
+- EXAMPLES.md
+- FAQ.md
+- Gemfile
+- LICENSE.md
+- README.md
+- RELEASING.md
+- Rakefile
+- docker-compose.yml
+- examples/images/example_output.png
+- examples/images/logo.png
+- examples/simple_connection.rb
+- lib/core_ext/array.rb
+- lib/core_ext/hash.rb
+- lib/sshkit.rb
+- lib/sshkit/all.rb
+- lib/sshkit/backends/abstract.rb
+- lib/sshkit/backends/connection_pool.rb
+- lib/sshkit/backends/connection_pool/cache.rb
+- lib/sshkit/backends/connection_pool/nil_cache.rb
+- lib/sshkit/backends/local.rb
+- lib/sshkit/backends/netssh.rb
+- lib/sshkit/backends/netssh/known_hosts.rb
+- lib/sshkit/backends/netssh/scp_transfer.rb
+- lib/sshkit/backends/netssh/sftp_transfer.rb
+- lib/sshkit/backends/printer.rb
+- lib/sshkit/backends/skipper.rb
+- lib/sshkit/color.rb
+- lib/sshkit/command.rb
+- lib/sshkit/command_map.rb
+- lib/sshkit/configuration.rb
+- lib/sshkit/coordinator.rb
+- lib/sshkit/deprecation_logger.rb
+- lib/sshkit/dsl.rb
+- lib/sshkit/exception.rb
+- lib/sshkit/formatters/abstract.rb
+- lib/sshkit/formatters/black_hole.rb
+- lib/sshkit/formatters/dot.rb
+- lib/sshkit/formatters/pretty.rb
+- lib/sshkit/formatters/simple_text.rb
+- lib/sshkit/host.rb
+- lib/sshkit/log_message.rb
+- lib/sshkit/logger.rb
+- lib/sshkit/mapping_interaction_handler.rb
+- lib/sshkit/runners/abstract.rb
+- lib/sshkit/runners/group.rb
+- lib/sshkit/runners/null.rb
+- lib/sshkit/runners/parallel.rb
+- lib/sshkit/runners/sequential.rb
+- lib/sshkit/version.rb
+- sshkit.gemspec
+- test/functional/backends/netssh_transfer_tests.rb
+- test/functional/backends/test_local.rb
+- test/functional/backends/test_netssh.rb
+- test/functional/backends/test_netssh_scp.rb
+- test/functional/backends/test_netssh_sftp.rb
+- test/helper.rb
+- test/known_hosts/github
+- test/known_hosts/github_hash
+- test/known_hosts/github_ip
+- test/support/docker_wrapper.rb
+- test/unit/backends/test_abstract.rb
+- test/unit/backends/test_connection_pool.rb
+- test/unit/backends/test_local.rb
+- test/unit/backends/test_netssh.rb
+- test/unit/backends/test_printer.rb
+- test/unit/formatters/test_custom.rb
+- test/unit/formatters/test_dot.rb
+- test/unit/formatters/test_pretty.rb
+- test/unit/formatters/test_simple_text.rb
+- test/unit/runners/test_group.rb
+- test/unit/runners/test_parallel.rb
+- test/unit/runners/test_sequential.rb
+- test/unit/test_color.rb
+- test/unit/test_command.rb
+- test/unit/test_command_map.rb
+- test/unit/test_configuration.rb
+- test/unit/test_coordinator.rb
+- test/unit/test_deprecation_logger.rb
+- test/unit/test_dsl.rb
+- test/unit/test_host.rb
+- test/unit/test_logger.rb
+- test/unit/test_mapping_interaction_handler.rb
+homepage: http://github.com/capistrano/sshkit
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/capistrano/sshkit/releases
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.0.dev
+specification_version: 4
+summary: SSHKit makes it easy to write structured, testable SSH commands in Ruby
+test_files:
+- test/functional/backends/netssh_transfer_tests.rb
+- test/functional/backends/test_local.rb
+- test/functional/backends/test_netssh.rb
+- test/functional/backends/test_netssh_scp.rb
+- test/functional/backends/test_netssh_sftp.rb
+- test/helper.rb
+- test/known_hosts/github
+- test/known_hosts/github_hash
+- test/known_hosts/github_ip
+- test/support/docker_wrapper.rb
+- test/unit/backends/test_abstract.rb
+- test/unit/backends/test_connection_pool.rb
+- test/unit/backends/test_local.rb
+- test/unit/backends/test_netssh.rb
+- test/unit/backends/test_printer.rb
+- test/unit/formatters/test_custom.rb
+- test/unit/formatters/test_dot.rb
+- test/unit/formatters/test_pretty.rb
+- test/unit/formatters/test_simple_text.rb
+- test/unit/runners/test_group.rb
+- test/unit/runners/test_parallel.rb
+- test/unit/runners/test_sequential.rb
+- test/unit/test_color.rb
+- test/unit/test_command.rb
+- test/unit/test_command_map.rb
+- test/unit/test_configuration.rb
+- test/unit/test_coordinator.rb
+- test/unit/test_deprecation_logger.rb
+- test/unit/test_dsl.rb
+- test/unit/test_host.rb
+- test/unit/test_logger.rb
+- test/unit/test_mapping_interaction_handler.rb

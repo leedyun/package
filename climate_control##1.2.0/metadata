@@ -1,0 +1,120 @@
+--- !ruby/object:Gem::Specification
+name: climate_control
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Joshua Clayton
+- Dorian Marié
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-07-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Modify your ENV
+email:
+- joshua.clayton@gmail.com
+- dorian@dorianmarie.fr
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- CODEOWNERS
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- climate_control.gemspec
+- lib/climate_control.rb
+- lib/climate_control/errors.rb
+- lib/climate_control/version.rb
+- spec/acceptance/climate_control_spec.rb
+- spec/acceptance/unsafe_modify_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/thoughtbot/climate_control
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.13
+signing_key:
+specification_version: 4
+summary: Modify your ENV easily with ClimateControl
+test_files:
+- spec/acceptance/climate_control_spec.rb
+- spec/acceptance/unsafe_modify_spec.rb
+- spec/spec_helper.rb

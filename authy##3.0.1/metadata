@@ -1,0 +1,195 @@
+--- !ruby/object:Gem::Specification
+name: authy
+version: !ruby/object:Gem::Version
+  version: 3.0.1
+platform: ruby
+authors:
+- Authy Inc
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-05-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.3.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.3.3
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: reek
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby library to access Authy services. This gem is deprecated, please
+  see the README for details.
+email:
+- support@authy.com
+executables:
+- authy-api-console
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- ".github/workflows/build.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- authy.gemspec
+- bin/authy-api-console
+- examples/Gemfile
+- examples/README.md
+- examples/demo.rb
+- lib/authy.rb
+- lib/authy/api.rb
+- lib/authy/config.rb
+- lib/authy/models/user.rb
+- lib/authy/onetouch.rb
+- lib/authy/phone_verification.rb
+- lib/authy/response.rb
+- lib/authy/url_helpers.rb
+- lib/authy/version.rb
+- spec/authy/api_spec.rb
+- spec/authy/config_spec.rb
+- spec/authy/onetouch_spec.rb
+- spec/authy/phone_verification_spec.rb
+- spec/authy/response_spec.rb
+- spec/authy/url_helpers_spec.rb
+- spec/spec_helper.rb
+- verify-legacy-v1.md
+homepage: https://github.com/authy/authy-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: 'Deprecated: please see README for details'
+test_files:
+- spec/authy/api_spec.rb
+- spec/authy/config_spec.rb
+- spec/authy/onetouch_spec.rb
+- spec/authy/phone_verification_spec.rb
+- spec/authy/response_spec.rb
+- spec/authy/url_helpers_spec.rb
+- spec/spec_helper.rb

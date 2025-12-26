@@ -1,0 +1,88 @@
+--- !ruby/object:Gem::Specification
+name: openssl-signature_algorithm
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Gonzalo Rodriguez
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-02-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: openssl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: ECDSA, EdDSA, RSA-PSS and RSA-PKCS#1 algorithms for ruby
+email:
+- gonzalo@cedarcode.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/build.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- gemfiles/.bundle/config
+- gemfiles/openssl_2_1.gemfile
+- gemfiles/openssl_2_2.gemfile
+- gemfiles/openssl_3_0.gemfile
+- gemfiles/openssl_3_1.gemfile
+- lib/openssl/signature_algorithm.rb
+- lib/openssl/signature_algorithm/base.rb
+- lib/openssl/signature_algorithm/ecdsa.rb
+- lib/openssl/signature_algorithm/eddsa.rb
+- lib/openssl/signature_algorithm/error.rb
+- lib/openssl/signature_algorithm/rsa.rb
+- lib/openssl/signature_algorithm/rsapkcs1.rb
+- lib/openssl/signature_algorithm/rsapss.rb
+- lib/openssl/signature_algorithm/version.rb
+- openssl-signature_algorithm.gemspec
+homepage: https://github.com/cedarcode/openssl-signature_algorithm
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://github.com/cedarcode/openssl-signature_algorithm
+  source_code_uri: https://github.com/cedarcode/openssl-signature_algorithm
+  changelog_uri: https://github.com/cedarcode/openssl-signature_algorithm/blob/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: ECDSA, EdDSA, RSA-PSS and RSA-PKCS#1 algorithms for ruby
+test_files: []

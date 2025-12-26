@@ -1,0 +1,136 @@
+--- !ruby/object:Gem::Specification
+name: mercenary
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Tom Preston-Werner
+- Parker Moore
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-01-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-jekyll
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.0
+description: Lightweight and flexible library for writing command-line apps in Ruby.
+email:
+- tom@mojombo.com
+- parkrmoore@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".travis.yml"
+- Gemfile
+- History.markdown
+- LICENSE.txt
+- README.md
+- Rakefile
+- examples/help_dialogue.rb
+- examples/logging.rb
+- examples/trace.rb
+- lib/mercenary.rb
+- lib/mercenary/command.rb
+- lib/mercenary/option.rb
+- lib/mercenary/presenter.rb
+- lib/mercenary/program.rb
+- lib/mercenary/version.rb
+- mercenary.gemspec
+- script/bootstrap
+- script/cibuild
+- script/console
+- script/examples
+- script/fmt
+- spec/command_spec.rb
+- spec/option_spec.rb
+- spec/presenter_spec.rb
+- spec/program_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/jekyll/mercenary
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.6
+signing_key: 
+specification_version: 4
+summary: Lightweight and flexible library for writing command-line apps in Ruby.
+test_files:
+- spec/command_spec.rb
+- spec/option_spec.rb
+- spec/presenter_spec.rb
+- spec/program_spec.rb
+- spec/spec_helper.rb

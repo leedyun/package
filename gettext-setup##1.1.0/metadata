@@ -1,0 +1,247 @@
+--- !ruby/object:Gem::Specification
+name: gettext-setup
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Puppet
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-10-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fast_gettext
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: gettext
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: locale
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rspec-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rspec-expectations
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rspec-mocks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A gem to ease i18n
+email:
+- info@puppet.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/generate_metadata_pot.rb
+- lib/gettext-setup.rb
+- lib/gettext-setup/gettext_setup.rb
+- lib/gettext-setup/metadata_pot.rb
+- lib/gettext-setup/pot.rb
+- lib/tasks/gettext.rake
+- lib/templates/metadata.pot.erb
+- locales/config-sample.yaml
+- spec/fixtures/fixture_locales/config.yaml
+- spec/fixtures/fixture_locales/fixture_locales.pot
+- spec/fixtures/fixture_locales/jp/fixture_locales.po
+- spec/fixtures/fixture_locales/test_strings.rb
+- spec/fixtures/locales/config.yaml
+- spec/fixtures/locales/de/sinatra-i18n.po
+- spec/fixtures/locales/sinatra-i18n.pot
+- spec/fixtures/merge_locales/config.yaml
+- spec/fixtures/spec_locales/config.yaml
+- spec/fixtures/spec_locales/sinatra-i18n.pot
+- spec/fixtures/string_changes/add.pot
+- spec/fixtures/string_changes/change.pot
+- spec/fixtures/string_changes/non_string_changes.pot
+- spec/fixtures/string_changes/old.pot
+- spec/fixtures/string_changes/remove.pot
+- spec/lib/gettext-setup/gettext_setup_spec.rb
+- spec/lib/gettext-setup/metadata_pot_spec.rb
+- spec/lib/gettext-setup/pot_spec.rb
+- spec/lib/tasks/gettext_rake_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/puppetlabs/gettext-setup-gem
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key: 
+specification_version: 4
+summary: A gem to ease internationalization with fast_gettext
+test_files:
+- spec/fixtures/fixture_locales/config.yaml
+- spec/fixtures/fixture_locales/fixture_locales.pot
+- spec/fixtures/fixture_locales/jp/fixture_locales.po
+- spec/fixtures/fixture_locales/test_strings.rb
+- spec/fixtures/locales/config.yaml
+- spec/fixtures/locales/de/sinatra-i18n.po
+- spec/fixtures/locales/sinatra-i18n.pot
+- spec/fixtures/merge_locales/config.yaml
+- spec/fixtures/spec_locales/config.yaml
+- spec/fixtures/spec_locales/sinatra-i18n.pot
+- spec/fixtures/string_changes/add.pot
+- spec/fixtures/string_changes/change.pot
+- spec/fixtures/string_changes/non_string_changes.pot
+- spec/fixtures/string_changes/old.pot
+- spec/fixtures/string_changes/remove.pot
+- spec/lib/gettext-setup/gettext_setup_spec.rb
+- spec/lib/gettext-setup/metadata_pot_spec.rb
+- spec/lib/gettext-setup/pot_spec.rb
+- spec/lib/tasks/gettext_rake_spec.rb
+- spec/spec_helper.rb

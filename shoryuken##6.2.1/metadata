@@ -1,0 +1,262 @@
+--- !ruby/object:Gem::Specification
+name: shoryuken
+version: !ruby/object:Gem::Version
+  version: 6.2.1
+platform: ruby
+authors:
+- Pablo Cantero
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-02-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dotenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Shoryuken is a super efficient AWS SQS thread based message processor
+email:
+- pablo@pablocantero.com
+executables:
+- shoryuken
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".devcontainer/Dockerfile"
+- ".devcontainer/base.Dockerfile"
+- ".devcontainer/devcontainer.json"
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/specs.yml"
+- ".github/workflows/stale.yml"
+- ".gitignore"
+- ".reek.yml"
+- ".rspec"
+- ".rubocop.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/cli/base.rb
+- bin/cli/sqs.rb
+- bin/shoryuken
+- examples/bootstrap_queues.rb
+- examples/default_worker.rb
+- gemfiles/.gitignore
+- gemfiles/aws_sdk_core_2.gemfile
+- gemfiles/rails_4_2.gemfile
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_1.gemfile
+- gemfiles/rails_7_0.gemfile
+- lib/shoryuken.rb
+- lib/shoryuken/body_parser.rb
+- lib/shoryuken/client.rb
+- lib/shoryuken/core_ext.rb
+- lib/shoryuken/default_exception_handler.rb
+- lib/shoryuken/default_worker_registry.rb
+- lib/shoryuken/environment_loader.rb
+- lib/shoryuken/extensions/active_job_adapter.rb
+- lib/shoryuken/extensions/active_job_concurrent_send_adapter.rb
+- lib/shoryuken/extensions/active_job_extensions.rb
+- lib/shoryuken/fetcher.rb
+- lib/shoryuken/launcher.rb
+- lib/shoryuken/logging.rb
+- lib/shoryuken/manager.rb
+- lib/shoryuken/message.rb
+- lib/shoryuken/middleware/chain.rb
+- lib/shoryuken/middleware/server/active_record.rb
+- lib/shoryuken/middleware/server/auto_delete.rb
+- lib/shoryuken/middleware/server/auto_extend_visibility.rb
+- lib/shoryuken/middleware/server/exponential_backoff_retry.rb
+- lib/shoryuken/middleware/server/timing.rb
+- lib/shoryuken/options.rb
+- lib/shoryuken/polling/base.rb
+- lib/shoryuken/polling/strict_priority.rb
+- lib/shoryuken/polling/weighted_round_robin.rb
+- lib/shoryuken/processor.rb
+- lib/shoryuken/queue.rb
+- lib/shoryuken/runner.rb
+- lib/shoryuken/util.rb
+- lib/shoryuken/version.rb
+- lib/shoryuken/worker.rb
+- lib/shoryuken/worker/default_executor.rb
+- lib/shoryuken/worker/inline_executor.rb
+- lib/shoryuken/worker_registry.rb
+- shoryuken.gemspec
+- shoryuken.jpg
+- spec/integration/launcher_spec.rb
+- spec/shared_examples_for_active_job.rb
+- spec/shoryuken.yml
+- spec/shoryuken/body_parser_spec.rb
+- spec/shoryuken/client_spec.rb
+- spec/shoryuken/core_ext_spec.rb
+- spec/shoryuken/default_exception_handler_spec.rb
+- spec/shoryuken/default_worker_registry_spec.rb
+- spec/shoryuken/environment_loader_spec.rb
+- spec/shoryuken/extensions/active_job_adapter_spec.rb
+- spec/shoryuken/extensions/active_job_base_spec.rb
+- spec/shoryuken/extensions/active_job_concurrent_send_adapter_spec.rb
+- spec/shoryuken/extensions/active_job_wrapper_spec.rb
+- spec/shoryuken/fetcher_spec.rb
+- spec/shoryuken/launcher_spec.rb
+- spec/shoryuken/manager_spec.rb
+- spec/shoryuken/middleware/chain_spec.rb
+- spec/shoryuken/middleware/server/auto_delete_spec.rb
+- spec/shoryuken/middleware/server/auto_extend_visibility_spec.rb
+- spec/shoryuken/middleware/server/exponential_backoff_retry_spec.rb
+- spec/shoryuken/middleware/server/timing_spec.rb
+- spec/shoryuken/options_spec.rb
+- spec/shoryuken/polling/strict_priority_spec.rb
+- spec/shoryuken/polling/weighted_round_robin_spec.rb
+- spec/shoryuken/processor_spec.rb
+- spec/shoryuken/queue_spec.rb
+- spec/shoryuken/runner_spec.rb
+- spec/shoryuken/util_spec.rb
+- spec/shoryuken/worker/default_executor_spec.rb
+- spec/shoryuken/worker/inline_executor_spec.rb
+- spec/shoryuken/worker_spec.rb
+- spec/shoryuken_spec.rb
+- spec/spec_helper.rb
+- test_workers/endless_interruptive_worker.rb
+- test_workers/endless_uninterruptive_worker.rb
+homepage: https://github.com/ruby-shoryuken/shoryuken
+licenses:
+- LGPL-3.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: Shoryuken is a super efficient AWS SQS thread based message processor
+test_files:
+- spec/integration/launcher_spec.rb
+- spec/shared_examples_for_active_job.rb
+- spec/shoryuken.yml
+- spec/shoryuken/body_parser_spec.rb
+- spec/shoryuken/client_spec.rb
+- spec/shoryuken/core_ext_spec.rb
+- spec/shoryuken/default_exception_handler_spec.rb
+- spec/shoryuken/default_worker_registry_spec.rb
+- spec/shoryuken/environment_loader_spec.rb
+- spec/shoryuken/extensions/active_job_adapter_spec.rb
+- spec/shoryuken/extensions/active_job_base_spec.rb
+- spec/shoryuken/extensions/active_job_concurrent_send_adapter_spec.rb
+- spec/shoryuken/extensions/active_job_wrapper_spec.rb
+- spec/shoryuken/fetcher_spec.rb
+- spec/shoryuken/launcher_spec.rb
+- spec/shoryuken/manager_spec.rb
+- spec/shoryuken/middleware/chain_spec.rb
+- spec/shoryuken/middleware/server/auto_delete_spec.rb
+- spec/shoryuken/middleware/server/auto_extend_visibility_spec.rb
+- spec/shoryuken/middleware/server/exponential_backoff_retry_spec.rb
+- spec/shoryuken/middleware/server/timing_spec.rb
+- spec/shoryuken/options_spec.rb
+- spec/shoryuken/polling/strict_priority_spec.rb
+- spec/shoryuken/polling/weighted_round_robin_spec.rb
+- spec/shoryuken/processor_spec.rb
+- spec/shoryuken/queue_spec.rb
+- spec/shoryuken/runner_spec.rb
+- spec/shoryuken/util_spec.rb
+- spec/shoryuken/worker/default_executor_spec.rb
+- spec/shoryuken/worker/inline_executor_spec.rb
+- spec/shoryuken/worker_spec.rb
+- spec/shoryuken_spec.rb
+- spec/spec_helper.rb

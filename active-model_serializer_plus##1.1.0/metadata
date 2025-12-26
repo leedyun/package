@@ -1,0 +1,261 @@
+--- !ruby/object:Gem::Specification
+name: active-model_serializer_plus
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Todd Knarr
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+description: Adds methods for automatic deserialization from standard JSON and XML,
+  and a variant implementation of serialization/deserialization for XML.
+email: tknarr@silverglass.org
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.md
+- ".yardopts"
+files:
+- ".yardopts"
+- Appraisals
+- CHANGELOG.md
+- LICENSE.md
+- README.md
+- Rakefile
+- active-model_serializer_plus.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- gemfiles/rails_4.2.gemfile
+- lib/active_model_serializer_plus.rb
+- lib/active_model_serializer_plus/assignment.rb
+- lib/active_model_serializer_plus/railtie.rb
+- lib/active_model_serializer_plus/translations.rb
+- lib/active_model_serializer_plus/version.rb
+- test/active_model_serializer_plus/active_model_serializer_plus_test.rb
+- test/active_model_serializer_plus/assignment_test.rb
+- test/active_model_serializer_plus/translations_test.rb
+- test/app/rails_4.2/Rakefile
+- test/app/rails_4.2/app/assets/javascripts/application.js
+- test/app/rails_4.2/app/assets/stylesheets/application.css
+- test/app/rails_4.2/app/controllers/application_controller.rb
+- test/app/rails_4.2/app/helpers/application_helper.rb
+- test/app/rails_4.2/app/views/layouts/application.html.erb
+- test/app/rails_4.2/bin/bundle
+- test/app/rails_4.2/bin/rails
+- test/app/rails_4.2/bin/rake
+- test/app/rails_4.2/bin/setup
+- test/app/rails_4.2/bin/spring
+- test/app/rails_4.2/config.ru
+- test/app/rails_4.2/config/application.rb
+- test/app/rails_4.2/config/boot.rb
+- test/app/rails_4.2/config/database.yml
+- test/app/rails_4.2/config/environment.rb
+- test/app/rails_4.2/config/environments/development.rb
+- test/app/rails_4.2/config/environments/production.rb
+- test/app/rails_4.2/config/environments/test.rb
+- test/app/rails_4.2/config/initializers/assets.rb
+- test/app/rails_4.2/config/initializers/backtrace_silencers.rb
+- test/app/rails_4.2/config/initializers/cookies_serializer.rb
+- test/app/rails_4.2/config/initializers/filter_parameter_logging.rb
+- test/app/rails_4.2/config/initializers/inflections.rb
+- test/app/rails_4.2/config/initializers/mime_types.rb
+- test/app/rails_4.2/config/initializers/session_store.rb
+- test/app/rails_4.2/config/initializers/wrap_parameters.rb
+- test/app/rails_4.2/config/locales/en.yml
+- test/app/rails_4.2/config/routes.rb
+- test/app/rails_4.2/config/secrets.yml
+- test/app/rails_4.2/db/schema.rb
+- test/app/rails_4.2/db/seeds.rb
+- test/app/rails_4.2/public/404.html
+- test/app/rails_4.2/public/422.html
+- test/app/rails_4.2/public/500.html
+- test/app/rails_4.2/public/favicon.ico
+- test/app/rails_4.2/public/robots.txt
+- test/test_helper.rb
+homepage: https://github.com/tknarr/active_model_serializer_plus
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Enhanced serialization/deserialization support for ActiveModel classes.
+test_files:
+- test/active_model_serializer_plus/active_model_serializer_plus_test.rb
+- test/active_model_serializer_plus/assignment_test.rb
+- test/active_model_serializer_plus/translations_test.rb
+- test/app/rails_4.2/app/assets/javascripts/application.js
+- test/app/rails_4.2/app/assets/stylesheets/application.css
+- test/app/rails_4.2/app/controllers/application_controller.rb
+- test/app/rails_4.2/app/helpers/application_helper.rb
+- test/app/rails_4.2/app/views/layouts/application.html.erb
+- test/app/rails_4.2/bin/bundle
+- test/app/rails_4.2/bin/rails
+- test/app/rails_4.2/bin/rake
+- test/app/rails_4.2/bin/setup
+- test/app/rails_4.2/bin/spring
+- test/app/rails_4.2/config/application.rb
+- test/app/rails_4.2/config/boot.rb
+- test/app/rails_4.2/config/database.yml
+- test/app/rails_4.2/config/environment.rb
+- test/app/rails_4.2/config/environments/development.rb
+- test/app/rails_4.2/config/environments/production.rb
+- test/app/rails_4.2/config/environments/test.rb
+- test/app/rails_4.2/config/initializers/assets.rb
+- test/app/rails_4.2/config/initializers/backtrace_silencers.rb
+- test/app/rails_4.2/config/initializers/cookies_serializer.rb
+- test/app/rails_4.2/config/initializers/filter_parameter_logging.rb
+- test/app/rails_4.2/config/initializers/inflections.rb
+- test/app/rails_4.2/config/initializers/mime_types.rb
+- test/app/rails_4.2/config/initializers/session_store.rb
+- test/app/rails_4.2/config/initializers/wrap_parameters.rb
+- test/app/rails_4.2/config/locales/en.yml
+- test/app/rails_4.2/config/routes.rb
+- test/app/rails_4.2/config/secrets.yml
+- test/app/rails_4.2/config.ru
+- test/app/rails_4.2/db/schema.rb
+- test/app/rails_4.2/db/seeds.rb
+- test/app/rails_4.2/public/404.html
+- test/app/rails_4.2/public/422.html
+- test/app/rails_4.2/public/500.html
+- test/app/rails_4.2/public/favicon.ico
+- test/app/rails_4.2/public/robots.txt
+- test/app/rails_4.2/Rakefile
+- test/test_helper.rb
+- gemfiles/rails_4.2.gemfile
+- Rakefile
+- Appraisals

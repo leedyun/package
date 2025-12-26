@@ -1,0 +1,46 @@
+--- !ruby/object:Gem::Specification
+name: plist
+version: !ruby/object:Gem::Version
+  version: 3.7.2
+platform: ruby
+authors:
+- Ben Bleything
+- Patrick May
+bindir: bin
+cert_chain: []
+date: 2024-12-26 00:00:00.000000000 Z
+dependencies: []
+description: Plist is a library to manipulate Property List files, also known as plists.
+  It can parse plist files into native Ruby data structures as well as generating
+  new plist files from your Ruby objects.
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- lib/plist.rb
+- lib/plist/generator.rb
+- lib/plist/parser.rb
+- lib/plist/version.rb
+homepage: https://github.com/patsplat/plist
+licenses:
+- MIT
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: All-purpose Property List manipulation library
+test_files: []

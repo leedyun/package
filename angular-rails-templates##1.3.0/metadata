@@ -1,0 +1,161 @@
+--- !ruby/object:Gem::Specification
+name: angular-rails-templates
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Damien Mathieu
+- pitr
+- whitehat101
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: sprockets
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: sprockets-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: uglifier
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+email:
+- pitr.vern@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/angular-rails-templates.rb
+- lib/angular-rails-templates/compact_javascript_escape.rb
+- lib/angular-rails-templates/engine.rb
+- lib/angular-rails-templates/javascript_template.js.erb
+- lib/angular-rails-templates/processor.rb
+- lib/angular-rails-templates/transformer.rb
+- lib/angular-rails-templates/version.rb
+- vendor/assets/javascripts/angular-rails-templates.js.erb
+homepage: https://github.com/pitr/angular-rails-templates
+licenses:
+- MIT
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Use your angular templates with rails' asset pipeline
+test_files: []

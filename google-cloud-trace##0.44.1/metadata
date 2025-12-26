@@ -1,0 +1,156 @@
+--- !ruby/object:Gem::Specification
+name: google-cloud-trace
+version: !ruby/object:Gem::Version
+  version: 0.44.1
+platform: ruby
+authors:
+- Daniel Azuma
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: google-cloud-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: stackdriver-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-trace-v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+- !ruby/object:Gem::Dependency
+  name: google-cloud-trace-v2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+description: google-cloud-trace is the official library for Stackdriver Trace.
+email:
+- dazuma@google.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- AUTHENTICATION.md
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- INSTRUMENTATION.md
+- LICENSE
+- LOGGING.md
+- OVERVIEW.md
+- TROUBLESHOOTING.md
+- lib/google-cloud-trace.rb
+- lib/google/cloud/trace.rb
+- lib/google/cloud/trace/async_reporter.rb
+- lib/google/cloud/trace/credentials.rb
+- lib/google/cloud/trace/errors.rb
+- lib/google/cloud/trace/faraday_middleware.rb
+- lib/google/cloud/trace/label_key.rb
+- lib/google/cloud/trace/middleware.rb
+- lib/google/cloud/trace/notifications.rb
+- lib/google/cloud/trace/patches/active_call_with_trace.rb
+- lib/google/cloud/trace/patches/call_with_trace.rb
+- lib/google/cloud/trace/project.rb
+- lib/google/cloud/trace/rails.rb
+- lib/google/cloud/trace/result_set.rb
+- lib/google/cloud/trace/service.rb
+- lib/google/cloud/trace/span.rb
+- lib/google/cloud/trace/span_kind.rb
+- lib/google/cloud/trace/time_sampler.rb
+- lib/google/cloud/trace/trace_record.rb
+- lib/google/cloud/trace/utils.rb
+- lib/google/cloud/trace/version.rb
+homepage: https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-trace
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key: 
+specification_version: 4
+summary: Application Instrumentation and API Client library for Stackdriver Trace
+test_files: []

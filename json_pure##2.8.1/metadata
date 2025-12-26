@@ -1,0 +1,60 @@
+--- !ruby/object:Gem::Specification
+name: json_pure
+version: !ruby/object:Gem::Version
+  version: 2.8.1
+platform: ruby
+authors:
+- Florian Frank
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-05 00:00:00.000000000 Z
+dependencies: []
+description: This is a JSON implementation in pure Ruby.
+email: flori@ping.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- BSDL
+- CHANGES.md
+- COPYING
+- LEGAL
+- README.md
+- json_pure.gemspec
+- lib/json/pure.rb
+homepage: https://ruby.github.io/json
+licenses:
+- Ruby
+metadata:
+  bug_tracker_uri: https://github.com/ruby/json/issues
+  changelog_uri: https://github.com/ruby/json/blob/master/CHANGES.md
+  documentation_uri: https://ruby.github.io/json/doc/index.html
+  homepage_uri: https://ruby.github.io/json
+  source_code_uri: https://github.com/ruby/json
+  wiki_uri: https://github.com/ruby/json/wiki
+post_install_message:
+rdoc_options:
+- "--title"
+- JSON implementation for ruby
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: JSON Implementation for Ruby
+test_files: []

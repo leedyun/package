@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: parallel_tests
+version: !ruby/object:Gem::Version
+  version: 4.9.0
+platform: ruby
+authors:
+- Michael Grosser
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: parallel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email: michael@grosser.it
+executables:
+- parallel_spinach
+- parallel_cucumber
+- parallel_rspec
+- parallel_test
+extensions: []
+extra_rdoc_files: []
+files:
+- Readme.md
+- bin/parallel_cucumber
+- bin/parallel_rspec
+- bin/parallel_spinach
+- bin/parallel_test
+- lib/parallel_tests.rb
+- lib/parallel_tests/cli.rb
+- lib/parallel_tests/cucumber/failures_logger.rb
+- lib/parallel_tests/cucumber/features_with_steps.rb
+- lib/parallel_tests/cucumber/runner.rb
+- lib/parallel_tests/cucumber/scenario_line_logger.rb
+- lib/parallel_tests/cucumber/scenarios.rb
+- lib/parallel_tests/gherkin/io.rb
+- lib/parallel_tests/gherkin/listener.rb
+- lib/parallel_tests/gherkin/runner.rb
+- lib/parallel_tests/gherkin/runtime_logger.rb
+- lib/parallel_tests/grouper.rb
+- lib/parallel_tests/pids.rb
+- lib/parallel_tests/railtie.rb
+- lib/parallel_tests/rspec/failures_logger.rb
+- lib/parallel_tests/rspec/logger_base.rb
+- lib/parallel_tests/rspec/runner.rb
+- lib/parallel_tests/rspec/runtime_logger.rb
+- lib/parallel_tests/rspec/summary_logger.rb
+- lib/parallel_tests/rspec/verbose_logger.rb
+- lib/parallel_tests/spinach/runner.rb
+- lib/parallel_tests/tasks.rb
+- lib/parallel_tests/test/runner.rb
+- lib/parallel_tests/test/runtime_logger.rb
+- lib/parallel_tests/version.rb
+homepage: https://github.com/grosser/parallel_tests
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/grosser/parallel_tests/issues
+  changelog_uri: https://github.com/grosser/parallel_tests/blob/v4.9.0/CHANGELOG.md
+  documentation_uri: https://github.com/grosser/parallel_tests/blob/v4.9.0/Readme.md
+  source_code_uri: https://github.com/grosser/parallel_tests/tree/v4.9.0
+  wiki_uri: https://github.com/grosser/parallel_tests/wiki
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Run Test::Unit / RSpec / Cucumber / Spinach in parallel
+test_files: []

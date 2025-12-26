@@ -1,0 +1,117 @@
+--- !ruby/object:Gem::Specification
+name: fastlane-plugin-versioning
+version: !ruby/object:Gem::Version
+  version: 0.7.1
+platform: ruby
+authors:
+- Siarhei Fiedartsou
+- John Douglas
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fastlane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.93.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.93.1
+description:
+email:
+- siarhei.fedartsou@gmail.com
+- john.douglas.nz@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/fastlane/plugin/versioning.rb
+- lib/fastlane/plugin/versioning/actions/ci_build_number.rb
+- lib/fastlane/plugin/versioning/actions/get_app_store_version_number.rb
+- lib/fastlane/plugin/versioning/actions/get_build_number_from_plist.rb
+- lib/fastlane/plugin/versioning/actions/get_build_number_from_xcodeproj.rb
+- lib/fastlane/plugin/versioning/actions/get_info_plist_path.rb
+- lib/fastlane/plugin/versioning/actions/get_version_number_from_git_branch.rb
+- lib/fastlane/plugin/versioning/actions/get_version_number_from_plist.rb
+- lib/fastlane/plugin/versioning/actions/get_version_number_from_xcodeproj.rb
+- lib/fastlane/plugin/versioning/actions/increment_build_number_in_plist.rb
+- lib/fastlane/plugin/versioning/actions/increment_build_number_in_xcodeproj.rb
+- lib/fastlane/plugin/versioning/actions/increment_version_number_in_plist.rb
+- lib/fastlane/plugin/versioning/actions/increment_version_number_in_xcodeproj.rb
+- lib/fastlane/plugin/versioning/version.rb
+homepage: https://github.com/SiarheiFedartsou/fastlane-plugin-versioning
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Allows to set/get app version and build number directly to/from Info.plist
+test_files: []

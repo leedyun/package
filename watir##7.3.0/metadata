@@ -1,0 +1,656 @@
+--- !ruby/object:Gem::Specification
+name: watir
+version: !ruby/object:Gem::Version
+  version: 7.3.0
+platform: ruby
+authors:
+- Alex Rodionov
+- Titus Fortner
+- Justin Ko
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-08-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: regexp_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: selenium-webdriver
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.11
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.11
+- !ruby/object:Gem::Dependency
+  name: coveralls_reborn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.14.0.rc1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.14.0.rc1
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-retry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.42'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.42'
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.16'
+- !ruby/object:Gem::Dependency
+  name: selenium_statistics
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: selenium-webdriver
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.11'
+- !ruby/object:Gem::Dependency
+  name: simplecov-console
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webidl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+- !ruby/object:Gem::Dependency
+  name: yard-doctest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.14
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.14
+description: |
+  Watir stands for Web Application Testing In Ruby
+  It facilitates the writing of automated tests by mimicing the behavior of a user interacting with a website.
+email:
+- p0deje@gmail.com
+- titusfortner@gmail.com
+- 'jkotests@gmail.com '
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- ".github/ISSUE_TEMPLATE.md"
+- ".github/workflows/chrome.yml"
+- ".github/workflows/edge.yml"
+- ".github/workflows/firefox.yml"
+- ".github/workflows/ie.yml"
+- ".github/workflows/safari.yml"
+- ".github/workflows/unit.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGES.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/watir.rb
+- lib/watir/adjacent.rb
+- lib/watir/after_hooks.rb
+- lib/watir/alert.rb
+- lib/watir/aliases.rb
+- lib/watir/attribute_helper.rb
+- lib/watir/browser.rb
+- lib/watir/capabilities.rb
+- lib/watir/cell_container.rb
+- lib/watir/container.rb
+- lib/watir/cookies.rb
+- lib/watir/element_collection.rb
+- lib/watir/elements/button.rb
+- lib/watir/elements/cell.rb
+- lib/watir/elements/checkbox.rb
+- lib/watir/elements/date_field.rb
+- lib/watir/elements/date_time_field.rb
+- lib/watir/elements/dlist.rb
+- lib/watir/elements/element.rb
+- lib/watir/elements/file_field.rb
+- lib/watir/elements/font.rb
+- lib/watir/elements/form.rb
+- lib/watir/elements/hidden.rb
+- lib/watir/elements/html_elements.rb
+- lib/watir/elements/iframe.rb
+- lib/watir/elements/image.rb
+- lib/watir/elements/input.rb
+- lib/watir/elements/link.rb
+- lib/watir/elements/list.rb
+- lib/watir/elements/option.rb
+- lib/watir/elements/radio.rb
+- lib/watir/elements/row.rb
+- lib/watir/elements/select.rb
+- lib/watir/elements/svg_elements.rb
+- lib/watir/elements/table.rb
+- lib/watir/elements/table_cell.rb
+- lib/watir/elements/table_row.rb
+- lib/watir/elements/table_section.rb
+- lib/watir/elements/text_area.rb
+- lib/watir/elements/text_field.rb
+- lib/watir/exception.rb
+- lib/watir/extensions/nokogiri.rb
+- lib/watir/generator.rb
+- lib/watir/generator/base.rb
+- lib/watir/generator/base/generator.rb
+- lib/watir/generator/base/idl_sorter.rb
+- lib/watir/generator/base/spec_extractor.rb
+- lib/watir/generator/base/util.rb
+- lib/watir/generator/base/visitor.rb
+- lib/watir/generator/html.rb
+- lib/watir/generator/html/generator.rb
+- lib/watir/generator/html/spec_extractor.rb
+- lib/watir/generator/html/visitor.rb
+- lib/watir/generator/svg.rb
+- lib/watir/generator/svg/generator.rb
+- lib/watir/generator/svg/spec_extractor.rb
+- lib/watir/generator/svg/visitor.rb
+- lib/watir/has_window.rb
+- lib/watir/http_client.rb
+- lib/watir/js_execution.rb
+- lib/watir/js_snippets.rb
+- lib/watir/js_snippets/attributeValues.js
+- lib/watir/js_snippets/backgroundColor.js
+- lib/watir/js_snippets/elementObscured.js
+- lib/watir/js_snippets/fireEvent.js
+- lib/watir/js_snippets/focus.js
+- lib/watir/js_snippets/getElementTags.js
+- lib/watir/js_snippets/getInnerHtml.js
+- lib/watir/js_snippets/getInnerText.js
+- lib/watir/js_snippets/getOuterHtml.js
+- lib/watir/js_snippets/getTextContent.js
+- lib/watir/js_snippets/isElementInViewport.js
+- lib/watir/js_snippets/isImageLoaded.js
+- lib/watir/js_snippets/selectOptionsLabel.js
+- lib/watir/js_snippets/selectOptionsText.js
+- lib/watir/js_snippets/selectOptionsValue.js
+- lib/watir/js_snippets/selectText.js
+- lib/watir/js_snippets/selectedOptions.js
+- lib/watir/js_snippets/selectedText.js
+- lib/watir/js_snippets/setText.js
+- lib/watir/js_snippets/setValue.js
+- lib/watir/locators.rb
+- lib/watir/locators/anchor/selector_builder.rb
+- lib/watir/locators/button/matcher.rb
+- lib/watir/locators/button/selector_builder.rb
+- lib/watir/locators/button/selector_builder/xpath.rb
+- lib/watir/locators/cell/selector_builder.rb
+- lib/watir/locators/cell/selector_builder/xpath.rb
+- lib/watir/locators/element/locator.rb
+- lib/watir/locators/element/matcher.rb
+- lib/watir/locators/element/selector_builder.rb
+- lib/watir/locators/element/selector_builder/regexp_disassembler.rb
+- lib/watir/locators/element/selector_builder/xpath.rb
+- lib/watir/locators/element/selector_builder/xpath_support.rb
+- lib/watir/locators/option/matcher.rb
+- lib/watir/locators/option/selector_builder.rb
+- lib/watir/locators/option/selector_builder/xpath.rb
+- lib/watir/locators/row/selector_builder.rb
+- lib/watir/locators/row/selector_builder/xpath.rb
+- lib/watir/locators/text_area/selector_builder.rb
+- lib/watir/locators/text_area/selector_builder/xpath.rb
+- lib/watir/locators/text_field/matcher.rb
+- lib/watir/locators/text_field/selector_builder.rb
+- lib/watir/locators/text_field/selector_builder/xpath.rb
+- lib/watir/logger.rb
+- lib/watir/navigation.rb
+- lib/watir/radio_set.rb
+- lib/watir/row_container.rb
+- lib/watir/screenshot.rb
+- lib/watir/scroll.rb
+- lib/watir/search_context.rb
+- lib/watir/shadow_root.rb
+- lib/watir/user_editable.rb
+- lib/watir/version.rb
+- lib/watir/wait.rb
+- lib/watir/wait/timer.rb
+- lib/watir/window.rb
+- lib/watir/window_collection.rb
+- lib/watirspec.rb
+- lib/watirspec/guards.rb
+- lib/watirspec/implementation.rb
+- lib/watirspec/rake_tasks.rb
+- lib/watirspec/remote_server.rb
+- lib/watirspec/runner.rb
+- lib/watirspec/server.rb
+- lib/watirspec/server/app.rb
+- spec/locator_spec_helper.rb
+- spec/spec_helper.rb
+- spec/unit/capabilities_spec.rb
+- spec/unit/element_locator_spec.rb
+- spec/unit/match_elements/button_spec.rb
+- spec/unit/match_elements/element_spec.rb
+- spec/unit/match_elements/text_field_spec.rb
+- spec/unit/selector_builder/anchor_spec.rb
+- spec/unit/selector_builder/button_spec.rb
+- spec/unit/selector_builder/cell_spec.rb
+- spec/unit/selector_builder/element_spec.rb
+- spec/unit/selector_builder/row_spec.rb
+- spec/unit/selector_builder/text_field_spec.rb
+- spec/unit/selector_builder/textarea_spec.rb
+- spec/unit/unit_helper.rb
+- spec/unit/wait_spec.rb
+- spec/watirspec/adjacent_spec.rb
+- spec/watirspec/after_hooks_spec.rb
+- spec/watirspec/alert_spec.rb
+- spec/watirspec/browser_spec.rb
+- spec/watirspec/capabilities_spec.rb
+- spec/watirspec/cookies_spec.rb
+- spec/watirspec/drag_and_drop_spec.rb
+- spec/watirspec/element_hidden_spec.rb
+- spec/watirspec/elements/area_spec.rb
+- spec/watirspec/elements/areas_spec.rb
+- spec/watirspec/elements/button_spec.rb
+- spec/watirspec/elements/buttons_spec.rb
+- spec/watirspec/elements/checkbox_spec.rb
+- spec/watirspec/elements/checkboxes_spec.rb
+- spec/watirspec/elements/collections_spec.rb
+- spec/watirspec/elements/date_field_spec.rb
+- spec/watirspec/elements/date_fields_spec.rb
+- spec/watirspec/elements/date_time_field_spec.rb
+- spec/watirspec/elements/date_time_fields_spec.rb
+- spec/watirspec/elements/dd_spec.rb
+- spec/watirspec/elements/dds_spec.rb
+- spec/watirspec/elements/del_spec.rb
+- spec/watirspec/elements/dels_spec.rb
+- spec/watirspec/elements/div_spec.rb
+- spec/watirspec/elements/divs_spec.rb
+- spec/watirspec/elements/dl_spec.rb
+- spec/watirspec/elements/dls_spec.rb
+- spec/watirspec/elements/dt_spec.rb
+- spec/watirspec/elements/dts_spec.rb
+- spec/watirspec/elements/element_spec.rb
+- spec/watirspec/elements/elements_spec.rb
+- spec/watirspec/elements/em_spec.rb
+- spec/watirspec/elements/ems_spec.rb
+- spec/watirspec/elements/filefield_spec.rb
+- spec/watirspec/elements/filefields_spec.rb
+- spec/watirspec/elements/font_spec.rb
+- spec/watirspec/elements/form_spec.rb
+- spec/watirspec/elements/forms_spec.rb
+- spec/watirspec/elements/frame_spec.rb
+- spec/watirspec/elements/frames_spec.rb
+- spec/watirspec/elements/hidden_spec.rb
+- spec/watirspec/elements/hiddens_spec.rb
+- spec/watirspec/elements/hn_spec.rb
+- spec/watirspec/elements/hns_spec.rb
+- spec/watirspec/elements/iframe_spec.rb
+- spec/watirspec/elements/iframes_spec.rb
+- spec/watirspec/elements/image_spec.rb
+- spec/watirspec/elements/images_spec.rb
+- spec/watirspec/elements/input_spec.rb
+- spec/watirspec/elements/ins_spec.rb
+- spec/watirspec/elements/inses_spec.rb
+- spec/watirspec/elements/label_spec.rb
+- spec/watirspec/elements/labels_spec.rb
+- spec/watirspec/elements/li_spec.rb
+- spec/watirspec/elements/link_spec.rb
+- spec/watirspec/elements/links_spec.rb
+- spec/watirspec/elements/lis_spec.rb
+- spec/watirspec/elements/list_spec.rb
+- spec/watirspec/elements/map_spec.rb
+- spec/watirspec/elements/maps_spec.rb
+- spec/watirspec/elements/meta_spec.rb
+- spec/watirspec/elements/metas_spec.rb
+- spec/watirspec/elements/ol_spec.rb
+- spec/watirspec/elements/ols_spec.rb
+- spec/watirspec/elements/option_spec.rb
+- spec/watirspec/elements/p_spec.rb
+- spec/watirspec/elements/pre_spec.rb
+- spec/watirspec/elements/pres_spec.rb
+- spec/watirspec/elements/ps_spec.rb
+- spec/watirspec/elements/radio_spec.rb
+- spec/watirspec/elements/radios_spec.rb
+- spec/watirspec/elements/select_list_spec.rb
+- spec/watirspec/elements/select_lists_spec.rb
+- spec/watirspec/elements/span_spec.rb
+- spec/watirspec/elements/spans_spec.rb
+- spec/watirspec/elements/strong_spec.rb
+- spec/watirspec/elements/strongs_spec.rb
+- spec/watirspec/elements/table_spec.rb
+- spec/watirspec/elements/tables_spec.rb
+- spec/watirspec/elements/tbody_spec.rb
+- spec/watirspec/elements/tbodys_spec.rb
+- spec/watirspec/elements/td_spec.rb
+- spec/watirspec/elements/tds_spec.rb
+- spec/watirspec/elements/text_field_spec.rb
+- spec/watirspec/elements/text_fields_spec.rb
+- spec/watirspec/elements/textarea_spec.rb
+- spec/watirspec/elements/textareas_spec.rb
+- spec/watirspec/elements/tfoot_spec.rb
+- spec/watirspec/elements/tfoots_spec.rb
+- spec/watirspec/elements/thead_spec.rb
+- spec/watirspec/elements/theads_spec.rb
+- spec/watirspec/elements/tr_spec.rb
+- spec/watirspec/elements/trs_spec.rb
+- spec/watirspec/elements/ul_spec.rb
+- spec/watirspec/elements/uls_spec.rb
+- spec/watirspec/html/alerts.html
+- spec/watirspec/html/aria_attributes.html
+- spec/watirspec/html/child_frame.html
+- spec/watirspec/html/class_locator.html
+- spec/watirspec/html/clicks.html
+- spec/watirspec/html/closeable.html
+- spec/watirspec/html/collections.html
+- spec/watirspec/html/css/jquery-ui-1.8.17.custom.css
+- spec/watirspec/html/data_attributes.html
+- spec/watirspec/html/definition_lists.html
+- spec/watirspec/html/drag_and_drop.html
+- spec/watirspec/html/font.html
+- spec/watirspec/html/forms_with_input_elements.html
+- spec/watirspec/html/frame_1.html
+- spec/watirspec/html/frame_2.html
+- spec/watirspec/html/frames.html
+- spec/watirspec/html/iframe_1.html
+- spec/watirspec/html/iframes.html
+- spec/watirspec/html/images.html
+- spec/watirspec/html/images/1.gif
+- spec/watirspec/html/images/2.gif
+- spec/watirspec/html/images/3.gif
+- spec/watirspec/html/images/button.png
+- spec/watirspec/html/images/circle.png
+- spec/watirspec/html/images/map.gif
+- spec/watirspec/html/images/map2.gif
+- spec/watirspec/html/images/minus.gif
+- spec/watirspec/html/images/originaltriangle.png
+- spec/watirspec/html/images/plus.gif
+- spec/watirspec/html/images/square.png
+- spec/watirspec/html/images/triangle.png
+- spec/watirspec/html/inner_outer.html
+- spec/watirspec/html/javascript/angular.min.js
+- spec/watirspec/html/javascript/helpers.js
+- spec/watirspec/html/javascript/jquery-1.7.1.min.js
+- spec/watirspec/html/javascript/jquery-ui-1.8.17.custom.min.js
+- spec/watirspec/html/keylogger.html
+- spec/watirspec/html/modal_dialog.html
+- spec/watirspec/html/multiple_ids.html
+- spec/watirspec/html/nested_elements.html
+- spec/watirspec/html/nested_frame_1.html
+- spec/watirspec/html/nested_frame_2.html
+- spec/watirspec/html/nested_frame_3.html
+- spec/watirspec/html/nested_frames.html
+- spec/watirspec/html/nested_iframe_2.html
+- spec/watirspec/html/nested_iframes.html
+- spec/watirspec/html/nested_tables.html
+- spec/watirspec/html/non_control_elements.html
+- spec/watirspec/html/obscured.html
+- spec/watirspec/html/removed_element.html
+- spec/watirspec/html/right_click.html
+- spec/watirspec/html/scroll.html
+- spec/watirspec/html/scroll_nested.html
+- spec/watirspec/html/scroll_nested_offscreen.html
+- spec/watirspec/html/shadow_dom.html
+- spec/watirspec/html/special_chars.html
+- spec/watirspec/html/sticky_elements.html
+- spec/watirspec/html/tables.html
+- spec/watirspec/html/timeout_window_location.html
+- spec/watirspec/html/uneven_table.html
+- spec/watirspec/html/wait.html
+- spec/watirspec/html/watirspec.css
+- spec/watirspec/html/window_switching.html
+- spec/watirspec/radio_set_spec.rb
+- spec/watirspec/screenshot_spec.rb
+- spec/watirspec/scroll_spec.rb
+- spec/watirspec/shadow_root_spec.rb
+- spec/watirspec/support/rspec_matchers.rb
+- spec/watirspec/user_editable_spec.rb
+- spec/watirspec/wait_spec.rb
+- spec/watirspec/window_switching_spec.rb
+- spec/watirspec_helper.rb
+- support/doctest_helper.rb
+- support/version_differ.rb
+- watir.gemspec
+homepage: https://github.com/watir/watir
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key:
+specification_version: 4
+summary: Watir powered by Selenium
+test_files: []

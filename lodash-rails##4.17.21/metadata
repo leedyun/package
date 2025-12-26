@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: lodash-rails
+version: !ruby/object:Gem::Version
+  version: 4.17.21
+platform: ruby
+authors:
+- Richard Hubers
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-05-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+description: lodash for the Rails asset pipeline
+email:
+- richard.hubers@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/lodash-rails.rb
+- lib/lodash/rails.rb
+- lib/lodash/rails/engine.rb
+- lib/lodash/rails/version.rb
+- vendor/assets/javascripts/lodash.core.js
+- vendor/assets/javascripts/lodash.core.min.js
+- vendor/assets/javascripts/lodash.js
+- vendor/assets/javascripts/lodash.min.js
+homepage: http://github.com/rh/lodash-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: This gem makes lodash available for the Rails asset pipeline
+test_files: []

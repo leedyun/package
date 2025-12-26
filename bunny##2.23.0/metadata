@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: bunny
+version: !ruby/object:Gem::Version
+  version: 2.23.0
+platform: ruby
+authors:
+- Chris Duncan
+- Eric Lindvall
+- Jakub Stastny aka botanicus
+- Michael S. Klishin
+- Stefan Kaes
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-07-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: amq-protocol
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.1
+- !ruby/object:Gem::Dependency
+  name: sorted_set
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+description: Easy to use, feature complete Ruby client for RabbitMQ 3.9 and later
+  versions.
+email:
+- michael.s.klishin@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- README.md
+- lib/amq/protocol/extensions.rb
+- lib/bunny.rb
+- lib/bunny/authentication/credentials_encoder.rb
+- lib/bunny/authentication/external_mechanism_encoder.rb
+- lib/bunny/authentication/plain_mechanism_encoder.rb
+- lib/bunny/channel.rb
+- lib/bunny/channel_id_allocator.rb
+- lib/bunny/concurrent/atomic_fixnum.rb
+- lib/bunny/concurrent/condition.rb
+- lib/bunny/concurrent/continuation_queue.rb
+- lib/bunny/concurrent/linked_continuation_queue.rb
+- lib/bunny/concurrent/synchronized_sorted_set.rb
+- lib/bunny/consumer.rb
+- lib/bunny/consumer_tag_generator.rb
+- lib/bunny/consumer_work_pool.rb
+- lib/bunny/cruby/socket.rb
+- lib/bunny/cruby/ssl_socket.rb
+- lib/bunny/delivery_info.rb
+- lib/bunny/exceptions.rb
+- lib/bunny/exchange.rb
+- lib/bunny/framing.rb
+- lib/bunny/get_response.rb
+- lib/bunny/heartbeat_sender.rb
+- lib/bunny/jruby/socket.rb
+- lib/bunny/jruby/ssl_socket.rb
+- lib/bunny/message_properties.rb
+- lib/bunny/queue.rb
+- lib/bunny/reader_loop.rb
+- lib/bunny/return_info.rb
+- lib/bunny/session.rb
+- lib/bunny/socket.rb
+- lib/bunny/ssl_socket.rb
+- lib/bunny/test_kit.rb
+- lib/bunny/timeout.rb
+- lib/bunny/timestamp.rb
+- lib/bunny/transport.rb
+- lib/bunny/version.rb
+- lib/bunny/versioned_delivery_tag.rb
+homepage: http://rubybunny.info
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/ruby-amqp/bunny/blob/main/ChangeLog.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Popular easy to use Ruby client for RabbitMQ
+test_files: []

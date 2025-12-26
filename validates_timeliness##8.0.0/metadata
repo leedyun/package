@@ -1,0 +1,157 @@
+--- !ruby/object:Gem::Specification
+name: validates_timeliness
+version: !ruby/object:Gem::Version
+  version: 8.0.0
+platform: ruby
+authors:
+- Adam Meehan
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+- !ruby/object:Gem::Dependency
+  name: timeliness
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.10
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.10
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1'
+description: Adds validation methods to ActiveModel for validating dates and times.
+  Works with multiple ORMS.
+email: adam.meehan@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- gemfiles/rails_8_0.gemfile
+- init.rb
+- lib/generators/validates_timeliness/install_generator.rb
+- lib/generators/validates_timeliness/templates/en.yml
+- lib/generators/validates_timeliness/templates/validates_timeliness.rb
+- lib/validates_timeliness.rb
+- lib/validates_timeliness/attribute_methods.rb
+- lib/validates_timeliness/converter.rb
+- lib/validates_timeliness/extensions.rb
+- lib/validates_timeliness/extensions/date_time_select.rb
+- lib/validates_timeliness/extensions/multiparameter_handler.rb
+- lib/validates_timeliness/helper_methods.rb
+- lib/validates_timeliness/orm/active_model.rb
+- lib/validates_timeliness/orm/active_record.rb
+- lib/validates_timeliness/railtie.rb
+- lib/validates_timeliness/validator.rb
+- lib/validates_timeliness/version.rb
+- spec/spec_helper.rb
+- spec/support/config_helper.rb
+- spec/support/model_helpers.rb
+- spec/support/tag_matcher.rb
+- spec/support/test_model.rb
+- spec/validates_timeliness/attribute_methods_spec.rb
+- spec/validates_timeliness/converter_spec.rb
+- spec/validates_timeliness/extensions/date_time_select_spec.rb
+- spec/validates_timeliness/extensions/multiparameter_handler_spec.rb
+- spec/validates_timeliness/helper_methods_spec.rb
+- spec/validates_timeliness/orm/active_model_spec.rb
+- spec/validates_timeliness/orm/active_record_spec.rb
+- spec/validates_timeliness/railtie_spec.rb
+- spec/validates_timeliness/validator/after_spec.rb
+- spec/validates_timeliness/validator/before_spec.rb
+- spec/validates_timeliness/validator/format_spec.rb
+- spec/validates_timeliness/validator/is_at_spec.rb
+- spec/validates_timeliness/validator/on_or_after_spec.rb
+- spec/validates_timeliness/validator/on_or_before_spec.rb
+- spec/validates_timeliness/validator_spec.rb
+- spec/validates_timeliness_spec.rb
+- validates_timeliness.gemspec
+homepage: https://github.com/adzap/validates_timeliness
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+  bug_tracker_uri: https://github.com/adzap/validates_timeliness/issues
+  changelog_uri: https://github.com/adzap/validates_timeliness/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/adzap/validates_timeliness
+  wiki_uri: https://github.com/adzap/validates_timeliness/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Date and time validation plugin for Rails which allows custom formats
+test_files:
+- spec/spec_helper.rb
+- spec/support/config_helper.rb
+- spec/support/model_helpers.rb
+- spec/support/tag_matcher.rb
+- spec/support/test_model.rb
+- spec/validates_timeliness/attribute_methods_spec.rb
+- spec/validates_timeliness/converter_spec.rb
+- spec/validates_timeliness/extensions/date_time_select_spec.rb
+- spec/validates_timeliness/extensions/multiparameter_handler_spec.rb
+- spec/validates_timeliness/helper_methods_spec.rb
+- spec/validates_timeliness/orm/active_model_spec.rb
+- spec/validates_timeliness/orm/active_record_spec.rb
+- spec/validates_timeliness/railtie_spec.rb
+- spec/validates_timeliness/validator/after_spec.rb
+- spec/validates_timeliness/validator/before_spec.rb
+- spec/validates_timeliness/validator/format_spec.rb
+- spec/validates_timeliness/validator/is_at_spec.rb
+- spec/validates_timeliness/validator/on_or_after_spec.rb
+- spec/validates_timeliness/validator/on_or_before_spec.rb
+- spec/validates_timeliness/validator_spec.rb
+- spec/validates_timeliness_spec.rb

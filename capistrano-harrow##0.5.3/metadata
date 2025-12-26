@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: capistrano-harrow
+version: !ruby/object:Gem::Version
+  version: 0.5.3
+platform: ruby
+authors:
+- Lee Hambley
+- Dario Hamidi
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2016-07-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.3
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.2.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.2.4
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.4.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.4.7
+description: Hooks to allow people experiencing problems with Capistrano to register
+  with a service to get help and have a smoother workflow.
+email:
+- leehambley@harrow.io
+- dariohamidi@harrow.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- capistrano-harrow.gemspec
+- integration-test-server.rb
+- integration-test.rb
+- lib/capistrano/harrow.rb
+- lib/capistrano/harrow/api.rb
+- lib/capistrano/harrow/banner.rb
+- lib/capistrano/harrow/config.rb
+- lib/capistrano/harrow/config/git.rb
+- lib/capistrano/harrow/http.rb
+- lib/capistrano/harrow/installer.rb
+- lib/capistrano/harrow/plugin.rb
+- lib/capistrano/harrow/ui.rb
+- lib/capistrano/harrow/ui/tty.rb
+- lib/capistrano/harrow/version.rb
+homepage: https://github.com/harrowio/capistrano-harrow
+licenses:
+- MIT
+metadata: {}
+post_install_message: |2+
+
+       ___   _   ___ ___ ___ _____ ___    _   _  _  ___
+      / __| /_\ | _ \_ _/ __|_   _| _ \  /_\ | \| |/ _ \
+     | (__ / _ \|  _/| |\__ \ | | |   / / _ \| .` | (_) |
+      \___/_/ \_\_| |___|___/ |_| |_|_\/_/ \_\_|\_|\___/
+
+      Learn about our web-based collaboration and
+      automation platform for Capistrano: hrw.io/auto-cap
+
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.8
+signing_key: 
+specification_version: 4
+summary: A plugin to improve the user experience for users of Capistrano and Harrow
+test_files: []

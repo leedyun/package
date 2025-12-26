@@ -1,0 +1,79 @@
+--- !ruby/object:Gem::Specification
+name: cocoapods_icemobile-plugin
+version: !ruby/object:Gem::Version
+  version: 0.0.8
+platform: ruby
+authors:
+- Sumeru Chatterjee
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cocoapods
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.29'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.29'
+description: IceMobile Plugin for CocoaPods (Used within IceMobile for internal projects.
+email: sumeru@icemobile.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- README.md
+- Rakefile
+- cocoapods_icemobile-plugin.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- fixtures/BootstrapDelegate.h.erb
+- fixtures/BootstrapDelegate.m.erb
+- fixtures/Info.plist.erb
+- fixtures/Podfile.erb
+- fixtures/Prefix.pch.erb
+- fixtures/README.md.erb
+- fixtures/SidebarContainerViewControllerSkinner.h.erb
+- fixtures/SidebarContainerViewControllerSkinner.m.erb
+- fixtures/main.m.erb
+- lib/cocoapods-icemobile-plugin.rb
+- lib/cocoapods-icemobile-plugin/version.rb
+- lib/cocoapods_plugin.rb
+- lib/pod/command/icegenerate.rb
+- lib/pod/helper/project_builder.rb
+- lib/pod/helper/template_file.rb
+homepage: http://www.icemobile.com
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: CocoaPods plugin for internal icemobile projects.
+test_files: []

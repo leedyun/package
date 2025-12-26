@@ -1,0 +1,336 @@
+--- !ruby/object:Gem::Specification
+name: biblesearch_api
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Bryce Allison
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: oj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.4.0
+- !ruby/object:Gem::Dependency
+  name: httparty
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.9.2.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.9.2.2
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Wrapper for the American Bible Society Bible Search API
+email:
+- support@bibles.org
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Guardfile
+- HISTORY.md
+- LICENSE
+- README.md
+- Rakefile
+- biblesearch_api.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/biblesearch-api.rb
+- lib/biblesearch-api/api_interface.rb
+- lib/biblesearch-api/client_version.rb
+- lib/biblesearch-api/endpoints/books.rb
+- lib/biblesearch-api/endpoints/chapters.rb
+- lib/biblesearch-api/endpoints/passages.rb
+- lib/biblesearch-api/endpoints/search.rb
+- lib/biblesearch-api/endpoints/verses.rb
+- lib/biblesearch-api/endpoints/versions.rb
+- spec/README.md
+- spec/biblesearch-api/endpoints/books_spec.rb
+- spec/biblesearch-api/endpoints/chapters_spec.rb
+- spec/biblesearch-api/endpoints/fumsify_for_all_endpoints_spec.rb
+- spec/biblesearch-api/endpoints/passages_spec.rb
+- spec/biblesearch-api/endpoints/search_spec.rb
+- spec/biblesearch-api/endpoints/verses_spec.rb
+- spec/biblesearch-api/endpoints/versions_spec.rb
+- spec/biblesearch-api/pathtest.rb
+- spec/biblesearch-api_spec.rb
+- spec/cassettes/biblesearch-api_spec-test_0001_has_a_http_response_code_other_than_200.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_a_nil_fums_same_singular_and_plural_behavior_as_good_.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_fums_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_returns_a_mash_with_a_collection_and_a_fums.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_returns_a_mash_with_a_value_and_a_fums.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_http_response_code_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_message_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_real_response.yml
+- spec/cassettes/biblesearch-api_spec-test_0003_has_a_nil_response.yml
+- spec/cassettes/biblesearch-api_spec-test_0003_has_a_response.yml
+- spec/cassettes/endpoint-books_spec-test_0001_has_a_book_value.yml
+- spec/cassettes/endpoint-books_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-books_spec-test_0001_requires_a_version_id.yml
+- spec/cassettes/endpoint-books_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-books_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-books_spec-test_0002_accepts_an_optional_testament_id.yml
+- spec/cassettes/endpoint-books_spec-test_0002_contains_books_with_chapters.yml
+- spec/cassettes/endpoint-books_spec-test_0002_contains_books_without_chapters.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_doesn_t_raise_an_ArgumentError.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_has_a_chapter_value.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_an_empty_array.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-chapters_spec-test_0002_has_verses.yml
+- spec/cassettes/endpoint-chapters_spec-test_0002_should_contain_chapters.yml
+- spec/cassettes/endpoint-chapters_spec-test_0003_can_be_requested_without_marginalia.yml
+- spec/cassettes/endpoint-chapters_spec-test_0004_can_be_requested_with_marginalia.yml
+- spec/cassettes/endpoint-passages_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-passages_spec-test_0001_should_provide_the_passage_for_each_version_specified.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_can_include_marginalia.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_a_single_passage.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_no_passages.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_passages.yml
+- spec/cassettes/endpoint-passages_spec-test_0003_can_include_marginalia.yml
+- spec/cassettes/endpoint-search_spec-test_0001_has_a_Hashie_Mash_value.yml
+- spec/cassettes/endpoint-search_spec-test_0001_returns_passages.yml
+- spec/cassettes/endpoint-search_spec-test_0001_returns_verses.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_doesn_t_raise_an_ArgumentError.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_has_a_verse_value.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_an_empty_array.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_can_include_marginalia.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_should_contain_one_verse.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_should_contain_the_proper_number_of_verses.yml
+- spec/cassettes/endpoint-verses_spec-test_0003_can_include_marginalia.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_a_nonexistent_version_with_a_language_code_returns_nil.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_has_a_version_value.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_should_return_only_those_representative_versions.yml
+- spec/cassettes/endpoint-versions_spec-test_0002_should_be_empty.yml
+- spec/cassettes/endpoint-versions_spec-test_0002_should_contain_versions.yml
+- spec/cassettes/fumsify_for_all_endpoints_spec-test_0001_has_real_fums_for_all_requests.yml
+- spec/cassettes/fumsify_for_all_endpoints_spec-test_0001_has_real_fums_for_all_valid_requests.yml
+- spec/spec_helper.rb
+homepage: http://bibles.org
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Wrapper for the American Bible Society Bible Search API
+test_files:
+- spec/README.md
+- spec/biblesearch-api/endpoints/books_spec.rb
+- spec/biblesearch-api/endpoints/chapters_spec.rb
+- spec/biblesearch-api/endpoints/fumsify_for_all_endpoints_spec.rb
+- spec/biblesearch-api/endpoints/passages_spec.rb
+- spec/biblesearch-api/endpoints/search_spec.rb
+- spec/biblesearch-api/endpoints/verses_spec.rb
+- spec/biblesearch-api/endpoints/versions_spec.rb
+- spec/biblesearch-api/pathtest.rb
+- spec/biblesearch-api_spec.rb
+- spec/cassettes/biblesearch-api_spec-test_0001_has_a_http_response_code_other_than_200.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_a_nil_fums_same_singular_and_plural_behavior_as_good_.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_fums_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_has_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_returns_a_mash_with_a_collection_and_a_fums.yml
+- spec/cassettes/biblesearch-api_spec-test_0001_returns_a_mash_with_a_value_and_a_fums.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_http_response_code_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_message_in_the_metadata.yml
+- spec/cassettes/biblesearch-api_spec-test_0002_has_a_real_response.yml
+- spec/cassettes/biblesearch-api_spec-test_0003_has_a_nil_response.yml
+- spec/cassettes/biblesearch-api_spec-test_0003_has_a_response.yml
+- spec/cassettes/endpoint-books_spec-test_0001_has_a_book_value.yml
+- spec/cassettes/endpoint-books_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-books_spec-test_0001_requires_a_version_id.yml
+- spec/cassettes/endpoint-books_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-books_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-books_spec-test_0002_accepts_an_optional_testament_id.yml
+- spec/cassettes/endpoint-books_spec-test_0002_contains_books_with_chapters.yml
+- spec/cassettes/endpoint-books_spec-test_0002_contains_books_without_chapters.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_doesn_t_raise_an_ArgumentError.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_has_a_chapter_value.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_an_empty_array.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-chapters_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-chapters_spec-test_0002_has_verses.yml
+- spec/cassettes/endpoint-chapters_spec-test_0002_should_contain_chapters.yml
+- spec/cassettes/endpoint-chapters_spec-test_0003_can_be_requested_without_marginalia.yml
+- spec/cassettes/endpoint-chapters_spec-test_0004_can_be_requested_with_marginalia.yml
+- spec/cassettes/endpoint-passages_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-passages_spec-test_0001_should_provide_the_passage_for_each_version_specified.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_can_include_marginalia.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_a_single_passage.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_no_passages.yml
+- spec/cassettes/endpoint-passages_spec-test_0002_should_contain_passages.yml
+- spec/cassettes/endpoint-passages_spec-test_0003_can_include_marginalia.yml
+- spec/cassettes/endpoint-search_spec-test_0001_has_a_Hashie_Mash_value.yml
+- spec/cassettes/endpoint-search_spec-test_0001_returns_passages.yml
+- spec/cassettes/endpoint-search_spec-test_0001_returns_verses.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_doesn_t_raise_an_ArgumentError.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_has_a_verse_value.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_an_empty_array.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_nil.yml
+- spec/cassettes/endpoint-verses_spec-test_0001_returns_the_same_thing_as_the_equivalent_string_sig.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_can_include_marginalia.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_should_contain_one_verse.yml
+- spec/cassettes/endpoint-verses_spec-test_0002_should_contain_the_proper_number_of_verses.yml
+- spec/cassettes/endpoint-verses_spec-test_0003_can_include_marginalia.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_a_nonexistent_version_with_a_language_code_returns_nil.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_has_a_collection.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_has_a_version_value.yml
+- spec/cassettes/endpoint-versions_spec-test_0001_should_return_only_those_representative_versions.yml
+- spec/cassettes/endpoint-versions_spec-test_0002_should_be_empty.yml
+- spec/cassettes/endpoint-versions_spec-test_0002_should_contain_versions.yml
+- spec/cassettes/fumsify_for_all_endpoints_spec-test_0001_has_real_fums_for_all_requests.yml
+- spec/cassettes/fumsify_for_all_endpoints_spec-test_0001_has_real_fums_for_all_valid_requests.yml
+- spec/spec_helper.rb

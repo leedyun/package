@@ -1,0 +1,970 @@
+--- !ruby/object:Gem::Specification
+name: twilio-ruby
+version: !ruby/object:Gem::Version
+  version: 7.4.2
+platform: ruby
+authors:
+- Twilio API Team
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: equivalent-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: fakeweb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.9
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.9
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.2
+description: The official library for communicating with the Twilio REST API, building
+  TwiML, and generating Twilio JWT Capability Tokens
+email:
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".dockerignore"
+- ".github/workflows/pr-lint.yml"
+- ".github/workflows/test-and-deploy.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- AUTHORS.md
+- CHANGES.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dockerfile
+- Gemfile
+- ISSUE_TEMPLATE.md
+- LICENSE
+- Makefile
+- PULL_REQUEST_TEMPLATE.md
+- README.md
+- Rakefile
+- UPGRADE.md
+- VERSIONS.md
+- advanced-examples/custom-http-client.md
+- cluster/cluster_oauth_spec.rb
+- cluster/cluster_orgs_spec.rb
+- cluster/cluster_spec.rb
+- examples/examples.rb
+- examples/print_call_log.rb
+- examples/public_oauth.rb
+- githooks/pre-commit
+- lib/rack/twilio_webhook_authentication.rb
+- lib/twilio-ruby.rb
+- lib/twilio-ruby/auth_strategy/auth_strategy.rb
+- lib/twilio-ruby/auth_strategy/no_auth_strategy.rb
+- lib/twilio-ruby/auth_strategy/token_auth_strategy.rb
+- lib/twilio-ruby/base/client_base.rb
+- lib/twilio-ruby/credential/auth_type.rb
+- lib/twilio-ruby/credential/client_credential_provider.rb
+- lib/twilio-ruby/credential/credential_provider.rb
+- lib/twilio-ruby/credential/orgs_credential_provider.rb
+- lib/twilio-ruby/framework/request.rb
+- lib/twilio-ruby/framework/response.rb
+- lib/twilio-ruby/framework/rest/domain.rb
+- lib/twilio-ruby/framework/rest/error.rb
+- lib/twilio-ruby/framework/rest/helper.rb
+- lib/twilio-ruby/framework/rest/obsolete_client.rb
+- lib/twilio-ruby/framework/rest/page.rb
+- lib/twilio-ruby/framework/rest/resource.rb
+- lib/twilio-ruby/framework/rest/version.rb
+- lib/twilio-ruby/framework/serialize.rb
+- lib/twilio-ruby/framework/values.rb
+- lib/twilio-ruby/http.rb
+- lib/twilio-ruby/http/client_token_manager.rb
+- lib/twilio-ruby/http/http_client.rb
+- lib/twilio-ruby/http/org_token_manager.rb
+- lib/twilio-ruby/jwt/access_token.rb
+- lib/twilio-ruby/jwt/client_capability.rb
+- lib/twilio-ruby/jwt/jwt.rb
+- lib/twilio-ruby/jwt/task_router.rb
+- lib/twilio-ruby/rest.rb
+- lib/twilio-ruby/rest/accounts.rb
+- lib/twilio-ruby/rest/accounts/v1.rb
+- lib/twilio-ruby/rest/accounts/v1/auth_token_promotion.rb
+- lib/twilio-ruby/rest/accounts/v1/bulk_consents.rb
+- lib/twilio-ruby/rest/accounts/v1/bulk_contacts.rb
+- lib/twilio-ruby/rest/accounts/v1/credential.rb
+- lib/twilio-ruby/rest/accounts/v1/credential/aws.rb
+- lib/twilio-ruby/rest/accounts/v1/credential/public_key.rb
+- lib/twilio-ruby/rest/accounts/v1/safelist.rb
+- lib/twilio-ruby/rest/accounts/v1/secondary_auth_token.rb
+- lib/twilio-ruby/rest/accounts_base.rb
+- lib/twilio-ruby/rest/api.rb
+- lib/twilio-ruby/rest/api/v2010.rb
+- lib/twilio-ruby/rest/api/v2010/account.rb
+- lib/twilio-ruby/rest/api/v2010/account/address.rb
+- lib/twilio-ruby/rest/api/v2010/account/address/dependent_phone_number.rb
+- lib/twilio-ruby/rest/api/v2010/account/application.rb
+- lib/twilio-ruby/rest/api/v2010/account/authorized_connect_app.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/local.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/machine_to_machine.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/mobile.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/national.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/shared_cost.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/toll_free.rb
+- lib/twilio-ruby/rest/api/v2010/account/available_phone_number_country/voip.rb
+- lib/twilio-ruby/rest/api/v2010/account/balance.rb
+- lib/twilio-ruby/rest/api/v2010/account/call.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/event.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/notification.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/payment.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/recording.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/siprec.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/stream.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/transcription.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/user_defined_message.rb
+- lib/twilio-ruby/rest/api/v2010/account/call/user_defined_message_subscription.rb
+- lib/twilio-ruby/rest/api/v2010/account/conference.rb
+- lib/twilio-ruby/rest/api/v2010/account/conference/participant.rb
+- lib/twilio-ruby/rest/api/v2010/account/conference/recording.rb
+- lib/twilio-ruby/rest/api/v2010/account/connect_app.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number/assigned_add_on.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number/assigned_add_on/assigned_add_on_extension.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number/local.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number/mobile.rb
+- lib/twilio-ruby/rest/api/v2010/account/incoming_phone_number/toll_free.rb
+- lib/twilio-ruby/rest/api/v2010/account/key.rb
+- lib/twilio-ruby/rest/api/v2010/account/message.rb
+- lib/twilio-ruby/rest/api/v2010/account/message/feedback.rb
+- lib/twilio-ruby/rest/api/v2010/account/message/media.rb
+- lib/twilio-ruby/rest/api/v2010/account/new_key.rb
+- lib/twilio-ruby/rest/api/v2010/account/new_signing_key.rb
+- lib/twilio-ruby/rest/api/v2010/account/notification.rb
+- lib/twilio-ruby/rest/api/v2010/account/outgoing_caller_id.rb
+- lib/twilio-ruby/rest/api/v2010/account/queue.rb
+- lib/twilio-ruby/rest/api/v2010/account/queue/member.rb
+- lib/twilio-ruby/rest/api/v2010/account/recording.rb
+- lib/twilio-ruby/rest/api/v2010/account/recording/add_on_result.rb
+- lib/twilio-ruby/rest/api/v2010/account/recording/add_on_result/payload.rb
+- lib/twilio-ruby/rest/api/v2010/account/recording/add_on_result/payload/data.rb
+- lib/twilio-ruby/rest/api/v2010/account/recording/transcription.rb
+- lib/twilio-ruby/rest/api/v2010/account/short_code.rb
+- lib/twilio-ruby/rest/api/v2010/account/signing_key.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/credential_list.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/credential_list/credential.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_credential_list_mapping.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_ip_access_control_list_mapping.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations/auth_registrations_credential_list_mapping.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/credential_list_mapping.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/domain/ip_access_control_list_mapping.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/ip_access_control_list.rb
+- lib/twilio-ruby/rest/api/v2010/account/sip/ip_access_control_list/ip_address.rb
+- lib/twilio-ruby/rest/api/v2010/account/token.rb
+- lib/twilio-ruby/rest/api/v2010/account/transcription.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/all_time.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/daily.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/last_month.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/monthly.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/this_month.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/today.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/yearly.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/record/yesterday.rb
+- lib/twilio-ruby/rest/api/v2010/account/usage/trigger.rb
+- lib/twilio-ruby/rest/api/v2010/account/validation_request.rb
+- lib/twilio-ruby/rest/api_base.rb
+- lib/twilio-ruby/rest/assistants.rb
+- lib/twilio-ruby/rest/assistants/v1.rb
+- lib/twilio-ruby/rest/assistants/v1/assistant.rb
+- lib/twilio-ruby/rest/assistants/v1/assistant/assistants_knowledge.rb
+- lib/twilio-ruby/rest/assistants/v1/assistant/assistants_tool.rb
+- lib/twilio-ruby/rest/assistants/v1/assistant/feedback.rb
+- lib/twilio-ruby/rest/assistants/v1/assistant/message.rb
+- lib/twilio-ruby/rest/assistants/v1/knowledge.rb
+- lib/twilio-ruby/rest/assistants/v1/knowledge/chunk.rb
+- lib/twilio-ruby/rest/assistants/v1/knowledge/knowledge_status.rb
+- lib/twilio-ruby/rest/assistants/v1/policy.rb
+- lib/twilio-ruby/rest/assistants/v1/session.rb
+- lib/twilio-ruby/rest/assistants/v1/session/message.rb
+- lib/twilio-ruby/rest/assistants/v1/tool.rb
+- lib/twilio-ruby/rest/assistants_base.rb
+- lib/twilio-ruby/rest/bulkexports.rb
+- lib/twilio-ruby/rest/bulkexports/v1.rb
+- lib/twilio-ruby/rest/bulkexports/v1/export.rb
+- lib/twilio-ruby/rest/bulkexports/v1/export/day.rb
+- lib/twilio-ruby/rest/bulkexports/v1/export/export_custom_job.rb
+- lib/twilio-ruby/rest/bulkexports/v1/export/job.rb
+- lib/twilio-ruby/rest/bulkexports/v1/export_configuration.rb
+- lib/twilio-ruby/rest/bulkexports_base.rb
+- lib/twilio-ruby/rest/chat.rb
+- lib/twilio-ruby/rest/chat/v1.rb
+- lib/twilio-ruby/rest/chat/v1/credential.rb
+- lib/twilio-ruby/rest/chat/v1/service.rb
+- lib/twilio-ruby/rest/chat/v1/service/channel.rb
+- lib/twilio-ruby/rest/chat/v1/service/channel/invite.rb
+- lib/twilio-ruby/rest/chat/v1/service/channel/member.rb
+- lib/twilio-ruby/rest/chat/v1/service/channel/message.rb
+- lib/twilio-ruby/rest/chat/v1/service/role.rb
+- lib/twilio-ruby/rest/chat/v1/service/user.rb
+- lib/twilio-ruby/rest/chat/v1/service/user/user_channel.rb
+- lib/twilio-ruby/rest/chat/v2.rb
+- lib/twilio-ruby/rest/chat/v2/credential.rb
+- lib/twilio-ruby/rest/chat/v2/service.rb
+- lib/twilio-ruby/rest/chat/v2/service/binding.rb
+- lib/twilio-ruby/rest/chat/v2/service/channel.rb
+- lib/twilio-ruby/rest/chat/v2/service/channel/invite.rb
+- lib/twilio-ruby/rest/chat/v2/service/channel/member.rb
+- lib/twilio-ruby/rest/chat/v2/service/channel/message.rb
+- lib/twilio-ruby/rest/chat/v2/service/channel/webhook.rb
+- lib/twilio-ruby/rest/chat/v2/service/role.rb
+- lib/twilio-ruby/rest/chat/v2/service/user.rb
+- lib/twilio-ruby/rest/chat/v2/service/user/user_binding.rb
+- lib/twilio-ruby/rest/chat/v2/service/user/user_channel.rb
+- lib/twilio-ruby/rest/chat/v3.rb
+- lib/twilio-ruby/rest/chat/v3/channel.rb
+- lib/twilio-ruby/rest/chat_base.rb
+- lib/twilio-ruby/rest/client.rb
+- lib/twilio-ruby/rest/content.rb
+- lib/twilio-ruby/rest/content/v1.rb
+- lib/twilio-ruby/rest/content/v1/content.rb
+- lib/twilio-ruby/rest/content/v1/content/approval_create.rb
+- lib/twilio-ruby/rest/content/v1/content/approval_fetch.rb
+- lib/twilio-ruby/rest/content/v1/content_and_approvals.rb
+- lib/twilio-ruby/rest/content/v1/legacy_content.rb
+- lib/twilio-ruby/rest/content/v2.rb
+- lib/twilio-ruby/rest/content/v2/content.rb
+- lib/twilio-ruby/rest/content/v2/content_and_approvals.rb
+- lib/twilio-ruby/rest/content_base.rb
+- lib/twilio-ruby/rest/conversations.rb
+- lib/twilio-ruby/rest/conversations/v1.rb
+- lib/twilio-ruby/rest/conversations/v1/address_configuration.rb
+- lib/twilio-ruby/rest/conversations/v1/configuration.rb
+- lib/twilio-ruby/rest/conversations/v1/configuration/webhook.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation/message.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation/message/delivery_receipt.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation/participant.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation/webhook.rb
+- lib/twilio-ruby/rest/conversations/v1/conversation_with_participants.rb
+- lib/twilio-ruby/rest/conversations/v1/credential.rb
+- lib/twilio-ruby/rest/conversations/v1/participant_conversation.rb
+- lib/twilio-ruby/rest/conversations/v1/role.rb
+- lib/twilio-ruby/rest/conversations/v1/service.rb
+- lib/twilio-ruby/rest/conversations/v1/service/binding.rb
+- lib/twilio-ruby/rest/conversations/v1/service/configuration.rb
+- lib/twilio-ruby/rest/conversations/v1/service/configuration/notification.rb
+- lib/twilio-ruby/rest/conversations/v1/service/configuration/webhook.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation/message.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation/message/delivery_receipt.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation/participant.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation/webhook.rb
+- lib/twilio-ruby/rest/conversations/v1/service/conversation_with_participants.rb
+- lib/twilio-ruby/rest/conversations/v1/service/participant_conversation.rb
+- lib/twilio-ruby/rest/conversations/v1/service/role.rb
+- lib/twilio-ruby/rest/conversations/v1/service/user.rb
+- lib/twilio-ruby/rest/conversations/v1/service/user/user_conversation.rb
+- lib/twilio-ruby/rest/conversations/v1/user.rb
+- lib/twilio-ruby/rest/conversations/v1/user/user_conversation.rb
+- lib/twilio-ruby/rest/conversations_base.rb
+- lib/twilio-ruby/rest/events.rb
+- lib/twilio-ruby/rest/events/v1.rb
+- lib/twilio-ruby/rest/events/v1/event_type.rb
+- lib/twilio-ruby/rest/events/v1/schema.rb
+- lib/twilio-ruby/rest/events/v1/schema/schema_version.rb
+- lib/twilio-ruby/rest/events/v1/sink.rb
+- lib/twilio-ruby/rest/events/v1/sink/sink_test.rb
+- lib/twilio-ruby/rest/events/v1/sink/sink_validate.rb
+- lib/twilio-ruby/rest/events/v1/subscription.rb
+- lib/twilio-ruby/rest/events/v1/subscription/subscribed_event.rb
+- lib/twilio-ruby/rest/events_base.rb
+- lib/twilio-ruby/rest/flex_api.rb
+- lib/twilio-ruby/rest/flex_api/v1.rb
+- lib/twilio-ruby/rest/flex_api/v1/assessments.rb
+- lib/twilio-ruby/rest/flex_api/v1/channel.rb
+- lib/twilio-ruby/rest/flex_api/v1/configuration.rb
+- lib/twilio-ruby/rest/flex_api/v1/flex_flow.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_assessments_comment.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_conversations.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_questionnaires.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_questionnaires_category.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_questionnaires_question.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_segments.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_session.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_settings_answer_sets.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_settings_comment.rb
+- lib/twilio-ruby/rest/flex_api/v1/insights_user_roles.rb
+- lib/twilio-ruby/rest/flex_api/v1/interaction.rb
+- lib/twilio-ruby/rest/flex_api/v1/interaction/interaction_channel.rb
+- lib/twilio-ruby/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_invite.rb
+- lib/twilio-ruby/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_participant.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin/plugin_versions.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_archive.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_configuration.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_configuration/configured_plugin.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_configuration_archive.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_release.rb
+- lib/twilio-ruby/rest/flex_api/v1/plugin_version_archive.rb
+- lib/twilio-ruby/rest/flex_api/v1/provisioning_status.rb
+- lib/twilio-ruby/rest/flex_api/v1/web_channel.rb
+- lib/twilio-ruby/rest/flex_api/v2.rb
+- lib/twilio-ruby/rest/flex_api/v2/flex_user.rb
+- lib/twilio-ruby/rest/flex_api/v2/web_channels.rb
+- lib/twilio-ruby/rest/flex_api_base.rb
+- lib/twilio-ruby/rest/frontline_api.rb
+- lib/twilio-ruby/rest/frontline_api/v1.rb
+- lib/twilio-ruby/rest/frontline_api/v1/user.rb
+- lib/twilio-ruby/rest/frontline_api_base.rb
+- lib/twilio-ruby/rest/iam.rb
+- lib/twilio-ruby/rest/iam/v1.rb
+- lib/twilio-ruby/rest/iam/v1/api_key.rb
+- lib/twilio-ruby/rest/iam/v1/get_api_keys.rb
+- lib/twilio-ruby/rest/iam/v1/key.rb
+- lib/twilio-ruby/rest/iam_base.rb
+- lib/twilio-ruby/rest/insights.rb
+- lib/twilio-ruby/rest/insights/v1.rb
+- lib/twilio-ruby/rest/insights/v1/call.rb
+- lib/twilio-ruby/rest/insights/v1/call/annotation.rb
+- lib/twilio-ruby/rest/insights/v1/call/call_summary.rb
+- lib/twilio-ruby/rest/insights/v1/call/event.rb
+- lib/twilio-ruby/rest/insights/v1/call/metric.rb
+- lib/twilio-ruby/rest/insights/v1/call_summaries.rb
+- lib/twilio-ruby/rest/insights/v1/conference.rb
+- lib/twilio-ruby/rest/insights/v1/conference/conference_participant.rb
+- lib/twilio-ruby/rest/insights/v1/room.rb
+- lib/twilio-ruby/rest/insights/v1/room/participant.rb
+- lib/twilio-ruby/rest/insights/v1/setting.rb
+- lib/twilio-ruby/rest/insights_base.rb
+- lib/twilio-ruby/rest/intelligence.rb
+- lib/twilio-ruby/rest/intelligence/v2.rb
+- lib/twilio-ruby/rest/intelligence/v2/custom_operator.rb
+- lib/twilio-ruby/rest/intelligence/v2/operator.rb
+- lib/twilio-ruby/rest/intelligence/v2/operator_attachment.rb
+- lib/twilio-ruby/rest/intelligence/v2/operator_attachments.rb
+- lib/twilio-ruby/rest/intelligence/v2/operator_type.rb
+- lib/twilio-ruby/rest/intelligence/v2/prebuilt_operator.rb
+- lib/twilio-ruby/rest/intelligence/v2/service.rb
+- lib/twilio-ruby/rest/intelligence/v2/transcript.rb
+- lib/twilio-ruby/rest/intelligence/v2/transcript/media.rb
+- lib/twilio-ruby/rest/intelligence/v2/transcript/operator_result.rb
+- lib/twilio-ruby/rest/intelligence/v2/transcript/sentence.rb
+- lib/twilio-ruby/rest/intelligence_base.rb
+- lib/twilio-ruby/rest/ip_messaging.rb
+- lib/twilio-ruby/rest/ip_messaging/v1.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/credential.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/channel.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/channel/invite.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/channel/member.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/channel/message.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/role.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/user.rb
+- lib/twilio-ruby/rest/ip_messaging/v1/service/user/user_channel.rb
+- lib/twilio-ruby/rest/ip_messaging/v2.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/credential.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/binding.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/channel.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/channel/invite.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/channel/member.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/channel/message.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/channel/webhook.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/role.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/user.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/user/user_binding.rb
+- lib/twilio-ruby/rest/ip_messaging/v2/service/user/user_channel.rb
+- lib/twilio-ruby/rest/ip_messaging_base.rb
+- lib/twilio-ruby/rest/lookups.rb
+- lib/twilio-ruby/rest/lookups/v1.rb
+- lib/twilio-ruby/rest/lookups/v1/phone_number.rb
+- lib/twilio-ruby/rest/lookups/v2.rb
+- lib/twilio-ruby/rest/lookups/v2/phone_number.rb
+- lib/twilio-ruby/rest/lookups_base.rb
+- lib/twilio-ruby/rest/marketplace.rb
+- lib/twilio-ruby/rest/marketplace/v1.rb
+- lib/twilio-ruby/rest/marketplace/v1/available_add_on.rb
+- lib/twilio-ruby/rest/marketplace/v1/available_add_on/available_add_on_extension.rb
+- lib/twilio-ruby/rest/marketplace/v1/installed_add_on.rb
+- lib/twilio-ruby/rest/marketplace/v1/installed_add_on/installed_add_on_extension.rb
+- lib/twilio-ruby/rest/marketplace/v1/installed_add_on/installed_add_on_usage.rb
+- lib/twilio-ruby/rest/marketplace/v1/module_data.rb
+- lib/twilio-ruby/rest/marketplace/v1/module_data_management.rb
+- lib/twilio-ruby/rest/marketplace/v1/referral_conversion.rb
+- lib/twilio-ruby/rest/marketplace_base.rb
+- lib/twilio-ruby/rest/messaging.rb
+- lib/twilio-ruby/rest/messaging/v1.rb
+- lib/twilio-ruby/rest/messaging/v1/brand_registration.rb
+- lib/twilio-ruby/rest/messaging/v1/brand_registration/brand_registration_otp.rb
+- lib/twilio-ruby/rest/messaging/v1/brand_registration/brand_vetting.rb
+- lib/twilio-ruby/rest/messaging/v1/deactivations.rb
+- lib/twilio-ruby/rest/messaging/v1/domain_certs.rb
+- lib/twilio-ruby/rest/messaging/v1/domain_config.rb
+- lib/twilio-ruby/rest/messaging/v1/domain_config_messaging_service.rb
+- lib/twilio-ruby/rest/messaging/v1/external_campaign.rb
+- lib/twilio-ruby/rest/messaging/v1/linkshortening_messaging_service.rb
+- lib/twilio-ruby/rest/messaging/v1/linkshortening_messaging_service_domain_association.rb
+- lib/twilio-ruby/rest/messaging/v1/request_managed_cert.rb
+- lib/twilio-ruby/rest/messaging/v1/service.rb
+- lib/twilio-ruby/rest/messaging/v1/service/alpha_sender.rb
+- lib/twilio-ruby/rest/messaging/v1/service/channel_sender.rb
+- lib/twilio-ruby/rest/messaging/v1/service/phone_number.rb
+- lib/twilio-ruby/rest/messaging/v1/service/short_code.rb
+- lib/twilio-ruby/rest/messaging/v1/service/us_app_to_person.rb
+- lib/twilio-ruby/rest/messaging/v1/service/us_app_to_person_usecase.rb
+- lib/twilio-ruby/rest/messaging/v1/tollfree_verification.rb
+- lib/twilio-ruby/rest/messaging/v1/usecase.rb
+- lib/twilio-ruby/rest/messaging_base.rb
+- lib/twilio-ruby/rest/microvisor.rb
+- lib/twilio-ruby/rest/microvisor/v1.rb
+- lib/twilio-ruby/rest/microvisor/v1/account_config.rb
+- lib/twilio-ruby/rest/microvisor/v1/account_secret.rb
+- lib/twilio-ruby/rest/microvisor/v1/app.rb
+- lib/twilio-ruby/rest/microvisor/v1/app/app_manifest.rb
+- lib/twilio-ruby/rest/microvisor/v1/device.rb
+- lib/twilio-ruby/rest/microvisor/v1/device/device_config.rb
+- lib/twilio-ruby/rest/microvisor/v1/device/device_secret.rb
+- lib/twilio-ruby/rest/microvisor_base.rb
+- lib/twilio-ruby/rest/monitor.rb
+- lib/twilio-ruby/rest/monitor/v1.rb
+- lib/twilio-ruby/rest/monitor/v1/alert.rb
+- lib/twilio-ruby/rest/monitor/v1/event.rb
+- lib/twilio-ruby/rest/monitor_base.rb
+- lib/twilio-ruby/rest/notify.rb
+- lib/twilio-ruby/rest/notify/v1.rb
+- lib/twilio-ruby/rest/notify/v1/credential.rb
+- lib/twilio-ruby/rest/notify/v1/service.rb
+- lib/twilio-ruby/rest/notify/v1/service/binding.rb
+- lib/twilio-ruby/rest/notify/v1/service/notification.rb
+- lib/twilio-ruby/rest/notify_base.rb
+- lib/twilio-ruby/rest/numbers.rb
+- lib/twilio-ruby/rest/numbers/v1.rb
+- lib/twilio-ruby/rest/numbers/v1/bulk_eligibility.rb
+- lib/twilio-ruby/rest/numbers/v1/eligibility.rb
+- lib/twilio-ruby/rest/numbers/v1/porting_port_in.rb
+- lib/twilio-ruby/rest/numbers/v1/porting_port_in_phone_number.rb
+- lib/twilio-ruby/rest/numbers/v1/porting_portability.rb
+- lib/twilio-ruby/rest/numbers/v1/porting_webhook_configuration.rb
+- lib/twilio-ruby/rest/numbers/v1/porting_webhook_configuration_delete.rb
+- lib/twilio-ruby/rest/numbers/v1/signing_request_configuration.rb
+- lib/twilio-ruby/rest/numbers/v1/webhook.rb
+- lib/twilio-ruby/rest/numbers/v2.rb
+- lib/twilio-ruby/rest/numbers/v2/authorization_document.rb
+- lib/twilio-ruby/rest/numbers/v2/authorization_document/dependent_hosted_number_order.rb
+- lib/twilio-ruby/rest/numbers/v2/bulk_hosted_number_order.rb
+- lib/twilio-ruby/rest/numbers/v2/bundle_clone.rb
+- lib/twilio-ruby/rest/numbers/v2/hosted_number_order.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/bundle.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/bundle/bundle_copy.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/bundle/evaluation.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/bundle/item_assignment.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/bundle/replace_items.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/end_user.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/end_user_type.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/regulation.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/supporting_document.rb
+- lib/twilio-ruby/rest/numbers/v2/regulatory_compliance/supporting_document_type.rb
+- lib/twilio-ruby/rest/numbers_base.rb
+- lib/twilio-ruby/rest/oauth.rb
+- lib/twilio-ruby/rest/oauth/v1.rb
+- lib/twilio-ruby/rest/oauth/v1/authorize.rb
+- lib/twilio-ruby/rest/oauth/v1/token.rb
+- lib/twilio-ruby/rest/oauth_base.rb
+- lib/twilio-ruby/rest/preview.rb
+- lib/twilio-ruby/rest/preview/hosted_numbers.rb
+- lib/twilio-ruby/rest/preview/hosted_numbers/authorization_document.rb
+- lib/twilio-ruby/rest/preview/hosted_numbers/authorization_document/dependent_hosted_number_order.rb
+- lib/twilio-ruby/rest/preview/hosted_numbers/hosted_number_order.rb
+- lib/twilio-ruby/rest/preview/marketplace.rb
+- lib/twilio-ruby/rest/preview/marketplace/available_add_on.rb
+- lib/twilio-ruby/rest/preview/marketplace/available_add_on/available_add_on_extension.rb
+- lib/twilio-ruby/rest/preview/marketplace/installed_add_on.rb
+- lib/twilio-ruby/rest/preview/marketplace/installed_add_on/installed_add_on_extension.rb
+- lib/twilio-ruby/rest/preview/sync.rb
+- lib/twilio-ruby/rest/preview/sync/service.rb
+- lib/twilio-ruby/rest/preview/sync/service/document.rb
+- lib/twilio-ruby/rest/preview/sync/service/document/document_permission.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_list.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_list/sync_list_item.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_list/sync_list_permission.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_map.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_map/sync_map_item.rb
+- lib/twilio-ruby/rest/preview/sync/service/sync_map/sync_map_permission.rb
+- lib/twilio-ruby/rest/preview/wireless.rb
+- lib/twilio-ruby/rest/preview/wireless/command.rb
+- lib/twilio-ruby/rest/preview/wireless/rate_plan.rb
+- lib/twilio-ruby/rest/preview/wireless/sim.rb
+- lib/twilio-ruby/rest/preview/wireless/sim/usage.rb
+- lib/twilio-ruby/rest/preview_base.rb
+- lib/twilio-ruby/rest/preview_iam.rb
+- lib/twilio-ruby/rest/preview_iam/v1.rb
+- lib/twilio-ruby/rest/preview_iam/v1/authorize.rb
+- lib/twilio-ruby/rest/preview_iam/v1/token.rb
+- lib/twilio-ruby/rest/preview_iam/versionless.rb
+- lib/twilio-ruby/rest/preview_iam/versionless/organization.rb
+- lib/twilio-ruby/rest/preview_iam/versionless/organization/account.rb
+- lib/twilio-ruby/rest/preview_iam/versionless/organization/role_assignment.rb
+- lib/twilio-ruby/rest/preview_iam/versionless/organization/user.rb
+- lib/twilio-ruby/rest/preview_iam_base.rb
+- lib/twilio-ruby/rest/pricing.rb
+- lib/twilio-ruby/rest/pricing/v1.rb
+- lib/twilio-ruby/rest/pricing/v1/messaging.rb
+- lib/twilio-ruby/rest/pricing/v1/messaging/country.rb
+- lib/twilio-ruby/rest/pricing/v1/phone_number.rb
+- lib/twilio-ruby/rest/pricing/v1/phone_number/country.rb
+- lib/twilio-ruby/rest/pricing/v1/voice.rb
+- lib/twilio-ruby/rest/pricing/v1/voice/country.rb
+- lib/twilio-ruby/rest/pricing/v1/voice/number.rb
+- lib/twilio-ruby/rest/pricing/v2.rb
+- lib/twilio-ruby/rest/pricing/v2/country.rb
+- lib/twilio-ruby/rest/pricing/v2/number.rb
+- lib/twilio-ruby/rest/pricing/v2/voice.rb
+- lib/twilio-ruby/rest/pricing/v2/voice/country.rb
+- lib/twilio-ruby/rest/pricing/v2/voice/number.rb
+- lib/twilio-ruby/rest/pricing_base.rb
+- lib/twilio-ruby/rest/proxy.rb
+- lib/twilio-ruby/rest/proxy/v1.rb
+- lib/twilio-ruby/rest/proxy/v1/service.rb
+- lib/twilio-ruby/rest/proxy/v1/service/phone_number.rb
+- lib/twilio-ruby/rest/proxy/v1/service/session.rb
+- lib/twilio-ruby/rest/proxy/v1/service/session/interaction.rb
+- lib/twilio-ruby/rest/proxy/v1/service/session/participant.rb
+- lib/twilio-ruby/rest/proxy/v1/service/session/participant/message_interaction.rb
+- lib/twilio-ruby/rest/proxy/v1/service/short_code.rb
+- lib/twilio-ruby/rest/proxy_base.rb
+- lib/twilio-ruby/rest/routes.rb
+- lib/twilio-ruby/rest/routes/v2.rb
+- lib/twilio-ruby/rest/routes/v2/phone_number.rb
+- lib/twilio-ruby/rest/routes/v2/sip_domain.rb
+- lib/twilio-ruby/rest/routes/v2/trunk.rb
+- lib/twilio-ruby/rest/routes_base.rb
+- lib/twilio-ruby/rest/serverless.rb
+- lib/twilio-ruby/rest/serverless/v1.rb
+- lib/twilio-ruby/rest/serverless/v1/service.rb
+- lib/twilio-ruby/rest/serverless/v1/service/asset.rb
+- lib/twilio-ruby/rest/serverless/v1/service/asset/asset_version.rb
+- lib/twilio-ruby/rest/serverless/v1/service/build.rb
+- lib/twilio-ruby/rest/serverless/v1/service/build/build_status.rb
+- lib/twilio-ruby/rest/serverless/v1/service/environment.rb
+- lib/twilio-ruby/rest/serverless/v1/service/environment/deployment.rb
+- lib/twilio-ruby/rest/serverless/v1/service/environment/log.rb
+- lib/twilio-ruby/rest/serverless/v1/service/environment/variable.rb
+- lib/twilio-ruby/rest/serverless/v1/service/function.rb
+- lib/twilio-ruby/rest/serverless/v1/service/function/function_version.rb
+- lib/twilio-ruby/rest/serverless/v1/service/function/function_version/function_version_content.rb
+- lib/twilio-ruby/rest/serverless_base.rb
+- lib/twilio-ruby/rest/studio.rb
+- lib/twilio-ruby/rest/studio/v1.rb
+- lib/twilio-ruby/rest/studio/v1/flow.rb
+- lib/twilio-ruby/rest/studio/v1/flow/engagement.rb
+- lib/twilio-ruby/rest/studio/v1/flow/engagement/engagement_context.rb
+- lib/twilio-ruby/rest/studio/v1/flow/engagement/step.rb
+- lib/twilio-ruby/rest/studio/v1/flow/engagement/step/step_context.rb
+- lib/twilio-ruby/rest/studio/v1/flow/execution.rb
+- lib/twilio-ruby/rest/studio/v1/flow/execution/execution_context.rb
+- lib/twilio-ruby/rest/studio/v1/flow/execution/execution_step.rb
+- lib/twilio-ruby/rest/studio/v1/flow/execution/execution_step/execution_step_context.rb
+- lib/twilio-ruby/rest/studio/v2.rb
+- lib/twilio-ruby/rest/studio/v2/flow.rb
+- lib/twilio-ruby/rest/studio/v2/flow/execution.rb
+- lib/twilio-ruby/rest/studio/v2/flow/execution/execution_context.rb
+- lib/twilio-ruby/rest/studio/v2/flow/execution/execution_step.rb
+- lib/twilio-ruby/rest/studio/v2/flow/execution/execution_step/execution_step_context.rb
+- lib/twilio-ruby/rest/studio/v2/flow/flow_revision.rb
+- lib/twilio-ruby/rest/studio/v2/flow/flow_test_user.rb
+- lib/twilio-ruby/rest/studio/v2/flow_validate.rb
+- lib/twilio-ruby/rest/studio_base.rb
+- lib/twilio-ruby/rest/supersim.rb
+- lib/twilio-ruby/rest/supersim/v1.rb
+- lib/twilio-ruby/rest/supersim/v1/esim_profile.rb
+- lib/twilio-ruby/rest/supersim/v1/fleet.rb
+- lib/twilio-ruby/rest/supersim/v1/ip_command.rb
+- lib/twilio-ruby/rest/supersim/v1/network.rb
+- lib/twilio-ruby/rest/supersim/v1/network_access_profile.rb
+- lib/twilio-ruby/rest/supersim/v1/network_access_profile/network_access_profile_network.rb
+- lib/twilio-ruby/rest/supersim/v1/settings_update.rb
+- lib/twilio-ruby/rest/supersim/v1/sim.rb
+- lib/twilio-ruby/rest/supersim/v1/sim/billing_period.rb
+- lib/twilio-ruby/rest/supersim/v1/sim/sim_ip_address.rb
+- lib/twilio-ruby/rest/supersim/v1/sms_command.rb
+- lib/twilio-ruby/rest/supersim/v1/usage_record.rb
+- lib/twilio-ruby/rest/supersim_base.rb
+- lib/twilio-ruby/rest/sync.rb
+- lib/twilio-ruby/rest/sync/v1.rb
+- lib/twilio-ruby/rest/sync/v1/service.rb
+- lib/twilio-ruby/rest/sync/v1/service/document.rb
+- lib/twilio-ruby/rest/sync/v1/service/document/document_permission.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_list.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_list/sync_list_item.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_list/sync_list_permission.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_map.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_map/sync_map_item.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_map/sync_map_permission.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_stream.rb
+- lib/twilio-ruby/rest/sync/v1/service/sync_stream/stream_message.rb
+- lib/twilio-ruby/rest/sync_base.rb
+- lib/twilio-ruby/rest/taskrouter.rb
+- lib/twilio-ruby/rest/taskrouter/v1.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/activity.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/event.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task/reservation.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_channel.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue/task_queue_bulk_real_time_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue/task_queue_cumulative_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue/task_queue_real_time_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue/task_queue_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/task_queue/task_queues_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/reservation.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/worker_channel.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/worker_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/workers_cumulative_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/workers_real_time_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/worker/workers_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workflow.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workflow/workflow_cumulative_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workflow/workflow_real_time_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workflow/workflow_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workspace_cumulative_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workspace_real_time_statistics.rb
+- lib/twilio-ruby/rest/taskrouter/v1/workspace/workspace_statistics.rb
+- lib/twilio-ruby/rest/taskrouter_base.rb
+- lib/twilio-ruby/rest/trunking.rb
+- lib/twilio-ruby/rest/trunking/v1.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk/credential_list.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk/ip_access_control_list.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk/origination_url.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk/phone_number.rb
+- lib/twilio-ruby/rest/trunking/v1/trunk/recording.rb
+- lib/twilio-ruby/rest/trunking_base.rb
+- lib/twilio-ruby/rest/trusthub.rb
+- lib/twilio-ruby/rest/trusthub/v1.rb
+- lib/twilio-ruby/rest/trusthub/v1/compliance_inquiries.rb
+- lib/twilio-ruby/rest/trusthub/v1/compliance_registration_inquiries.rb
+- lib/twilio-ruby/rest/trusthub/v1/compliance_tollfree_inquiries.rb
+- lib/twilio-ruby/rest/trusthub/v1/customer_profiles.rb
+- lib/twilio-ruby/rest/trusthub/v1/customer_profiles/customer_profiles_channel_endpoint_assignment.rb
+- lib/twilio-ruby/rest/trusthub/v1/customer_profiles/customer_profiles_entity_assignments.rb
+- lib/twilio-ruby/rest/trusthub/v1/customer_profiles/customer_profiles_evaluations.rb
+- lib/twilio-ruby/rest/trusthub/v1/end_user.rb
+- lib/twilio-ruby/rest/trusthub/v1/end_user_type.rb
+- lib/twilio-ruby/rest/trusthub/v1/policies.rb
+- lib/twilio-ruby/rest/trusthub/v1/supporting_document.rb
+- lib/twilio-ruby/rest/trusthub/v1/supporting_document_type.rb
+- lib/twilio-ruby/rest/trusthub/v1/trust_products.rb
+- lib/twilio-ruby/rest/trusthub/v1/trust_products/trust_products_channel_endpoint_assignment.rb
+- lib/twilio-ruby/rest/trusthub/v1/trust_products/trust_products_entity_assignments.rb
+- lib/twilio-ruby/rest/trusthub/v1/trust_products/trust_products_evaluations.rb
+- lib/twilio-ruby/rest/trusthub_base.rb
+- lib/twilio-ruby/rest/verify.rb
+- lib/twilio-ruby/rest/verify/v2.rb
+- lib/twilio-ruby/rest/verify/v2/form.rb
+- lib/twilio-ruby/rest/verify/v2/safelist.rb
+- lib/twilio-ruby/rest/verify/v2/service.rb
+- lib/twilio-ruby/rest/verify/v2/service/access_token.rb
+- lib/twilio-ruby/rest/verify/v2/service/entity.rb
+- lib/twilio-ruby/rest/verify/v2/service/entity/challenge.rb
+- lib/twilio-ruby/rest/verify/v2/service/entity/challenge/notification.rb
+- lib/twilio-ruby/rest/verify/v2/service/entity/factor.rb
+- lib/twilio-ruby/rest/verify/v2/service/entity/new_factor.rb
+- lib/twilio-ruby/rest/verify/v2/service/messaging_configuration.rb
+- lib/twilio-ruby/rest/verify/v2/service/rate_limit.rb
+- lib/twilio-ruby/rest/verify/v2/service/rate_limit/bucket.rb
+- lib/twilio-ruby/rest/verify/v2/service/verification.rb
+- lib/twilio-ruby/rest/verify/v2/service/verification_check.rb
+- lib/twilio-ruby/rest/verify/v2/service/webhook.rb
+- lib/twilio-ruby/rest/verify/v2/template.rb
+- lib/twilio-ruby/rest/verify/v2/verification_attempt.rb
+- lib/twilio-ruby/rest/verify/v2/verification_attempts_summary.rb
+- lib/twilio-ruby/rest/verify_base.rb
+- lib/twilio-ruby/rest/video.rb
+- lib/twilio-ruby/rest/video/v1.rb
+- lib/twilio-ruby/rest/video/v1/composition.rb
+- lib/twilio-ruby/rest/video/v1/composition_hook.rb
+- lib/twilio-ruby/rest/video/v1/composition_settings.rb
+- lib/twilio-ruby/rest/video/v1/recording.rb
+- lib/twilio-ruby/rest/video/v1/recording_settings.rb
+- lib/twilio-ruby/rest/video/v1/room.rb
+- lib/twilio-ruby/rest/video/v1/room/participant.rb
+- lib/twilio-ruby/rest/video/v1/room/participant/anonymize.rb
+- lib/twilio-ruby/rest/video/v1/room/participant/published_track.rb
+- lib/twilio-ruby/rest/video/v1/room/participant/subscribe_rules.rb
+- lib/twilio-ruby/rest/video/v1/room/participant/subscribed_track.rb
+- lib/twilio-ruby/rest/video/v1/room/recording_rules.rb
+- lib/twilio-ruby/rest/video/v1/room/room_recording.rb
+- lib/twilio-ruby/rest/video_base.rb
+- lib/twilio-ruby/rest/voice.rb
+- lib/twilio-ruby/rest/voice/v1.rb
+- lib/twilio-ruby/rest/voice/v1/archived_call.rb
+- lib/twilio-ruby/rest/voice/v1/byoc_trunk.rb
+- lib/twilio-ruby/rest/voice/v1/connection_policy.rb
+- lib/twilio-ruby/rest/voice/v1/connection_policy/connection_policy_target.rb
+- lib/twilio-ruby/rest/voice/v1/dialing_permissions.rb
+- lib/twilio-ruby/rest/voice/v1/dialing_permissions/bulk_country_update.rb
+- lib/twilio-ruby/rest/voice/v1/dialing_permissions/country.rb
+- lib/twilio-ruby/rest/voice/v1/dialing_permissions/country/highrisk_special_prefix.rb
+- lib/twilio-ruby/rest/voice/v1/dialing_permissions/settings.rb
+- lib/twilio-ruby/rest/voice/v1/ip_record.rb
+- lib/twilio-ruby/rest/voice/v1/source_ip_mapping.rb
+- lib/twilio-ruby/rest/voice_base.rb
+- lib/twilio-ruby/rest/wireless.rb
+- lib/twilio-ruby/rest/wireless/v1.rb
+- lib/twilio-ruby/rest/wireless/v1/command.rb
+- lib/twilio-ruby/rest/wireless/v1/rate_plan.rb
+- lib/twilio-ruby/rest/wireless/v1/sim.rb
+- lib/twilio-ruby/rest/wireless/v1/sim/data_session.rb
+- lib/twilio-ruby/rest/wireless/v1/sim/usage_record.rb
+- lib/twilio-ruby/rest/wireless/v1/usage_record.rb
+- lib/twilio-ruby/rest/wireless_base.rb
+- lib/twilio-ruby/security/request_validator.rb
+- lib/twilio-ruby/twiml/fax_response.rb
+- lib/twilio-ruby/twiml/messaging_response.rb
+- lib/twilio-ruby/twiml/twiml.rb
+- lib/twilio-ruby/twiml/voice_response.rb
+- lib/twilio-ruby/util.rb
+- lib/twilio-ruby/util/configuration.rb
+- lib/twilio-ruby/version.rb
+- sonar-project.properties
+- twilio-ruby.gemspec
+homepage: https://github.com/twilio/twilio-ruby
+licenses:
+- MIT
+metadata:
+  documentation_uri: https://www.twilio.com/docs/libraries/reference/twilio-ruby/
+  yard.run: yri
+post_install_message:
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- twilio-ruby
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project:
+rubygems_version: 2.6.14.4
+signing_key:
+specification_version: 4
+summary: The official library for communicating with the Twilio REST API, building
+  TwiML, and generating Twilio JWT Capability Tokens
+test_files: []

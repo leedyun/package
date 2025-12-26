@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: streamio-ffmpeg
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Rackfish AB
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-11-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+description: 
+email:
+- support@rackfish.com
+- bikeath1337.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG
+- LICENSE
+- README.md
+- lib/ffmpeg/encoding_options.rb
+- lib/ffmpeg/errors.rb
+- lib/ffmpeg/io_monkey.rb
+- lib/ffmpeg/movie.rb
+- lib/ffmpeg/transcoder.rb
+- lib/ffmpeg/version.rb
+- lib/streamio-ffmpeg.rb
+homepage: http://github.com/streamio/streamio-ffmpeg
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.6
+signing_key: 
+specification_version: 4
+summary: Wraps ffmpeg to read metadata and transcodes videos.
+test_files: []

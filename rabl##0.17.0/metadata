@@ -1,0 +1,79 @@
+--- !ruby/object:Gem::Specification
+name: rabl
+version: !ruby/object:Gem::Version
+  version: 0.17.0
+platform: ruby
+authors:
+- Nathan Esquenazi
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.14
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.14
+description: General ruby templating with json, bson, xml and msgpack support
+email:
+- nesquena@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- MIT-LICENSE
+- README.md
+- lib/rabl.rb
+- lib/rabl/builder.rb
+- lib/rabl/cache_engine.rb
+- lib/rabl/configuration.rb
+- lib/rabl/digestor.rb
+- lib/rabl/digestor/rails3.rb
+- lib/rabl/digestor/rails41.rb
+- lib/rabl/digestor/rails5.rb
+- lib/rabl/engine.rb
+- lib/rabl/helpers.rb
+- lib/rabl/multi_builder.rb
+- lib/rabl/partials.rb
+- lib/rabl/railtie.rb
+- lib/rabl/renderer.rb
+- lib/rabl/sources.rb
+- lib/rabl/template.rb
+- lib/rabl/tracker.rb
+- lib/rabl/version.rb
+homepage: https://github.com/nesquena/rabl
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: General ruby templating with json, bson, xml and msgpack support
+test_files: []

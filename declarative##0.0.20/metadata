@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: declarative
+version: !ruby/object:Gem::Version
+  version: 0.0.20
+platform: ruby
+authors:
+- Nick Sutterer
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-06-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-line
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: DSL for nested generic schemas with inheritance and refining.
+email:
+- apotonick@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGES.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- declarative.gemspec
+- lib/declarative.rb
+- lib/declarative/deep_dup.rb
+- lib/declarative/defaults.rb
+- lib/declarative/definitions.rb
+- lib/declarative/heritage.rb
+- lib/declarative/schema.rb
+- lib/declarative/testing.rb
+- lib/declarative/variables.rb
+- lib/declarative/version.rb
+homepage: https://github.com/apotonick/declarative
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: DSL for nested schemas.
+test_files: []

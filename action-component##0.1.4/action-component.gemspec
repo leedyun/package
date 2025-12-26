@@ -1,0 +1,28 @@
+$:.push File.expand_path("../lib", __FILE__)
+
+require "action_component/version"
+
+Gem::Specification.new do |s|
+s.name = 'action-component'
+  s.version     = ActionComponent::VERSION
+  s.platform    = Gem::Platform::RUBY
+  s.licenses    = ['MIT']
+  s.authors     = ["Roger Nesbitt"]
+  s.email       = ["roger@seriousorange.com"]
+  s.homepage    = "https://github.com/mogest/action_component"
+  s.summary     = %q{React-style components for Rails}
+  s.description = %q{React-style components for Rails, mixing together the controller and a DSL language for HTML views.}
+
+  s.required_ruby_version = '>= 2.0'
+
+  s.add_dependency "actionpack", [">= 4", "< 7"]
+  s.add_dependency "activesupport", [">= 4", "< 7"]
+  s.add_dependency "railties", [">= 4", "< 7"]
+
+  s.add_development_dependency "rspec", "~> 3.5"
+
+  s.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  s.test_files    = `git ls-files -- spec/*`.split("\n")
+  s.require_paths = ["lib"]
+s.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

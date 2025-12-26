@@ -1,0 +1,111 @@
+--- !ruby/object:Gem::Specification
+name: pretty_color
+version: !ruby/object:Gem::Version
+  version: 0.8.1
+platform: ruby
+authors:
+- Michał Kalbarczyk
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: test_ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: codeclimate-test-reporter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+description: Extends String class or add a ColorizedString with methods to set text
+  color, background color and text effects.
+email: fazibear@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG
+- LICENSE
+- README.md
+- Rakefile
+- lib/colorize.rb
+- lib/colorize/class_methods.rb
+- lib/colorize/instance_methods.rb
+- lib/colorize/version.rb
+- lib/colorized_string.rb
+- pretty_color.gemspec
+- test/test_colorize.rb
+homepage: http://github.com/fazibear/colorize
+licenses:
+- GPL-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Ruby gem for colorizing text using ANSI escape sequences.
+test_files:
+- test/test_colorize.rb

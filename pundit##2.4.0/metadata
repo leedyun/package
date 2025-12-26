@@ -1,0 +1,251 @@
+--- !ruby/object:Gem::Specification
+name: pundit
+version: !ruby/object:Gem::Version
+  version: 2.4.0
+platform: ruby
+authors:
+- Jonas Nicklas
+- Varvet AB
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-08-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.0
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Object oriented authorization for Rails applications
+email:
+- jonas.nicklas@gmail.com
+- info@varvet.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/PULL_REQUEST_TEMPLATE/gem_release_template.md"
+- ".github/pull_request_template.md"
+- ".github/workflows/main.yml"
+- ".github/workflows/push_gem.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".yardopts"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- config/rubocop-rspec.yml
+- lib/generators/pundit/install/USAGE
+- lib/generators/pundit/install/install_generator.rb
+- lib/generators/pundit/install/templates/application_policy.rb
+- lib/generators/pundit/policy/USAGE
+- lib/generators/pundit/policy/policy_generator.rb
+- lib/generators/pundit/policy/templates/policy.rb
+- lib/generators/rspec/policy_generator.rb
+- lib/generators/rspec/templates/policy_spec.rb
+- lib/generators/test_unit/policy_generator.rb
+- lib/generators/test_unit/templates/policy_test.rb
+- lib/pundit.rb
+- lib/pundit/authorization.rb
+- lib/pundit/cache_store/legacy_store.rb
+- lib/pundit/cache_store/null_store.rb
+- lib/pundit/context.rb
+- lib/pundit/policy_finder.rb
+- lib/pundit/rspec.rb
+- lib/pundit/version.rb
+- pundit.gemspec
+- spec/authorization_spec.rb
+- spec/dsl_spec.rb
+- spec/generators_spec.rb
+- spec/policies/post_policy_spec.rb
+- spec/policy_finder_spec.rb
+- spec/pundit_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/varvet/pundit
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key: 
+specification_version: 4
+summary: OO authorization for Rails
+test_files:
+- spec/authorization_spec.rb
+- spec/dsl_spec.rb
+- spec/generators_spec.rb
+- spec/policies/post_policy_spec.rb
+- spec/policy_finder_spec.rb
+- spec/pundit_spec.rb
+- spec/spec_helper.rb

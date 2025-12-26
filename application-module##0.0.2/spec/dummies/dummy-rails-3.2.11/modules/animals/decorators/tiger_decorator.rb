@@ -1,0 +1,2 @@
+module Animals::TigerDecorator
+end

@@ -1,0 +1,195 @@
+--- !ruby/object:Gem::Specification
+name: google_drive
+version: !ruby/object:Gem::Version
+  version: 3.0.7
+platform: ruby
+authors:
+- Hiroshi Ichikawa
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-04-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: google-apis-drive_v3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: google-apis-sheets_v4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: googleauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: rspec-mocks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+description: A library to read/write files/spreadsheets in Google Drive/Docs.
+email:
+- gimite+github@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/google_drive.rb
+- lib/google_drive/access_token_credentials.rb
+- lib/google_drive/acl.rb
+- lib/google_drive/acl_entry.rb
+- lib/google_drive/api_client_fetcher.rb
+- lib/google_drive/authentication_error.rb
+- lib/google_drive/collection.rb
+- lib/google_drive/config.rb
+- lib/google_drive/error.rb
+- lib/google_drive/file.rb
+- lib/google_drive/list.rb
+- lib/google_drive/list_row.rb
+- lib/google_drive/response_code_error.rb
+- lib/google_drive/session.rb
+- lib/google_drive/spreadsheet.rb
+- lib/google_drive/util.rb
+- lib/google_drive/worksheet.rb
+homepage: https://github.com/gimite/google-drive-ruby
+licenses:
+- BSD-3-Clause
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key: 
+specification_version: 4
+summary: A library to read/write files/spreadsheets in Google Drive/Docs.
+test_files: []

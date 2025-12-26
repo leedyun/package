@@ -1,0 +1,457 @@
+--- !ruby/object:Gem::Specification 
+name: state_machine
+version: !ruby/object:Gem::Version 
+  hash: 31
+  prerelease: 
+  segments: 
+  - 1
+  - 2
+  - 0
+  version: 1.2.0
+platform: ruby
+authors: 
+- Aaron Pfeifer
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2013-03-30 00:00:00 Z
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rake
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: simplecov
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: appraisal
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 15
+        segments: 
+        - 0
+        - 4
+        - 0
+        version: 0.4.0
+  type: :development
+  version_requirements: *id003
+description: Adds support for creating state machines for attributes on any Ruby class
+email: aaron@pluginaweek.org
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README.md
+- CHANGELOG.md
+- LICENSE
+files: 
+- .travis.yml
+- .gitignore
+- .yardopts
+- state_machine.gemspec
+- Gemfile
+- init.rb
+- lib/state_machine.rb
+- lib/state_machine/integrations.rb
+- lib/state_machine/state_context.rb
+- lib/state_machine/path.rb
+- lib/state_machine/error.rb
+- lib/state_machine/core.rb
+- lib/state_machine/yard.rb
+- lib/state_machine/integrations/base.rb
+- lib/state_machine/integrations/data_mapper/observer.rb
+- lib/state_machine/integrations/data_mapper/versions.rb
+- lib/state_machine/integrations/mongo_mapper.rb
+- lib/state_machine/integrations/mongoid.rb
+- lib/state_machine/integrations/data_mapper.rb
+- lib/state_machine/integrations/active_model.rb
+- lib/state_machine/integrations/active_record.rb
+- lib/state_machine/integrations/active_record/locale.rb
+- lib/state_machine/integrations/active_record/versions.rb
+- lib/state_machine/integrations/mongo_mapper/locale.rb
+- lib/state_machine/integrations/mongo_mapper/versions.rb
+- lib/state_machine/integrations/sequel/versions.rb
+- lib/state_machine/integrations/sequel.rb
+- lib/state_machine/integrations/mongoid/locale.rb
+- lib/state_machine/integrations/mongoid/versions.rb
+- lib/state_machine/integrations/active_model/observer_update.rb
+- lib/state_machine/integrations/active_model/locale.rb
+- lib/state_machine/integrations/active_model/observer.rb
+- lib/state_machine/integrations/active_model/versions.rb
+- lib/state_machine/state_collection.rb
+- lib/state_machine/helper_module.rb
+- lib/state_machine/node_collection.rb
+- lib/state_machine/extensions.rb
+- lib/state_machine/initializers.rb
+- lib/state_machine/macro_methods.rb
+- lib/state_machine/machine.rb
+- lib/state_machine/matcher.rb
+- lib/state_machine/assertions.rb
+- lib/state_machine/event.rb
+- lib/state_machine/branch.rb
+- lib/state_machine/core_ext.rb
+- lib/state_machine/callback.rb
+- lib/state_machine/transition_collection.rb
+- lib/state_machine/graph.rb
+- lib/state_machine/yard/templates/default/class/html/state_machines.erb
+- lib/state_machine/yard/templates/default/class/html/setup.rb
+- lib/state_machine/yard/handlers/base.rb
+- lib/state_machine/yard/handlers/machine.rb
+- lib/state_machine/yard/handlers/event.rb
+- lib/state_machine/yard/handlers/state.rb
+- lib/state_machine/yard/handlers/transition.rb
+- lib/state_machine/yard/handlers.rb
+- lib/state_machine/yard/templates.rb
+- lib/state_machine/path_collection.rb
+- lib/state_machine/state.rb
+- lib/state_machine/transition.rb
+- lib/state_machine/core_ext/class/state_machine.rb
+- lib/state_machine/initializers/merb.rb
+- lib/state_machine/initializers/rails.rb
+- lib/state_machine/event_collection.rb
+- lib/state_machine/eval_helpers.rb
+- lib/state_machine/machine_collection.rb
+- lib/state_machine/matcher_helpers.rb
+- lib/state_machine/version.rb
+- lib/yard-state_machine.rb
+- lib/tasks/state_machine.rake
+- lib/tasks/state_machine.rb
+- README.md
+- examples/Gemfile
+- examples/rails-rest/view_show.html.erb
+- examples/rails-rest/controller.rb
+- examples/rails-rest/view_new.html.erb
+- examples/rails-rest/migration.rb
+- examples/rails-rest/model.rb
+- examples/rails-rest/view_edit.html.erb
+- examples/rails-rest/view__form.html.erb
+- examples/rails-rest/view_index.html.erb
+- examples/TrafficLight_state.png
+- examples/vehicle.rb
+- examples/merb-rest/view_show.html.erb
+- examples/merb-rest/controller.rb
+- examples/merb-rest/view_new.html.erb
+- examples/merb-rest/model.rb
+- examples/merb-rest/view_edit.html.erb
+- examples/merb-rest/view_index.html.erb
+- examples/Gemfile.lock
+- examples/AutoShop_state.png
+- examples/auto_shop.rb
+- examples/Car_state.png
+- examples/doc/AutoShop.html
+- examples/doc/method_list.html
+- examples/doc/TrafficLight_state.png
+- examples/doc/class_list.html
+- examples/doc/css/style.css
+- examples/doc/css/common.css
+- examples/doc/css/full_list.css
+- examples/doc/index.html
+- examples/doc/Vehicle.html
+- examples/doc/top-level-namespace.html
+- examples/doc/AutoShop_state.png
+- examples/doc/js/full_list.js
+- examples/doc/js/app.js
+- examples/doc/js/jquery.js
+- examples/doc/Car_state.png
+- examples/doc/TrafficLight.html
+- examples/doc/_index.html
+- examples/doc/file_list.html
+- examples/doc/Car.html
+- examples/doc/Vehicle_state.png
+- examples/doc/frames.html
+- examples/Vehicle_state.png
+- examples/traffic_light.rb
+- examples/car.rb
+- LICENSE
+- CHANGELOG.md
+- gemfiles/mongoid-3.1.0.gemfile.lock
+- gemfiles/mongo_mapper-0.7.0.gemfile
+- gemfiles/sequel-3.4.0.gemfile
+- gemfiles/mongoid-2.4.10.gemfile
+- gemfiles/mongo_mapper-0.5.8.gemfile.lock
+- gemfiles/mongoid-2.3.3.gemfile.lock
+- gemfiles/active_record-2.1.0.gemfile.lock
+- gemfiles/mongoid-3.0.0.gemfile.lock
+- gemfiles/sequel-2.11.0.gemfile.lock
+- gemfiles/graphviz-1.0.0.gemfile
+- gemfiles/data_mapper-0.9.11.gemfile.lock
+- gemfiles/mongo_mapper-0.12.0.gemfile
+- gemfiles/graphviz-1.0.8.gemfile.lock
+- gemfiles/mongoid-2.0.0.gemfile.lock
+- gemfiles/graphviz-1.0.0.gemfile.lock
+- gemfiles/active_model-3.1.1.gemfile
+- gemfiles/active_record-2.0.0.gemfile.lock
+- gemfiles/mongo_mapper-0.9.0.gemfile.lock
+- gemfiles/data_mapper-0.9.4.gemfile
+- gemfiles/graphviz-0.9.21.gemfile.lock
+- gemfiles/active_record-3.0.0.gemfile.lock
+- gemfiles/mongo_mapper-0.6.10.gemfile.lock
+- gemfiles/sequel-3.10.0.gemfile
+- gemfiles/active_record-3.2.12.gemfile
+- gemfiles/active_model-4.0.0.gemfile
+- gemfiles/data_mapper-1.1.0.gemfile
+- gemfiles/sequel-2.11.0.gemfile
+- gemfiles/mongo_mapper-0.10.0.gemfile.lock
+- gemfiles/default.gemfile
+- gemfiles/active_model-3.2.13.rc1.gemfile
+- gemfiles/sequel-3.44.0.gemfile.lock
+- gemfiles/data_mapper-0.9.11.gemfile
+- gemfiles/graphviz-1.0.3.gemfile.lock
+- gemfiles/active_record-4.0.0.gemfile
+- gemfiles/sequel-3.24.0.gemfile
+- gemfiles/active_record-3.2.13.rc1.gemfile.lock
+- gemfiles/active_record-4.0.0.gemfile.lock
+- gemfiles/active_record-3.2.12.gemfile.lock
+- gemfiles/mongo_mapper-0.11.2.gemfile.lock
+- gemfiles/mongoid-2.2.4.gemfile.lock
+- gemfiles/mongo_mapper-0.6.0.gemfile
+- gemfiles/mongo_mapper-0.8.0.gemfile.lock
+- gemfiles/sequel-3.35.0.gemfile
+- gemfiles/sequel-2.8.0.gemfile
+- gemfiles/active_model-3.0.0.gemfile.lock
+- gemfiles/active_record-2.0.5.gemfile
+- gemfiles/sequel-3.29.0.gemfile
+- gemfiles/active_record-2.1.2.gemfile
+- gemfiles/data_mapper-0.9.4.gemfile.lock
+- gemfiles/active_record-2.2.3.gemfile.lock
+- gemfiles/data_mapper-1.0.0.gemfile
+- gemfiles/mongo_mapper-0.8.4.gemfile.lock
+- gemfiles/sequel-3.0.0.gemfile.lock
+- gemfiles/mongo_mapper-0.8.6.gemfile
+- gemfiles/data_mapper-1.0.2.gemfile.lock
+- gemfiles/active_record-3.0.5.gemfile.lock
+- gemfiles/mongoid-2.4.0.gemfile.lock
+- gemfiles/mongoid-2.4.10.gemfile.lock
+- gemfiles/active_model-4.0.0.gemfile.lock
+- gemfiles/mongo_mapper-0.8.3.gemfile
+- gemfiles/sequel-3.14.0.gemfile.lock
+- gemfiles/mongoid-2.5.2.gemfile
+- gemfiles/data_mapper-0.10.2.gemfile.lock
+- gemfiles/data_mapper-0.10.2.gemfile
+- gemfiles/mongoid-2.3.3.gemfile
+- gemfiles/mongo_mapper-0.5.5.gemfile
+- gemfiles/mongo_mapper-0.11.1.gemfile.lock
+- gemfiles/active_record-2.3.5.gemfile
+- gemfiles/sequel-3.13.0.gemfile.lock
+- gemfiles/active_record-2.3.5.gemfile.lock
+- gemfiles/active_record-2.3.12.gemfile
+- gemfiles/active_model-3.0.5.gemfile
+- gemfiles/graphviz-0.9.21.gemfile
+- gemfiles/data_mapper-1.2.0.gemfile.lock
+- gemfiles/active_record-2.2.3.gemfile
+- gemfiles/sequel-3.34.0.gemfile
+- gemfiles/sequel-3.23.0.gemfile.lock
+- gemfiles/graphviz-1.0.8.gemfile
+- gemfiles/active_model-3.2.12.gemfile
+- gemfiles/sequel-3.13.0.gemfile
+- gemfiles/mongoid-2.4.0.gemfile
+- gemfiles/mongoid-3.1.0.gemfile
+- gemfiles/data_mapper-1.0.2.gemfile
+- gemfiles/active_record-3.1.1.gemfile
+- gemfiles/mongo_mapper-0.11.2.gemfile
+- gemfiles/active_record-3.0.5.gemfile
+- gemfiles/mongoid-3.0.22.gemfile
+- gemfiles/sequel-3.10.0.gemfile.lock
+- gemfiles/data_mapper-1.1.0.gemfile.lock
+- gemfiles/mongoid-3.0.0.gemfile
+- gemfiles/data_mapper-1.0.1.gemfile.lock
+- gemfiles/mongo_mapper-0.7.5.gemfile
+- gemfiles/sequel-3.0.0.gemfile
+- gemfiles/sequel-3.34.0.gemfile.lock
+- gemfiles/default.gemfile.lock
+- gemfiles/mongo_mapper-0.11.1.gemfile
+- gemfiles/sequel-3.35.0.gemfile.lock
+- gemfiles/mongo_mapper-0.5.5.gemfile.lock
+- gemfiles/graphviz-1.0.3.gemfile
+- gemfiles/mongo_mapper-0.8.6.gemfile.lock
+- gemfiles/mongo_mapper-0.8.0.gemfile
+- gemfiles/active_record-2.1.0.gemfile
+- gemfiles/graphviz-0.9.17.gemfile.lock
+- gemfiles/mongo_mapper-0.7.0.gemfile.lock
+- gemfiles/mongo_mapper-0.10.0.gemfile
+- gemfiles/sequel-3.24.0.gemfile.lock
+- gemfiles/active_model-3.0.0.gemfile
+- gemfiles/sequel-3.14.0.gemfile
+- gemfiles/mongo_mapper-0.7.5.gemfile.lock
+- gemfiles/active_record-3.2.13.rc1.gemfile
+- gemfiles/mongoid-2.2.4.gemfile
+- gemfiles/active_model-3.2.13.rc1.gemfile.lock
+- gemfiles/mongoid-2.6.0.gemfile.lock
+- gemfiles/mongo_mapper-0.6.0.gemfile.lock
+- gemfiles/sequel-3.29.0.gemfile.lock
+- gemfiles/sequel-2.8.0.gemfile.lock
+- gemfiles/sequel-3.4.0.gemfile.lock
+- gemfiles/sequel-3.44.0.gemfile
+- gemfiles/data_mapper-0.9.7.gemfile.lock
+- gemfiles/mongoid-2.0.0.gemfile
+- gemfiles/sequel-2.12.0.gemfile.lock
+- gemfiles/mongoid-2.6.0.gemfile
+- gemfiles/mongo_mapper-0.9.0.gemfile
+- gemfiles/data_mapper-1.0.1.gemfile
+- gemfiles/active_record-2.3.12.gemfile.lock
+- gemfiles/graphviz-0.9.17.gemfile
+- gemfiles/mongoid-3.0.22.gemfile.lock
+- gemfiles/active_model-3.2.1.gemfile
+- gemfiles/data_mapper-1.2.0.gemfile
+- gemfiles/active_record-2.1.2.gemfile.lock
+- gemfiles/mongo_mapper-0.12.0.gemfile.lock
+- gemfiles/mongoid-2.1.4.gemfile.lock
+- gemfiles/mongoid-2.5.2.gemfile.lock
+- gemfiles/active_record-2.0.5.gemfile.lock
+- gemfiles/sequel-2.12.0.gemfile
+- gemfiles/mongoid-2.1.4.gemfile
+- gemfiles/mongo_mapper-0.8.3.gemfile.lock
+- gemfiles/data_mapper-1.0.0.gemfile.lock
+- gemfiles/mongo_mapper-0.5.8.gemfile
+- gemfiles/active_model-3.0.5.gemfile.lock
+- gemfiles/active_model-3.1.1.gemfile.lock
+- gemfiles/mongo_mapper-0.6.10.gemfile
+- gemfiles/mongo_mapper-0.8.4.gemfile
+- gemfiles/sequel-3.23.0.gemfile
+- gemfiles/active_record-2.0.0.gemfile
+- gemfiles/active_record-3.1.1.gemfile.lock
+- gemfiles/active_model-3.2.12.gemfile.lock
+- gemfiles/data_mapper-0.9.7.gemfile
+- gemfiles/active_record-3.0.0.gemfile
+- Appraisals
+- Rakefile
+- test/files/switch.rb
+- test/files/en.yml
+- test/test_helper.rb
+- test/unit/matcher_helpers_test.rb
+- test/unit/machine_collection_test.rb
+- test/unit/machine_test.rb
+- test/unit/helper_module_test.rb
+- test/unit/state_collection_test.rb
+- test/unit/transition_collection_test.rb
+- test/unit/state_test.rb
+- test/unit/branch_test.rb
+- test/unit/state_context_test.rb
+- test/unit/integrations/mongoid_test.rb
+- test/unit/integrations/active_model_test.rb
+- test/unit/integrations/mongo_mapper_test.rb
+- test/unit/integrations/sequel_test.rb
+- test/unit/integrations/active_record_test.rb
+- test/unit/integrations/data_mapper_test.rb
+- test/unit/integrations/base_test.rb
+- test/unit/transition_test.rb
+- test/unit/graph_test.rb
+- test/unit/invalid_transition_test.rb
+- test/unit/event_collection_test.rb
+- test/unit/path_test.rb
+- test/unit/callback_test.rb
+- test/unit/state_machine_test.rb
+- test/unit/matcher_test.rb
+- test/unit/node_collection_test.rb
+- test/unit/invalid_event_test.rb
+- test/unit/event_test.rb
+- test/unit/invalid_parallel_transition_test.rb
+- test/unit/eval_helpers_test.rb
+- test/unit/integrations_test.rb
+- test/unit/assertions_test.rb
+- test/unit/error_test.rb
+- test/unit/path_collection_test.rb
+- test/functional/state_machine_test.rb
+homepage: http://www.pluginaweek.org
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --line-numbers
+- --inline-source
+- --title
+- state_machine
+- --main
+- README.md
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.8.24
+signing_key: 
+specification_version: 3
+summary: State machines for attributes
+test_files: 
+- test/files/switch.rb
+- test/files/en.yml
+- test/test_helper.rb
+- test/unit/matcher_helpers_test.rb
+- test/unit/machine_collection_test.rb
+- test/unit/machine_test.rb
+- test/unit/helper_module_test.rb
+- test/unit/state_collection_test.rb
+- test/unit/transition_collection_test.rb
+- test/unit/state_test.rb
+- test/unit/branch_test.rb
+- test/unit/state_context_test.rb
+- test/unit/integrations/mongoid_test.rb
+- test/unit/integrations/active_model_test.rb
+- test/unit/integrations/mongo_mapper_test.rb
+- test/unit/integrations/sequel_test.rb
+- test/unit/integrations/active_record_test.rb
+- test/unit/integrations/data_mapper_test.rb
+- test/unit/integrations/base_test.rb
+- test/unit/transition_test.rb
+- test/unit/graph_test.rb
+- test/unit/invalid_transition_test.rb
+- test/unit/event_collection_test.rb
+- test/unit/path_test.rb
+- test/unit/callback_test.rb
+- test/unit/state_machine_test.rb
+- test/unit/matcher_test.rb
+- test/unit/node_collection_test.rb
+- test/unit/invalid_event_test.rb
+- test/unit/event_test.rb
+- test/unit/invalid_parallel_transition_test.rb
+- test/unit/eval_helpers_test.rb
+- test/unit/integrations_test.rb
+- test/unit/assertions_test.rb
+- test/unit/error_test.rb
+- test/unit/path_collection_test.rb
+- test/functional/state_machine_test.rb

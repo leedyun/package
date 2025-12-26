@@ -1,0 +1,302 @@
+--- !ruby/object:Gem::Specification
+name: twitter
+version: !ruby/object:Gem::Version
+  version: 8.1.0
+platform: ruby
+authors:
+- Erik Berlin
+- John Nunemaker
+- Wynn Netherland
+- Steve Richert
+- Steve Agalloco
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+- !ruby/object:Gem::Dependency
+  name: buftok
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+- !ruby/object:Gem::Dependency
+  name: equalizer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.11
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.11
+- !ruby/object:Gem::Dependency
+  name: http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: http-form_data
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+- !ruby/object:Gem::Dependency
+  name: llhttp-ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: memoizable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+- !ruby/object:Gem::Dependency
+  name: multipart-post
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: naught
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: simple_oauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+description: A Ruby interface to the Twitter API.
+email:
+- sferik@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE.md
+- README.md
+- lib/twitter.rb
+- lib/twitter/arguments.rb
+- lib/twitter/base.rb
+- lib/twitter/basic_user.rb
+- lib/twitter/client.rb
+- lib/twitter/creatable.rb
+- lib/twitter/cursor.rb
+- lib/twitter/direct_message.rb
+- lib/twitter/direct_message_event.rb
+- lib/twitter/direct_messages/welcome_message.rb
+- lib/twitter/direct_messages/welcome_message_rule.rb
+- lib/twitter/direct_messages/welcome_message_rule_wrapper.rb
+- lib/twitter/direct_messages/welcome_message_wrapper.rb
+- lib/twitter/entities.rb
+- lib/twitter/entity.rb
+- lib/twitter/entity/hashtag.rb
+- lib/twitter/entity/symbol.rb
+- lib/twitter/entity/uri.rb
+- lib/twitter/entity/user_mention.rb
+- lib/twitter/enumerable.rb
+- lib/twitter/error.rb
+- lib/twitter/factory.rb
+- lib/twitter/geo.rb
+- lib/twitter/geo/point.rb
+- lib/twitter/geo/polygon.rb
+- lib/twitter/geo_factory.rb
+- lib/twitter/geo_results.rb
+- lib/twitter/headers.rb
+- lib/twitter/identity.rb
+- lib/twitter/language.rb
+- lib/twitter/list.rb
+- lib/twitter/media/animated_gif.rb
+- lib/twitter/media/photo.rb
+- lib/twitter/media/video.rb
+- lib/twitter/media/video_info.rb
+- lib/twitter/media_factory.rb
+- lib/twitter/metadata.rb
+- lib/twitter/null_object.rb
+- lib/twitter/oembed.rb
+- lib/twitter/place.rb
+- lib/twitter/premium_search_results.rb
+- lib/twitter/profile.rb
+- lib/twitter/profile_banner.rb
+- lib/twitter/rate_limit.rb
+- lib/twitter/relationship.rb
+- lib/twitter/rest/account_activity.rb
+- lib/twitter/rest/api.rb
+- lib/twitter/rest/client.rb
+- lib/twitter/rest/direct_messages.rb
+- lib/twitter/rest/direct_messages/welcome_messages.rb
+- lib/twitter/rest/favorites.rb
+- lib/twitter/rest/form_encoder.rb
+- lib/twitter/rest/friends_and_followers.rb
+- lib/twitter/rest/help.rb
+- lib/twitter/rest/lists.rb
+- lib/twitter/rest/oauth.rb
+- lib/twitter/rest/places_and_geo.rb
+- lib/twitter/rest/premium_search.rb
+- lib/twitter/rest/request.rb
+- lib/twitter/rest/saved_searches.rb
+- lib/twitter/rest/search.rb
+- lib/twitter/rest/spam_reporting.rb
+- lib/twitter/rest/suggested_users.rb
+- lib/twitter/rest/timelines.rb
+- lib/twitter/rest/trends.rb
+- lib/twitter/rest/tweets.rb
+- lib/twitter/rest/undocumented.rb
+- lib/twitter/rest/upload_utils.rb
+- lib/twitter/rest/users.rb
+- lib/twitter/rest/utils.rb
+- lib/twitter/saved_search.rb
+- lib/twitter/search_results.rb
+- lib/twitter/settings.rb
+- lib/twitter/size.rb
+- lib/twitter/source_user.rb
+- lib/twitter/streaming/client.rb
+- lib/twitter/streaming/connection.rb
+- lib/twitter/streaming/deleted_tweet.rb
+- lib/twitter/streaming/event.rb
+- lib/twitter/streaming/friend_list.rb
+- lib/twitter/streaming/message_parser.rb
+- lib/twitter/streaming/response.rb
+- lib/twitter/streaming/stall_warning.rb
+- lib/twitter/suggestion.rb
+- lib/twitter/target_user.rb
+- lib/twitter/trend.rb
+- lib/twitter/trend_results.rb
+- lib/twitter/tweet.rb
+- lib/twitter/user.rb
+- lib/twitter/utils.rb
+- lib/twitter/variant.rb
+- lib/twitter/version.rb
+- twitter.gemspec
+homepage: https://sferik.github.io/twitter/
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: "\U0001F4E3 Attention Twitter Ruby Gem User!\nIf you're seeing
+  this message, that means you're using the old Twitter Ruby gem\nwhich is no longer
+  maintained and will not support Twitter API v2.\n\n\U0001F389 Here's the good news:\nWe
+  recommend switching to the X gem, which supports both API v1.1 and v2. It's\na robust,
+  modern libary that is designed to ensure you'll be able to easily\nintegrate forthcoming
+  API changes.\n\n\U0001F517 For more details, visit: https://sferik.github.io/x-ruby/\n\n\U0001F914
+  Please consider sponsoring\nThe X gem is free to use, but with new API pricing tiers,
+  it actually costs\nmoney to develop and maintain. By contributing to the project,
+  you help:\n\n1. \U0001F6E0  Maintain the library: Keeping it up-to-date and secure.\n2.
+  \U0001F308 Add new features: Enhancements that make your life easier.\n3. \U0001F4AC
+  Provide support: Faster responses to issues and feature requests.\n⭐️ Bonus: Sponsors
+  will get priority influence over the project roadmap.\nYour company's logo will
+  also be displayed on the project's GitHub page.\n\n\U0001F517 To sponsor, visit:
+  https://github.com/sponsors/sferik\n\nBuilding and maintaining an open-source project
+  like this takes a considerable\namount of time and effort. Your sponsorship can
+  help sustain this project. Even\na small monthly donation makes a big difference!\n\n\U0001F496
+  Thanks for considering sponsorship. Together we can make the X gem even better!\n"
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.4
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: A Ruby interface to the Twitter API.
+test_files: []

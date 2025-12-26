@@ -1,0 +1,261 @@
+--- !ruby/object:Gem::Specification
+name: inline_svg
+version: !ruby/object:Gem::Version
+  version: 1.10.0
+platform: ruby
+authors:
+- James Martin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: rspec_junit_formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+description: Get an SVG into your view and then style it with CSS.
+email:
+- inline_svg@jmrtn.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/integration_test.yml"
+- ".github/workflows/rails_6_webpacker_integration_tests.yaml"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- inline_svg.gemspec
+- lib/inline_svg.rb
+- lib/inline_svg/action_view/helpers.rb
+- lib/inline_svg/asset_file.rb
+- lib/inline_svg/cached_asset_file.rb
+- lib/inline_svg/finds_asset_paths.rb
+- lib/inline_svg/id_generator.rb
+- lib/inline_svg/io_resource.rb
+- lib/inline_svg/propshaft_asset_finder.rb
+- lib/inline_svg/railtie.rb
+- lib/inline_svg/static_asset_finder.rb
+- lib/inline_svg/transform_pipeline.rb
+- lib/inline_svg/transform_pipeline/transformations.rb
+- lib/inline_svg/transform_pipeline/transformations/aria_attributes.rb
+- lib/inline_svg/transform_pipeline/transformations/aria_hidden.rb
+- lib/inline_svg/transform_pipeline/transformations/aria_hidden_attribute.rb
+- lib/inline_svg/transform_pipeline/transformations/class_attribute.rb
+- lib/inline_svg/transform_pipeline/transformations/data_attributes.rb
+- lib/inline_svg/transform_pipeline/transformations/description.rb
+- lib/inline_svg/transform_pipeline/transformations/height.rb
+- lib/inline_svg/transform_pipeline/transformations/id_attribute.rb
+- lib/inline_svg/transform_pipeline/transformations/no_comment.rb
+- lib/inline_svg/transform_pipeline/transformations/preserve_aspect_ratio.rb
+- lib/inline_svg/transform_pipeline/transformations/size.rb
+- lib/inline_svg/transform_pipeline/transformations/style_attribute.rb
+- lib/inline_svg/transform_pipeline/transformations/title.rb
+- lib/inline_svg/transform_pipeline/transformations/transformation.rb
+- lib/inline_svg/transform_pipeline/transformations/view_box.rb
+- lib/inline_svg/transform_pipeline/transformations/width.rb
+- lib/inline_svg/version.rb
+- lib/inline_svg/webpack_asset_finder.rb
+- spec/asset_file_spec.rb
+- spec/cached_asset_file_spec.rb
+- spec/files/example.svg
+- spec/files/static_assets/assets0/known-document-two.svg
+- spec/files/static_assets/assets0/known-document.svg
+- spec/files/static_assets/assets0/some-document.svg
+- spec/files/static_assets/assets1/known-document.svg
+- spec/files/static_assets/assets1/other-document.svg
+- spec/files/static_assets/assets1/some-file.txt
+- spec/finds_asset_paths_spec.rb
+- spec/helpers/inline_svg_spec.rb
+- spec/id_generator_spec.rb
+- spec/inline_svg_spec.rb
+- spec/io_resource_spec.rb
+- spec/propshaft_asset_finder_spec.rb
+- spec/static_asset_finder_spec.rb
+- spec/transformation_pipeline/transformations/aria_attributes_spec.rb
+- spec/transformation_pipeline/transformations/aria_hidden_attribute_spec.rb
+- spec/transformation_pipeline/transformations/class_attribute_spec.rb
+- spec/transformation_pipeline/transformations/data_attributes_spec.rb
+- spec/transformation_pipeline/transformations/description_spec.rb
+- spec/transformation_pipeline/transformations/height_spec.rb
+- spec/transformation_pipeline/transformations/id_attribute_spec.rb
+- spec/transformation_pipeline/transformations/preserve_aspect_ratio_spec.rb
+- spec/transformation_pipeline/transformations/size_spec.rb
+- spec/transformation_pipeline/transformations/style_attribute_spec.rb
+- spec/transformation_pipeline/transformations/title_spec.rb
+- spec/transformation_pipeline/transformations/transformation_spec.rb
+- spec/transformation_pipeline/transformations/view_box_spec.rb
+- spec/transformation_pipeline/transformations/width_spec.rb
+- spec/transformation_pipeline/transformations_spec.rb
+- spec/webpack_asset_finder_spec.rb
+homepage: https://github.com/jamesmartin/inline_svg
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Embeds an SVG document, inline.
+test_files:
+- spec/asset_file_spec.rb
+- spec/cached_asset_file_spec.rb
+- spec/files/example.svg
+- spec/files/static_assets/assets0/known-document-two.svg
+- spec/files/static_assets/assets0/known-document.svg
+- spec/files/static_assets/assets0/some-document.svg
+- spec/files/static_assets/assets1/known-document.svg
+- spec/files/static_assets/assets1/other-document.svg
+- spec/files/static_assets/assets1/some-file.txt
+- spec/finds_asset_paths_spec.rb
+- spec/helpers/inline_svg_spec.rb
+- spec/id_generator_spec.rb
+- spec/inline_svg_spec.rb
+- spec/io_resource_spec.rb
+- spec/propshaft_asset_finder_spec.rb
+- spec/static_asset_finder_spec.rb
+- spec/transformation_pipeline/transformations/aria_attributes_spec.rb
+- spec/transformation_pipeline/transformations/aria_hidden_attribute_spec.rb
+- spec/transformation_pipeline/transformations/class_attribute_spec.rb
+- spec/transformation_pipeline/transformations/data_attributes_spec.rb
+- spec/transformation_pipeline/transformations/description_spec.rb
+- spec/transformation_pipeline/transformations/height_spec.rb
+- spec/transformation_pipeline/transformations/id_attribute_spec.rb
+- spec/transformation_pipeline/transformations/preserve_aspect_ratio_spec.rb
+- spec/transformation_pipeline/transformations/size_spec.rb
+- spec/transformation_pipeline/transformations/style_attribute_spec.rb
+- spec/transformation_pipeline/transformations/title_spec.rb
+- spec/transformation_pipeline/transformations/transformation_spec.rb
+- spec/transformation_pipeline/transformations/view_box_spec.rb
+- spec/transformation_pipeline/transformations/width_spec.rb
+- spec/transformation_pipeline/transformations_spec.rb
+- spec/webpack_asset_finder_spec.rb

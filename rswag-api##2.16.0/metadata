@@ -1,0 +1,111 @@
+--- !ruby/object:Gem::Specification
+name: rswag-api
+version: !ruby/object:Gem::Version
+  version: 2.16.0
+platform: ruby
+authors:
+- Richie Morris
+- Greg Myers
+- Jay Danielian
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+description: 'Open up your API to the phenomenal OpenAPI ecosystem by exposing OpenAPI
+  files, that describe your service, as JSON endpoints. More about the OpenAPI initiative
+  here: http://spec.openapis.org/'
+email:
+- domaindrivendev@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- Rakefile
+- lib/generators/rswag/api/install/USAGE
+- lib/generators/rswag/api/install/install_generator.rb
+- lib/generators/rswag/api/install/templates/rswag_api.rb
+- lib/rswag/api.rb
+- lib/rswag/api/configuration.rb
+- lib/rswag/api/engine.rb
+- lib/rswag/api/middleware.rb
+homepage: https://github.com/rswag/rswag
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key: 
+specification_version: 4
+summary: A Rails Engine that exposes OpenAPI (formerly called Swagger) files as JSON
+  endpoints
+test_files: []

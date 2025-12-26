@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: wasabi
+version: !ruby/object:Gem::Version
+  version: 5.1.0
+platform: ruby
+authors:
+- Daniel Harrington
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-10-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.9
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A simple WSDL parser
+email:
+- me@rubiii.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/wasabi.rb
+- lib/wasabi/core_ext/string.rb
+- lib/wasabi/document.rb
+- lib/wasabi/parser.rb
+- lib/wasabi/resolver.rb
+- lib/wasabi/version.rb
+homepage: https://github.com/savonrb/wasabi
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/savonrb/wasabi/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/wasabi/5.1.0
+  source_code_uri: https://github.com/savonrb/wasabi
+  bug_tracker_uri: https://github.com/savonrb/wasabi/issues
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: A simple WSDL parser
+test_files: []

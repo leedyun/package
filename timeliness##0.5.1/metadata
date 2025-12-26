@@ -1,0 +1,198 @@
+--- !ruby/object:Gem::Specification
+name: timeliness
+version: !ruby/object:Gem::Version
+  version: 0.5.1
+platform: ruby
+authors:
+- Adam Meehan
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: tzinfo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.31
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.31
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Fast date/time parser with customisable formats, timezone and I18n support.
+email: adam.meehan@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+- CHANGELOG.rdoc
+files:
+- ".github/workflows/ci.yml"
+- Appraisals
+- CHANGELOG.rdoc
+- LICENSE
+- README.rdoc
+- Rakefile
+- benchmark.rb
+- gemfiles/activesupport_5_2.gemfile
+- gemfiles/activesupport_5_2.gemfile.lock
+- gemfiles/activesupport_6_0.gemfile
+- gemfiles/activesupport_6_0.gemfile.lock
+- gemfiles/activesupport_6_1.gemfile
+- gemfiles/activesupport_6_1.gemfile.lock
+- gemfiles/activesupport_7_0.gemfile
+- gemfiles/activesupport_7_0.gemfile.lock
+- gemfiles/activesupport_7_2.gemfile
+- gemfiles/activesupport_7_2.gemfile.lock
+- gemfiles/activesupport_8_0.gemfile
+- gemfiles/activesupport_8_0.gemfile.lock
+- lib/timeliness.rb
+- lib/timeliness/configuration.rb
+- lib/timeliness/core_ext.rb
+- lib/timeliness/core_ext/string.rb
+- lib/timeliness/definitions.rb
+- lib/timeliness/format.rb
+- lib/timeliness/format_set.rb
+- lib/timeliness/helpers.rb
+- lib/timeliness/parser.rb
+- lib/timeliness/version.rb
+- spec/spec_helper.rb
+- spec/timeliness/core_ext/string_spec.rb
+- spec/timeliness/definitions_spec.rb
+- spec/timeliness/format_set_spec.rb
+- spec/timeliness/format_spec.rb
+- spec/timeliness/parser_spec.rb
+- spec/timeliness_helper.rb
+- timeliness.gemspec
+homepage: http://github.com/adzap/timeliness
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+  bug_tracker_uri: https://github.com/adzap/timeliness/issues
+  changelog_uri: https://github.com/adzap/timeliness/blob/master/CHANGELOG.rdoc
+  source_code_uri: https://github.com/adzap/timeliness
+  wiki_uri: https://github.com/adzap/timeliness/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Date/time parsing for the control freak.
+test_files: []

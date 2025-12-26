@@ -1,0 +1,134 @@
+--- !ruby/object:Gem::Specification
+name: smart_properties
+version: !ruby/object:Gem::Version
+  version: 1.17.0
+platform: ruby
+authors:
+- Konstantin Tennhard
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-12-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |2
+    SmartProperties are a more flexible and feature-rich alternative to
+    traditional Ruby accessors. They provide support for input conversion,
+    input validation, specifying default values and presence checking.
+email:
+- me@t6d.de
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/testing.yml"
+- ".gitignore"
+- ".ruby-version"
+- ".yardopts"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- dev.yml
+- experiments/initialization_performance.rb
+- lib/smart_properties.rb
+- lib/smart_properties/errors.rb
+- lib/smart_properties/property.rb
+- lib/smart_properties/property_collection.rb
+- lib/smart_properties/validations.rb
+- lib/smart_properties/validations/ancestor.rb
+- lib/smart_properties/version.rb
+- smart_properties.gemspec
+- spec/acceptance_checking_spec.rb
+- spec/base_spec.rb
+- spec/configuration_error_spec.rb
+- spec/conversion_spec.rb
+- spec/default_values_spec.rb
+- spec/inheritance_spec.rb
+- spec/property_collection_caching_spec.rb
+- spec/reader_spec.rb
+- spec/required_values_spec.rb
+- spec/spec_helper.rb
+- spec/support/dummy_class.rb
+- spec/support/smart_property_matcher.rb
+- spec/validations/ancestor_validation_spec.rb
+- spec/writable_spec.rb
+homepage: ''
+licenses: []
+metadata:
+  source_code_uri: https://github.com/t6d/smart_properties
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: SmartProperties – Ruby accessors on steroids
+test_files:
+- spec/acceptance_checking_spec.rb
+- spec/base_spec.rb
+- spec/configuration_error_spec.rb
+- spec/conversion_spec.rb
+- spec/default_values_spec.rb
+- spec/inheritance_spec.rb
+- spec/property_collection_caching_spec.rb
+- spec/reader_spec.rb
+- spec/required_values_spec.rb
+- spec/spec_helper.rb
+- spec/support/dummy_class.rb
+- spec/support/smart_property_matcher.rb
+- spec/validations/ancestor_validation_spec.rb
+- spec/writable_spec.rb

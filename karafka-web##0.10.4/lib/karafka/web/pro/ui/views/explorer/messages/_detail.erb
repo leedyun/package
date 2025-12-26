@@ -1,0 +1,30 @@
+<% if v.is_a?(Hash) && !v.empty? %>
+  <% v.each do |k2,v2| %>
+   <tr>
+      <td>
+         <%= "#{k}.#{k2}" %>
+      </td>
+      <td>
+        <%= v2 %>
+      </td>
+   </tr>
+  <% end %>
+<% elsif v.is_a?(Time) %>
+  <tr>
+    <td>
+      <%= k %>
+    </td>
+    <td>
+      <%== time_with_label(v) %>
+    </td>
+  </tr>
+<% else %>
+  <tr>
+    <td>
+      <%= k %>
+    </td>
+    <td>
+      <%= object_value_to_s(v) %>
+    </td>
+  </tr>
+<% end %>

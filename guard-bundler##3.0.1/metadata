@@ -1,0 +1,98 @@
+--- !ruby/object:Gem::Specification
+name: guard-bundler
+version: !ruby/object:Gem::Version
+  version: 3.0.1
+platform: ruby
+authors:
+- Yann Lugrin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: guard-compat
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description: Guard::Bundler automatically install/update your gem bundle when needed
+email:
+- yann.lugrin@sans-savoir.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/guard/bundler.rb
+- lib/guard/bundler/notifier.rb
+- lib/guard/bundler/templates/Guardfile
+- lib/guard/bundler/verify.rb
+- lib/guard/bundler/version.rb
+homepage: https://rubygems.org/gems/guard-bundler
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.9
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Guard gem for Bundler
+test_files: []

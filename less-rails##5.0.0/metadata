@@ -1,0 +1,186 @@
+--- !ruby/object:Gem::Specification
+name: less-rails
+version: !ruby/object:Gem::Version
+  version: 5.0.0
+platform: ruby
+authors:
+- Ken Collins
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-04-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: less
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: sprockets
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.11.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.11.3
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: The dynamic stylesheet language for the Rails asset pipeline. Allows
+  other gems to extend Less load path.
+email:
+- ken@metaskills.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- gemfiles/.keep
+- gemfiles/rails50.gemfile
+- gemfiles/rails51.gemfile
+- gemfiles/rails52.gemfile
+- gemfiles/rails60.gemfile
+- less-rails.gemspec
+- lib/less-rails.rb
+- lib/less/rails.rb
+- lib/less/rails/helpers.rb
+- lib/less/rails/import_processor.rb
+- lib/less/rails/less_transformer.rb
+- lib/less/rails/railtie.rb
+- lib/less/rails/version.rb
+- lib/rails/generators/less/assets/assets_generator.rb
+- lib/rails/generators/less/assets/templates/stylesheet.css.less
+- lib/rails/generators/less/scaffold/scaffold_generator.rb
+- test/cases/basics_spec.rb
+- test/cases/generators_spec.rb
+- test/cases/helpers_spec.rb
+- test/cases/railtie_spec.rb
+- test/dummy_app/app/assets/images/1x1.png
+- test/dummy_app/app/assets/images/rails.png
+- test/dummy_app/app/assets/stylesheets/basics.css.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/mixins.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/relative_path_url.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/variables.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/variables_via_relative_path.less
+- test/dummy_app/app/assets/stylesheets/helpers.css.less
+- test/dummy_app/init.rb
+- test/dummy_app/tmp/.gitkeep
+- test/dummy_app/tmp/cache/.gitkeep
+- test/dummy_app/vendor/assets/stylesheets/vendored.less
+- test/spec_helper.rb
+homepage: http://github.com/metaskills/less-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.0.pre1
+signing_key: 
+specification_version: 4
+summary: The dynamic stylesheet language for the Rails asset pipeline.
+test_files:
+- test/cases/basics_spec.rb
+- test/cases/generators_spec.rb
+- test/cases/helpers_spec.rb
+- test/cases/railtie_spec.rb
+- test/dummy_app/app/assets/images/1x1.png
+- test/dummy_app/app/assets/images/rails.png
+- test/dummy_app/app/assets/stylesheets/basics.css.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/mixins.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/relative_path_url.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/variables.less
+- test/dummy_app/app/assets/stylesheets/frameworks/bootstrap/variables_via_relative_path.less
+- test/dummy_app/app/assets/stylesheets/helpers.css.less
+- test/dummy_app/init.rb
+- test/dummy_app/tmp/.gitkeep
+- test/dummy_app/tmp/cache/.gitkeep
+- test/dummy_app/vendor/assets/stylesheets/vendored.less
+- test/spec_helper.rb

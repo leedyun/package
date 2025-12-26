@@ -1,0 +1,254 @@
+--- !ruby/object:Gem::Specification
+name: datadog-ci
+version: !ruby/object:Gem::Version
+  version: 1.11.0
+platform: ruby
+authors:
+- Datadog, Inc.
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: datadog
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: msgpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |2
+    datadog-ci is a Datadog's CI visibility library for Ruby. It traces
+    tests as they are being executed and brings developers visibility into
+    their CI pipelines.
+email:
+- dev@datadoghq.com
+executables:
+- ddcirb
+extensions:
+- ext/datadog_cov/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- LICENSE-3rdparty.csv
+- LICENSE.Apache
+- LICENSE.BSD3
+- NOTICE
+- README.md
+- exe/ddcirb
+- ext/datadog_cov/datadog_cov.c
+- ext/datadog_cov/extconf.rb
+- lib/datadog/ci.rb
+- lib/datadog/ci/auto_instrument.rb
+- lib/datadog/ci/cli/cli.rb
+- lib/datadog/ci/cli/command/base.rb
+- lib/datadog/ci/cli/command/exec.rb
+- lib/datadog/ci/cli/command/skippable_tests_percentage.rb
+- lib/datadog/ci/cli/command/skippable_tests_percentage_estimate.rb
+- lib/datadog/ci/codeowners/matcher.rb
+- lib/datadog/ci/codeowners/parser.rb
+- lib/datadog/ci/codeowners/rule.rb
+- lib/datadog/ci/concurrent_span.rb
+- lib/datadog/ci/configuration/components.rb
+- lib/datadog/ci/configuration/extensions.rb
+- lib/datadog/ci/configuration/settings.rb
+- lib/datadog/ci/contrib/ciqueue/integration.rb
+- lib/datadog/ci/contrib/ciqueue/patcher.rb
+- lib/datadog/ci/contrib/cucumber/configuration/settings.rb
+- lib/datadog/ci/contrib/cucumber/ext.rb
+- lib/datadog/ci/contrib/cucumber/filter.rb
+- lib/datadog/ci/contrib/cucumber/formatter.rb
+- lib/datadog/ci/contrib/cucumber/instrumentation.rb
+- lib/datadog/ci/contrib/cucumber/integration.rb
+- lib/datadog/ci/contrib/cucumber/patcher.rb
+- lib/datadog/ci/contrib/instrumentation.rb
+- lib/datadog/ci/contrib/integration.rb
+- lib/datadog/ci/contrib/knapsack/extension.rb
+- lib/datadog/ci/contrib/knapsack/integration.rb
+- lib/datadog/ci/contrib/knapsack/patcher.rb
+- lib/datadog/ci/contrib/knapsack/runner.rb
+- lib/datadog/ci/contrib/minitest/configuration/settings.rb
+- lib/datadog/ci/contrib/minitest/ext.rb
+- lib/datadog/ci/contrib/minitest/helpers.rb
+- lib/datadog/ci/contrib/minitest/integration.rb
+- lib/datadog/ci/contrib/minitest/patcher.rb
+- lib/datadog/ci/contrib/minitest/reporter.rb
+- lib/datadog/ci/contrib/minitest/runnable.rb
+- lib/datadog/ci/contrib/minitest/runner.rb
+- lib/datadog/ci/contrib/minitest/test.rb
+- lib/datadog/ci/contrib/patcher.rb
+- lib/datadog/ci/contrib/rspec/configuration/settings.rb
+- lib/datadog/ci/contrib/rspec/example.rb
+- lib/datadog/ci/contrib/rspec/example_group.rb
+- lib/datadog/ci/contrib/rspec/ext.rb
+- lib/datadog/ci/contrib/rspec/integration.rb
+- lib/datadog/ci/contrib/rspec/patcher.rb
+- lib/datadog/ci/contrib/rspec/runner.rb
+- lib/datadog/ci/contrib/selenium/capybara_driver.rb
+- lib/datadog/ci/contrib/selenium/configuration/settings.rb
+- lib/datadog/ci/contrib/selenium/driver.rb
+- lib/datadog/ci/contrib/selenium/ext.rb
+- lib/datadog/ci/contrib/selenium/integration.rb
+- lib/datadog/ci/contrib/selenium/navigation.rb
+- lib/datadog/ci/contrib/selenium/patcher.rb
+- lib/datadog/ci/contrib/selenium/rum.rb
+- lib/datadog/ci/contrib/settings.rb
+- lib/datadog/ci/contrib/simplecov/configuration/settings.rb
+- lib/datadog/ci/contrib/simplecov/ext.rb
+- lib/datadog/ci/contrib/simplecov/integration.rb
+- lib/datadog/ci/contrib/simplecov/patcher.rb
+- lib/datadog/ci/contrib/simplecov/result_extractor.rb
+- lib/datadog/ci/ext/app_types.rb
+- lib/datadog/ci/ext/environment.rb
+- lib/datadog/ci/ext/environment/extractor.rb
+- lib/datadog/ci/ext/environment/providers.rb
+- lib/datadog/ci/ext/environment/providers/appveyor.rb
+- lib/datadog/ci/ext/environment/providers/aws_code_pipeline.rb
+- lib/datadog/ci/ext/environment/providers/azure.rb
+- lib/datadog/ci/ext/environment/providers/base.rb
+- lib/datadog/ci/ext/environment/providers/bitbucket.rb
+- lib/datadog/ci/ext/environment/providers/bitrise.rb
+- lib/datadog/ci/ext/environment/providers/buddy.rb
+- lib/datadog/ci/ext/environment/providers/buildkite.rb
+- lib/datadog/ci/ext/environment/providers/circleci.rb
+- lib/datadog/ci/ext/environment/providers/codefresh.rb
+- lib/datadog/ci/ext/environment/providers/github_actions.rb
+- lib/datadog/ci/ext/environment/providers/gitlab.rb
+- lib/datadog/ci/ext/environment/providers/jenkins.rb
+- lib/datadog/ci/ext/environment/providers/local_git.rb
+- lib/datadog/ci/ext/environment/providers/teamcity.rb
+- lib/datadog/ci/ext/environment/providers/travis.rb
+- lib/datadog/ci/ext/environment/providers/user_defined_tags.rb
+- lib/datadog/ci/ext/git.rb
+- lib/datadog/ci/ext/settings.rb
+- lib/datadog/ci/ext/telemetry.rb
+- lib/datadog/ci/ext/test.rb
+- lib/datadog/ci/ext/transport.rb
+- lib/datadog/ci/git/local_repository.rb
+- lib/datadog/ci/git/packfiles.rb
+- lib/datadog/ci/git/search_commits.rb
+- lib/datadog/ci/git/telemetry.rb
+- lib/datadog/ci/git/tree_uploader.rb
+- lib/datadog/ci/git/upload_packfile.rb
+- lib/datadog/ci/git/user.rb
+- lib/datadog/ci/remote/component.rb
+- lib/datadog/ci/remote/library_settings.rb
+- lib/datadog/ci/remote/library_settings_client.rb
+- lib/datadog/ci/remote/slow_test_retries.rb
+- lib/datadog/ci/span.rb
+- lib/datadog/ci/test.rb
+- lib/datadog/ci/test_module.rb
+- lib/datadog/ci/test_optimisation/component.rb
+- lib/datadog/ci/test_optimisation/coverage/ddcov.rb
+- lib/datadog/ci/test_optimisation/coverage/event.rb
+- lib/datadog/ci/test_optimisation/coverage/transport.rb
+- lib/datadog/ci/test_optimisation/coverage/writer.rb
+- lib/datadog/ci/test_optimisation/skippable.rb
+- lib/datadog/ci/test_optimisation/skippable_percentage/base.rb
+- lib/datadog/ci/test_optimisation/skippable_percentage/calculator.rb
+- lib/datadog/ci/test_optimisation/skippable_percentage/estimator.rb
+- lib/datadog/ci/test_optimisation/telemetry.rb
+- lib/datadog/ci/test_retries/component.rb
+- lib/datadog/ci/test_retries/driver/base.rb
+- lib/datadog/ci/test_retries/driver/no_retry.rb
+- lib/datadog/ci/test_retries/driver/retry_failed.rb
+- lib/datadog/ci/test_retries/driver/retry_new.rb
+- lib/datadog/ci/test_retries/null_component.rb
+- lib/datadog/ci/test_retries/strategy/base.rb
+- lib/datadog/ci/test_retries/strategy/no_retry.rb
+- lib/datadog/ci/test_retries/strategy/retry_failed.rb
+- lib/datadog/ci/test_retries/strategy/retry_new.rb
+- lib/datadog/ci/test_retries/unique_tests_client.rb
+- lib/datadog/ci/test_session.rb
+- lib/datadog/ci/test_suite.rb
+- lib/datadog/ci/test_visibility/component.rb
+- lib/datadog/ci/test_visibility/context.rb
+- lib/datadog/ci/test_visibility/flush.rb
+- lib/datadog/ci/test_visibility/null_component.rb
+- lib/datadog/ci/test_visibility/null_transport.rb
+- lib/datadog/ci/test_visibility/serializers/base.rb
+- lib/datadog/ci/test_visibility/serializers/factories/test_level.rb
+- lib/datadog/ci/test_visibility/serializers/factories/test_suite_level.rb
+- lib/datadog/ci/test_visibility/serializers/span.rb
+- lib/datadog/ci/test_visibility/serializers/test_module.rb
+- lib/datadog/ci/test_visibility/serializers/test_session.rb
+- lib/datadog/ci/test_visibility/serializers/test_suite.rb
+- lib/datadog/ci/test_visibility/serializers/test_v1.rb
+- lib/datadog/ci/test_visibility/serializers/test_v2.rb
+- lib/datadog/ci/test_visibility/store/global.rb
+- lib/datadog/ci/test_visibility/store/local.rb
+- lib/datadog/ci/test_visibility/telemetry.rb
+- lib/datadog/ci/test_visibility/total_coverage.rb
+- lib/datadog/ci/test_visibility/transport.rb
+- lib/datadog/ci/transport/adapters/net.rb
+- lib/datadog/ci/transport/adapters/net_http_client.rb
+- lib/datadog/ci/transport/adapters/telemetry_webmock_safe_adapter.rb
+- lib/datadog/ci/transport/api/agentless.rb
+- lib/datadog/ci/transport/api/base.rb
+- lib/datadog/ci/transport/api/builder.rb
+- lib/datadog/ci/transport/api/evp_proxy.rb
+- lib/datadog/ci/transport/event_platform_transport.rb
+- lib/datadog/ci/transport/gzip.rb
+- lib/datadog/ci/transport/http.rb
+- lib/datadog/ci/transport/telemetry.rb
+- lib/datadog/ci/utils/bundle.rb
+- lib/datadog/ci/utils/configuration.rb
+- lib/datadog/ci/utils/git.rb
+- lib/datadog/ci/utils/parsing.rb
+- lib/datadog/ci/utils/telemetry.rb
+- lib/datadog/ci/utils/test_run.rb
+- lib/datadog/ci/version.rb
+- lib/datadog/ci/worker.rb
+homepage: https://github.com/DataDog/datadog-ci-rb
+licenses:
+- BSD-3-Clause
+metadata:
+  allowed_push_host: https://rubygems.org
+  changelog_uri: https://github.com/DataDog/datadog-ci-rb/blob/main/CHANGELOG.md
+  homepage_uri: https://github.com/DataDog/datadog-ci-rb
+  source_code_uri: https://github.com/DataDog/datadog-ci-rb
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+  - - "<"
+    - !ruby/object:Gem::Version
+      version: '3.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Datadog CI visibility for your ruby application
+test_files: []

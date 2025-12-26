@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: trailblazer-option
+version: !ruby/object:Gem::Version
+  version: 0.1.2
+platform: ruby
+authors:
+- Nick Sutterer
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-11-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-line
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.5
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+description: Wrap an option at compile-time and `call` it at runtime, which allows
+  to have the common `-> ()`, `:method` or `Callable` pattern used for most options.
+email:
+- apotonick@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGES.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/trailblazer-option.rb
+- lib/trailblazer/option.rb
+- lib/trailblazer/option/version.rb
+- test/docs/option_test.rb
+- test/option_test.rb
+- test/test_helper.rb
+- trailblazer-option.gemspec
+homepage: https://trailblazer.to/
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.8
+signing_key:
+specification_version: 4
+summary: Callable patterns for options in Trailblazer
+test_files:
+- test/docs/option_test.rb
+- test/option_test.rb
+- test/test_helper.rb

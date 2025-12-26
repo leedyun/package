@@ -1,0 +1,109 @@
+--- !ruby/object:Gem::Specification
+name: sendgrid-rails
+version: !ruby/object:Gem::Version
+  version: 3.1.0
+platform: ruby
+authors:
+- PavelTyk
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-06-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: actionmailer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+description: Gem to extend ActionMailer with SendGrid API support
+email:
+- paveltyk@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- README.rdoc
+- Rakefile
+- lib/send_grid.rb
+- lib/send_grid/api_header.rb
+- lib/send_grid/config.rb
+- lib/send_grid/mail_interceptor.rb
+- lib/send_grid/version.rb
+- lib/sendgrid-rails.rb
+- send_grid.gemspec
+- spec/api_header_spec.rb
+- spec/fixtures/mailers/mailer.rb
+- spec/mailer_spec.rb
+- spec/spec_helper.rb
+- spec/version_spec.rb
+homepage: https://github.com/PavelTyk/sendgrid-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: sendgrid-rails
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: SendGrid gem fo Rails 3
+test_files:
+- spec/api_header_spec.rb
+- spec/fixtures/mailers/mailer.rb
+- spec/mailer_spec.rb
+- spec/spec_helper.rb
+- spec/version_spec.rb

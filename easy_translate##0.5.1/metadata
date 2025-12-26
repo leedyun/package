@@ -1,0 +1,97 @@
+--- !ruby/object:Gem::Specification
+name: easy_translate
+version: !ruby/object:Gem::Version
+  version: 0.5.1
+platform: ruby
+authors:
+- John Crepezzi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thread
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thread_safe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: easy_translate is a wrapper for the google translate API that makes sense
+  programatically, and implements API keys
+email: john.crepezzi@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/easy_translate.rb
+- lib/easy_translate/detection.rb
+- lib/easy_translate/easy_translate_exception.rb
+- lib/easy_translate/languages.rb
+- lib/easy_translate/request.rb
+- lib/easy_translate/threadable.rb
+- lib/easy_translate/translation.rb
+- lib/easy_translate/translation_target.rb
+- lib/easy_translate/version.rb
+- spec/spec_helper.rb
+homepage: https://github.com/seejohnrun/easy_translate
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.14
+signing_key: 
+specification_version: 4
+summary: Google Translate API Wrapper for Ruby
+test_files:
+- spec/spec_helper.rb

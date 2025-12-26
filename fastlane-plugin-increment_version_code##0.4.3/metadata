@@ -1,0 +1,133 @@
+--- !ruby/object:Gem::Specification
+name: fastlane-plugin-increment_version_code
+version: !ruby/object:Gem::Version
+  version: 0.4.3
+platform: ruby
+authors:
+- Jems
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-05-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fastlane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.99.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.99.0
+description: 
+email: jeremy.toudic@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/fastlane/plugin/increment_version_code/actions/increment_version_code_action.rb
+- lib/fastlane/plugin/increment_version_code/helper/increment_version_code_helper.rb
+- lib/fastlane/plugin/increment_version_code/version.rb
+- lib/fastlane/plugin/increment_version_code.rb
+- README.md
+- LICENSE
+homepage: https://github.com/Jems22/fastlane-plugin-increment_version_code
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14.1
+signing_key: 
+specification_version: 4
+summary: Increment the version code of your android project.
+test_files: []

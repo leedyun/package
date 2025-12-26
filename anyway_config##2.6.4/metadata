@@ -1,0 +1,228 @@
+--- !ruby/object:Gem::Specification
+name: anyway_config
+version: !ruby/object:Gem::Version
+  version: 2.6.4
+platform: ruby
+authors:
+- Vladimir Dementyev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-04-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby-next-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: ammeter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.3
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: ruby-next
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.18'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.18'
+- !ruby/object:Gem::Dependency
+  name: ejson
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+description: "\n    Configuration DSL for Ruby libraries and applications.\n    Allows
+  you to easily follow the twelve-factor application principles (https://12factor.net/config).\n
+  \ "
+email:
+- dementiev.vm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/.rbnext/2.6/anyway/ejson_parser.rb
+- lib/.rbnext/2.7/anyway/auto_cast.rb
+- lib/.rbnext/2.7/anyway/config.rb
+- lib/.rbnext/2.7/anyway/loaders/yaml.rb
+- lib/.rbnext/2.7/anyway/rbs.rb
+- lib/.rbnext/2.7/anyway/settings.rb
+- lib/.rbnext/2.7/anyway/tracing.rb
+- lib/.rbnext/2.7/anyway/type_casting.rb
+- lib/.rbnext/3.0/anyway/auto_cast.rb
+- lib/.rbnext/3.0/anyway/config.rb
+- lib/.rbnext/3.0/anyway/loaders.rb
+- lib/.rbnext/3.0/anyway/loaders/base.rb
+- lib/.rbnext/3.0/anyway/loaders/yaml.rb
+- lib/.rbnext/3.0/anyway/tracing.rb
+- lib/.rbnext/3.1/anyway/config.rb
+- lib/.rbnext/3.1/anyway/dynamic_config.rb
+- lib/.rbnext/3.1/anyway/env.rb
+- lib/.rbnext/3.1/anyway/loaders/base.rb
+- lib/.rbnext/3.1/anyway/tracing.rb
+- lib/.rbnext/3.2/anyway/config.rb
+- lib/.rbnext/3.2/anyway/loaders/base.rb
+- lib/.rbnext/3.2/anyway/tracing.rb
+- lib/.rbnext/3.4/anyway/auto_cast.rb
+- lib/.rbnext/3.4/anyway/config.rb
+- lib/.rbnext/3.4/anyway/tracing.rb
+- lib/.rbnext/3.4/anyway/type_casting.rb
+- lib/anyway.rb
+- lib/anyway/auto_cast.rb
+- lib/anyway/config.rb
+- lib/anyway/dynamic_config.rb
+- lib/anyway/ejson_parser.rb
+- lib/anyway/env.rb
+- lib/anyway/ext/deep_dup.rb
+- lib/anyway/ext/deep_freeze.rb
+- lib/anyway/ext/flatten_names.rb
+- lib/anyway/ext/hash.rb
+- lib/anyway/ext/string_constantize.rb
+- lib/anyway/loaders.rb
+- lib/anyway/loaders/base.rb
+- lib/anyway/loaders/doppler.rb
+- lib/anyway/loaders/ejson.rb
+- lib/anyway/loaders/env.rb
+- lib/anyway/loaders/yaml.rb
+- lib/anyway/option_parser_builder.rb
+- lib/anyway/optparse_config.rb
+- lib/anyway/rails.rb
+- lib/anyway/rails/autoload.rb
+- lib/anyway/rails/config.rb
+- lib/anyway/rails/loaders.rb
+- lib/anyway/rails/loaders/credentials.rb
+- lib/anyway/rails/loaders/secrets.rb
+- lib/anyway/rails/loaders/yaml.rb
+- lib/anyway/rails/settings.rb
+- lib/anyway/railtie.rb
+- lib/anyway/rbs.rb
+- lib/anyway/settings.rb
+- lib/anyway/testing.rb
+- lib/anyway/testing/helpers.rb
+- lib/anyway/tracing.rb
+- lib/anyway/type_casting.rb
+- lib/anyway/utils/deep_merge.rb
+- lib/anyway/utils/which.rb
+- lib/anyway/version.rb
+- lib/anyway_config.rb
+- lib/generators/anyway/app_config/USAGE
+- lib/generators/anyway/app_config/app_config_generator.rb
+- lib/generators/anyway/config/USAGE
+- lib/generators/anyway/config/config_generator.rb
+- lib/generators/anyway/config/templates/config.rb.tt
+- lib/generators/anyway/config/templates/config.yml.tt
+- lib/generators/anyway/install/USAGE
+- lib/generators/anyway/install/install_generator.rb
+- lib/generators/anyway/install/templates/application_config.rb.tt
+- lib/rails/commands/local_credentials/local_credentials_command.rb
+- sig/anyway_config.rbs
+- sig/manifest.yaml
+homepage: http://github.com/palkan/anyway_config
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: http://github.com/palkan/anyway_config/issues
+  changelog_uri: https://github.com/palkan/anyway_config/blob/master/CHANGELOG.md
+  documentation_uri: http://github.com/palkan/anyway_config
+  homepage_uri: http://github.com/palkan/anyway_config
+  source_code_uri: http://github.com/palkan/anyway_config
+  funding_uri: https://github.com/sponsors/palkan
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Configuration DSL for Ruby libraries and applications
+test_files: []

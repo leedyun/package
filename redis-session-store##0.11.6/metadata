@@ -1,0 +1,205 @@
+--- !ruby/object:Gem::Specification
+name: redis-session-store
+version: !ruby/object:Gem::Version
+  version: 0.11.6
+platform: ruby
+authors:
+- Mathias Meyer
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: fakeredis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.25'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.25'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+description: A drop-in replacement for e.g. MemCacheStore to store Rails sessions
+  (and Rails sessions only) in Redis. For great glory!
+email:
+- meyer@paperplanes.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- AUTHORS.md
+- CONTRIBUTING.md
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".simplecov"
+- AUTHORS.md
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/redis-session-store.rb
+- redis-session-store.gemspec
+- spec/redis_session_store_spec.rb
+- spec/spec_helper.rb
+- spec/support.rb
+homepage: https://github.com/roidrage/redis-session-store
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: A drop-in replacement for e.g. MemCacheStore to store Rails sessions (and
+  Rails sessions only) in Redis.
+test_files: []

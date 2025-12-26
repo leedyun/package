@@ -1,0 +1,98 @@
+--- !ruby/object:Gem::Specification
+name: progress
+version: !ruby/object:Gem::Version
+  version: 3.6.0
+platform: ruby
+authors:
+- Ivan Kuchin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-04-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description:
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.markdown
+- Gemfile
+- LICENSE.txt
+- README.markdown
+- lib/progress.rb
+- lib/progress/active_record.rb
+- lib/progress/beeper.rb
+- lib/progress/class_methods.rb
+- lib/progress/elapsed_time.rb
+- lib/progress/enumerable.rb
+- lib/progress/eta.rb
+- lib/progress/integer.rb
+- lib/progress/kernel.rb
+- lib/progress/with_progress.rb
+- progress.gemspec
+- spec/progress/elapsed_time_spec.rb
+- spec/progress_spec.rb
+- spec/test.csv
+homepage: https://github.com/toy/progress
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/toy/progress/issues
+  changelog_uri: https://github.com/toy/progress/blob/master/CHANGELOG.markdown
+  documentation_uri: https://www.rubydoc.info/gems/progress/3.6.0
+  source_code_uri: https://github.com/toy/progress
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.5
+signing_key:
+specification_version: 4
+summary: Show progress of long running tasks
+test_files:
+- spec/progress/elapsed_time_spec.rb
+- spec/progress_spec.rb
+- spec/test.csv

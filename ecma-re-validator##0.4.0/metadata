@@ -1,0 +1,181 @@
+--- !ruby/object:Gem::Specification
+name: ecma-re-validator
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Garen Torikian
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: regexp_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Validate a regular expression string against what ECMA-262 can actually
+  do.
+email:
+- gjtorikian@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".github/workflows/lint.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ecma-re-validator.gemspec
+- lib/ecma-re-validator.rb
+- lib/ecma-re-validator/version.rb
+- script/bootstrap
+- script/cibuild
+- spec/anchors_spec.rb
+- spec/atomic_grouping_spec.rb
+- spec/comments_spec.rb
+- spec/conditionals_spec.rb
+- spec/lookbehind_spec.rb
+- spec/mode_modifiers_spec.rb
+- spec/named_capture_groups_spec.rb
+- spec/possesive_quantifiers_spec.rb
+- spec/spec_helper.rb
+- spec/unicode_spec.rb
+- spec/validator_spec.rb
+homepage: https://github.com/gjtorikian/ecma-re-validator
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+  - - "<"
+    - !ruby/object:Gem::Version
+      version: '4.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key:
+specification_version: 4
+summary: Validate a regular expression string against what ECMA-262 can actually do.
+test_files:
+- spec/anchors_spec.rb
+- spec/atomic_grouping_spec.rb
+- spec/comments_spec.rb
+- spec/conditionals_spec.rb
+- spec/lookbehind_spec.rb
+- spec/mode_modifiers_spec.rb
+- spec/named_capture_groups_spec.rb
+- spec/possesive_quantifiers_spec.rb
+- spec/spec_helper.rb
+- spec/unicode_spec.rb
+- spec/validator_spec.rb

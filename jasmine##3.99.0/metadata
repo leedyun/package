@@ -1,0 +1,361 @@
+--- !ruby/object:Gem::Specification
+name: jasmine
+version: !ruby/object:Gem::Version
+  version: 3.99.0
+platform: ruby
+authors:
+- Gregg Van Hove
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 7.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 7.0.0
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jasmine-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.99.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.99.0
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.4
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: phantomjs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  Test your JavaScript without any framework dependencies, in any environment,
+  and with a nice descriptive syntax.
+
+  Jasmine for Ruby is deprecated. We recommend using the
+  jasmine-browser-runner NPM package instead. It supports all the same
+  scenarios as this gem plus Webpacker. See
+  https://jasmine.github.io/setup/browser.html for setup instructions, and
+  https://github.com/jasmine/jasmine-gem/blob/main/release_notes/3.9.0.md
+  for other options.
+email: jasmine-js@googlegroups.com
+executables:
+- jasmine
+extensions: []
+extra_rdoc_files: []
+files:
+- ".circleci/config.yml"
+- ".editorconfig"
+- ".gitignore"
+- ".rspec"
+- Gemfile
+- HOW_TO_TEST.markdown
+- MIT.LICENSE
+- README.markdown
+- RELEASE.markdown
+- Rakefile
+- bin/jasmine
+- jasmine.gemspec
+- lib/generators/jasmine/examples/USAGE
+- lib/generators/jasmine/examples/examples_generator.rb
+- lib/generators/jasmine/examples/templates/app/assets/javascripts/jasmine_examples/Player.js
+- lib/generators/jasmine/examples/templates/app/assets/javascripts/jasmine_examples/Song.js
+- lib/generators/jasmine/examples/templates/spec/javascripts/helpers/jasmine_examples/SpecHelper.js
+- lib/generators/jasmine/examples/templates/spec/javascripts/jasmine_examples/PlayerSpec.js
+- lib/generators/jasmine/install/USAGE
+- lib/generators/jasmine/install/install_generator.rb
+- lib/generators/jasmine/install/templates/spec/javascripts/helpers/.gitkeep
+- lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine.yml
+- lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine_helper.rb
+- lib/jasmine.rb
+- lib/jasmine/application.rb
+- lib/jasmine/asset_expander.rb
+- lib/jasmine/asset_pipeline_mapper.rb
+- lib/jasmine/base.rb
+- lib/jasmine/ci_runner.rb
+- lib/jasmine/command_line_install.txt
+- lib/jasmine/command_line_tool.rb
+- lib/jasmine/config.rb
+- lib/jasmine/configuration.rb
+- lib/jasmine/core_configuration.rb
+- lib/jasmine/dependencies.rb
+- lib/jasmine/formatters/console.rb
+- lib/jasmine/formatters/exit_code.rb
+- lib/jasmine/formatters/multi.rb
+- lib/jasmine/page.rb
+- lib/jasmine/path_expander.rb
+- lib/jasmine/path_mapper.rb
+- lib/jasmine/railtie.rb
+- lib/jasmine/result.rb
+- lib/jasmine/ruby_versions.rb
+- lib/jasmine/run.html.erb
+- lib/jasmine/runners/chrome_headless.rb
+- lib/jasmine/runners/chromeheadless_boot.js
+- lib/jasmine/runners/phantom_boot.js
+- lib/jasmine/runners/phantom_jasmine_run.js
+- lib/jasmine/runners/phantom_js.rb
+- lib/jasmine/server.rb
+- lib/jasmine/tasks/jasmine.rake
+- lib/jasmine/tasks/jasmine_rails.rake
+- lib/jasmine/version.rb
+- lib/jasmine/yaml_config_parser.rb
+- lib/rack/jasmine/cache_control.rb
+- lib/rack/jasmine/focused_suite.rb
+- lib/rack/jasmine/runner.rb
+- release_notes/3.0.md
+- release_notes/3.1.0.md
+- release_notes/3.10.0.md
+- release_notes/3.2.0.md
+- release_notes/3.3.0.md
+- release_notes/3.4.0.md
+- release_notes/3.5.0.md
+- release_notes/3.5.1.md
+- release_notes/3.6.0.md
+- release_notes/3.7.0.md
+- release_notes/3.8.0.md
+- release_notes/3.8.1.md
+- release_notes/3.9.0.md
+- release_notes/3.9.1.md
+- release_notes/3.9.2.md
+- release_notes/3.99.0.md
+- release_notes/v1.2.1.md
+- release_notes/v1.3.2.md
+- release_notes/v2.0.0.md
+- release_notes/v2.0.1.md
+- release_notes/v2.0.2.md
+- release_notes/v2.0.3.md
+- release_notes/v2.1.0.md
+- release_notes/v2.2.0.md
+- release_notes/v2.3.0.md
+- release_notes/v2.3.1.md
+- release_notes/v2.4.0.md
+- release_notes/v2.5.0.md
+- release_notes/v2.5.1.md
+- release_notes/v2.5.2.md
+- release_notes/v2.6.0.md
+- release_notes/v2.6.1.md
+- release_notes/v2.7.0.md
+- release_notes/v2.8.0.md
+- release_notes/v2.9.0.md
+- release_notes/v2.99.md
+- spec/application_integration_spec.rb
+- spec/application_spec.rb
+- spec/base_spec.rb
+- spec/chrome_headless_spec.rb
+- spec/ci_runner_spec.rb
+- spec/configuration_spec.rb
+- spec/fixture/Rakefile
+- spec/fixture/afterall_spec.js
+- spec/fixture/coffee_spec.coffee
+- spec/fixture/console_log_spec.js
+- spec/fixture/exception_test.js
+- spec/fixture/failing_runner.rb
+- spec/fixture/failing_test.js
+- spec/fixture/large_test_suite_spec.js
+- spec/fixture/non_asset_pipeline.js
+- spec/fixture/non_asset_pipeline_test.js
+- spec/fixture/phantomConfig.js
+- spec/fixture/viewport_spec.js
+- spec/jasmine_command_line_tool_spec.rb
+- spec/jasmine_pojs_spec.rb
+- spec/jasmine_rails_spec.rb
+- spec/lib/jasmine/formatters/console_spec.rb
+- spec/lib/jasmine/formatters/exit_code_spec.rb
+- spec/lib/jasmine/formatters/multi_spec.rb
+- spec/page_spec.rb
+- spec/path_expander_spec.rb
+- spec/path_mapper_spec.rb
+- spec/performance/phantom_js_runner_performance_spec.rb
+- spec/phantom_js_spec.rb
+- spec/rack/jasmine/runner_spec.rb
+- spec/result_spec.rb
+- spec/server_spec.rb
+- spec/spec_helper.rb
+- spec/yaml_config_parser_spec.rb
+homepage: http://jasmine.github.io/
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: JavaScript BDD framework
+test_files:
+- spec/application_integration_spec.rb
+- spec/application_spec.rb
+- spec/base_spec.rb
+- spec/chrome_headless_spec.rb
+- spec/ci_runner_spec.rb
+- spec/configuration_spec.rb
+- spec/fixture/Rakefile
+- spec/fixture/afterall_spec.js
+- spec/fixture/coffee_spec.coffee
+- spec/fixture/console_log_spec.js
+- spec/fixture/exception_test.js
+- spec/fixture/failing_runner.rb
+- spec/fixture/failing_test.js
+- spec/fixture/large_test_suite_spec.js
+- spec/fixture/non_asset_pipeline.js
+- spec/fixture/non_asset_pipeline_test.js
+- spec/fixture/phantomConfig.js
+- spec/fixture/viewport_spec.js
+- spec/jasmine_command_line_tool_spec.rb
+- spec/jasmine_pojs_spec.rb
+- spec/jasmine_rails_spec.rb
+- spec/lib/jasmine/formatters/console_spec.rb
+- spec/lib/jasmine/formatters/exit_code_spec.rb
+- spec/lib/jasmine/formatters/multi_spec.rb
+- spec/page_spec.rb
+- spec/path_expander_spec.rb
+- spec/path_mapper_spec.rb
+- spec/performance/phantom_js_runner_performance_spec.rb
+- spec/phantom_js_spec.rb
+- spec/rack/jasmine/runner_spec.rb
+- spec/result_spec.rb
+- spec/server_spec.rb
+- spec/spec_helper.rb
+- spec/yaml_config_parser_spec.rb

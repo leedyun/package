@@ -1,0 +1,7 @@
+<%=
+  content_tag(:li, 
+    link_to_unless(page.current?, page, url) do
+      content_tag(:span, page, class: "active")
+    end
+  )
+%>

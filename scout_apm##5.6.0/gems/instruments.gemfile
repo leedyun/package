@@ -1,0 +1,8 @@
+eval_gemfile("../Gemfile")
+
+gem 'httpclient'
+gem 'http'
+gem 'redis'
+gem 'moped'
+gem 'actionpack'
+gem 'actionview'

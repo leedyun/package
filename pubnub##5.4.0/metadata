@@ -1,0 +1,323 @@
+--- !ruby/object:Gem::Specification
+name: pubnub
+version: !ruby/object:Gem::Version
+  version: 5.4.0
+platform: ruby
+authors:
+- PubNub
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.4
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby-edge
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+- !ruby/object:Gem::Dependency
+  name: dry-validation
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.3
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: timers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+description: Ruby anywhere in the world in 250ms with PubNub!
+email:
+- support@pubnub.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".bundle/config"
+- ".codeclimate.yml"
+- ".github/CODEOWNERS"
+- ".github/workflows/commands-handler.yml"
+- ".github/workflows/release.yml"
+- ".github/workflows/release/versions.json"
+- ".github/workflows/run-tests.yml"
+- ".github/workflows/run-validations.yml"
+- ".gitignore"
+- ".pubnub.yml"
+- ".rubocop.yml"
+- ".tool-versions"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- Pubnub Ruby SDK upgrade guide.md
+- README.md
+- Rakefile
+- VERSION
+- config/cucumber.yml
+- docs.md
+- features/step_definitions/access_steps.rb
+- features/step_definitions/crypto_steps.rb
+- features/support/cryptor.rb
+- features/support/env.rb
+- features/support/helper.rb
+- features/support/hooks.rb
+- gemfiles/celluloid_017.gemfile
+- gemfiles/celluloid_017.gemfile.lock
+- gemfiles/celluloid_018.gemfile
+- gemfiles/celluloid_018.gemfile.lock
+- gemfiles/celluloid_master.gemfile
+- gemfiles/celluloid_master.gemfile.lock
+- gemfiles/concurrent-ruby-1.0.5.gem
+- gemfiles/concurrent-ruby-edge-0.3.1.gem
+- lib/pubnub.rb
+- lib/pubnub/cbor.rb
+- lib/pubnub/client.rb
+- lib/pubnub/client/events.rb
+- lib/pubnub/client/getters_setters.rb
+- lib/pubnub/client/helpers.rb
+- lib/pubnub/client/paged_history.rb
+- lib/pubnub/configuration.rb
+- lib/pubnub/constants.rb
+- lib/pubnub/envelope.rb
+- lib/pubnub/error.rb
+- lib/pubnub/error_envelope.rb
+- lib/pubnub/event.rb
+- lib/pubnub/event/formatter.rb
+- lib/pubnub/event/signature.rb
+- lib/pubnub/events/add_channels_to_push.rb
+- lib/pubnub/events/add_message_action.rb
+- lib/pubnub/events/audit.rb
+- lib/pubnub/events/channel_registration.rb
+- lib/pubnub/events/delete_messages.rb
+- lib/pubnub/events/fetch_messages.rb
+- lib/pubnub/events/get_all_channels_metadata.rb
+- lib/pubnub/events/get_all_uuid_metadata.rb
+- lib/pubnub/events/get_channel_members.rb
+- lib/pubnub/events/get_channel_metadata.rb
+- lib/pubnub/events/get_memberships.rb
+- lib/pubnub/events/get_message_actions.rb
+- lib/pubnub/events/get_uuid_metadata.rb
+- lib/pubnub/events/grant.rb
+- lib/pubnub/events/grant_token.rb
+- lib/pubnub/events/heartbeat.rb
+- lib/pubnub/events/here_now.rb
+- lib/pubnub/events/history.rb
+- lib/pubnub/events/leave.rb
+- lib/pubnub/events/list_push_provisions.rb
+- lib/pubnub/events/message_counts.rb
+- lib/pubnub/events/presence.rb
+- lib/pubnub/events/publish.rb
+- lib/pubnub/events/remove_channel_members.rb
+- lib/pubnub/events/remove_channel_metadata.rb
+- lib/pubnub/events/remove_channels_from_push.rb
+- lib/pubnub/events/remove_device_from_push.rb
+- lib/pubnub/events/remove_memberships.rb
+- lib/pubnub/events/remove_message_actions.rb
+- lib/pubnub/events/remove_uuid_metadata.rb
+- lib/pubnub/events/revoke.rb
+- lib/pubnub/events/revoke_token.rb
+- lib/pubnub/events/set_channel_members.rb
+- lib/pubnub/events/set_channel_metadata.rb
+- lib/pubnub/events/set_memberships.rb
+- lib/pubnub/events/set_state.rb
+- lib/pubnub/events/set_uuid_metadata.rb
+- lib/pubnub/events/signal.rb
+- lib/pubnub/events/state.rb
+- lib/pubnub/events/subscribe.rb
+- lib/pubnub/events/time.rb
+- lib/pubnub/events/where_now.rb
+- lib/pubnub/format.rb
+- lib/pubnub/formatter.rb
+- lib/pubnub/heart.rb
+- lib/pubnub/modules/crypto/crypto_module.rb
+- lib/pubnub/modules/crypto/crypto_provider.rb
+- lib/pubnub/modules/crypto/cryptor.rb
+- lib/pubnub/modules/crypto/cryptor_header.rb
+- lib/pubnub/modules/crypto/cryptors/aes_cbc_cryptor.rb
+- lib/pubnub/modules/crypto/cryptors/legacy_cryptor.rb
+- lib/pubnub/modules/crypto/module.rb
+- lib/pubnub/origin_manager.rb
+- lib/pubnub/pam.rb
+- lib/pubnub/schemas/envelope_schema.rb
+- lib/pubnub/single_event.rb
+- lib/pubnub/subscribe_callback.rb
+- lib/pubnub/subscribe_event.rb
+- lib/pubnub/subscribe_event/adding.rb
+- lib/pubnub/subscribe_event/callbacks.rb
+- lib/pubnub/subscribe_event/formatter.rb
+- lib/pubnub/subscribe_event/heartbeat.rb
+- lib/pubnub/subscribe_event/removing.rb
+- lib/pubnub/subscriber.rb
+- lib/pubnub/telemetry.rb
+- lib/pubnub/uuid.rb
+- lib/pubnub/validators/add_channels_to_push.rb
+- lib/pubnub/validators/add_message_action.rb
+- lib/pubnub/validators/audit.rb
+- lib/pubnub/validators/channel_registration.rb
+- lib/pubnub/validators/client.rb
+- lib/pubnub/validators/common_validator.rb
+- lib/pubnub/validators/delete.rb
+- lib/pubnub/validators/fetch_messages.rb
+- lib/pubnub/validators/get_all_channels_metadata.rb
+- lib/pubnub/validators/get_all_uuid_metadata.rb
+- lib/pubnub/validators/get_channel_members.rb
+- lib/pubnub/validators/get_channel_metadata.rb
+- lib/pubnub/validators/get_memberships.rb
+- lib/pubnub/validators/get_message_actions.rb
+- lib/pubnub/validators/get_uuid_metadata.rb
+- lib/pubnub/validators/grant.rb
+- lib/pubnub/validators/grant_token.rb
+- lib/pubnub/validators/heartbeat.rb
+- lib/pubnub/validators/here_now.rb
+- lib/pubnub/validators/history.rb
+- lib/pubnub/validators/leave.rb
+- lib/pubnub/validators/list_push_provisions.rb
+- lib/pubnub/validators/message_counts.rb
+- lib/pubnub/validators/presence.rb
+- lib/pubnub/validators/publish.rb
+- lib/pubnub/validators/remove_channel_members.rb
+- lib/pubnub/validators/remove_channel_metadata.rb
+- lib/pubnub/validators/remove_channels_from_push.rb
+- lib/pubnub/validators/remove_device_from_push.rb
+- lib/pubnub/validators/remove_memberships.rb
+- lib/pubnub/validators/remove_message_action.rb
+- lib/pubnub/validators/remove_uuid_metadata.rb
+- lib/pubnub/validators/revoke.rb
+- lib/pubnub/validators/revoke_token.rb
+- lib/pubnub/validators/set_channel_members.rb
+- lib/pubnub/validators/set_channel_metadata.rb
+- lib/pubnub/validators/set_memberships.rb
+- lib/pubnub/validators/set_state.rb
+- lib/pubnub/validators/set_uuid_metadata.rb
+- lib/pubnub/validators/signal.rb
+- lib/pubnub/validators/state.rb
+- lib/pubnub/validators/subscribe.rb
+- lib/pubnub/validators/time.rb
+- lib/pubnub/validators/where_now.rb
+- lib/pubnub/version.rb
+- pubnub.gemspec
+homepage: https://github.com/pubnub/ruby
+licenses:
+- LicenseRef-LICENSE.txt
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: PubNub Official Ruby gem.
+test_files:
+- features/step_definitions/access_steps.rb
+- features/step_definitions/crypto_steps.rb
+- features/support/cryptor.rb
+- features/support/env.rb
+- features/support/helper.rb
+- features/support/hooks.rb

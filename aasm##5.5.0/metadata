@@ -1,0 +1,221 @@
+--- !ruby/object:Gem::Specification
+name: aasm
+version: !ruby/object:Gem::Version
+  version: 5.5.0
+platform: ruby
+authors:
+- Thorsten Boettger
+- Anil Maurya
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-02-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: generator_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: codecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.21
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.21
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: AASM is a continuation of the acts-as-state-machine rails plugin, built
+  for plain Ruby objects.
+email: aasm@mt7.de, anilmaurya8dec@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/aasm.rb
+- lib/aasm/aasm.rb
+- lib/aasm/base.rb
+- lib/aasm/configuration.rb
+- lib/aasm/core/event.rb
+- lib/aasm/core/invoker.rb
+- lib/aasm/core/invokers/base_invoker.rb
+- lib/aasm/core/invokers/class_invoker.rb
+- lib/aasm/core/invokers/literal_invoker.rb
+- lib/aasm/core/invokers/proc_invoker.rb
+- lib/aasm/core/state.rb
+- lib/aasm/core/transition.rb
+- lib/aasm/dsl_helper.rb
+- lib/aasm/errors.rb
+- lib/aasm/instance_base.rb
+- lib/aasm/localizer.rb
+- lib/aasm/minitest.rb
+- lib/aasm/minitest/allow_event.rb
+- lib/aasm/minitest/allow_transition_to.rb
+- lib/aasm/minitest/have_state.rb
+- lib/aasm/minitest/transition_from.rb
+- lib/aasm/minitest_spec.rb
+- lib/aasm/persistence.rb
+- lib/aasm/persistence/active_record_persistence.rb
+- lib/aasm/persistence/base.rb
+- lib/aasm/persistence/core_data_query_persistence.rb
+- lib/aasm/persistence/dynamoid_persistence.rb
+- lib/aasm/persistence/mongoid_persistence.rb
+- lib/aasm/persistence/no_brainer_persistence.rb
+- lib/aasm/persistence/orm.rb
+- lib/aasm/persistence/plain_persistence.rb
+- lib/aasm/persistence/redis_persistence.rb
+- lib/aasm/persistence/sequel_persistence.rb
+- lib/aasm/rspec.rb
+- lib/aasm/rspec/allow_event.rb
+- lib/aasm/rspec/allow_transition_to.rb
+- lib/aasm/rspec/have_state.rb
+- lib/aasm/rspec/transition_from.rb
+- lib/aasm/state_machine.rb
+- lib/aasm/state_machine_store.rb
+- lib/aasm/version.rb
+- lib/generators/aasm/aasm_generator.rb
+- lib/generators/aasm/orm_helpers.rb
+- lib/generators/active_record/aasm_generator.rb
+- lib/generators/active_record/templates/migration.rb
+- lib/generators/active_record/templates/migration_existing.rb
+- lib/generators/mongoid/aasm_generator.rb
+- lib/generators/nobrainer/aasm_generator.rb
+- lib/motion-aasm.rb
+homepage: https://github.com/aasm/aasm
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.9
+signing_key:
+specification_version: 4
+summary: State machine mixin for Ruby objects
+test_files: []

@@ -1,0 +1,193 @@
+--- !ruby/object:Gem::Specification
+name: chronic
+version: !ruby/object:Gem::Version
+  version: 0.10.2
+platform: ruby
+authors:
+- Tom Preston-Werner
+- Lee Jarvis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-09-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Chronic is a natural language date/time parser written in pure Ruby.
+email:
+- tom@mojombo.com
+- ljjarvis@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- HISTORY.md
+- LICENSE
+files:
+- .gitignore
+- .travis.yml
+- HISTORY.md
+- LICENSE
+- README.md
+- Rakefile
+- chronic.gemspec
+- lib/chronic.rb
+- lib/chronic/date.rb
+- lib/chronic/grabber.rb
+- lib/chronic/handler.rb
+- lib/chronic/handlers.rb
+- lib/chronic/mini_date.rb
+- lib/chronic/numerizer.rb
+- lib/chronic/ordinal.rb
+- lib/chronic/parser.rb
+- lib/chronic/pointer.rb
+- lib/chronic/repeater.rb
+- lib/chronic/repeaters/repeater_day.rb
+- lib/chronic/repeaters/repeater_day_name.rb
+- lib/chronic/repeaters/repeater_day_portion.rb
+- lib/chronic/repeaters/repeater_fortnight.rb
+- lib/chronic/repeaters/repeater_hour.rb
+- lib/chronic/repeaters/repeater_minute.rb
+- lib/chronic/repeaters/repeater_month.rb
+- lib/chronic/repeaters/repeater_month_name.rb
+- lib/chronic/repeaters/repeater_season.rb
+- lib/chronic/repeaters/repeater_season_name.rb
+- lib/chronic/repeaters/repeater_second.rb
+- lib/chronic/repeaters/repeater_time.rb
+- lib/chronic/repeaters/repeater_week.rb
+- lib/chronic/repeaters/repeater_weekday.rb
+- lib/chronic/repeaters/repeater_weekend.rb
+- lib/chronic/repeaters/repeater_year.rb
+- lib/chronic/scalar.rb
+- lib/chronic/season.rb
+- lib/chronic/separator.rb
+- lib/chronic/sign.rb
+- lib/chronic/span.rb
+- lib/chronic/tag.rb
+- lib/chronic/time.rb
+- lib/chronic/time_zone.rb
+- lib/chronic/token.rb
+- test/helper.rb
+- test/test_chronic.rb
+- test/test_daylight_savings.rb
+- test/test_handler.rb
+- test/test_mini_date.rb
+- test/test_numerizer.rb
+- test/test_parsing.rb
+- test/test_repeater_day_name.rb
+- test/test_repeater_day_portion.rb
+- test/test_repeater_fortnight.rb
+- test/test_repeater_hour.rb
+- test/test_repeater_minute.rb
+- test/test_repeater_month.rb
+- test/test_repeater_month_name.rb
+- test/test_repeater_season.rb
+- test/test_repeater_time.rb
+- test/test_repeater_week.rb
+- test/test_repeater_weekday.rb
+- test/test_repeater_weekend.rb
+- test/test_repeater_year.rb
+- test/test_span.rb
+- test/test_token.rb
+homepage: http://github.com/mojombo/chronic
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- --charset=UTF-8
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: chronic
+rubygems_version: 2.0.2
+signing_key: 
+specification_version: 4
+summary: Natural language date/time parsing.
+test_files:
+- test/helper.rb
+- test/test_chronic.rb
+- test/test_daylight_savings.rb
+- test/test_handler.rb
+- test/test_mini_date.rb
+- test/test_numerizer.rb
+- test/test_parsing.rb
+- test/test_repeater_day_name.rb
+- test/test_repeater_day_portion.rb
+- test/test_repeater_fortnight.rb
+- test/test_repeater_hour.rb
+- test/test_repeater_minute.rb
+- test/test_repeater_month.rb
+- test/test_repeater_month_name.rb
+- test/test_repeater_season.rb
+- test/test_repeater_time.rb
+- test/test_repeater_week.rb
+- test/test_repeater_weekday.rb
+- test/test_repeater_weekend.rb
+- test/test_repeater_year.rb
+- test/test_span.rb
+- test/test_token.rb

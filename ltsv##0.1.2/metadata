@@ -1,0 +1,71 @@
+--- !ruby/object:Gem::Specification
+name: ltsv
+version: !ruby/object:Gem::Version
+  version: 0.1.2
+platform: ruby
+authors:
+- condor
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-11-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Parser / Dumper for LTSV
+email:
+- condor1226@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ReleaseNote.md
+- lib/ltsv.rb
+- ltsv.gemspec
+- spec/ltsv_spec.rb
+- spec/spec_helper.rb
+- spec/test.ltsv
+homepage: https://github.com/condor/ltsv
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.8
+signing_key: 
+specification_version: 4
+summary: A Parser / Dumper for LTSV
+test_files:
+- spec/ltsv_spec.rb
+- spec/spec_helper.rb
+- spec/test.ltsv

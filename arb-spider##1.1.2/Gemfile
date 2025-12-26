@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+gem 'httpclient','~> 2.7.1'
+gem 'nokogiri','~> 1.6.7'
+
+
+# Specify your gem's dependencies in arb_spider.gemspec
+gemspec

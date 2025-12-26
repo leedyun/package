@@ -1,0 +1,145 @@
+--- !ruby/object:Gem::Specification
+name: ruby2ruby
+version: !ruby/object:Gem::Version
+  version: 2.5.1
+platform: ruby
+authors:
+- Ryan Davis
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDPjCCAiagAwIBAgIBCDANBgkqhkiG9w0BAQsFADBFMRMwEQYDVQQDDApyeWFu
+  ZC1ydWJ5MRkwFwYKCZImiZPyLGQBGRYJemVuc3BpZGVyMRMwEQYKCZImiZPyLGQB
+  GRYDY29tMB4XDTI0MDEwMjIxMjEyM1oXDTI1MDEwMTIxMjEyM1owRTETMBEGA1UE
+  AwwKcnlhbmQtcnVieTEZMBcGCgmSJomT8ixkARkWCXplbnNwaWRlcjETMBEGCgmS
+  JomT8ixkARkWA2NvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALda
+  b9DCgK+627gPJkB6XfjZ1itoOQvpqH1EXScSaba9/S2VF22VYQbXU1xQXL/WzCkx
+  taCPaLmfYIaFcHHCSY4hYDJijRQkLxPeB3xbOfzfLoBDbjvx5JxgJxUjmGa7xhcT
+  oOvjtt5P8+GSK9zLzxQP0gVLS/D0FmoE44XuDr3iQkVS2ujU5zZL84mMNqNB1znh
+  GiadM9GHRaDiaxuX0cIUBj19T01mVE2iymf9I6bEsiayK/n6QujtyCbTWsAS9Rqt
+  qhtV7HJxNKuPj/JFH0D2cswvzznE/a5FOYO68g+YCuFi5L8wZuuM8zzdwjrWHqSV
+  gBEfoTEGr7Zii72cx+sCAwEAAaM5MDcwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAw
+  HQYDVR0OBBYEFEfFe9md/r/tj/Wmwpy+MI8d9k/hMA0GCSqGSIb3DQEBCwUAA4IB
+  AQCygvpmncmkiSs9r/Kceo4bBPDszhTv6iBi4LwMReqnFrpNLMOWJw7xi8x+3eL2
+  XS09ZPNOt2zm70KmFouBMgOysnDY4k2dE8uF6B8JbZOO8QfalW+CoNBliefOTcn2
+  bg5IOP7UoGM5lC174/cbDJrJnRG9bzig5FAP0mvsgA8zgTRXQzIUAZEo92D5K7p4
+  B4/O998ho6BSOgYBI9Yk1ttdCtti6Y+8N9+fZESsjtWMykA+WXWeGUScHqiU+gH8
+  S7043fq9EbQdBr2AXdj92+CDwuTfHI6/Hj5FVBDULufrJaan4xUgL70Hvc6pTTeW
+  deKfBjgVAq7EYHu1AczzlUly
+  -----END CERTIFICATE-----
+date: 2024-07-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sexp_processor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.6'
+- !ruby/object:Gem::Dependency
+  name: ruby_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: hoe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+description: |-
+  ruby2ruby provides a means of generating pure ruby code easily from
+  RubyParser compatible Sexps. This makes making dynamic language
+  processors in ruby easier than ever!
+email:
+- ryand-ruby@zenspider.com
+executables:
+- r2r_show
+extensions: []
+extra_rdoc_files:
+- History.rdoc
+- Manifest.txt
+- README.rdoc
+files:
+- ".autotest"
+- History.rdoc
+- Manifest.txt
+- README.rdoc
+- Rakefile
+- bin/r2r_show
+- lib/ruby2ruby.rb
+- test/test_ruby2ruby.rb
+homepage: https://github.com/seattlerb/ruby2ruby
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/seattlerb/ruby2ruby
+post_install_message:
+rdoc_options:
+- "--main"
+- README.rdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.14
+signing_key:
+specification_version: 4
+summary: ruby2ruby provides a means of generating pure ruby code easily from RubyParser
+  compatible Sexps
+test_files: []

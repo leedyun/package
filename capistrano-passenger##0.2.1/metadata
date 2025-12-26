@@ -1,0 +1,124 @@
+--- !ruby/object:Gem::Specification
+name: capistrano-passenger
+version: !ruby/object:Gem::Version
+  version: 0.2.1
+platform: ruby
+authors:
+- Isaac Betesh
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-04-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: capistrano
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Passenger support for Capistrano 3.x
+email:
+- iybetesh@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- capistrano-passenger.gemspec
+- lib/capistrano-passenger.rb
+- lib/capistrano/passenger.rb
+- lib/capistrano/passenger/no_hook.rb
+- lib/capistrano/passenger/version.rb
+- lib/capistrano/tasks/deploy_passenger.cap
+- lib/capistrano/tasks/passenger.cap
+homepage: https://github.com/capistrano/passenger
+licenses:
+- MIT
+metadata: {}
+post_install_message: |
+  ==== Release notes for capistrano-passenger ====
+  passenger once had only one way to restart: `touch tmp/restart.txt`
+  Beginning with passenger v4.0.33, a new way was introduced: `passenger-config restart-app`
+
+  The new way to restart was not initially practical for everyone,
+  since for versions of passenger prior to v5.0.10,
+  it required your deployment user to have sudo access for some server configurations.
+
+  capistrano-passenger gives you the flexibility to choose your restart approach, or to rely on reasonable defaults.
+
+  If you want to restart using `touch tmp/restart.txt`, add this to your config/deploy.rb:
+
+      set :passenger_restart_with_touch, true
+
+  If you want to restart using `passenger-config restart-app`, add this to your config/deploy.rb:
+
+      set :passenger_restart_with_touch, false # Note that `nil` is NOT the same as `false` here
+
+  If you don't set `:passenger_restart_with_touch`, capistrano-passenger will check what version of passenger you are running
+  and use `passenger-config restart-app` if it is available in that version.
+
+  If you are running passenger in standalone mode, it is possible for you to put passenger in your
+  Gemfile and rely on capistrano-bundler to install it with the rest of your bundle.
+  If you are installing passenger during your deployment AND you want to restart using `passenger-config restart-app`,
+  you need to set `:passenger_in_gemfile` to `true` in your `config/deploy.rb`.
+  ================================================
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Passenger support for Capistrano 3.x
+test_files: []

@@ -1,0 +1,158 @@
+--- !ruby/object:Gem::Specification
+name: zookeeper
+version: !ruby/object:Gem::Version
+  version: 1.5.5
+platform: ruby
+authors:
+- Phillip Pearson
+- Eric Maland
+- Evan Weaver
+- Brian Wickman
+- Neil Conway
+- Jonathan D. Simms
+- Mal McKay
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-06 00:00:00.000000000 Z
+dependencies: []
+description: |+
+  A low-level multi-Ruby wrapper around the ZooKeeper API bindings. For a
+  friendlier interface, see http://github.com/slyphon/zk. Currently supported:
+  MRI: {2.5, 2.6, 2.7, 3.0, 3.1, 3.2}, JRuby: ~> 9.2.x.x
+
+  This library uses version 3.4.5 of zookeeper bindings.
+
+email:
+- slyphon@gmail.com
+executables: []
+extensions:
+- ext/extconf.rb
+extra_rdoc_files: []
+files:
+- ".ctags_paths"
+- ".dotfiles/ruby-gemset"
+- ".dotfiles/ruby-version"
+- ".dotfiles/rvmrc"
+- ".github/workflows/build.yml"
+- ".gitignore"
+- ".gitmodules"
+- CHANGELOG
+- Gemfile
+- Guardfile
+- LICENSE
+- Manifest
+- README.markdown
+- Rakefile
+- cause-abort.rb
+- ext/.gitignore
+- ext/Rakefile
+- ext/c_zookeeper.rb
+- ext/common.h
+- ext/dbg.h
+- ext/depend
+- ext/event_lib.c
+- ext/event_lib.h
+- ext/extconf.rb
+- ext/generate_gvl_code.rb
+- ext/patches/zkc-3.3.5-network.patch
+- ext/patches/zkc-3.4.5-buffer-overflow.patch
+- ext/patches/zkc-3.4.5-config.patch
+- ext/patches/zkc-3.4.5-fetch-and-add.patch
+- ext/patches/zkc-3.4.5-logging.patch
+- ext/patches/zkc-3.4.5-out-of-order-ping.patch
+- ext/patches/zkc-3.4.5-yosemite-htonl-fix.patch
+- ext/zkc-3.4.5.tar.gz
+- ext/zkrb.c
+- ext/zkrb_wrapper.c
+- ext/zkrb_wrapper.h
+- ext/zkrb_wrapper_compat.c
+- ext/zkrb_wrapper_compat.h
+- ext/zookeeper_base.rb
+- java/java_base.rb
+- lib/zookeeper.rb
+- lib/zookeeper/acls.rb
+- lib/zookeeper/callbacks.rb
+- lib/zookeeper/client.rb
+- lib/zookeeper/client_methods.rb
+- lib/zookeeper/common.rb
+- lib/zookeeper/common/queue_with_pipe.rb
+- lib/zookeeper/compatibility.rb
+- lib/zookeeper/constants.rb
+- lib/zookeeper/continuation.rb
+- lib/zookeeper/core_ext.rb
+- lib/zookeeper/em_client.rb
+- lib/zookeeper/exceptions.rb
+- lib/zookeeper/forked.rb
+- lib/zookeeper/latch.rb
+- lib/zookeeper/logger.rb
+- lib/zookeeper/logger/forwarding_logger.rb
+- lib/zookeeper/monitor.rb
+- lib/zookeeper/rake_tasks.rb
+- lib/zookeeper/request_registry.rb
+- lib/zookeeper/stat.rb
+- lib/zookeeper/version.rb
+- notes.txt
+- scripts/upgrade-1.0-sed-alike.rb
+- spec/c_zookeeper_spec.rb
+- spec/chrooted_connection_spec.rb
+- spec/compatibilty_spec.rb
+- spec/default_watcher_spec.rb
+- spec/em_spec.rb
+- spec/ext/zookeeper_base_spec.rb
+- spec/forked_connection_spec.rb
+- spec/latch_spec.rb
+- spec/log4j.properties
+- spec/shared/all_success_return_values.rb
+- spec/shared/connection_examples.rb
+- spec/spec_helper.rb
+- spec/support/00_logging.rb
+- spec/support/10_spawn_zookeeper.rb
+- spec/support/progress_formatter.rb
+- spec/support/zookeeper_spec_helpers.rb
+- spec/zookeeper_spec.rb
+- zookeeper.gemspec
+- zoomonkey/duplicates
+- zoomonkey/zoomonkey.rb
+homepage: https://github.com/slyphon/zookeeper
+licenses: []
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.4
+signing_key:
+specification_version: 4
+summary: Apache ZooKeeper driver for Rubies
+test_files:
+- spec/c_zookeeper_spec.rb
+- spec/chrooted_connection_spec.rb
+- spec/compatibilty_spec.rb
+- spec/default_watcher_spec.rb
+- spec/em_spec.rb
+- spec/ext/zookeeper_base_spec.rb
+- spec/forked_connection_spec.rb
+- spec/latch_spec.rb
+- spec/log4j.properties
+- spec/shared/all_success_return_values.rb
+- spec/shared/connection_examples.rb
+- spec/spec_helper.rb
+- spec/support/00_logging.rb
+- spec/support/10_spawn_zookeeper.rb
+- spec/support/progress_formatter.rb
+- spec/support/zookeeper_spec_helpers.rb
+- spec/zookeeper_spec.rb
+...

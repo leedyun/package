@@ -1,0 +1,145 @@
+--- !ruby/object:Gem::Specification
+name: chroma
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Jeremy Fairbank
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-09-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+description: Chroma is a color manipulation and palette generation gem.
+email:
+- elpapapollo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- chroma.gemspec
+- lib/chroma.rb
+- lib/chroma/color.rb
+- lib/chroma/color/attributes.rb
+- lib/chroma/color/modifiers.rb
+- lib/chroma/color/serializers.rb
+- lib/chroma/color_modes.rb
+- lib/chroma/converters/base.rb
+- lib/chroma/converters/hsl_converter.rb
+- lib/chroma/converters/hsv_converter.rb
+- lib/chroma/converters/rgb_converter.rb
+- lib/chroma/errors.rb
+- lib/chroma/extensions/string.rb
+- lib/chroma/harmonies.rb
+- lib/chroma/helpers/bounders.rb
+- lib/chroma/palette_builder.rb
+- lib/chroma/rgb_generator.rb
+- lib/chroma/rgb_generator/base.rb
+- lib/chroma/rgb_generator/from_hex_string_values.rb
+- lib/chroma/rgb_generator/from_hsl.rb
+- lib/chroma/rgb_generator/from_hsl_values.rb
+- lib/chroma/rgb_generator/from_hsv.rb
+- lib/chroma/rgb_generator/from_hsv_values.rb
+- lib/chroma/rgb_generator/from_rgb.rb
+- lib/chroma/rgb_generator/from_rgb_values.rb
+- lib/chroma/rgb_generator/from_string.rb
+- lib/chroma/version.rb
+- lib/support/named_colors.yml
+- spec/chroma/define_palette_spec.rb
+- spec/chroma/paint_spec.rb
+- spec/chroma_spec.rb
+- spec/color/attributes_spec.rb
+- spec/color/custom_palette_spec.rb
+- spec/color/modifiers_spec.rb
+- spec/color/palette_spec.rb
+- spec/color/serializers_spec.rb
+- spec/color_spec.rb
+- spec/custom_matchers.rb
+- spec/spec_helper.rb
+homepage: https://github.com/jfairbank/chroma
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.11
+signing_key: 
+specification_version: 4
+summary: Color manipulation and palette generation.
+test_files:
+- spec/chroma/define_palette_spec.rb
+- spec/chroma/paint_spec.rb
+- spec/chroma_spec.rb
+- spec/color/attributes_spec.rb
+- spec/color/custom_palette_spec.rb
+- spec/color/modifiers_spec.rb
+- spec/color/palette_spec.rb
+- spec/color/serializers_spec.rb
+- spec/color_spec.rb
+- spec/custom_matchers.rb
+- spec/spec_helper.rb

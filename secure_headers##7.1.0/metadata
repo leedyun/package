@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: secure_headers
+version: !ruby/object:Gem::Version
+  version: 7.1.0
+platform: ruby
+authors:
+- Neil Matatall
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  Add easily configured security headers to responses
+      including content-security-policy, x-frame-options,
+      strict-transport-security, etc.
+email:
+- neil.matatall@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- lib/secure_headers.rb
+- lib/secure_headers/configuration.rb
+- lib/secure_headers/hash_helper.rb
+- lib/secure_headers/headers/clear_site_data.rb
+- lib/secure_headers/headers/content_security_policy.rb
+- lib/secure_headers/headers/content_security_policy_config.rb
+- lib/secure_headers/headers/cookie.rb
+- lib/secure_headers/headers/expect_certificate_transparency.rb
+- lib/secure_headers/headers/policy_management.rb
+- lib/secure_headers/headers/referrer_policy.rb
+- lib/secure_headers/headers/strict_transport_security.rb
+- lib/secure_headers/headers/x_content_type_options.rb
+- lib/secure_headers/headers/x_download_options.rb
+- lib/secure_headers/headers/x_frame_options.rb
+- lib/secure_headers/headers/x_permitted_cross_domain_policies.rb
+- lib/secure_headers/headers/x_xss_protection.rb
+- lib/secure_headers/middleware.rb
+- lib/secure_headers/railtie.rb
+- lib/secure_headers/utils/cookies_config.rb
+- lib/secure_headers/version.rb
+- lib/secure_headers/view_helper.rb
+- lib/tasks/tasks.rake
+- secure_headers.gemspec
+homepage: https://github.com/github/secure_headers
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/github/secure_headers/issues
+  changelog_uri: https://github.com/github/secure_headers/blob/master/CHANGELOG.md
+  documentation_uri: https://rubydoc.info/gems/secure_headers
+  homepage_uri: https://github.com/github/secure_headers
+  source_code_uri: https://github.com/github/secure_headers
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Manages application of security headers with many safe defaults.
+test_files: []

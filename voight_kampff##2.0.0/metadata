@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: voight_kampff
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Adam Crownoble
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-03-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: combustion
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+description: Voight-Kampff detects bots, spiders, crawlers and replicants
+email: adam@codenoble.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".ruby-version"
+- Gemfile
+- MIT-LICENSE
+- README.md
+- config.ru
+- config/crawler-user-agents.json
+- lib/tasks/voight_kampff.rake
+- lib/voight_kampff.rb
+- lib/voight_kampff/engine.rb
+- lib/voight_kampff/methods.rb
+- lib/voight_kampff/rack.rb
+- lib/voight_kampff/rack_request.rb
+- lib/voight_kampff/rails.rb
+- lib/voight_kampff/test.rb
+- lib/voight_kampff/version.rb
+- spec/controllers/replicants_controller_spec.rb
+- spec/internal/app/controllers/replicants_controller.rb
+- spec/internal/config/routes.rb
+- spec/internal/log/.gitignore
+- spec/internal/public/favicon.ico
+- spec/lib/voight_kampff/rack_request_spec.rb
+- spec/lib/voight_kampff/test_spec.rb
+- spec/lib/voight_kampff_spec.rb
+- spec/spec_helper.rb
+- spec/support/humans.rb
+- spec/support/replicants.rb
+- voight_kampff.gemspec
+homepage: https://github.com/biola/Voight-Kampff
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Voight-Kampff bot detection
+test_files: []

@@ -1,0 +1,99 @@
+--- !ruby/object:Gem::Specification
+name: posix-spawn
+version: !ruby/object:Gem::Version
+  version: 0.3.15
+platform: ruby
+authors:
+- Ryan Tomayko
+- Aman Gupta
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-07-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.6
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+description: posix-spawn uses posix_spawnp(2) for faster process spawning
+email:
+- r@tomayko.com
+- aman@tmm1.net
+executables:
+- posix-spawn-benchmark
+extensions:
+- ext/extconf.rb
+extra_rdoc_files:
+- COPYING
+- HACKING
+files:
+- ".gitignore"
+- ".travis.yml"
+- COPYING
+- Gemfile
+- HACKING
+- README.md
+- Rakefile
+- TODO
+- bin/posix-spawn-benchmark
+- ext/extconf.rb
+- ext/posix-spawn.c
+- lib/posix-spawn.rb
+- lib/posix/spawn.rb
+- lib/posix/spawn/child.rb
+- lib/posix/spawn/version.rb
+- posix-spawn.gemspec
+- test/test_backtick.rb
+- test/test_child.rb
+- test/test_helper.rb
+- test/test_popen.rb
+- test/test_spawn.rb
+- test/test_system.rb
+homepage: https://github.com/rtomayko/posix-spawn
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: posix_spawnp(2) for ruby
+test_files: []

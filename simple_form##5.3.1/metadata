@@ -1,0 +1,144 @@
+--- !ruby/object:Gem::Specification
+name: simple_form
+version: !ruby/object:Gem::Version
+  version: 5.3.1
+platform: ruby
+authors:
+- José Valim
+- Carlos Antônio
+- Rafael França
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-05-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+description: Forms made easy!
+email: heartcombo@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- lib/generators/simple_form/USAGE
+- lib/generators/simple_form/install_generator.rb
+- lib/generators/simple_form/templates/README
+- lib/generators/simple_form/templates/_form.html.erb
+- lib/generators/simple_form/templates/_form.html.haml
+- lib/generators/simple_form/templates/_form.html.slim
+- lib/generators/simple_form/templates/config/initializers/simple_form.rb
+- lib/generators/simple_form/templates/config/initializers/simple_form_bootstrap.rb
+- lib/generators/simple_form/templates/config/initializers/simple_form_foundation.rb
+- lib/generators/simple_form/templates/config/locales/simple_form.en.yml
+- lib/simple_form.rb
+- lib/simple_form/action_view_extensions/builder.rb
+- lib/simple_form/action_view_extensions/form_helper.rb
+- lib/simple_form/components.rb
+- lib/simple_form/components/errors.rb
+- lib/simple_form/components/hints.rb
+- lib/simple_form/components/html5.rb
+- lib/simple_form/components/label_input.rb
+- lib/simple_form/components/labels.rb
+- lib/simple_form/components/maxlength.rb
+- lib/simple_form/components/min_max.rb
+- lib/simple_form/components/minlength.rb
+- lib/simple_form/components/pattern.rb
+- lib/simple_form/components/placeholders.rb
+- lib/simple_form/components/readonly.rb
+- lib/simple_form/error_notification.rb
+- lib/simple_form/form_builder.rb
+- lib/simple_form/helpers.rb
+- lib/simple_form/helpers/autofocus.rb
+- lib/simple_form/helpers/disabled.rb
+- lib/simple_form/helpers/readonly.rb
+- lib/simple_form/helpers/required.rb
+- lib/simple_form/helpers/validators.rb
+- lib/simple_form/inputs.rb
+- lib/simple_form/inputs/base.rb
+- lib/simple_form/inputs/block_input.rb
+- lib/simple_form/inputs/boolean_input.rb
+- lib/simple_form/inputs/collection_check_boxes_input.rb
+- lib/simple_form/inputs/collection_input.rb
+- lib/simple_form/inputs/collection_radio_buttons_input.rb
+- lib/simple_form/inputs/collection_select_input.rb
+- lib/simple_form/inputs/color_input.rb
+- lib/simple_form/inputs/date_time_input.rb
+- lib/simple_form/inputs/file_input.rb
+- lib/simple_form/inputs/grouped_collection_select_input.rb
+- lib/simple_form/inputs/hidden_input.rb
+- lib/simple_form/inputs/numeric_input.rb
+- lib/simple_form/inputs/password_input.rb
+- lib/simple_form/inputs/priority_input.rb
+- lib/simple_form/inputs/range_input.rb
+- lib/simple_form/inputs/rich_text_area_input.rb
+- lib/simple_form/inputs/string_input.rb
+- lib/simple_form/inputs/text_input.rb
+- lib/simple_form/map_type.rb
+- lib/simple_form/railtie.rb
+- lib/simple_form/tags.rb
+- lib/simple_form/version.rb
+- lib/simple_form/wrappers.rb
+- lib/simple_form/wrappers/builder.rb
+- lib/simple_form/wrappers/leaf.rb
+- lib/simple_form/wrappers/many.rb
+- lib/simple_form/wrappers/root.rb
+- lib/simple_form/wrappers/single.rb
+homepage: https://github.com/heartcombo/simple_form
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/heartcombo/simple_form
+  documentation_uri: https://rubydoc.info/github/heartcombo/simple_form
+  changelog_uri: https://github.com/heartcombo/simple_form/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/heartcombo/simple_form
+  bug_tracker_uri: https://github.com/heartcombo/simple_form/issues
+  wiki_uri: https://github.com/heartcombo/simple_form/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: Forms made easy!
+test_files: []

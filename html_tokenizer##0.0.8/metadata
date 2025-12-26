@@ -1,0 +1,71 @@
+--- !ruby/object:Gem::Specification
+name: html_tokenizer
+version: !ruby/object:Gem::Version
+  version: 0.0.8
+platform: ruby
+authors:
+- Francois Chagnon
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-03-20 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+executables:
+- html_tokenizer
+extensions:
+- ext/html_tokenizer_ext/extconf.rb
+extra_rdoc_files: []
+files:
+- ".autotest"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Gemfile
+- LICENSE
+- Manifest.txt
+- README.md
+- Rakefile
+- bin/html_tokenizer
+- ext/html_tokenizer_ext/extconf.rb
+- ext/html_tokenizer_ext/html_tokenizer.c
+- ext/html_tokenizer_ext/html_tokenizer.h
+- ext/html_tokenizer_ext/parser.c
+- ext/html_tokenizer_ext/parser.h
+- ext/html_tokenizer_ext/tokenizer.c
+- ext/html_tokenizer_ext/tokenizer.h
+- html_tokenizer.gemspec
+- lib/html_tokenizer.rb
+- lib/html_tokenizer/version.rb
+- test/unit/parser_test.rb
+- test/unit/tokenizer_test.rb
+homepage: https://github.com/Shopify/html_tokenizer
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org/
+  homepage_uri: https://github.com/Shopify/html_tokenizer
+  source_code_uri: https://github.com/Shopify/html_tokenizer
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.5
+signing_key:
+specification_version: 4
+summary: HTML Tokenizer
+test_files:
+- test/unit/parser_test.rb
+- test/unit/tokenizer_test.rb

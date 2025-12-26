@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: set
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Akinori MUSHA
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-29 00:00:00.000000000 Z
+dependencies: []
+description: Provides a class to deal with collections of unordered, unique values
+email:
+- knu@idaemons.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/CODEOWNERS"
+- ".github/dependabot.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/set.rb
+- lib/set/sorted_set.rb
+- set.gemspec
+homepage: https://github.com/ruby/set
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata:
+  homepage_uri: https://github.com/ruby/set
+  source_code_uri: https://github.com/ruby/set
+  changelog_uri: https://github.com/ruby/set/blob/v1.1.1/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: Provides a class to deal with collections of unordered, unique values
+test_files: []

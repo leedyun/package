@@ -1,0 +1,194 @@
+--- !ruby/object:Gem::Specification
+name: extlz4
+version: !ruby/object:Gem::Version
+  version: 0.3.4
+platform: ruby
+authors:
+- dearblue
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-06-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+description: 'unofficial ruby bindings for LZ4 <https://github.com/lz4/lz4>.
+
+  '
+email: dearblue@users.osdn.me
+executables:
+- extlz4
+extensions:
+- ext/extconf.rb
+extra_rdoc_files:
+- HISTORY.ja.md
+- LICENSE
+- README.md
+- contrib/lz4/LICENSE
+- contrib/lz4/README.md
+- contrib/lz4/build/README.md
+- contrib/lz4/lib/LICENSE
+- contrib/lz4/lib/README.md
+- ext/blockapi.c
+- ext/extlz4.c
+- ext/extlz4.h
+- ext/frameapi.c
+- ext/hashargs.c
+- ext/hashargs.h
+- ext/lz4_amalgam.c
+- lib/extlz4.rb
+- lib/extlz4/compat.rb
+- lib/extlz4/fix-0.1bug.rb
+- lib/extlz4/oldstream.rb
+files:
+- HISTORY.ja.md
+- LICENSE
+- README.md
+- Rakefile
+- bin/extlz4
+- contrib/lz4/INSTALL
+- contrib/lz4/LICENSE
+- contrib/lz4/Makefile.inc
+- contrib/lz4/NEWS
+- contrib/lz4/README.md
+- contrib/lz4/build/README.md
+- contrib/lz4/build/VS2010/datagen/datagen.vcxproj
+- contrib/lz4/build/VS2010/frametest/frametest.vcxproj
+- contrib/lz4/build/VS2010/fullbench-dll/fullbench-dll.vcxproj
+- contrib/lz4/build/VS2010/fullbench/fullbench.vcxproj
+- contrib/lz4/build/VS2010/fuzzer/fuzzer.vcxproj
+- contrib/lz4/build/VS2010/liblz4-dll/liblz4-dll.rc
+- contrib/lz4/build/VS2010/liblz4-dll/liblz4-dll.vcxproj
+- contrib/lz4/build/VS2010/liblz4/liblz4.vcxproj
+- contrib/lz4/build/VS2010/lz4.sln
+- contrib/lz4/build/VS2010/lz4/lz4.rc
+- contrib/lz4/build/VS2010/lz4/lz4.vcxproj
+- contrib/lz4/build/VS2017/datagen/datagen.vcxproj
+- contrib/lz4/build/VS2017/frametest/frametest.vcxproj
+- contrib/lz4/build/VS2017/fullbench-dll/fullbench-dll.vcxproj
+- contrib/lz4/build/VS2017/fullbench/fullbench.vcxproj
+- contrib/lz4/build/VS2017/fuzzer/fuzzer.vcxproj
+- contrib/lz4/build/VS2017/liblz4-dll/liblz4-dll.rc
+- contrib/lz4/build/VS2017/liblz4-dll/liblz4-dll.vcxproj
+- contrib/lz4/build/VS2017/liblz4/liblz4.vcxproj
+- contrib/lz4/build/VS2017/lz4.sln
+- contrib/lz4/build/VS2017/lz4/lz4.rc
+- contrib/lz4/build/VS2017/lz4/lz4.vcxproj
+- contrib/lz4/build/VS2022/datagen/datagen.vcxproj
+- contrib/lz4/build/VS2022/frametest/frametest.vcxproj
+- contrib/lz4/build/VS2022/fullbench-dll/fullbench-dll.vcxproj
+- contrib/lz4/build/VS2022/fullbench/fullbench.vcxproj
+- contrib/lz4/build/VS2022/fuzzer/fuzzer.vcxproj
+- contrib/lz4/build/VS2022/liblz4-dll/liblz4-dll.rc
+- contrib/lz4/build/VS2022/liblz4-dll/liblz4-dll.vcxproj
+- contrib/lz4/build/VS2022/liblz4/liblz4.vcxproj
+- contrib/lz4/build/VS2022/lz4.sln
+- contrib/lz4/build/cmake/CMakeLists.txt
+- contrib/lz4/build/cmake/lz4Config.cmake.in
+- contrib/lz4/lib/LICENSE
+- contrib/lz4/lib/README.md
+- contrib/lz4/lib/liblz4-dll.rc.in
+- contrib/lz4/lib/liblz4.pc.in
+- contrib/lz4/lib/lz4.c
+- contrib/lz4/lib/lz4.h
+- contrib/lz4/lib/lz4file.c
+- contrib/lz4/lib/lz4file.h
+- contrib/lz4/lib/lz4frame.c
+- contrib/lz4/lib/lz4frame.h
+- contrib/lz4/lib/lz4frame_static.h
+- contrib/lz4/lib/lz4hc.c
+- contrib/lz4/lib/lz4hc.h
+- contrib/lz4/lib/xxhash.c
+- contrib/lz4/lib/xxhash.h
+- contrib/lz4/ossfuzz/Makefile
+- contrib/lz4/ossfuzz/compress_frame_fuzzer.c
+- contrib/lz4/ossfuzz/compress_fuzzer.c
+- contrib/lz4/ossfuzz/compress_hc_fuzzer.c
+- contrib/lz4/ossfuzz/decompress_frame_fuzzer.c
+- contrib/lz4/ossfuzz/decompress_fuzzer.c
+- contrib/lz4/ossfuzz/fuzz.h
+- contrib/lz4/ossfuzz/fuzz_data_producer.c
+- contrib/lz4/ossfuzz/fuzz_data_producer.h
+- contrib/lz4/ossfuzz/fuzz_helpers.h
+- contrib/lz4/ossfuzz/lz4_helpers.c
+- contrib/lz4/ossfuzz/lz4_helpers.h
+- contrib/lz4/ossfuzz/ossfuzz.sh
+- contrib/lz4/ossfuzz/round_trip_frame_fuzzer.c
+- contrib/lz4/ossfuzz/round_trip_frame_uncompressed_fuzzer.c
+- contrib/lz4/ossfuzz/round_trip_fuzzer.c
+- contrib/lz4/ossfuzz/round_trip_hc_fuzzer.c
+- contrib/lz4/ossfuzz/round_trip_stream_fuzzer.c
+- contrib/lz4/ossfuzz/standaloneengine.c
+- contrib/lz4/ossfuzz/travisoss.sh
+- examples/frameapi.rb
+- ext/blockapi.c
+- ext/depend
+- ext/extconf.rb
+- ext/extlz4.c
+- ext/extlz4.h
+- ext/frameapi.c
+- ext/hashargs.c
+- ext/hashargs.h
+- ext/lz4_amalgam.c
+- gemstub.rb
+- lib/extlz4.rb
+- lib/extlz4/compat.rb
+- lib/extlz4/fix-0.1bug.rb
+- lib/extlz4/oldstream.rb
+- test/common.rb
+- test/test_blockapi.rb
+- test/test_frameapi.rb
+homepage: https://github.com/dearblue/ruby-extlz4
+licenses:
+- BSD-2-Clause
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset"
+- UTF-8
+- "-m"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.13
+signing_key:
+specification_version: 4
+summary: ruby bindings for LZ4
+test_files: []

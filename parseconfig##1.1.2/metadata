@@ -1,0 +1,49 @@
+--- !ruby/object:Gem::Specification
+name: parseconfig
+version: !ruby/object:Gem::Version
+  version: 1.1.2
+platform: ruby
+authors:
+- BJ Dierkes
+- Dmitry Shagin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-09-30 00:00:00.000000000 Z
+dependencies: []
+description: ParseConfig provides simple parsing of standardconfiguration files in
+  the form of 'param = value'. It also supports nested [group] sections.
+email: team@datafolklabs.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Changelog
+- LICENSE
+- README.md
+- lib/parseconfig.rb
+- lib/version.rb
+homepage: http://github.com/datafolklabs/ruby-parseconfig/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Config File Parser for Standard Unix/Linux Type Config Files
+test_files: []

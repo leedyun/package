@@ -1,0 +1,5 @@
+require "brakeman_translate_checkstyle_format/version"
+require "brakeman_translate_checkstyle_format/translate"
+
+module BrakemanTranslateCheckstyleFormat
+end

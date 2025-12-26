@@ -1,0 +1,260 @@
+--- !ruby/object:Gem::Specification
+name: composite_primary_keys
+version: !ruby/object:Gem::Version
+  version: 14.0.10
+platform: ruby
+authors:
+- Charlie Savage
+bindir: bin
+cert_chain: []
+date: 2024-12-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 7.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 7.0.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Composite key support for ActiveRecord
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- History.rdoc
+- README.rdoc
+- Rakefile
+- lib/composite_primary_keys.rb
+- lib/composite_primary_keys/active_model/attribute_assignment.rb
+- lib/composite_primary_keys/arel/sqlserver.rb
+- lib/composite_primary_keys/arel/to_sql.rb
+- lib/composite_primary_keys/associations/association.rb
+- lib/composite_primary_keys/associations/association_scope.rb
+- lib/composite_primary_keys/associations/collection_association.rb
+- lib/composite_primary_keys/associations/foreign_association.rb
+- lib/composite_primary_keys/associations/has_many_association.rb
+- lib/composite_primary_keys/associations/has_many_through_association.rb
+- lib/composite_primary_keys/associations/join_association.rb
+- lib/composite_primary_keys/associations/preloader/association.rb
+- lib/composite_primary_keys/attribute_methods.rb
+- lib/composite_primary_keys/attribute_methods/primary_key.rb
+- lib/composite_primary_keys/attribute_methods/read.rb
+- lib/composite_primary_keys/attribute_methods/write.rb
+- lib/composite_primary_keys/autosave_association.rb
+- lib/composite_primary_keys/base.rb
+- lib/composite_primary_keys/composite_arrays.rb
+- lib/composite_primary_keys/composite_predicates.rb
+- lib/composite_primary_keys/composite_relation.rb
+- lib/composite_primary_keys/connection_adapters/abstract/database_statements.rb
+- lib/composite_primary_keys/connection_adapters/abstract_adapter.rb
+- lib/composite_primary_keys/connection_adapters/postgresql/database_statements.rb
+- lib/composite_primary_keys/connection_adapters/sqlserver/database_statements.rb
+- lib/composite_primary_keys/core.rb
+- lib/composite_primary_keys/counter_cache.rb
+- lib/composite_primary_keys/fixtures.rb
+- lib/composite_primary_keys/nested_attributes.rb
+- lib/composite_primary_keys/persistence.rb
+- lib/composite_primary_keys/reflection.rb
+- lib/composite_primary_keys/relation.rb
+- lib/composite_primary_keys/relation/batches.rb
+- lib/composite_primary_keys/relation/calculations.rb
+- lib/composite_primary_keys/relation/finder_methods.rb
+- lib/composite_primary_keys/relation/predicate_builder/association_query_value.rb
+- lib/composite_primary_keys/relation/query_methods.rb
+- lib/composite_primary_keys/relation/where_clause.rb
+- lib/composite_primary_keys/sanitization.rb
+- lib/composite_primary_keys/table_metadata.rb
+- lib/composite_primary_keys/transactions.rb
+- lib/composite_primary_keys/validations/uniqueness.rb
+- lib/composite_primary_keys/version.rb
+- scripts/console.rb
+- scripts/txt2html
+- scripts/txt2js
+- tasks/databases/mysql.rake
+- tasks/databases/oracle.rake
+- tasks/databases/postgresql.rake
+- tasks/databases/sqlite.rake
+- tasks/databases/sqlserver.rake
+- tasks/databases/trilogy.rake
+- tasks/website.rake
+- test/README_tests.rdoc
+- test/abstract_unit.rb
+- test/connections/connection_spec.rb
+- test/connections/databases.ci.yml
+- test/connections/databases.example.yml
+- test/connections/databases.yml
+- test/fixtures/admin.rb
+- test/fixtures/article.rb
+- test/fixtures/articles.yml
+- test/fixtures/capitol.rb
+- test/fixtures/capitols.yml
+- test/fixtures/comment.rb
+- test/fixtures/comments.yml
+- test/fixtures/db_definitions/db2-create-tables.sql
+- test/fixtures/db_definitions/db2-drop-tables.sql
+- test/fixtures/db_definitions/mysql.sql
+- test/fixtures/db_definitions/oracle.drop.sql
+- test/fixtures/db_definitions/oracle.sql
+- test/fixtures/db_definitions/postgresql.sql
+- test/fixtures/db_definitions/sqlite.sql
+- test/fixtures/db_definitions/sqlserver.sql
+- test/fixtures/department.rb
+- test/fixtures/departments.yml
+- test/fixtures/dorm.rb
+- test/fixtures/dorms.yml
+- test/fixtures/employee.rb
+- test/fixtures/employees.yml
+- test/fixtures/group.rb
+- test/fixtures/groups.yml
+- test/fixtures/membership.rb
+- test/fixtures/membership_status.rb
+- test/fixtures/membership_statuses.yml
+- test/fixtures/memberships.yml
+- test/fixtures/moderator.rb
+- test/fixtures/product.rb
+- test/fixtures/product_tariff.rb
+- test/fixtures/product_tariffs.yml
+- test/fixtures/products.yml
+- test/fixtures/reading.rb
+- test/fixtures/readings.yml
+- test/fixtures/reference_code.rb
+- test/fixtures/reference_codes.yml
+- test/fixtures/reference_type.rb
+- test/fixtures/reference_types.yml
+- test/fixtures/restaurant.rb
+- test/fixtures/restaurants.yml
+- test/fixtures/restaurants_suburb.rb
+- test/fixtures/restaurants_suburbs.yml
+- test/fixtures/room.rb
+- test/fixtures/room_assignment.rb
+- test/fixtures/room_assignments.yml
+- test/fixtures/room_attribute.rb
+- test/fixtures/room_attribute_assignment.rb
+- test/fixtures/room_attribute_assignments.yml
+- test/fixtures/room_attributes.yml
+- test/fixtures/rooms.yml
+- test/fixtures/staff_room.rb
+- test/fixtures/staff_room_key.rb
+- test/fixtures/street.rb
+- test/fixtures/streets.yml
+- test/fixtures/student.rb
+- test/fixtures/students.yml
+- test/fixtures/suburb.rb
+- test/fixtures/suburbs.yml
+- test/fixtures/tariff.rb
+- test/fixtures/tariffs.yml
+- test/fixtures/topic_sources.yml
+- test/fixtures/topics.yml
+- test/fixtures/user.rb
+- test/fixtures/user_with_polymorphic_name.rb
+- test/fixtures/users.yml
+- test/plugins/pagination.rb
+- test/plugins/pagination_helper.rb
+- test/test_associations.rb
+- test/test_attribute_methods.rb
+- test/test_attributes.rb
+- test/test_calculations.rb
+- test/test_callbacks.rb
+- test/test_composite_arrays.rb
+- test/test_counter_cache.rb
+- test/test_create.rb
+- test/test_delete.rb
+- test/test_dumpable.rb
+- test/test_dup.rb
+- test/test_equal.rb
+- test/test_exists.rb
+- test/test_find.rb
+- test/test_habtm.rb
+- test/test_has_one_through.rb
+- test/test_hash.rb
+- test/test_ids.rb
+- test/test_miscellaneous.rb
+- test/test_nested_attributes.rb
+- test/test_optimistic.rb
+- test/test_pagination.rb
+- test/test_polymorphic.rb
+- test/test_predicates.rb
+- test/test_preload.rb
+- test/test_santiago.rb
+- test/test_serialize.rb
+- test/test_touch.rb
+- test/test_tutorial_example.rb
+- test/test_update.rb
+- test/test_validations.rb
+homepage: https://github.com/composite-primary-keys/composite_primary_keys
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/composite-primary-keys/composite_primary_keys/blob/master/History.rdoc
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.1
+specification_version: 4
+summary: Composite key support for ActiveRecord
+test_files:
+- test/README_tests.rdoc
+- test/abstract_unit.rb
+- test/test_associations.rb
+- test/test_attribute_methods.rb
+- test/test_attributes.rb
+- test/test_calculations.rb
+- test/test_callbacks.rb
+- test/test_composite_arrays.rb
+- test/test_counter_cache.rb
+- test/test_create.rb
+- test/test_delete.rb
+- test/test_dumpable.rb
+- test/test_dup.rb
+- test/test_equal.rb
+- test/test_exists.rb
+- test/test_find.rb
+- test/test_habtm.rb
+- test/test_has_one_through.rb
+- test/test_hash.rb
+- test/test_ids.rb
+- test/test_miscellaneous.rb
+- test/test_nested_attributes.rb
+- test/test_optimistic.rb
+- test/test_pagination.rb
+- test/test_polymorphic.rb
+- test/test_predicates.rb
+- test/test_preload.rb
+- test/test_santiago.rb
+- test/test_serialize.rb
+- test/test_touch.rb
+- test/test_tutorial_example.rb
+- test/test_update.rb
+- test/test_validations.rb

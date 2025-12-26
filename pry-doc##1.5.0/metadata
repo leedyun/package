@@ -1,0 +1,204 @@
+--- !ruby/object:Gem::Specification
+name: pry-doc
+version: !ruby/object:Gem::Version
+  version: 1.5.0
+platform: ruby
+authors:
+- John Mair (banisterfiend)
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+- !ruby/object:Gem::Dependency
+  name: latest_ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+description: |
+  Pry Doc is a Pry REPL plugin. It provides extended documentation support for the
+  REPL by means of improving the `show-doc` and `show-source` commands. With help
+  of the plugin the commands are be able to display the source code and the docs
+  of Ruby methods and classes implemented in C.
+  documentation
+email:
+- jrmair@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/pry-doc.rb
+- lib/pry-doc/docs/20/checksums
+- lib/pry-doc/docs/20/object_types
+- lib/pry-doc/docs/20/objects/root.dat
+- lib/pry-doc/docs/20/proxy_types
+- lib/pry-doc/docs/21/checksums
+- lib/pry-doc/docs/21/object_types
+- lib/pry-doc/docs/21/objects/root.dat
+- lib/pry-doc/docs/21/proxy_types
+- lib/pry-doc/docs/22/checksums
+- lib/pry-doc/docs/22/object_types
+- lib/pry-doc/docs/22/objects/root.dat
+- lib/pry-doc/docs/22/proxy_types
+- lib/pry-doc/docs/23/checksums
+- lib/pry-doc/docs/23/object_types
+- lib/pry-doc/docs/23/objects/root.dat
+- lib/pry-doc/docs/23/proxy_types
+- lib/pry-doc/docs/24/checksums
+- lib/pry-doc/docs/24/complete
+- lib/pry-doc/docs/24/object_types
+- lib/pry-doc/docs/24/objects/root.dat
+- lib/pry-doc/docs/24/proxy_types
+- lib/pry-doc/docs/25/checksums
+- lib/pry-doc/docs/25/complete
+- lib/pry-doc/docs/25/object_types
+- lib/pry-doc/docs/25/objects/root.dat
+- lib/pry-doc/docs/25/proxy_types
+- lib/pry-doc/docs/26/checksums
+- lib/pry-doc/docs/26/complete
+- lib/pry-doc/docs/26/object_types
+- lib/pry-doc/docs/26/objects/root.dat
+- lib/pry-doc/docs/26/proxy_types
+- lib/pry-doc/docs/27/checksums
+- lib/pry-doc/docs/27/complete
+- lib/pry-doc/docs/27/object_types
+- lib/pry-doc/docs/27/objects/root.dat
+- lib/pry-doc/docs/27/proxy_types
+- lib/pry-doc/docs/30/checksums
+- lib/pry-doc/docs/30/complete
+- lib/pry-doc/docs/30/object_types
+- lib/pry-doc/docs/30/objects/root.dat
+- lib/pry-doc/docs/30/proxy_types
+- lib/pry-doc/docs/31/checksums
+- lib/pry-doc/docs/31/complete
+- lib/pry-doc/docs/31/object_types
+- lib/pry-doc/docs/31/objects/root.dat
+- lib/pry-doc/docs/31/proxy_types
+- lib/pry-doc/docs/32/checksums
+- lib/pry-doc/docs/32/complete
+- lib/pry-doc/docs/32/object_types
+- lib/pry-doc/docs/32/objects/root.dat
+- lib/pry-doc/docs/32/proxy_types
+- lib/pry-doc/docs/33/checksums
+- lib/pry-doc/docs/33/complete
+- lib/pry-doc/docs/33/object_types
+- lib/pry-doc/docs/33/objects/root.dat
+- lib/pry-doc/docs/33/proxy_types
+- lib/pry-doc/pry_ext/method_info.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals/c_file.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals/code_fetcher.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals/etag_parser.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals/ruby_source_installer.rb
+- lib/pry-doc/pry_ext/show_source_with_c_internals/symbol_extractor.rb
+- lib/pry-doc/version.rb
+- libexec/linux/etags-32
+- libexec/linux/etags-64
+- libexec/windows/etags.exe
+- pry-doc.gemspec
+- spec/fixtures/c_source/TAGS
+- spec/fixtures/c_source/goodbye.c
+- spec/fixtures/c_source/hello.c
+- spec/gem_with_cext/gems/ext/extconf.rb
+- spec/gem_with_cext/gems/ext/sample.c
+- spec/gem_with_cext/gems/lib/sample.rb
+- spec/gem_with_cext/gems/sample.rb
+- spec/helper.rb
+- spec/pry-doc_spec.rb
+homepage: https://github.com/pry/pry-doc
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.12
+signing_key:
+specification_version: 4
+summary: Provides YARD and extended documentation support for Pry
+test_files: []

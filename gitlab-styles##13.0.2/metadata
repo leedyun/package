@@ -1,0 +1,415 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-styles
+version: !ruby/object:Gem::Version
+  version: 13.0.2
+platform: ruby
+authors:
+- GitLab
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-11-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.68.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.68.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.21.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.21.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-factory_bot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-graphql
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.21.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.21.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.4
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.30.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.30.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: gitlab-dangerfiles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.6.0
+- !ruby/object:Gem::Dependency
+  name: lefthook
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.13
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.13
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized-table_syntax
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+- !ruby/object:Gem::Dependency
+  name: simplecov-cobertura
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: simplecov-html
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.3
+- !ruby/object:Gem::Dependency
+  name: test_file_finder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.4
+description:
+email:
+- gitlab_rubygems@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".editorconfig"
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".gitlab/changelog_config.yml"
+- ".gitlab/merge_request_templates/New Static Analysis Check.md"
+- ".gitlab/merge_request_templates/Release.md"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".tests_mapping.yml"
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dangerfile
+- Gemfile
+- Gemfile.lock
+- LICENSE.md
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- gitlab-styles.gemspec
+- lefthook.yml
+- lib/gitlab/styles.rb
+- lib/gitlab/styles/common/banned_constants.rb
+- lib/gitlab/styles/rubocop.rb
+- lib/gitlab/styles/rubocop/migration_helpers.rb
+- lib/gitlab/styles/version.rb
+- lib/rubocop/cop/active_record_dependent.rb
+- lib/rubocop/cop/active_record_serialize.rb
+- lib/rubocop/cop/avoid_return_from_blocks.rb
+- lib/rubocop/cop/code_reuse/active_record.rb
+- lib/rubocop/cop/custom_error_class.rb
+- lib/rubocop/cop/fips/md5.rb
+- lib/rubocop/cop/fips/open_ssl.rb
+- lib/rubocop/cop/fips/sha1.rb
+- lib/rubocop/cop/gem_fetcher.rb
+- lib/rubocop/cop/gitlab_security/deep_munge.rb
+- lib/rubocop/cop/gitlab_security/json_serialization.rb
+- lib/rubocop/cop/gitlab_security/public_send.rb
+- lib/rubocop/cop/gitlab_security/redirect_to_params_update.rb
+- lib/rubocop/cop/gitlab_security/send_file_params.rb
+- lib/rubocop/cop/gitlab_security/sql_injection.rb
+- lib/rubocop/cop/gitlab_security/system_command_injection.rb
+- lib/rubocop/cop/in_batches.rb
+- lib/rubocop/cop/internal_affairs/cop_description_with_example.rb
+- lib/rubocop/cop/internal_affairs/deprecate_cop_helper.rb
+- lib/rubocop/cop/internal_affairs/missing_cop_department.rb
+- lib/rubocop/cop/internal_affairs/use_restrict_on_send.rb
+- lib/rubocop/cop/layout/line_break_after_final_mixin.rb
+- lib/rubocop/cop/line_break_after_guard_clauses.rb
+- lib/rubocop/cop/line_break_around_conditional_block.rb
+- lib/rubocop/cop/migration/update_large_table.rb
+- lib/rubocop/cop/performance/rubyzip.rb
+- lib/rubocop/cop/polymorphic_associations.rb
+- lib/rubocop/cop/rails/include_url_helper.rb
+- lib/rubocop/cop/redirect_with_status.rb
+- lib/rubocop/cop/rspec/base.rb
+- lib/rubocop/cop/rspec/empty_line_after_let_block.rb
+- lib/rubocop/cop/rspec/empty_line_after_shared_example.rb
+- lib/rubocop/cop/rspec/example_starting_character.rb
+- lib/rubocop/cop/rspec/have_link_parameters.rb
+- lib/rubocop/cop/rspec/single_line_hook.rb
+- lib/rubocop/cop/rspec/specify_expected.rb
+- lib/rubocop/cop/rspec/useless_dynamic_definition.rb
+- lib/rubocop/cop/rspec/verbose_include_metadata.rb
+- lib/rubocop/cop/style/hash_transformation.rb
+- lib/rubocop/cop/style/iso8601_date.rb
+- lib/rubocop/cop/style/open_struct_use.rb
+- lib/rubocop/cop/tailwind/max_width_media_queries.rb
+- lib/rubocop/cop/tailwind/string_interpolation.rb
+- rubocop-all.yml
+- rubocop-bundler.yml
+- rubocop-capybara.yml
+- rubocop-code_reuse.yml
+- rubocop-default.yml
+- rubocop-factory_bot.yml
+- rubocop-fips.yml
+- rubocop-gemspec.yml
+- rubocop-graphql.yml
+- rubocop-internal-affairs.yml
+- rubocop-layout.yml
+- rubocop-lint.yml
+- rubocop-metrics.yml
+- rubocop-migrations.yml
+- rubocop-minimal.yml
+- rubocop-naming.yml
+- rubocop-performance.yml
+- rubocop-rails.yml
+- rubocop-rspec.yml
+- rubocop-security.yml
+- rubocop-style.yml
+- rubocop-tailwind.yml
+homepage: https://gitlab.com/gitlab-org/ruby/gems/gitlab-styles
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: GitLab style guides and shared style configs.
+test_files: []

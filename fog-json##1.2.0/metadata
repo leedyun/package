@@ -1,0 +1,139 @@
+--- !ruby/object:Gem::Specification
+name: fog-json
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Wesley Beary (geemus)
+- Paul Thornthwaite (tokengeek)
+- The fog team
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-06-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  Extraction of the JSON parsing tools shared between a
+                            number of providers in the 'fog' gem.
+email:
+- geemus@gmail.com
+- tokengeek@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-json.gemspec
+- lib/fog/json.rb
+- lib/fog/json/version.rb
+- test/json_decode_test.rb
+- test/json_encode_test.rb
+- test/json_sanitize_test.rb
+homepage: http://github.com/fog/fog-json
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: JSON parsing for fog providers
+test_files:
+- test/json_decode_test.rb
+- test/json_encode_test.rb
+- test/json_sanitize_test.rb

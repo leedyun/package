@@ -1,0 +1,133 @@
+--- !ruby/object:Gem::Specification
+name: bugsnag
+version: !ruby/object:Gem::Version
+  version: 6.27.1
+platform: ruby
+authors:
+- James Smith
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Ruby notifier for bugsnag.com
+email: james@bugsnag.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+- CHANGELOG.md
+files:
+- ".yardopts"
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- VERSION
+- bugsnag.gemspec
+- lib/bugsnag.rb
+- lib/bugsnag/breadcrumb_type.rb
+- lib/bugsnag/breadcrumbs/breadcrumb.rb
+- lib/bugsnag/breadcrumbs/breadcrumbs.rb
+- lib/bugsnag/breadcrumbs/on_breadcrumb_callback_list.rb
+- lib/bugsnag/breadcrumbs/validator.rb
+- lib/bugsnag/cleaner.rb
+- lib/bugsnag/code_extractor.rb
+- lib/bugsnag/configuration.rb
+- lib/bugsnag/delivery.rb
+- lib/bugsnag/delivery/synchronous.rb
+- lib/bugsnag/delivery/thread_queue.rb
+- lib/bugsnag/endpoint_configuration.rb
+- lib/bugsnag/endpoint_validator.rb
+- lib/bugsnag/error.rb
+- lib/bugsnag/event.rb
+- lib/bugsnag/feature_flag.rb
+- lib/bugsnag/helpers.rb
+- lib/bugsnag/integrations/delayed_job.rb
+- lib/bugsnag/integrations/mailman.rb
+- lib/bugsnag/integrations/mongo.rb
+- lib/bugsnag/integrations/que.rb
+- lib/bugsnag/integrations/rack.rb
+- lib/bugsnag/integrations/rails/active_job.rb
+- lib/bugsnag/integrations/rails/active_record_rescue.rb
+- lib/bugsnag/integrations/rails/controller_methods.rb
+- lib/bugsnag/integrations/rails/rails_breadcrumbs.rb
+- lib/bugsnag/integrations/railtie.rb
+- lib/bugsnag/integrations/rake.rb
+- lib/bugsnag/integrations/resque.rb
+- lib/bugsnag/integrations/shoryuken.rb
+- lib/bugsnag/integrations/sidekiq.rb
+- lib/bugsnag/meta_data.rb
+- lib/bugsnag/middleware/active_job.rb
+- lib/bugsnag/middleware/breadcrumbs.rb
+- lib/bugsnag/middleware/callbacks.rb
+- lib/bugsnag/middleware/classify_error.rb
+- lib/bugsnag/middleware/clearance_user.rb
+- lib/bugsnag/middleware/delayed_job.rb
+- lib/bugsnag/middleware/discard_error_class.rb
+- lib/bugsnag/middleware/exception_meta_data.rb
+- lib/bugsnag/middleware/ignore_error_class.rb
+- lib/bugsnag/middleware/mailman.rb
+- lib/bugsnag/middleware/rack_request.rb
+- lib/bugsnag/middleware/rails3_request.rb
+- lib/bugsnag/middleware/rake.rb
+- lib/bugsnag/middleware/session_data.rb
+- lib/bugsnag/middleware/sidekiq.rb
+- lib/bugsnag/middleware/suggestion_data.rb
+- lib/bugsnag/middleware/warden_user.rb
+- lib/bugsnag/middleware_stack.rb
+- lib/bugsnag/on_error_callbacks.rb
+- lib/bugsnag/report.rb
+- lib/bugsnag/session_tracker.rb
+- lib/bugsnag/stacktrace.rb
+- lib/bugsnag/tasks.rb
+- lib/bugsnag/tasks/bugsnag.rake
+- lib/bugsnag/utility/circular_buffer.rb
+- lib/bugsnag/utility/duplicator.rb
+- lib/bugsnag/utility/feature_data_store.rb
+- lib/bugsnag/utility/feature_flag_delegate.rb
+- lib/bugsnag/utility/metadata_delegate.rb
+- lib/bugsnag/version.rb
+- lib/generators/bugsnag/bugsnag_generator.rb
+homepage: https://github.com/bugsnag/bugsnag-ruby
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/bugsnag/bugsnag-ruby/blob/v6.27.1/CHANGELOG.md
+  documentation_uri: https://docs.bugsnag.com/platforms/ruby/
+  source_code_uri: https://github.com/bugsnag/bugsnag-ruby/
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Ruby notifier for bugsnag.com
+test_files: []

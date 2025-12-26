@@ -1,0 +1,108 @@
+--- !ruby/object:Gem::Specification
+name: jaro_winkler
+version: !ruby/object:Gem::Version
+  version: 1.6.0
+platform: ruby
+authors:
+- Jian Weihang
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  jaro_winkler is an implementation of Jaro-Winkler \
+    distance algorithm which is written in C extension and will fallback to pure \
+    Ruby version in platforms other than MRI/KRI like JRuby or Rubinius. Both of \
+    C and Ruby implementation support any kind of string encoding, such as \
+    UTF-8, EUC-JP, Big5, etc.
+email: tonytonyjan@gmail.com
+executables: []
+extensions:
+- ext/jaro_winkler/extconf.rb
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- ext/jaro_winkler/adj_matrix.c
+- ext/jaro_winkler/adj_matrix.h
+- ext/jaro_winkler/codepoints.c
+- ext/jaro_winkler/codepoints.h
+- ext/jaro_winkler/extconf.rb
+- ext/jaro_winkler/jaro.c
+- ext/jaro_winkler/jaro.h
+- ext/jaro_winkler/jaro_winkler.c
+- lib/jaro_winkler.rb
+- lib/jaro_winkler/adjusting_table.rb
+- lib/jaro_winkler/jaro_winkler_pure.rb
+- lib/jaro_winkler/version.rb
+homepage: https://github.com/tonytonyjan/jaro_winkler
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/tonytonyjan/jaro_winkler/issues
+  changelog_uri: https://github.com/tonytonyjan/jaro_winkler/blob/v1.6.0/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/jaro_winkler/1.6.0
+  source_code_uri: https://github.com/tonytonyjan/jaro_winkler/tree/v1.6.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: An implementation of Jaro-Winkler distance algorithm written \ in C extension
+  which supports any kind of string encoding.
+test_files: []

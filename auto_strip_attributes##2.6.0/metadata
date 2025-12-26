@@ -1,0 +1,116 @@
+--- !ruby/object:Gem::Specification
+name: auto_strip_attributes
+version: !ruby/object:Gem::Version
+  version: 2.6.0
+platform: ruby
+authors:
+- Olli Huotari
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-03-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.1
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: AutoStripAttributes helps to remove unnecessary whitespaces from ActiveRecord
+  or ActiveModel attributes. It's good for removing accidental spaces from user inputs.
+  It works by adding a before_validation hook to the record. It has option to set
+  empty strings to nil or to remove extra spaces inside the string.
+email:
+- olli.huotari@iki.fi
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- README.md
+- Rakefile
+- auto_strip_attributes.gemspec
+- lib/auto_strip_attributes.rb
+- lib/auto_strip_attributes/version.rb
+- script/package
+- script/release
+- test/auto_strip_attributes_test.rb
+homepage: https://github.com/holli/auto_strip_attributes
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: auto_strip_attributes
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: Removes unnecessary whitespaces in attributes. Extension to ActiveRecord
+  or ActiveModel.
+test_files: []

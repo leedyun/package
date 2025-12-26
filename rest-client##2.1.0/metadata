@@ -1,0 +1,303 @@
+--- !ruby/object:Gem::Specification
+name: rest-client
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- REST Client Team
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-08-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-doc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.49'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.49'
+- !ruby/object:Gem::Dependency
+  name: http-accept
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: http-cookie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: netrc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+description: 'A simple HTTP and REST client for Ruby, inspired by the Sinatra microframework
+  style of specifying actions: get, put, post, delete.'
+email: discuss@rest-client.groups.io
+executables:
+- restclient
+extensions: []
+extra_rdoc_files:
+- README.md
+- history.md
+files:
+- ".gitignore"
+- ".mailmap"
+- ".rspec"
+- ".rubocop"
+- ".rubocop-disables.yml"
+- ".rubocop.yml"
+- ".travis.yml"
+- AUTHORS
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/restclient
+- history.md
+- lib/rest-client.rb
+- lib/rest_client.rb
+- lib/restclient.rb
+- lib/restclient/abstract_response.rb
+- lib/restclient/exceptions.rb
+- lib/restclient/params_array.rb
+- lib/restclient/payload.rb
+- lib/restclient/platform.rb
+- lib/restclient/raw_response.rb
+- lib/restclient/request.rb
+- lib/restclient/resource.rb
+- lib/restclient/response.rb
+- lib/restclient/utils.rb
+- lib/restclient/version.rb
+- lib/restclient/windows.rb
+- lib/restclient/windows/root_certs.rb
+- rest-client.gemspec
+- rest-client.windows.gemspec
+- spec/ISS.jpg
+- spec/helpers.rb
+- spec/integration/_lib.rb
+- spec/integration/capath_digicert/3513523f.0
+- spec/integration/capath_digicert/399e7759.0
+- spec/integration/capath_digicert/README
+- spec/integration/capath_digicert/digicert.crt
+- spec/integration/capath_verisign/415660c1.0
+- spec/integration/capath_verisign/7651b327.0
+- spec/integration/capath_verisign/README
+- spec/integration/capath_verisign/verisign.crt
+- spec/integration/certs/digicert.crt
+- spec/integration/certs/verisign.crt
+- spec/integration/httpbin_spec.rb
+- spec/integration/integration_spec.rb
+- spec/integration/request_spec.rb
+- spec/spec_helper.rb
+- spec/unit/_lib.rb
+- spec/unit/abstract_response_spec.rb
+- spec/unit/exceptions_spec.rb
+- spec/unit/params_array_spec.rb
+- spec/unit/payload_spec.rb
+- spec/unit/raw_response_spec.rb
+- spec/unit/request2_spec.rb
+- spec/unit/request_spec.rb
+- spec/unit/resource_spec.rb
+- spec/unit/response_spec.rb
+- spec/unit/restclient_spec.rb
+- spec/unit/utils_spec.rb
+- spec/unit/windows/root_certs_spec.rb
+homepage: https://github.com/rest-client/rest-client
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Simple HTTP and REST client for Ruby, inspired by microframework syntax for
+  specifying actions.
+test_files:
+- spec/ISS.jpg
+- spec/helpers.rb
+- spec/integration/_lib.rb
+- spec/integration/capath_digicert/3513523f.0
+- spec/integration/capath_digicert/399e7759.0
+- spec/integration/capath_digicert/README
+- spec/integration/capath_digicert/digicert.crt
+- spec/integration/capath_verisign/415660c1.0
+- spec/integration/capath_verisign/7651b327.0
+- spec/integration/capath_verisign/README
+- spec/integration/capath_verisign/verisign.crt
+- spec/integration/certs/digicert.crt
+- spec/integration/certs/verisign.crt
+- spec/integration/httpbin_spec.rb
+- spec/integration/integration_spec.rb
+- spec/integration/request_spec.rb
+- spec/spec_helper.rb
+- spec/unit/_lib.rb
+- spec/unit/abstract_response_spec.rb
+- spec/unit/exceptions_spec.rb
+- spec/unit/params_array_spec.rb
+- spec/unit/payload_spec.rb
+- spec/unit/raw_response_spec.rb
+- spec/unit/request2_spec.rb
+- spec/unit/request_spec.rb
+- spec/unit/resource_spec.rb
+- spec/unit/response_spec.rb
+- spec/unit/restclient_spec.rb
+- spec/unit/utils_spec.rb
+- spec/unit/windows/root_certs_spec.rb

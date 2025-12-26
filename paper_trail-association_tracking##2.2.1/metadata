@@ -1,0 +1,212 @@
+--- !ruby/object:Gem::Specification
+name: paper_trail-association_tracking
+version: !ruby/object:Gem::Version
+  version: 2.2.1
+platform: ruby
+authors:
+- Weston Ganger
+- Jared Beck
+- Ben Atkins
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-03-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: paper_trail
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ffaker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: generator_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Plugin for the PaperTrail gem to track and reify associations
+email: weston@westonganger.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- lib/generators/paper_trail_association_tracking/add_foreign_type_to_version_associations_generator.rb
+- lib/generators/paper_trail_association_tracking/install_generator.rb
+- lib/generators/paper_trail_association_tracking/templates/add_foreign_type_to_version_associations.rb.erb
+- lib/generators/paper_trail_association_tracking/templates/add_transaction_id_column_to_versions.rb.erb
+- lib/generators/paper_trail_association_tracking/templates/create_version_associations.rb.erb
+- lib/paper_trail-association_tracking.rb
+- lib/paper_trail_association_tracking/config.rb
+- lib/paper_trail_association_tracking/frameworks/active_record.rb
+- lib/paper_trail_association_tracking/frameworks/active_record/models/paper_trail/version_association.rb
+- lib/paper_trail_association_tracking/frameworks/rails.rb
+- lib/paper_trail_association_tracking/frameworks/rails/railtie.rb
+- lib/paper_trail_association_tracking/model_config.rb
+- lib/paper_trail_association_tracking/paper_trail.rb
+- lib/paper_trail_association_tracking/record_trail.rb
+- lib/paper_trail_association_tracking/reifier.rb
+- lib/paper_trail_association_tracking/reifiers/belongs_to.rb
+- lib/paper_trail_association_tracking/reifiers/has_and_belongs_to_many.rb
+- lib/paper_trail_association_tracking/reifiers/has_many.rb
+- lib/paper_trail_association_tracking/reifiers/has_many_through.rb
+- lib/paper_trail_association_tracking/reifiers/has_one.rb
+- lib/paper_trail_association_tracking/request.rb
+- lib/paper_trail_association_tracking/version.rb
+- lib/paper_trail_association_tracking/version_association_concern.rb
+- lib/paper_trail_association_tracking/version_concern.rb
+homepage: https://github.com/westonganger/paper_trail-association_tracking
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: Plugin for the PaperTrail gem to track and reify associations
+test_files: []

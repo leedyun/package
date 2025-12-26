@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: url
+version: !ruby/object:Gem::Version
+  version: 0.3.2
+  prerelease: 
+platform: ruby
+authors:
+- Tal Atlas
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2011-07-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: &70179099658740 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: *70179099658740
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: &70179099658320 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *70179099658320
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: &70179099657740 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+  type: :development
+  prerelease: false
+  version_requirements: *70179099657740
+description: A simple url object to allow for OO based manipulation and usage of a
+  url
+email: me@tal.by
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- lib/url/accepts_endpoint.rb
+- lib/url/classer.rb
+- lib/url/endpoint.rb
+- lib/url/endpoint_builder.rb
+- lib/url/handlers/as_json_handler.rb
+- lib/url/handlers/base_json_handler.rb
+- lib/url/handlers/net_handler.rb
+- lib/url/handlers/ty_handler.rb
+- lib/url/handlers/yajl_handler.rb
+- lib/url/handlers.rb
+- lib/url/helper_classes.rb
+- lib/url/response.rb
+- lib/url/service.rb
+- lib/url/version.rb
+- lib/url.rb
+- LICENSE
+- spec/classer_spec.rb
+- spec/handler_spec.rb
+- spec/json_spec.rb
+- spec/service_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/url_spec.rb
+- README.rdoc
+- Rakefile
+homepage: http://github.com/talby/url
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.16
+signing_key: 
+specification_version: 3
+summary: A URL object
+test_files: []

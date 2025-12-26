@@ -1,0 +1,164 @@
+--- !ruby/object:Gem::Specification
+name: ice_nine
+version: !ruby/object:Gem::Version
+  version: 0.11.2
+platform: ruby
+authors:
+- Dan Kubb
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-01-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+description: Deep Freeze Ruby Objects
+email:
+- dan.kubb@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+- TODO
+files:
+- ".gitignore"
+- ".pelusa.yml"
+- ".rspec"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".travis.yml"
+- ".yardopts"
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.devtools
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO
+- benchmarks/speed.rb
+- config/devtools.yml
+- config/flay.yml
+- config/flog.yml
+- config/mutant.yml
+- config/reek.yml
+- config/roodi.yml
+- config/rubocop.yml
+- config/yardstick.yml
+- ice_nine.gemspec
+- lib/ice_nine.rb
+- lib/ice_nine/core_ext/object.rb
+- lib/ice_nine/freezer.rb
+- lib/ice_nine/freezer/array.rb
+- lib/ice_nine/freezer/false_class.rb
+- lib/ice_nine/freezer/hash.rb
+- lib/ice_nine/freezer/hash/state.rb
+- lib/ice_nine/freezer/module.rb
+- lib/ice_nine/freezer/nil_class.rb
+- lib/ice_nine/freezer/no_freeze.rb
+- lib/ice_nine/freezer/numeric.rb
+- lib/ice_nine/freezer/object.rb
+- lib/ice_nine/freezer/range.rb
+- lib/ice_nine/freezer/rubinius.rb
+- lib/ice_nine/freezer/struct.rb
+- lib/ice_nine/freezer/symbol.rb
+- lib/ice_nine/freezer/true_class.rb
+- lib/ice_nine/support/recursion_guard.rb
+- lib/ice_nine/version.rb
+- spec/integration/ice_nine/class_methods/deep_freeze_bang_spec.rb
+- spec/integration/ice_nine/class_methods/deep_freeze_spec.rb
+- spec/shared/array_deep_freeze.rb
+- spec/shared/hash_deep_freeze.rb
+- spec/shared/ice_nine_deep_freeze.rb
+- spec/shared/no_freeze_deep_freeze.rb
+- spec/shared/object_deep_freeze.rb
+- spec/shared/range_deep_freeze.rb
+- spec/spec_helper.rb
+- spec/support/config_alias.rb
+- spec/unit/ice_nine/class_methods/deep_freeze_bang_spec.rb
+- spec/unit/ice_nine/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/core_ext/object/deep_freeze_bang_spec.rb
+- spec/unit/ice_nine/core_ext/object/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/array/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/class_methods/element_reader_spec.rb
+- spec/unit/ice_nine/freezer/false_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/hash/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/module/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/nil_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/no_freeze/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/numeric/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/object/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/range/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/struct/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/symbol/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/true_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/recursion_guard/frozen/guard_spec.rb
+- spec/unit/ice_nine/recursion_guard/object_set/guard_spec.rb
+- spec/unit/object/deep_freeze_spec.rb
+homepage: https://github.com/dkubb/ice_nine
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5.1
+signing_key: 
+specification_version: 4
+summary: Deep Freeze Ruby Objects
+test_files:
+- spec/integration/ice_nine/class_methods/deep_freeze_bang_spec.rb
+- spec/integration/ice_nine/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/class_methods/deep_freeze_bang_spec.rb
+- spec/unit/ice_nine/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/core_ext/object/deep_freeze_bang_spec.rb
+- spec/unit/ice_nine/core_ext/object/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/array/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/class_methods/element_reader_spec.rb
+- spec/unit/ice_nine/freezer/false_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/hash/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/module/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/nil_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/no_freeze/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/numeric/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/object/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/range/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/struct/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/symbol/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/freezer/true_class/class_methods/deep_freeze_spec.rb
+- spec/unit/ice_nine/recursion_guard/frozen/guard_spec.rb
+- spec/unit/ice_nine/recursion_guard/object_set/guard_spec.rb
+- spec/unit/object/deep_freeze_spec.rb
+has_rdoc: 

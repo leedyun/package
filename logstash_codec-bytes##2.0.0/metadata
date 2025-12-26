@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: logstash_codec-bytes
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Lob
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logstash-core-plugin-api
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: logstash-devutils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Logstash codec plugin to chunk an input into an event every specified
+  number of bytes.
+email:
+- support@lob.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- README.md
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/logstash/codecs/bytes.rb
+- logstash_codec-bytes.gemspec
+- spec/codecs/bytes_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/lob/logstash-codec-bytes
+licenses:
+- MIT
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: codec
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Logstash codec plugin to chunk an input into an event every specified number
+  of bytes.
+test_files:
+- spec/codecs/bytes_spec.rb
+- spec/spec_helper.rb

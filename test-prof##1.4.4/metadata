@@ -1,0 +1,263 @@
+--- !ruby/object:Gem::Specification
+name: test-prof
+version: !ruby/object:Gem::Version
+  version: 1.4.4
+platform: ruby
+authors:
+- Vladimir Dementyev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: isolator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.9'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.77.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.77.0
+description: "\n    Ruby applications tests profiling tools.\n\n    Contains tools
+  to analyze factories usage, integrate with Ruby profilers,\n    profile your examples
+  using ActiveSupport notifications (if any) and\n    statically analyze your code
+  with custom RuboCop cops.\n  "
+email:
+- dementiev.vm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- assets/flamegraph.demo.html
+- assets/flamegraph.template.html
+- assets/src/d3-tip.js
+- assets/src/d3-tip.min.js
+- assets/src/d3.flameGraph.css
+- assets/src/d3.flameGraph.js
+- assets/src/d3.flameGraph.min.css
+- assets/src/d3.flameGraph.min.js
+- assets/src/d3.v4.min.js
+- assets/tagprof.demo.html
+- assets/tagprof.template.html
+- config/default.yml
+- config/rubocop-rspec.yml
+- lib/minitest/base_reporter.rb
+- lib/minitest/event_prof_formatter.rb
+- lib/minitest/test_prof_plugin.rb
+- lib/test-prof.rb
+- lib/test_prof.rb
+- lib/test_prof/any_fixture.rb
+- lib/test_prof/any_fixture/dsl.rb
+- lib/test_prof/any_fixture/dump.rb
+- lib/test_prof/any_fixture/dump/base_adapter.rb
+- lib/test_prof/any_fixture/dump/digest.rb
+- lib/test_prof/any_fixture/dump/postgresql.rb
+- lib/test_prof/any_fixture/dump/sqlite.rb
+- lib/test_prof/before_all.rb
+- lib/test_prof/before_all/adapters/active_record.rb
+- lib/test_prof/before_all/isolator.rb
+- lib/test_prof/cops/inject.rb
+- lib/test_prof/cops/rspec/aggregate_examples.rb
+- lib/test_prof/cops/rspec/aggregate_examples/its.rb
+- lib/test_prof/cops/rspec/aggregate_examples/line_range_helpers.rb
+- lib/test_prof/cops/rspec/aggregate_examples/matchers_with_side_effects.rb
+- lib/test_prof/cops/rspec/aggregate_examples/metadata_helpers.rb
+- lib/test_prof/cops/rspec/aggregate_examples/node_matchers.rb
+- lib/test_prof/cops/rspec/language.rb
+- lib/test_prof/core.rb
+- lib/test_prof/event_prof.rb
+- lib/test_prof/event_prof/custom_events.rb
+- lib/test_prof/event_prof/custom_events/factory_create.rb
+- lib/test_prof/event_prof/custom_events/sidekiq_inline.rb
+- lib/test_prof/event_prof/custom_events/sidekiq_jobs.rb
+- lib/test_prof/event_prof/instrumentations/active_support.rb
+- lib/test_prof/event_prof/minitest.rb
+- lib/test_prof/event_prof/monitor.rb
+- lib/test_prof/event_prof/profiler.rb
+- lib/test_prof/event_prof/rspec.rb
+- lib/test_prof/ext/active_record_refind.rb
+- lib/test_prof/ext/array_bsearch_index.rb
+- lib/test_prof/ext/factory_bot_strategy.rb
+- lib/test_prof/ext/float_duration.rb
+- lib/test_prof/ext/string_parameterize.rb
+- lib/test_prof/ext/string_truncate.rb
+- lib/test_prof/factory_all_stub.rb
+- lib/test_prof/factory_all_stub/factory_bot_patch.rb
+- lib/test_prof/factory_bot.rb
+- lib/test_prof/factory_default.rb
+- lib/test_prof/factory_default/fabrication_patch.rb
+- lib/test_prof/factory_default/factory_bot_patch.rb
+- lib/test_prof/factory_doctor.rb
+- lib/test_prof/factory_doctor/fabrication_patch.rb
+- lib/test_prof/factory_doctor/factory_bot_patch.rb
+- lib/test_prof/factory_doctor/minitest.rb
+- lib/test_prof/factory_doctor/rspec.rb
+- lib/test_prof/factory_prof.rb
+- lib/test_prof/factory_prof/fabrication_patch.rb
+- lib/test_prof/factory_prof/factory_bot_patch.rb
+- lib/test_prof/factory_prof/factory_builders/fabrication.rb
+- lib/test_prof/factory_prof/factory_builders/factory_bot.rb
+- lib/test_prof/factory_prof/nate_heckler.rb
+- lib/test_prof/factory_prof/printers/flamegraph.rb
+- lib/test_prof/factory_prof/printers/json.rb
+- lib/test_prof/factory_prof/printers/nate_heckler.rb
+- lib/test_prof/factory_prof/printers/simple.rb
+- lib/test_prof/logging.rb
+- lib/test_prof/memory_prof.rb
+- lib/test_prof/memory_prof/minitest.rb
+- lib/test_prof/memory_prof/printer.rb
+- lib/test_prof/memory_prof/printer/number_to_human.rb
+- lib/test_prof/memory_prof/rspec.rb
+- lib/test_prof/memory_prof/tracker.rb
+- lib/test_prof/memory_prof/tracker/linked_list.rb
+- lib/test_prof/memory_prof/tracker/rss_tool.rb
+- lib/test_prof/recipes/logging.rb
+- lib/test_prof/recipes/minitest/before_all.rb
+- lib/test_prof/recipes/minitest/sample.rb
+- lib/test_prof/recipes/rspec/any_fixture.rb
+- lib/test_prof/recipes/rspec/before_all.rb
+- lib/test_prof/recipes/rspec/factory_all_stub.rb
+- lib/test_prof/recipes/rspec/factory_default.rb
+- lib/test_prof/recipes/rspec/let_it_be.rb
+- lib/test_prof/recipes/rspec/sample.rb
+- lib/test_prof/rspec_dissect.rb
+- lib/test_prof/rspec_dissect/collectors/base.rb
+- lib/test_prof/rspec_dissect/collectors/before.rb
+- lib/test_prof/rspec_dissect/collectors/let.rb
+- lib/test_prof/rspec_dissect/rspec.rb
+- lib/test_prof/rspec_stamp.rb
+- lib/test_prof/rspec_stamp/parser.rb
+- lib/test_prof/rspec_stamp/rspec.rb
+- lib/test_prof/rubocop.rb
+- lib/test_prof/ruby_prof.rb
+- lib/test_prof/ruby_prof/rspec.rb
+- lib/test_prof/ruby_prof/rspec_exclusions.rb
+- lib/test_prof/ruby_prof/rspec_no_boot.rb
+- lib/test_prof/stack_prof.rb
+- lib/test_prof/stack_prof/rspec.rb
+- lib/test_prof/tag_prof.rb
+- lib/test_prof/tag_prof/minitest.rb
+- lib/test_prof/tag_prof/printers/html.rb
+- lib/test_prof/tag_prof/printers/simple.rb
+- lib/test_prof/tag_prof/result.rb
+- lib/test_prof/tag_prof/rspec.rb
+- lib/test_prof/tps_prof.rb
+- lib/test_prof/tps_prof/profiler.rb
+- lib/test_prof/tps_prof/reporter/text.rb
+- lib/test_prof/tps_prof/rspec.rb
+- lib/test_prof/utils.rb
+- lib/test_prof/utils/html_builder.rb
+- lib/test_prof/utils/rspec.rb
+- lib/test_prof/utils/sized_ordered_set.rb
+- lib/test_prof/vernier.rb
+- lib/test_prof/vernier/rspec.rb
+- lib/test_prof/version.rb
+homepage: http://github.com/test-prof/test-prof
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/test-prof/test-prof/issues
+  changelog_uri: https://github.com/test-prof/test-prof/blob/master/CHANGELOG.md
+  documentation_uri: https://test-prof.evilmartians.io/
+  homepage_uri: https://test-prof.evilmartians.io/
+  source_code_uri: https://github.com/test-prof/test-prof
+  funding_uri: https://github.com/sponsors/test-prof
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Ruby applications tests profiling tools
+test_files: []

@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: breadcrumbs_on_rails
+version: !ruby/object:Gem::Version
+  version: 4.1.0
+platform: ruby
+authors:
+- Simone Carletti
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-04-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+description: BreadcrumbsOnRails is a simple Ruby on Rails plugin for creating and
+  managing a breadcrumb navigation for a Rails project.
+email:
+- weppos@weppos.net
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+files:
+- ".github/FUNDING.yml"
+- ".gitignore"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- breadcrumbs_on_rails.gemspec
+- gemfiles/5.0.gemfile
+- gemfiles/5.1.gemfile
+- gemfiles/5.2.gemfile
+- gemfiles/6.0.gemfile
+- lib/breadcrumbs_on_rails.rb
+- lib/breadcrumbs_on_rails/action_controller.rb
+- lib/breadcrumbs_on_rails/breadcrumbs.rb
+- lib/breadcrumbs_on_rails/railtie.rb
+- lib/breadcrumbs_on_rails/version.rb
+- test/dummy.rb
+- test/test_helper.rb
+- test/unit/action_controller_test.rb
+- test/unit/builder_test.rb
+- test/unit/element_test.rb
+- test/unit/simple_builder_test.rb
+- test/views/example/default.html.erb
+homepage: https://simonecarletti.com/code/breadcrumbs_on_rails
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key:
+specification_version: 4
+summary: A simple Ruby on Rails plugin for creating and managing a breadcrumb navigation
+test_files:
+- test/dummy.rb
+- test/test_helper.rb
+- test/unit/action_controller_test.rb
+- test/unit/builder_test.rb
+- test/unit/element_test.rb
+- test/unit/simple_builder_test.rb
+- test/views/example/default.html.erb

@@ -1,0 +1,178 @@
+--- !ruby/object:Gem::Specification
+name: commander
+version: !ruby/object:Gem::Version
+  version: 5.0.0
+platform: ruby
+authors:
+- TJ Holowaychuk
+- Gabriel Gilder
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: highline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.12.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.12.1
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: The complete solution for Ruby command-line executables. Commander bridges
+  the gap between other terminal related libraries you know and love (OptionParser,
+  HighLine), while providing many new features, and an elegant API.
+email:
+- gabriel@gabrielgilder.com
+executables:
+- commander
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".travis.yml"
+- DEVELOPMENT
+- Gemfile
+- History.rdoc
+- LICENSE
+- Manifest
+- README.md
+- Rakefile
+- bin/commander
+- commander.gemspec
+- lib/commander.rb
+- lib/commander/blank.rb
+- lib/commander/command.rb
+- lib/commander/configure.rb
+- lib/commander/core_ext.rb
+- lib/commander/core_ext/array.rb
+- lib/commander/core_ext/object.rb
+- lib/commander/delegates.rb
+- lib/commander/help_formatters.rb
+- lib/commander/help_formatters/base.rb
+- lib/commander/help_formatters/terminal.rb
+- lib/commander/help_formatters/terminal/command_help.erb
+- lib/commander/help_formatters/terminal/help.erb
+- lib/commander/help_formatters/terminal_compact.rb
+- lib/commander/help_formatters/terminal_compact/command_help.erb
+- lib/commander/help_formatters/terminal_compact/help.erb
+- lib/commander/import.rb
+- lib/commander/methods.rb
+- lib/commander/platform.rb
+- lib/commander/runner.rb
+- lib/commander/user_interaction.rb
+- lib/commander/version.rb
+- spec/command_spec.rb
+- spec/configure_spec.rb
+- spec/core_ext/array_spec.rb
+- spec/core_ext/object_spec.rb
+- spec/help_formatters/terminal_compact_spec.rb
+- spec/help_formatters/terminal_spec.rb
+- spec/methods_spec.rb
+- spec/runner_spec.rb
+- spec/spec_helper.rb
+- spec/ui_spec.rb
+homepage: https://github.com/commander-rb/commander
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/commander-rb/commander/issues
+  changelog_uri: https://github.com/commander-rb/commander/blob/master/History.rdoc
+  documentation_uri: https://www.rubydoc.info/gems/commander/5.0.0
+  homepage_uri: https://github.com/commander-rb/commander
+  source_code_uri: https://github.com/commander-rb/commander/tree/v5.0.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.11
+signing_key:
+specification_version: 4
+summary: The complete solution for Ruby command-line executables
+test_files:
+- spec/command_spec.rb
+- spec/configure_spec.rb
+- spec/core_ext/array_spec.rb
+- spec/core_ext/object_spec.rb
+- spec/help_formatters/terminal_compact_spec.rb
+- spec/help_formatters/terminal_spec.rb
+- spec/methods_spec.rb
+- spec/runner_spec.rb
+- spec/spec_helper.rb
+- spec/ui_spec.rb

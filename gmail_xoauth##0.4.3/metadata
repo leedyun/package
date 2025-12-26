@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: gmail_xoauth
+version: !ruby/object:Gem::Version
+  version: 0.4.3
+platform: ruby
+authors:
+- Nicolas Fouché
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-01-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: oauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.6
+- !ruby/object:Gem::Dependency
+  name: shoulda
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Get access to Gmail IMAP and STMP via OAuth, using the standard Ruby
+  Net libraries
+email:
+- nicolas.fouche@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.markdown
+- lib/gmail_xoauth.rb
+- lib/gmail_xoauth/imap_xoauth2_authenticator.rb
+- lib/gmail_xoauth/imap_xoauth_authenticator.rb
+- lib/gmail_xoauth/oauth_string.rb
+- lib/gmail_xoauth/smtp_xoauth2_authenticator.rb
+- lib/gmail_xoauth/smtp_xoauth_authenticator.rb
+- lib/gmail_xoauth/version.rb
+- test/helper.rb
+- test/test_imap_xoauth2_authenticator.rb
+- test/test_imap_xoauth_authenticator.rb
+- test/test_oauth_string.rb
+- test/test_smtp_xoauth2_authenticator.rb
+- test/test_smtp_xoauth_authenticator.rb
+homepage: https://github.com/nfo/gmail_xoauth
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Get access to Gmail IMAP and STMP via OAuth, using the standard Ruby Net
+  libraries
+test_files: []

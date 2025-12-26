@@ -1,0 +1,80 @@
+--- !ruby/object:Gem::Specification
+name: neighbor
+version: !ruby/object:Gem::Version
+  version: 0.5.2
+platform: ruby
+authors:
+- Andrew Kane
+bindir: bin
+cert_chain: []
+date: 2025-01-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+email: andrew@ankane.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/generators/neighbor/cube_generator.rb
+- lib/generators/neighbor/sqlite_generator.rb
+- lib/generators/neighbor/templates/cube.rb.tt
+- lib/generators/neighbor/templates/sqlite.rb.tt
+- lib/generators/neighbor/templates/vector.rb.tt
+- lib/generators/neighbor/vector_generator.rb
+- lib/neighbor.rb
+- lib/neighbor/attribute.rb
+- lib/neighbor/model.rb
+- lib/neighbor/mysql.rb
+- lib/neighbor/normalized_attribute.rb
+- lib/neighbor/postgresql.rb
+- lib/neighbor/railtie.rb
+- lib/neighbor/reranking.rb
+- lib/neighbor/sparse_vector.rb
+- lib/neighbor/sqlite.rb
+- lib/neighbor/type/cube.rb
+- lib/neighbor/type/halfvec.rb
+- lib/neighbor/type/mysql_vector.rb
+- lib/neighbor/type/sparsevec.rb
+- lib/neighbor/type/sqlite_int8_vector.rb
+- lib/neighbor/type/sqlite_vector.rb
+- lib/neighbor/type/vector.rb
+- lib/neighbor/utils.rb
+- lib/neighbor/version.rb
+homepage: https://github.com/ankane/neighbor
+licenses:
+- MIT
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Nearest neighbor search for Rails
+test_files: []

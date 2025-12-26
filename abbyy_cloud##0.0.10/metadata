@@ -1,0 +1,333 @@
+--- !ruby/object:Gem::Specification
+name: abbyy_cloud
+version: !ruby/object:Gem::Version
+  version: 0.0.10
+platform: ruby
+authors:
+- Andrew Kozin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dry-initializer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+- !ruby/object:Gem::Dependency
+  name: dry-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: multipart_body
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.42'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.42'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: 
+email:
+- andrew.kozin@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- abbyy_cloud.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/abbyy/cloud.rb
+- lib/abbyy/cloud/connection.rb
+- lib/abbyy/cloud/exceptions/argument_error.rb
+- lib/abbyy/cloud/exceptions/response_error.rb
+- lib/abbyy/cloud/exceptions/type_error.rb
+- lib/abbyy/cloud/model.rb
+- lib/abbyy/cloud/models/cost_type.rb
+- lib/abbyy/cloud/models/currency.rb
+- lib/abbyy/cloud/models/direction.rb
+- lib/abbyy/cloud/models/discount.rb
+- lib/abbyy/cloud/models/discount_type.rb
+- lib/abbyy/cloud/models/engine.rb
+- lib/abbyy/cloud/models/error.rb
+- lib/abbyy/cloud/models/file_format.rb
+- lib/abbyy/cloud/models/file_info.rb
+- lib/abbyy/cloud/models/file_link.rb
+- lib/abbyy/cloud/models/file_read_error.rb
+- lib/abbyy/cloud/models/file_read_status.rb
+- lib/abbyy/cloud/models/file_reference.rb
+- lib/abbyy/cloud/models/full_order.rb
+- lib/abbyy/cloud/models/label.rb
+- lib/abbyy/cloud/models/locale.rb
+- lib/abbyy/cloud/models/ocr_mode.rb
+- lib/abbyy/cloud/models/ocr_quality.rb
+- lib/abbyy/cloud/models/ocr_settings.rb
+- lib/abbyy/cloud/models/ocr_statistics.rb
+- lib/abbyy/cloud/models/ocr_warning.rb
+- lib/abbyy/cloud/models/ocr_warning_type.rb
+- lib/abbyy/cloud/models/order_statistics.rb
+- lib/abbyy/cloud/models/payment_type.rb
+- lib/abbyy/cloud/models/price.rb
+- lib/abbyy/cloud/models/reading_status.rb
+- lib/abbyy/cloud/models/source_segment.rb
+- lib/abbyy/cloud/models/source_tag.rb
+- lib/abbyy/cloud/models/status.rb
+- lib/abbyy/cloud/models/text_statistics.rb
+- lib/abbyy/cloud/models/transfer_data.rb
+- lib/abbyy/cloud/models/translation.rb
+- lib/abbyy/cloud/models/translation_link.rb
+- lib/abbyy/cloud/models/translation_segment.rb
+- lib/abbyy/cloud/models/translation_type.rb
+- lib/abbyy/cloud/models/unit_price.rb
+- lib/abbyy/cloud/models/unit_type.rb
+- lib/abbyy/cloud/namespaces/base.rb
+- lib/abbyy/cloud/namespaces/files.rb
+- lib/abbyy/cloud/namespaces/machine_translations.rb
+- lib/abbyy/cloud/namespaces/orders.rb
+- lib/abbyy/cloud/namespaces/prices.rb
+- lib/abbyy/cloud/operations/base.rb
+- lib/abbyy/cloud/operations/download_file.rb
+- lib/abbyy/cloud/operations/engines.rb
+- lib/abbyy/cloud/operations/file.rb
+- lib/abbyy/cloud/operations/find_order.rb
+- lib/abbyy/cloud/operations/prices.rb
+- lib/abbyy/cloud/operations/submit_order.rb
+- lib/abbyy/cloud/operations/translate.rb
+- lib/abbyy/cloud/operations/translate_segments.rb
+- lib/abbyy/cloud/operations/upload_file.rb
+- lib/abbyy/cloud/settings.rb
+- lib/abbyy/cloud/types.rb
+- spec/feature/abbyy/files_download_spec.rb
+- spec/feature/abbyy/files_upload_spec.rb
+- spec/feature/abbyy/mt_default_engine_spec.rb
+- spec/feature/abbyy/mt_engine_spec.rb
+- spec/feature/abbyy/mt_engines_spec.rb
+- spec/feature/abbyy/mt_translate_segments_spec.rb
+- spec/feature/abbyy/mt_translate_spec.rb
+- spec/feature/abbyy/orders_create_spec.rb
+- spec/feature/abbyy/orders_find_spec.rb
+- spec/feature/abbyy/prices_details_spec.rb
+- spec/spec_helper.rb
+- spec/unit/abbyy/cloud/connection_spec.rb
+- spec/unit/abbyy/cloud/models/direction_spec.rb
+- spec/unit/abbyy/cloud/models/discount_spec.rb
+- spec/unit/abbyy/cloud/models/engine_spec.rb
+- spec/unit/abbyy/cloud/models/error_spec.rb
+- spec/unit/abbyy/cloud/models/file_link_spec.rb
+- spec/unit/abbyy/cloud/models/file_reference_spec.rb
+- spec/unit/abbyy/cloud/models/full_order_spec.rb
+- spec/unit/abbyy/cloud/models/locale_spec.rb
+- spec/unit/abbyy/cloud/models/order_statistics_spec.rb
+- spec/unit/abbyy/cloud/models/price_spec.rb
+- spec/unit/abbyy/cloud/models/source_segment_spec.rb
+- spec/unit/abbyy/cloud/models/source_tag_spec.rb
+- spec/unit/abbyy/cloud/models/transfer_data_spec.rb
+- spec/unit/abbyy/cloud/models/translation_link_spec.rb
+- spec/unit/abbyy/cloud/models/translation_segment_spec.rb
+- spec/unit/abbyy/cloud/models/translation_spec.rb
+- spec/unit/abbyy/cloud/models/unit_price_spec.rb
+- spec/unit/abbyy/cloud/response_error_spec.rb
+- spec/unit/abbyy/cloud/settings_spec.rb
+- spec/unit/abbyy/cloud_spec.rb
+homepage: https://github.com/nepalez/abbyy-cloud
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: HTTP client to ABBYY Cloud API
+test_files:
+- spec/feature/abbyy/files_download_spec.rb
+- spec/feature/abbyy/files_upload_spec.rb
+- spec/feature/abbyy/mt_default_engine_spec.rb
+- spec/feature/abbyy/mt_engine_spec.rb
+- spec/feature/abbyy/mt_engines_spec.rb
+- spec/feature/abbyy/mt_translate_segments_spec.rb
+- spec/feature/abbyy/mt_translate_spec.rb
+- spec/feature/abbyy/orders_create_spec.rb
+- spec/feature/abbyy/orders_find_spec.rb
+- spec/feature/abbyy/prices_details_spec.rb
+- spec/spec_helper.rb
+- spec/unit/abbyy/cloud/connection_spec.rb
+- spec/unit/abbyy/cloud/models/direction_spec.rb
+- spec/unit/abbyy/cloud/models/discount_spec.rb
+- spec/unit/abbyy/cloud/models/engine_spec.rb
+- spec/unit/abbyy/cloud/models/error_spec.rb
+- spec/unit/abbyy/cloud/models/file_link_spec.rb
+- spec/unit/abbyy/cloud/models/file_reference_spec.rb
+- spec/unit/abbyy/cloud/models/full_order_spec.rb
+- spec/unit/abbyy/cloud/models/locale_spec.rb
+- spec/unit/abbyy/cloud/models/order_statistics_spec.rb
+- spec/unit/abbyy/cloud/models/price_spec.rb
+- spec/unit/abbyy/cloud/models/source_segment_spec.rb
+- spec/unit/abbyy/cloud/models/source_tag_spec.rb
+- spec/unit/abbyy/cloud/models/transfer_data_spec.rb
+- spec/unit/abbyy/cloud/models/translation_link_spec.rb
+- spec/unit/abbyy/cloud/models/translation_segment_spec.rb
+- spec/unit/abbyy/cloud/models/translation_spec.rb
+- spec/unit/abbyy/cloud/models/unit_price_spec.rb
+- spec/unit/abbyy/cloud/response_error_spec.rb
+- spec/unit/abbyy/cloud/settings_spec.rb
+- spec/unit/abbyy/cloud_spec.rb

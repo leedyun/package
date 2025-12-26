@@ -1,0 +1,333 @@
+--- !ruby/object:Gem::Specification
+name: puppet_forge
+version: !ruby/object:Gem::Version
+  version: 6.0.0
+platform: ruby
+authors:
+- Puppet Labs
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-09-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: faraday-follow_redirects
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+- !ruby/object:Gem::Dependency
+  name: semantic_puppet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: minitar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Tools that can be used to access Forge API information on Modules, Users,
+  and Releases. As well as download, unpack, and install Releases to a directory.
+email:
+- forge-team+api@puppetlabs.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/pull_request_template.md"
+- ".github/workflows/release.yml"
+- ".github/workflows/release_prep.yml"
+- ".github/workflows/ruby-rspec.yml"
+- ".gitignore"
+- CHANGELOG.md
+- CODEOWNERS
+- Gemfile
+- History.md
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/puppet_forge.rb
+- lib/puppet_forge/connection.rb
+- lib/puppet_forge/connection/connection_failure.rb
+- lib/puppet_forge/error.rb
+- lib/puppet_forge/lazy_accessors.rb
+- lib/puppet_forge/lazy_relations.rb
+- lib/puppet_forge/lru_cache.rb
+- lib/puppet_forge/tar.rb
+- lib/puppet_forge/tar/mini.rb
+- lib/puppet_forge/unpacker.rb
+- lib/puppet_forge/util.rb
+- lib/puppet_forge/v3.rb
+- lib/puppet_forge/v3/base.rb
+- lib/puppet_forge/v3/base/paginated_collection.rb
+- lib/puppet_forge/v3/metadata.rb
+- lib/puppet_forge/v3/module.rb
+- lib/puppet_forge/v3/release.rb
+- lib/puppet_forge/v3/user.rb
+- lib/puppet_forge/version.rb
+- puppet_forge.gemspec
+- spec/fixtures/uri/prefix/v3/bases/puppet.headers
+- spec/fixtures/uri/prefix/v3/bases/puppet.json
+- spec/fixtures/v3/bases/puppet.headers
+- spec/fixtures/v3/bases/puppet.json
+- spec/fixtures/v3/files/puppetlabs-apache-0.0.1.tar.gz.headers
+- spec/fixtures/v3/files/puppetlabs-apache-0.0.1.tar.gz.json
+- spec/fixtures/v3/modules.headers
+- spec/fixtures/v3/modules.json
+- spec/fixtures/v3/modules/puppetlabs-apache.headers
+- spec/fixtures/v3/modules/puppetlabs-apache.json
+- spec/fixtures/v3/modules__owner=puppetlabs.headers
+- spec/fixtures/v3/modules__owner=puppetlabs.json
+- spec/fixtures/v3/modules__query=apache.headers
+- spec/fixtures/v3/modules__query=apache.json
+- spec/fixtures/v3/releases.headers
+- spec/fixtures/v3/releases.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.1.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.1.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.2.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.2.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.3.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.3.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.4.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.4.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.1.1.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.1.1.json
+- spec/fixtures/v3/releases__module=puppetlabs-apache.headers
+- spec/fixtures/v3/releases__module=puppetlabs-apache.json
+- spec/fixtures/v3/users/puppetlabs.headers
+- spec/fixtures/v3/users/puppetlabs.json
+- spec/spec_helper.rb
+- spec/tmp/.gitkeep
+- spec/unit/forge/connection/connection_failure_spec.rb
+- spec/unit/forge/connection_spec.rb
+- spec/unit/forge/lazy_accessors_spec.rb
+- spec/unit/forge/lazy_relations_spec.rb
+- spec/unit/forge/lru_cache_spec.rb
+- spec/unit/forge/tar/mini_spec.rb
+- spec/unit/forge/tar_spec.rb
+- spec/unit/forge/unpacker_spec.rb
+- spec/unit/forge/util_spec.rb
+- spec/unit/forge/v3/base/paginated_collection_spec.rb
+- spec/unit/forge/v3/base_spec.rb
+- spec/unit/forge/v3/metadata_spec.rb
+- spec/unit/forge/v3/module_spec.rb
+- spec/unit/forge/v3/release_spec.rb
+- spec/unit/forge/v3/user_spec.rb
+- spec/unit/puppet_forge_spec.rb
+homepage: https://github.com/puppetlabs/forge-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key: 
+specification_version: 4
+summary: Access the Puppet Forge API from Ruby for resource information and to download
+  releases.
+test_files:
+- spec/fixtures/uri/prefix/v3/bases/puppet.headers
+- spec/fixtures/uri/prefix/v3/bases/puppet.json
+- spec/fixtures/v3/bases/puppet.headers
+- spec/fixtures/v3/bases/puppet.json
+- spec/fixtures/v3/files/puppetlabs-apache-0.0.1.tar.gz.headers
+- spec/fixtures/v3/files/puppetlabs-apache-0.0.1.tar.gz.json
+- spec/fixtures/v3/modules.headers
+- spec/fixtures/v3/modules.json
+- spec/fixtures/v3/modules/puppetlabs-apache.headers
+- spec/fixtures/v3/modules/puppetlabs-apache.json
+- spec/fixtures/v3/modules__owner=puppetlabs.headers
+- spec/fixtures/v3/modules__owner=puppetlabs.json
+- spec/fixtures/v3/modules__query=apache.headers
+- spec/fixtures/v3/modules__query=apache.json
+- spec/fixtures/v3/releases.headers
+- spec/fixtures/v3/releases.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.1.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.1.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.2.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.2.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.3.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.3.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.4.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.0.4.json
+- spec/fixtures/v3/releases/puppetlabs-apache-0.1.1.headers
+- spec/fixtures/v3/releases/puppetlabs-apache-0.1.1.json
+- spec/fixtures/v3/releases__module=puppetlabs-apache.headers
+- spec/fixtures/v3/releases__module=puppetlabs-apache.json
+- spec/fixtures/v3/users/puppetlabs.headers
+- spec/fixtures/v3/users/puppetlabs.json
+- spec/spec_helper.rb
+- spec/tmp/.gitkeep
+- spec/unit/forge/connection/connection_failure_spec.rb
+- spec/unit/forge/connection_spec.rb
+- spec/unit/forge/lazy_accessors_spec.rb
+- spec/unit/forge/lazy_relations_spec.rb
+- spec/unit/forge/lru_cache_spec.rb
+- spec/unit/forge/tar/mini_spec.rb
+- spec/unit/forge/tar_spec.rb
+- spec/unit/forge/unpacker_spec.rb
+- spec/unit/forge/util_spec.rb
+- spec/unit/forge/v3/base/paginated_collection_spec.rb
+- spec/unit/forge/v3/base_spec.rb
+- spec/unit/forge/v3/metadata_spec.rb
+- spec/unit/forge/v3/module_spec.rb
+- spec/unit/forge/v3/release_spec.rb
+- spec/unit/forge/v3/user_spec.rb
+- spec/unit/puppet_forge_spec.rb

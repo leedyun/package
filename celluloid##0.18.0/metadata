@@ -1,0 +1,217 @@
+--- !ruby/object:Gem::Specification
+name: celluloid
+version: !ruby/object:Gem::Version
+  version: 0.18.0
+platform: ruby
+authors:
+- Tony Arcieri
+- Donovan Keme
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-12-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: timers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+description: Celluloid enables people to build concurrent programs out of concurrent
+  objects just as easily as they build sequential programs out of sequential objects
+email:
+- bascule@gmail.com
+- code@extremist.digital
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGES.md
+- CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE.txt
+- README.md
+- REFACTOR.md
+- architecture.md
+- examples/basic_usage.rb
+- examples/configurations.rb
+- examples/futures.rb
+- examples/ring.rb
+- examples/simple_pmap.rb
+- examples/stack.rb
+- examples/supervisors_and_registry.rb
+- examples/timers.rb
+- lib/celluloid.rb
+- lib/celluloid/actor.rb
+- lib/celluloid/actor/system.rb
+- lib/celluloid/autostart.rb
+- lib/celluloid/call/async.rb
+- lib/celluloid/call/block.rb
+- lib/celluloid/call/sync.rb
+- lib/celluloid/calls.rb
+- lib/celluloid/cell.rb
+- lib/celluloid/condition.rb
+- lib/celluloid/core_ext.rb
+- lib/celluloid/debug.rb
+- lib/celluloid/exceptions.rb
+- lib/celluloid/future.rb
+- lib/celluloid/group.rb
+- lib/celluloid/group/pool.rb
+- lib/celluloid/group/spawner.rb
+- lib/celluloid/internals/call_chain.rb
+- lib/celluloid/internals/cpu_counter.rb
+- lib/celluloid/internals/handlers.rb
+- lib/celluloid/internals/links.rb
+- lib/celluloid/internals/logger.rb
+- lib/celluloid/internals/method.rb
+- lib/celluloid/internals/properties.rb
+- lib/celluloid/internals/receivers.rb
+- lib/celluloid/internals/registry.rb
+- lib/celluloid/internals/responses.rb
+- lib/celluloid/internals/signals.rb
+- lib/celluloid/internals/stack.rb
+- lib/celluloid/internals/stack/dump.rb
+- lib/celluloid/internals/stack/states.rb
+- lib/celluloid/internals/stack/summary.rb
+- lib/celluloid/internals/task_set.rb
+- lib/celluloid/internals/thread_handle.rb
+- lib/celluloid/internals/uuid.rb
+- lib/celluloid/logging.rb
+- lib/celluloid/logging/incident.rb
+- lib/celluloid/logging/incident_logger.rb
+- lib/celluloid/logging/incident_reporter.rb
+- lib/celluloid/logging/log_event.rb
+- lib/celluloid/logging/ring_buffer.rb
+- lib/celluloid/mailbox.rb
+- lib/celluloid/mailbox/evented.rb
+- lib/celluloid/notifications.rb
+- lib/celluloid/pool.rb
+- lib/celluloid/probe.rb
+- lib/celluloid/proxies.rb
+- lib/celluloid/proxy/abstract.rb
+- lib/celluloid/proxy/actor.rb
+- lib/celluloid/proxy/async.rb
+- lib/celluloid/proxy/block.rb
+- lib/celluloid/proxy/cell.rb
+- lib/celluloid/proxy/future.rb
+- lib/celluloid/proxy/sync.rb
+- lib/celluloid/rspec.rb
+- lib/celluloid/supervision.rb
+- lib/celluloid/supervision/configuration.rb
+- lib/celluloid/supervision/configuration/injections.rb
+- lib/celluloid/supervision/configuration/instance.rb
+- lib/celluloid/supervision/constants.rb
+- lib/celluloid/supervision/container.rb
+- lib/celluloid/supervision/container/behavior.rb
+- lib/celluloid/supervision/container/behavior/pool.rb
+- lib/celluloid/supervision/container/behavior/tree.rb
+- lib/celluloid/supervision/container/injections.rb
+- lib/celluloid/supervision/container/instance.rb
+- lib/celluloid/supervision/container/pool.rb
+- lib/celluloid/supervision/service.rb
+- lib/celluloid/supervision/supervise.rb
+- lib/celluloid/supervision/validation.rb
+- lib/celluloid/supervision/version.rb
+- lib/celluloid/system_events.rb
+- lib/celluloid/task.rb
+- lib/celluloid/task/fibered.rb
+- lib/celluloid/task/threaded.rb
+- lib/celluloid/test.rb
+- lib/celluloid/thread.rb
+- lib/celluloid/version.rb
+- spec/celluloid/actor/system_spec.rb
+- spec/celluloid/actor_spec.rb
+- spec/celluloid/block_spec.rb
+- spec/celluloid/calls_spec.rb
+- spec/celluloid/condition_spec.rb
+- spec/celluloid/evented_mailbox_spec.rb
+- spec/celluloid/future_spec.rb
+- spec/celluloid/group/elastic_spec.rb
+- spec/celluloid/group/pool_spec.rb
+- spec/celluloid/group/spawner_spec.rb
+- spec/celluloid/internals/cpu_counter_spec.rb
+- spec/celluloid/internals/links_spec.rb
+- spec/celluloid/internals/properties_spec.rb
+- spec/celluloid/internals/registry_spec.rb
+- spec/celluloid/internals/stack/dump_spec.rb
+- spec/celluloid/internals/stack/summary_spec.rb
+- spec/celluloid/internals/thread_handle_spec.rb
+- spec/celluloid/internals/uuid_spec.rb
+- spec/celluloid/logging/ring_buffer_spec.rb
+- spec/celluloid/mailbox/evented_spec.rb
+- spec/celluloid/mailbox_spec.rb
+- spec/celluloid/misc/leak_spec.rb
+- spec/celluloid/notifications_spec.rb
+- spec/celluloid/probe_spec.rb
+- spec/celluloid/proxy_spec.rb
+- spec/celluloid/supervision/behavior_spec.rb
+- spec/celluloid/supervision/configuration_spec.rb
+- spec/celluloid/supervision/container_spec.rb
+- spec/celluloid/supervision/instance_spec.rb
+- spec/celluloid/supervision/root_spec.rb
+- spec/celluloid/supervision/supervisor_spec.rb
+- spec/celluloid/task/fibered_spec.rb
+- spec/celluloid/task/threaded_spec.rb
+- spec/celluloid/timer_spec.rb
+- spec/shared/actor_examples.rb
+- spec/shared/group_examples.rb
+- spec/shared/mailbox_examples.rb
+- spec/shared/stack_examples.rb
+- spec/shared/task_examples.rb
+- spec/spec_helper.rb
+- spec/support/configure_rspec.rb
+- spec/support/coverage.rb
+- spec/support/crash_checking.rb
+- spec/support/debugging.rb
+- spec/support/examples/actor_class.rb
+- spec/support/examples/call_class.rb
+- spec/support/examples/container_class.rb
+- spec/support/examples/evented_mailbox_class.rb
+- spec/support/examples/stack_classes.rb
+- spec/support/examples/stack_methods.rb
+- spec/support/examples/subordinate_class.rb
+- spec/support/includer.rb
+- spec/support/logging.rb
+- spec/support/loose_threads.rb
+- spec/support/reset_class_variables.rb
+- spec/support/sleep_and_wait.rb
+- spec/support/stubbing.rb
+homepage: https://github.com/celluloid/celluloid
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/celluloid/celluloid/issues
+  changelog_uri: https://github.com/celluloid/celluloid/blob/master/CHANGES.md
+  documentation_uri: https://www.rubydoc.info/gems/celluloid
+  homepage_uri: https://celluloid.io/
+  mailing_list_uri: http://groups.google.com/group/celluloid-ruby
+  source_code_uri: https://github.com/celluloid/celluloid
+  wiki_uri: https://github.com/celluloid/celluloid/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.2.6
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: Actor-based concurrent object framework for Ruby
+test_files: []

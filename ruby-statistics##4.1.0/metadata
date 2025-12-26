@@ -1,0 +1,191 @@
+--- !ruby/object:Gem::Specification
+name: ruby-statistics
+version: !ruby/object:Gem::Version
+  version: 4.1.0
+platform: ruby
+authors:
+- esteban zapata
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2025-01-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.10.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.10.0
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.0
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.0
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.9
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.9
+description: |-
+  This gem is intended to accomplish the same purpose as jStat js library:
+                            to provide ruby with statistical capabilities without the need
+                            of a statistical programming language like R or Octave. Some functions
+                            and capabilities are an implementation from other authors and are
+                            referenced properly in the class/method.
+email:
+- ruby@estebanz.email
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/enumerable.rb
+- lib/math.rb
+- lib/ruby-statistics.rb
+- lib/ruby-statistics/distribution.rb
+- lib/ruby-statistics/distribution/bernoulli.rb
+- lib/ruby-statistics/distribution/beta.rb
+- lib/ruby-statistics/distribution/binomial.rb
+- lib/ruby-statistics/distribution/chi_squared.rb
+- lib/ruby-statistics/distribution/empirical.rb
+- lib/ruby-statistics/distribution/f.rb
+- lib/ruby-statistics/distribution/gamma.rb
+- lib/ruby-statistics/distribution/geometric.rb
+- lib/ruby-statistics/distribution/logseries.rb
+- lib/ruby-statistics/distribution/negative_binomial.rb
+- lib/ruby-statistics/distribution/normal.rb
+- lib/ruby-statistics/distribution/poisson.rb
+- lib/ruby-statistics/distribution/t_student.rb
+- lib/ruby-statistics/distribution/tables/chi_squared.rb
+- lib/ruby-statistics/distribution/uniform.rb
+- lib/ruby-statistics/distribution/weibull.rb
+- lib/ruby-statistics/spearman_rank_coefficient.rb
+- lib/ruby-statistics/statistical_test.rb
+- lib/ruby-statistics/statistical_test/chi_squared_test.rb
+- lib/ruby-statistics/statistical_test/f_test.rb
+- lib/ruby-statistics/statistical_test/kolmogorov_smirnov_test.rb
+- lib/ruby-statistics/statistical_test/t_test.rb
+- lib/ruby-statistics/statistical_test/wilcoxon_rank_sum_test.rb
+- lib/ruby-statistics/version.rb
+- ruby-statistics.gemspec
+homepage: https://github.com/estebanz01/ruby-statistics
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: A ruby gem for som specific statistics. Inspired by the jStat js library.
+test_files: []

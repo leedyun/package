@@ -1,0 +1,78 @@
+--- !ruby/object:Gem::Specification
+name: scrolls
+version: !ruby/object:Gem::Version
+  version: 0.9.6
+platform: ruby
+authors:
+- Curt Micol
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: syslog
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Logging, easier, more consistent.
+email:
+- asenchi@asenchi.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- docs/global-context.md
+- docs/syslog.md
+- lib/scrolls.rb
+- lib/scrolls/iologger.rb
+- lib/scrolls/logger.rb
+- lib/scrolls/parser.rb
+- lib/scrolls/sysloglogger.rb
+- lib/scrolls/utils.rb
+- lib/scrolls/version.rb
+- scrolls.gemspec
+- test/test_helper.rb
+- test/test_parser.rb
+- test/test_scrolls.rb
+homepage: https://github.com/asenchi/scrolls
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: When do we log? All the time.
+test_files:
+- test/test_helper.rb
+- test/test_parser.rb
+- test/test_scrolls.rb

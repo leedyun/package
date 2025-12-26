@@ -1,0 +1,80 @@
+--- !ruby/object:Gem::Specification
+name: rb-inotify
+version: !ruby/object:Gem::Version
+  version: 0.11.1
+platform: ruby
+authors:
+- Natalie Weizenbaum
+- Samuel Williams
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-05-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description:
+email:
+- nex342@gmail.com
+- samuel.williams@oriontransfer.co.nz
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yaml"
+- ".gitignore"
+- ".yardopts"
+- Gemfile
+- LICENSE.md
+- README.md
+- lib/rb-inotify.rb
+- lib/rb-inotify/errors.rb
+- lib/rb-inotify/event.rb
+- lib/rb-inotify/native.rb
+- lib/rb-inotify/native/flags.rb
+- lib/rb-inotify/notifier.rb
+- lib/rb-inotify/version.rb
+- lib/rb-inotify/watcher.rb
+- rb-inotify.gemspec
+- spec/inotify_spec.rb
+- spec/notifier_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/guard/rb-inotify
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: A Ruby wrapper for Linux inotify, using FFI
+test_files:
+- spec/inotify_spec.rb
+- spec/notifier_spec.rb
+- spec/spec_helper.rb

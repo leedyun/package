@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: bootstrap_form
+version: !ruby/object:Gem::Version
+  version: 5.4.0
+platform: ruby
+authors:
+- Stephen Potenza
+- Carlos Lopes
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2023-10-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+description: bootstrap_form is a rails form builder that makes it super easy to create
+  beautiful-looking forms using Bootstrap 5
+email:
+- potenza@gmail.com
+- carlos.el.lopes@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".editorconfig"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".yarnrc"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dangerfile
+- Dockerfile
+- Gemfile
+- LICENSE.txt
+- OLD-README.md
+- README.md
+- RELEASING.md
+- Rakefile
+- UPGRADE-4.0.md
+- UPGRADE-5.0.md
+- app/assets/stylesheets/rails_bootstrap_forms.css
+- bootstrap_form.gemspec
+- docker-compose-system-test.yml
+- docker-compose.yml
+- gemfiles/6.1.gemfile
+- gemfiles/7.0.gemfile
+- gemfiles/7.1.gemfile
+- gemfiles/common.gemfile
+- gemfiles/edge.gemfile
+- lib/bootstrap_form.rb
+- lib/bootstrap_form/action_view_extensions/form_helper.rb
+- lib/bootstrap_form/components.rb
+- lib/bootstrap_form/components/hints.rb
+- lib/bootstrap_form/components/labels.rb
+- lib/bootstrap_form/components/layout.rb
+- lib/bootstrap_form/components/validation.rb
+- lib/bootstrap_form/configuration.rb
+- lib/bootstrap_form/engine.rb
+- lib/bootstrap_form/form_builder.rb
+- lib/bootstrap_form/form_group.rb
+- lib/bootstrap_form/form_group_builder.rb
+- lib/bootstrap_form/helpers.rb
+- lib/bootstrap_form/helpers/bootstrap.rb
+- lib/bootstrap_form/helpers/field.rb
+- lib/bootstrap_form/inputs.rb
+- lib/bootstrap_form/inputs/base.rb
+- lib/bootstrap_form/inputs/check_box.rb
+- lib/bootstrap_form/inputs/collection_check_boxes.rb
+- lib/bootstrap_form/inputs/collection_radio_buttons.rb
+- lib/bootstrap_form/inputs/collection_select.rb
+- lib/bootstrap_form/inputs/color_field.rb
+- lib/bootstrap_form/inputs/date_field.rb
+- lib/bootstrap_form/inputs/date_select.rb
+- lib/bootstrap_form/inputs/datetime_field.rb
+- lib/bootstrap_form/inputs/datetime_local_field.rb
+- lib/bootstrap_form/inputs/datetime_select.rb
+- lib/bootstrap_form/inputs/email_field.rb
+- lib/bootstrap_form/inputs/file_field.rb
+- lib/bootstrap_form/inputs/grouped_collection_select.rb
+- lib/bootstrap_form/inputs/inputs_collection.rb
+- lib/bootstrap_form/inputs/month_field.rb
+- lib/bootstrap_form/inputs/number_field.rb
+- lib/bootstrap_form/inputs/password_field.rb
+- lib/bootstrap_form/inputs/phone_field.rb
+- lib/bootstrap_form/inputs/radio_button.rb
+- lib/bootstrap_form/inputs/range_field.rb
+- lib/bootstrap_form/inputs/rich_text_area.rb
+- lib/bootstrap_form/inputs/search_field.rb
+- lib/bootstrap_form/inputs/select.rb
+- lib/bootstrap_form/inputs/submit.rb
+- lib/bootstrap_form/inputs/telephone_field.rb
+- lib/bootstrap_form/inputs/text_area.rb
+- lib/bootstrap_form/inputs/text_field.rb
+- lib/bootstrap_form/inputs/time_field.rb
+- lib/bootstrap_form/inputs/time_select.rb
+- lib/bootstrap_form/inputs/time_zone_select.rb
+- lib/bootstrap_form/inputs/url_field.rb
+- lib/bootstrap_form/inputs/week_field.rb
+- lib/bootstrap_form/version.rb
+homepage: https://github.com/bootstrap-ruby/bootstrap_form
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key: 
+specification_version: 4
+summary: Rails form builder that makes it easy to style forms using Bootstrap 5
+test_files: []

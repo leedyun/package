@@ -1,0 +1,8 @@
+<%
+std_opts = "--no-source --color --format pretty" # Cucumber::Formatter::Fuubar"
+%>
+
+default: DRIVER=WATIR <%= std_opts %>
+selenium: DRIVER=SELENIUM <%= std_opts %>
+focus: DRIVER=WATIR <%= std_opts %> --tags ~@selenium_only --tags @focus
+

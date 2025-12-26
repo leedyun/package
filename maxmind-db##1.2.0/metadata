@@ -1,0 +1,190 @@
+--- !ruby/object:Gem::Specification
+name: maxmind-db
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- William Storey
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A gem for reading MaxMind DB files. MaxMind DB is a binary file format
+  that stores data indexed by IP address subnets (IPv4 or IPv6).
+email: support@maxmind.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE-APACHE
+- LICENSE-MIT
+- README.dev.md
+- README.md
+- Rakefile
+- bin/mmdb-benchmark.rb
+- lib/maxmind/db.rb
+- lib/maxmind/db/decoder.rb
+- lib/maxmind/db/errors.rb
+- lib/maxmind/db/file_reader.rb
+- lib/maxmind/db/memory_reader.rb
+- lib/maxmind/db/metadata.rb
+- maxmind-db.gemspec
+- test/data/LICENSE
+- test/data/MaxMind-DB-spec.md
+- test/data/README.md
+- test/data/bad-data/README.md
+- test/data/bad-data/libmaxminddb/libmaxminddb-offset-integer-overflow.mmdb
+- test/data/bad-data/maxminddb-golang/cyclic-data-structure.mmdb
+- test/data/bad-data/maxminddb-golang/invalid-bytes-length.mmdb
+- test/data/bad-data/maxminddb-golang/invalid-data-record-offset.mmdb
+- test/data/bad-data/maxminddb-golang/invalid-map-key-length.mmdb
+- test/data/bad-data/maxminddb-golang/invalid-string-length.mmdb
+- test/data/bad-data/maxminddb-golang/metadata-is-an-uint128.mmdb
+- test/data/bad-data/maxminddb-golang/unexpected-bytes.mmdb
+- test/data/bad-data/maxminddb-python/bad-unicode-in-map-key.mmdb
+- test/data/perltidyrc
+- test/data/source-data/GeoIP2-Anonymous-IP-Test.json
+- test/data/source-data/GeoIP2-City-Test.json
+- test/data/source-data/GeoIP2-Connection-Type-Test.json
+- test/data/source-data/GeoIP2-Country-Test.json
+- test/data/source-data/GeoIP2-DensityIncome-Test.json
+- test/data/source-data/GeoIP2-Domain-Test.json
+- test/data/source-data/GeoIP2-Enterprise-Test.json
+- test/data/source-data/GeoIP2-ISP-Test.json
+- test/data/source-data/GeoIP2-Precision-Enterprise-Test.json
+- test/data/source-data/GeoIP2-Static-IP-Score-Test.json
+- test/data/source-data/GeoIP2-User-Count-Test.json
+- test/data/source-data/GeoLite2-ASN-Test.json
+- test/data/source-data/GeoLite2-City-Test.json
+- test/data/source-data/GeoLite2-Country-Test.json
+- test/data/source-data/README
+- test/data/test-data/GeoIP2-Anonymous-IP-Test.mmdb
+- test/data/test-data/GeoIP2-City-Test-Broken-Double-Format.mmdb
+- test/data/test-data/GeoIP2-City-Test-Invalid-Node-Count.mmdb
+- test/data/test-data/GeoIP2-City-Test.mmdb
+- test/data/test-data/GeoIP2-Connection-Type-Test.mmdb
+- test/data/test-data/GeoIP2-Country-Test.mmdb
+- test/data/test-data/GeoIP2-DensityIncome-Test.mmdb
+- test/data/test-data/GeoIP2-Domain-Test.mmdb
+- test/data/test-data/GeoIP2-Enterprise-Test.mmdb
+- test/data/test-data/GeoIP2-ISP-Test.mmdb
+- test/data/test-data/GeoIP2-Precision-Enterprise-Test.mmdb
+- test/data/test-data/GeoIP2-Static-IP-Score-Test.mmdb
+- test/data/test-data/GeoIP2-User-Count-Test.mmdb
+- test/data/test-data/GeoLite2-ASN-Test.mmdb
+- test/data/test-data/GeoLite2-City-Test.mmdb
+- test/data/test-data/GeoLite2-Country-Test.mmdb
+- test/data/test-data/MaxMind-DB-no-ipv4-search-tree.mmdb
+- test/data/test-data/MaxMind-DB-string-value-entries.mmdb
+- test/data/test-data/MaxMind-DB-test-broken-pointers-24.mmdb
+- test/data/test-data/MaxMind-DB-test-broken-search-tree-24.mmdb
+- test/data/test-data/MaxMind-DB-test-decoder.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv4-24.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv4-28.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv4-32.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv6-24.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv6-28.mmdb
+- test/data/test-data/MaxMind-DB-test-ipv6-32.mmdb
+- test/data/test-data/MaxMind-DB-test-metadata-pointers.mmdb
+- test/data/test-data/MaxMind-DB-test-mixed-24.mmdb
+- test/data/test-data/MaxMind-DB-test-mixed-28.mmdb
+- test/data/test-data/MaxMind-DB-test-mixed-32.mmdb
+- test/data/test-data/MaxMind-DB-test-nested.mmdb
+- test/data/test-data/MaxMind-DB-test-pointer-decoder.mmdb
+- test/data/test-data/README.md
+- test/data/test-data/maps-with-pointers.raw
+- test/data/test-data/write-test-data.pl
+- test/data/tidyall.ini
+- test/mmdb_util.rb
+- test/test_decoder.rb
+- test/test_reader.rb
+homepage: https://github.com/maxmind/MaxMind-DB-Reader-ruby
+licenses:
+- Apache-2.0
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/maxmind/MaxMind-DB-Reader-ruby/issues
+  changelog_uri: https://github.com/maxmind/MaxMind-DB-Reader-ruby/blob/main/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/maxmind-db
+  homepage_uri: https://github.com/maxmind/MaxMind-DB-Reader-ruby
+  source_code_uri: https://github.com/maxmind/MaxMind-DB-Reader-ruby
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.18
+signing_key: 
+specification_version: 4
+summary: A gem for reading MaxMind DB files.
+test_files: []

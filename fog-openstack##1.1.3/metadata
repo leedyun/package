@@ -1,0 +1,1461 @@
+--- !ruby/object:Gem::Specification
+name: fog-openstack
+version: !ruby/object:Gem::Version
+  version: 1.1.3
+platform: ruby
+authors:
+- Matt Darby
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-06-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mime-types-data
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.16.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.16.2
+description: OpenStack fog provider gem.
+email:
+- matt.darby@rackspace.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/linting.yml"
+- ".gitignore"
+- ".hound.yml"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".travis.yml"
+- ".zuul.yaml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- SECURITY.md
+- bin/console
+- bin/setup
+- docker-compose.yml
+- docs/common/connection_params.md
+- docs/common/resources.md
+- docs/compute.md
+- docs/getting_started.md
+- docs/introspection.md
+- docs/metering.md
+- docs/network.md
+- docs/nfv.md
+- docs/orchestration.md
+- docs/planning.md
+- docs/shared_file_system.md
+- docs/storage.md
+- docs/workflow.md
+- examples/compute/basics.rb
+- examples/compute/block_device_mapping_v2.rb
+- examples/container_infra/basics.rb
+- examples/event/basics.rb
+- examples/identity/basics.rb
+- examples/identity/basics_v3.rb
+- examples/image/upload-test-image.rb
+- examples/introspection/basics.rb
+- examples/metric/basics.rb
+- examples/network/network_add_port.rb
+- examples/network/network_rbac.rb
+- examples/network/network_subnets_routers.rb
+- examples/planning/basics.rb
+- examples/shared_file_system/basics.rb
+- examples/storage/set-account-quota.rb
+- examples/volume/backups.rb
+- examples/workflow/workflow-examples.rb
+- fog-openstack.gemspec
+- lib/fog/openstack.rb
+- lib/fog/openstack/auth/catalog.rb
+- lib/fog/openstack/auth/catalog/v2.rb
+- lib/fog/openstack/auth/catalog/v3.rb
+- lib/fog/openstack/auth/name.rb
+- lib/fog/openstack/auth/token.rb
+- lib/fog/openstack/auth/token/v2.rb
+- lib/fog/openstack/auth/token/v3.rb
+- lib/fog/openstack/baremetal.rb
+- lib/fog/openstack/baremetal/models/chassis.rb
+- lib/fog/openstack/baremetal/models/chassis_collection.rb
+- lib/fog/openstack/baremetal/models/driver.rb
+- lib/fog/openstack/baremetal/models/drivers.rb
+- lib/fog/openstack/baremetal/models/node.rb
+- lib/fog/openstack/baremetal/models/nodes.rb
+- lib/fog/openstack/baremetal/models/port.rb
+- lib/fog/openstack/baremetal/models/ports.rb
+- lib/fog/openstack/baremetal/requests/create_chassis.rb
+- lib/fog/openstack/baremetal/requests/create_node.rb
+- lib/fog/openstack/baremetal/requests/create_port.rb
+- lib/fog/openstack/baremetal/requests/delete_chassis.rb
+- lib/fog/openstack/baremetal/requests/delete_node.rb
+- lib/fog/openstack/baremetal/requests/delete_port.rb
+- lib/fog/openstack/baremetal/requests/get_chassis.rb
+- lib/fog/openstack/baremetal/requests/get_driver.rb
+- lib/fog/openstack/baremetal/requests/get_driver_properties.rb
+- lib/fog/openstack/baremetal/requests/get_node.rb
+- lib/fog/openstack/baremetal/requests/get_port.rb
+- lib/fog/openstack/baremetal/requests/list_chassis.rb
+- lib/fog/openstack/baremetal/requests/list_chassis_detailed.rb
+- lib/fog/openstack/baremetal/requests/list_drivers.rb
+- lib/fog/openstack/baremetal/requests/list_nodes.rb
+- lib/fog/openstack/baremetal/requests/list_nodes_detailed.rb
+- lib/fog/openstack/baremetal/requests/list_ports.rb
+- lib/fog/openstack/baremetal/requests/list_ports_detailed.rb
+- lib/fog/openstack/baremetal/requests/patch_chassis.rb
+- lib/fog/openstack/baremetal/requests/patch_node.rb
+- lib/fog/openstack/baremetal/requests/patch_port.rb
+- lib/fog/openstack/baremetal/requests/set_node_maintenance.rb
+- lib/fog/openstack/baremetal/requests/set_node_power_state.rb
+- lib/fog/openstack/baremetal/requests/set_node_provision_state.rb
+- lib/fog/openstack/baremetal/requests/unset_node_maintenance.rb
+- lib/fog/openstack/compute.rb
+- lib/fog/openstack/compute/models/address.rb
+- lib/fog/openstack/compute/models/addresses.rb
+- lib/fog/openstack/compute/models/aggregate.rb
+- lib/fog/openstack/compute/models/aggregates.rb
+- lib/fog/openstack/compute/models/availability_zone.rb
+- lib/fog/openstack/compute/models/availability_zones.rb
+- lib/fog/openstack/compute/models/flavor.rb
+- lib/fog/openstack/compute/models/flavors.rb
+- lib/fog/openstack/compute/models/host.rb
+- lib/fog/openstack/compute/models/hosts.rb
+- lib/fog/openstack/compute/models/image.rb
+- lib/fog/openstack/compute/models/images.rb
+- lib/fog/openstack/compute/models/key_pair.rb
+- lib/fog/openstack/compute/models/key_pairs.rb
+- lib/fog/openstack/compute/models/metadata.rb
+- lib/fog/openstack/compute/models/metadatum.rb
+- lib/fog/openstack/compute/models/network.rb
+- lib/fog/openstack/compute/models/networks.rb
+- lib/fog/openstack/compute/models/os_interface.rb
+- lib/fog/openstack/compute/models/os_interfaces.rb
+- lib/fog/openstack/compute/models/security_group.rb
+- lib/fog/openstack/compute/models/security_group_rule.rb
+- lib/fog/openstack/compute/models/security_group_rules.rb
+- lib/fog/openstack/compute/models/security_groups.rb
+- lib/fog/openstack/compute/models/server.rb
+- lib/fog/openstack/compute/models/server_group.rb
+- lib/fog/openstack/compute/models/server_groups.rb
+- lib/fog/openstack/compute/models/servers.rb
+- lib/fog/openstack/compute/models/service.rb
+- lib/fog/openstack/compute/models/services.rb
+- lib/fog/openstack/compute/models/snapshot.rb
+- lib/fog/openstack/compute/models/snapshots.rb
+- lib/fog/openstack/compute/models/tenant.rb
+- lib/fog/openstack/compute/models/tenants.rb
+- lib/fog/openstack/compute/models/volume.rb
+- lib/fog/openstack/compute/models/volume_attachment.rb
+- lib/fog/openstack/compute/models/volume_attachments.rb
+- lib/fog/openstack/compute/models/volumes.rb
+- lib/fog/openstack/compute/requests/add_aggregate_host.rb
+- lib/fog/openstack/compute/requests/add_fixed_ip.rb
+- lib/fog/openstack/compute/requests/add_flavor_access.rb
+- lib/fog/openstack/compute/requests/add_security_group.rb
+- lib/fog/openstack/compute/requests/allocate_address.rb
+- lib/fog/openstack/compute/requests/associate_address.rb
+- lib/fog/openstack/compute/requests/attach_volume.rb
+- lib/fog/openstack/compute/requests/boot_from_snapshot.rb
+- lib/fog/openstack/compute/requests/change_server_password.rb
+- lib/fog/openstack/compute/requests/confirm_resize_server.rb
+- lib/fog/openstack/compute/requests/create_aggregate.rb
+- lib/fog/openstack/compute/requests/create_flavor.rb
+- lib/fog/openstack/compute/requests/create_flavor_metadata.rb
+- lib/fog/openstack/compute/requests/create_image.rb
+- lib/fog/openstack/compute/requests/create_key_pair.rb
+- lib/fog/openstack/compute/requests/create_os_interface.rb
+- lib/fog/openstack/compute/requests/create_security_group.rb
+- lib/fog/openstack/compute/requests/create_security_group_rule.rb
+- lib/fog/openstack/compute/requests/create_server.rb
+- lib/fog/openstack/compute/requests/create_server_group.rb
+- lib/fog/openstack/compute/requests/create_snapshot.rb
+- lib/fog/openstack/compute/requests/create_volume.rb
+- lib/fog/openstack/compute/requests/delete_aggregate.rb
+- lib/fog/openstack/compute/requests/delete_flavor.rb
+- lib/fog/openstack/compute/requests/delete_flavor_metadata.rb
+- lib/fog/openstack/compute/requests/delete_image.rb
+- lib/fog/openstack/compute/requests/delete_key_pair.rb
+- lib/fog/openstack/compute/requests/delete_meta.rb
+- lib/fog/openstack/compute/requests/delete_metadata.rb
+- lib/fog/openstack/compute/requests/delete_os_interface.rb
+- lib/fog/openstack/compute/requests/delete_security_group.rb
+- lib/fog/openstack/compute/requests/delete_security_group_rule.rb
+- lib/fog/openstack/compute/requests/delete_server.rb
+- lib/fog/openstack/compute/requests/delete_server_group.rb
+- lib/fog/openstack/compute/requests/delete_service.rb
+- lib/fog/openstack/compute/requests/delete_snapshot.rb
+- lib/fog/openstack/compute/requests/delete_volume.rb
+- lib/fog/openstack/compute/requests/detach_volume.rb
+- lib/fog/openstack/compute/requests/disable_service.rb
+- lib/fog/openstack/compute/requests/disable_service_log_reason.rb
+- lib/fog/openstack/compute/requests/disassociate_address.rb
+- lib/fog/openstack/compute/requests/enable_service.rb
+- lib/fog/openstack/compute/requests/evacuate_server.rb
+- lib/fog/openstack/compute/requests/get_address.rb
+- lib/fog/openstack/compute/requests/get_aggregate.rb
+- lib/fog/openstack/compute/requests/get_console_output.rb
+- lib/fog/openstack/compute/requests/get_flavor_details.rb
+- lib/fog/openstack/compute/requests/get_flavor_metadata.rb
+- lib/fog/openstack/compute/requests/get_host_details.rb
+- lib/fog/openstack/compute/requests/get_hypervisor.rb
+- lib/fog/openstack/compute/requests/get_hypervisor_statistics.rb
+- lib/fog/openstack/compute/requests/get_image_details.rb
+- lib/fog/openstack/compute/requests/get_key_pair.rb
+- lib/fog/openstack/compute/requests/get_limits.rb
+- lib/fog/openstack/compute/requests/get_metadata.rb
+- lib/fog/openstack/compute/requests/get_os_interface.rb
+- lib/fog/openstack/compute/requests/get_quota.rb
+- lib/fog/openstack/compute/requests/get_quota_defaults.rb
+- lib/fog/openstack/compute/requests/get_security_group.rb
+- lib/fog/openstack/compute/requests/get_security_group_rule.rb
+- lib/fog/openstack/compute/requests/get_server_details.rb
+- lib/fog/openstack/compute/requests/get_server_group.rb
+- lib/fog/openstack/compute/requests/get_server_password.rb
+- lib/fog/openstack/compute/requests/get_server_volumes.rb
+- lib/fog/openstack/compute/requests/get_snapshot_details.rb
+- lib/fog/openstack/compute/requests/get_usage.rb
+- lib/fog/openstack/compute/requests/get_vnc_console.rb
+- lib/fog/openstack/compute/requests/get_volume_details.rb
+- lib/fog/openstack/compute/requests/list_address_pools.rb
+- lib/fog/openstack/compute/requests/list_addresses.rb
+- lib/fog/openstack/compute/requests/list_aggregates.rb
+- lib/fog/openstack/compute/requests/list_all_addresses.rb
+- lib/fog/openstack/compute/requests/list_availability_zones.rb
+- lib/fog/openstack/compute/requests/list_flavors.rb
+- lib/fog/openstack/compute/requests/list_flavors_detail.rb
+- lib/fog/openstack/compute/requests/list_hosts.rb
+- lib/fog/openstack/compute/requests/list_hypervisor_servers.rb
+- lib/fog/openstack/compute/requests/list_hypervisors.rb
+- lib/fog/openstack/compute/requests/list_hypervisors_detail.rb
+- lib/fog/openstack/compute/requests/list_images.rb
+- lib/fog/openstack/compute/requests/list_images_detail.rb
+- lib/fog/openstack/compute/requests/list_key_pairs.rb
+- lib/fog/openstack/compute/requests/list_metadata.rb
+- lib/fog/openstack/compute/requests/list_os_interfaces.rb
+- lib/fog/openstack/compute/requests/list_private_addresses.rb
+- lib/fog/openstack/compute/requests/list_public_addresses.rb
+- lib/fog/openstack/compute/requests/list_security_groups.rb
+- lib/fog/openstack/compute/requests/list_server_groups.rb
+- lib/fog/openstack/compute/requests/list_servers.rb
+- lib/fog/openstack/compute/requests/list_servers_detail.rb
+- lib/fog/openstack/compute/requests/list_services.rb
+- lib/fog/openstack/compute/requests/list_snapshots.rb
+- lib/fog/openstack/compute/requests/list_snapshots_detail.rb
+- lib/fog/openstack/compute/requests/list_tenants_with_flavor_access.rb
+- lib/fog/openstack/compute/requests/list_usages.rb
+- lib/fog/openstack/compute/requests/list_volume_attachments.rb
+- lib/fog/openstack/compute/requests/list_volumes.rb
+- lib/fog/openstack/compute/requests/list_volumes_detail.rb
+- lib/fog/openstack/compute/requests/list_zones.rb
+- lib/fog/openstack/compute/requests/list_zones_detailed.rb
+- lib/fog/openstack/compute/requests/live_migrate_server.rb
+- lib/fog/openstack/compute/requests/migrate_server.rb
+- lib/fog/openstack/compute/requests/pause_server.rb
+- lib/fog/openstack/compute/requests/reboot_server.rb
+- lib/fog/openstack/compute/requests/rebuild_server.rb
+- lib/fog/openstack/compute/requests/release_address.rb
+- lib/fog/openstack/compute/requests/remote_consoles.rb
+- lib/fog/openstack/compute/requests/remove_aggregate_host.rb
+- lib/fog/openstack/compute/requests/remove_fixed_ip.rb
+- lib/fog/openstack/compute/requests/remove_flavor_access.rb
+- lib/fog/openstack/compute/requests/remove_security_group.rb
+- lib/fog/openstack/compute/requests/rescue_server.rb
+- lib/fog/openstack/compute/requests/reset_server_state.rb
+- lib/fog/openstack/compute/requests/resize_server.rb
+- lib/fog/openstack/compute/requests/resume_server.rb
+- lib/fog/openstack/compute/requests/revert_resize_server.rb
+- lib/fog/openstack/compute/requests/server_action.rb
+- lib/fog/openstack/compute/requests/server_actions.rb
+- lib/fog/openstack/compute/requests/server_diagnostics.rb
+- lib/fog/openstack/compute/requests/set_metadata.rb
+- lib/fog/openstack/compute/requests/set_tenant.rb
+- lib/fog/openstack/compute/requests/shelve_offload_server.rb
+- lib/fog/openstack/compute/requests/shelve_server.rb
+- lib/fog/openstack/compute/requests/start_server.rb
+- lib/fog/openstack/compute/requests/stop_server.rb
+- lib/fog/openstack/compute/requests/suspend_server.rb
+- lib/fog/openstack/compute/requests/unpause_server.rb
+- lib/fog/openstack/compute/requests/unshelve_server.rb
+- lib/fog/openstack/compute/requests/update_aggregate.rb
+- lib/fog/openstack/compute/requests/update_aggregate_metadata.rb
+- lib/fog/openstack/compute/requests/update_flavor_metadata.rb
+- lib/fog/openstack/compute/requests/update_meta.rb
+- lib/fog/openstack/compute/requests/update_metadata.rb
+- lib/fog/openstack/compute/requests/update_quota.rb
+- lib/fog/openstack/compute/requests/update_server.rb
+- lib/fog/openstack/container_infra.rb
+- lib/fog/openstack/container_infra/models/base.rb
+- lib/fog/openstack/container_infra/models/bay.rb
+- lib/fog/openstack/container_infra/models/bay_model.rb
+- lib/fog/openstack/container_infra/models/bay_models.rb
+- lib/fog/openstack/container_infra/models/bays.rb
+- lib/fog/openstack/container_infra/models/certificate.rb
+- lib/fog/openstack/container_infra/models/certificates.rb
+- lib/fog/openstack/container_infra/models/cluster.rb
+- lib/fog/openstack/container_infra/models/cluster_template.rb
+- lib/fog/openstack/container_infra/models/cluster_templates.rb
+- lib/fog/openstack/container_infra/models/clusters.rb
+- lib/fog/openstack/container_infra/requests/create_bay.rb
+- lib/fog/openstack/container_infra/requests/create_bay_model.rb
+- lib/fog/openstack/container_infra/requests/create_certificate.rb
+- lib/fog/openstack/container_infra/requests/create_cluster.rb
+- lib/fog/openstack/container_infra/requests/create_cluster_template.rb
+- lib/fog/openstack/container_infra/requests/delete_bay.rb
+- lib/fog/openstack/container_infra/requests/delete_bay_model.rb
+- lib/fog/openstack/container_infra/requests/delete_cluster.rb
+- lib/fog/openstack/container_infra/requests/delete_cluster_template.rb
+- lib/fog/openstack/container_infra/requests/get_bay.rb
+- lib/fog/openstack/container_infra/requests/get_bay_model.rb
+- lib/fog/openstack/container_infra/requests/get_certificate.rb
+- lib/fog/openstack/container_infra/requests/get_cluster.rb
+- lib/fog/openstack/container_infra/requests/get_cluster_template.rb
+- lib/fog/openstack/container_infra/requests/list_bay_models.rb
+- lib/fog/openstack/container_infra/requests/list_bays.rb
+- lib/fog/openstack/container_infra/requests/list_cluster_templates.rb
+- lib/fog/openstack/container_infra/requests/list_clusters.rb
+- lib/fog/openstack/container_infra/requests/update_bay.rb
+- lib/fog/openstack/container_infra/requests/update_bay_model.rb
+- lib/fog/openstack/container_infra/requests/update_cluster.rb
+- lib/fog/openstack/container_infra/requests/update_cluster_template.rb
+- lib/fog/openstack/core.rb
+- lib/fog/openstack/dns.rb
+- lib/fog/openstack/dns/v1.rb
+- lib/fog/openstack/dns/v1/requests/get_quota.rb
+- lib/fog/openstack/dns/v1/requests/list_domains.rb
+- lib/fog/openstack/dns/v1/requests/update_quota.rb
+- lib/fog/openstack/dns/v2.rb
+- lib/fog/openstack/dns/v2/models/pool.rb
+- lib/fog/openstack/dns/v2/models/pools.rb
+- lib/fog/openstack/dns/v2/models/recordset.rb
+- lib/fog/openstack/dns/v2/models/recordsets.rb
+- lib/fog/openstack/dns/v2/models/zone.rb
+- lib/fog/openstack/dns/v2/models/zone_transfer_accept.rb
+- lib/fog/openstack/dns/v2/models/zone_transfer_accepts.rb
+- lib/fog/openstack/dns/v2/models/zone_transfer_request.rb
+- lib/fog/openstack/dns/v2/models/zone_transfer_requests.rb
+- lib/fog/openstack/dns/v2/models/zones.rb
+- lib/fog/openstack/dns/v2/requests/create_recordset.rb
+- lib/fog/openstack/dns/v2/requests/create_zone.rb
+- lib/fog/openstack/dns/v2/requests/create_zone_transfer_accept.rb
+- lib/fog/openstack/dns/v2/requests/create_zone_transfer_request.rb
+- lib/fog/openstack/dns/v2/requests/delete_recordset.rb
+- lib/fog/openstack/dns/v2/requests/delete_zone.rb
+- lib/fog/openstack/dns/v2/requests/delete_zone_transfer_request.rb
+- lib/fog/openstack/dns/v2/requests/get_pool.rb
+- lib/fog/openstack/dns/v2/requests/get_quota.rb
+- lib/fog/openstack/dns/v2/requests/get_recordset.rb
+- lib/fog/openstack/dns/v2/requests/get_zone.rb
+- lib/fog/openstack/dns/v2/requests/get_zone_transfer_accept.rb
+- lib/fog/openstack/dns/v2/requests/get_zone_transfer_request.rb
+- lib/fog/openstack/dns/v2/requests/list_pools.rb
+- lib/fog/openstack/dns/v2/requests/list_recordsets.rb
+- lib/fog/openstack/dns/v2/requests/list_zone_transfer_accepts.rb
+- lib/fog/openstack/dns/v2/requests/list_zone_transfer_requests.rb
+- lib/fog/openstack/dns/v2/requests/list_zones.rb
+- lib/fog/openstack/dns/v2/requests/update_quota.rb
+- lib/fog/openstack/dns/v2/requests/update_recordset.rb
+- lib/fog/openstack/dns/v2/requests/update_zone.rb
+- lib/fog/openstack/dns/v2/requests/update_zone_transfer_request.rb
+- lib/fog/openstack/errors.rb
+- lib/fog/openstack/event.rb
+- lib/fog/openstack/event/models/event.rb
+- lib/fog/openstack/event/models/events.rb
+- lib/fog/openstack/event/requests/get_event.rb
+- lib/fog/openstack/event/requests/list_events.rb
+- lib/fog/openstack/identity.rb
+- lib/fog/openstack/identity/v2.rb
+- lib/fog/openstack/identity/v2/models/ec2_credential.rb
+- lib/fog/openstack/identity/v2/models/ec2_credentials.rb
+- lib/fog/openstack/identity/v2/models/role.rb
+- lib/fog/openstack/identity/v2/models/roles.rb
+- lib/fog/openstack/identity/v2/models/tenant.rb
+- lib/fog/openstack/identity/v2/models/tenants.rb
+- lib/fog/openstack/identity/v2/models/user.rb
+- lib/fog/openstack/identity/v2/models/users.rb
+- lib/fog/openstack/identity/v2/requests/add_user_to_tenant.rb
+- lib/fog/openstack/identity/v2/requests/check_token.rb
+- lib/fog/openstack/identity/v2/requests/create_ec2_credential.rb
+- lib/fog/openstack/identity/v2/requests/create_role.rb
+- lib/fog/openstack/identity/v2/requests/create_tenant.rb
+- lib/fog/openstack/identity/v2/requests/create_user.rb
+- lib/fog/openstack/identity/v2/requests/create_user_role.rb
+- lib/fog/openstack/identity/v2/requests/delete_ec2_credential.rb
+- lib/fog/openstack/identity/v2/requests/delete_role.rb
+- lib/fog/openstack/identity/v2/requests/delete_tenant.rb
+- lib/fog/openstack/identity/v2/requests/delete_user.rb
+- lib/fog/openstack/identity/v2/requests/delete_user_role.rb
+- lib/fog/openstack/identity/v2/requests/get_ec2_credential.rb
+- lib/fog/openstack/identity/v2/requests/get_role.rb
+- lib/fog/openstack/identity/v2/requests/get_tenant.rb
+- lib/fog/openstack/identity/v2/requests/get_tenants_by_id.rb
+- lib/fog/openstack/identity/v2/requests/get_tenants_by_name.rb
+- lib/fog/openstack/identity/v2/requests/get_user_by_id.rb
+- lib/fog/openstack/identity/v2/requests/get_user_by_name.rb
+- lib/fog/openstack/identity/v2/requests/list_ec2_credentials.rb
+- lib/fog/openstack/identity/v2/requests/list_endpoints_for_token.rb
+- lib/fog/openstack/identity/v2/requests/list_roles.rb
+- lib/fog/openstack/identity/v2/requests/list_roles_for_user_on_tenant.rb
+- lib/fog/openstack/identity/v2/requests/list_tenants.rb
+- lib/fog/openstack/identity/v2/requests/list_user_global_roles.rb
+- lib/fog/openstack/identity/v2/requests/list_users.rb
+- lib/fog/openstack/identity/v2/requests/remove_user_from_tenant.rb
+- lib/fog/openstack/identity/v2/requests/set_tenant.rb
+- lib/fog/openstack/identity/v2/requests/update_tenant.rb
+- lib/fog/openstack/identity/v2/requests/update_user.rb
+- lib/fog/openstack/identity/v2/requests/validate_token.rb
+- lib/fog/openstack/identity/v3.rb
+- lib/fog/openstack/identity/v3/models/domain.rb
+- lib/fog/openstack/identity/v3/models/domains.rb
+- lib/fog/openstack/identity/v3/models/endpoint.rb
+- lib/fog/openstack/identity/v3/models/endpoints.rb
+- lib/fog/openstack/identity/v3/models/group.rb
+- lib/fog/openstack/identity/v3/models/groups.rb
+- lib/fog/openstack/identity/v3/models/os_credential.rb
+- lib/fog/openstack/identity/v3/models/os_credentials.rb
+- lib/fog/openstack/identity/v3/models/policies.rb
+- lib/fog/openstack/identity/v3/models/policy.rb
+- lib/fog/openstack/identity/v3/models/project.rb
+- lib/fog/openstack/identity/v3/models/projects.rb
+- lib/fog/openstack/identity/v3/models/role.rb
+- lib/fog/openstack/identity/v3/models/role_assignment.rb
+- lib/fog/openstack/identity/v3/models/role_assignments.rb
+- lib/fog/openstack/identity/v3/models/roles.rb
+- lib/fog/openstack/identity/v3/models/service.rb
+- lib/fog/openstack/identity/v3/models/services.rb
+- lib/fog/openstack/identity/v3/models/token.rb
+- lib/fog/openstack/identity/v3/models/tokens.rb
+- lib/fog/openstack/identity/v3/models/user.rb
+- lib/fog/openstack/identity/v3/models/users.rb
+- lib/fog/openstack/identity/v3/requests/add_user_to_group.rb
+- lib/fog/openstack/identity/v3/requests/auth_domains.rb
+- lib/fog/openstack/identity/v3/requests/auth_projects.rb
+- lib/fog/openstack/identity/v3/requests/check_domain_group_role.rb
+- lib/fog/openstack/identity/v3/requests/check_domain_user_role.rb
+- lib/fog/openstack/identity/v3/requests/check_project_group_role.rb
+- lib/fog/openstack/identity/v3/requests/check_project_user_role.rb
+- lib/fog/openstack/identity/v3/requests/create_domain.rb
+- lib/fog/openstack/identity/v3/requests/create_endpoint.rb
+- lib/fog/openstack/identity/v3/requests/create_group.rb
+- lib/fog/openstack/identity/v3/requests/create_os_credential.rb
+- lib/fog/openstack/identity/v3/requests/create_policy.rb
+- lib/fog/openstack/identity/v3/requests/create_project.rb
+- lib/fog/openstack/identity/v3/requests/create_role.rb
+- lib/fog/openstack/identity/v3/requests/create_service.rb
+- lib/fog/openstack/identity/v3/requests/create_user.rb
+- lib/fog/openstack/identity/v3/requests/delete_domain.rb
+- lib/fog/openstack/identity/v3/requests/delete_endpoint.rb
+- lib/fog/openstack/identity/v3/requests/delete_group.rb
+- lib/fog/openstack/identity/v3/requests/delete_os_credential.rb
+- lib/fog/openstack/identity/v3/requests/delete_policy.rb
+- lib/fog/openstack/identity/v3/requests/delete_project.rb
+- lib/fog/openstack/identity/v3/requests/delete_role.rb
+- lib/fog/openstack/identity/v3/requests/delete_service.rb
+- lib/fog/openstack/identity/v3/requests/delete_user.rb
+- lib/fog/openstack/identity/v3/requests/get_domain.rb
+- lib/fog/openstack/identity/v3/requests/get_endpoint.rb
+- lib/fog/openstack/identity/v3/requests/get_group.rb
+- lib/fog/openstack/identity/v3/requests/get_os_credential.rb
+- lib/fog/openstack/identity/v3/requests/get_policy.rb
+- lib/fog/openstack/identity/v3/requests/get_project.rb
+- lib/fog/openstack/identity/v3/requests/get_role.rb
+- lib/fog/openstack/identity/v3/requests/get_service.rb
+- lib/fog/openstack/identity/v3/requests/get_user.rb
+- lib/fog/openstack/identity/v3/requests/grant_domain_group_role.rb
+- lib/fog/openstack/identity/v3/requests/grant_domain_user_role.rb
+- lib/fog/openstack/identity/v3/requests/grant_project_group_role.rb
+- lib/fog/openstack/identity/v3/requests/grant_project_user_role.rb
+- lib/fog/openstack/identity/v3/requests/group_user_check.rb
+- lib/fog/openstack/identity/v3/requests/list_domain_group_roles.rb
+- lib/fog/openstack/identity/v3/requests/list_domain_user_roles.rb
+- lib/fog/openstack/identity/v3/requests/list_domains.rb
+- lib/fog/openstack/identity/v3/requests/list_endpoints.rb
+- lib/fog/openstack/identity/v3/requests/list_group_users.rb
+- lib/fog/openstack/identity/v3/requests/list_groups.rb
+- lib/fog/openstack/identity/v3/requests/list_os_credentials.rb
+- lib/fog/openstack/identity/v3/requests/list_policies.rb
+- lib/fog/openstack/identity/v3/requests/list_project_group_roles.rb
+- lib/fog/openstack/identity/v3/requests/list_project_user_roles.rb
+- lib/fog/openstack/identity/v3/requests/list_projects.rb
+- lib/fog/openstack/identity/v3/requests/list_role_assignments.rb
+- lib/fog/openstack/identity/v3/requests/list_roles.rb
+- lib/fog/openstack/identity/v3/requests/list_services.rb
+- lib/fog/openstack/identity/v3/requests/list_user_groups.rb
+- lib/fog/openstack/identity/v3/requests/list_user_projects.rb
+- lib/fog/openstack/identity/v3/requests/list_users.rb
+- lib/fog/openstack/identity/v3/requests/remove_user_from_group.rb
+- lib/fog/openstack/identity/v3/requests/revoke_domain_group_role.rb
+- lib/fog/openstack/identity/v3/requests/revoke_domain_user_role.rb
+- lib/fog/openstack/identity/v3/requests/revoke_project_group_role.rb
+- lib/fog/openstack/identity/v3/requests/revoke_project_user_role.rb
+- lib/fog/openstack/identity/v3/requests/token_authenticate.rb
+- lib/fog/openstack/identity/v3/requests/token_check.rb
+- lib/fog/openstack/identity/v3/requests/token_revoke.rb
+- lib/fog/openstack/identity/v3/requests/token_validate.rb
+- lib/fog/openstack/identity/v3/requests/update_domain.rb
+- lib/fog/openstack/identity/v3/requests/update_endpoint.rb
+- lib/fog/openstack/identity/v3/requests/update_group.rb
+- lib/fog/openstack/identity/v3/requests/update_os_credential.rb
+- lib/fog/openstack/identity/v3/requests/update_policy.rb
+- lib/fog/openstack/identity/v3/requests/update_project.rb
+- lib/fog/openstack/identity/v3/requests/update_role.rb
+- lib/fog/openstack/identity/v3/requests/update_service.rb
+- lib/fog/openstack/identity/v3/requests/update_user.rb
+- lib/fog/openstack/image.rb
+- lib/fog/openstack/image/v1.rb
+- lib/fog/openstack/image/v1/models/image.rb
+- lib/fog/openstack/image/v1/models/images.rb
+- lib/fog/openstack/image/v1/requests/add_member_to_image.rb
+- lib/fog/openstack/image/v1/requests/create_image.rb
+- lib/fog/openstack/image/v1/requests/delete_image.rb
+- lib/fog/openstack/image/v1/requests/get_image.rb
+- lib/fog/openstack/image/v1/requests/get_image_by_id.rb
+- lib/fog/openstack/image/v1/requests/get_image_members.rb
+- lib/fog/openstack/image/v1/requests/get_shared_images.rb
+- lib/fog/openstack/image/v1/requests/list_public_images.rb
+- lib/fog/openstack/image/v1/requests/list_public_images_detailed.rb
+- lib/fog/openstack/image/v1/requests/remove_member_from_image.rb
+- lib/fog/openstack/image/v1/requests/set_tenant.rb
+- lib/fog/openstack/image/v1/requests/update_image.rb
+- lib/fog/openstack/image/v1/requests/update_image_members.rb
+- lib/fog/openstack/image/v2.rb
+- lib/fog/openstack/image/v2/models/image.rb
+- lib/fog/openstack/image/v2/models/images.rb
+- lib/fog/openstack/image/v2/requests/add_member_to_image.rb
+- lib/fog/openstack/image/v2/requests/add_tag_to_image.rb
+- lib/fog/openstack/image/v2/requests/create_image.rb
+- lib/fog/openstack/image/v2/requests/deactivate_image.rb
+- lib/fog/openstack/image/v2/requests/delete_image.rb
+- lib/fog/openstack/image/v2/requests/download_image.rb
+- lib/fog/openstack/image/v2/requests/get_image.rb
+- lib/fog/openstack/image/v2/requests/get_image_by_id.rb
+- lib/fog/openstack/image/v2/requests/get_image_members.rb
+- lib/fog/openstack/image/v2/requests/get_member_details.rb
+- lib/fog/openstack/image/v2/requests/get_shared_images.rb
+- lib/fog/openstack/image/v2/requests/list_images.rb
+- lib/fog/openstack/image/v2/requests/reactivate_image.rb
+- lib/fog/openstack/image/v2/requests/remove_member_from_image.rb
+- lib/fog/openstack/image/v2/requests/remove_tag_from_image.rb
+- lib/fog/openstack/image/v2/requests/set_tenant.rb
+- lib/fog/openstack/image/v2/requests/update_image.rb
+- lib/fog/openstack/image/v2/requests/update_image_member.rb
+- lib/fog/openstack/image/v2/requests/upload_image.rb
+- lib/fog/openstack/introspection.rb
+- lib/fog/openstack/introspection/models/rules.rb
+- lib/fog/openstack/introspection/models/rules_collection.rb
+- lib/fog/openstack/introspection/requests/abort_introspection.rb
+- lib/fog/openstack/introspection/requests/create_introspection.rb
+- lib/fog/openstack/introspection/requests/create_rules.rb
+- lib/fog/openstack/introspection/requests/delete_rules.rb
+- lib/fog/openstack/introspection/requests/delete_rules_all.rb
+- lib/fog/openstack/introspection/requests/get_introspection.rb
+- lib/fog/openstack/introspection/requests/get_introspection_details.rb
+- lib/fog/openstack/introspection/requests/get_rules.rb
+- lib/fog/openstack/introspection/requests/list_rules.rb
+- lib/fog/openstack/key_manager.rb
+- lib/fog/openstack/key_manager/models/acl.rb
+- lib/fog/openstack/key_manager/models/container.rb
+- lib/fog/openstack/key_manager/models/containers.rb
+- lib/fog/openstack/key_manager/models/secret.rb
+- lib/fog/openstack/key_manager/models/secrets.rb
+- lib/fog/openstack/key_manager/requests/create_container.rb
+- lib/fog/openstack/key_manager/requests/create_secret.rb
+- lib/fog/openstack/key_manager/requests/delete_container.rb
+- lib/fog/openstack/key_manager/requests/delete_container_acl.rb
+- lib/fog/openstack/key_manager/requests/delete_secret.rb
+- lib/fog/openstack/key_manager/requests/delete_secret_acl.rb
+- lib/fog/openstack/key_manager/requests/get_container.rb
+- lib/fog/openstack/key_manager/requests/get_container_acl.rb
+- lib/fog/openstack/key_manager/requests/get_secret.rb
+- lib/fog/openstack/key_manager/requests/get_secret_acl.rb
+- lib/fog/openstack/key_manager/requests/get_secret_metadata.rb
+- lib/fog/openstack/key_manager/requests/get_secret_payload.rb
+- lib/fog/openstack/key_manager/requests/list_containers.rb
+- lib/fog/openstack/key_manager/requests/list_secrets.rb
+- lib/fog/openstack/key_manager/requests/replace_container_acl.rb
+- lib/fog/openstack/key_manager/requests/replace_secret_acl.rb
+- lib/fog/openstack/key_manager/requests/update_container_acl.rb
+- lib/fog/openstack/key_manager/requests/update_secret_acl.rb
+- lib/fog/openstack/metering.rb
+- lib/fog/openstack/metering/models/event.rb
+- lib/fog/openstack/metering/models/events.rb
+- lib/fog/openstack/metering/models/meter.rb
+- lib/fog/openstack/metering/models/meters.rb
+- lib/fog/openstack/metering/models/resource.rb
+- lib/fog/openstack/metering/models/resources.rb
+- lib/fog/openstack/metering/requests/get_event.rb
+- lib/fog/openstack/metering/requests/get_resource.rb
+- lib/fog/openstack/metering/requests/get_samples.rb
+- lib/fog/openstack/metering/requests/get_statistics.rb
+- lib/fog/openstack/metering/requests/list_events.rb
+- lib/fog/openstack/metering/requests/list_meters.rb
+- lib/fog/openstack/metering/requests/list_resources.rb
+- lib/fog/openstack/metric.rb
+- lib/fog/openstack/metric/models/metric.rb
+- lib/fog/openstack/metric/models/metrics.rb
+- lib/fog/openstack/metric/models/resource.rb
+- lib/fog/openstack/metric/models/resources.rb
+- lib/fog/openstack/metric/requests/get_metric.rb
+- lib/fog/openstack/metric/requests/get_metric_measures.rb
+- lib/fog/openstack/metric/requests/get_resource.rb
+- lib/fog/openstack/metric/requests/get_resource_metric_measures.rb
+- lib/fog/openstack/metric/requests/list_metrics.rb
+- lib/fog/openstack/metric/requests/list_resources.rb
+- lib/fog/openstack/models/collection.rb
+- lib/fog/openstack/models/meta_parent.rb
+- lib/fog/openstack/models/model.rb
+- lib/fog/openstack/monitoring.rb
+- lib/fog/openstack/monitoring/models/alarm.rb
+- lib/fog/openstack/monitoring/models/alarm_count.rb
+- lib/fog/openstack/monitoring/models/alarm_counts.rb
+- lib/fog/openstack/monitoring/models/alarm_definition.rb
+- lib/fog/openstack/monitoring/models/alarm_definitions.rb
+- lib/fog/openstack/monitoring/models/alarm_state.rb
+- lib/fog/openstack/monitoring/models/alarm_states.rb
+- lib/fog/openstack/monitoring/models/alarms.rb
+- lib/fog/openstack/monitoring/models/dimension_value.rb
+- lib/fog/openstack/monitoring/models/dimension_values.rb
+- lib/fog/openstack/monitoring/models/measurement.rb
+- lib/fog/openstack/monitoring/models/measurements.rb
+- lib/fog/openstack/monitoring/models/metric.rb
+- lib/fog/openstack/monitoring/models/metrics.rb
+- lib/fog/openstack/monitoring/models/notification_method.rb
+- lib/fog/openstack/monitoring/models/notification_methods.rb
+- lib/fog/openstack/monitoring/models/statistic.rb
+- lib/fog/openstack/monitoring/models/statistics.rb
+- lib/fog/openstack/monitoring/requests/create_alarm_definition.rb
+- lib/fog/openstack/monitoring/requests/create_metric.rb
+- lib/fog/openstack/monitoring/requests/create_metric_array.rb
+- lib/fog/openstack/monitoring/requests/create_notification_method.rb
+- lib/fog/openstack/monitoring/requests/delete_alarm.rb
+- lib/fog/openstack/monitoring/requests/delete_alarm_definition.rb
+- lib/fog/openstack/monitoring/requests/delete_notification_method.rb
+- lib/fog/openstack/monitoring/requests/find_measurements.rb
+- lib/fog/openstack/monitoring/requests/get_alarm.rb
+- lib/fog/openstack/monitoring/requests/get_alarm_counts.rb
+- lib/fog/openstack/monitoring/requests/get_alarm_definition.rb
+- lib/fog/openstack/monitoring/requests/get_notification_method.rb
+- lib/fog/openstack/monitoring/requests/list_alarm_definitions.rb
+- lib/fog/openstack/monitoring/requests/list_alarm_state_history_for_all_alarms.rb
+- lib/fog/openstack/monitoring/requests/list_alarm_state_history_for_specific_alarm.rb
+- lib/fog/openstack/monitoring/requests/list_alarms.rb
+- lib/fog/openstack/monitoring/requests/list_dimension_values.rb
+- lib/fog/openstack/monitoring/requests/list_metric_names.rb
+- lib/fog/openstack/monitoring/requests/list_metrics.rb
+- lib/fog/openstack/monitoring/requests/list_notification_method_types.rb
+- lib/fog/openstack/monitoring/requests/list_notification_methods.rb
+- lib/fog/openstack/monitoring/requests/list_statistics.rb
+- lib/fog/openstack/monitoring/requests/patch_alarm.rb
+- lib/fog/openstack/monitoring/requests/patch_alarm_definition.rb
+- lib/fog/openstack/monitoring/requests/patch_notification_method.rb
+- lib/fog/openstack/monitoring/requests/put_notification_method.rb
+- lib/fog/openstack/monitoring/requests/update_alarm.rb
+- lib/fog/openstack/monitoring/requests/update_alarm_definition.rb
+- lib/fog/openstack/network.rb
+- lib/fog/openstack/network/models/extension.rb
+- lib/fog/openstack/network/models/extensions.rb
+- lib/fog/openstack/network/models/floating_ip.rb
+- lib/fog/openstack/network/models/floating_ips.rb
+- lib/fog/openstack/network/models/ike_policies.rb
+- lib/fog/openstack/network/models/ike_policy.rb
+- lib/fog/openstack/network/models/ipsec_policies.rb
+- lib/fog/openstack/network/models/ipsec_policy.rb
+- lib/fog/openstack/network/models/ipsec_site_connection.rb
+- lib/fog/openstack/network/models/ipsec_site_connections.rb
+- lib/fog/openstack/network/models/lb_health_monitor.rb
+- lib/fog/openstack/network/models/lb_health_monitors.rb
+- lib/fog/openstack/network/models/lb_member.rb
+- lib/fog/openstack/network/models/lb_members.rb
+- lib/fog/openstack/network/models/lb_pool.rb
+- lib/fog/openstack/network/models/lb_pools.rb
+- lib/fog/openstack/network/models/lb_vip.rb
+- lib/fog/openstack/network/models/lb_vips.rb
+- lib/fog/openstack/network/models/network.rb
+- lib/fog/openstack/network/models/network_ip_availabilities.rb
+- lib/fog/openstack/network/models/network_ip_availability.rb
+- lib/fog/openstack/network/models/networks.rb
+- lib/fog/openstack/network/models/port.rb
+- lib/fog/openstack/network/models/ports.rb
+- lib/fog/openstack/network/models/rbac_policies.rb
+- lib/fog/openstack/network/models/rbac_policy.rb
+- lib/fog/openstack/network/models/router.rb
+- lib/fog/openstack/network/models/routers.rb
+- lib/fog/openstack/network/models/security_group.rb
+- lib/fog/openstack/network/models/security_group_rule.rb
+- lib/fog/openstack/network/models/security_group_rules.rb
+- lib/fog/openstack/network/models/security_groups.rb
+- lib/fog/openstack/network/models/subnet.rb
+- lib/fog/openstack/network/models/subnet_pool.rb
+- lib/fog/openstack/network/models/subnet_pools.rb
+- lib/fog/openstack/network/models/subnets.rb
+- lib/fog/openstack/network/models/vpn_service.rb
+- lib/fog/openstack/network/models/vpn_services.rb
+- lib/fog/openstack/network/requests/add_router_interface.rb
+- lib/fog/openstack/network/requests/associate_floating_ip.rb
+- lib/fog/openstack/network/requests/associate_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/create_floating_ip.rb
+- lib/fog/openstack/network/requests/create_ike_policy.rb
+- lib/fog/openstack/network/requests/create_ipsec_policy.rb
+- lib/fog/openstack/network/requests/create_ipsec_site_connection.rb
+- lib/fog/openstack/network/requests/create_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/create_lb_member.rb
+- lib/fog/openstack/network/requests/create_lb_pool.rb
+- lib/fog/openstack/network/requests/create_lb_vip.rb
+- lib/fog/openstack/network/requests/create_lbaas_healthmonitor.rb
+- lib/fog/openstack/network/requests/create_lbaas_l7policy.rb
+- lib/fog/openstack/network/requests/create_lbaas_l7rule.rb
+- lib/fog/openstack/network/requests/create_lbaas_listener.rb
+- lib/fog/openstack/network/requests/create_lbaas_loadbalancer.rb
+- lib/fog/openstack/network/requests/create_lbaas_pool.rb
+- lib/fog/openstack/network/requests/create_lbaas_pool_member.rb
+- lib/fog/openstack/network/requests/create_network.rb
+- lib/fog/openstack/network/requests/create_port.rb
+- lib/fog/openstack/network/requests/create_rbac_policy.rb
+- lib/fog/openstack/network/requests/create_router.rb
+- lib/fog/openstack/network/requests/create_security_group.rb
+- lib/fog/openstack/network/requests/create_security_group_rule.rb
+- lib/fog/openstack/network/requests/create_subnet.rb
+- lib/fog/openstack/network/requests/create_subnet_pool.rb
+- lib/fog/openstack/network/requests/create_vpn_service.rb
+- lib/fog/openstack/network/requests/delete_floating_ip.rb
+- lib/fog/openstack/network/requests/delete_ike_policy.rb
+- lib/fog/openstack/network/requests/delete_ipsec_policy.rb
+- lib/fog/openstack/network/requests/delete_ipsec_site_connection.rb
+- lib/fog/openstack/network/requests/delete_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/delete_lb_member.rb
+- lib/fog/openstack/network/requests/delete_lb_pool.rb
+- lib/fog/openstack/network/requests/delete_lb_vip.rb
+- lib/fog/openstack/network/requests/delete_lbaas_healthmonitor.rb
+- lib/fog/openstack/network/requests/delete_lbaas_l7policy.rb
+- lib/fog/openstack/network/requests/delete_lbaas_l7rule.rb
+- lib/fog/openstack/network/requests/delete_lbaas_listener.rb
+- lib/fog/openstack/network/requests/delete_lbaas_loadbalancer.rb
+- lib/fog/openstack/network/requests/delete_lbaas_pool.rb
+- lib/fog/openstack/network/requests/delete_lbaas_pool_member.rb
+- lib/fog/openstack/network/requests/delete_network.rb
+- lib/fog/openstack/network/requests/delete_port.rb
+- lib/fog/openstack/network/requests/delete_quota.rb
+- lib/fog/openstack/network/requests/delete_rbac_policy.rb
+- lib/fog/openstack/network/requests/delete_router.rb
+- lib/fog/openstack/network/requests/delete_security_group.rb
+- lib/fog/openstack/network/requests/delete_security_group_rule.rb
+- lib/fog/openstack/network/requests/delete_subnet.rb
+- lib/fog/openstack/network/requests/delete_subnet_pool.rb
+- lib/fog/openstack/network/requests/delete_vpn_service.rb
+- lib/fog/openstack/network/requests/disassociate_floating_ip.rb
+- lib/fog/openstack/network/requests/disassociate_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/get_extension.rb
+- lib/fog/openstack/network/requests/get_floating_ip.rb
+- lib/fog/openstack/network/requests/get_ike_policy.rb
+- lib/fog/openstack/network/requests/get_ipsec_policy.rb
+- lib/fog/openstack/network/requests/get_ipsec_site_connection.rb
+- lib/fog/openstack/network/requests/get_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/get_lb_member.rb
+- lib/fog/openstack/network/requests/get_lb_pool.rb
+- lib/fog/openstack/network/requests/get_lb_pool_stats.rb
+- lib/fog/openstack/network/requests/get_lb_vip.rb
+- lib/fog/openstack/network/requests/get_lbaas_healthmonitor.rb
+- lib/fog/openstack/network/requests/get_lbaas_l7policy.rb
+- lib/fog/openstack/network/requests/get_lbaas_l7rule.rb
+- lib/fog/openstack/network/requests/get_lbaas_listener.rb
+- lib/fog/openstack/network/requests/get_lbaas_loadbalancer.rb
+- lib/fog/openstack/network/requests/get_lbaas_pool.rb
+- lib/fog/openstack/network/requests/get_lbaas_pool_member.rb
+- lib/fog/openstack/network/requests/get_network.rb
+- lib/fog/openstack/network/requests/get_network_ip_availability.rb
+- lib/fog/openstack/network/requests/get_port.rb
+- lib/fog/openstack/network/requests/get_quota.rb
+- lib/fog/openstack/network/requests/get_quotas.rb
+- lib/fog/openstack/network/requests/get_rbac_policy.rb
+- lib/fog/openstack/network/requests/get_router.rb
+- lib/fog/openstack/network/requests/get_security_group.rb
+- lib/fog/openstack/network/requests/get_security_group_rule.rb
+- lib/fog/openstack/network/requests/get_subnet.rb
+- lib/fog/openstack/network/requests/get_subnet_pool.rb
+- lib/fog/openstack/network/requests/get_vpn_service.rb
+- lib/fog/openstack/network/requests/list_extensions.rb
+- lib/fog/openstack/network/requests/list_floating_ips.rb
+- lib/fog/openstack/network/requests/list_ike_policies.rb
+- lib/fog/openstack/network/requests/list_ipsec_policies.rb
+- lib/fog/openstack/network/requests/list_ipsec_site_connections.rb
+- lib/fog/openstack/network/requests/list_lb_health_monitors.rb
+- lib/fog/openstack/network/requests/list_lb_members.rb
+- lib/fog/openstack/network/requests/list_lb_pools.rb
+- lib/fog/openstack/network/requests/list_lb_vips.rb
+- lib/fog/openstack/network/requests/list_lbaas_healthmonitors.rb
+- lib/fog/openstack/network/requests/list_lbaas_l7policies.rb
+- lib/fog/openstack/network/requests/list_lbaas_l7rules.rb
+- lib/fog/openstack/network/requests/list_lbaas_listeners.rb
+- lib/fog/openstack/network/requests/list_lbaas_loadbalancers.rb
+- lib/fog/openstack/network/requests/list_lbaas_pool_members.rb
+- lib/fog/openstack/network/requests/list_lbaas_pools.rb
+- lib/fog/openstack/network/requests/list_network_ip_availabilities.rb
+- lib/fog/openstack/network/requests/list_networks.rb
+- lib/fog/openstack/network/requests/list_ports.rb
+- lib/fog/openstack/network/requests/list_rbac_policies.rb
+- lib/fog/openstack/network/requests/list_routers.rb
+- lib/fog/openstack/network/requests/list_security_group_rules.rb
+- lib/fog/openstack/network/requests/list_security_groups.rb
+- lib/fog/openstack/network/requests/list_subnet_pools.rb
+- lib/fog/openstack/network/requests/list_subnets.rb
+- lib/fog/openstack/network/requests/list_vpn_services.rb
+- lib/fog/openstack/network/requests/remove_router_interface.rb
+- lib/fog/openstack/network/requests/set_tenant.rb
+- lib/fog/openstack/network/requests/update_ike_policy.rb
+- lib/fog/openstack/network/requests/update_ipsec_policy.rb
+- lib/fog/openstack/network/requests/update_ipsec_site_connection.rb
+- lib/fog/openstack/network/requests/update_lb_health_monitor.rb
+- lib/fog/openstack/network/requests/update_lb_member.rb
+- lib/fog/openstack/network/requests/update_lb_pool.rb
+- lib/fog/openstack/network/requests/update_lb_vip.rb
+- lib/fog/openstack/network/requests/update_lbaas_healthmonitor.rb
+- lib/fog/openstack/network/requests/update_lbaas_l7policy.rb
+- lib/fog/openstack/network/requests/update_lbaas_l7rule.rb
+- lib/fog/openstack/network/requests/update_lbaas_listener.rb
+- lib/fog/openstack/network/requests/update_lbaas_loadbalancer.rb
+- lib/fog/openstack/network/requests/update_lbaas_pool.rb
+- lib/fog/openstack/network/requests/update_lbaas_pool_member.rb
+- lib/fog/openstack/network/requests/update_network.rb
+- lib/fog/openstack/network/requests/update_port.rb
+- lib/fog/openstack/network/requests/update_quota.rb
+- lib/fog/openstack/network/requests/update_rbac_policy.rb
+- lib/fog/openstack/network/requests/update_router.rb
+- lib/fog/openstack/network/requests/update_security_group.rb
+- lib/fog/openstack/network/requests/update_subnet.rb
+- lib/fog/openstack/network/requests/update_subnet_pool.rb
+- lib/fog/openstack/network/requests/update_vpn_service.rb
+- lib/fog/openstack/nfv.rb
+- lib/fog/openstack/nfv/models/vnf.rb
+- lib/fog/openstack/nfv/models/vnfd.rb
+- lib/fog/openstack/nfv/models/vnfds.rb
+- lib/fog/openstack/nfv/models/vnfs.rb
+- lib/fog/openstack/nfv/requests/create_vnf.rb
+- lib/fog/openstack/nfv/requests/create_vnfd.rb
+- lib/fog/openstack/nfv/requests/delete_vnf.rb
+- lib/fog/openstack/nfv/requests/delete_vnfd.rb
+- lib/fog/openstack/nfv/requests/get_vnf.rb
+- lib/fog/openstack/nfv/requests/get_vnfd.rb
+- lib/fog/openstack/nfv/requests/list_vnfds.rb
+- lib/fog/openstack/nfv/requests/list_vnfs.rb
+- lib/fog/openstack/nfv/requests/update_vnf.rb
+- lib/fog/openstack/orchestration.rb
+- lib/fog/openstack/orchestration/models/event.rb
+- lib/fog/openstack/orchestration/models/events.rb
+- lib/fog/openstack/orchestration/models/resource.rb
+- lib/fog/openstack/orchestration/models/resource_schemas.rb
+- lib/fog/openstack/orchestration/models/resources.rb
+- lib/fog/openstack/orchestration/models/stack.rb
+- lib/fog/openstack/orchestration/models/stacks.rb
+- lib/fog/openstack/orchestration/models/template.rb
+- lib/fog/openstack/orchestration/models/templates.rb
+- lib/fog/openstack/orchestration/requests/abandon_stack.rb
+- lib/fog/openstack/orchestration/requests/build_info.rb
+- lib/fog/openstack/orchestration/requests/cancel_update.rb
+- lib/fog/openstack/orchestration/requests/create_stack.rb
+- lib/fog/openstack/orchestration/requests/delete_stack.rb
+- lib/fog/openstack/orchestration/requests/get_stack_template.rb
+- lib/fog/openstack/orchestration/requests/list_events.rb
+- lib/fog/openstack/orchestration/requests/list_resource_events.rb
+- lib/fog/openstack/orchestration/requests/list_resource_types.rb
+- lib/fog/openstack/orchestration/requests/list_resources.rb
+- lib/fog/openstack/orchestration/requests/list_stack_data.rb
+- lib/fog/openstack/orchestration/requests/list_stack_data_detailed.rb
+- lib/fog/openstack/orchestration/requests/list_stack_events.rb
+- lib/fog/openstack/orchestration/requests/patch_stack.rb
+- lib/fog/openstack/orchestration/requests/preview_stack.rb
+- lib/fog/openstack/orchestration/requests/show_event_details.rb
+- lib/fog/openstack/orchestration/requests/show_resource_data.rb
+- lib/fog/openstack/orchestration/requests/show_resource_metadata.rb
+- lib/fog/openstack/orchestration/requests/show_resource_schema.rb
+- lib/fog/openstack/orchestration/requests/show_resource_template.rb
+- lib/fog/openstack/orchestration/requests/show_stack.rb
+- lib/fog/openstack/orchestration/requests/show_stack_details.rb
+- lib/fog/openstack/orchestration/requests/update_stack.rb
+- lib/fog/openstack/orchestration/requests/validate_template.rb
+- lib/fog/openstack/orchestration/util/recursive_hot_file_loader.rb
+- lib/fog/openstack/planning.rb
+- lib/fog/openstack/planning/models/plan.rb
+- lib/fog/openstack/planning/models/plans.rb
+- lib/fog/openstack/planning/models/role.rb
+- lib/fog/openstack/planning/models/roles.rb
+- lib/fog/openstack/planning/requests/add_role_to_plan.rb
+- lib/fog/openstack/planning/requests/create_plan.rb
+- lib/fog/openstack/planning/requests/delete_plan.rb
+- lib/fog/openstack/planning/requests/get_plan.rb
+- lib/fog/openstack/planning/requests/get_plan_templates.rb
+- lib/fog/openstack/planning/requests/list_plans.rb
+- lib/fog/openstack/planning/requests/list_roles.rb
+- lib/fog/openstack/planning/requests/patch_plan.rb
+- lib/fog/openstack/planning/requests/remove_role_from_plan.rb
+- lib/fog/openstack/shared_file_system.rb
+- lib/fog/openstack/shared_file_system/models/availability_zone.rb
+- lib/fog/openstack/shared_file_system/models/availability_zones.rb
+- lib/fog/openstack/shared_file_system/models/network.rb
+- lib/fog/openstack/shared_file_system/models/networks.rb
+- lib/fog/openstack/shared_file_system/models/share.rb
+- lib/fog/openstack/shared_file_system/models/share_access_rule.rb
+- lib/fog/openstack/shared_file_system/models/share_access_rules.rb
+- lib/fog/openstack/shared_file_system/models/share_export_location.rb
+- lib/fog/openstack/shared_file_system/models/share_export_locations.rb
+- lib/fog/openstack/shared_file_system/models/shares.rb
+- lib/fog/openstack/shared_file_system/models/snapshot.rb
+- lib/fog/openstack/shared_file_system/models/snapshots.rb
+- lib/fog/openstack/shared_file_system/requests/add_security_service_to_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/create_security_service.rb
+- lib/fog/openstack/shared_file_system/requests/create_share.rb
+- lib/fog/openstack/shared_file_system/requests/create_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/create_snapshot.rb
+- lib/fog/openstack/shared_file_system/requests/delete_security_service.rb
+- lib/fog/openstack/shared_file_system/requests/delete_share.rb
+- lib/fog/openstack/shared_file_system/requests/delete_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/delete_snapshot.rb
+- lib/fog/openstack/shared_file_system/requests/extend_share.rb
+- lib/fog/openstack/shared_file_system/requests/get_limits.rb
+- lib/fog/openstack/shared_file_system/requests/get_quota.rb
+- lib/fog/openstack/shared_file_system/requests/get_security_service.rb
+- lib/fog/openstack/shared_file_system/requests/get_share.rb
+- lib/fog/openstack/shared_file_system/requests/get_share_export_location.rb
+- lib/fog/openstack/shared_file_system/requests/get_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/get_snapshot.rb
+- lib/fog/openstack/shared_file_system/requests/grant_share_access.rb
+- lib/fog/openstack/shared_file_system/requests/list_availability_zones.rb
+- lib/fog/openstack/shared_file_system/requests/list_security_services.rb
+- lib/fog/openstack/shared_file_system/requests/list_security_services_detail.rb
+- lib/fog/openstack/shared_file_system/requests/list_share_access_rules.rb
+- lib/fog/openstack/shared_file_system/requests/list_share_export_locations.rb
+- lib/fog/openstack/shared_file_system/requests/list_share_networks.rb
+- lib/fog/openstack/shared_file_system/requests/list_share_networks_detail.rb
+- lib/fog/openstack/shared_file_system/requests/list_shares.rb
+- lib/fog/openstack/shared_file_system/requests/list_shares_detail.rb
+- lib/fog/openstack/shared_file_system/requests/list_snapshots.rb
+- lib/fog/openstack/shared_file_system/requests/list_snapshots_detail.rb
+- lib/fog/openstack/shared_file_system/requests/remove_security_service_from_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/revoke_share_access.rb
+- lib/fog/openstack/shared_file_system/requests/share_action.rb
+- lib/fog/openstack/shared_file_system/requests/share_network_action.rb
+- lib/fog/openstack/shared_file_system/requests/shrink_share.rb
+- lib/fog/openstack/shared_file_system/requests/update_quota.rb
+- lib/fog/openstack/shared_file_system/requests/update_security_service.rb
+- lib/fog/openstack/shared_file_system/requests/update_share.rb
+- lib/fog/openstack/shared_file_system/requests/update_share_network.rb
+- lib/fog/openstack/shared_file_system/requests/update_snapshot.rb
+- lib/fog/openstack/storage.rb
+- lib/fog/openstack/storage/models/directories.rb
+- lib/fog/openstack/storage/models/directory.rb
+- lib/fog/openstack/storage/models/file.rb
+- lib/fog/openstack/storage/models/files.rb
+- lib/fog/openstack/storage/requests/copy_object.rb
+- lib/fog/openstack/storage/requests/delete_container.rb
+- lib/fog/openstack/storage/requests/delete_multiple_objects.rb
+- lib/fog/openstack/storage/requests/delete_object.rb
+- lib/fog/openstack/storage/requests/delete_static_large_object.rb
+- lib/fog/openstack/storage/requests/get_container.rb
+- lib/fog/openstack/storage/requests/get_containers.rb
+- lib/fog/openstack/storage/requests/get_object.rb
+- lib/fog/openstack/storage/requests/get_object_http_url.rb
+- lib/fog/openstack/storage/requests/get_object_https_url.rb
+- lib/fog/openstack/storage/requests/head_container.rb
+- lib/fog/openstack/storage/requests/head_containers.rb
+- lib/fog/openstack/storage/requests/head_object.rb
+- lib/fog/openstack/storage/requests/post_object.rb
+- lib/fog/openstack/storage/requests/post_set_meta_temp_url_key.rb
+- lib/fog/openstack/storage/requests/public_url.rb
+- lib/fog/openstack/storage/requests/put_container.rb
+- lib/fog/openstack/storage/requests/put_dynamic_obj_manifest.rb
+- lib/fog/openstack/storage/requests/put_object.rb
+- lib/fog/openstack/storage/requests/put_object_manifest.rb
+- lib/fog/openstack/storage/requests/put_static_obj_manifest.rb
+- lib/fog/openstack/version.rb
+- lib/fog/openstack/volume.rb
+- lib/fog/openstack/volume/models/availability_zone.rb
+- lib/fog/openstack/volume/models/availability_zones.rb
+- lib/fog/openstack/volume/models/backup.rb
+- lib/fog/openstack/volume/models/backups.rb
+- lib/fog/openstack/volume/models/snapshot.rb
+- lib/fog/openstack/volume/models/snapshots.rb
+- lib/fog/openstack/volume/models/transfer.rb
+- lib/fog/openstack/volume/models/transfers.rb
+- lib/fog/openstack/volume/models/volume.rb
+- lib/fog/openstack/volume/models/volume_type.rb
+- lib/fog/openstack/volume/models/volume_types.rb
+- lib/fog/openstack/volume/models/volumes.rb
+- lib/fog/openstack/volume/requests/accept_transfer.rb
+- lib/fog/openstack/volume/requests/action.rb
+- lib/fog/openstack/volume/requests/create_backup.rb
+- lib/fog/openstack/volume/requests/create_snapshot.rb
+- lib/fog/openstack/volume/requests/create_transfer.rb
+- lib/fog/openstack/volume/requests/create_volume.rb
+- lib/fog/openstack/volume/requests/create_volume_type.rb
+- lib/fog/openstack/volume/requests/delete_backup.rb
+- lib/fog/openstack/volume/requests/delete_metadata.rb
+- lib/fog/openstack/volume/requests/delete_snapshot.rb
+- lib/fog/openstack/volume/requests/delete_snapshot_metadata.rb
+- lib/fog/openstack/volume/requests/delete_transfer.rb
+- lib/fog/openstack/volume/requests/delete_volume.rb
+- lib/fog/openstack/volume/requests/delete_volume_type.rb
+- lib/fog/openstack/volume/requests/extend_volume.rb
+- lib/fog/openstack/volume/requests/get_backup_details.rb
+- lib/fog/openstack/volume/requests/get_quota.rb
+- lib/fog/openstack/volume/requests/get_quota_defaults.rb
+- lib/fog/openstack/volume/requests/get_quota_usage.rb
+- lib/fog/openstack/volume/requests/get_snapshot_details.rb
+- lib/fog/openstack/volume/requests/get_transfer_details.rb
+- lib/fog/openstack/volume/requests/get_volume_details.rb
+- lib/fog/openstack/volume/requests/get_volume_type_details.rb
+- lib/fog/openstack/volume/requests/list_backups.rb
+- lib/fog/openstack/volume/requests/list_backups_detailed.rb
+- lib/fog/openstack/volume/requests/list_snapshots.rb
+- lib/fog/openstack/volume/requests/list_snapshots_detailed.rb
+- lib/fog/openstack/volume/requests/list_transfers.rb
+- lib/fog/openstack/volume/requests/list_transfers_detailed.rb
+- lib/fog/openstack/volume/requests/list_volume_types.rb
+- lib/fog/openstack/volume/requests/list_volumes.rb
+- lib/fog/openstack/volume/requests/list_volumes_detailed.rb
+- lib/fog/openstack/volume/requests/list_zones.rb
+- lib/fog/openstack/volume/requests/replace_metadata.rb
+- lib/fog/openstack/volume/requests/restore_backup.rb
+- lib/fog/openstack/volume/requests/set_tenant.rb
+- lib/fog/openstack/volume/requests/snapshot_action.rb
+- lib/fog/openstack/volume/requests/update_metadata.rb
+- lib/fog/openstack/volume/requests/update_quota.rb
+- lib/fog/openstack/volume/requests/update_snapshot.rb
+- lib/fog/openstack/volume/requests/update_snapshot_metadata.rb
+- lib/fog/openstack/volume/requests/update_volume.rb
+- lib/fog/openstack/volume/requests/update_volume_type.rb
+- lib/fog/openstack/volume/v1.rb
+- lib/fog/openstack/volume/v1/mock.rb
+- lib/fog/openstack/volume/v1/models/availability_zone.rb
+- lib/fog/openstack/volume/v1/models/availability_zones.rb
+- lib/fog/openstack/volume/v1/models/backup.rb
+- lib/fog/openstack/volume/v1/models/backups.rb
+- lib/fog/openstack/volume/v1/models/snapshot.rb
+- lib/fog/openstack/volume/v1/models/snapshots.rb
+- lib/fog/openstack/volume/v1/models/transfer.rb
+- lib/fog/openstack/volume/v1/models/transfers.rb
+- lib/fog/openstack/volume/v1/models/volume.rb
+- lib/fog/openstack/volume/v1/models/volume_type.rb
+- lib/fog/openstack/volume/v1/models/volume_types.rb
+- lib/fog/openstack/volume/v1/models/volumes.rb
+- lib/fog/openstack/volume/v1/real.rb
+- lib/fog/openstack/volume/v1/requests/accept_transfer.rb
+- lib/fog/openstack/volume/v1/requests/action.rb
+- lib/fog/openstack/volume/v1/requests/create_backup.rb
+- lib/fog/openstack/volume/v1/requests/create_snapshot.rb
+- lib/fog/openstack/volume/v1/requests/create_transfer.rb
+- lib/fog/openstack/volume/v1/requests/create_volume.rb
+- lib/fog/openstack/volume/v1/requests/create_volume_type.rb
+- lib/fog/openstack/volume/v1/requests/delete_backup.rb
+- lib/fog/openstack/volume/v1/requests/delete_metadata.rb
+- lib/fog/openstack/volume/v1/requests/delete_snapshot.rb
+- lib/fog/openstack/volume/v1/requests/delete_snapshot_metadata.rb
+- lib/fog/openstack/volume/v1/requests/delete_transfer.rb
+- lib/fog/openstack/volume/v1/requests/delete_volume.rb
+- lib/fog/openstack/volume/v1/requests/delete_volume_type.rb
+- lib/fog/openstack/volume/v1/requests/extend_volume.rb
+- lib/fog/openstack/volume/v1/requests/get_backup_details.rb
+- lib/fog/openstack/volume/v1/requests/get_quota.rb
+- lib/fog/openstack/volume/v1/requests/get_quota_defaults.rb
+- lib/fog/openstack/volume/v1/requests/get_quota_usage.rb
+- lib/fog/openstack/volume/v1/requests/get_snapshot_details.rb
+- lib/fog/openstack/volume/v1/requests/get_transfer_details.rb
+- lib/fog/openstack/volume/v1/requests/get_volume_details.rb
+- lib/fog/openstack/volume/v1/requests/get_volume_type_details.rb
+- lib/fog/openstack/volume/v1/requests/list_backups.rb
+- lib/fog/openstack/volume/v1/requests/list_backups_detailed.rb
+- lib/fog/openstack/volume/v1/requests/list_snapshots.rb
+- lib/fog/openstack/volume/v1/requests/list_snapshots_detailed.rb
+- lib/fog/openstack/volume/v1/requests/list_transfers.rb
+- lib/fog/openstack/volume/v1/requests/list_transfers_detailed.rb
+- lib/fog/openstack/volume/v1/requests/list_volume_types.rb
+- lib/fog/openstack/volume/v1/requests/list_volumes.rb
+- lib/fog/openstack/volume/v1/requests/list_volumes_detailed.rb
+- lib/fog/openstack/volume/v1/requests/list_zones.rb
+- lib/fog/openstack/volume/v1/requests/real.rb
+- lib/fog/openstack/volume/v1/requests/real_mock.rb
+- lib/fog/openstack/volume/v1/requests/replace_metadata.rb
+- lib/fog/openstack/volume/v1/requests/restore_backup.rb
+- lib/fog/openstack/volume/v1/requests/set_tenant.rb
+- lib/fog/openstack/volume/v1/requests/update_metadata.rb
+- lib/fog/openstack/volume/v1/requests/update_quota.rb
+- lib/fog/openstack/volume/v1/requests/update_snapshot.rb
+- lib/fog/openstack/volume/v1/requests/update_snapshot_metadata.rb
+- lib/fog/openstack/volume/v1/requests/update_volume.rb
+- lib/fog/openstack/volume/v2.rb
+- lib/fog/openstack/volume/v2/mock.rb
+- lib/fog/openstack/volume/v2/models/availability_zone.rb
+- lib/fog/openstack/volume/v2/models/availability_zones.rb
+- lib/fog/openstack/volume/v2/models/backup.rb
+- lib/fog/openstack/volume/v2/models/backups.rb
+- lib/fog/openstack/volume/v2/models/snapshot.rb
+- lib/fog/openstack/volume/v2/models/snapshots.rb
+- lib/fog/openstack/volume/v2/models/transfer.rb
+- lib/fog/openstack/volume/v2/models/transfers.rb
+- lib/fog/openstack/volume/v2/models/volume.rb
+- lib/fog/openstack/volume/v2/models/volume_type.rb
+- lib/fog/openstack/volume/v2/models/volume_types.rb
+- lib/fog/openstack/volume/v2/models/volumes.rb
+- lib/fog/openstack/volume/v2/real.rb
+- lib/fog/openstack/volume/v2/requests/accept_transfer.rb
+- lib/fog/openstack/volume/v2/requests/action.rb
+- lib/fog/openstack/volume/v2/requests/create_backup.rb
+- lib/fog/openstack/volume/v2/requests/create_snapshot.rb
+- lib/fog/openstack/volume/v2/requests/create_transfer.rb
+- lib/fog/openstack/volume/v2/requests/create_volume.rb
+- lib/fog/openstack/volume/v2/requests/create_volume_type.rb
+- lib/fog/openstack/volume/v2/requests/delete_backup.rb
+- lib/fog/openstack/volume/v2/requests/delete_metadata.rb
+- lib/fog/openstack/volume/v2/requests/delete_snapshot.rb
+- lib/fog/openstack/volume/v2/requests/delete_snapshot_metadata.rb
+- lib/fog/openstack/volume/v2/requests/delete_transfer.rb
+- lib/fog/openstack/volume/v2/requests/delete_volume.rb
+- lib/fog/openstack/volume/v2/requests/delete_volume_type.rb
+- lib/fog/openstack/volume/v2/requests/extend_volume.rb
+- lib/fog/openstack/volume/v2/requests/get_backup_details.rb
+- lib/fog/openstack/volume/v2/requests/get_quota.rb
+- lib/fog/openstack/volume/v2/requests/get_quota_defaults.rb
+- lib/fog/openstack/volume/v2/requests/get_quota_usage.rb
+- lib/fog/openstack/volume/v2/requests/get_snapshot_details.rb
+- lib/fog/openstack/volume/v2/requests/get_transfer_details.rb
+- lib/fog/openstack/volume/v2/requests/get_volume_details.rb
+- lib/fog/openstack/volume/v2/requests/get_volume_type_details.rb
+- lib/fog/openstack/volume/v2/requests/list_backups.rb
+- lib/fog/openstack/volume/v2/requests/list_backups_detailed.rb
+- lib/fog/openstack/volume/v2/requests/list_snapshots.rb
+- lib/fog/openstack/volume/v2/requests/list_snapshots_detailed.rb
+- lib/fog/openstack/volume/v2/requests/list_transfers.rb
+- lib/fog/openstack/volume/v2/requests/list_transfers_detailed.rb
+- lib/fog/openstack/volume/v2/requests/list_volume_types.rb
+- lib/fog/openstack/volume/v2/requests/list_volumes.rb
+- lib/fog/openstack/volume/v2/requests/list_volumes_detailed.rb
+- lib/fog/openstack/volume/v2/requests/list_zones.rb
+- lib/fog/openstack/volume/v2/requests/real.rb
+- lib/fog/openstack/volume/v2/requests/real_mock.rb
+- lib/fog/openstack/volume/v2/requests/replace_metadata.rb
+- lib/fog/openstack/volume/v2/requests/restore_backup.rb
+- lib/fog/openstack/volume/v2/requests/set_tenant.rb
+- lib/fog/openstack/volume/v2/requests/snapshot_action.rb
+- lib/fog/openstack/volume/v2/requests/update_metadata.rb
+- lib/fog/openstack/volume/v2/requests/update_quota.rb
+- lib/fog/openstack/volume/v2/requests/update_snapshot.rb
+- lib/fog/openstack/volume/v2/requests/update_snapshot_metadata.rb
+- lib/fog/openstack/volume/v2/requests/update_volume.rb
+- lib/fog/openstack/volume/v2/requests/update_volume_type.rb
+- lib/fog/openstack/volume/v3.rb
+- lib/fog/openstack/volume/v3/mock.rb
+- lib/fog/openstack/volume/v3/models/availability_zone.rb
+- lib/fog/openstack/volume/v3/models/availability_zones.rb
+- lib/fog/openstack/volume/v3/models/backup.rb
+- lib/fog/openstack/volume/v3/models/backups.rb
+- lib/fog/openstack/volume/v3/models/snapshot.rb
+- lib/fog/openstack/volume/v3/models/snapshots.rb
+- lib/fog/openstack/volume/v3/models/transfer.rb
+- lib/fog/openstack/volume/v3/models/transfers.rb
+- lib/fog/openstack/volume/v3/models/volume.rb
+- lib/fog/openstack/volume/v3/models/volume_type.rb
+- lib/fog/openstack/volume/v3/models/volume_types.rb
+- lib/fog/openstack/volume/v3/models/volumes.rb
+- lib/fog/openstack/volume/v3/real.rb
+- lib/fog/openstack/volume/v3/requests/accept_transfer.rb
+- lib/fog/openstack/volume/v3/requests/action.rb
+- lib/fog/openstack/volume/v3/requests/create_backup.rb
+- lib/fog/openstack/volume/v3/requests/create_snapshot.rb
+- lib/fog/openstack/volume/v3/requests/create_transfer.rb
+- lib/fog/openstack/volume/v3/requests/create_volume.rb
+- lib/fog/openstack/volume/v3/requests/create_volume_type.rb
+- lib/fog/openstack/volume/v3/requests/delete_backup.rb
+- lib/fog/openstack/volume/v3/requests/delete_metadata.rb
+- lib/fog/openstack/volume/v3/requests/delete_snapshot.rb
+- lib/fog/openstack/volume/v3/requests/delete_snapshot_metadata.rb
+- lib/fog/openstack/volume/v3/requests/delete_transfer.rb
+- lib/fog/openstack/volume/v3/requests/delete_volume.rb
+- lib/fog/openstack/volume/v3/requests/delete_volume_type.rb
+- lib/fog/openstack/volume/v3/requests/extend_volume.rb
+- lib/fog/openstack/volume/v3/requests/get_backup_details.rb
+- lib/fog/openstack/volume/v3/requests/get_quota.rb
+- lib/fog/openstack/volume/v3/requests/get_quota_defaults.rb
+- lib/fog/openstack/volume/v3/requests/get_quota_usage.rb
+- lib/fog/openstack/volume/v3/requests/get_snapshot_details.rb
+- lib/fog/openstack/volume/v3/requests/get_transfer_details.rb
+- lib/fog/openstack/volume/v3/requests/get_volume_details.rb
+- lib/fog/openstack/volume/v3/requests/get_volume_type_details.rb
+- lib/fog/openstack/volume/v3/requests/list_backups.rb
+- lib/fog/openstack/volume/v3/requests/list_backups_detailed.rb
+- lib/fog/openstack/volume/v3/requests/list_snapshots.rb
+- lib/fog/openstack/volume/v3/requests/list_snapshots_detailed.rb
+- lib/fog/openstack/volume/v3/requests/list_transfers.rb
+- lib/fog/openstack/volume/v3/requests/list_transfers_detailed.rb
+- lib/fog/openstack/volume/v3/requests/list_volume_types.rb
+- lib/fog/openstack/volume/v3/requests/list_volumes.rb
+- lib/fog/openstack/volume/v3/requests/list_volumes_detailed.rb
+- lib/fog/openstack/volume/v3/requests/list_zones.rb
+- lib/fog/openstack/volume/v3/requests/real.rb
+- lib/fog/openstack/volume/v3/requests/real_mock.rb
+- lib/fog/openstack/volume/v3/requests/replace_metadata.rb
+- lib/fog/openstack/volume/v3/requests/restore_backup.rb
+- lib/fog/openstack/volume/v3/requests/set_tenant.rb
+- lib/fog/openstack/volume/v3/requests/snapshot_action.rb
+- lib/fog/openstack/volume/v3/requests/update_metadata.rb
+- lib/fog/openstack/volume/v3/requests/update_quota.rb
+- lib/fog/openstack/volume/v3/requests/update_snapshot.rb
+- lib/fog/openstack/volume/v3/requests/update_snapshot_metadata.rb
+- lib/fog/openstack/volume/v3/requests/update_volume.rb
+- lib/fog/openstack/volume/v3/requests/update_volume_type.rb
+- lib/fog/openstack/workflow.rb
+- lib/fog/openstack/workflow/v2.rb
+- lib/fog/openstack/workflow/v2/requests/create_action.rb
+- lib/fog/openstack/workflow/v2/requests/create_action_execution.rb
+- lib/fog/openstack/workflow/v2/requests/create_cron_trigger.rb
+- lib/fog/openstack/workflow/v2/requests/create_environment.rb
+- lib/fog/openstack/workflow/v2/requests/create_execution.rb
+- lib/fog/openstack/workflow/v2/requests/create_workbook.rb
+- lib/fog/openstack/workflow/v2/requests/create_workflow.rb
+- lib/fog/openstack/workflow/v2/requests/delete_action.rb
+- lib/fog/openstack/workflow/v2/requests/delete_action_execution.rb
+- lib/fog/openstack/workflow/v2/requests/delete_cron_trigger.rb
+- lib/fog/openstack/workflow/v2/requests/delete_environment.rb
+- lib/fog/openstack/workflow/v2/requests/delete_execution.rb
+- lib/fog/openstack/workflow/v2/requests/delete_workbook.rb
+- lib/fog/openstack/workflow/v2/requests/delete_workflow.rb
+- lib/fog/openstack/workflow/v2/requests/get_action.rb
+- lib/fog/openstack/workflow/v2/requests/get_action_execution.rb
+- lib/fog/openstack/workflow/v2/requests/get_cron_trigger.rb
+- lib/fog/openstack/workflow/v2/requests/get_environment.rb
+- lib/fog/openstack/workflow/v2/requests/get_execution.rb
+- lib/fog/openstack/workflow/v2/requests/get_task.rb
+- lib/fog/openstack/workflow/v2/requests/get_workbook.rb
+- lib/fog/openstack/workflow/v2/requests/get_workflow.rb
+- lib/fog/openstack/workflow/v2/requests/list_action_executions.rb
+- lib/fog/openstack/workflow/v2/requests/list_actions.rb
+- lib/fog/openstack/workflow/v2/requests/list_cron_triggers.rb
+- lib/fog/openstack/workflow/v2/requests/list_environments.rb
+- lib/fog/openstack/workflow/v2/requests/list_executions.rb
+- lib/fog/openstack/workflow/v2/requests/list_services.rb
+- lib/fog/openstack/workflow/v2/requests/list_tasks.rb
+- lib/fog/openstack/workflow/v2/requests/list_workbooks.rb
+- lib/fog/openstack/workflow/v2/requests/list_workflows.rb
+- lib/fog/openstack/workflow/v2/requests/rerun_task.rb
+- lib/fog/openstack/workflow/v2/requests/update_action.rb
+- lib/fog/openstack/workflow/v2/requests/update_action_execution.rb
+- lib/fog/openstack/workflow/v2/requests/update_environment.rb
+- lib/fog/openstack/workflow/v2/requests/update_execution.rb
+- lib/fog/openstack/workflow/v2/requests/update_workbook.rb
+- lib/fog/openstack/workflow/v2/requests/update_workflow.rb
+- lib/fog/openstack/workflow/v2/requests/validate_action.rb
+- lib/fog/openstack/workflow/v2/requests/validate_workbook.rb
+- lib/fog/openstack/workflow/v2/requests/validate_workflow.rb
+- playbooks/.gitkeep
+- playbooks/fog-openstack-unittest-spec/run.yaml
+- playbooks/fog-openstack-unittest-test/run.yaml
+- supported.md
+- unit/auth/catalog_test.rb
+- unit/auth/name_test.rb
+- unit/auth/token_test.rb
+- unit/auth_helper.rb
+- unit/test_helper.rb
+homepage: https://github.com/fog/fog-openstack
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: OpenStack fog provider gem
+test_files: []

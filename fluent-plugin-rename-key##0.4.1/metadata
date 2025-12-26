@@ -1,0 +1,123 @@
+--- !ruby/object:Gem::Specification
+name: fluent-plugin-rename-key
+version: !ruby/object:Gem::Version
+  version: 0.4.1
+platform: ruby
+authors:
+- Shunwen Hsiao
+- Julian Grinblat
+- Hiroshi Hatake
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-02-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fluentd
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.3'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+description: 
+email:
+- hsiaoshunwen@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- fluent-plugin-rename-key.gemspec
+- lib/fluent/plugin/filter_rename_key.rb
+- lib/fluent/plugin/out_rename_key.rb
+- lib/fluent/plugin/rename_key_util.rb
+- test/helper.rb
+- test/plugin/test_filter_rename_key.rb
+- test/plugin/test_out_rename_key.rb
+- test/plugin/test_rename_key_util.rb
+homepage: https://github.com/shunwen/fluent-plugin-rename-key
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.10
+signing_key: 
+specification_version: 4
+summary: Fluentd output plugin. Rename keys which match given regular expressions,
+  assign new tags and re-emit the records.
+test_files: []

@@ -1,0 +1,177 @@
+--- !ruby/object:Gem::Specification
+name: iso8601
+version: !ruby/object:Gem::Version
+  version: 0.13.0
+platform: ruby
+authors:
+- Arnau Siches
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-07-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.1
+- !ruby/object:Gem::Dependency
+  name: pry-doc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.85'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.85'
+- !ruby/object:Gem::Dependency
+  name: rubocop-packaging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.1
+description: |2
+      ISO8601 is a simple implementation in Ruby of the ISO 8601 (Data elements and
+      interchange formats - Information interchange - Representation of dates
+      and times) standard.
+email: arnau.siches@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- docs/date-time.md
+- docs/duration.md
+- docs/time-interval.md
+- lib/iso8601.rb
+- lib/iso8601/atomic.rb
+- lib/iso8601/date.rb
+- lib/iso8601/date_time.rb
+- lib/iso8601/days.rb
+- lib/iso8601/duration.rb
+- lib/iso8601/errors.rb
+- lib/iso8601/hours.rb
+- lib/iso8601/minutes.rb
+- lib/iso8601/months.rb
+- lib/iso8601/seconds.rb
+- lib/iso8601/time.rb
+- lib/iso8601/time_interval.rb
+- lib/iso8601/version.rb
+- lib/iso8601/weeks.rb
+- lib/iso8601/years.rb
+- spec/iso8601/date_spec.rb
+- spec/iso8601/date_time_spec.rb
+- spec/iso8601/days_spec.rb
+- spec/iso8601/duration_spec.rb
+- spec/iso8601/hours_spec.rb
+- spec/iso8601/minutes_spec.rb
+- spec/iso8601/months_spec.rb
+- spec/iso8601/seconds_spec.rb
+- spec/iso8601/time_interval_spec.rb
+- spec/iso8601/time_spec.rb
+- spec/iso8601/weeks_spec.rb
+- spec/iso8601/years_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/arnau/ISO8601
+licenses:
+- MIT
+metadata:
+  yard.run: yri
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: Ruby parser to work with ISO 8601 dateTimes and durations - http://en.wikipedia.org/wiki/ISO_8601
+test_files:
+- spec/spec_helper.rb
+- spec/iso8601/minutes_spec.rb
+- spec/iso8601/time_spec.rb
+- spec/iso8601/seconds_spec.rb
+- spec/iso8601/date_spec.rb
+- spec/iso8601/years_spec.rb
+- spec/iso8601/days_spec.rb
+- spec/iso8601/weeks_spec.rb
+- spec/iso8601/date_time_spec.rb
+- spec/iso8601/hours_spec.rb
+- spec/iso8601/time_interval_spec.rb
+- spec/iso8601/duration_spec.rb
+- spec/iso8601/months_spec.rb

@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: fssm
+version: !ruby/object:Gem::Version
+  version: 0.2.10
+  prerelease: 
+platform: ruby
+authors:
+- Travis Tilley
+- Nathan Weizenbaum
+- Chris Eppstein
+- Jonathan Castello
+- Tuomas Kareinen
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-01-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  prerelease: false
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+    none: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+    none: false
+  name: rake
+- !ruby/object:Gem::Dependency
+  prerelease: false
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+    none: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+    none: false
+  name: rspec
+description: The File System State Monitor keeps track of the state of any number
+  of paths and will fire events when said state changes (create/update/delete). FSSM
+  supports using FSEvents on MacOS, Inotify on GNU/Linux, and polling anywhere else.
+email:
+- ttilley@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .travis.yml
+- Gemfile
+- LICENSE
+- README.markdown
+- Rakefile
+- example.rb
+- ext/rakefile.rb
+- fssm.gemspec
+- lib/fssm.rb
+- lib/fssm/backends/inotify.rb
+- lib/fssm/backends/polling.rb
+- lib/fssm/backends/rbfsevent.rb
+- lib/fssm/monitor.rb
+- lib/fssm/path.rb
+- lib/fssm/pathname.rb
+- lib/fssm/state/directory.rb
+- lib/fssm/state/file.rb
+- lib/fssm/support.rb
+- lib/fssm/tree.rb
+- lib/fssm/version.rb
+- profile/prof-cache.rb
+- profile/prof-fssm-pathname.html
+- profile/prof-pathname-rubinius.rb
+- profile/prof-pathname.rb
+- profile/prof-plain-pathname.html
+- profile/prof.html
+- spec/count_down_latch.rb
+- spec/monitor_spec.rb
+- spec/path_spec.rb
+- spec/root/duck/quack.txt
+- spec/root/file.css
+- spec/root/file.rb
+- spec/root/file.yml
+- spec/root/moo/cow.txt
+- spec/spec_helper.rb
+homepage: https://github.com/ttilley/fssm
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+  none: false
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+  none: false
+requirements: []
+rubyforge_project: fssm
+rubygems_version: 1.8.24
+signing_key: 
+specification_version: 3
+summary: File System State Monitor
+test_files:
+- spec/count_down_latch.rb
+- spec/monitor_spec.rb
+- spec/path_spec.rb
+- spec/root/duck/quack.txt
+- spec/root/file.css
+- spec/root/file.rb
+- spec/root/file.yml
+- spec/root/moo/cow.txt
+- spec/spec_helper.rb
+has_rdoc: 

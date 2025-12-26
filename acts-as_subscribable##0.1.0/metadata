@@ -1,0 +1,60 @@
+--- !ruby/object:Gem::Specification
+name: acts-as_subscribable
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Jamie Rumbelow
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-15 00:00:00.000000000 Z
+dependencies: []
+description: |2
+                      acts_as_subscribable is a loose wrapper around ActiveRecord to allow a basic user subscription model.
+                      acts_as_subscribable exposes a high-level set of methods that allow you to easily subscribe, unsubscribe
+                      and view subscribers to a model.
+email:
+- jamie@jamierumbelow.net
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- acts-as_subscribable.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acts_as_subscribable.rb
+- lib/acts_as_subscribable/railtie.rb
+- lib/acts_as_subscribable/subscribable_methods.rb
+- lib/acts_as_subscribable/subscribable_methods/instance_methods.rb
+- lib/acts_as_subscribable/version.rb
+- lib/generators/acts_as_subscribable/USAGE
+- lib/generators/acts_as_subscribable/acts_as_subscribable_generator.rb
+homepage: https://github.com/jamierumbelow/acts_as_subscribable
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Simplify adding user subscriptions to models
+test_files: []

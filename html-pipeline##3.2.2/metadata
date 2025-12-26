@@ -1,0 +1,118 @@
+--- !ruby/object:Gem::Specification
+name: html-pipeline
+version: !ruby/object:Gem::Version
+  version: 3.2.2
+platform: ruby
+authors:
+- Garen J. Torikian
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: selma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  force_ruby_platform: false
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+  force_ruby_platform: false
+description: HTML processing filters and utilities
+email:
+- gjtorikian@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/automerge.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/lint.yml"
+- ".github/workflows/publish.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".vscode/settings.json"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- UPGRADING.md
+- html-pipeline.gemspec
+- lib/html-pipeline.rb
+- lib/html_pipeline.rb
+- lib/html_pipeline/convert_filter.rb
+- lib/html_pipeline/convert_filter/markdown_filter.rb
+- lib/html_pipeline/filter.rb
+- lib/html_pipeline/node_filter.rb
+- lib/html_pipeline/node_filter/absolute_source_filter.rb
+- lib/html_pipeline/node_filter/asset_proxy_filter.rb
+- lib/html_pipeline/node_filter/emoji_filter.rb
+- lib/html_pipeline/node_filter/https_filter.rb
+- lib/html_pipeline/node_filter/image_max_width_filter.rb
+- lib/html_pipeline/node_filter/mention_filter.rb
+- lib/html_pipeline/node_filter/syntax_highlight_filter.rb
+- lib/html_pipeline/node_filter/table_of_contents_filter.rb
+- lib/html_pipeline/node_filter/team_mention_filter.rb
+- lib/html_pipeline/sanitization_filter.rb
+- lib/html_pipeline/text_filter.rb
+- lib/html_pipeline/text_filter/image_filter.rb
+- lib/html_pipeline/text_filter/plain_text_input_filter.rb
+- lib/html_pipeline/version.rb
+homepage: https://github.com/gjtorikian/html-pipeline
+licenses:
+- MIT
+metadata:
+  funding_uri: https://github.com/sponsors/gjtorikian/
+  rubygems_mfa_required: 'true'
+post_install_message: |
+  -------------------------------------------------
+  Thank you for installing html-pipeline!
+  You must bundle filter gem dependencies.
+  See the html-pipeline README.md for more details:
+  https://github.com/gjtorikian/html-pipeline#dependencies
+  -------------------------------------------------
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.3.22
+requirements: []
+rubygems_version: 3.4.6
+signing_key:
+specification_version: 4
+summary: Helpers for processing content through a chain of filters
+test_files: []

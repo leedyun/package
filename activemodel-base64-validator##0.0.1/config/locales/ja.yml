@@ -1,0 +1,4 @@
+ja:
+  errors:
+    messages:
+      invalid_base64: は有効なBase64形式ではありません。

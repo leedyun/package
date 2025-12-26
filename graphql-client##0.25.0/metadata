@@ -1,0 +1,207 @@
+--- !ruby/object:Gem::Specification
+name: graphql-client
+version: !ruby/object:Gem::Version
+  version: 0.25.0
+platform: ruby
+authors:
+- GitHub
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: graphql
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.0
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.22
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.22
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: erubis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-github
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.66.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.66.1
+description: A Ruby library for declaring, composing and executing GraphQL queries
+email: engineering@github.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/graphql/client.rb
+- lib/graphql/client/collocated_enforcement.rb
+- lib/graphql/client/definition.rb
+- lib/graphql/client/definition_variables.rb
+- lib/graphql/client/document_types.rb
+- lib/graphql/client/erb.rb
+- lib/graphql/client/error.rb
+- lib/graphql/client/errors.rb
+- lib/graphql/client/erubi_enhancer.rb
+- lib/graphql/client/erubis.rb
+- lib/graphql/client/erubis_enhancer.rb
+- lib/graphql/client/fragment_definition.rb
+- lib/graphql/client/hash_with_indifferent_access.rb
+- lib/graphql/client/http.rb
+- lib/graphql/client/list.rb
+- lib/graphql/client/log_subscriber.rb
+- lib/graphql/client/operation_definition.rb
+- lib/graphql/client/query_typename.rb
+- lib/graphql/client/railtie.rb
+- lib/graphql/client/response.rb
+- lib/graphql/client/schema.rb
+- lib/graphql/client/schema/base_type.rb
+- lib/graphql/client/schema/enum_type.rb
+- lib/graphql/client/schema/include_directive.rb
+- lib/graphql/client/schema/interface_type.rb
+- lib/graphql/client/schema/list_type.rb
+- lib/graphql/client/schema/non_null_type.rb
+- lib/graphql/client/schema/object_type.rb
+- lib/graphql/client/schema/possible_types.rb
+- lib/graphql/client/schema/scalar_type.rb
+- lib/graphql/client/schema/skip_directive.rb
+- lib/graphql/client/schema/union_type.rb
+- lib/graphql/client/type_stack.rb
+- lib/graphql/client/view_module.rb
+- lib/rubocop/cop/graphql/heredoc.rb
+- lib/rubocop/cop/graphql/overfetch.rb
+homepage: https://github.com/github-community-projects/graphql-client
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.12
+signing_key:
+specification_version: 4
+summary: GraphQL Client
+test_files: []

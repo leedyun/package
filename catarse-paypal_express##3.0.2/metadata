@@ -1,0 +1,226 @@
+--- !ruby/object:Gem::Specification
+name: catarse-paypal_express
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Antônio Roberto Silva
+- Diogo Biazus
+- Josemar Davi Luedke
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: activemerchant
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.34.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.34.0
+- !ruby/object:Gem::Dependency
+  name: slim-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.0
+- !ruby/object:Gem::Dependency
+  name: factory_girl_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: PaypalExpress integration with Catarse crowdfunding platform
+email:
+- forevertonny@gmail.com
+- diogob@gmail.com
+- josemarluedke@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- MIT-LICENSE
+- README.md
+- Rakefile
+- app/assets/javascripts/catarse_paypal_express.js
+- app/assets/javascripts/catarse_paypal_express/paypal_form.js
+- app/assets/javascripts/catarse_paypal_express/user_document.js
+- app/controllers/catarse_paypal_express/paypal_express_controller.rb
+- app/views/catarse_paypal_express/paypal_express/review.html.slim
+- catarse-paypal_express.gemspec
+- config/initializers/active_merchant.rb
+- config/initializers/register.rb
+- config/locales/en.yml
+- config/locales/pt.yml
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/catarse_paypal_express.rb
+- lib/catarse_paypal_express/contribution_actions.rb
+- lib/catarse_paypal_express/engine.rb
+- lib/catarse_paypal_express/gateway.rb
+- lib/catarse_paypal_express/payment_engine.rb
+- lib/catarse_paypal_express/version.rb
+- lib/tasks/catarse_paypal_express_tasks.rake
+- script/rails
+- spec/controllers/catarse_paypal_express/paypal_express_controller_spec.rb
+- spec/fixtures/ipn_data.txt
+- spec/lib/catarse_paypal_express/contribution_actions_spec.rb
+- spec/spec_helper.rb
+- spec/support/payment_engines.rb
+- test/dummy/README.rdoc
+- test/dummy/Rakefile
+- test/dummy/app/assets/javascripts/application.js
+- test/dummy/app/assets/stylesheets/application.css
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/backtrace_silencers.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/mime_types.rb
+- test/dummy/config/initializers/secret_token.rb
+- test/dummy/config/initializers/session_store.rb
+- test/dummy/config/initializers/wrap_parameters.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/routes.rb
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/favicon.ico
+- test/dummy/script/rails
+homepage: http://github.com/catarse/catarse_paypal_express
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: PaypalExpress integration with Catarse
+test_files:
+- spec/controllers/catarse_paypal_express/paypal_express_controller_spec.rb
+- spec/fixtures/ipn_data.txt
+- spec/lib/catarse_paypal_express/contribution_actions_spec.rb
+- spec/spec_helper.rb
+- spec/support/payment_engines.rb
+- test/dummy/README.rdoc
+- test/dummy/Rakefile
+- test/dummy/app/assets/javascripts/application.js
+- test/dummy/app/assets/stylesheets/application.css
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/backtrace_silencers.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/mime_types.rb
+- test/dummy/config/initializers/secret_token.rb
+- test/dummy/config/initializers/session_store.rb
+- test/dummy/config/initializers/wrap_parameters.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/routes.rb
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/favicon.ico
+- test/dummy/script/rails

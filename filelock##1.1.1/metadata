@@ -1,0 +1,101 @@
+--- !ruby/object:Gem::Specification
+name: filelock
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Adam Stankiewicz
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-03-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>'
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>'
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Heavily tested yet simple filelocking solution using flock
+email:
+- sheerun@sher.pl
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .rspec
+- .travis.yml
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- filelock.gemspec
+- lib/filelock.rb
+- lib/filelock/exec_timeout.rb
+- lib/filelock/version.rb
+- lib/filelock/wait_timeout.rb
+- spec/filelock_spec.rb
+homepage: http://github.com/sheerun/filelock
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.3
+signing_key: 
+specification_version: 4
+summary: Heavily tested yet simple filelocking solution using flock
+test_files:
+- spec/filelock_spec.rb

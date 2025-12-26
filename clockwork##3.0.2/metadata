@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification
+name: clockwork
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Adam Wiggins
+- tomykaira
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-02-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: tzinfo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: daemons
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A scheduler process to replace cron, using a more flexible Ruby syntax
+  running as a single long-running process.  Inspired by rufus-scheduler and resque-scheduler.
+email:
+- adam@heroku.com
+- tomykaira@gmail.com
+executables:
+- clockwork
+- clockworkd
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- ".github/workflows/tests.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/clockwork
+- bin/clockworkd
+- clockwork.gemspec
+- clockworkd.1
+- example.rb
+- lib/clockwork.rb
+- lib/clockwork/at.rb
+- lib/clockwork/database_events.rb
+- lib/clockwork/database_events/event.rb
+- lib/clockwork/database_events/event_collection.rb
+- lib/clockwork/database_events/event_store.rb
+- lib/clockwork/database_events/manager.rb
+- lib/clockwork/database_events/synchronizer.rb
+- lib/clockwork/event.rb
+- lib/clockwork/manager.rb
+- test/at_test.rb
+- test/clockwork_test.rb
+- test/database_events/event_store_test.rb
+- test/database_events/support/active_record_fake.rb
+- test/database_events/synchronizer_test.rb
+- test/database_events/test_helpers.rb
+- test/event_test.rb
+- test/manager_test.rb
+- test/samples/signal_test.rb
+- test/signal_test.rb
+homepage: http://github.com/Rykian/clockwork
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: A scheduler process to replace cron.
+test_files:
+- test/at_test.rb
+- test/clockwork_test.rb
+- test/database_events/event_store_test.rb
+- test/database_events/support/active_record_fake.rb
+- test/database_events/synchronizer_test.rb
+- test/database_events/test_helpers.rb
+- test/event_test.rb
+- test/manager_test.rb
+- test/samples/signal_test.rb
+- test/signal_test.rb

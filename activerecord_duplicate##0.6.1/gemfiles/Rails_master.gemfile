@@ -1,0 +1,11 @@
+source :rubygems
+
+gem 'activerecord', github: 'rails/rails'
+gem 'active_record_deprecated_finders', github: 'rails/active_record_deprecated_finders'
+
+group :development do
+  gem 'minitest'
+  gem 'purdytest'
+  gem 'rails', github: 'rails/rails'
+  gem 'sqlite3'
+end

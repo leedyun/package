@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'karafka'
+require 'karafka/web'
+
+ENV['KARAFKA_CLI'] = 'true'
+
+::Karafka::Cli::Base.load
+::Karafka::Web::Cli.start

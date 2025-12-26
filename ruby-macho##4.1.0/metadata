@@ -1,0 +1,57 @@
+--- !ruby/object:Gem::Specification
+name: ruby-macho
+version: !ruby/object:Gem::Version
+  version: 4.1.0
+platform: ruby
+authors:
+- William Woodruff
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-06-11 00:00:00.000000000 Z
+dependencies: []
+description: A library for viewing and manipulating Mach-O files in Ruby.
+email: william@yossarian.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- LICENSE
+- README.md
+- lib/macho.rb
+- lib/macho/exceptions.rb
+- lib/macho/fat_file.rb
+- lib/macho/headers.rb
+- lib/macho/load_commands.rb
+- lib/macho/macho_file.rb
+- lib/macho/sections.rb
+- lib/macho/structure.rb
+- lib/macho/tools.rb
+- lib/macho/utils.rb
+- lib/macho/view.rb
+homepage: https://github.com/Homebrew/ruby-macho
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: ruby-macho - Mach-O file analyzer.
+test_files: []

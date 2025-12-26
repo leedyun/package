@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: xmlrpc
+version: !ruby/object:Gem::Version
+  version: 0.3.3
+platform: ruby
+authors:
+- SHIBATA Hiroshi
+- Sutou Kouhei
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-08-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: XMLRPC is a lightweight protocol that enables remote procedure calls
+  over HTTP.
+email:
+- hsbt@ruby-lang.org
+- kou@cozmixng.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/release.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- NEWS.md
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/xmlrpc.rb
+- lib/xmlrpc/base64.rb
+- lib/xmlrpc/client.rb
+- lib/xmlrpc/config.rb
+- lib/xmlrpc/create.rb
+- lib/xmlrpc/datetime.rb
+- lib/xmlrpc/marshal.rb
+- lib/xmlrpc/parser.rb
+- lib/xmlrpc/server.rb
+- lib/xmlrpc/utils.rb
+- xmlrpc.gemspec
+homepage: https://github.com/ruby/xmlrpc
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.0.dev
+signing_key:
+specification_version: 4
+summary: XMLRPC is a lightweight protocol that enables remote procedure calls over
+  HTTP.
+test_files: []

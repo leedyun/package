@@ -1,0 +1,257 @@
+--- !ruby/object:Gem::Specification
+name: ruby-dbus
+version: !ruby/object:Gem::Version
+  version: 0.24.0
+platform: ruby
+authors:
+- Ruby DBus Team
+bindir: bin
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: packaging_rake_tasks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov-lcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Pure Ruby module for interaction with D-Bus IPC system
+email: martin.github@vidner.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".rspec"
+- COPYING
+- NEWS.md
+- README.md
+- Rakefile
+- VERSION
+- doc/Reference.md
+- doc/Tutorial.md
+- examples/doc/README.md
+- examples/doc/_extract_examples
+- examples/no-bus/pulseaudio.rb
+- examples/no-introspect/nm-test.rb
+- examples/no-introspect/tracker-test.rb
+- examples/rhythmbox/playpause.rb
+- examples/service/call_service.rb
+- examples/service/complex-property.rb
+- examples/service/service_newapi.rb
+- examples/simple/call_introspect.rb
+- examples/simple/get_id.rb
+- examples/simple/properties.rb
+- examples/utils/listnames.rb
+- examples/utils/notify.rb
+- lib/dbus.rb
+- lib/dbus/api_options.rb
+- lib/dbus/auth.rb
+- lib/dbus/bus.rb
+- lib/dbus/bus_name.rb
+- lib/dbus/connection.rb
+- lib/dbus/core_ext/class/attribute.rb
+- lib/dbus/core_ext/module/redefine_method.rb
+- lib/dbus/data.rb
+- lib/dbus/emits_changed_signal.rb
+- lib/dbus/error.rb
+- lib/dbus/introspect.rb
+- lib/dbus/logger.rb
+- lib/dbus/main.rb
+- lib/dbus/marshall.rb
+- lib/dbus/matchrule.rb
+- lib/dbus/message.rb
+- lib/dbus/message_queue.rb
+- lib/dbus/node_tree.rb
+- lib/dbus/object.rb
+- lib/dbus/object_manager.rb
+- lib/dbus/object_path.rb
+- lib/dbus/object_server.rb
+- lib/dbus/org.freedesktop.DBus.xml
+- lib/dbus/platform.rb
+- lib/dbus/proxy_object.rb
+- lib/dbus/proxy_object_factory.rb
+- lib/dbus/proxy_object_interface.rb
+- lib/dbus/proxy_service.rb
+- lib/dbus/raw_message.rb
+- lib/dbus/type.rb
+- lib/dbus/xml.rb
+- ruby-dbus.gemspec
+- spec/async_spec.rb
+- spec/auth_spec.rb
+- spec/binding_spec.rb
+- spec/bus_and_xml_backend_spec.rb
+- spec/bus_connection_spec.rb
+- spec/bus_name_spec.rb
+- spec/bus_spec.rb
+- spec/byte_array_spec.rb
+- spec/client_robustness_spec.rb
+- spec/connection_spec.rb
+- spec/coverage_helper.rb
+- spec/data/marshall.yaml
+- spec/data_spec.rb
+- spec/dbus_spec.rb
+- spec/emits_changed_signal_spec.rb
+- spec/err_msg_spec.rb
+- spec/introspect_xml_parser_spec.rb
+- spec/introspection_spec.rb
+- spec/main_loop_spec.rb
+- spec/message_spec.rb
+- spec/mock-service/cockpit-dbustests.rb
+- spec/mock-service/com.redhat.Cockpit.DBusTests.xml
+- spec/mock-service/org.ruby.service.service
+- spec/mock-service/org.rubygems.ruby_dbus.DBusTests.service
+- spec/mock-service/spaghetti-monster.rb
+- spec/node_spec.rb
+- spec/object_manager_spec.rb
+- spec/object_path_spec.rb
+- spec/object_server_spec.rb
+- spec/object_spec.rb
+- spec/packet_marshaller_spec.rb
+- spec/packet_unmarshaller_spec.rb
+- spec/platform_spec.rb
+- spec/property_spec.rb
+- spec/proxy_object_interface_spec.rb
+- spec/proxy_object_spec.rb
+- spec/proxy_service_spec.rb
+- spec/raw_message_spec.rb
+- spec/server_robustness_spec.rb
+- spec/session_bus_spec.rb
+- spec/session_bus_spec_manual.rb
+- spec/signal_spec.rb
+- spec/spec_helper.rb
+- spec/thread_safety_spec.rb
+- spec/tools/dbus-launch-simple
+- spec/tools/dbus-limited-session.conf
+- spec/tools/test_env
+- spec/type_spec.rb
+- spec/value_spec.rb
+- spec/variant_spec.rb
+- spec/zzz_quit_spec.rb
+homepage: https://github.com/mvidner/ruby-dbus
+licenses:
+- LGPL-2.1-or-later
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Ruby module for interaction with D-Bus
+test_files: []

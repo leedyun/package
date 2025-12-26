@@ -1,0 +1,261 @@
+--- !ruby/object:Gem::Specification
+name: factory_bot
+version: !ruby/object:Gem::Version
+  version: 6.5.0
+platform: ruby
+authors:
+- Josh Clayton
+- Joe Ferris
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: factory_bot provides a framework and DSL for defining and using factories
+  - less error-prone, more explicit, and all-around easier to work with than fixtures.
+email:
+- jclayton@thoughtbot.com
+- jferris@thoughtbot.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CONTRIBUTING.md
+- GETTING_STARTED.md
+- LICENSE
+- NAME.md
+- NEWS.md
+- README.md
+- lib/factory_bot.rb
+- lib/factory_bot/aliases.rb
+- lib/factory_bot/attribute.rb
+- lib/factory_bot/attribute/association.rb
+- lib/factory_bot/attribute/dynamic.rb
+- lib/factory_bot/attribute/sequence.rb
+- lib/factory_bot/attribute_assigner.rb
+- lib/factory_bot/attribute_list.rb
+- lib/factory_bot/callback.rb
+- lib/factory_bot/callbacks_observer.rb
+- lib/factory_bot/configuration.rb
+- lib/factory_bot/declaration.rb
+- lib/factory_bot/declaration/association.rb
+- lib/factory_bot/declaration/dynamic.rb
+- lib/factory_bot/declaration/implicit.rb
+- lib/factory_bot/declaration_list.rb
+- lib/factory_bot/decorator.rb
+- lib/factory_bot/decorator/attribute_hash.rb
+- lib/factory_bot/decorator/disallows_duplicates_registry.rb
+- lib/factory_bot/decorator/invocation_tracker.rb
+- lib/factory_bot/decorator/new_constructor.rb
+- lib/factory_bot/definition.rb
+- lib/factory_bot/definition_hierarchy.rb
+- lib/factory_bot/definition_proxy.rb
+- lib/factory_bot/enum.rb
+- lib/factory_bot/errors.rb
+- lib/factory_bot/evaluation.rb
+- lib/factory_bot/evaluator.rb
+- lib/factory_bot/evaluator_class_definer.rb
+- lib/factory_bot/factory.rb
+- lib/factory_bot/factory_runner.rb
+- lib/factory_bot/find_definitions.rb
+- lib/factory_bot/internal.rb
+- lib/factory_bot/linter.rb
+- lib/factory_bot/null_factory.rb
+- lib/factory_bot/null_object.rb
+- lib/factory_bot/registry.rb
+- lib/factory_bot/reload.rb
+- lib/factory_bot/sequence.rb
+- lib/factory_bot/strategy/attributes_for.rb
+- lib/factory_bot/strategy/build.rb
+- lib/factory_bot/strategy/create.rb
+- lib/factory_bot/strategy/null.rb
+- lib/factory_bot/strategy/stub.rb
+- lib/factory_bot/strategy_calculator.rb
+- lib/factory_bot/strategy_syntax_method_registrar.rb
+- lib/factory_bot/syntax.rb
+- lib/factory_bot/syntax/default.rb
+- lib/factory_bot/syntax/methods.rb
+- lib/factory_bot/syntax_runner.rb
+- lib/factory_bot/trait.rb
+- lib/factory_bot/version.rb
+homepage: https://github.com/thoughtbot/factory_bot
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/thoughtbot/factory_bot/blob/main/NEWS.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: factory_bot provides a framework and DSL for defining and using model instance
+  factories.
+test_files: []

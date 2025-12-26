@@ -1,0 +1,100 @@
+= Redis::Prescription
+
+Redis LUA stored procedure runner. Preloads (and reloads when needed, e.g. when
+scripts were flushed away) script and then runs it with `EVALSHA`.
+
+
+== Installation
+
+Add this line to your application's Gemfile:
+
+    $ bundle add redis-prescription
+
+Or install it yourself as:
+
+    $ gem install redis-prescription
+
+
+== Usage
+
+[source,ruby]
+----
+script = RedisPrescription.new <<~LUA
+  return tonumber(redis.call('GET', KEYS[1]) or 42)
+LUA
+
+redis = Redis.new
+script.call(redis, keys: [:xxx]) # => 42
+
+redis.set(:xxx, 123)
+script.call(redis, keys: [:xxx]) # => 123
+----
+
+
+== Compatibility
+
+This library aims to support and is tested against:
+
+* https://www.ruby-lang.org[Ruby]
+** MRI 2.7.x
+** MRI 3.0.x
+** MRI 3.1.x
+** MRI 3.2.x
+* https://redis.io[Redis Server]
+** 6.0.x
+** 6.2.x
+** 7.0.x
+* https://github.com/redis/redis-rb[redis-rb]
+** 4.1.x
+** 4.2.x
+** 4.3.x
+** 4.4.x
+** 4.5.x
+** 4.6.x
+** 4.7.x
+** 4.8.x
+** 5.0.x
+* https://github.com/resque/redis-namespace[redis-namespace]
+** 1.10.x
+* https://github.com/redis-rb/redis-client[redis-client]
+** 0.12.x
+** 0.13.x
+** 0.14.x
+
+If something doesn't work on one of these versions, it's a bug.
+
+This library may inadvertently work (or seem to work) on other Ruby versions,
+however support will only be provided for the versions listed above.
+
+If you would like this library to support another Ruby version or
+implementation, you may volunteer to be a maintainer. Being a maintainer
+entails making sure all tests run and pass on that implementation. When
+something breaks on your implementation, you will be responsible for providing
+patches in a timely fashion. If critical issues for a particular implementation
+exist at the time of a major release, support for that Ruby version may be
+dropped.
+
+The same applies to *Redis Server*, *redis-rb*, *redis-namespace*,
+and *redis-client* support.
+
+
+== Similar Projects
+
+* https://github.com/Shopify/wolverine
+
+
+== Development
+
+  scripts/update-gemfiles
+  scripts/run-rspec
+  bundle exec rubocop
+
+
+== Contributing
+
+* Fork redis-prescription
+* Make your changes
+* Ensure all tests pass (`bundle exec rake`)
+* Send a merge request
+* If we like them we'll merge them
+* If we've accepted a patch, feel free to ask for commit access!

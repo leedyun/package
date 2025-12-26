@@ -1,0 +1,47 @@
+--- !ruby/object:Gem::Specification
+name: to_bool
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- Bryan Ricker
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-10 00:00:00.000000000 Z
+dependencies: []
+description: Super-simple gem that extends some Ruby classes with a "to_bool" method,
+  which converts any object naturally into a boolean.
+email:
+- rubygems@bryanricker.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/to_bool.rb
+- spec/to_bool_spec.rb
+homepage: http://github.com/bricker/to_bool
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: Convert any object naturally into a boolean
+test_files:
+- spec/to_bool_spec.rb

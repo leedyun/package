@@ -1,0 +1,267 @@
+--- !ruby/object:Gem::Specification
+name: chef-zero
+version: !ruby/object:Gem::Version
+  version: 15.0.11
+platform: ruby
+authors:
+- Chef Software, Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-10-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: mixlib-log
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: uuidtools
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: ffi-yajl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.6
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Self-contained, easy-setup, fast-start in-memory Chef server for testing
+  and solo setup purposes
+email: oss@chef.io
+executables:
+- chef-zero
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- Rakefile
+- bin/chef-zero
+- chef-zero.gemspec
+- lib/chef_zero.rb
+- lib/chef_zero/chef_data/acl_path.rb
+- lib/chef_zero/chef_data/cookbook_data.rb
+- lib/chef_zero/chef_data/data_normalizer.rb
+- lib/chef_zero/chef_data/default_creator.rb
+- lib/chef_zero/data_store/data_already_exists_error.rb
+- lib/chef_zero/data_store/data_error.rb
+- lib/chef_zero/data_store/data_not_found_error.rb
+- lib/chef_zero/data_store/default_facade.rb
+- lib/chef_zero/data_store/interface_v1.rb
+- lib/chef_zero/data_store/interface_v2.rb
+- lib/chef_zero/data_store/memory_store.rb
+- lib/chef_zero/data_store/memory_store_v2.rb
+- lib/chef_zero/data_store/raw_file_store.rb
+- lib/chef_zero/data_store/v1_to_v2_adapter.rb
+- lib/chef_zero/data_store/v2_to_v1_adapter.rb
+- lib/chef_zero/dist.rb
+- lib/chef_zero/endpoints/acl_endpoint.rb
+- lib/chef_zero/endpoints/acls_endpoint.rb
+- lib/chef_zero/endpoints/actor_default_key_endpoint.rb
+- lib/chef_zero/endpoints/actor_endpoint.rb
+- lib/chef_zero/endpoints/actor_key_endpoint.rb
+- lib/chef_zero/endpoints/actor_keys_endpoint.rb
+- lib/chef_zero/endpoints/actors_endpoint.rb
+- lib/chef_zero/endpoints/authenticate_user_endpoint.rb
+- lib/chef_zero/endpoints/container_endpoint.rb
+- lib/chef_zero/endpoints/containers_endpoint.rb
+- lib/chef_zero/endpoints/controls_endpoint.rb
+- lib/chef_zero/endpoints/cookbook_artifact_endpoint.rb
+- lib/chef_zero/endpoints/cookbook_artifact_identifier_endpoint.rb
+- lib/chef_zero/endpoints/cookbook_artifacts_endpoint.rb
+- lib/chef_zero/endpoints/cookbook_endpoint.rb
+- lib/chef_zero/endpoints/cookbook_version_endpoint.rb
+- lib/chef_zero/endpoints/cookbooks_base.rb
+- lib/chef_zero/endpoints/cookbooks_endpoint.rb
+- lib/chef_zero/endpoints/data_bag_endpoint.rb
+- lib/chef_zero/endpoints/data_bag_item_endpoint.rb
+- lib/chef_zero/endpoints/data_bags_endpoint.rb
+- lib/chef_zero/endpoints/dummy_endpoint.rb
+- lib/chef_zero/endpoints/environment_cookbook_endpoint.rb
+- lib/chef_zero/endpoints/environment_cookbook_versions_endpoint.rb
+- lib/chef_zero/endpoints/environment_cookbooks_endpoint.rb
+- lib/chef_zero/endpoints/environment_endpoint.rb
+- lib/chef_zero/endpoints/environment_nodes_endpoint.rb
+- lib/chef_zero/endpoints/environment_recipes_endpoint.rb
+- lib/chef_zero/endpoints/environment_role_endpoint.rb
+- lib/chef_zero/endpoints/file_store_file_endpoint.rb
+- lib/chef_zero/endpoints/group_endpoint.rb
+- lib/chef_zero/endpoints/groups_endpoint.rb
+- lib/chef_zero/endpoints/license_endpoint.rb
+- lib/chef_zero/endpoints/node_endpoint.rb
+- lib/chef_zero/endpoints/node_identifiers_endpoint.rb
+- lib/chef_zero/endpoints/nodes_endpoint.rb
+- lib/chef_zero/endpoints/not_found_endpoint.rb
+- lib/chef_zero/endpoints/organization_association_request_endpoint.rb
+- lib/chef_zero/endpoints/organization_association_requests_endpoint.rb
+- lib/chef_zero/endpoints/organization_authenticate_user_endpoint.rb
+- lib/chef_zero/endpoints/organization_endpoint.rb
+- lib/chef_zero/endpoints/organization_user_base.rb
+- lib/chef_zero/endpoints/organization_user_default_key_endpoint.rb
+- lib/chef_zero/endpoints/organization_user_endpoint.rb
+- lib/chef_zero/endpoints/organization_user_key_endpoint.rb
+- lib/chef_zero/endpoints/organization_user_keys_endpoint.rb
+- lib/chef_zero/endpoints/organization_users_endpoint.rb
+- lib/chef_zero/endpoints/organization_validator_key_endpoint.rb
+- lib/chef_zero/endpoints/organizations_endpoint.rb
+- lib/chef_zero/endpoints/policies_endpoint.rb
+- lib/chef_zero/endpoints/policy_endpoint.rb
+- lib/chef_zero/endpoints/policy_group_endpoint.rb
+- lib/chef_zero/endpoints/policy_group_policy_endpoint.rb
+- lib/chef_zero/endpoints/policy_groups_endpoint.rb
+- lib/chef_zero/endpoints/policy_revision_endpoint.rb
+- lib/chef_zero/endpoints/policy_revisions_endpoint.rb
+- lib/chef_zero/endpoints/principal_endpoint.rb
+- lib/chef_zero/endpoints/rest_list_endpoint.rb
+- lib/chef_zero/endpoints/rest_object_endpoint.rb
+- lib/chef_zero/endpoints/role_endpoint.rb
+- lib/chef_zero/endpoints/role_environments_endpoint.rb
+- lib/chef_zero/endpoints/sandbox_endpoint.rb
+- lib/chef_zero/endpoints/sandboxes_endpoint.rb
+- lib/chef_zero/endpoints/search_endpoint.rb
+- lib/chef_zero/endpoints/searches_endpoint.rb
+- lib/chef_zero/endpoints/server_api_version_endpoint.rb
+- lib/chef_zero/endpoints/system_recovery_endpoint.rb
+- lib/chef_zero/endpoints/universe_endpoint.rb
+- lib/chef_zero/endpoints/user_association_request_endpoint.rb
+- lib/chef_zero/endpoints/user_association_requests_count_endpoint.rb
+- lib/chef_zero/endpoints/user_association_requests_endpoint.rb
+- lib/chef_zero/endpoints/user_organizations_endpoint.rb
+- lib/chef_zero/endpoints/version_endpoint.rb
+- lib/chef_zero/log.rb
+- lib/chef_zero/rest_base.rb
+- lib/chef_zero/rest_error_response.rb
+- lib/chef_zero/rest_request.rb
+- lib/chef_zero/rest_router.rb
+- lib/chef_zero/rspec.rb
+- lib/chef_zero/server.rb
+- lib/chef_zero/socketless_server_map.rb
+- lib/chef_zero/solr/query/binary_operator.rb
+- lib/chef_zero/solr/query/phrase.rb
+- lib/chef_zero/solr/query/range_query.rb
+- lib/chef_zero/solr/query/regexpable_query.rb
+- lib/chef_zero/solr/query/subquery.rb
+- lib/chef_zero/solr/query/term.rb
+- lib/chef_zero/solr/query/unary_operator.rb
+- lib/chef_zero/solr/solr_doc.rb
+- lib/chef_zero/solr/solr_parser.rb
+- lib/chef_zero/version.rb
+- spec/run_oc_pedant.rb
+- spec/search_spec.rb
+- spec/server_spec.rb
+- spec/socketless_server_map_spec.rb
+- spec/support/oc_pedant.rb
+- spec/support/secrets.json
+- spec/support/stickywicket.pem
+homepage: https://github.com/chef/chef-zero
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Self-contained, easy-setup, fast-start in-memory Chef server for testing
+  and solo setup purposes
+test_files: []

@@ -1,0 +1,270 @@
+--- !ruby/object:Gem::Specification
+name: sorbet-runtime
+version: !ruby/object:Gem::Version
+  version: 0.5.11770
+platform: ruby
+authors:
+- Stripe
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.57.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.57.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.13.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.13.2
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.5
+- !ruby/object:Gem::Dependency
+  name: debug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: subprocess
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+description: Sorbet's runtime type checking component
+email: 
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/sorbet-runtime.rb
+- lib/types/_types.rb
+- lib/types/abstract_utils.rb
+- lib/types/boolean.rb
+- lib/types/compatibility_patches.rb
+- lib/types/configuration.rb
+- lib/types/enum.rb
+- lib/types/generic.rb
+- lib/types/helpers.rb
+- lib/types/non_forcing_constants.rb
+- lib/types/private/abstract/data.rb
+- lib/types/private/abstract/declare.rb
+- lib/types/private/abstract/hooks.rb
+- lib/types/private/abstract/validate.rb
+- lib/types/private/caller_utils.rb
+- lib/types/private/casts.rb
+- lib/types/private/class_utils.rb
+- lib/types/private/decl_state.rb
+- lib/types/private/final.rb
+- lib/types/private/methods/_methods.rb
+- lib/types/private/methods/call_validation.rb
+- lib/types/private/methods/call_validation_2_6.rb
+- lib/types/private/methods/call_validation_2_7.rb
+- lib/types/private/methods/decl_builder.rb
+- lib/types/private/methods/modes.rb
+- lib/types/private/methods/signature.rb
+- lib/types/private/methods/signature_validation.rb
+- lib/types/private/mixins/mixins.rb
+- lib/types/private/retry.rb
+- lib/types/private/runtime_levels.rb
+- lib/types/private/sealed.rb
+- lib/types/private/types/not_typed.rb
+- lib/types/private/types/simple_pair_union.rb
+- lib/types/private/types/string_holder.rb
+- lib/types/private/types/type_alias.rb
+- lib/types/private/types/void.rb
+- lib/types/props/_props.rb
+- lib/types/props/constructor.rb
+- lib/types/props/custom_type.rb
+- lib/types/props/decorator.rb
+- lib/types/props/errors.rb
+- lib/types/props/generated_code_validation.rb
+- lib/types/props/has_lazily_specialized_methods.rb
+- lib/types/props/optional.rb
+- lib/types/props/plugin.rb
+- lib/types/props/pretty_printable.rb
+- lib/types/props/private/apply_default.rb
+- lib/types/props/private/deserializer_generator.rb
+- lib/types/props/private/parser.rb
+- lib/types/props/private/serde_transform.rb
+- lib/types/props/private/serializer_generator.rb
+- lib/types/props/private/setter_factory.rb
+- lib/types/props/serializable.rb
+- lib/types/props/type_validation.rb
+- lib/types/props/utils.rb
+- lib/types/props/weak_constructor.rb
+- lib/types/sig.rb
+- lib/types/struct.rb
+- lib/types/types/anything.rb
+- lib/types/types/attached_class.rb
+- lib/types/types/base.rb
+- lib/types/types/class_of.rb
+- lib/types/types/enum.rb
+- lib/types/types/fixed_array.rb
+- lib/types/types/fixed_hash.rb
+- lib/types/types/intersection.rb
+- lib/types/types/noreturn.rb
+- lib/types/types/proc.rb
+- lib/types/types/self_type.rb
+- lib/types/types/simple.rb
+- lib/types/types/t_enum.rb
+- lib/types/types/type_member.rb
+- lib/types/types/type_parameter.rb
+- lib/types/types/type_template.rb
+- lib/types/types/type_variable.rb
+- lib/types/types/typed_array.rb
+- lib/types/types/typed_class.rb
+- lib/types/types/typed_enumerable.rb
+- lib/types/types/typed_enumerator.rb
+- lib/types/types/typed_enumerator_chain.rb
+- lib/types/types/typed_enumerator_lazy.rb
+- lib/types/types/typed_hash.rb
+- lib/types/types/typed_range.rb
+- lib/types/types/typed_set.rb
+- lib/types/types/union.rb
+- lib/types/types/untyped.rb
+- lib/types/utils.rb
+homepage: https://sorbet.org
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/sorbet/sorbet
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key: 
+specification_version: 4
+summary: Sorbet runtime
+test_files: []

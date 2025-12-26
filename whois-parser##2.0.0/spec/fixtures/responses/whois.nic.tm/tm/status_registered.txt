@@ -1,0 +1,12 @@
+
+Domain : google.tm
+Status : Client Updt Lock
+Expiry : 2020-01-30
+
+NS 1   : ns1.google.com
+NS 2   : ns2.google.com
+NS 3   : ns3.google.com
+NS 4   : ns4.google.com
+
+
+

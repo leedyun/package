@@ -1,0 +1,166 @@
+--- !ruby/object:Gem::Specification
+name: rails-settings-cached
+version: !ruby/object:Gem::Version
+  version: 2.9.6
+platform: ruby
+authors:
+- Jason Lee
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: "\n  The best solution for store global settings in Rails applications.\n\n
+  \ This gem will managing a table of а global key, value pairs easy. Think of it
+  like a\n  global Hash stored in your database, that uses simple ActiveRecord like
+  methods for manipulation.\n\n  Keep track of any global setting that you dont want
+  to hard code into your rails app.\n  You can store any kind of object.  Strings,
+  numbers, arrays, or any object.\n  "
+email: huacnlee@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- Rakefile
+- lib/generators/settings/install_generator.rb
+- lib/generators/settings/templates/migration.rb
+- lib/generators/settings/templates/model.rb
+- lib/rails-settings-cached.rb
+- lib/rails-settings/base.rb
+- lib/rails-settings/configuration.rb
+- lib/rails-settings/fields/array.rb
+- lib/rails-settings/fields/base.rb
+- lib/rails-settings/fields/big_decimal.rb
+- lib/rails-settings/fields/boolean.rb
+- lib/rails-settings/fields/float.rb
+- lib/rails-settings/fields/hash.rb
+- lib/rails-settings/fields/integer.rb
+- lib/rails-settings/fields/string.rb
+- lib/rails-settings/middleware.rb
+- lib/rails-settings/railtie.rb
+- lib/rails-settings/request_cache.rb
+- lib/rails-settings/version.rb
+homepage: https://github.com/huacnlee/rails-settings-cached
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: The best solution for store global settings in Rails applications.
+test_files: []

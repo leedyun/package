@@ -1,0 +1,134 @@
+--- !ruby/object:Gem::Specification
+name: sentry-raven
+version: !ruby/object:Gem::Version
+  version: 3.1.2
+platform: ruby
+authors:
+- Sentry Team
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2021-03-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: A gem that provides a client interface for the Sentry error logger
+email: accounts@sentry.io
+executables:
+- raven
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".craft.yml"
+- ".scripts/bump-version.rb"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- Makefile
+- README.md
+- Rakefile
+- exe/raven
+- lib/raven.rb
+- lib/raven/backtrace.rb
+- lib/raven/base.rb
+- lib/raven/breadcrumbs.rb
+- lib/raven/breadcrumbs/active_support_logger.rb
+- lib/raven/breadcrumbs/logger.rb
+- lib/raven/breadcrumbs/sentry_logger.rb
+- lib/raven/cli.rb
+- lib/raven/client.rb
+- lib/raven/configuration.rb
+- lib/raven/context.rb
+- lib/raven/core_ext/object/deep_dup.rb
+- lib/raven/core_ext/object/duplicable.rb
+- lib/raven/event.rb
+- lib/raven/helpers/deprecation_helper.rb
+- lib/raven/instance.rb
+- lib/raven/integrations/delayed_job.rb
+- lib/raven/integrations/rack-timeout.rb
+- lib/raven/integrations/rack.rb
+- lib/raven/integrations/rails.rb
+- lib/raven/integrations/rails/active_job.rb
+- lib/raven/integrations/rails/backtrace_cleaner.rb
+- lib/raven/integrations/rails/controller_methods.rb
+- lib/raven/integrations/rails/controller_transaction.rb
+- lib/raven/integrations/rails/overrides/debug_exceptions_catcher.rb
+- lib/raven/integrations/rails/overrides/streaming_reporter.rb
+- lib/raven/integrations/railties.rb
+- lib/raven/integrations/rake.rb
+- lib/raven/integrations/sidekiq.rb
+- lib/raven/integrations/sidekiq/cleanup_middleware.rb
+- lib/raven/integrations/sidekiq/error_handler.rb
+- lib/raven/integrations/tasks.rb
+- lib/raven/interface.rb
+- lib/raven/interfaces/exception.rb
+- lib/raven/interfaces/http.rb
+- lib/raven/interfaces/message.rb
+- lib/raven/interfaces/single_exception.rb
+- lib/raven/interfaces/stack_trace.rb
+- lib/raven/linecache.rb
+- lib/raven/logger.rb
+- lib/raven/processor.rb
+- lib/raven/processor/cookies.rb
+- lib/raven/processor/http_headers.rb
+- lib/raven/processor/post_data.rb
+- lib/raven/processor/removecircularreferences.rb
+- lib/raven/processor/removestacktrace.rb
+- lib/raven/processor/sanitizedata.rb
+- lib/raven/processor/utf8conversion.rb
+- lib/raven/transports.rb
+- lib/raven/transports/dummy.rb
+- lib/raven/transports/http.rb
+- lib/raven/transports/stdout.rb
+- lib/raven/utils/context_filter.rb
+- lib/raven/utils/deep_merge.rb
+- lib/raven/utils/exception_cause_chain.rb
+- lib/raven/utils/real_ip.rb
+- lib/raven/utils/request_id.rb
+- lib/raven/version.rb
+- lib/sentry-raven-without-integrations.rb
+- lib/sentry-raven.rb
+- lib/sentry_raven_without_integrations.rb
+- sentry-raven.gemspec
+homepage: https://github.com/getsentry/raven-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: |+
+  `sentry-raven` is deprecated! Please migrate to `sentry-ruby`
+
+  See https://docs.sentry.io/platforms/ruby/migration for the migration guide.
+
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A gem that provides a client interface for the Sentry error logger
+test_files: []

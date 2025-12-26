@@ -1,0 +1,209 @@
+--- !ruby/object:Gem::Specification
+name: resque
+version: !ruby/object:Gem::Version
+  version: 2.7.0
+platform: ruby
+authors:
+- Chris Wanstrath
+- Steve Klabnik
+- Terence Lee
+- Michael Bianco
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: redis-namespace
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: mono_logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: thin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |2
+      Resque is a Redis-backed Ruby library for creating background jobs,
+      placing those jobs on multiple queues, and processing them later.
+
+      Background jobs can be any Ruby class or module that responds to
+      perform. Your existing classes can easily be converted to background
+      jobs or you can create new classes specifically to do work. Or, you
+      can do both.
+
+      Resque is heavily inspired by DelayedJob (which rocks) and is
+      comprised of three parts:
+
+      * A Ruby library for creating, querying, and processing jobs
+      * A Rake task for starting a worker which processes jobs
+      * A Sinatra app for monitoring queues, jobs, and workers.
+email: steve@steveklabnik.com
+executables:
+- resque
+- resque-web
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.markdown
+files:
+- HISTORY.md
+- LICENSE
+- README.markdown
+- Rakefile
+- bin/resque
+- bin/resque-web
+- lib/resque.rb
+- lib/resque/data_store.rb
+- lib/resque/errors.rb
+- lib/resque/failure.rb
+- lib/resque/failure/airbrake.rb
+- lib/resque/failure/base.rb
+- lib/resque/failure/multiple.rb
+- lib/resque/failure/redis.rb
+- lib/resque/failure/redis_multi_queue.rb
+- lib/resque/helpers.rb
+- lib/resque/job.rb
+- lib/resque/log_formatters/quiet_formatter.rb
+- lib/resque/log_formatters/verbose_formatter.rb
+- lib/resque/log_formatters/very_verbose_formatter.rb
+- lib/resque/logging.rb
+- lib/resque/plugin.rb
+- lib/resque/railtie.rb
+- lib/resque/server.rb
+- lib/resque/server/public/favicon.ico
+- lib/resque/server/public/idle.png
+- lib/resque/server/public/jquery-3.6.0.min.js
+- lib/resque/server/public/jquery.relatize_date.js
+- lib/resque/server/public/main.js
+- lib/resque/server/public/poll.png
+- lib/resque/server/public/ranger.js
+- lib/resque/server/public/reset.css
+- lib/resque/server/public/style.css
+- lib/resque/server/public/working.png
+- lib/resque/server/views/error.erb
+- lib/resque/server/views/failed.erb
+- lib/resque/server/views/failed_job.erb
+- lib/resque/server/views/failed_queues_overview.erb
+- lib/resque/server/views/job_class.erb
+- lib/resque/server/views/key_sets.erb
+- lib/resque/server/views/key_string.erb
+- lib/resque/server/views/layout.erb
+- lib/resque/server/views/next_more.erb
+- lib/resque/server/views/overview.erb
+- lib/resque/server/views/processing.erb
+- lib/resque/server/views/queues.erb
+- lib/resque/server/views/stats.erb
+- lib/resque/server/views/workers.erb
+- lib/resque/server/views/working.erb
+- lib/resque/server_helper.rb
+- lib/resque/stat.rb
+- lib/resque/tasks.rb
+- lib/resque/thread_signal.rb
+- lib/resque/vendor/utf8_util.rb
+- lib/resque/version.rb
+- lib/resque/web_runner.rb
+- lib/resque/worker.rb
+- lib/tasks/redis.rake
+- lib/tasks/resque.rake
+homepage: https://github.com/resque/resque
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/resque/resque/blob/master/HISTORY.md
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Resque is a Redis-backed queueing system.
+test_files: []

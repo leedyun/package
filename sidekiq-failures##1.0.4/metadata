@@ -1,0 +1,168 @@
+--- !ruby/object:Gem::Specification
+name: sidekiq-failures
+version: !ruby/object:Gem::Version
+  version: 1.0.4
+platform: ruby
+authors:
+- Marcelo Silveira
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-09-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sidekiq
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sprockets
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Keep track of Sidekiq failed jobs
+email:
+- marcelo@mhfs.com.br
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/sidekiq-failures.rb
+- lib/sidekiq/failures.rb
+- lib/sidekiq/failures/failure_set.rb
+- lib/sidekiq/failures/locales/en.yml
+- lib/sidekiq/failures/locales/ja.yml
+- lib/sidekiq/failures/locales/pt-BR.yml
+- lib/sidekiq/failures/locales/zh-cn.yml
+- lib/sidekiq/failures/middleware.rb
+- lib/sidekiq/failures/sorted_entry.rb
+- lib/sidekiq/failures/version.rb
+- lib/sidekiq/failures/views/failure.erb
+- lib/sidekiq/failures/views/failures.erb
+- lib/sidekiq/failures/web_extension.rb
+- sidekiq-failures.gemspec
+- test/failures_test.rb
+- test/middleware_test.rb
+- test/test_helper.rb
+- test/web_extension_test.rb
+homepage: https://github.com/mhfs/sidekiq-failures/
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key:
+specification_version: 4
+summary: Keeps track of Sidekiq failed jobs and adds a tab to the Web UI to let you
+  browse them. Makes use of Sidekiq's custom tabs and middleware chain.
+test_files: []

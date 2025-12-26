@@ -1,0 +1,87 @@
+--- !ruby/object:Gem::Specification
+name: to_regexp
+version: !ruby/object:Gem::Version
+  version: 0.2.1
+platform: ruby
+authors:
+- Seamus Abshere
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-05-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ensure-encoding
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Provides String#to_regexp, for example if you want to make regexps out
+  of a CSV you just imported.
+email:
+- seamus@abshere.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- CHANGELOG
+- Gemfile
+- History.txt
+- LICENSE
+- README.rdoc
+- Rakefile
+- lib/to_regexp.rb
+- lib/to_regexp/version.rb
+- test/helper.rb
+- test/test_to_regexp.rb
+- to_regexp.gemspec
+homepage: https://github.com/seamusabshere/to_regexp
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: to_regexp
+rubygems_version: 2.0.3
+signing_key: 
+specification_version: 4
+summary: Provides String#to_regexp
+test_files:
+- test/helper.rb
+- test/test_to_regexp.rb
+has_rdoc: 

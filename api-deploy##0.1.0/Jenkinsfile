@@ -1,0 +1,14 @@
+#!/usr/bin/env groovy
+env.dockerTag = env.BUILD_TAG.toLowerCase()
+
+properties([pipelineTriggers([cron('H 23 * * *')])])
+
+stage("apply_restrictions"){
+  node(){
+    withCredentials([usernamePassword( credentialsId: 'vault_jenkins_cred_ansible_api_deploy_vault_password',
+          usernameVariable: 'UNUSED', passwordVariable: 'VP')]) {
+      checkout scm
+        sh "make apply_restrictions"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+--- !ruby/object:Gem::Specification
+name: avro_turf
+version: !ruby/object:Gem::Version
+  version: 1.18.0
+platform: ruby
+authors:
+- Daniel Schierbeck
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: avro
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.13'
+- !ruby/object:Gem::Dependency
+  name: excon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.104'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.104'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: resolv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- dasch@zendesk.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/push_gem.yml"
+- ".github/workflows/ruby.yml"
+- ".github/workflows/stale.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- avro_turf.gemspec
+- lib/avro_turf.rb
+- lib/avro_turf/cached_confluent_schema_registry.rb
+- lib/avro_turf/cached_schema_registry.rb
+- lib/avro_turf/confluent_schema_registry.rb
+- lib/avro_turf/core_ext.rb
+- lib/avro_turf/core_ext/date.rb
+- lib/avro_turf/core_ext/enumerable.rb
+- lib/avro_turf/core_ext/false_class.rb
+- lib/avro_turf/core_ext/hash.rb
+- lib/avro_turf/core_ext/nil_class.rb
+- lib/avro_turf/core_ext/numeric.rb
+- lib/avro_turf/core_ext/string.rb
+- lib/avro_turf/core_ext/symbol.rb
+- lib/avro_turf/core_ext/time.rb
+- lib/avro_turf/core_ext/true_class.rb
+- lib/avro_turf/disk_cache.rb
+- lib/avro_turf/in_memory_cache.rb
+- lib/avro_turf/messaging.rb
+- lib/avro_turf/mutable_schema_store.rb
+- lib/avro_turf/schema_registry.rb
+- lib/avro_turf/schema_store.rb
+- lib/avro_turf/schema_to_avro_patch.rb
+- lib/avro_turf/test/fake_confluent_schema_registry_server.rb
+- lib/avro_turf/test/fake_prefixed_confluent_schema_registry_server.rb
+- lib/avro_turf/test/fake_schema_registry_server.rb
+- lib/avro_turf/version.rb
+- perf/address.avsc
+- perf/encoding_size.rb
+- perf/encoding_speed.rb
+- perf/person.avsc
+- spec/avro_turf_spec.rb
+- spec/cached_confluent_schema_registry_spec.rb
+- spec/confluent_schema_registry_spec.rb
+- spec/core_ext/date_spec.rb
+- spec/core_ext/enumerable_spec.rb
+- spec/core_ext/false_class_spec.rb
+- spec/core_ext/hash_spec.rb
+- spec/core_ext/nil_class_spec.rb
+- spec/core_ext/numeric_spec.rb
+- spec/core_ext/string_spec.rb
+- spec/core_ext/symbol_spec.rb
+- spec/core_ext/time_spec.rb
+- spec/core_ext/true_class_spec.rb
+- spec/disk_cached_confluent_schema_registry_spec.rb
+- spec/messaging_spec.rb
+- spec/schema_store_spec.rb
+- spec/schema_to_avro_patch_spec.rb
+- spec/spec_helper.rb
+- spec/support/authorized_fake_confluent_schema_registry_server.rb
+- spec/support/authorized_fake_prefixed_confluent_schema_registry_server.rb
+- spec/support/confluent_schema_registry_context.rb
+- spec/test/fake_confluent_schema_registry_server_spec.rb
+homepage: https://github.com/dasch/avro_turf
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: |2
+
+  avro_turf v0.8.0 deprecates the names AvroTurf::SchemaRegistry,
+  AvroTurf::CachedSchemaRegistry, and FakeSchemaRegistryServer.
+
+  Use AvroTurf::ConfluentSchemaRegistry, AvroTurf::CachedConfluentSchemaRegistry,
+  and FakeConfluentSchemaRegistryServer instead.
+
+  See https://github.com/dasch/avro_turf#deprecation-notice
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: A library that makes it easier to use the Avro serialization format from
+  Ruby
+test_files:
+- spec/avro_turf_spec.rb
+- spec/cached_confluent_schema_registry_spec.rb
+- spec/confluent_schema_registry_spec.rb
+- spec/core_ext/date_spec.rb
+- spec/core_ext/enumerable_spec.rb
+- spec/core_ext/false_class_spec.rb
+- spec/core_ext/hash_spec.rb
+- spec/core_ext/nil_class_spec.rb
+- spec/core_ext/numeric_spec.rb
+- spec/core_ext/string_spec.rb
+- spec/core_ext/symbol_spec.rb
+- spec/core_ext/time_spec.rb
+- spec/core_ext/true_class_spec.rb
+- spec/disk_cached_confluent_schema_registry_spec.rb
+- spec/messaging_spec.rb
+- spec/schema_store_spec.rb
+- spec/schema_to_avro_patch_spec.rb
+- spec/spec_helper.rb
+- spec/support/authorized_fake_confluent_schema_registry_server.rb
+- spec/support/authorized_fake_prefixed_confluent_schema_registry_server.rb
+- spec/support/confluent_schema_registry_context.rb
+- spec/test/fake_confluent_schema_registry_server_spec.rb

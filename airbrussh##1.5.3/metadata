@@ -1,0 +1,155 @@
+--- !ruby/object:Gem::Specification
+name: airbrussh
+version: !ruby/object:Gem::Version
+  version: 1.5.3
+platform: ruby
+authors:
+- Matt Brictson
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-08-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sshkit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+description: A replacement log formatter for SSHKit that makes Capistrano output much
+  easier on the eyes. Just add Airbrussh to your Capfile and enjoy concise, useful
+  log output that is easy to read.
+email:
+- airbrussh@mattbrictson.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/airbrussh.rb
+- lib/airbrussh/capistrano.rb
+- lib/airbrussh/capistrano/tasks.rb
+- lib/airbrussh/colors.rb
+- lib/airbrussh/command_formatter.rb
+- lib/airbrussh/configuration.rb
+- lib/airbrussh/console.rb
+- lib/airbrussh/console_formatter.rb
+- lib/airbrussh/delegating_formatter.rb
+- lib/airbrussh/formatter.rb
+- lib/airbrussh/log_file_formatter.rb
+- lib/airbrussh/rake/context.rb
+- lib/airbrussh/version.rb
+- lib/sshkit/formatter/airbrussh.rb
+homepage: https://github.com/mattbrictson/airbrussh
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/mattbrictson/airbrussh/issues
+  changelog_uri: https://github.com/mattbrictson/airbrussh/releases
+  source_code_uri: https://github.com/mattbrictson/airbrussh
+  homepage_uri: https://github.com/mattbrictson/airbrussh
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: Airbrussh pretties up your SSHKit and Capistrano output
+test_files: []

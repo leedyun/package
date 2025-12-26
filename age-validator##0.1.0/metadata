@@ -1,0 +1,60 @@
+--- !ruby/object:Gem::Specification
+name: age-validator
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Francesco Renzi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-09-04 00:00:00.000000000 Z
+dependencies: []
+description: Validate age from a date field in Active Record.
+email: rentziass@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files:
+- CHANGELOG
+- README.md
+- lib/age_validator.rb
+files:
+- CHANGELOG
+- Manifest
+- README.md
+- Rakefile
+- age-validator.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/age_validator.rb
+homepage: https://github.com/rentziass/age_validator.git
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--title"
+- Age_validator
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.2'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ActiveRecord age validation.
+test_files: []

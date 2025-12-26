@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: google-cloud-errors
+version: !ruby/object:Gem::Version
+  version: 1.4.0
+platform: ruby
+authors:
+- Mike Moore
+- Chris Smith
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-03-07 00:00:00.000000000 Z
+dependencies: []
+description: google-cloud-errors defines error classes for google-cloud-ruby.
+email:
+- mike@blowmage.com
+- quartzmo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- lib/google-cloud-errors.rb
+- lib/google/cloud/errors.rb
+- lib/google/cloud/errors/version.rb
+homepage: https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-errors
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key: 
+specification_version: 4
+summary: Error classes for google-cloud-ruby
+test_files: []

@@ -1,0 +1,162 @@
+--- !ruby/object:Gem::Specification
+name: asciidoctor-include-ext
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Jakub Jirutka
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-03-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: asciidoctor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: kramdown
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.51.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.51.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.15'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.15'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: |
+  This is a reimplementation of the Asciidoctor's built-in (pre)processor for the
+  include::[] directive in extensible and more clean way. It provides the same
+  features, but you can easily adjust it or extend for your needs. For example,
+  you can change how it loads included files or add another ways how to select
+  portions of the document to include.
+email: jakub@jirutka.cz
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.adoc
+- asciidoctor-include-ext.gemspec
+- lib/asciidoctor-include-ext.rb
+- lib/asciidoctor/include_ext.rb
+- lib/asciidoctor/include_ext/include_processor.rb
+- lib/asciidoctor/include_ext/lineno_lines_selector.rb
+- lib/asciidoctor/include_ext/logging.rb
+- lib/asciidoctor/include_ext/reader_ext.rb
+- lib/asciidoctor/include_ext/tag_lines_selector.rb
+- lib/asciidoctor/include_ext/version.rb
+homepage: https://github.com/jirutka/asciidoctor-include-ext
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: Asciidoctor's standard include::[] processor reimplemented as an extension
+test_files: []

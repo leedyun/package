@@ -1,0 +1,514 @@
+--- !ruby/object:Gem::Specification
+name: protobuf
+version: !ruby/object:Gem::Version
+  version: 3.10.9
+platform: ruby
+authors:
+- BJ Neilsen
+- Brandon Dewitt
+- Devin Christensen
+- Adam Hutchison
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thread_safe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ffi-rzmq
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.81.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.81.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Google Protocol Buffers serialization and RPC implementation for Ruby.
+email:
+- bj.neilsen+protobuf@gmail.com
+- brandonsdewitt+protobuf@gmail.com
+- quixoten@gmail.com
+- liveh2o@gmail.com
+executables:
+- protoc-gen-ruby
+- rpc_server
+extensions: []
+extra_rdoc_files: []
+files:
+- ".circleci/config.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- CHANGES.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/protoc-gen-ruby
+- bin/rpc_server
+- lib/protobuf.rb
+- lib/protobuf/cli.rb
+- lib/protobuf/code_generator.rb
+- lib/protobuf/decoder.rb
+- lib/protobuf/deprecation.rb
+- lib/protobuf/descriptors.rb
+- lib/protobuf/descriptors/google/protobuf/compiler/plugin.pb.rb
+- lib/protobuf/descriptors/google/protobuf/descriptor.pb.rb
+- lib/protobuf/encoder.rb
+- lib/protobuf/enum.rb
+- lib/protobuf/exceptions.rb
+- lib/protobuf/field.rb
+- lib/protobuf/field/base_field.rb
+- lib/protobuf/field/base_field_object_definitions.rb
+- lib/protobuf/field/bool_field.rb
+- lib/protobuf/field/bytes_field.rb
+- lib/protobuf/field/double_field.rb
+- lib/protobuf/field/enum_field.rb
+- lib/protobuf/field/field_array.rb
+- lib/protobuf/field/field_hash.rb
+- lib/protobuf/field/fixed32_field.rb
+- lib/protobuf/field/fixed64_field.rb
+- lib/protobuf/field/float_field.rb
+- lib/protobuf/field/int32_field.rb
+- lib/protobuf/field/int64_field.rb
+- lib/protobuf/field/integer_field.rb
+- lib/protobuf/field/message_field.rb
+- lib/protobuf/field/sfixed32_field.rb
+- lib/protobuf/field/sfixed64_field.rb
+- lib/protobuf/field/signed_integer_field.rb
+- lib/protobuf/field/sint32_field.rb
+- lib/protobuf/field/sint64_field.rb
+- lib/protobuf/field/string_field.rb
+- lib/protobuf/field/uint32_field.rb
+- lib/protobuf/field/uint64_field.rb
+- lib/protobuf/field/varint_field.rb
+- lib/protobuf/generators/base.rb
+- lib/protobuf/generators/enum_generator.rb
+- lib/protobuf/generators/extension_generator.rb
+- lib/protobuf/generators/field_generator.rb
+- lib/protobuf/generators/file_generator.rb
+- lib/protobuf/generators/group_generator.rb
+- lib/protobuf/generators/message_generator.rb
+- lib/protobuf/generators/option_generator.rb
+- lib/protobuf/generators/printable.rb
+- lib/protobuf/generators/service_generator.rb
+- lib/protobuf/lifecycle.rb
+- lib/protobuf/logging.rb
+- lib/protobuf/message.rb
+- lib/protobuf/message/fields.rb
+- lib/protobuf/message/serialization.rb
+- lib/protobuf/optionable.rb
+- lib/protobuf/rpc/buffer.rb
+- lib/protobuf/rpc/client.rb
+- lib/protobuf/rpc/connectors/base.rb
+- lib/protobuf/rpc/connectors/ping.rb
+- lib/protobuf/rpc/connectors/socket.rb
+- lib/protobuf/rpc/connectors/zmq.rb
+- lib/protobuf/rpc/dynamic_discovery.pb.rb
+- lib/protobuf/rpc/env.rb
+- lib/protobuf/rpc/error.rb
+- lib/protobuf/rpc/error/client_error.rb
+- lib/protobuf/rpc/error/server_error.rb
+- lib/protobuf/rpc/middleware.rb
+- lib/protobuf/rpc/middleware/exception_handler.rb
+- lib/protobuf/rpc/middleware/logger.rb
+- lib/protobuf/rpc/middleware/request_decoder.rb
+- lib/protobuf/rpc/middleware/response_encoder.rb
+- lib/protobuf/rpc/middleware/runner.rb
+- lib/protobuf/rpc/rpc.pb.rb
+- lib/protobuf/rpc/rpc_method.rb
+- lib/protobuf/rpc/server.rb
+- lib/protobuf/rpc/servers/socket/server.rb
+- lib/protobuf/rpc/servers/socket/worker.rb
+- lib/protobuf/rpc/servers/socket_runner.rb
+- lib/protobuf/rpc/servers/zmq/broker.rb
+- lib/protobuf/rpc/servers/zmq/server.rb
+- lib/protobuf/rpc/servers/zmq/util.rb
+- lib/protobuf/rpc/servers/zmq/worker.rb
+- lib/protobuf/rpc/servers/zmq_runner.rb
+- lib/protobuf/rpc/service.rb
+- lib/protobuf/rpc/service_directory.rb
+- lib/protobuf/rpc/service_dispatcher.rb
+- lib/protobuf/rpc/service_filters.rb
+- lib/protobuf/rpc/stat.rb
+- lib/protobuf/socket.rb
+- lib/protobuf/tasks.rb
+- lib/protobuf/tasks/compile.rake
+- lib/protobuf/varint.rb
+- lib/protobuf/varint_pure.rb
+- lib/protobuf/version.rb
+- lib/protobuf/wire_type.rb
+- lib/protobuf/zmq.rb
+- profile.html
+- proto/dynamic_discovery.proto
+- proto/google/protobuf/compiler/plugin.proto
+- proto/google/protobuf/descriptor.proto
+- proto/rpc.proto
+- protobuf.gemspec
+- spec/benchmark/tasks.rb
+- spec/bin/protoc-gen-ruby_spec.rb
+- spec/encoding/all_types_spec.rb
+- spec/encoding/extreme_values_spec.rb
+- spec/functional/class_inheritance_spec.rb
+- spec/functional/code_generator_spec.rb
+- spec/functional/socket_server_spec.rb
+- spec/functional/zmq_server_spec.rb
+- spec/lib/protobuf/cli_spec.rb
+- spec/lib/protobuf/code_generator_spec.rb
+- spec/lib/protobuf/enum_spec.rb
+- spec/lib/protobuf/field/bool_field_spec.rb
+- spec/lib/protobuf/field/double_field_spec.rb
+- spec/lib/protobuf/field/enum_field_spec.rb
+- spec/lib/protobuf/field/field_array_spec.rb
+- spec/lib/protobuf/field/field_hash_spec.rb
+- spec/lib/protobuf/field/fixed32_field_spec.rb
+- spec/lib/protobuf/field/fixed64_field_spec.rb
+- spec/lib/protobuf/field/float_field_spec.rb
+- spec/lib/protobuf/field/int32_field_spec.rb
+- spec/lib/protobuf/field/int64_field_spec.rb
+- spec/lib/protobuf/field/message_field_spec.rb
+- spec/lib/protobuf/field/sfixed32_field_spec.rb
+- spec/lib/protobuf/field/sfixed64_field_spec.rb
+- spec/lib/protobuf/field/sint32_field_spec.rb
+- spec/lib/protobuf/field/sint64_field_spec.rb
+- spec/lib/protobuf/field/string_field_spec.rb
+- spec/lib/protobuf/field/uint32_field_spec.rb
+- spec/lib/protobuf/field/uint64_field_spec.rb
+- spec/lib/protobuf/field_spec.rb
+- spec/lib/protobuf/generators/base_spec.rb
+- spec/lib/protobuf/generators/enum_generator_spec.rb
+- spec/lib/protobuf/generators/extension_generator_spec.rb
+- spec/lib/protobuf/generators/field_generator_spec.rb
+- spec/lib/protobuf/generators/file_generator_spec.rb
+- spec/lib/protobuf/generators/message_generator_spec.rb
+- spec/lib/protobuf/generators/service_generator_spec.rb
+- spec/lib/protobuf/lifecycle_spec.rb
+- spec/lib/protobuf/message_spec.rb
+- spec/lib/protobuf/optionable_spec.rb
+- spec/lib/protobuf/rpc/client_spec.rb
+- spec/lib/protobuf/rpc/connectors/base_spec.rb
+- spec/lib/protobuf/rpc/connectors/ping_spec.rb
+- spec/lib/protobuf/rpc/connectors/socket_spec.rb
+- spec/lib/protobuf/rpc/connectors/zmq_spec.rb
+- spec/lib/protobuf/rpc/middleware/exception_handler_spec.rb
+- spec/lib/protobuf/rpc/middleware/logger_spec.rb
+- spec/lib/protobuf/rpc/middleware/request_decoder_spec.rb
+- spec/lib/protobuf/rpc/middleware/response_encoder_spec.rb
+- spec/lib/protobuf/rpc/servers/socket_server_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/server_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/util_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/worker_spec.rb
+- spec/lib/protobuf/rpc/service_directory_spec.rb
+- spec/lib/protobuf/rpc/service_dispatcher_spec.rb
+- spec/lib/protobuf/rpc/service_filters_spec.rb
+- spec/lib/protobuf/rpc/service_spec.rb
+- spec/lib/protobuf/rpc/stat_spec.rb
+- spec/lib/protobuf/varint_spec.rb
+- spec/lib/protobuf_spec.rb
+- spec/spec_helper.rb
+- spec/support/all.rb
+- spec/support/google/protobuf/descriptor.pb.rb
+- spec/support/packed_field.rb
+- spec/support/protos/all_types.data.bin
+- spec/support/protos/all_types.data.txt
+- spec/support/protos/enum.pb.rb
+- spec/support/protos/enum.proto
+- spec/support/protos/extreme_values.data.bin
+- spec/support/protos/google_unittest.bin
+- spec/support/protos/google_unittest.pb.rb
+- spec/support/protos/google_unittest.proto
+- spec/support/protos/google_unittest_custom_options.bin
+- spec/support/protos/google_unittest_custom_options.pb.rb
+- spec/support/protos/google_unittest_custom_options.proto
+- spec/support/protos/google_unittest_import.pb.rb
+- spec/support/protos/google_unittest_import.proto
+- spec/support/protos/google_unittest_import_public.pb.rb
+- spec/support/protos/google_unittest_import_public.proto
+- spec/support/protos/map-test.bin
+- spec/support/protos/map-test.pb.rb
+- spec/support/protos/map-test.proto
+- spec/support/protos/multi_field_extensions.pb.rb
+- spec/support/protos/multi_field_extensions.proto
+- spec/support/protos/optional_v3_fields.pb.rb
+- spec/support/protos/optional_v3_fields.proto
+- spec/support/protos/resource.pb.rb
+- spec/support/protos/resource.proto
+- spec/support/resource_service.rb
+- spec/support/server.rb
+- spec/support/test_app_file.rb
+- varint_prof.rb
+homepage: https://github.com/localshred/protobuf
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key:
+specification_version: 4
+summary: Google Protocol Buffers serialization and RPC implementation for Ruby.
+test_files:
+- spec/benchmark/tasks.rb
+- spec/bin/protoc-gen-ruby_spec.rb
+- spec/encoding/all_types_spec.rb
+- spec/encoding/extreme_values_spec.rb
+- spec/functional/class_inheritance_spec.rb
+- spec/functional/code_generator_spec.rb
+- spec/functional/socket_server_spec.rb
+- spec/functional/zmq_server_spec.rb
+- spec/lib/protobuf/cli_spec.rb
+- spec/lib/protobuf/code_generator_spec.rb
+- spec/lib/protobuf/enum_spec.rb
+- spec/lib/protobuf/field/bool_field_spec.rb
+- spec/lib/protobuf/field/double_field_spec.rb
+- spec/lib/protobuf/field/enum_field_spec.rb
+- spec/lib/protobuf/field/field_array_spec.rb
+- spec/lib/protobuf/field/field_hash_spec.rb
+- spec/lib/protobuf/field/fixed32_field_spec.rb
+- spec/lib/protobuf/field/fixed64_field_spec.rb
+- spec/lib/protobuf/field/float_field_spec.rb
+- spec/lib/protobuf/field/int32_field_spec.rb
+- spec/lib/protobuf/field/int64_field_spec.rb
+- spec/lib/protobuf/field/message_field_spec.rb
+- spec/lib/protobuf/field/sfixed32_field_spec.rb
+- spec/lib/protobuf/field/sfixed64_field_spec.rb
+- spec/lib/protobuf/field/sint32_field_spec.rb
+- spec/lib/protobuf/field/sint64_field_spec.rb
+- spec/lib/protobuf/field/string_field_spec.rb
+- spec/lib/protobuf/field/uint32_field_spec.rb
+- spec/lib/protobuf/field/uint64_field_spec.rb
+- spec/lib/protobuf/field_spec.rb
+- spec/lib/protobuf/generators/base_spec.rb
+- spec/lib/protobuf/generators/enum_generator_spec.rb
+- spec/lib/protobuf/generators/extension_generator_spec.rb
+- spec/lib/protobuf/generators/field_generator_spec.rb
+- spec/lib/protobuf/generators/file_generator_spec.rb
+- spec/lib/protobuf/generators/message_generator_spec.rb
+- spec/lib/protobuf/generators/service_generator_spec.rb
+- spec/lib/protobuf/lifecycle_spec.rb
+- spec/lib/protobuf/message_spec.rb
+- spec/lib/protobuf/optionable_spec.rb
+- spec/lib/protobuf/rpc/client_spec.rb
+- spec/lib/protobuf/rpc/connectors/base_spec.rb
+- spec/lib/protobuf/rpc/connectors/ping_spec.rb
+- spec/lib/protobuf/rpc/connectors/socket_spec.rb
+- spec/lib/protobuf/rpc/connectors/zmq_spec.rb
+- spec/lib/protobuf/rpc/middleware/exception_handler_spec.rb
+- spec/lib/protobuf/rpc/middleware/logger_spec.rb
+- spec/lib/protobuf/rpc/middleware/request_decoder_spec.rb
+- spec/lib/protobuf/rpc/middleware/response_encoder_spec.rb
+- spec/lib/protobuf/rpc/servers/socket_server_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/server_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/util_spec.rb
+- spec/lib/protobuf/rpc/servers/zmq/worker_spec.rb
+- spec/lib/protobuf/rpc/service_directory_spec.rb
+- spec/lib/protobuf/rpc/service_dispatcher_spec.rb
+- spec/lib/protobuf/rpc/service_filters_spec.rb
+- spec/lib/protobuf/rpc/service_spec.rb
+- spec/lib/protobuf/rpc/stat_spec.rb
+- spec/lib/protobuf/varint_spec.rb
+- spec/lib/protobuf_spec.rb
+- spec/spec_helper.rb
+- spec/support/all.rb
+- spec/support/google/protobuf/descriptor.pb.rb
+- spec/support/packed_field.rb
+- spec/support/protos/all_types.data.bin
+- spec/support/protos/all_types.data.txt
+- spec/support/protos/enum.pb.rb
+- spec/support/protos/enum.proto
+- spec/support/protos/extreme_values.data.bin
+- spec/support/protos/google_unittest.bin
+- spec/support/protos/google_unittest.pb.rb
+- spec/support/protos/google_unittest.proto
+- spec/support/protos/google_unittest_custom_options.bin
+- spec/support/protos/google_unittest_custom_options.pb.rb
+- spec/support/protos/google_unittest_custom_options.proto
+- spec/support/protos/google_unittest_import.pb.rb
+- spec/support/protos/google_unittest_import.proto
+- spec/support/protos/google_unittest_import_public.pb.rb
+- spec/support/protos/google_unittest_import_public.proto
+- spec/support/protos/map-test.bin
+- spec/support/protos/map-test.pb.rb
+- spec/support/protos/map-test.proto
+- spec/support/protos/multi_field_extensions.pb.rb
+- spec/support/protos/multi_field_extensions.proto
+- spec/support/protos/optional_v3_fields.pb.rb
+- spec/support/protos/optional_v3_fields.proto
+- spec/support/protos/resource.pb.rb
+- spec/support/protos/resource.proto
+- spec/support/resource_service.rb
+- spec/support/server.rb
+- spec/support/test_app_file.rb

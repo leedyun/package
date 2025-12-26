@@ -1,0 +1,191 @@
+--- !ruby/object:Gem::Specification
+name: ovirt-engine-sdk
+version: !ruby/object:Gem::Version
+  version: 4.6.0
+platform: ruby
+authors:
+- Juan Hernandez
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.60.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.60.2
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description: Ruby SDK for the oVirt Engine API.
+email:
+- jhernand@redhat.com
+executables: []
+extensions:
+- ext/ovirtsdk4c/extconf.rb
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGES.adoc
+- LICENSE.txt
+- README.adoc
+- ext/ovirtsdk4c/extconf.rb
+- ext/ovirtsdk4c/ov_error.c
+- ext/ovirtsdk4c/ov_error.h
+- ext/ovirtsdk4c/ov_http_client.c
+- ext/ovirtsdk4c/ov_http_client.h
+- ext/ovirtsdk4c/ov_http_request.c
+- ext/ovirtsdk4c/ov_http_request.h
+- ext/ovirtsdk4c/ov_http_response.c
+- ext/ovirtsdk4c/ov_http_response.h
+- ext/ovirtsdk4c/ov_http_transfer.c
+- ext/ovirtsdk4c/ov_http_transfer.h
+- ext/ovirtsdk4c/ov_module.c
+- ext/ovirtsdk4c/ov_module.h
+- ext/ovirtsdk4c/ov_string.c
+- ext/ovirtsdk4c/ov_string.h
+- ext/ovirtsdk4c/ov_xml_reader.c
+- ext/ovirtsdk4c/ov_xml_reader.h
+- ext/ovirtsdk4c/ov_xml_writer.c
+- ext/ovirtsdk4c/ov_xml_writer.h
+- ext/ovirtsdk4c/ovirtsdk4c.c
+- lib/ovirtsdk4.rb
+- lib/ovirtsdk4/connection.rb
+- lib/ovirtsdk4/errors.rb
+- lib/ovirtsdk4/probe.rb
+- lib/ovirtsdk4/reader.rb
+- lib/ovirtsdk4/readers.rb
+- lib/ovirtsdk4/service.rb
+- lib/ovirtsdk4/services.rb
+- lib/ovirtsdk4/type.rb
+- lib/ovirtsdk4/types.rb
+- lib/ovirtsdk4/version.rb
+- lib/ovirtsdk4/writer.rb
+- lib/ovirtsdk4/writers.rb
+homepage: http://ovirt.org
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: oVirt SDK
+test_files: []

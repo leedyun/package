@@ -1,0 +1,154 @@
+--- !ruby/object:Gem::Specification
+name: okcomputer
+version: !ruby/object:Gem::Version
+  version: 1.18.6
+platform: ruby
+authors:
+- Patrick Byrne
+- Andy Fleener
+- Chris Arcand
+- Emma Sax
+- Ryan McGeary
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: sequel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.6
+description: "\n    Inspired by the simplicity of Fitter Happier, but frustrated by
+  its lack of\n    flexibility, we built OK Computer. Create and register your own
+  custom\n    health checks, or choose from the built-in library of checks to ensure
+  your\n    app is working as intended.\n  "
+email:
+- code@patrickbyrne.net
+- anfleene@gmail.com
+- chris@chrisarcand.com
+- sax.emma.h@gmail.com
+- ryan@mcgeary.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- app/controllers/ok_computer/ok_computer_controller.rb
+- config/locales/okcomputer.en.yml
+- config/routes.rb
+- lib/ok_computer/built_in_checks/action_mailer_check.rb
+- lib/ok_computer/built_in_checks/active_record_check.rb
+- lib/ok_computer/built_in_checks/active_record_migrations_check.rb
+- lib/ok_computer/built_in_checks/app_version_check.rb
+- lib/ok_computer/built_in_checks/cache_check.rb
+- lib/ok_computer/built_in_checks/default_check.rb
+- lib/ok_computer/built_in_checks/delayed_job_backed_up_check.rb
+- lib/ok_computer/built_in_checks/directory_check.rb
+- lib/ok_computer/built_in_checks/elasticsearch_check.rb
+- lib/ok_computer/built_in_checks/generic_cache_check.rb
+- lib/ok_computer/built_in_checks/http_check.rb
+- lib/ok_computer/built_in_checks/mongoid_check.rb
+- lib/ok_computer/built_in_checks/mongoid_replica_set_check.rb
+- lib/ok_computer/built_in_checks/neo4j_check.rb
+- lib/ok_computer/built_in_checks/optional_check.rb
+- lib/ok_computer/built_in_checks/ping_check.rb
+- lib/ok_computer/built_in_checks/rabbitmq_check.rb
+- lib/ok_computer/built_in_checks/redis_check.rb
+- lib/ok_computer/built_in_checks/resque_backed_up_check.rb
+- lib/ok_computer/built_in_checks/resque_down_check.rb
+- lib/ok_computer/built_in_checks/resque_failure_threshold_check.rb
+- lib/ok_computer/built_in_checks/resque_scheduler_check.rb
+- lib/ok_computer/built_in_checks/ruby_version_check.rb
+- lib/ok_computer/built_in_checks/sequel_check.rb
+- lib/ok_computer/built_in_checks/sidekiq_latency_check.rb
+- lib/ok_computer/built_in_checks/size_threshold_check.rb
+- lib/ok_computer/built_in_checks/solr_check.rb
+- lib/ok_computer/check.rb
+- lib/ok_computer/check_collection.rb
+- lib/ok_computer/configuration.rb
+- lib/ok_computer/engine.rb
+- lib/ok_computer/legacy_rails_controller_support.rb
+- lib/ok_computer/registry.rb
+- lib/ok_computer/version.rb
+- lib/okcomputer.rb
+homepage: https://github.com/emmahsax/okcomputer
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/emmahsax/okcomputer/issues
+  changelog_uri: https://github.com/emmahsax/okcomputer/blob/main/CHANGELOG.markdown
+  source_code_uri: https://github.com/emmahsax/okcomputer
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.5
+signing_key:
+specification_version: 4
+summary: A simple, extensible health-check monitor
+test_files: []

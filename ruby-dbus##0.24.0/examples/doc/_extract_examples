@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+if ARGV[0].nil?
+  puts "Usage: #{$PROGRAM_NAME} file.md"
+  exit
+end
+
+base_url = "https://github.com/mvidner/ruby-dbus/blob/master/"
+base_url += ARGV[0].gsub("../", "")
+
+File.open(ARGV[0]) do |f|
+  title = nil
+  setup = ""
+  example = ""
+  f.each_line do |line|
+    case line
+    when /^#+ *(.*)/
+      new_title = Regexp.last_match(1)
+
+      # write previous example
+      unless example.empty?
+        basename = title.downcase.gsub(/ +/, "_")
+        if basename == "setting_up"
+          setup = example
+        else
+          File.open("#{basename}.rb", "w") do |e|
+            anchor = title.downcase.gsub(/ +/, "-")
+            e.write setup
+            e.write "# #{base_url}##{anchor}\n"
+            e.write example
+            e.chmod(0o755)
+          end
+        end
+      end
+
+      # set new
+      title = new_title
+      example = ""
+    when /^    (.*)/
+      example << Regexp.last_match(1) << "\n"
+    end
+  end
+end

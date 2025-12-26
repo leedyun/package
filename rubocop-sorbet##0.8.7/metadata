@@ -1,0 +1,144 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-sorbet
+version: !ruby/object:Gem::Version
+  version: 0.8.7
+platform: ruby
+authors:
+- Ufuk Kayserilioglu
+- Alan Wu
+- Alexandre Terrasa
+- Peter Zhu
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-11-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+description:
+email:
+- ruby@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/CODEOWNERS"
+- ".github/dependabot.yml"
+- ".github/release.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/cla.yml"
+- ".github/workflows/dependabot_automerge.yml"
+- ".github/workflows/stale.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".travis.yml"
+- ".yardopts"
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/rspec
+- bin/rubocop
+- bin/setup
+- config/default.yml
+- config/obsoletion.yml
+- config/rbi.yml
+- dev.yml
+- lib/rubocop-sorbet.rb
+- lib/rubocop/cop/sorbet/binding_constant_without_type_alias.rb
+- lib/rubocop/cop/sorbet/buggy_obsolete_strict_memoization.rb
+- lib/rubocop/cop/sorbet/callback_conditionals_binding.rb
+- lib/rubocop/cop/sorbet/constants_from_strings.rb
+- lib/rubocop/cop/sorbet/forbid_include_const_literal.rb
+- lib/rubocop/cop/sorbet/forbid_superclass_const_literal.rb
+- lib/rubocop/cop/sorbet/forbid_t_struct.rb
+- lib/rubocop/cop/sorbet/forbid_t_unsafe.rb
+- lib/rubocop/cop/sorbet/forbid_t_untyped.rb
+- lib/rubocop/cop/sorbet/forbid_type_aliased_shapes.rb
+- lib/rubocop/cop/sorbet/forbid_untyped_struct_props.rb
+- lib/rubocop/cop/sorbet/implicit_conversion_method.rb
+- lib/rubocop/cop/sorbet/mixin/signature_help.rb
+- lib/rubocop/cop/sorbet/mixin/t_enum.rb
+- lib/rubocop/cop/sorbet/mixin/target_sorbet_version.rb
+- lib/rubocop/cop/sorbet/mutable_constant_sorbet_aware_behaviour.rb
+- lib/rubocop/cop/sorbet/obsolete_strict_memoization.rb
+- lib/rubocop/cop/sorbet/rbi/forbid_extend_t_sig_helpers_in_shims.rb
+- lib/rubocop/cop/sorbet/rbi/forbid_rbi_outside_of_allowed_paths.rb
+- lib/rubocop/cop/sorbet/rbi/single_line_rbi_class_module_definitions.rb
+- lib/rubocop/cop/sorbet/rbi_versioning/gem_version_annotation_helper.rb
+- lib/rubocop/cop/sorbet/rbi_versioning/valid_gem_version_annotations.rb
+- lib/rubocop/cop/sorbet/redundant_extend_t_sig.rb
+- lib/rubocop/cop/sorbet/refinement.rb
+- lib/rubocop/cop/sorbet/sigils/enforce_sigil_order.rb
+- lib/rubocop/cop/sorbet/sigils/enforce_single_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/false_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/has_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/ignore_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/strict_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/strong_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/true_sigil.rb
+- lib/rubocop/cop/sorbet/sigils/valid_sigil.rb
+- lib/rubocop/cop/sorbet/signatures/allow_incompatible_override.rb
+- lib/rubocop/cop/sorbet/signatures/checked_true_in_signature.rb
+- lib/rubocop/cop/sorbet/signatures/empty_line_after_sig.rb
+- lib/rubocop/cop/sorbet/signatures/enforce_signatures.rb
+- lib/rubocop/cop/sorbet/signatures/keyword_argument_ordering.rb
+- lib/rubocop/cop/sorbet/signatures/signature_build_order.rb
+- lib/rubocop/cop/sorbet/signatures/void_checked_tests.rb
+- lib/rubocop/cop/sorbet/t_enum/forbid_comparable_t_enum.rb
+- lib/rubocop/cop/sorbet/t_enum/multiple_t_enum_values.rb
+- lib/rubocop/cop/sorbet/type_alias_name.rb
+- lib/rubocop/cop/sorbet_cops.rb
+- lib/rubocop/sorbet.rb
+- lib/rubocop/sorbet/inject.rb
+- lib/rubocop/sorbet/version.rb
+- manual/cops.md
+- manual/cops_sorbet.md
+- rubocop-sorbet.gemspec
+- service.yml
+- shipit.production.yml
+- tasks/cops_documentation.rake
+homepage: https://github.com/shopify/rubocop-sorbet
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  homepage_uri: https://github.com/shopify/rubocop-sorbet
+  source_code_uri: https://github.com/shopify/rubocop-sorbet
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Automatic Sorbet code style checking tool.
+test_files: []

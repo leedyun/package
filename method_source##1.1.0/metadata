@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: method_source
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- John Mair (banisterfiend)
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-15 00:00:00.000000000 Z
+dependencies: []
+description: retrieve the sourcecode for a method
+email: jrmair@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gemtest"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.markdown
+- Rakefile
+- lib/method_source.rb
+- lib/method_source/code_helpers.rb
+- lib/method_source/source_location.rb
+- lib/method_source/version.rb
+- method_source.gemspec
+- spec/method_source/code_helpers_spec.rb
+- spec/method_source_spec.rb
+- spec/spec_helper.rb
+homepage: http://banisterfiend.wordpress.com
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/banister/method_source/blob/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: retrieve the sourcecode for a method
+test_files:
+- spec/method_source/code_helpers_spec.rb
+- spec/method_source_spec.rb
+- spec/spec_helper.rb

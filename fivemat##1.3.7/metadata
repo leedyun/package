@@ -1,0 +1,77 @@
+--- !ruby/object:Gem::Specification
+name: fivemat
+version: !ruby/object:Gem::Version
+  version: 1.3.7
+platform: ruby
+authors:
+- Tim Pope
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-07-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: MiniTest/RSpec/Cucumber formatter that gives each test file its own line
+  of dots
+email:
+- code@tpope.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- fivemat.gemspec
+- lib/fivemat.rb
+- lib/fivemat/cucumber.rb
+- lib/fivemat/cucumber3.rb
+- lib/fivemat/elapsed_time.rb
+- lib/fivemat/minitest.rb
+- lib/fivemat/minitest/autorun.rb
+- lib/fivemat/minitest/unit.rb
+- lib/fivemat/rspec.rb
+- lib/fivemat/rspec3.rb
+- lib/fivemat/spec.rb
+- lib/minitest/fivemat_plugin.rb
+homepage: https://github.com/tpope/fivemat
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: Why settle for a test output format when you could have a test output fivemat?
+test_files: []

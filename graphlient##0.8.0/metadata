@@ -1,0 +1,138 @@
+--- !ruby/object:Gem::Specification
+name: graphlient
+version: !ruby/object:Gem::Version
+  version: 0.8.0
+platform: ruby
+authors:
+- Ashkan Nasseri
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: graphql-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email: ashkan.nasseri@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/workflows/ci.yml"
+- ".github/workflows/danger.yml"
+- ".github/workflows/rubocop.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Dangerfile
+- Gemfile
+- Gemfile.danger
+- LICENSE
+- README.md
+- RELEASING.md
+- Rakefile
+- UPGRADING.md
+- graphlient.gemspec
+- lib/graphlient.rb
+- lib/graphlient/adapters.rb
+- lib/graphlient/adapters/http.rb
+- lib/graphlient/adapters/http/adapter.rb
+- lib/graphlient/adapters/http/faraday_adapter.rb
+- lib/graphlient/adapters/http/http_adapter.rb
+- lib/graphlient/client.rb
+- lib/graphlient/errors.rb
+- lib/graphlient/errors/client_error.rb
+- lib/graphlient/errors/connection_failed_error.rb
+- lib/graphlient/errors/error.rb
+- lib/graphlient/errors/execution_error.rb
+- lib/graphlient/errors/faraday_server_error.rb
+- lib/graphlient/errors/graphql_error.rb
+- lib/graphlient/errors/http_options_error.rb
+- lib/graphlient/errors/http_server_error.rb
+- lib/graphlient/errors/server_error.rb
+- lib/graphlient/errors/timeout_error.rb
+- lib/graphlient/extensions.rb
+- lib/graphlient/extensions/query.rb
+- lib/graphlient/query.rb
+- lib/graphlient/schema.rb
+- lib/graphlient/version.rb
+- spec/graphlient/adapters/http/faraday_adapter_spec.rb
+- spec/graphlient/adapters/http/http_adapter_spec.rb
+- spec/graphlient/client_query_spec.rb
+- spec/graphlient/client_schema_spec.rb
+- spec/graphlient/extensions/query_spec.rb
+- spec/graphlient/github_query_spec.rb
+- spec/graphlient/query_spec.rb
+- spec/graphlient/schema_spec.rb
+- spec/graphlient/static_client_query_spec.rb
+- spec/graphlient/webmock_client_query_spec.rb
+- spec/spec_helper.rb
+- spec/support/context/dummy_client.rb
+- spec/support/context/github_client.rb
+- spec/support/dummy_app.rb
+- spec/support/dummy_schema.rb
+- spec/support/fixtures/github/schema.yml
+- spec/support/fixtures/github/user.yml
+- spec/support/fixtures/github/viewer.yml
+- spec/support/fixtures/invoice_api.json
+- spec/support/mutations/create_invoice.rb
+- spec/support/queries/query.rb
+- spec/support/schema/github.json
+- spec/support/types/invoice_type.rb
+- spec/support/types/mutation_type.rb
+- spec/support/vcr.rb
+homepage: http://github.com/ashkan18/graphlient
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: A friendlier Ruby client for consuming GraphQL-based APIs.
+test_files: []

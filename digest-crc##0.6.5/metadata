@@ -1,0 +1,266 @@
+--- !ruby/object:Gem::Specification
+name: digest-crc
+version: !ruby/object:Gem::Version
+  version: 0.6.5
+platform: ruby
+authors:
+- Postmodern
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-07-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 14.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 14.0.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: Adds support for calculating Cyclic Redundancy Check (CRC) to the Digest
+  module.
+email: postmodern.mod3@gmail.com
+executables: []
+extensions:
+- ext/digest/Rakefile
+extra_rdoc_files:
+- ChangeLog.md
+- LICENSE.txt
+- README.md
+files:
+- ".github/workflows/integration.yml"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- ".yardopts"
+- ChangeLog.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- benchmarks.rb
+- digest-crc.gemspec
+- ext/digest/Rakefile
+- ext/digest/compat/ruby.h
+- ext/digest/crc12_3gpp/crc12_3gpp.c
+- ext/digest/crc12_3gpp/crc12_3gpp.h
+- ext/digest/crc12_3gpp/crc12_3gpp_ext.c
+- ext/digest/crc12_3gpp/extconf.rb
+- ext/digest/crc15/crc15.c
+- ext/digest/crc15/crc15.h
+- ext/digest/crc15/crc15_ext.c
+- ext/digest/crc15/extconf.rb
+- ext/digest/crc16/crc16.c
+- ext/digest/crc16/crc16.h
+- ext/digest/crc16/crc16_ext.c
+- ext/digest/crc16/extconf.rb
+- ext/digest/crc16_ccitt/crc16_ccitt.c
+- ext/digest/crc16_ccitt/crc16_ccitt.h
+- ext/digest/crc16_ccitt/crc16_ccitt_ext.c
+- ext/digest/crc16_ccitt/extconf.rb
+- ext/digest/crc16_dnp/crc16_dnp.c
+- ext/digest/crc16_dnp/crc16_dnp.h
+- ext/digest/crc16_dnp/crc16_dnp_ext.c
+- ext/digest/crc16_dnp/extconf.rb
+- ext/digest/crc16_genibus/crc16_genibus.c
+- ext/digest/crc16_genibus/crc16_genibus.h
+- ext/digest/crc16_genibus/crc16_genibus_ext.c
+- ext/digest/crc16_genibus/extconf.rb
+- ext/digest/crc16_kermit/crc16_kermit.c
+- ext/digest/crc16_kermit/crc16_kermit.h
+- ext/digest/crc16_kermit/crc16_kermit_ext.c
+- ext/digest/crc16_kermit/extconf.rb
+- ext/digest/crc16_modbus/crc16_modbus.c
+- ext/digest/crc16_modbus/crc16_modbus.h
+- ext/digest/crc16_modbus/crc16_modbus_ext.c
+- ext/digest/crc16_modbus/extconf.rb
+- ext/digest/crc16_usb/crc16_usb.c
+- ext/digest/crc16_usb/crc16_usb.h
+- ext/digest/crc16_usb/crc16_usb_ext.c
+- ext/digest/crc16_usb/extconf.rb
+- ext/digest/crc16_x_25/crc16_x_25.c
+- ext/digest/crc16_x_25/crc16_x_25.h
+- ext/digest/crc16_x_25/crc16_x_25_ext.c
+- ext/digest/crc16_x_25/extconf.rb
+- ext/digest/crc16_xmodem/crc16_xmodem.c
+- ext/digest/crc16_xmodem/crc16_xmodem.h
+- ext/digest/crc16_xmodem/crc16_xmodem_ext.c
+- ext/digest/crc16_xmodem/extconf.rb
+- ext/digest/crc16_zmodem/crc16_zmodem.c
+- ext/digest/crc16_zmodem/crc16_zmodem.h
+- ext/digest/crc16_zmodem/crc16_zmodem_ext.c
+- ext/digest/crc16_zmodem/extconf.rb
+- ext/digest/crc24/crc24.c
+- ext/digest/crc24/crc24.h
+- ext/digest/crc24/crc24_ext.c
+- ext/digest/crc24/extconf.rb
+- ext/digest/crc32/crc32.c
+- ext/digest/crc32/crc32.h
+- ext/digest/crc32/crc32_ext.c
+- ext/digest/crc32/extconf.rb
+- ext/digest/crc32_bzip2/crc32_bzip2.c
+- ext/digest/crc32_bzip2/crc32_bzip2.h
+- ext/digest/crc32_bzip2/crc32_bzip2_ext.c
+- ext/digest/crc32_bzip2/extconf.rb
+- ext/digest/crc32_jam/crc32_jam.c
+- ext/digest/crc32_jam/crc32_jam.h
+- ext/digest/crc32_jam/crc32_jam_ext.c
+- ext/digest/crc32_jam/extconf.rb
+- ext/digest/crc32_mpeg/crc32_mpeg.c
+- ext/digest/crc32_mpeg/crc32_mpeg.h
+- ext/digest/crc32_mpeg/crc32_mpeg_ext.c
+- ext/digest/crc32_mpeg/extconf.rb
+- ext/digest/crc32_posix/crc32_posix.c
+- ext/digest/crc32_posix/crc32_posix.h
+- ext/digest/crc32_posix/crc32_posix_ext.c
+- ext/digest/crc32_posix/extconf.rb
+- ext/digest/crc32_xfer/crc32_xfer.c
+- ext/digest/crc32_xfer/crc32_xfer.h
+- ext/digest/crc32_xfer/crc32_xfer_ext.c
+- ext/digest/crc32_xfer/extconf.rb
+- ext/digest/crc32c/crc32c.c
+- ext/digest/crc32c/crc32c.h
+- ext/digest/crc32c/crc32c_ext.c
+- ext/digest/crc32c/extconf.rb
+- ext/digest/crc5/crc5.c
+- ext/digest/crc5/crc5.h
+- ext/digest/crc5/crc5_ext.c
+- ext/digest/crc5/extconf.rb
+- ext/digest/crc64/crc64.c
+- ext/digest/crc64/crc64.h
+- ext/digest/crc64/crc64_ext.c
+- ext/digest/crc64/extconf.rb
+- ext/digest/crc64_jones/crc64_jones.c
+- ext/digest/crc64_jones/crc64_jones.h
+- ext/digest/crc64_jones/crc64_jones_ext.c
+- ext/digest/crc64_jones/extconf.rb
+- ext/digest/crc64_xz/crc64_xz.c
+- ext/digest/crc64_xz/crc64_xz.h
+- ext/digest/crc64_xz/crc64_xz_ext.c
+- ext/digest/crc64_xz/extconf.rb
+- ext/digest/crc8/crc8.c
+- ext/digest/crc8/crc8.h
+- ext/digest/crc8/crc8_ext.c
+- ext/digest/crc8/extconf.rb
+- ext/digest/crc8_1wire/crc8_1wire.c
+- ext/digest/crc8_1wire/crc8_1wire.h
+- ext/digest/crc8_1wire/crc8_1wire_ext.c
+- ext/digest/crc8_1wire/extconf.rb
+- gemspec.yml
+- lib/digest/crc.rb
+- lib/digest/crc1.rb
+- lib/digest/crc15.rb
+- lib/digest/crc16.rb
+- lib/digest/crc16_ccitt.rb
+- lib/digest/crc16_dnp.rb
+- lib/digest/crc16_genibus.rb
+- lib/digest/crc16_kermit.rb
+- lib/digest/crc16_modbus.rb
+- lib/digest/crc16_qt.rb
+- lib/digest/crc16_usb.rb
+- lib/digest/crc16_x_25.rb
+- lib/digest/crc16_xmodem.rb
+- lib/digest/crc16_zmodem.rb
+- lib/digest/crc24.rb
+- lib/digest/crc32.rb
+- lib/digest/crc32_bzip2.rb
+- lib/digest/crc32_jam.rb
+- lib/digest/crc32_mpeg.rb
+- lib/digest/crc32_posix.rb
+- lib/digest/crc32_xfer.rb
+- lib/digest/crc32c.rb
+- lib/digest/crc5.rb
+- lib/digest/crc64.rb
+- lib/digest/crc64_jones.rb
+- lib/digest/crc64_xz.rb
+- lib/digest/crc8.rb
+- lib/digest/crc8_1wire.rb
+- spec/crc15_spec.rb
+- spec/crc16_ccitt_spec.rb
+- spec/crc16_genibus_spec.rb
+- spec/crc16_kermit_spec.rb
+- spec/crc16_modbus_spec.rb
+- spec/crc16_qt_spec.rb
+- spec/crc16_spec.rb
+- spec/crc16_usb_spec.rb
+- spec/crc16_x_25_spec.rb
+- spec/crc16_xmodem_spec.rb
+- spec/crc16_zmodem_spec.rb
+- spec/crc1_spec.rb
+- spec/crc24_spec.rb
+- spec/crc32_bzip2_spec.rb
+- spec/crc32_jam_spec.rb
+- spec/crc32_mpeg_spec.rb
+- spec/crc32_posix_spec.rb
+- spec/crc32_spec.rb
+- spec/crc32_xfer_spec.rb
+- spec/crc32c_spec.rb
+- spec/crc5_spec.rb
+- spec/crc64_jones_spec.rb
+- spec/crc64_spec.rb
+- spec/crc64_xz_spec.rb
+- spec/crc8_1wire_spec.rb
+- spec/crc8_spec.rb
+- spec/crc_examples.rb
+- spec/crc_spec.rb
+- spec/integration/docker/Dockerfile.base
+- spec/integration/docker/Dockerfile.with-gcc
+- spec/integration/docker/Dockerfile.with-gcc-and-make
+- spec/integration/install_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/postmodern/digest-crc#readme
+licenses:
+- MIT
+metadata:
+  documentation_uri: https://rubydoc.info/gems/digest-crc
+  source_code_uri: https://github.com/postmodern/digest-crc
+  bug_tracker_uri: https://github.com/postmodern/digest-crc/issues
+  changelog_uri: https://github.com/postmodern/digest-crc/blob/master/ChangeLog.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- ext
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: A Cyclic Redundancy Check (CRC) library for Ruby.
+test_files: []

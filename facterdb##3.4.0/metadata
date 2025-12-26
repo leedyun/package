@@ -1,0 +1,459 @@
+--- !ruby/object:Gem::Specification
+name: facterdb
+version: !ruby/object:Gem::Version
+  version: 3.4.0
+platform: ruby
+authors:
+- Vox Pupuli
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-09-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.23
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.23
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+- !ruby/object:Gem::Dependency
+  name: voxpupuli-rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+- !ruby/object:Gem::Dependency
+  name: facter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: jgrep
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+description: Contains facts from many Facter version on many Operating Systems
+email:
+- voxpupuli@groups.io
+executables:
+- facterdb
+- legacy-facts-striper
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/pages.yml"
+- ".github/workflows/release.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".gitmodules"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- HISTORY.md
+- LICENSE
+- README.md
+- Rakefile
+- bin/facterdb
+- bin/legacy-facts-striper
+- database/list_arch_os_facter.md
+- database/list_facter_os_arch.md
+- database/list_os_arch_facter.md
+- database/list_os_facter_arch.md
+- database/table.md
+- doc/main.md
+- doc/templates/facterdb/class/html/setup.rb
+- doc/templates/facterdb/constant/html/setup.rb
+- doc/templates/facterdb/docstring/html/setup.rb
+- doc/templates/facterdb/fulldoc/html/css/vox.css
+- doc/templates/facterdb/fulldoc/html/full_list.erb
+- doc/templates/facterdb/fulldoc/html/setup.rb
+- doc/templates/facterdb/layout/html/setup.rb
+- doc/templates/facterdb/method/html/setup.rb
+- doc/templates/facterdb/method_details/html/setup.rb
+- doc/templates/facterdb/module/html/setup.rb
+- doc/templates/facterdb/onefile/html/setup.rb
+- doc/templates/facterdb/root/html/setup.rb
+- doc/templates/facterdb/tags/html/setup.rb
+- facterdb.gemspec
+- facts/4.0/almalinux-8-x86_64.facts
+- facts/4.0/almalinux-9-x86_64.facts
+- facts/4.0/debian-11-x86_64.facts
+- facts/4.0/freebsd-11-x86_64.facts
+- facts/4.0/freebsd-12-x86_64.facts
+- facts/4.0/freebsd-13-x86_64.facts
+- facts/4.0/opensuse-15-x86_64.facts
+- facts/4.0/oraclelinux-7-x86_64.facts
+- facts/4.0/redhat-8-x86_64.facts
+- facts/4.0/rocky-8-x86_64.facts
+- facts/4.0/rocky-9-x86_64.facts
+- facts/4.0/scientific-7-x86_64.facts
+- facts/4.0/solaris-11-sun4v.facts
+- facts/4.0/ubuntu-18.04-x86_64.facts
+- facts/4.0/ubuntu-20.04-x86_64.facts
+- facts/4.0/ubuntu-21.04-x86_64.facts
+- facts/4.0/ubuntu-21.10-x86_64.facts
+- facts/4.1/almalinux-8-x86_64.facts
+- facts/4.1/almalinux-9-x86_64.facts
+- facts/4.1/debian-11-x86_64.facts
+- facts/4.1/freebsd-11-x86_64.facts
+- facts/4.1/freebsd-12-x86_64.facts
+- facts/4.1/freebsd-13-x86_64.facts
+- facts/4.1/opensuse-15-x86_64.facts
+- facts/4.1/redhat-8-x86_64.facts
+- facts/4.1/rocky-8-x86_64.facts
+- facts/4.1/rocky-9-x86_64.facts
+- facts/4.1/ubuntu-18.04-x86_64.facts
+- facts/4.1/ubuntu-20.04-x86_64.facts
+- facts/4.1/ubuntu-21.04-x86_64.facts
+- facts/4.1/ubuntu-21.10-x86_64.facts
+- facts/4.2/almalinux-8-x86_64.facts
+- facts/4.2/almalinux-9-x86_64.facts
+- facts/4.2/amazon-2022-x86_64.facts
+- facts/4.2/archlinux-x86_64.facts
+- facts/4.2/centos-9-x86_64.facts
+- facts/4.2/darwin-20-x86_64.facts
+- facts/4.2/debian-11-x86_64.facts
+- facts/4.2/debian-12-i386.facts
+- facts/4.2/debian-12-x86_64.facts
+- facts/4.2/fedora-36-x86_64.facts
+- facts/4.2/fedora-37-x86_64.facts
+- facts/4.2/fedora-38-x86_64.facts
+- facts/4.2/fedora-39-x86_64.facts
+- facts/4.2/freebsd-11-x86_64.facts
+- facts/4.2/freebsd-12-x86_64.facts
+- facts/4.2/freebsd-13-x86_64.facts
+- facts/4.2/gentoo-2-x86_64.facts
+- facts/4.2/opensuse-15-x86_64.facts
+- facts/4.2/oraclelinux-7-x86_64.facts
+- facts/4.2/oraclelinux-8-x86_64.facts
+- facts/4.2/oraclelinux-9-x86_64.facts
+- facts/4.2/popos-21.10-x86_64.facts
+- facts/4.2/redhat-8-x86_64.facts
+- facts/4.2/redhat-9-x86_64.facts
+- facts/4.2/rocky-8-x86_64.facts
+- facts/4.2/rocky-9-x86_64.facts
+- facts/4.2/scientific-7-x86_64.facts
+- facts/4.2/sles-12-x86_64.facts
+- facts/4.2/sles-15-x86_64.facts
+- facts/4.2/ubuntu-18.04-x86_64.facts
+- facts/4.2/ubuntu-20.04-x86_64.facts
+- facts/4.2/ubuntu-21.04-x86_64.facts
+- facts/4.2/ubuntu-21.10-x86_64.facts
+- facts/4.2/ubuntu-22.04-x86_64.facts
+- facts/4.2/ubuntu-22.10-x86_64.facts
+- facts/4.2/ubuntu-24.04-x86_64.facts
+- facts/4.2/windows-10-x86_64.facts
+- facts/4.2/windows-11-x86_64.facts
+- facts/4.2/windows-2012 r2-x86_64.facts
+- facts/4.2/windows-2012-x86_64.facts
+- facts/4.2/windows-2016-core-x86_64.facts
+- facts/4.2/windows-2016-x86_64.facts
+- facts/4.2/windows-2019-core-x86_64.facts
+- facts/4.2/windows-2019-x86_64.facts
+- facts/4.2/windows-2022-core-x86_64.facts
+- facts/4.2/windows-2022-x86_64.facts
+- facts/4.3/almalinux-8-x86_64.facts
+- facts/4.3/almalinux-9-x86_64.facts
+- facts/4.3/archlinux-x86_64.facts
+- facts/4.3/centos-9-x86_64.facts
+- facts/4.3/debian-11-x86_64.facts
+- facts/4.3/debian-12-i386.facts
+- facts/4.3/debian-12-x86_64.facts
+- facts/4.3/fedora-36-x86_64.facts
+- facts/4.3/fedora-37-x86_64.facts
+- facts/4.3/fedora-38-x86_64.facts
+- facts/4.3/fedora-39-x86_64.facts
+- facts/4.3/freebsd-13-x86_64.facts
+- facts/4.3/gentoo-2-x86_64.facts
+- facts/4.3/opensuse-15-x86_64.facts
+- facts/4.3/oraclelinux-8-x86_64.facts
+- facts/4.3/oraclelinux-9-x86_64.facts
+- facts/4.3/redhat-8-x86_64.facts
+- facts/4.3/redhat-9-x86_64.facts
+- facts/4.3/rocky-8-x86_64.facts
+- facts/4.3/rocky-9-x86_64.facts
+- facts/4.3/sles-12-x86_64.facts
+- facts/4.3/ubuntu-18.04-x86_64.facts
+- facts/4.3/ubuntu-20.04-x86_64.facts
+- facts/4.3/ubuntu-22.04-x86_64.facts
+- facts/4.3/ubuntu-24.04-x86_64.facts
+- facts/4.3/windows-10-x86_64.facts
+- facts/4.3/windows-11-x86_64.facts
+- facts/4.3/windows-2012 r2-x86_64.facts
+- facts/4.3/windows-2012-x86_64.facts
+- facts/4.3/windows-2016-core-x86_64.facts
+- facts/4.3/windows-2016-x86_64.facts
+- facts/4.3/windows-2019-core-x86_64.facts
+- facts/4.3/windows-2019-x86_64.facts
+- facts/4.3/windows-2022-core-x86_64.facts
+- facts/4.3/windows-2022-x86_64.facts
+- facts/4.4/almalinux-8-x86_64.facts
+- facts/4.4/almalinux-9-x86_64.facts
+- facts/4.4/archlinux-x86_64.facts
+- facts/4.4/centos-9-x86_64.facts
+- facts/4.4/debian-11-x86_64.facts
+- facts/4.4/debian-12-i386.facts
+- facts/4.4/debian-12-x86_64.facts
+- facts/4.4/fedora-36-x86_64.facts
+- facts/4.4/fedora-37-x86_64.facts
+- facts/4.4/fedora-38-x86_64.facts
+- facts/4.4/fedora-39-x86_64.facts
+- facts/4.4/freebsd-13-x86_64.facts
+- facts/4.4/gentoo-2-x86_64.facts
+- facts/4.4/opensuse-15-x86_64.facts
+- facts/4.4/oraclelinux-8-x86_64.facts
+- facts/4.4/oraclelinux-9-x86_64.facts
+- facts/4.4/redhat-8-x86_64.facts
+- facts/4.4/redhat-9-x86_64.facts
+- facts/4.4/rocky-8-x86_64.facts
+- facts/4.4/rocky-9-x86_64.facts
+- facts/4.4/sles-12-x86_64.facts
+- facts/4.4/ubuntu-18.04-x86_64.facts
+- facts/4.4/ubuntu-20.04-x86_64.facts
+- facts/4.4/ubuntu-22.04-x86_64.facts
+- facts/4.4/ubuntu-24.04-x86_64.facts
+- facts/4.4/windows-10-x86_64.facts
+- facts/4.4/windows-11-x86_64.facts
+- facts/4.4/windows-2012 r2-x86_64.facts
+- facts/4.4/windows-2012-x86_64.facts
+- facts/4.4/windows-2016-core-x86_64.facts
+- facts/4.4/windows-2016-x86_64.facts
+- facts/4.4/windows-2019-core-x86_64.facts
+- facts/4.4/windows-2019-x86_64.facts
+- facts/4.4/windows-2022-core-x86_64.facts
+- facts/4.4/windows-2022-x86_64.facts
+- facts/4.5/almalinux-8-x86_64.facts
+- facts/4.5/almalinux-9-x86_64.facts
+- facts/4.5/amazon-2-x86_64.facts
+- facts/4.5/archlinux-x86_64.facts
+- facts/4.5/centos-9-x86_64.facts
+- facts/4.5/debian-11-x86_64.facts
+- facts/4.5/debian-12-x86_64.facts
+- facts/4.5/fedora-36-x86_64.facts
+- facts/4.5/fedora-37-x86_64.facts
+- facts/4.5/fedora-38-x86_64.facts
+- facts/4.5/fedora-39-x86_64.facts
+- facts/4.5/freebsd-12-x86_64.facts
+- facts/4.5/freebsd-13-x86_64.facts
+- facts/4.5/gentoo-2-x86_64.facts
+- facts/4.5/opensuse-15-x86_64.facts
+- facts/4.5/oraclelinux-8-x86_64.facts
+- facts/4.5/oraclelinux-9-x86_64.facts
+- facts/4.5/redhat-8-x86_64.facts
+- facts/4.5/redhat-9-x86_64.facts
+- facts/4.5/rocky-8-x86_64.facts
+- facts/4.5/rocky-9-x86_64.facts
+- facts/4.5/ubuntu-18.04-x86_64.facts
+- facts/4.5/ubuntu-20.04-x86_64.facts
+- facts/4.5/ubuntu-22.04-x86_64.facts
+- facts/4.5/ubuntu-24.04-x86_64.facts
+- facts/4.5/windows-10-x86_64.facts
+- facts/4.5/windows-11-x86_64.facts
+- facts/4.5/windows-2019-x86_64.facts
+- facts/4.5/windows-2022-x86_64.facts
+- facts/4.6/almalinux-8-x86_64.facts
+- facts/4.6/almalinux-9-x86_64.facts
+- facts/4.6/archlinux-x86_64.facts
+- facts/4.6/centos-9-x86_64.facts
+- facts/4.6/debian-11-x86_64.facts
+- facts/4.6/debian-12-x86_64.facts
+- facts/4.6/fedora-36-x86_64.facts
+- facts/4.6/fedora-37-x86_64.facts
+- facts/4.6/fedora-38-x86_64.facts
+- facts/4.6/fedora-39-x86_64.facts
+- facts/4.6/gentoo-2-x86_64.facts
+- facts/4.6/oraclelinux-8-x86_64.facts
+- facts/4.6/oraclelinux-9-x86_64.facts
+- facts/4.6/redhat-8-x86_64.facts
+- facts/4.6/redhat-9-x86_64.facts
+- facts/4.6/rocky-8-x86_64.facts
+- facts/4.6/rocky-9-x86_64.facts
+- facts/4.6/ubuntu-20.04-x86_64.facts
+- facts/4.6/ubuntu-22.04-x86_64.facts
+- facts/4.6/ubuntu-24.04-x86_64.facts
+- facts/4.6/windows-10-x86_64.facts
+- facts/4.6/windows-11-x86_64.facts
+- facts/4.6/windows-2019-x86_64.facts
+- facts/4.6/windows-2022-x86_64.facts
+- facts/4.7/almalinux-8-x86_64.facts
+- facts/4.7/almalinux-9-x86_64.facts
+- facts/4.7/archlinux-x86_64.facts
+- facts/4.7/centos-9-x86_64.facts
+- facts/4.7/debian-11-x86_64.facts
+- facts/4.7/debian-12-x86_64.facts
+- facts/4.7/fedora-36-x86_64.facts
+- facts/4.7/fedora-37-x86_64.facts
+- facts/4.7/fedora-38-x86_64.facts
+- facts/4.7/fedora-39-x86_64.facts
+- facts/4.7/gentoo-2-x86_64.facts
+- facts/4.7/openbsd-7-x86_64.facts
+- facts/4.7/opensuse-15-x86_64.facts
+- facts/4.7/oraclelinux-8-x86_64.facts
+- facts/4.7/oraclelinux-9-x86_64.facts
+- facts/4.7/redhat-8-x86_64.facts
+- facts/4.7/redhat-9-x86_64.facts
+- facts/4.7/rocky-8-x86_64.facts
+- facts/4.7/rocky-9-x86_64.facts
+- facts/4.7/ubuntu-20.04-x86_64.facts
+- facts/4.7/ubuntu-22.04-x86_64.facts
+- facts/4.7/ubuntu-24.04-x86_64.facts
+- facts/4.7/windows-10-x86_64.facts
+- facts/4.7/windows-11-x86_64.facts
+- facts/4.7/windows-2019-x86_64.facts
+- facts/4.7/windows-2022-x86_64.facts
+- facts/4.8/almalinux-8-x86_64.facts
+- facts/4.8/almalinux-9-x86_64.facts
+- facts/4.8/centos-9-x86_64.facts
+- facts/4.8/debian-11-x86_64.facts
+- facts/4.8/debian-12-x86_64.facts
+- facts/4.8/oraclelinux-8-x86_64.facts
+- facts/4.8/oraclelinux-9-x86_64.facts
+- facts/4.8/redhat-8-x86_64.facts
+- facts/4.8/redhat-9-x86_64.facts
+- facts/4.8/rocky-8-x86_64.facts
+- facts/4.8/rocky-9-x86_64.facts
+- facts/4.8/ubuntu-22.04-x86_64.facts
+- facts/4.8/ubuntu-24.04-x86_64.facts
+- facts/4.9/almalinux-8-x86_64.facts
+- facts/4.9/almalinux-9-x86_64.facts
+- facts/4.9/centos-9-x86_64.facts
+- facts/4.9/debian-11-x86_64.facts
+- facts/4.9/debian-12-x86_64.facts
+- facts/4.9/oraclelinux-8-x86_64.facts
+- facts/4.9/oraclelinux-9-x86_64.facts
+- facts/4.9/redhat-8-x86_64.facts
+- facts/4.9/redhat-9-x86_64.facts
+- facts/4.9/rocky-8-x86_64.facts
+- facts/4.9/rocky-9-x86_64.facts
+- facts/4.9/ubuntu-22.04-x86_64.facts
+- facts/4.9/ubuntu-24.04-x86_64.facts
+- facts/Gemfile
+- facts/README.md
+- facts/Vagrantfile
+- facts/get_facts.sh
+- facts/versions.txt
+- facts/windows_get_facts.ps1
+- facts/windows_packer/2012r2core.json
+- facts/windows_packer/answer_files/2012_r2core/Autounattend.xml
+- facts/windows_packer/scripts/PackerShutdown.bat
+- facts/windows_packer/scripts/SetupComplete-2012.cmd
+- facts/windows_packer/scripts/Test-Command.ps1
+- facts/windows_packer/scripts/boxstarter.ps1
+- facts/windows_packer/scripts/oracle.cer
+- facts/windows_packer/scripts/package.ps1
+- facts/windows_packer/scripts/postunattend.xml
+- facts/windows_packer/scripts/provision.ps1
+- facts/windows_packer/vagrant_templates/vagrantfile-windows.template
+- hugo/archetypes/default.md
+- hugo/config.toml
+- hugo/content/.placeholder
+- images/8bit-vox.png
+- images/facterdb.png
+- images/facterdb.svg
+- lib/facterdb.rb
+- lib/facterdb/bin.rb
+- lib/facterdb/version.rb
+- spec/facter_db_spec.rb
+- spec/facts_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/voxpupuli/facterdb
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key: 
+specification_version: 4
+summary: A Database of OS facts provided by Facter
+test_files: []

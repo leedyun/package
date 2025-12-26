@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+source 'http://dev.staging.iberon.com/gemserver'
+
+# Specify your gem's dependencies in replication-subscriber.gemspec
+gemspec
+
+group :development do
+  gem 'rake-iberon', '~> 1', require: false
+end
+
+#gem 'acception-client', path: '../acception-client'

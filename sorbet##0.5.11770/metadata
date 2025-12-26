@@ -1,0 +1,121 @@
+--- !ruby/object:Gem::Specification
+name: sorbet
+version: !ruby/object:Gem::Version
+  version: 0.5.11770
+platform: ruby
+authors:
+- Stripe
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sorbet-static
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.5.11770
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.5.11770
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: The main entrypoint for using Sorbet
+email: sorbet@stripe.com
+executables:
+- srb
+- srb-rbi
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/srb
+- bin/srb-rbi
+- lib/constant_cache.rb
+- lib/create-config.rb
+- lib/fetch-rbis.rb
+- lib/find-gem-rbis.rb
+- lib/gem-generator-tracepoint.rb
+- lib/gem-generator-tracepoint/tracepoint_serializer.rb
+- lib/gem-generator-tracepoint/tracer.rb
+- lib/gem_loader.rb
+- lib/gem_loader.rbi
+- lib/hidden-definition-finder.rb
+- lib/real_stdlib.rb
+- lib/require_everything.rb
+- lib/serialize.rb
+- lib/status.rb
+- lib/step_interface.rb
+- lib/suggest-typed.rb
+- lib/t.rb
+- lib/todo-rbi.rb
+homepage: https://sorbet.org
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/sorbet/sorbet
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: A Typechecker for Ruby
+test_files: []

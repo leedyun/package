@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification
+name: contributors-stats
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Michal Papis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pluginator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email: mpapis@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- contributors-stats.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/contributors_stats.rb
+- lib/contributors_stats/base.rb
+- lib/contributors_stats/calculator.rb
+- lib/contributors_stats/formatter.rb
+- lib/contributors_stats/json_helper.rb
+- lib/contributors_stats/reader.rb
+- lib/contributors_stats/version.rb
+- lib/example_data.rb
+- lib/plugins/contributors_stats/formatter/html.rb
+- lib/plugins/contributors_stats/reader/gh_org.rb
+- lib/plugins/contributors_stats/reader/gh_repo.rb
+- lib/plugins/contributors_stats/updater/html.rb
+- lib/plugins/contributors_stats/user_data/fetch.rb
+- lib/plugins/contributors_stats/user_data/simple.rb
+- test/contributors_stats/base_test.rb
+- test/contributors_stats/calculator_test.rb
+- test/contributors_stats/formatter_test.rb
+- test/contributors_stats/json_helper_test.rb
+- test/contributors_stats/reader_test.rb
+- test/contributors_stats_test.rb
+- test/fixtures-gh/orgs/railsinstaller/repos.json
+- test/fixtures-gh/repos/mpapis/rubygems-bundler/contributors.json
+- test/fixtures-gh/repos/railsinstaller/railsinstaller-nix/contributors.json
+- test/fixtures-gh/repos/railsinstaller/railsinstaller-windows/contributors.json
+- test/fixtures-gh/repos/railsinstaller/website/contributors.json
+- test/fixtures-gh/repos/rvm/pluginator/contributors.json
+- test/fixtures-gh/users/acco.json
+- test/fixtures-gh/users/alexch.json
+- test/fixtures-gh/users/biow0lf.json
+- test/fixtures-gh/users/drnic.json
+- test/fixtures-gh/users/ebertech.json
+- test/fixtures-gh/users/edwardchiu38.json
+- test/fixtures-gh/users/emachnic.json
+- test/fixtures-gh/users/envygeeks.json
+- test/fixtures-gh/users/gpxl.json
+- test/fixtures-gh/users/jc00ke.json
+- test/fixtures-gh/users/joshbuddy.json
+- test/fixtures-gh/users/luigidr.json
+- test/fixtures-gh/users/luislavena.json
+- test/fixtures-gh/users/metaskills.json
+- test/fixtures-gh/users/mpapis.json
+- test/fixtures-gh/users/parndt.json
+- test/fixtures-gh/users/pw.json
+- test/fixtures-gh/users/tjouan.json
+- test/fixtures-gh/users/veganstraightedge.json
+- test/fixtures-gh/users/wayneeseguin.json
+- test/fixtures-gh/users/whitequark.json
+- test/plugins/formatter/html_test.rb
+- test/plugins/reader/gh_org_test.rb
+- test/plugins/reader/gh_repo_test.rb
+- test/plugins/updater/html_test.rb
+- test/plugins/user_data/fetch_test.rb
+- test/plugins/user_data/simple_test.rb
+- test/test_helper.rb
+homepage: https://github.com/mpapis/contributors_stats
+licenses:
+- Apache
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Calculate statics for multiple project contributoions.
+test_files: []

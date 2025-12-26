@@ -1,0 +1,442 @@
+--- !ruby/object:Gem::Specification
+name: elasticsearch-transport
+version: !ruby/object:Gem::Version
+  version: 7.17.11
+platform: ruby
+authors:
+- Karel Minarik
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-06-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: curb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ansi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: elasticsearch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+- !ruby/object:Gem::Dependency
+  name: elasticsearch-extensions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: patron
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: require-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 'Ruby client for Elasticsearch. See the `elasticsearch` gem for full
+  integration.
+
+  '
+email:
+- karel.minarik@elasticsearch.org
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".gitignore"
+- Gemfile
+- Gemfile-faraday1.gemfile
+- LICENSE
+- README.md
+- Rakefile
+- elasticsearch-transport.gemspec
+- lib/elasticsearch-transport.rb
+- lib/elasticsearch/transport.rb
+- lib/elasticsearch/transport/client.rb
+- lib/elasticsearch/transport/meta_header.rb
+- lib/elasticsearch/transport/redacted.rb
+- lib/elasticsearch/transport/transport/base.rb
+- lib/elasticsearch/transport/transport/connections/collection.rb
+- lib/elasticsearch/transport/transport/connections/connection.rb
+- lib/elasticsearch/transport/transport/connections/selector.rb
+- lib/elasticsearch/transport/transport/errors.rb
+- lib/elasticsearch/transport/transport/http/curb.rb
+- lib/elasticsearch/transport/transport/http/faraday.rb
+- lib/elasticsearch/transport/transport/http/manticore.rb
+- lib/elasticsearch/transport/transport/loggable.rb
+- lib/elasticsearch/transport/transport/response.rb
+- lib/elasticsearch/transport/transport/serializer/multi_json.rb
+- lib/elasticsearch/transport/transport/sniffer.rb
+- lib/elasticsearch/transport/version.rb
+- spec/elasticsearch/connections/collection_spec.rb
+- spec/elasticsearch/connections/selector_spec.rb
+- spec/elasticsearch/transport/base_spec.rb
+- spec/elasticsearch/transport/client_spec.rb
+- spec/elasticsearch/transport/http/curb_spec.rb
+- spec/elasticsearch/transport/http/faraday_spec.rb
+- spec/elasticsearch/transport/http/manticore_spec.rb
+- spec/elasticsearch/transport/meta_header_spec.rb
+- spec/elasticsearch/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/jruby_test.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/adapters_test.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb
+homepage: https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/7.16/index.html
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/7.16/index.html
+  changelog_uri: https://github.com/elastic/elasticsearch-ruby/blob/7.16/CHANGELOG.md
+  source_code_uri: https://github.com/elastic/elasticsearch-ruby/tree/7.16/elasticsearch-transport
+  bug_tracker_uri: https://github.com/elastic/elasticsearch-ruby/issues
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key: 
+specification_version: 4
+summary: Ruby client for Elasticsearch.
+test_files:
+- spec/elasticsearch/connections/collection_spec.rb
+- spec/elasticsearch/connections/selector_spec.rb
+- spec/elasticsearch/transport/base_spec.rb
+- spec/elasticsearch/transport/client_spec.rb
+- spec/elasticsearch/transport/http/curb_spec.rb
+- spec/elasticsearch/transport/http/faraday_spec.rb
+- spec/elasticsearch/transport/http/manticore_spec.rb
+- spec/elasticsearch/transport/meta_header_spec.rb
+- spec/elasticsearch/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/jruby_test.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/adapters_test.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb

@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: waterdrop
+version: !ruby/object:Gem::Version
+  version: 2.8.1
+platform: ruby
+authors:
+- Maciej Mensfeld
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEcDCCAtigAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MRAwDgYDVQQDDAdjb250
+  YWN0MRcwFQYKCZImiZPyLGQBGRYHa2FyYWZrYTESMBAGCgmSJomT8ixkARkWAmlv
+  MB4XDTI0MDgyMzEwMTkyMFoXDTQ5MDgxNzEwMTkyMFowPzEQMA4GA1UEAwwHY29u
+  dGFjdDEXMBUGCgmSJomT8ixkARkWB2thcmFma2ExEjAQBgoJkiaJk/IsZAEZFgJp
+  bzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKjLhLjQqUlNayxkXnO+
+  PsmCDs/KFIzhrsYMfLZRZNaWmzV3ujljMOdDjd4snM2X06C41iVdQPWjpe3j8vVe
+  ZXEWR/twSbOP6Eeg8WVH2wCOo0x5i7yhVn4UBLH4JpfEMCbemVcWQ9ry9OMg4WpH
+  Uu4dRwxFV7hzCz3p0QfNLRI4miAxnGWcnlD98IJRjBAksTuR1Llj0vbOrDGsL9ZT
+  JeXP2gdRLd8SqzAFJEWrbeTBCBU7gfSh3oMg5SVDLjaqf7Kz5wC/8bDZydzanOxB
+  T6CDXPsCnllmvTNx2ei2T5rGYJOzJeNTmJLLK6hJWUlAvaQSvCwZRvFJ0tVGLEoS
+  flqSr6uGyyl1eMUsNmsH4BqPEYcAV6P2PKTv2vUR8AP0raDvZ3xL1TKvfRb8xRpo
+  vPopCGlY5XBWEc6QERHfVLTIVsjnls2/Ujj4h8/TSfqqYnaHKefIMLbuD/tquMjD
+  iWQsW2qStBV0T+U7FijKxVfrfqZP7GxQmDAc9o1iiyAa3QIDAQABo3cwdTAJBgNV
+  HRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNVHQ4EFgQU3O4dTXmvE7YpAkszGzR9DdL9
+  sbEwHQYDVR0RBBYwFIESY29udGFjdEBrYXJhZmthLmlvMB0GA1UdEgQWMBSBEmNv
+  bnRhY3RAa2FyYWZrYS5pbzANBgkqhkiG9w0BAQsFAAOCAYEAVKTfoLXn7mqdSxIR
+  eqxcR6Huudg1jes81s1+X0uiRTR3hxxKZ3Y82cPsee9zYWyBrN8TA4KA0WILTru7
+  Ygxvzha0SRPsSiaKLmgOJ+61ebI4+bOORzIJLpD6GxCxu1r7MI4+0r1u1xe0EWi8
+  agkVo1k4Vi8cKMLm6Gl9b3wG9zQBw6fcgKwmpjKiNnOLP+OytzUANrIUJjoq6oal
+  TC+f/Uc0TLaRqUaW/bejxzDWWHoM3SU6aoLPuerglzp9zZVzihXwx3jPLUVKDFpF
+  Rl2lcBDxlpYGueGo0/oNzGJAAy6js8jhtHC9+19PD53vk7wHtFTZ/0ugDQYnwQ+x
+  oml2fAAuVWpTBCgOVFe6XCQpMKopzoxQ1PjKztW2KYxgJdIBX87SnL3aWuBQmhRd
+  i9zWxov0mr44TWegTVeypcWGd/0nxu1+QHVNHJrpqlPBRvwQsUm7fwmRInGpcaB8
+  ap8wNYvryYzrzvzUxIVFBVM5PacgkFqRmolCa8I7tdKQN+R1
+  -----END CERTIFICATE-----
+date: 2024-12-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: karafka-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: karafka-rdkafka
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.5
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+description: Kafka messaging made easy!
+email:
+- contact@karafka.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coditsu/ci.yml"
+- ".diffend.yml"
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- certs/cert.pem
+- config/locales/errors.yml
+- docker-compose.yml
+- lib/waterdrop.rb
+- lib/waterdrop/clients/buffered.rb
+- lib/waterdrop/clients/dummy.rb
+- lib/waterdrop/clients/rdkafka.rb
+- lib/waterdrop/config.rb
+- lib/waterdrop/contracts.rb
+- lib/waterdrop/contracts/config.rb
+- lib/waterdrop/contracts/message.rb
+- lib/waterdrop/contracts/transactional_offset.rb
+- lib/waterdrop/contracts/variant.rb
+- lib/waterdrop/errors.rb
+- lib/waterdrop/helpers/counter.rb
+- lib/waterdrop/instrumentation/callbacks/delivery.rb
+- lib/waterdrop/instrumentation/callbacks/error.rb
+- lib/waterdrop/instrumentation/callbacks/oauthbearer_token_refresh.rb
+- lib/waterdrop/instrumentation/callbacks/statistics.rb
+- lib/waterdrop/instrumentation/logger_listener.rb
+- lib/waterdrop/instrumentation/monitor.rb
+- lib/waterdrop/instrumentation/notifications.rb
+- lib/waterdrop/instrumentation/vendors/datadog/dashboard.json
+- lib/waterdrop/instrumentation/vendors/datadog/metrics_listener.rb
+- lib/waterdrop/middleware.rb
+- lib/waterdrop/producer.rb
+- lib/waterdrop/producer/async.rb
+- lib/waterdrop/producer/buffer.rb
+- lib/waterdrop/producer/builder.rb
+- lib/waterdrop/producer/status.rb
+- lib/waterdrop/producer/sync.rb
+- lib/waterdrop/producer/transactions.rb
+- lib/waterdrop/producer/variant.rb
+- lib/waterdrop/version.rb
+- log/.gitkeep
+- renovate.json
+- waterdrop.gemspec
+homepage: https://karafka.io
+licenses:
+- LGPL-3.0-only
+- Commercial
+metadata:
+  funding_uri: https://karafka.io/#become-pro
+  homepage_uri: https://karafka.io
+  changelog_uri: https://karafka.io/docs/Changelog-WaterDrop
+  bug_tracker_uri: https://github.com/karafka/waterdrop/issues
+  source_code_uri: https://github.com/karafka/waterdrop
+  documentation_uri: https://karafka.io/docs/#waterdrop
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Kafka messaging made easy!
+test_files: []

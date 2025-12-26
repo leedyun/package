@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'battery_growl'
+
+limit = ARGV[0] ||= 10
+host  = 'localhost'
+
+begin
+  g = BatteryGrowl.new
+  g.run(limit.to_i,host)
+rescue => e
+  puts "Program faild."
+  puts "#{e}"
+end

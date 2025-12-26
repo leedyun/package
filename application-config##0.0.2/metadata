@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: application-config
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- kenny ortmann
+- mike gaffney
+- nick bimpasis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies: []
+description: a gem that you can use for application specific settings
+email:
+- kenny.ortmann@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- LICENSE
+- README
+- application-config.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/application_config.rb
+- lib/application_config/base.rb
+- lib/application_config/data_structures/always_null_node.rb
+- lib/application_config/data_structures/nested_hash.rb
+- lib/application_config/data_structures/value_node.rb
+- lib/application_config/railtie.rb
+- lib/application_config_test_ext.rb
+- tasks/app_config_tasks.rake
+- test/app_config_test.rb
+- test/test_helper.rb
+homepage: https://github.com/asynchrony/application_config
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: a gem that you can use for application specific settings
+test_files: []

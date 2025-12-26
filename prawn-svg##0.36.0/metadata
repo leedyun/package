@@ -1,0 +1,304 @@
+--- !ruby/object:Gem::Specification
+name: prawn-svg
+version: !ruby/object:Gem::Version
+  version: 0.36.0
+platform: ruby
+authors:
+- Mog Nesbitt
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: css_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: matrix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+- !ruby/object:Gem::Dependency
+  name: prawn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.11.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.11.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.9
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.9
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+description: This gem allows you to render SVG directly into a PDF using the 'prawn'
+  gem.  Since PDF is vector-based, you'll get nice scaled graphics if you use SVG
+  instead of an image.
+email: mog@seriousorange.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/lint.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- lib/prawn-svg.rb
+- lib/prawn/svg/attributes.rb
+- lib/prawn/svg/attributes/clip_path.rb
+- lib/prawn/svg/attributes/opacity.rb
+- lib/prawn/svg/attributes/space.rb
+- lib/prawn/svg/attributes/stroke.rb
+- lib/prawn/svg/attributes/transform.rb
+- lib/prawn/svg/calculators/arc_to_bezier_curve.rb
+- lib/prawn/svg/calculators/aspect_ratio.rb
+- lib/prawn/svg/calculators/document_sizing.rb
+- lib/prawn/svg/calculators/pixels.rb
+- lib/prawn/svg/color.rb
+- lib/prawn/svg/css/font_family_parser.rb
+- lib/prawn/svg/css/font_parser.rb
+- lib/prawn/svg/css/selector_parser.rb
+- lib/prawn/svg/css/stylesheets.rb
+- lib/prawn/svg/css/values_parser.rb
+- lib/prawn/svg/document.rb
+- lib/prawn/svg/elements.rb
+- lib/prawn/svg/elements/base.rb
+- lib/prawn/svg/elements/call_duplicator.rb
+- lib/prawn/svg/elements/circle.rb
+- lib/prawn/svg/elements/clip_path.rb
+- lib/prawn/svg/elements/container.rb
+- lib/prawn/svg/elements/depth_first_base.rb
+- lib/prawn/svg/elements/ellipse.rb
+- lib/prawn/svg/elements/gradient.rb
+- lib/prawn/svg/elements/ignored.rb
+- lib/prawn/svg/elements/image.rb
+- lib/prawn/svg/elements/line.rb
+- lib/prawn/svg/elements/marker.rb
+- lib/prawn/svg/elements/path.rb
+- lib/prawn/svg/elements/polygon.rb
+- lib/prawn/svg/elements/polyline.rb
+- lib/prawn/svg/elements/rect.rb
+- lib/prawn/svg/elements/root.rb
+- lib/prawn/svg/elements/text.rb
+- lib/prawn/svg/elements/text_component.rb
+- lib/prawn/svg/elements/use.rb
+- lib/prawn/svg/elements/viewport.rb
+- lib/prawn/svg/extension.rb
+- lib/prawn/svg/font.rb
+- lib/prawn/svg/font_registry.rb
+- lib/prawn/svg/funciri.rb
+- lib/prawn/svg/gradient_renderer.rb
+- lib/prawn/svg/gradients.rb
+- lib/prawn/svg/interface.rb
+- lib/prawn/svg/length.rb
+- lib/prawn/svg/loaders/data.rb
+- lib/prawn/svg/loaders/file.rb
+- lib/prawn/svg/loaders/web.rb
+- lib/prawn/svg/paint.rb
+- lib/prawn/svg/pathable.rb
+- lib/prawn/svg/percentage.rb
+- lib/prawn/svg/properties.rb
+- lib/prawn/svg/renderer.rb
+- lib/prawn/svg/state.rb
+- lib/prawn/svg/transform_parser.rb
+- lib/prawn/svg/transform_utils.rb
+- lib/prawn/svg/ttf.rb
+- lib/prawn/svg/url_loader.rb
+- lib/prawn/svg/version.rb
+- prawn-svg.gemspec
+- spec/integration_spec.rb
+- spec/prawn/svg/attributes/opacity_spec.rb
+- spec/prawn/svg/attributes/transform_spec.rb
+- spec/prawn/svg/calculators/aspect_ratio_spec.rb
+- spec/prawn/svg/calculators/document_sizing_spec.rb
+- spec/prawn/svg/calculators/pixels_spec.rb
+- spec/prawn/svg/color_spec.rb
+- spec/prawn/svg/css/font_family_parser_spec.rb
+- spec/prawn/svg/css/selector_parser_spec.rb
+- spec/prawn/svg/css/stylesheets_spec.rb
+- spec/prawn/svg/css/values_parser_spec.rb
+- spec/prawn/svg/document_spec.rb
+- spec/prawn/svg/elements/base_spec.rb
+- spec/prawn/svg/elements/gradient_spec.rb
+- spec/prawn/svg/elements/line_spec.rb
+- spec/prawn/svg/elements/marker_spec.rb
+- spec/prawn/svg/elements/path_spec.rb
+- spec/prawn/svg/elements/polygon_spec.rb
+- spec/prawn/svg/elements/polyline_spec.rb
+- spec/prawn/svg/elements/root_spec.rb
+- spec/prawn/svg/elements/text_spec.rb
+- spec/prawn/svg/font_registry_spec.rb
+- spec/prawn/svg/font_spec.rb
+- spec/prawn/svg/funciri_spec.rb
+- spec/prawn/svg/interface_spec.rb
+- spec/prawn/svg/length_spec.rb
+- spec/prawn/svg/loaders/data_spec.rb
+- spec/prawn/svg/loaders/file_spec.rb
+- spec/prawn/svg/loaders/web_spec.rb
+- spec/prawn/svg/paint_spec.rb
+- spec/prawn/svg/pathable_spec.rb
+- spec/prawn/svg/pdfmatrix_spec.rb
+- spec/prawn/svg/percentage_spec.rb
+- spec/prawn/svg/properties_spec.rb
+- spec/prawn/svg/transform_parser_spec.rb
+- spec/prawn/svg/ttf_spec.rb
+- spec/prawn/svg/url_loader_spec.rb
+- spec/sample_images/image_svg_embed.svg
+- spec/sample_images/mushroom-long.jpg
+- spec/sample_images/mushroom-wide.jpg
+- spec/sample_output/.keep
+- spec/sample_svg/arcs01.svg
+- spec/sample_svg/arrows.svg
+- spec/sample_svg/cap_styles.svg
+- spec/sample_svg/circle01.svg
+- spec/sample_svg/clip_path.svg
+- spec/sample_svg/close_path.svg
+- spec/sample_svg/cmyk.svg
+- spec/sample_svg/cubic01.svg
+- spec/sample_svg/cubic01a.svg
+- spec/sample_svg/cubic02.svg
+- spec/sample_svg/display_none.svg
+- spec/sample_svg/double_opacity.svg
+- spec/sample_svg/ellipse01.svg
+- spec/sample_svg/gistfile1.svg
+- spec/sample_svg/google_charts.svg
+- spec/sample_svg/gradient_stress_test.svg
+- spec/sample_svg/gradient_transform.svg
+- spec/sample_svg/gradients-cmyk.svg
+- spec/sample_svg/gradients.svg
+- spec/sample_svg/hidden_paths.svg
+- spec/sample_svg/highcharts.svg
+- spec/sample_svg/image01.svg
+- spec/sample_svg/image02_base64.svg
+- spec/sample_svg/image03.svg
+- spec/sample_svg/image_svg.svg
+- spec/sample_svg/line01.svg
+- spec/sample_svg/links.svg
+- spec/sample_svg/marker.svg
+- spec/sample_svg/markers_degenerate_cp.svg
+- spec/sample_svg/maths.svg
+- spec/sample_svg/matrix_transform.svg
+- spec/sample_svg/matrix_transform_3.svg
+- spec/sample_svg/negminy.svg
+- spec/sample_svg/no_width_or_height.svg
+- spec/sample_svg/offset_viewport.svg
+- spec/sample_svg/omnigraffle.svg
+- spec/sample_svg/opacity01.svg
+- spec/sample_svg/ordering.svg
+- spec/sample_svg/path.svg
+- spec/sample_svg/pie_piece.svg
+- spec/sample_svg/polygon01.svg
+- spec/sample_svg/polyline01.svg
+- spec/sample_svg/preserve-space.svg
+- spec/sample_svg/quad01.svg
+- spec/sample_svg/radgrad01-bounding.svg
+- spec/sample_svg/radgrad01.svg
+- spec/sample_svg/rect01.svg
+- spec/sample_svg/rect02.svg
+- spec/sample_svg/rotate_scale.svg
+- spec/sample_svg/scale.svg
+- spec/sample_svg/scruffy_graph.svg
+- spec/sample_svg/subfamilies.svg
+- spec/sample_svg/subviewports.svg
+- spec/sample_svg/subviewports2.svg
+- spec/sample_svg/svg_fill.svg
+- spec/sample_svg/symbol.svg
+- spec/sample_svg/text-decoration.svg
+- spec/sample_svg/text_entities.svg
+- spec/sample_svg/text_stroke.svg
+- spec/sample_svg/transform.svg
+- spec/sample_svg/tref01.svg
+- spec/sample_svg/triangle01.svg
+- spec/sample_svg/tspan01.svg
+- spec/sample_svg/tspan02.svg
+- spec/sample_svg/tspan03-cc.svg
+- spec/sample_svg/tspan03.svg
+- spec/sample_svg/tspan04.svg
+- spec/sample_svg/tspan05.svg
+- spec/sample_svg/tspan91.svg
+- spec/sample_svg/use.svg
+- spec/sample_svg/use_disordered.svg
+- spec/sample_svg/viewbox.svg
+- spec/sample_svg/viewport.svg
+- spec/sample_svg/warning-radioactive.svg
+- spec/sample_ttf/OpenSans-SemiboldItalic.ttf
+- spec/spec_helper.rb
+homepage: http://github.com/mogest/prawn-svg
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: SVG renderer for Prawn PDF library
+test_files: []

@@ -1,0 +1,249 @@
+--- !ruby/object:Gem::Specification
+name: jquery-ui-rails
+version: !ruby/object:Gem::Version
+  version: 7.0.0
+platform: ruby
+authors:
+- Jo Liss
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-03-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.16
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.16
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+
+  asset pipeline
+email:
+- joliss42@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitmodules"
+- ".travis.yml"
+- Gemfile
+- History.md
+- License.txt
+- README.md
+- Rakefile
+- VERSIONS.md
+- app/assets/images/jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png
+- app/assets/images/jquery-ui/ui-icons_444444_256x240.png
+- app/assets/images/jquery-ui/ui-icons_555555_256x240.png
+- app/assets/images/jquery-ui/ui-icons_777620_256x240.png
+- app/assets/images/jquery-ui/ui-icons_777777_256x240.png
+- app/assets/images/jquery-ui/ui-icons_cc0000_256x240.png
+- app/assets/images/jquery-ui/ui-icons_ffffff_256x240.png
+- app/assets/javascripts/jquery-ui.js
+- app/assets/javascripts/jquery-ui/core.js
+- app/assets/javascripts/jquery-ui/data.js
+- app/assets/javascripts/jquery-ui/disable-selection.js
+- app/assets/javascripts/jquery-ui/effect.all.js
+- app/assets/javascripts/jquery-ui/effect.js
+- app/assets/javascripts/jquery-ui/effects/effect-blind.js
+- app/assets/javascripts/jquery-ui/effects/effect-bounce.js
+- app/assets/javascripts/jquery-ui/effects/effect-clip.js
+- app/assets/javascripts/jquery-ui/effects/effect-drop.js
+- app/assets/javascripts/jquery-ui/effects/effect-explode.js
+- app/assets/javascripts/jquery-ui/effects/effect-fade.js
+- app/assets/javascripts/jquery-ui/effects/effect-fold.js
+- app/assets/javascripts/jquery-ui/effects/effect-highlight.js
+- app/assets/javascripts/jquery-ui/effects/effect-puff.js
+- app/assets/javascripts/jquery-ui/effects/effect-pulsate.js
+- app/assets/javascripts/jquery-ui/effects/effect-scale.js
+- app/assets/javascripts/jquery-ui/effects/effect-shake.js
+- app/assets/javascripts/jquery-ui/effects/effect-size.js
+- app/assets/javascripts/jquery-ui/effects/effect-slide.js
+- app/assets/javascripts/jquery-ui/effects/effect-transfer.js
+- app/assets/javascripts/jquery-ui/focusable.js
+- app/assets/javascripts/jquery-ui/form-reset-mixin.js
+- app/assets/javascripts/jquery-ui/form.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-af.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ar-DZ.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ar.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-az.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-be.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-bg.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-bs.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ca.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-cs.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-cy-GB.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-da.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-de-AT.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-de.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-el.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-en-AU.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-en-GB.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-en-NZ.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-eo.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-es.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-et.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-eu.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fa.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fi.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fo.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fr-CA.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fr-CH.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-fr.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-gl.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-he.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-hi.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-hr.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-hu.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-hy.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-id.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-is.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-it-CH.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-it.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ja.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ka.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-kk.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-km.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ko.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ky.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-lb.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-lt.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-lv.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-mk.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ml.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ms.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-nb.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-nl-BE.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-nl.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-nn.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-no.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-pl.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-pt-BR.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-pt.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-rm.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ro.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ru.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sk.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sl.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sq.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sr-SR.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sr.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-sv.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-ta.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-th.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-tj.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-tr.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-uk.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-vi.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-zh-CN.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-zh-HK.js
+- app/assets/javascripts/jquery-ui/i18n/datepicker-zh-TW.js
+- app/assets/javascripts/jquery-ui/ie.js
+- app/assets/javascripts/jquery-ui/jquery-patch.js
+- app/assets/javascripts/jquery-ui/jquery-var-for-color.js
+- app/assets/javascripts/jquery-ui/keycode.js
+- app/assets/javascripts/jquery-ui/labels.js
+- app/assets/javascripts/jquery-ui/plugin.js
+- app/assets/javascripts/jquery-ui/position.js
+- app/assets/javascripts/jquery-ui/safe-active-element.js
+- app/assets/javascripts/jquery-ui/safe-blur.js
+- app/assets/javascripts/jquery-ui/scroll-parent.js
+- app/assets/javascripts/jquery-ui/tabbable.js
+- app/assets/javascripts/jquery-ui/unique-id.js
+- app/assets/javascripts/jquery-ui/vendor/jquery-color/jquery.color.js
+- app/assets/javascripts/jquery-ui/version.js
+- app/assets/javascripts/jquery-ui/widget.js
+- app/assets/javascripts/jquery-ui/widgets/accordion.js
+- app/assets/javascripts/jquery-ui/widgets/autocomplete.js
+- app/assets/javascripts/jquery-ui/widgets/button.js
+- app/assets/javascripts/jquery-ui/widgets/checkboxradio.js
+- app/assets/javascripts/jquery-ui/widgets/controlgroup.js
+- app/assets/javascripts/jquery-ui/widgets/datepicker.js
+- app/assets/javascripts/jquery-ui/widgets/dialog.js
+- app/assets/javascripts/jquery-ui/widgets/draggable.js
+- app/assets/javascripts/jquery-ui/widgets/droppable.js
+- app/assets/javascripts/jquery-ui/widgets/menu.js
+- app/assets/javascripts/jquery-ui/widgets/mouse.js
+- app/assets/javascripts/jquery-ui/widgets/progressbar.js
+- app/assets/javascripts/jquery-ui/widgets/resizable.js
+- app/assets/javascripts/jquery-ui/widgets/selectable.js
+- app/assets/javascripts/jquery-ui/widgets/selectmenu.js
+- app/assets/javascripts/jquery-ui/widgets/slider.js
+- app/assets/javascripts/jquery-ui/widgets/sortable.js
+- app/assets/javascripts/jquery-ui/widgets/spinner.js
+- app/assets/javascripts/jquery-ui/widgets/tabs.js
+- app/assets/javascripts/jquery-ui/widgets/tooltip.js
+- app/assets/stylesheets/jquery-ui.css
+- app/assets/stylesheets/jquery-ui/accordion.css
+- app/assets/stylesheets/jquery-ui/all.css
+- app/assets/stylesheets/jquery-ui/autocomplete.css
+- app/assets/stylesheets/jquery-ui/base.css
+- app/assets/stylesheets/jquery-ui/button.css
+- app/assets/stylesheets/jquery-ui/checkboxradio.css
+- app/assets/stylesheets/jquery-ui/controlgroup.css
+- app/assets/stylesheets/jquery-ui/core.css
+- app/assets/stylesheets/jquery-ui/datepicker.css
+- app/assets/stylesheets/jquery-ui/dialog.css
+- app/assets/stylesheets/jquery-ui/draggable.css
+- app/assets/stylesheets/jquery-ui/menu.css
+- app/assets/stylesheets/jquery-ui/progressbar.css
+- app/assets/stylesheets/jquery-ui/resizable.css
+- app/assets/stylesheets/jquery-ui/selectable.css
+- app/assets/stylesheets/jquery-ui/selectmenu.css
+- app/assets/stylesheets/jquery-ui/slider.css
+- app/assets/stylesheets/jquery-ui/sortable.css
+- app/assets/stylesheets/jquery-ui/spinner.css
+- app/assets/stylesheets/jquery-ui/tabs.css
+- app/assets/stylesheets/jquery-ui/theme.css.erb
+- app/assets/stylesheets/jquery-ui/tooltip.css
+- lib/jquery-ui-rails.rb
+- lib/jquery/ui/rails.rb
+- lib/jquery/ui/rails/engine.rb
+- lib/jquery/ui/rails/version.rb
+homepage: https://github.com/jquery-ui-rails/jquery-ui-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: jQuery UI packaged for the Rails asset pipeline
+test_files: []

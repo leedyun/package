@@ -1,0 +1,382 @@
+--- !ruby/object:Gem::Specification
+name: fog-aliyun
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Qinsi Deng, Jianxun Li, Jane Han, Guimin He
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2022-08-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: pry-nav
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: memory_profiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aliyun-sdk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+- !ruby/object:Gem::Dependency
+  name: aliyun-sdk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ipaddress
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: xml-simple
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: As a FOG provider, fog-aliyun support aliyun OSS/ECS. It will support
+  more aliyun services later.
+email:
+- dengqinsi@sina.com
+- guimin.hgm@alibaba-inc.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- fog-aliyun.gemspec
+- lib/fog/aliyun.rb
+- lib/fog/aliyun/compute.rb
+- lib/fog/aliyun/models/compute/eip_address.rb
+- lib/fog/aliyun/models/compute/eip_addresses.rb
+- lib/fog/aliyun/models/compute/flavor.rb
+- lib/fog/aliyun/models/compute/flavors.rb
+- lib/fog/aliyun/models/compute/image.rb
+- lib/fog/aliyun/models/compute/images.rb
+- lib/fog/aliyun/models/compute/route_entry.rb
+- lib/fog/aliyun/models/compute/route_entrys.rb
+- lib/fog/aliyun/models/compute/route_table.rb
+- lib/fog/aliyun/models/compute/route_tables.rb
+- lib/fog/aliyun/models/compute/security_group.rb
+- lib/fog/aliyun/models/compute/security_group_rule.rb
+- lib/fog/aliyun/models/compute/security_group_rules.rb
+- lib/fog/aliyun/models/compute/security_groups.rb
+- lib/fog/aliyun/models/compute/server.rb
+- lib/fog/aliyun/models/compute/servers.rb
+- lib/fog/aliyun/models/compute/snapshot.rb
+- lib/fog/aliyun/models/compute/snapshots.rb
+- lib/fog/aliyun/models/compute/volume.rb
+- lib/fog/aliyun/models/compute/volumes.rb
+- lib/fog/aliyun/models/compute/vpc.rb
+- lib/fog/aliyun/models/compute/vpcs.rb
+- lib/fog/aliyun/models/compute/vrouter.rb
+- lib/fog/aliyun/models/compute/vrouters.rb
+- lib/fog/aliyun/models/compute/vswitch.rb
+- lib/fog/aliyun/models/compute/vswitches.rb
+- lib/fog/aliyun/models/storage/directories.rb
+- lib/fog/aliyun/models/storage/directory.rb
+- lib/fog/aliyun/models/storage/file.rb
+- lib/fog/aliyun/models/storage/files.rb
+- lib/fog/aliyun/requests/compute/allocate_eip_address.rb
+- lib/fog/aliyun/requests/compute/allocate_public_ip_address.rb
+- lib/fog/aliyun/requests/compute/associate_eip_address.rb
+- lib/fog/aliyun/requests/compute/attach_disk.rb
+- lib/fog/aliyun/requests/compute/create_disk.rb
+- lib/fog/aliyun/requests/compute/create_image.rb
+- lib/fog/aliyun/requests/compute/create_security_group.rb
+- lib/fog/aliyun/requests/compute/create_security_group_egress_ip_rule.rb
+- lib/fog/aliyun/requests/compute/create_security_group_egress_sg_rule.rb
+- lib/fog/aliyun/requests/compute/create_security_group_ip_rule.rb
+- lib/fog/aliyun/requests/compute/create_security_group_sg_rule.rb
+- lib/fog/aliyun/requests/compute/create_server.rb
+- lib/fog/aliyun/requests/compute/create_snapshot.rb
+- lib/fog/aliyun/requests/compute/create_vpc.rb
+- lib/fog/aliyun/requests/compute/create_vpn_connection.rb
+- lib/fog/aliyun/requests/compute/create_vpn_customergateway.rb
+- lib/fog/aliyun/requests/compute/create_vswitch.rb
+- lib/fog/aliyun/requests/compute/delete_disk.rb
+- lib/fog/aliyun/requests/compute/delete_image.rb
+- lib/fog/aliyun/requests/compute/delete_security_group.rb
+- lib/fog/aliyun/requests/compute/delete_security_group_egress_ip_rule.rb
+- lib/fog/aliyun/requests/compute/delete_security_group_egress_sg_rule.rb
+- lib/fog/aliyun/requests/compute/delete_security_group_ip_rule.rb
+- lib/fog/aliyun/requests/compute/delete_security_group_sg_rule.rb
+- lib/fog/aliyun/requests/compute/delete_server.rb
+- lib/fog/aliyun/requests/compute/delete_snapshot.rb
+- lib/fog/aliyun/requests/compute/delete_vpc.rb
+- lib/fog/aliyun/requests/compute/delete_vpn_connection.rb
+- lib/fog/aliyun/requests/compute/delete_vpn_customergateway.rb
+- lib/fog/aliyun/requests/compute/delete_vswitch.rb
+- lib/fog/aliyun/requests/compute/detach_disk.rb
+- lib/fog/aliyun/requests/compute/join_security_group.rb
+- lib/fog/aliyun/requests/compute/leave_security_group.rb
+- lib/fog/aliyun/requests/compute/list_disks.rb
+- lib/fog/aliyun/requests/compute/list_eip_addresses.rb
+- lib/fog/aliyun/requests/compute/list_images.rb
+- lib/fog/aliyun/requests/compute/list_route_tables.rb
+- lib/fog/aliyun/requests/compute/list_security_group_rules.rb
+- lib/fog/aliyun/requests/compute/list_security_groups.rb
+- lib/fog/aliyun/requests/compute/list_server_types.rb
+- lib/fog/aliyun/requests/compute/list_servers.rb
+- lib/fog/aliyun/requests/compute/list_snapshots.rb
+- lib/fog/aliyun/requests/compute/list_vpcs.rb
+- lib/fog/aliyun/requests/compute/list_vpn_connections.rb
+- lib/fog/aliyun/requests/compute/list_vpn_customergateways.rb
+- lib/fog/aliyun/requests/compute/list_vpn_gateways.rb
+- lib/fog/aliyun/requests/compute/list_vrouters.rb
+- lib/fog/aliyun/requests/compute/list_vswitchs.rb
+- lib/fog/aliyun/requests/compute/list_zones.rb
+- lib/fog/aliyun/requests/compute/modify_vpc.rb
+- lib/fog/aliyun/requests/compute/modify_vswitch.rb
+- lib/fog/aliyun/requests/compute/reboot_server.rb
+- lib/fog/aliyun/requests/compute/release_eip_address.rb
+- lib/fog/aliyun/requests/compute/start_server.rb
+- lib/fog/aliyun/requests/compute/stop_server.rb
+- lib/fog/aliyun/requests/compute/unassociate_eip_address.rb
+- lib/fog/aliyun/requests/storage/abort_multipart_upload.rb
+- lib/fog/aliyun/requests/storage/complete_multipart_upload.rb
+- lib/fog/aliyun/requests/storage/copy_object.rb
+- lib/fog/aliyun/requests/storage/delete_bucket.rb
+- lib/fog/aliyun/requests/storage/delete_multiple_objects.rb
+- lib/fog/aliyun/requests/storage/delete_object.rb
+- lib/fog/aliyun/requests/storage/get_bucket.rb
+- lib/fog/aliyun/requests/storage/get_bucket_location.rb
+- lib/fog/aliyun/requests/storage/get_object.rb
+- lib/fog/aliyun/requests/storage/get_object_acl.rb
+- lib/fog/aliyun/requests/storage/get_object_http_url.rb
+- lib/fog/aliyun/requests/storage/get_object_https_url.rb
+- lib/fog/aliyun/requests/storage/get_service.rb
+- lib/fog/aliyun/requests/storage/head_object.rb
+- lib/fog/aliyun/requests/storage/initiate_multipart_upload.rb
+- lib/fog/aliyun/requests/storage/list_buckets.rb
+- lib/fog/aliyun/requests/storage/list_objects.rb
+- lib/fog/aliyun/requests/storage/put_bucket.rb
+- lib/fog/aliyun/requests/storage/put_object.rb
+- lib/fog/aliyun/requests/storage/upload_part.rb
+- lib/fog/aliyun/storage.rb
+- lib/fog/aliyun/version.rb
+- lib/fog/bin/aliyun.rb
+homepage: https://github.com/fog/fog-aliyun
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Fog provider for Alibaba Cloud Web Services.
+test_files: []

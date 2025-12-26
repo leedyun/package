@@ -1,0 +1,329 @@
+--- !ruby/object:Gem::Specification
+name: mime-types
+version: !ruby/object:Gem::Version
+  version: 3.6.0
+platform: ruby
+authors:
+- Austin Ziegler
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: mime-types-data
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2015'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2015'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.25'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.25'
+- !ruby/object:Gem::Dependency
+  name: hoe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: hoe-doofus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: hoe-gemspec2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: hoe-git2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: hoe-rubygems
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-autotest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-focus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-hooks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14.0'
+- !ruby/object:Gem::Dependency
+  name: standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+description: |-
+  The mime-types library provides a library and registry for information about
+  MIME content type definitions. It can be used to determine defined filename
+  extensions for MIME types, or to use filename extensions to look up the likely
+  MIME type definitions.
+
+  Version 3.0 is a major release that requires Ruby 2.0 compatibility and removes
+  deprecated functions. The columnar registry format introduced in 2.6 has been
+  made the primary format; the registry data has been extracted from this library
+  and put into {mime-types-data}[https://github.com/mime-types/mime-types-data].
+  Additionally, mime-types is now licensed exclusively under the MIT licence and
+  there is a code of conduct in effect. There are a number of other smaller
+  changes described in the History file.
+email:
+- halostatue@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- Code-of-Conduct.md
+- Contributing.md
+- History.md
+- Licence.md
+- Manifest.txt
+- README.rdoc
+files:
+- ".standard.yml"
+- Code-of-Conduct.md
+- Contributing.md
+- History.md
+- Licence.md
+- Manifest.txt
+- README.rdoc
+- Rakefile
+- lib/mime-types.rb
+- lib/mime/type.rb
+- lib/mime/type/columnar.rb
+- lib/mime/types.rb
+- lib/mime/types/_columnar.rb
+- lib/mime/types/cache.rb
+- lib/mime/types/columnar.rb
+- lib/mime/types/container.rb
+- lib/mime/types/deprecations.rb
+- lib/mime/types/full.rb
+- lib/mime/types/loader.rb
+- lib/mime/types/logger.rb
+- lib/mime/types/registry.rb
+- test/bad-fixtures/malformed
+- test/fixture/json.json
+- test/fixture/old-data
+- test/fixture/yaml.yaml
+- test/minitest_helper.rb
+- test/test_mime_type.rb
+- test/test_mime_types.rb
+- test/test_mime_types_cache.rb
+- test/test_mime_types_class.rb
+- test/test_mime_types_lazy.rb
+- test/test_mime_types_loader.rb
+homepage: https://github.com/mime-types/ruby-mime-types/
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/mime-types/ruby-mime-types/
+  source_code_uri: https://github.com/mime-types/ruby-mime-types/
+  bug_tracker_uri: https://github.com/mime-types/ruby-mime-types/issues
+  changelog_uri: https://github.com/mime-types/ruby-mime-types/blob/master/History.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options:
+- "--main"
+- README.rdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: The mime-types library provides a library and registry for information about
+  MIME content type definitions
+test_files: []

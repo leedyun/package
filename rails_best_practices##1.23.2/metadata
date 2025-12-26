@@ -1,0 +1,486 @@
+--- !ruby/object:Gem::Specification
+name: rails_best_practices
+version: !ruby/object:Gem::Version
+  version: 1.23.2
+platform: ruby
+authors:
+- Richard Huang
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-09-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: code_analyzer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.5
+- !ruby/object:Gem::Dependency
+  name: erubis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: require_all
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: ruby-progressbar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slim
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: a code metric tool for rails codes, written in Ruby.
+email:
+- flyerhzm@gmail.com
+executables:
+- rails_best_practices
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-version"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- Gemfile.ruby-2.6
+- Gemfile.ruby-2.6.lock
+- Guardfile
+- MIT_LICENSE
+- README.md
+- Rakefile
+- assets/result.html.erb
+- bin/rails_best_practices
+- lib/rails_best_practices.rb
+- lib/rails_best_practices/analyzer.rb
+- lib/rails_best_practices/cli.rb
+- lib/rails_best_practices/colorize.rb
+- lib/rails_best_practices/command.rb
+- lib/rails_best_practices/core.rb
+- lib/rails_best_practices/core/check.rb
+- lib/rails_best_practices/core/checks_loader.rb
+- lib/rails_best_practices/core/configs.rb
+- lib/rails_best_practices/core/controllers.rb
+- lib/rails_best_practices/core/error.rb
+- lib/rails_best_practices/core/gems.rb
+- lib/rails_best_practices/core/helpers.rb
+- lib/rails_best_practices/core/klasses.rb
+- lib/rails_best_practices/core/mailers.rb
+- lib/rails_best_practices/core/methods.rb
+- lib/rails_best_practices/core/model_associations.rb
+- lib/rails_best_practices/core/model_attributes.rb
+- lib/rails_best_practices/core/models.rb
+- lib/rails_best_practices/core/modules.rb
+- lib/rails_best_practices/core/routes.rb
+- lib/rails_best_practices/core/runner.rb
+- lib/rails_best_practices/core_ext/erubis.rb
+- lib/rails_best_practices/inline_disables.rb
+- lib/rails_best_practices/inline_disables/comment_ripper.rb
+- lib/rails_best_practices/inline_disables/inline_disable.rb
+- lib/rails_best_practices/lexicals.rb
+- lib/rails_best_practices/lexicals/long_line_check.rb
+- lib/rails_best_practices/lexicals/remove_tab_check.rb
+- lib/rails_best_practices/lexicals/remove_trailing_whitespace_check.rb
+- lib/rails_best_practices/option_parser.rb
+- lib/rails_best_practices/prepares.rb
+- lib/rails_best_practices/prepares/config_prepare.rb
+- lib/rails_best_practices/prepares/controller_prepare.rb
+- lib/rails_best_practices/prepares/gemfile_prepare.rb
+- lib/rails_best_practices/prepares/helper_prepare.rb
+- lib/rails_best_practices/prepares/initializer_prepare.rb
+- lib/rails_best_practices/prepares/mailer_prepare.rb
+- lib/rails_best_practices/prepares/model_prepare.rb
+- lib/rails_best_practices/prepares/route_prepare.rb
+- lib/rails_best_practices/prepares/schema_prepare.rb
+- lib/rails_best_practices/reviews.rb
+- lib/rails_best_practices/reviews/add_model_virtual_attribute_review.rb
+- lib/rails_best_practices/reviews/always_add_db_index_review.rb
+- lib/rails_best_practices/reviews/check_destroy_return_value_review.rb
+- lib/rails_best_practices/reviews/check_save_return_value_review.rb
+- lib/rails_best_practices/reviews/default_scope_is_evil_review.rb
+- lib/rails_best_practices/reviews/dry_bundler_in_capistrano_review.rb
+- lib/rails_best_practices/reviews/hash_syntax_review.rb
+- lib/rails_best_practices/reviews/isolate_seed_data_review.rb
+- lib/rails_best_practices/reviews/keep_finders_on_their_own_model_review.rb
+- lib/rails_best_practices/reviews/law_of_demeter_review.rb
+- lib/rails_best_practices/reviews/move_code_into_controller_review.rb
+- lib/rails_best_practices/reviews/move_code_into_helper_review.rb
+- lib/rails_best_practices/reviews/move_code_into_model_review.rb
+- lib/rails_best_practices/reviews/move_finder_to_named_scope_review.rb
+- lib/rails_best_practices/reviews/move_model_logic_into_model_review.rb
+- lib/rails_best_practices/reviews/needless_deep_nesting_review.rb
+- lib/rails_best_practices/reviews/not_rescue_exception_review.rb
+- lib/rails_best_practices/reviews/not_use_default_route_review.rb
+- lib/rails_best_practices/reviews/not_use_time_ago_in_words_review.rb
+- lib/rails_best_practices/reviews/overuse_route_customizations_review.rb
+- lib/rails_best_practices/reviews/protect_mass_assignment_review.rb
+- lib/rails_best_practices/reviews/remove_empty_helpers_review.rb
+- lib/rails_best_practices/reviews/remove_unused_methods_in_controllers_review.rb
+- lib/rails_best_practices/reviews/remove_unused_methods_in_helpers_review.rb
+- lib/rails_best_practices/reviews/remove_unused_methods_in_models_review.rb
+- lib/rails_best_practices/reviews/replace_complex_creation_with_factory_method_review.rb
+- lib/rails_best_practices/reviews/replace_instance_variable_with_local_variable_review.rb
+- lib/rails_best_practices/reviews/restrict_auto_generated_routes_review.rb
+- lib/rails_best_practices/reviews/review.rb
+- lib/rails_best_practices/reviews/simplify_render_in_controllers_review.rb
+- lib/rails_best_practices/reviews/simplify_render_in_views_review.rb
+- lib/rails_best_practices/reviews/use_before_filter_review.rb
+- lib/rails_best_practices/reviews/use_model_association_review.rb
+- lib/rails_best_practices/reviews/use_multipart_alternative_as_content_type_of_email_review.rb
+- lib/rails_best_practices/reviews/use_observer_review.rb
+- lib/rails_best_practices/reviews/use_parentheses_in_method_def_review.rb
+- lib/rails_best_practices/reviews/use_query_attribute_review.rb
+- lib/rails_best_practices/reviews/use_say_with_time_in_migrations_review.rb
+- lib/rails_best_practices/reviews/use_scope_access_review.rb
+- lib/rails_best_practices/reviews/use_turbo_sprockets_rails3_review.rb
+- lib/rails_best_practices/version.rb
+- rails_best_practices.gemspec
+- rails_best_practices.yml
+- spec/fixtures/lib/rails_best_practices/plugins/reviews/not_use_rails_root_review.rb
+- spec/rails_best_practices/analyzer_spec.rb
+- spec/rails_best_practices/core/check_spec.rb
+- spec/rails_best_practices/core/checks_loader_spec.rb
+- spec/rails_best_practices/core/configs_spec.rb
+- spec/rails_best_practices/core/controllers_spec.rb
+- spec/rails_best_practices/core/error_spec.rb
+- spec/rails_best_practices/core/except_methods_spec.rb
+- spec/rails_best_practices/core/gems_spec.rb
+- spec/rails_best_practices/core/helpers_spec.rb
+- spec/rails_best_practices/core/klasses_spec.rb
+- spec/rails_best_practices/core/mailers_spec.rb
+- spec/rails_best_practices/core/methods_spec.rb
+- spec/rails_best_practices/core/model_associations_spec.rb
+- spec/rails_best_practices/core/model_attributes_spec.rb
+- spec/rails_best_practices/core/models_spec.rb
+- spec/rails_best_practices/core/modules_spec.rb
+- spec/rails_best_practices/core/routes_spec.rb
+- spec/rails_best_practices/core/runner_spec.rb
+- spec/rails_best_practices/core_ext/erubis_spec.rb
+- spec/rails_best_practices/inline_disables/inline_disable_spec.rb
+- spec/rails_best_practices/lexicals/long_line_check_spec.rb
+- spec/rails_best_practices/lexicals/remove_tab_check_spec.rb
+- spec/rails_best_practices/lexicals/remove_trailing_whitespace_check_spec.rb
+- spec/rails_best_practices/prepares/config_prepare_spec.rb
+- spec/rails_best_practices/prepares/controller_prepare_spec.rb
+- spec/rails_best_practices/prepares/gemfile_prepare_spec.rb
+- spec/rails_best_practices/prepares/helper_prepare_spec.rb
+- spec/rails_best_practices/prepares/initializer_prepare_spec.rb
+- spec/rails_best_practices/prepares/mailer_prepare_spec.rb
+- spec/rails_best_practices/prepares/model_prepare_spec.rb
+- spec/rails_best_practices/prepares/route_prepare_spec.rb
+- spec/rails_best_practices/prepares/schema_prepare_spec.rb
+- spec/rails_best_practices/reviews/add_model_virtual_attribute_review_spec.rb
+- spec/rails_best_practices/reviews/always_add_db_index_review_spec.rb
+- spec/rails_best_practices/reviews/check_destroy_return_value_review_spec.rb
+- spec/rails_best_practices/reviews/check_save_return_value_review_spec.rb
+- spec/rails_best_practices/reviews/default_scope_is_evil_review_spec.rb
+- spec/rails_best_practices/reviews/dry_bundler_in_capistrano_review_spec.rb
+- spec/rails_best_practices/reviews/hash_syntax_review_spec.rb
+- spec/rails_best_practices/reviews/isolate_seed_data_review_spec.rb
+- spec/rails_best_practices/reviews/keep_finders_on_their_own_model_review_spec.rb
+- spec/rails_best_practices/reviews/law_of_demeter_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_controller_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_helper_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_model_review_spec.rb
+- spec/rails_best_practices/reviews/move_finder_to_named_scope_review_spec.rb
+- spec/rails_best_practices/reviews/move_model_logic_into_model_review_spec.rb
+- spec/rails_best_practices/reviews/needless_deep_nesting_review_spec.rb
+- spec/rails_best_practices/reviews/not_rescue_exception_review_spec.rb
+- spec/rails_best_practices/reviews/not_use_default_route_review_spec.rb
+- spec/rails_best_practices/reviews/not_use_time_ago_in_words_review_spec.rb
+- spec/rails_best_practices/reviews/overuse_route_customizations_review_spec.rb
+- spec/rails_best_practices/reviews/protect_mass_assignment_review_spec.rb
+- spec/rails_best_practices/reviews/remove_empty_helpers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_controllers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_helpers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_models_review_spec.rb
+- spec/rails_best_practices/reviews/replace_complex_creation_with_factory_method_review_spec.rb
+- spec/rails_best_practices/reviews/replace_instance_variable_with_local_variable_review_spec.rb
+- spec/rails_best_practices/reviews/restrict_auto_generated_routes_review_spec.rb
+- spec/rails_best_practices/reviews/simplify_render_in_controllers_review_spec.rb
+- spec/rails_best_practices/reviews/simplify_render_in_views_review_spec.rb
+- spec/rails_best_practices/reviews/use_before_filter_review_spec.rb
+- spec/rails_best_practices/reviews/use_model_association_review_spec.rb
+- spec/rails_best_practices/reviews/use_multipart_alternative_as_content_type_of_email_review_spec.rb
+- spec/rails_best_practices/reviews/use_observer_review_spec.rb
+- spec/rails_best_practices/reviews/use_parentheses_in_method_def_review_spec.rb
+- spec/rails_best_practices/reviews/use_query_attribute_review_spec.rb
+- spec/rails_best_practices/reviews/use_say_with_time_in_migrations_review_spec.rb
+- spec/rails_best_practices/reviews/use_scope_access_review_spec.rb
+- spec/rails_best_practices/reviews/use_turbo_sprockets_rails3_review_spec.rb
+- spec/spec_helper.rb
+homepage: http://rails-bestpractices.com
+licenses:
+- MIT
+metadata: {}
+post_install_message: |
+  ********************************************************************************
+
+    rails_best_practices is a code metric tool to check the quality of rails codes.
+
+    I highly recommend you browse the Rails Best Practices website first.
+
+        http://rails-bestpractices.com
+
+    Enjoy!
+
+        Richard Huang (flyerhzm@gmail.com)
+
+  ********************************************************************************
+rdoc_options: []
+require_paths:
+- lib
+- assets
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: a code metric tool for rails codes.
+test_files:
+- spec/fixtures/lib/rails_best_practices/plugins/reviews/not_use_rails_root_review.rb
+- spec/rails_best_practices/analyzer_spec.rb
+- spec/rails_best_practices/core/check_spec.rb
+- spec/rails_best_practices/core/checks_loader_spec.rb
+- spec/rails_best_practices/core/configs_spec.rb
+- spec/rails_best_practices/core/controllers_spec.rb
+- spec/rails_best_practices/core/error_spec.rb
+- spec/rails_best_practices/core/except_methods_spec.rb
+- spec/rails_best_practices/core/gems_spec.rb
+- spec/rails_best_practices/core/helpers_spec.rb
+- spec/rails_best_practices/core/klasses_spec.rb
+- spec/rails_best_practices/core/mailers_spec.rb
+- spec/rails_best_practices/core/methods_spec.rb
+- spec/rails_best_practices/core/model_associations_spec.rb
+- spec/rails_best_practices/core/model_attributes_spec.rb
+- spec/rails_best_practices/core/models_spec.rb
+- spec/rails_best_practices/core/modules_spec.rb
+- spec/rails_best_practices/core/routes_spec.rb
+- spec/rails_best_practices/core/runner_spec.rb
+- spec/rails_best_practices/core_ext/erubis_spec.rb
+- spec/rails_best_practices/inline_disables/inline_disable_spec.rb
+- spec/rails_best_practices/lexicals/long_line_check_spec.rb
+- spec/rails_best_practices/lexicals/remove_tab_check_spec.rb
+- spec/rails_best_practices/lexicals/remove_trailing_whitespace_check_spec.rb
+- spec/rails_best_practices/prepares/config_prepare_spec.rb
+- spec/rails_best_practices/prepares/controller_prepare_spec.rb
+- spec/rails_best_practices/prepares/gemfile_prepare_spec.rb
+- spec/rails_best_practices/prepares/helper_prepare_spec.rb
+- spec/rails_best_practices/prepares/initializer_prepare_spec.rb
+- spec/rails_best_practices/prepares/mailer_prepare_spec.rb
+- spec/rails_best_practices/prepares/model_prepare_spec.rb
+- spec/rails_best_practices/prepares/route_prepare_spec.rb
+- spec/rails_best_practices/prepares/schema_prepare_spec.rb
+- spec/rails_best_practices/reviews/add_model_virtual_attribute_review_spec.rb
+- spec/rails_best_practices/reviews/always_add_db_index_review_spec.rb
+- spec/rails_best_practices/reviews/check_destroy_return_value_review_spec.rb
+- spec/rails_best_practices/reviews/check_save_return_value_review_spec.rb
+- spec/rails_best_practices/reviews/default_scope_is_evil_review_spec.rb
+- spec/rails_best_practices/reviews/dry_bundler_in_capistrano_review_spec.rb
+- spec/rails_best_practices/reviews/hash_syntax_review_spec.rb
+- spec/rails_best_practices/reviews/isolate_seed_data_review_spec.rb
+- spec/rails_best_practices/reviews/keep_finders_on_their_own_model_review_spec.rb
+- spec/rails_best_practices/reviews/law_of_demeter_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_controller_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_helper_review_spec.rb
+- spec/rails_best_practices/reviews/move_code_into_model_review_spec.rb
+- spec/rails_best_practices/reviews/move_finder_to_named_scope_review_spec.rb
+- spec/rails_best_practices/reviews/move_model_logic_into_model_review_spec.rb
+- spec/rails_best_practices/reviews/needless_deep_nesting_review_spec.rb
+- spec/rails_best_practices/reviews/not_rescue_exception_review_spec.rb
+- spec/rails_best_practices/reviews/not_use_default_route_review_spec.rb
+- spec/rails_best_practices/reviews/not_use_time_ago_in_words_review_spec.rb
+- spec/rails_best_practices/reviews/overuse_route_customizations_review_spec.rb
+- spec/rails_best_practices/reviews/protect_mass_assignment_review_spec.rb
+- spec/rails_best_practices/reviews/remove_empty_helpers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_controllers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_helpers_review_spec.rb
+- spec/rails_best_practices/reviews/remove_unused_methods_in_models_review_spec.rb
+- spec/rails_best_practices/reviews/replace_complex_creation_with_factory_method_review_spec.rb
+- spec/rails_best_practices/reviews/replace_instance_variable_with_local_variable_review_spec.rb
+- spec/rails_best_practices/reviews/restrict_auto_generated_routes_review_spec.rb
+- spec/rails_best_practices/reviews/simplify_render_in_controllers_review_spec.rb
+- spec/rails_best_practices/reviews/simplify_render_in_views_review_spec.rb
+- spec/rails_best_practices/reviews/use_before_filter_review_spec.rb
+- spec/rails_best_practices/reviews/use_model_association_review_spec.rb
+- spec/rails_best_practices/reviews/use_multipart_alternative_as_content_type_of_email_review_spec.rb
+- spec/rails_best_practices/reviews/use_observer_review_spec.rb
+- spec/rails_best_practices/reviews/use_parentheses_in_method_def_review_spec.rb
+- spec/rails_best_practices/reviews/use_query_attribute_review_spec.rb
+- spec/rails_best_practices/reviews/use_say_with_time_in_migrations_review_spec.rb
+- spec/rails_best_practices/reviews/use_scope_access_review_spec.rb
+- spec/rails_best_practices/reviews/use_turbo_sprockets_rails3_review_spec.rb
+- spec/spec_helper.rb

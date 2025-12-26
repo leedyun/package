@@ -1,0 +1,97 @@
+--- !ruby/object:Gem::Specification
+name: activemerchant_clickandbuy
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Olek Janiszewski
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemerchant
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.27.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.27.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem provides integration of ClickandBuy with Active Merchant
+email:
+- olek.janiszewski@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.markdown
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- activemerchant_clickandbuy.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/active_merchant/billing/clickand_buy_gateway.rb
+- lib/active_merchant/clickand_buy/request/base.rb
+- lib/active_merchant/clickand_buy/request/pay_request.rb
+- lib/active_merchant/clickand_buy/request/status_request.rb
+- lib/active_merchant/clickand_buy/version.rb
+- lib/activemerchant-clickandbuy.rb
+- spec/active_merchant/billing/clickand_buy_gateway_spec.rb
+- spec/active_merchant/clickand_buy/request/pay_request_spec.rb
+- spec/spec_helper.rb
+- spec/support/clickand_buy.yml.example
+- spec/support/requests/pay_request_response.xml
+homepage: https://github.com/exviva/activemerchant-clickandbuy
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Integration of ClickandBuy with Active Merchant
+test_files:
+- spec/active_merchant/billing/clickand_buy_gateway_spec.rb
+- spec/active_merchant/clickand_buy/request/pay_request_spec.rb
+- spec/spec_helper.rb
+- spec/support/clickand_buy.yml.example
+- spec/support/requests/pay_request_response.xml

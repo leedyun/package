@@ -1,0 +1,255 @@
+--- !ruby/object:Gem::Specification
+name: ruby-saml
+version: !ruby/object:Gem::Version
+  version: 1.17.0
+platform: ruby
+authors:
+- SAML Toolkit
+- Sixto Martin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.10
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.10
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+- !ruby/object:Gem::Dependency
+  name: simplecov-lcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 0.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 0.7.0
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.19.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.19.0
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: shoulda
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.11'
+- !ruby/object:Gem::Dependency
+  name: systemu
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: SAML Ruby toolkit. Add SAML support to your Ruby software using this
+  library
+email:
+- contact@iamdigitalservices.com
+- sixto.martin.garcia@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- ".document"
+- ".github/FUNDING.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- UPGRADING.md
+- gemfiles/nokogiri-1.5.gemfile
+- lib/onelogin/ruby-saml.rb
+- lib/onelogin/ruby-saml/attribute_service.rb
+- lib/onelogin/ruby-saml/attributes.rb
+- lib/onelogin/ruby-saml/authrequest.rb
+- lib/onelogin/ruby-saml/error_handling.rb
+- lib/onelogin/ruby-saml/http_error.rb
+- lib/onelogin/ruby-saml/idp_metadata_parser.rb
+- lib/onelogin/ruby-saml/logging.rb
+- lib/onelogin/ruby-saml/logoutrequest.rb
+- lib/onelogin/ruby-saml/logoutresponse.rb
+- lib/onelogin/ruby-saml/metadata.rb
+- lib/onelogin/ruby-saml/response.rb
+- lib/onelogin/ruby-saml/saml_message.rb
+- lib/onelogin/ruby-saml/setting_error.rb
+- lib/onelogin/ruby-saml/settings.rb
+- lib/onelogin/ruby-saml/slo_logoutrequest.rb
+- lib/onelogin/ruby-saml/slo_logoutresponse.rb
+- lib/onelogin/ruby-saml/utils.rb
+- lib/onelogin/ruby-saml/validation_error.rb
+- lib/onelogin/ruby-saml/version.rb
+- lib/ruby-saml.rb
+- lib/schemas/saml-schema-assertion-2.0.xsd
+- lib/schemas/saml-schema-authn-context-2.0.xsd
+- lib/schemas/saml-schema-authn-context-types-2.0.xsd
+- lib/schemas/saml-schema-metadata-2.0.xsd
+- lib/schemas/saml-schema-protocol-2.0.xsd
+- lib/schemas/sstc-metadata-attr.xsd
+- lib/schemas/sstc-saml-attribute-ext.xsd
+- lib/schemas/sstc-saml-metadata-algsupport-v1.0.xsd
+- lib/schemas/sstc-saml-metadata-ui-v1.0.xsd
+- lib/schemas/xenc-schema.xsd
+- lib/schemas/xml.xsd
+- lib/schemas/xmldsig-core-schema.xsd
+- lib/xml_security.rb
+- ruby-saml.gemspec
+homepage: https://github.com/saml-toolkits/ruby-saml
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.8.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: SAML Ruby Tookit
+test_files: []

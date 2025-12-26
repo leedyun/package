@@ -1,0 +1,265 @@
+--- !ruby/object:Gem::Specification
+name: disposable
+version: !ruby/object:Gem::Version
+  version: 0.6.3
+platform: ruby
+authors:
+- Nick Sutterer
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-05-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: declarative
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.9
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.9
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: representable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dry-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Decorators on top of your ORM layer.
+email:
+- apotonick@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGES.md
+- Gemfile
+- Gemfile_builder_test.rb
+- LICENSE.txt
+- README.md
+- Rakefile
+- disposable.gemspec
+- lib/disposable.rb
+- lib/disposable/callback.rb
+- lib/disposable/composition.rb
+- lib/disposable/expose.rb
+- lib/disposable/rescheme.rb
+- lib/disposable/twin.rb
+- lib/disposable/twin/builder.rb
+- lib/disposable/twin/changed.rb
+- lib/disposable/twin/coercion.rb
+- lib/disposable/twin/collection.rb
+- lib/disposable/twin/composition.rb
+- lib/disposable/twin/default.rb
+- lib/disposable/twin/definitions.rb
+- lib/disposable/twin/parent.rb
+- lib/disposable/twin/persisted.rb
+- lib/disposable/twin/property/hash.rb
+- lib/disposable/twin/property/struct.rb
+- lib/disposable/twin/property/unnest.rb
+- lib/disposable/twin/property_processor.rb
+- lib/disposable/twin/save.rb
+- lib/disposable/twin/setup.rb
+- lib/disposable/twin/struct.rb
+- lib/disposable/twin/sync.rb
+- lib/disposable/version.rb
+- test/api_semantics_test.rb
+- test/callback_group_test.rb
+- test/callbacks_test.rb
+- test/example.rb
+- test/expose_test.rb
+- test/persisted_test.rb
+- test/rescheme_test.rb
+- test/skip_getter_test.rb
+- test/test_helper.rb
+- test/twin/benchmarking.rb
+- test/twin/builder_test.rb
+- test/twin/changed_test.rb
+- test/twin/coercion_test.rb
+- test/twin/collection_test.rb
+- test/twin/composition_test.rb
+- test/twin/default_test.rb
+- test/twin/expose_test.rb
+- test/twin/feature_test.rb
+- test/twin/from_collection_test.rb
+- test/twin/from_test.rb
+- test/twin/hash_test.rb
+- test/twin/inherit_test.rb
+- test/twin/inheritance_test.rb
+- test/twin/option_test.rb
+- test/twin/parent_test.rb
+- test/twin/process_inline_test.rb
+- test/twin/property_processor_test.rb
+- test/twin/readable_test.rb
+- test/twin/save_test.rb
+- test/twin/setup_test.rb
+- test/twin/skip_unchanged_test.rb
+- test/twin/struct/coercion_test.rb
+- test/twin/struct_test.rb
+- test/twin/sync_option_test.rb
+- test/twin/sync_test.rb
+- test/twin/twin_test.rb
+- test/twin/unnest_test.rb
+- test/twin/virtual_test.rb
+- test/twin/writeable_test.rb
+homepage: https://github.com/apotonick/disposable
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: Decorators on top of your ORM layer with change tracking, collection semantics
+  and nesting.
+test_files:
+- test/api_semantics_test.rb
+- test/callback_group_test.rb
+- test/callbacks_test.rb
+- test/example.rb
+- test/expose_test.rb
+- test/persisted_test.rb
+- test/rescheme_test.rb
+- test/skip_getter_test.rb
+- test/test_helper.rb
+- test/twin/benchmarking.rb
+- test/twin/builder_test.rb
+- test/twin/changed_test.rb
+- test/twin/coercion_test.rb
+- test/twin/collection_test.rb
+- test/twin/composition_test.rb
+- test/twin/default_test.rb
+- test/twin/expose_test.rb
+- test/twin/feature_test.rb
+- test/twin/from_collection_test.rb
+- test/twin/from_test.rb
+- test/twin/hash_test.rb
+- test/twin/inherit_test.rb
+- test/twin/inheritance_test.rb
+- test/twin/option_test.rb
+- test/twin/parent_test.rb
+- test/twin/process_inline_test.rb
+- test/twin/property_processor_test.rb
+- test/twin/readable_test.rb
+- test/twin/save_test.rb
+- test/twin/setup_test.rb
+- test/twin/skip_unchanged_test.rb
+- test/twin/struct/coercion_test.rb
+- test/twin/struct_test.rb
+- test/twin/sync_option_test.rb
+- test/twin/sync_test.rb
+- test/twin/twin_test.rb
+- test/twin/unnest_test.rb
+- test/twin/virtual_test.rb
+- test/twin/writeable_test.rb

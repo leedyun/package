@@ -1,0 +1,346 @@
+--- !ruby/object:Gem::Specification
+name: crystalball
+version: !ruby/object:Gem::Version
+  version: 0.7.0
+platform: ruby
+authors:
+- Pavel Shutsin
+- Evgenii Pecherkin
+- Jaimerson Araujo
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: git
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: actionview
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: factory_bot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.56'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.56'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.13
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.13
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Provides simple way to integrate regression test selection approach to
+  your RSpec test suite
+email:
+- publicshady@gmail.com
+executables:
+- crystalball
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/crystalball
+- bin/setup
+- crystalball.gemspec
+- docs/img/favicon.ico
+- docs/img/logo.png
+- docs/index.md
+- docs/map_generators.md
+- docs/predictors.md
+- docs/runner.md
+- lib/crystalball.rb
+- lib/crystalball/active_record.rb
+- lib/crystalball/example_group_map.rb
+- lib/crystalball/execution_map.rb
+- lib/crystalball/extensions/git.rb
+- lib/crystalball/extensions/git/base.rb
+- lib/crystalball/extensions/git/lib.rb
+- lib/crystalball/factory_bot.rb
+- lib/crystalball/git_repo.rb
+- lib/crystalball/logging.rb
+- lib/crystalball/map_compactor.rb
+- lib/crystalball/map_compactor/example_context.rb
+- lib/crystalball/map_compactor/example_groups_data_compactor.rb
+- lib/crystalball/map_generator.rb
+- lib/crystalball/map_generator/allocated_objects_strategy.rb
+- lib/crystalball/map_generator/allocated_objects_strategy/object_tracker.rb
+- lib/crystalball/map_generator/base_strategy.rb
+- lib/crystalball/map_generator/configuration.rb
+- lib/crystalball/map_generator/coverage_strategy.rb
+- lib/crystalball/map_generator/coverage_strategy/execution_detector.rb
+- lib/crystalball/map_generator/described_class_strategy.rb
+- lib/crystalball/map_generator/factory_bot_strategy.rb
+- lib/crystalball/map_generator/factory_bot_strategy/dsl_patch.rb
+- lib/crystalball/map_generator/factory_bot_strategy/dsl_patch/factory_path_fetcher.rb
+- lib/crystalball/map_generator/factory_bot_strategy/factory_gem_loader.rb
+- lib/crystalball/map_generator/factory_bot_strategy/factory_runner_patch.rb
+- lib/crystalball/map_generator/helpers/path_filter.rb
+- lib/crystalball/map_generator/object_sources_detector.rb
+- lib/crystalball/map_generator/object_sources_detector/definition_tracer.rb
+- lib/crystalball/map_generator/object_sources_detector/hierarchy_fetcher.rb
+- lib/crystalball/map_generator/parser_strategy.rb
+- lib/crystalball/map_generator/parser_strategy/processor.rb
+- lib/crystalball/map_generator/strategies_collection.rb
+- lib/crystalball/map_storage/yaml_storage.rb
+- lib/crystalball/prediction.rb
+- lib/crystalball/predictor.rb
+- lib/crystalball/predictor/associated_specs.rb
+- lib/crystalball/predictor/helpers/affected_example_groups_detector.rb
+- lib/crystalball/predictor/helpers/path_formatter.rb
+- lib/crystalball/predictor/modified_execution_paths.rb
+- lib/crystalball/predictor/modified_specs.rb
+- lib/crystalball/predictor/modified_support_specs.rb
+- lib/crystalball/predictor/strategy.rb
+- lib/crystalball/predictor_evaluator.rb
+- lib/crystalball/rails.rb
+- lib/crystalball/rails/helpers/base_schema_parser.rb
+- lib/crystalball/rails/helpers/schema_definition_parser.rb
+- lib/crystalball/rails/helpers/schema_definition_parser/active_record.rb
+- lib/crystalball/rails/helpers/schema_definition_parser/table_content_parser.rb
+- lib/crystalball/rails/map_generator/action_view_strategy.rb
+- lib/crystalball/rails/map_generator/action_view_strategy/patch.rb
+- lib/crystalball/rails/map_generator/i18n_strategy.rb
+- lib/crystalball/rails/map_generator/i18n_strategy/simple_patch.rb
+- lib/crystalball/rails/predictor/modified_schema.rb
+- lib/crystalball/rails/tables_map.rb
+- lib/crystalball/rails/tables_map_generator.rb
+- lib/crystalball/rails/tables_map_generator/configuration.rb
+- lib/crystalball/rspec/filtering.rb
+- lib/crystalball/rspec/prediction_builder.rb
+- lib/crystalball/rspec/prediction_pruning.rb
+- lib/crystalball/rspec/prediction_pruning/examples_pruner.rb
+- lib/crystalball/rspec/runner.rb
+- lib/crystalball/rspec/runner/configuration.rb
+- lib/crystalball/rspec/standard_prediction_builder.rb
+- lib/crystalball/source_diff.rb
+- lib/crystalball/source_diff/file_diff.rb
+- lib/crystalball/source_diff/formatting_checker.rb
+- lib/crystalball/version.rb
+- mkdocs.yml
+homepage: https://github.com/toptal/crystalball
+licenses: []
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">"
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A library for RSpec regression test selection
+test_files: []

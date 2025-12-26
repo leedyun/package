@@ -1,0 +1,10 @@
+Y==DATE_FORMAT(SL.created_at, '%Y')
+SUM_OF_Y== sum(SL.num * CD.price)
+SL== sales
+CD== candies[CD.id = SL.candy_id]
+
+
+S-- Y, SUM_OF_Y
+F-- SL =< CD
+G-- DATE_FORMAT(SL.created_at, '%Y')
+O-- created_at

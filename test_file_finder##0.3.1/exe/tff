@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'test_file_finder'
+
+options = TestFileFinder::OptionParser.parse!(ARGV)
+
+TestFileFinder::FileFinder.new(paths: ARGV).tap do |file_finder|
+  file_finder.use TestFileFinder::MappingStrategies::DirectMatching.load_json(options.json) if options.json
+
+  file_finder.use TestFileFinder::MappingStrategies::PatternMatching.load(options.mapping_file) if options.mapping_file
+
+  if options.project_path && options.merge_request_iid
+    file_finder.use TestFileFinder::MappingStrategies::GitlabMergeRequestRspecFailure.new(
+      project_path: options.project_path, merge_request_iid: options.merge_request_iid)
+  end
+
+  if file_finder.strategies.empty?
+    file_finder.use TestFileFinder::MappingStrategies::PatternMatching.default_rails_mapping
+  end
+
+  puts file_finder.test_files
+end

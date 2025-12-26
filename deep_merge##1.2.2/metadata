@@ -1,0 +1,82 @@
+--- !ruby/object:Gem::Specification
+name: deep_merge
+version: !ruby/object:Gem::Version
+  version: 1.2.2
+platform: ruby
+authors:
+- Steve Midgley
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+- !ruby/object:Gem::Dependency
+  name: test-unit-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Recursively merge hashes.
+email: dan@kallistec.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- CHANGELOG
+- LICENSE
+- README.md
+- Rakefile
+- lib/deep_merge.rb
+- lib/deep_merge/core.rb
+- lib/deep_merge/deep_merge_hash.rb
+- lib/deep_merge/rails_compat.rb
+- test/test_deep_merge.rb
+homepage: https://github.com/danielsdeleo/deep_merge
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Merge Deeply Nested Hashes
+test_files:
+- test/test_deep_merge.rb

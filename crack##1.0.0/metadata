@@ -1,0 +1,83 @@
+--- !ruby/object:Gem::Specification
+name: crack
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- John Nunemaker
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Really simple JSON and XML parsing, ripped from Merb and Rails.
+email:
+- nunemaker@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- History
+- LICENSE
+- README.md
+- lib/crack.rb
+- lib/crack/json.rb
+- lib/crack/util.rb
+- lib/crack/version.rb
+- lib/crack/xml.rb
+homepage: https://github.com/jnunemaker/crack
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/jnunemaker/crack/issues
+  changelog_uri: https://github.com/jnunemaker/crack/blob/master/History
+  source_code_uri: https://github.com/jnunemaker/crack
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Really simple JSON and XML parsing, ripped from Merb and Rails.
+test_files: []

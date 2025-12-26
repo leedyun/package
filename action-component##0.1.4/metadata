@@ -1,0 +1,143 @@
+--- !ruby/object:Gem::Specification
+name: action-component
+version: !ruby/object:Gem::Version
+  version: 0.1.4
+platform: ruby
+authors:
+- Roger Nesbitt
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+description: React-style components for Rails, mixing together the controller and
+  a DSL language for HTML views.
+email:
+- roger@seriousorange.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.md
+- action-component.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/action_component.rb
+- lib/action_component/action_controller_rendering.rb
+- lib/action_component/action_view_rendering.rb
+- lib/action_component/base.rb
+- lib/action_component/callbacks.rb
+- lib/action_component/constraints.rb
+- lib/action_component/element_builder.rb
+- lib/action_component/elements.rb
+- lib/action_component/railtie.rb
+- lib/action_component/version.rb
+- spec/action_component/base_spec.rb
+- spec/action_component/callbacks_spec.rb
+- spec/action_component/constraints_spec.rb
+- spec/action_component/element_builder_spec.rb
+- spec/action_component/elements_spec.rb
+- spec/fake_view.rb
+- spec/spec_helper.rb
+homepage: https://github.com/mogest/action_component
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: React-style components for Rails
+test_files: []

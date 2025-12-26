@@ -1,0 +1,161 @@
+--- !ruby/object:Gem::Specification
+name: tty-table
+version: !ruby/object:Gem::Version
+  version: 0.12.0
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-09-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pastel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: strings
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: tty-screen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: A flexible and intuitive table generator
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/tty-table.rb
+- lib/tty/table.rb
+- lib/tty/table/alignment_set.rb
+- lib/tty/table/border.rb
+- lib/tty/table/border/ascii.rb
+- lib/tty/table/border/null.rb
+- lib/tty/table/border/row_line.rb
+- lib/tty/table/border/unicode.rb
+- lib/tty/table/border_dsl.rb
+- lib/tty/table/border_options.rb
+- lib/tty/table/column_constraint.rb
+- lib/tty/table/columns.rb
+- lib/tty/table/empty.rb
+- lib/tty/table/error.rb
+- lib/tty/table/field.rb
+- lib/tty/table/header.rb
+- lib/tty/table/indentation.rb
+- lib/tty/table/operation/alignment.rb
+- lib/tty/table/operation/escape.rb
+- lib/tty/table/operation/filter.rb
+- lib/tty/table/operation/padding.rb
+- lib/tty/table/operation/truncation.rb
+- lib/tty/table/operation/wrapped.rb
+- lib/tty/table/operations.rb
+- lib/tty/table/options.rb
+- lib/tty/table/orientation.rb
+- lib/tty/table/orientation/horizontal.rb
+- lib/tty/table/orientation/vertical.rb
+- lib/tty/table/renderer.rb
+- lib/tty/table/renderer/ascii.rb
+- lib/tty/table/renderer/basic.rb
+- lib/tty/table/renderer/unicode.rb
+- lib/tty/table/row.rb
+- lib/tty/table/transformation.rb
+- lib/tty/table/validatable.rb
+- lib/tty/table/version.rb
+homepage: https://ttytoolkit.org
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/piotrmurach/tty-table/issues
+  changelog_uri: https://github.com/piotrmurach/tty-table/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/tty-table
+  homepage_uri: https://ttytoolkit.org
+  source_code_uri: https://github.com/piotrmurach/tty-table
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: A flexible and intuitive table generator
+test_files: []

@@ -1,0 +1,68 @@
+--- !ruby/object:Gem::Specification
+name: divining-rod
+version: !ruby/object:Gem::Version
+  version: 0.6.4
+platform: ruby
+authors:
+- Mark Percival
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies: []
+description: A DSL for writing user agent profiles
+email:
+- mark@markpercival.us
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.markdown
+- Rakefile
+- divining-rod.gemspec
+- example_config.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/divining_rod.rb
+- lib/divining_rod/definition.rb
+- lib/divining_rod/mappings.rb
+- lib/divining_rod/mash.rb
+- lib/divining_rod/matchers.rb
+- lib/divining_rod/murge.rb
+- lib/divining_rod/profile.rb
+- lib/divining_rod/rack.rb
+- lib/divining_rod/rack/divining_rack.rb
+- lib/divining_rod/utilities.rb
+- lib/divining_rod/version.rb
+- test/test_definition.rb
+- test/test_example_config.rb
+- test/test_helper.rb
+- test/test_mash.rb
+homepage: http://github.com/mdp/divining_rod
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A mobile request profiler
+test_files: []

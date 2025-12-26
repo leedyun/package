@@ -1,0 +1,358 @@
+--- !ruby/object:Gem::Specification
+name: browser
+version: !ruby/object:Gem::Version
+  version: 6.2.0
+platform: ruby
+authors:
+- Nando Vieira
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-autotest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-utils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-fnando
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Do some browser detection with Ruby.
+email:
+- me@fnando.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE.md"
+- ".github/workflows/ruby-tests.yml"
+- ".gitignore"
+- ".prettierignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- bot_exceptions.yml
+- bots.yml
+- browser.gemspec
+- config.ru
+- gemfiles/7_0.gemfile
+- gemfiles/7_1.gemfile
+- languages.yml
+- lib/browser.rb
+- lib/browser/accept_language.rb
+- lib/browser/action_controller.rb
+- lib/browser/aliases.rb
+- lib/browser/alipay.rb
+- lib/browser/base.rb
+- lib/browser/blackberry.rb
+- lib/browser/bot.rb
+- lib/browser/bot/empty_user_agent_matcher.rb
+- lib/browser/bot/keyword_matcher.rb
+- lib/browser/bot/known_bots_matcher.rb
+- lib/browser/browser.rb
+- lib/browser/chrome.rb
+- lib/browser/detect_version.rb
+- lib/browser/device.rb
+- lib/browser/device/android.rb
+- lib/browser/device/base.rb
+- lib/browser/device/blackberry_playbook.rb
+- lib/browser/device/ipad.rb
+- lib/browser/device/iphone.rb
+- lib/browser/device/ipod_touch.rb
+- lib/browser/device/kindle.rb
+- lib/browser/device/kindle_fire.rb
+- lib/browser/device/playstation3.rb
+- lib/browser/device/playstation4.rb
+- lib/browser/device/psp.rb
+- lib/browser/device/psvita.rb
+- lib/browser/device/samsung.rb
+- lib/browser/device/surface.rb
+- lib/browser/device/switch.rb
+- lib/browser/device/tv.rb
+- lib/browser/device/unknown.rb
+- lib/browser/device/wii.rb
+- lib/browser/device/wiiu.rb
+- lib/browser/device/xbox_360.rb
+- lib/browser/device/xbox_one.rb
+- lib/browser/duck_duck_go.rb
+- lib/browser/edge.rb
+- lib/browser/electron.rb
+- lib/browser/epiphany.rb
+- lib/browser/facebook.rb
+- lib/browser/firefox.rb
+- lib/browser/google_search_app.rb
+- lib/browser/huawei_browser.rb
+- lib/browser/instagram.rb
+- lib/browser/internet_explorer.rb
+- lib/browser/maxthon.rb
+- lib/browser/meta.rb
+- lib/browser/meta/base.rb
+- lib/browser/meta/device.rb
+- lib/browser/meta/generic_browser.rb
+- lib/browser/meta/id.rb
+- lib/browser/meta/ie.rb
+- lib/browser/meta/ios.rb
+- lib/browser/meta/mobile.rb
+- lib/browser/meta/platform.rb
+- lib/browser/meta/proxy.rb
+- lib/browser/meta/safari.rb
+- lib/browser/meta/tablet.rb
+- lib/browser/meta/webkit.rb
+- lib/browser/micro_messenger.rb
+- lib/browser/middleware.rb
+- lib/browser/middleware/context.rb
+- lib/browser/middleware/context/additions.rb
+- lib/browser/middleware/context/url_methods.rb
+- lib/browser/miui_browser.rb
+- lib/browser/nokia.rb
+- lib/browser/opera.rb
+- lib/browser/otter.rb
+- lib/browser/phantom_js.rb
+- lib/browser/platform.rb
+- lib/browser/platform/adobe_air.rb
+- lib/browser/platform/android.rb
+- lib/browser/platform/base.rb
+- lib/browser/platform/blackberry.rb
+- lib/browser/platform/chrome_os.rb
+- lib/browser/platform/firefox_os.rb
+- lib/browser/platform/ios.rb
+- lib/browser/platform/kai_os.rb
+- lib/browser/platform/linux.rb
+- lib/browser/platform/mac.rb
+- lib/browser/platform/unknown.rb
+- lib/browser/platform/windows.rb
+- lib/browser/platform/windows_mobile.rb
+- lib/browser/platform/windows_phone.rb
+- lib/browser/qq.rb
+- lib/browser/rails.rb
+- lib/browser/safari.rb
+- lib/browser/samsung_browser.rb
+- lib/browser/snapchat.rb
+- lib/browser/sougou_browser.rb
+- lib/browser/sputnik.rb
+- lib/browser/testing.rb
+- lib/browser/uc_browser.rb
+- lib/browser/unknown.rb
+- lib/browser/version.rb
+- lib/browser/weibo.rb
+- lib/browser/yandex.rb
+- samsung.yml
+- search_engines.yml
+- test/browser_test.rb
+- test/middleware_test.rb
+- test/rails_test.rb
+- test/sample_app.rb
+- test/test_helper.rb
+- test/ua.yml
+- test/ua_bots.yml
+- test/ua_search_engines.yml
+- test/unit/accept_language_test.rb
+- test/unit/adobe_air_test.rb
+- test/unit/aliases_test.rb
+- test/unit/alipay_test.rb
+- test/unit/android_app_test.rb
+- test/unit/android_test.rb
+- test/unit/blackberry_test.rb
+- test/unit/bots_test.rb
+- test/unit/chrome_test.rb
+- test/unit/console_test.rb
+- test/unit/device_test.rb
+- test/unit/duck_duck_go_test.rb
+- test/unit/edge_test.rb
+- test/unit/electron_test.rb
+- test/unit/epiphany_test.rb
+- test/unit/facebook_test.rb
+- test/unit/firefox_test.rb
+- test/unit/generic_test.rb
+- test/unit/google_search_app_test.rb
+- test/unit/huawei_browser_test.rb
+- test/unit/instagram_test.rb
+- test/unit/internet_explorer_test.rb
+- test/unit/ios_app_test.rb
+- test/unit/ios_test.rb
+- test/unit/kai_os_test.rb
+- test/unit/kindle_test.rb
+- test/unit/maxthon_test.rb
+- test/unit/meta_test.rb
+- test/unit/micro_messenger_test.rb
+- test/unit/miui_browser_test.rb
+- test/unit/nokia_test.rb
+- test/unit/opera_test.rb
+- test/unit/otter_test.rb
+- test/unit/platform_test.rb
+- test/unit/proxy_test.rb
+- test/unit/qq_test.rb
+- test/unit/safari_test.rb
+- test/unit/samsung_browser_test.rb
+- test/unit/snapchat_test.rb
+- test/unit/sougou_browser_test.rb
+- test/unit/sputnik_test.rb
+- test/unit/uc_browser_test.rb
+- test/unit/weibo_test.rb
+- test/unit/windows_phone_test.rb
+- test/unit/windows_test.rb
+- test/unit/yandex_test.rb
+homepage: https://github.com/fnando/browser
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+  changelog_uri: https://github.com/fnando/browser/blob/main/CHANGELOG.md
+  funding_uri: https://github.com/sponsors/fnando
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Do some browser detection with Ruby.
+test_files: []

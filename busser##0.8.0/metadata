@@ -1,0 +1,259 @@
+--- !ruby/object:Gem::Specification
+name: busser
+version: !ruby/object:Gem::Version
+  version: 0.8.0
+platform: ruby
+authors:
+- Fletcher Nichol
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-08-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: 0.19.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: 0.19.0
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.4
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: countloc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Busser - Runs tests for projects in Test Kitchen
+email:
+- fnichol@nichol.ca
+executables:
+- busser
+extensions: []
+extra_rdoc_files: []
+files:
+- ".cane"
+- ".gitignore"
+- ".simplecov"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- appveyor.yml
+- bin/busser
+- busser.gemspec
+- features/deserialize_command.feature
+- features/files/base64.txt
+- features/plugin_create_command.feature
+- features/plugin_install_command.feature
+- features/setup_command.feature
+- features/suite_cleanup_command.feature
+- features/suite_path_command.feature
+- features/support/env.rb
+- lib/busser.rb
+- lib/busser/cli.rb
+- lib/busser/command/deserialize.rb
+- lib/busser/command/plugin.rb
+- lib/busser/command/plugin_create.rb
+- lib/busser/command/plugin_install.rb
+- lib/busser/command/plugin_list.rb
+- lib/busser/command/setup.rb
+- lib/busser/command/suite.rb
+- lib/busser/command/suite_cleanup.rb
+- lib/busser/command/suite_path.rb
+- lib/busser/command/test.rb
+- lib/busser/cucumber.rb
+- lib/busser/cucumber/hooks.rb
+- lib/busser/helpers.rb
+- lib/busser/plugin.rb
+- lib/busser/rubygems.rb
+- lib/busser/runner_plugin.rb
+- lib/busser/runner_plugin/dummy.rb
+- lib/busser/thor.rb
+- lib/busser/ui.rb
+- lib/busser/version.rb
+- spec/busser/helpers_spec.rb
+- spec/busser/ui_spec.rb
+- spec/spec_helper.rb
+- templates/plugin/CHANGELOG.md.erb
+- templates/plugin/Gemfile.erb
+- templates/plugin/README.md.erb
+- templates/plugin/Rakefile.erb
+- templates/plugin/features_env.rb.erb
+- templates/plugin/features_plugin_install_command.feature.erb
+- templates/plugin/features_plugin_list_command.feature.erb
+- templates/plugin/features_test_command.feature.erb
+- templates/plugin/gemspec.erb
+- templates/plugin/gitignore.erb
+- templates/plugin/license_apachev2.erb
+- templates/plugin/license_lgplv3.erb
+- templates/plugin/license_mit.erb
+- templates/plugin/license_reserved.erb
+- templates/plugin/runner_plugin.rb.erb
+- templates/plugin/tailor.erb
+- templates/plugin/travis.yml.erb
+- templates/plugin/version.rb.erb
+homepage: https://github.com/test-kitchen/busser
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.1
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: Busser - Runs tests for projects in Test Kitchen
+test_files:
+- features/deserialize_command.feature
+- features/files/base64.txt
+- features/plugin_create_command.feature
+- features/plugin_install_command.feature
+- features/setup_command.feature
+- features/suite_cleanup_command.feature
+- features/suite_path_command.feature
+- features/support/env.rb
+- spec/busser/helpers_spec.rb
+- spec/busser/ui_spec.rb
+- spec/spec_helper.rb

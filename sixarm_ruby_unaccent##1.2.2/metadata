@@ -1,0 +1,167 @@
+--- !ruby/object:Gem::Specification
+name: sixarm_ruby_unaccent
+version: !ruby/object:Gem::Version
+  version: 1.2.2
+platform: ruby
+authors:
+- SixArm
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEbDCCAtSgAwIBAgIBATANBgkqhkiG9w0BAQsFADA+MQ8wDQYDVQQDDAZzaXhh
+  cm0xFjAUBgoJkiaJk/IsZAEZFgZzaXhhcm0xEzARBgoJkiaJk/IsZAEZFgNjb20w
+  HhcNMjMwNTIyMTc0NDE3WhcNMjQwNTIxMTc0NDE3WjA+MQ8wDQYDVQQDDAZzaXhh
+  cm0xFjAUBgoJkiaJk/IsZAEZFgZzaXhhcm0xEzARBgoJkiaJk/IsZAEZFgNjb20w
+  ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCq4af9gCpSJem8PTmowTIK
+  0GvWPKGTxELRIhXgJB/XAH2s7YBGjsm6H4DOVUXBgksaSQdD1JFAUz8zhr1c3Awq
+  ml+CzyAkzfvPYoA/a+OEH3LNhE7NNUwgjjp00OqBGjnMlJ5KLA+xHbddQ+5NxlUC
+  H9IY4K2A/thw1rabXogx2aE+BxDnOxbrR7UrdtYAYoeUnvDQ8nXJVxyC1fgBxlr7
+  UFJlwTD1PJEEQEq0ZjMwUk2yzFsEuGGwNK1JqI3h+B2cyQRPams6lwdx9exrbQTE
+  KFiV1YsxuPVKgLytXP5Uh8i9KZ1ewn8AegMD8KEp/34lGXE/TMdVA+y5cHBFB0yk
+  IqprvXlYuHA91puxveeLVGI0J525ofwhCIOFwpUhCOAx33R+P99DMvHoH31l2zhf
+  twC2VSKHNLguBWkrgUZAZ4los7PNQKitItQryrmPU4YDmGlr9NiHOkRf5QGLkRpZ
+  Aa6dmCZJFbTft62oO4pGIjAca9lGqxRQzS3sPbUaMhcCAwEAAaN1MHMwCQYDVR0T
+  BAIwADALBgNVHQ8EBAMCBLAwHQYDVR0OBBYEFBo7Nih7O7s2WBXOefJNRvGlWjwH
+  MBwGA1UdEQQVMBOBEXNpeGFybUBzaXhhcm0uY29tMBwGA1UdEgQVMBOBEXNpeGFy
+  bUBzaXhhcm0uY29tMA0GCSqGSIb3DQEBCwUAA4IBgQBWMdNk1kGW41jOGyCCSkfw
+  kaVAURzA481CzdzicToRYkZXiM5p3TqyAFPiPhxpOxeuXfimdt4//uJoITWQD5Fq
+  Nr6bz2X1JGe23ZUSV/pT9HZzl9pSKrwu1E49s5Fd0Rux8NO8M2w3oeZzqxNIa9vh
+  ze/vY1tkKH12iHoI8RrtpA41Al79j8mnEj8Jmf8S+xveusaRMnPkWPKl1cIkVS2k
+  8oj6PNP/lK+P2TFa0hsMOeQNowTfKRacm0hn/eaYIwLbx3JFJ+lt5w9YAdCta+E5
+  fr7EEQwzNmMcy7JldkX/WgmeEQCzqlRy4l+jl2ZHxYJLXAiYkkzsWJQsQ4hqpVnx
+  1psx5VLih5iWoiEuthGA7x5i0HEgBWkI1BLyIlC2YsXpJ+YAWDowK+On40R07qOn
+  h3dRMKiZUNmDeYWbQZE/IU/yO1utU5j/g73CBa+J51KcypcvK0bdlBb8KQfrYbpt
+  Wpzwx/JmdyV61orp2CQUQxMmEOIh9d8OMAdjOw6ooaw=
+  -----END CERTIFICATE-----
+date: 2023-05-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.12'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.12'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: sixarm_ruby_minitest_extensions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.8
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.8
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.18.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.18.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+description: Unaccent replaces a string's accented characters with unaccented characters
+email: sixarm@sixarm.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Rakefile
+- lib/sixarm_ruby_unaccent.rb
+- lib/sixarm_ruby_unaccent/string.rb
+- test/sixarm_ruby_unaccent_test.rb
+- test/sixarm_ruby_unaccent_test/string_test.rb
+homepage: http://sixarm.com/
+licenses:
+- Apache-2.0
+- Artistic-2.0
+- BSD-3-Clause
+- CC-BY-NC-SA-4.0
+- AGPL-3.0
+- EPL-1.0
+- GPL-2.0
+- GPL-3.0
+- LGPL-3.0
+- MIT
+- MPL-2.0
+- Ruby
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: SixArm.com → Ruby → Unaccent
+test_files:
+- test/sixarm_ruby_unaccent_test.rb
+- test/sixarm_ruby_unaccent_test/string_test.rb

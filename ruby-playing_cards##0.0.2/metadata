@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: ruby-playing_cards
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Justin McKay
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-23 00:00:00.000000000 Z
+dependencies: []
+description: Basic playing cards
+email:
+- justinmckay16@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/ruby_playing_cards.rb
+- lib/ruby_playing_cards/card.rb
+- lib/ruby_playing_cards/dealer.rb
+- lib/ruby_playing_cards/deck.rb
+- lib/ruby_playing_cards/hand.rb
+- lib/ruby_playing_cards/version.rb
+- ruby-playing_cards.gemspec
+- spec/card_spec.rb
+- spec/dealer_spec.rb
+- spec/deck_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/jcmckay/ruby_playing_cards
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Basic playing cards for playing with cards
+test_files:
+- spec/card_spec.rb
+- spec/dealer_spec.rb
+- spec/deck_spec.rb
+- spec/spec_helper.rb

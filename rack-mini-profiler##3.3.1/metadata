@@ -1,0 +1,367 @@
+--- !ruby/object:Gem::Specification
+name: rack-mini-profiler
+version: !ruby/object:Gem::Version
+  version: 3.3.1
+platform: ruby
+authors:
+- Sam Saffron
+- Robin Ward
+- Aleks Totic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dalli
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sassc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: stackprof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mini_racer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-discourse
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: listen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webpacker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.9.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.9.1
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Profiling toolkit for Rack applications with Rails integration. Client
+  Side profiling, DB profiling and Server profiling.
+email: sam.saffron@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+files:
+- CHANGELOG.md
+- README.md
+- lib/enable_rails_patches.rb
+- lib/generators/rack_mini_profiler/USAGE
+- lib/generators/rack_mini_profiler/install_generator.rb
+- lib/generators/rack_mini_profiler/templates/rack_mini_profiler.rb
+- lib/generators/rack_profiler/USAGE
+- lib/generators/rack_profiler/install_generator.rb
+- lib/html/dot.1.1.2.min.js
+- lib/html/includes.css
+- lib/html/includes.js
+- lib/html/includes.scss
+- lib/html/includes.tmpl
+- lib/html/pretty-print.js
+- lib/html/profile_handler.js
+- lib/html/rack-mini-profiler.css
+- lib/html/rack-mini-profiler.js
+- lib/html/share.html
+- lib/html/speedscope/LICENSE
+- lib/html/speedscope/README.md
+- lib/html/speedscope/demangle-cpp.1768f4cc.js
+- lib/html/speedscope/favicon-16x16.f74b3187.png
+- lib/html/speedscope/favicon-32x32.bc503437.png
+- lib/html/speedscope/file-format-schema.json
+- lib/html/speedscope/fonts/source-code-pro-regular.css
+- lib/html/speedscope/fonts/source-code-pro-v13-regular.woff
+- lib/html/speedscope/fonts/source-code-pro-v13-regular.woff2
+- lib/html/speedscope/import.8ae8aa3d.js
+- lib/html/speedscope/index.html
+- lib/html/speedscope/release.txt
+- lib/html/speedscope/reset.8c46b7a1.css
+- lib/html/speedscope/source-map.438fa06b.js
+- lib/html/speedscope/speedscope.f27db165.js
+- lib/html/vendor.js
+- lib/mini_profiler.rb
+- lib/mini_profiler/actions.rb
+- lib/mini_profiler/asset_version.rb
+- lib/mini_profiler/client_settings.rb
+- lib/mini_profiler/config.rb
+- lib/mini_profiler/context.rb
+- lib/mini_profiler/gc_profiler.rb
+- lib/mini_profiler/profiling_methods.rb
+- lib/mini_profiler/snapshots_transporter.rb
+- lib/mini_profiler/storage.rb
+- lib/mini_profiler/storage/abstract_store.rb
+- lib/mini_profiler/storage/file_store.rb
+- lib/mini_profiler/storage/memcache_store.rb
+- lib/mini_profiler/storage/memory_store.rb
+- lib/mini_profiler/storage/redis_store.rb
+- lib/mini_profiler/timer_struct.rb
+- lib/mini_profiler/timer_struct/base.rb
+- lib/mini_profiler/timer_struct/client.rb
+- lib/mini_profiler/timer_struct/custom.rb
+- lib/mini_profiler/timer_struct/page.rb
+- lib/mini_profiler/timer_struct/request.rb
+- lib/mini_profiler/timer_struct/sql.rb
+- lib/mini_profiler/version.rb
+- lib/mini_profiler/views.rb
+- lib/mini_profiler_rails/railtie.rb
+- lib/mini_profiler_rails/railtie_methods.rb
+- lib/patches/db/activerecord.rb
+- lib/patches/db/mongo.rb
+- lib/patches/db/moped.rb
+- lib/patches/db/mysql2.rb
+- lib/patches/db/mysql2/alias_method.rb
+- lib/patches/db/mysql2/prepend.rb
+- lib/patches/db/neo4j.rb
+- lib/patches/db/nobrainer.rb
+- lib/patches/db/oracle_enhanced.rb
+- lib/patches/db/pg.rb
+- lib/patches/db/plucky.rb
+- lib/patches/db/riak.rb
+- lib/patches/db/rsolr.rb
+- lib/patches/db/sequel.rb
+- lib/patches/net_patches.rb
+- lib/patches/sql_patches.rb
+- lib/prepend_mysql2_patch.rb
+- lib/prepend_net_http_patch.rb
+- lib/rack-mini-profiler.rb
+- rack-mini-profiler.gemspec
+homepage: https://miniprofiler.com
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/MiniProfiler/rack-mini-profiler
+  changelog_uri: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.4
+signing_key:
+specification_version: 4
+summary: Profiles loading speed for rack applications.
+test_files: []

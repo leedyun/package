@@ -1,0 +1,196 @@
+--- !ruby/object:Gem::Specification
+name: kaminari
+version: !ruby/object:Gem::Version
+  version: 1.2.2
+platform: ruby
+authors:
+- Akira Matsuda
+- Yuki Nishijima
+- Zachary Scott
+- Hiroshi Shibata
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-12-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+- !ruby/object:Gem::Dependency
+  name: kaminari-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+- !ruby/object:Gem::Dependency
+  name: kaminari-actionview
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+- !ruby/object:Gem::Dependency
+  name: kaminari-activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+- !ruby/object:Gem::Dependency
+  name: test-unit-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable
+  and sophisticated paginator for Rails 4+
+email:
+- ronnie@dio.jp
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".document"
+- ".github/workflows/main.yml"
+- ".gitignore"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- gemfiles/active_record_41.gemfile
+- gemfiles/active_record_42.gemfile
+- gemfiles/active_record_50.gemfile
+- gemfiles/active_record_51.gemfile
+- gemfiles/active_record_52.gemfile
+- gemfiles/active_record_60.gemfile
+- gemfiles/active_record_61.gemfile
+- gemfiles/active_record_70.gemfile
+- gemfiles/active_record_edge.gemfile
+- kaminari.gemspec
+- lib/kaminari.rb
+- lib/kaminari/version.rb
+- misc/bug_report_template.rb
+homepage: https://github.com/kaminari/kaminari
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.0.dev
+signing_key:
+specification_version: 4
+summary: A pagination engine plugin for Rails 4+ and other modern frameworks
+test_files: []

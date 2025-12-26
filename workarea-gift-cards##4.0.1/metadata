@@ -1,0 +1,220 @@
+--- !ruby/object:Gem::Specification
+name: workarea-gift-cards
+version: !ruby/object:Gem::Version
+  version: 4.0.1
+platform: ruby
+authors:
+- bcrouse
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: workarea
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.x
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.x
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.x
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.x
+description: Adds built-in digital gift cards to the Workarea Commerce Platform.
+email:
+- bcrouse@workarea.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- app/assets/images/workarea/admin/payment_icons/gift_card.svg
+- app/assets/images/workarea/storefront/payment_icons/gift_card.svg
+- app/controllers/workarea/admin/data_file_exports_controller.decorator
+- app/controllers/workarea/admin/payment_gift_cards_controller.rb
+- app/controllers/workarea/api/admin/gift_cards_controller.rb
+- app/controllers/workarea/api/storefront/checkouts_controller.decorator
+- app/controllers/workarea/api/storefront/gift_cards_controller.rb
+- app/controllers/workarea/storefront/checkout/gift_cards_controller.rb
+- app/controllers/workarea/storefront/gift_cards_controller.rb
+- app/mailers/workarea/storefront/gift_card_mailer.rb
+- app/models/workarea/catalog/customizations/gift_card.rb
+- app/models/workarea/catalog/product.decorator
+- app/models/workarea/checkout/steps/gift_card.rb
+- app/models/workarea/fulfillment/policies/create_gift_card.rb
+- app/models/workarea/order/item.decorator
+- app/models/workarea/payment.decorator
+- app/models/workarea/payment/authorize/gift_card.rb
+- app/models/workarea/payment/capture/gift_card.rb
+- app/models/workarea/payment/gift_card.rb
+- app/models/workarea/payment/gift_card/redemption.rb
+- app/models/workarea/payment/gift_card_operation.rb
+- app/models/workarea/payment/purchase/gift_card.rb
+- app/models/workarea/payment/refund/gift_card.rb
+- app/models/workarea/payment/tender/gift_card.rb
+- app/models/workarea/search/admin/order.decorator
+- app/models/workarea/search/admin/payment_gift_card.rb
+- app/queries/workarea/admin_redemptions_export.rb
+- app/queries/workarea/order_item_details.decorator
+- app/queries/workarea/search/admin_gift_cards.rb
+- app/seeds/workarea/gift_card_seeds.rb
+- app/view_models/workarea/admin/payment_gift_card_view_model.rb
+- app/view_models/workarea/storefront/gift_card_order_pricing.rb
+- app/view_models/workarea/storefront/order_view_model.decorator
+- app/view_models/workarea/storefront/product_templates/gift_card_view_model.rb
+- app/views/workarea/admin/activities/_payment_gift_card_create.html.haml
+- app/views/workarea/admin/activities/_payment_gift_card_destroy.html.haml
+- app/views/workarea/admin/activities/_payment_gift_card_update.html.haml
+- app/views/workarea/admin/orders/tenders/_gift_card.html.haml
+- app/views/workarea/admin/payment_gift_cards/_aux_navigation.html.haml
+- app/views/workarea/admin/payment_gift_cards/_cards.html.haml
+- app/views/workarea/admin/payment_gift_cards/_menu.html.haml
+- app/views/workarea/admin/payment_gift_cards/_summary.html.haml
+- app/views/workarea/admin/payment_gift_cards/edit.html.haml
+- app/views/workarea/admin/payment_gift_cards/index.html.haml
+- app/views/workarea/admin/payment_gift_cards/new.html.haml
+- app/views/workarea/admin/payment_gift_cards/redemptions.html.haml
+- app/views/workarea/admin/payment_gift_cards/show.html.haml
+- app/views/workarea/api/storefront/checkouts/steps/_gift_card.json.jbuilder
+- app/views/workarea/api/storefront/gift_cards/balance.json.jbuilder
+- app/views/workarea/api/storefront/orders/tenders/_gift_card.json.jbuilder
+- app/views/workarea/storefront/checkouts/_gift_card_error.html.haml
+- app/views/workarea/storefront/checkouts/_gift_card_payment.html.haml
+- app/views/workarea/storefront/checkouts/_gift_card_summary.html.haml
+- app/views/workarea/storefront/gift_card_mailer/created.html.haml
+- app/views/workarea/storefront/gift_cards/index.html.haml
+- app/views/workarea/storefront/order_mailer/_gift_card_summary.html.haml
+- app/views/workarea/storefront/order_mailer/tenders/_gift_card.html.haml
+- app/views/workarea/storefront/orders/_gift_card_summary.html.haml
+- app/views/workarea/storefront/orders/tenders/_gift_card.html.haml
+- app/views/workarea/storefront/products/templates/_gift_card.html.haml
+- app/workers/workarea/log_gift_card_redemption.rb
+- app/workers/workarea/send_gift_card_notifications.rb
+- bin/rails
+- config/initializers/append_points.rb
+- config/initializers/configuration.rb
+- config/initializers/fields.rb
+- config/locales/en.yml
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/workarea/gift_cards.rb
+- lib/workarea/gift_cards/engine.rb
+- lib/workarea/gift_cards/gateway.rb
+- lib/workarea/gift_cards/version.rb
+- lib/workarea/mailer_previews/storefront/gift_card_mailer_preview.rb
+- test/documentation/workarea/api/admin/gift_cards_documentation_test.rb
+- test/documentation/workarea/api/storefront/gift_cards_documentation_test.rb
+- test/dummy/Rakefile
+- test/dummy/app/assets/config/manifest.js
+- test/dummy/app/assets/javascripts/application.js
+- test/dummy/app/assets/stylesheets/application.css
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/jobs/application_job.rb
+- test/dummy/app/mailers/application_mailer.rb
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/app/views/layouts/mailer.html.erb
+- test/dummy/app/views/layouts/mailer.text.erb
+- test/dummy/bin/bundle
+- test/dummy/bin/rails
+- test/dummy/bin/rake
+- test/dummy/bin/setup
+- test/dummy/bin/update
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/cable.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/application_controller_renderer.rb
+- test/dummy/config/initializers/assets.rb
+- test/dummy/config/initializers/backtrace_silencers.rb
+- test/dummy/config/initializers/cookies_serializer.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/mime_types.rb
+- test/dummy/config/initializers/new_framework_defaults.rb
+- test/dummy/config/initializers/session_store.rb
+- test/dummy/config/initializers/workarea.rb
+- test/dummy/config/initializers/wrap_parameters.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/puma.rb
+- test/dummy/config/routes.rb
+- test/dummy/config/secrets.yml
+- test/dummy/config/spring.rb
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/apple-touch-icon-precomposed.png
+- test/dummy/public/apple-touch-icon.png
+- test/dummy/public/favicon.ico
+- test/factories/gift_cards.rb
+- test/integration/workarea/admin/gift_card_integration_test.rb
+- test/integration/workarea/admin/gift_card_redemptions_export_integration_test.rb
+- test/integration/workarea/api/admin/gift_card_integration_test.rb
+- test/integration/workarea/api/storefront/checkout_gift_cards_integration_test.rb
+- test/integration/workarea/api/storefront/gift_cards_integration_test.rb
+- test/integration/workarea/storefront/checkout_gift_cards_integration_test.rb
+- test/integration/workarea/storefront/gift_cards_integration_test.rb
+- test/integration/workarea/storefront/purchase_gift_cards_integration_test.rb
+- test/lib/workarea/gift_cards/gateway_test.rb
+- test/models/workarea/catalog/gift_card_product_test.rb
+- test/models/workarea/checkout/steps/gift_card_test.rb
+- test/models/workarea/fulfillment/policies/create_gift_card_test.rb
+- test/models/workarea/gift_card_payment_test.rb
+- test/models/workarea/payment/gift_card_test.rb
+- test/models/workarea/payment/purchase/gift_card_test.rb
+- test/models/workarea/payment/refund/gift_card_test.rb
+- test/queries/workarea/admin_redemptions_export_test.rb
+- test/queries/workarea/gift_card_order_item_details_test.rb
+- test/system/workarea/admin/gift_cards_system_test.rb
+- test/system/workarea/storefront/gift_cards_system_test.rb
+- test/test_helper.rb
+- test/view_models/workarea/storefront/gift_card_order_pricing_test.rb
+- test/workers/workarea/log_gift_card_redemption_test.rb
+- workarea-gift-cards.gemspec
+homepage: https://github.com/workarea-commerce/workarea-gift-cards
+licenses:
+- Business Software License
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Gift Cards plugin for the Workarea Commerce Platform
+test_files: []

@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: truncato
+version: !ruby/object:Gem::Version
+  version: 0.7.12
+platform: ruby
+authors:
+- Jorge Manrubia
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-09-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: htmlentities
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.3.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby tool for truncating HTML strings keeping a valid HTML markup
+email: jorge.manrubia@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/truncato.rb
+- lib/truncato/truncated_sax_document.rb
+- lib/truncato/truncato.rb
+- lib/truncato/version.rb
+homepage: https://github.com/jorgemanrubia/truncato
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: A tool for truncating HTML strings efficiently
+test_files: []

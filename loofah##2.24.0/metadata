@@ -1,0 +1,103 @@
+--- !ruby/object:Gem::Specification
+name: loofah
+version: !ruby/object:Gem::Version
+  version: 2.24.0
+platform: ruby
+authors:
+- Mike Dalessio
+- Bryan Helmkamp
+bindir: bin
+cert_chain: []
+date: 2025-01-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: crass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.12.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.12.0
+description: |
+  Loofah is a general library for manipulating and transforming HTML/XML documents and fragments,
+  built on top of Nokogiri.
+
+  Loofah also includes some HTML sanitizers based on `html5lib`'s safelist, which are a specific
+  application of the general transformation functionality.
+email:
+- mike.dalessio@gmail.com
+- bryan@brynary.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE.txt
+- README.md
+- SECURITY.md
+- lib/loofah.rb
+- lib/loofah/concerns.rb
+- lib/loofah/elements.rb
+- lib/loofah/helpers.rb
+- lib/loofah/html4/document.rb
+- lib/loofah/html4/document_fragment.rb
+- lib/loofah/html5/document.rb
+- lib/loofah/html5/document_fragment.rb
+- lib/loofah/html5/libxml2_workarounds.rb
+- lib/loofah/html5/safelist.rb
+- lib/loofah/html5/scrub.rb
+- lib/loofah/metahelpers.rb
+- lib/loofah/scrubber.rb
+- lib/loofah/scrubbers.rb
+- lib/loofah/version.rb
+- lib/loofah/xml/document.rb
+- lib/loofah/xml/document_fragment.rb
+homepage: https://github.com/flavorjones/loofah
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/flavorjones/loofah
+  source_code_uri: https://github.com/flavorjones/loofah
+  bug_tracker_uri: https://github.com/flavorjones/loofah/issues
+  changelog_uri: https://github.com/flavorjones/loofah/blob/main/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/loofah/
+  funding_uri: https://github.com/sponsors/flavorjones
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Loofah is a general library for manipulating and transforming HTML/XML documents
+  and fragments, built on top of Nokogiri.
+test_files: []

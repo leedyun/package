@@ -1,0 +1,266 @@
+--- !ruby/object:Gem::Specification
+name: premailer-rails
+version: !ruby/object:Gem::Version
+  version: 1.12.0
+platform: ruby
+authors:
+- Philipe Fatio
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-11-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: premailer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.9
+- !ruby/object:Gem::Dependency
+  name: actionmailer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: net-smtp
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  This gem brings you the power of the premailer gem to Rails
+                       without any configuration needs. Create HTML emails,
+                       include a CSS file as you do in a normal HTML document and
+                       premailer will inline the included CSS.
+email:
+- philipe.fatio@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- VERSION
+- examples/rails5/.gitignore
+- examples/rails5/Gemfile
+- examples/rails5/README.md
+- examples/rails5/Rakefile
+- examples/rails5/app/assets/stylesheets/email.css
+- examples/rails5/app/mailers/example_mailer.rb
+- examples/rails5/app/views/example_mailer/test_message.html.erb
+- examples/rails5/bin/rails
+- examples/rails5/config.ru
+- examples/rails5/config/application.rb
+- examples/rails5/config/boot.rb
+- examples/rails5/config/environment.rb
+- examples/rails5/config/environments/development.rb
+- examples/rails5/config/environments/production.rb
+- examples/rails5/config/initializers/assets.rb
+- examples/rails5/config/routes.rb
+- examples/rails5/test/mailers/previews/example_mailer_preview.rb
+- examples/rails6/.gitignore
+- examples/rails6/Gemfile
+- examples/rails6/README.md
+- examples/rails6/Rakefile
+- examples/rails6/app/assets/config/manifest.js
+- examples/rails6/app/assets/stylesheets/email.css
+- examples/rails6/app/mailers/example_mailer.rb
+- examples/rails6/app/views/example_mailer/test_message.html.erb
+- examples/rails6/bin/rails
+- examples/rails6/config.ru
+- examples/rails6/config/application.rb
+- examples/rails6/config/boot.rb
+- examples/rails6/config/environment.rb
+- examples/rails6/config/environments/development.rb
+- examples/rails6/config/environments/production.rb
+- examples/rails6/config/routes.rb
+- examples/rails6/test/mailers/previews/example_mailer_preview.rb
+- examples/rails7-propshaft/.gitignore
+- examples/rails7-propshaft/Gemfile
+- examples/rails7-propshaft/README.md
+- examples/rails7-propshaft/Rakefile
+- examples/rails7-propshaft/app/assets/stylesheets/email.css
+- examples/rails7-propshaft/app/mailers/example_mailer.rb
+- examples/rails7-propshaft/app/views/example_mailer/test_message.html.erb
+- examples/rails7-propshaft/bin/rails
+- examples/rails7-propshaft/config.ru
+- examples/rails7-propshaft/config/application.rb
+- examples/rails7-propshaft/config/boot.rb
+- examples/rails7-propshaft/config/environment.rb
+- examples/rails7-propshaft/config/environments/development.rb
+- examples/rails7-propshaft/config/environments/production.rb
+- examples/rails7-propshaft/config/routes.rb
+- examples/rails7-propshaft/test/mailers/previews/example_mailer_preview.rb
+- examples/rails7-sprockets/.gitignore
+- examples/rails7-sprockets/Gemfile
+- examples/rails7-sprockets/README.md
+- examples/rails7-sprockets/Rakefile
+- examples/rails7-sprockets/app/assets/config/manifest.js
+- examples/rails7-sprockets/app/assets/stylesheets/email.css
+- examples/rails7-sprockets/app/mailers/example_mailer.rb
+- examples/rails7-sprockets/app/views/example_mailer/test_message.html.erb
+- examples/rails7-sprockets/bin/rails
+- examples/rails7-sprockets/config.ru
+- examples/rails7-sprockets/config/application.rb
+- examples/rails7-sprockets/config/boot.rb
+- examples/rails7-sprockets/config/environment.rb
+- examples/rails7-sprockets/config/environments/development.rb
+- examples/rails7-sprockets/config/environments/production.rb
+- examples/rails7-sprockets/config/routes.rb
+- examples/rails7-sprockets/test/mailers/previews/example_mailer_preview.rb
+- lib/premailer/rails.rb
+- lib/premailer/rails/css_helper.rb
+- lib/premailer/rails/css_loaders.rb
+- lib/premailer/rails/css_loaders/asset_pipeline_loader.rb
+- lib/premailer/rails/css_loaders/file_system_loader.rb
+- lib/premailer/rails/css_loaders/network_loader.rb
+- lib/premailer/rails/css_loaders/propshaft_loader.rb
+- lib/premailer/rails/customized_premailer.rb
+- lib/premailer/rails/hook.rb
+- lib/premailer/rails/railtie.rb
+- lib/premailer/rails/version.rb
+- premailer-rails.gemspec
+- spec/integration/css_helper_spec.rb
+- spec/integration/delivery_spec.rb
+- spec/integration/hook_spec.rb
+- spec/rails_app/app/assets/config/manifest.js
+- spec/rails_app/app/assets/stylesheets/application.css
+- spec/rails_app/app/mailers/application_mailer.rb
+- spec/rails_app/app/mailers/welcome_mailer.rb
+- spec/rails_app/app/views/layouts/mailer.html.erb
+- spec/rails_app/app/views/welcome_mailer/welcome_email.html.erb
+- spec/rails_app/config.ru
+- spec/rails_app/config/application.rb
+- spec/rails_app/config/boot.rb
+- spec/rails_app/config/environment.rb
+- spec/rails_app/config/environments/test.rb
+- spec/rails_app/config/initializers/assets.rb
+- spec/rails_app/config/routes.rb
+- spec/rails_app/log/.keep
+- spec/rails_app/tmp/.keep
+- spec/spec_helper.rb
+- spec/support/fixtures/html.rb
+- spec/support/fixtures/message.rb
+- spec/unit/css_loaders/asset_pipeline_loader_spec.rb
+- spec/unit/css_loaders/file_system_loader_spec.rb
+- spec/unit/css_loaders/network_loader_spec.rb
+- spec/unit/css_loaders/propshaft_loader_spec.rb
+- spec/unit/customized_premailer_spec.rb
+- spec/unit/premailer_rails_spec.rb
+homepage: https://github.com/fphilipe/premailer-rails
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/fphilipe/premailer-rails/blob/v1.12.0/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key:
+specification_version: 4
+summary: Easily create styled HTML emails in Rails.
+test_files:
+- spec/integration/css_helper_spec.rb
+- spec/integration/delivery_spec.rb
+- spec/integration/hook_spec.rb
+- spec/rails_app/app/assets/config/manifest.js
+- spec/rails_app/app/assets/stylesheets/application.css
+- spec/rails_app/app/mailers/application_mailer.rb
+- spec/rails_app/app/mailers/welcome_mailer.rb
+- spec/rails_app/app/views/layouts/mailer.html.erb
+- spec/rails_app/app/views/welcome_mailer/welcome_email.html.erb
+- spec/rails_app/config.ru
+- spec/rails_app/config/application.rb
+- spec/rails_app/config/boot.rb
+- spec/rails_app/config/environment.rb
+- spec/rails_app/config/environments/test.rb
+- spec/rails_app/config/initializers/assets.rb
+- spec/rails_app/config/routes.rb
+- spec/rails_app/log/.keep
+- spec/rails_app/tmp/.keep
+- spec/spec_helper.rb
+- spec/support/fixtures/html.rb
+- spec/support/fixtures/message.rb
+- spec/unit/css_loaders/asset_pipeline_loader_spec.rb
+- spec/unit/css_loaders/file_system_loader_spec.rb
+- spec/unit/css_loaders/network_loader_spec.rb
+- spec/unit/css_loaders/propshaft_loader_spec.rb
+- spec/unit/customized_premailer_spec.rb
+- spec/unit/premailer_rails_spec.rb

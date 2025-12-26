@@ -1,0 +1,24 @@
+<div class="row-table-wrapper">
+  <table class="row-table">
+    <thead>
+      <tr>
+        <th>Origin</th>
+        <th>ID</th>
+        <th>Error</th>
+        <th>Occurred</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%==
+        each_partial(
+          @error_messages,
+          'errors/error',
+          local: :error_msg
+        )
+      %>
+    </tbody>
+  </table>
+
+  <%== content_for :table_metadata %>
+</div>

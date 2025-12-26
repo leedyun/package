@@ -1,0 +1,406 @@
+--- !ruby/object:Gem::Specification
+name: stripe-ruby-mock
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Gilbert
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: stripe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '12'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: dante
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.13.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.13.0
+- !ruby/object:Gem::Dependency
+  name: thin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.1
+description: A drop-in library to test stripe without hitting their servers
+email: gilbertbgarza@gmail.com
+executables:
+- stripe-mock-server
+extensions: []
+extra_rdoc_files: []
+files:
+- ".env"
+- ".github/workflows/rspec_tests.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/stripe-mock-server
+- lib/stripe_mock.rb
+- lib/stripe_mock/api/account_balance.rb
+- lib/stripe_mock/api/bank_tokens.rb
+- lib/stripe_mock/api/card_tokens.rb
+- lib/stripe_mock/api/client.rb
+- lib/stripe_mock/api/conversion_rate.rb
+- lib/stripe_mock/api/debug.rb
+- lib/stripe_mock/api/errors.rb
+- lib/stripe_mock/api/global_id_prefix.rb
+- lib/stripe_mock/api/instance.rb
+- lib/stripe_mock/api/live.rb
+- lib/stripe_mock/api/server.rb
+- lib/stripe_mock/api/test_helpers.rb
+- lib/stripe_mock/api/webhooks.rb
+- lib/stripe_mock/client.rb
+- lib/stripe_mock/data.rb
+- lib/stripe_mock/data/list.rb
+- lib/stripe_mock/error_queue.rb
+- lib/stripe_mock/errors/closed_client_connection_error.rb
+- lib/stripe_mock/errors/server_timeout_error.rb
+- lib/stripe_mock/errors/stripe_mock_error.rb
+- lib/stripe_mock/errors/uninitialized_instance_error.rb
+- lib/stripe_mock/errors/unstarted_state_error.rb
+- lib/stripe_mock/errors/unsupported_request_error.rb
+- lib/stripe_mock/instance.rb
+- lib/stripe_mock/request_handlers/account_links.rb
+- lib/stripe_mock/request_handlers/accounts.rb
+- lib/stripe_mock/request_handlers/balance.rb
+- lib/stripe_mock/request_handlers/balance_transactions.rb
+- lib/stripe_mock/request_handlers/cards.rb
+- lib/stripe_mock/request_handlers/charges.rb
+- lib/stripe_mock/request_handlers/checkout_session.rb
+- lib/stripe_mock/request_handlers/country_spec.rb
+- lib/stripe_mock/request_handlers/coupons.rb
+- lib/stripe_mock/request_handlers/customers.rb
+- lib/stripe_mock/request_handlers/disputes.rb
+- lib/stripe_mock/request_handlers/ephemeral_key.rb
+- lib/stripe_mock/request_handlers/events.rb
+- lib/stripe_mock/request_handlers/express_login_links.rb
+- lib/stripe_mock/request_handlers/external_accounts.rb
+- lib/stripe_mock/request_handlers/helpers/bank_account_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/card_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/charge_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/coupon_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/external_account_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/search_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/subscription_helpers.rb
+- lib/stripe_mock/request_handlers/helpers/token_helpers.rb
+- lib/stripe_mock/request_handlers/invoice_items.rb
+- lib/stripe_mock/request_handlers/invoices.rb
+- lib/stripe_mock/request_handlers/orders.rb
+- lib/stripe_mock/request_handlers/payment_intents.rb
+- lib/stripe_mock/request_handlers/payment_methods.rb
+- lib/stripe_mock/request_handlers/payouts.rb
+- lib/stripe_mock/request_handlers/plans.rb
+- lib/stripe_mock/request_handlers/prices.rb
+- lib/stripe_mock/request_handlers/products.rb
+- lib/stripe_mock/request_handlers/promotion_codes.rb
+- lib/stripe_mock/request_handlers/recipients.rb
+- lib/stripe_mock/request_handlers/refunds.rb
+- lib/stripe_mock/request_handlers/setup_intents.rb
+- lib/stripe_mock/request_handlers/sources.rb
+- lib/stripe_mock/request_handlers/subscription_items.rb
+- lib/stripe_mock/request_handlers/subscriptions.rb
+- lib/stripe_mock/request_handlers/tax_rates.rb
+- lib/stripe_mock/request_handlers/tokens.rb
+- lib/stripe_mock/request_handlers/transfers.rb
+- lib/stripe_mock/request_handlers/validators/param_validators.rb
+- lib/stripe_mock/server.rb
+- lib/stripe_mock/test_strategies/base.rb
+- lib/stripe_mock/test_strategies/live.rb
+- lib/stripe_mock/test_strategies/mock.rb
+- lib/stripe_mock/util.rb
+- lib/stripe_mock/version.rb
+- lib/stripe_mock/webhook_fixtures/account.application.deauthorized.json
+- lib/stripe_mock/webhook_fixtures/account.external_account.created.json
+- lib/stripe_mock/webhook_fixtures/account.external_account.deleted.json
+- lib/stripe_mock/webhook_fixtures/account.external_account.updated.json
+- lib/stripe_mock/webhook_fixtures/account.updated.json
+- lib/stripe_mock/webhook_fixtures/balance.available.json
+- lib/stripe_mock/webhook_fixtures/charge.captured.json
+- lib/stripe_mock/webhook_fixtures/charge.dispute.closed.json
+- lib/stripe_mock/webhook_fixtures/charge.dispute.created.json
+- lib/stripe_mock/webhook_fixtures/charge.dispute.funds_reinstated.json
+- lib/stripe_mock/webhook_fixtures/charge.dispute.funds_withdrawn.json
+- lib/stripe_mock/webhook_fixtures/charge.dispute.updated.json
+- lib/stripe_mock/webhook_fixtures/charge.failed.json
+- lib/stripe_mock/webhook_fixtures/charge.refund.updated.json
+- lib/stripe_mock/webhook_fixtures/charge.refunded.json
+- lib/stripe_mock/webhook_fixtures/charge.succeeded.json
+- lib/stripe_mock/webhook_fixtures/charge.updated.json
+- lib/stripe_mock/webhook_fixtures/checkout.session.completed.json
+- lib/stripe_mock/webhook_fixtures/checkout.session.completed.payment_mode.json
+- lib/stripe_mock/webhook_fixtures/checkout.session.completed.setup_mode.json
+- lib/stripe_mock/webhook_fixtures/coupon.created.json
+- lib/stripe_mock/webhook_fixtures/coupon.deleted.json
+- lib/stripe_mock/webhook_fixtures/customer.created.json
+- lib/stripe_mock/webhook_fixtures/customer.deleted.json
+- lib/stripe_mock/webhook_fixtures/customer.discount.created.json
+- lib/stripe_mock/webhook_fixtures/customer.discount.deleted.json
+- lib/stripe_mock/webhook_fixtures/customer.discount.updated.json
+- lib/stripe_mock/webhook_fixtures/customer.source.created.json
+- lib/stripe_mock/webhook_fixtures/customer.source.deleted.json
+- lib/stripe_mock/webhook_fixtures/customer.source.updated.json
+- lib/stripe_mock/webhook_fixtures/customer.subscription.created.json
+- lib/stripe_mock/webhook_fixtures/customer.subscription.deleted.json
+- lib/stripe_mock/webhook_fixtures/customer.subscription.trial_will_end.json
+- lib/stripe_mock/webhook_fixtures/customer.subscription.updated.json
+- lib/stripe_mock/webhook_fixtures/customer.updated.json
+- lib/stripe_mock/webhook_fixtures/invoice.created.json
+- lib/stripe_mock/webhook_fixtures/invoice.finalized.json
+- lib/stripe_mock/webhook_fixtures/invoice.paid.json
+- lib/stripe_mock/webhook_fixtures/invoice.payment_action_required.json
+- lib/stripe_mock/webhook_fixtures/invoice.payment_failed.json
+- lib/stripe_mock/webhook_fixtures/invoice.payment_succeeded.json
+- lib/stripe_mock/webhook_fixtures/invoice.upcoming.json
+- lib/stripe_mock/webhook_fixtures/invoice.updated.json
+- lib/stripe_mock/webhook_fixtures/invoiceitem.created.json
+- lib/stripe_mock/webhook_fixtures/invoiceitem.deleted.json
+- lib/stripe_mock/webhook_fixtures/invoiceitem.updated.json
+- lib/stripe_mock/webhook_fixtures/mandate.updated.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.amount_capturable_updated.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.canceled.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.created.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.payment_failed.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.processing.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.requires_action.json
+- lib/stripe_mock/webhook_fixtures/payment_intent.succeeded.json
+- lib/stripe_mock/webhook_fixtures/payment_link.created.json
+- lib/stripe_mock/webhook_fixtures/payment_link.updated.json
+- lib/stripe_mock/webhook_fixtures/payment_method.attached.json
+- lib/stripe_mock/webhook_fixtures/payment_method.detached.json
+- lib/stripe_mock/webhook_fixtures/payout.created.json
+- lib/stripe_mock/webhook_fixtures/payout.paid.json
+- lib/stripe_mock/webhook_fixtures/payout.updated.json
+- lib/stripe_mock/webhook_fixtures/plan.created.json
+- lib/stripe_mock/webhook_fixtures/plan.deleted.json
+- lib/stripe_mock/webhook_fixtures/plan.updated.json
+- lib/stripe_mock/webhook_fixtures/price.created.json
+- lib/stripe_mock/webhook_fixtures/price.deleted.json
+- lib/stripe_mock/webhook_fixtures/price.updated.json
+- lib/stripe_mock/webhook_fixtures/product.created.json
+- lib/stripe_mock/webhook_fixtures/product.deleted.json
+- lib/stripe_mock/webhook_fixtures/product.updated.json
+- lib/stripe_mock/webhook_fixtures/quote.accepted.json
+- lib/stripe_mock/webhook_fixtures/quote.canceled.json
+- lib/stripe_mock/webhook_fixtures/quote.created.json
+- lib/stripe_mock/webhook_fixtures/quote.finalized.json
+- lib/stripe_mock/webhook_fixtures/setup_intent.canceled.json
+- lib/stripe_mock/webhook_fixtures/setup_intent.created.json
+- lib/stripe_mock/webhook_fixtures/setup_intent.setup_failed.json
+- lib/stripe_mock/webhook_fixtures/setup_intent.succeeded.json
+- lib/stripe_mock/webhook_fixtures/subscription_schedule.canceled.json
+- lib/stripe_mock/webhook_fixtures/subscription_schedule.created.json
+- lib/stripe_mock/webhook_fixtures/subscription_schedule.released.json
+- lib/stripe_mock/webhook_fixtures/subscription_schedule.updated.json
+- lib/stripe_mock/webhook_fixtures/tax_rate.created.json
+- lib/stripe_mock/webhook_fixtures/tax_rate.updated.json
+- lib/stripe_mock/webhook_fixtures/transfer.created.json
+- lib/stripe_mock/webhook_fixtures/transfer.failed.json
+- lib/stripe_mock/webhook_fixtures/transfer.paid.json
+- lib/stripe_mock/webhook_fixtures/transfer.updated.json
+- lib/trollop.rb
+- spec/_dummy/webhooks/dummy.event.json
+- spec/api/instance_spec.rb
+- spec/fixtures/create_refund.yml
+- spec/fixtures/stripe_webhooks/account.updated.json
+- spec/fixtures/stripe_webhooks/custom.account.updated.json
+- spec/instance_spec.rb
+- spec/integration_examples/charge_token_examples.rb
+- spec/integration_examples/completing_checkout_sessions_example.rb
+- spec/integration_examples/customer_card_examples.rb
+- spec/integration_examples/prepare_error_examples.rb
+- spec/list_spec.rb
+- spec/readme_spec.rb
+- spec/server_spec.rb
+- spec/shared_stripe_examples/account_examples.rb
+- spec/shared_stripe_examples/account_link_examples.rb
+- spec/shared_stripe_examples/balance_examples.rb
+- spec/shared_stripe_examples/balance_transaction_examples.rb
+- spec/shared_stripe_examples/bank_examples.rb
+- spec/shared_stripe_examples/bank_token_examples.rb
+- spec/shared_stripe_examples/card_examples.rb
+- spec/shared_stripe_examples/card_token_examples.rb
+- spec/shared_stripe_examples/charge_examples.rb
+- spec/shared_stripe_examples/checkout_session_examples.rb
+- spec/shared_stripe_examples/country_specs_examples.rb
+- spec/shared_stripe_examples/coupon_examples.rb
+- spec/shared_stripe_examples/customer_examples.rb
+- spec/shared_stripe_examples/dispute_examples.rb
+- spec/shared_stripe_examples/ephemeral_key_examples.rb
+- spec/shared_stripe_examples/error_mock_examples.rb
+- spec/shared_stripe_examples/express_login_link_examples.rb
+- spec/shared_stripe_examples/external_account_examples.rb
+- spec/shared_stripe_examples/extra_features_examples.rb
+- spec/shared_stripe_examples/invoice_examples.rb
+- spec/shared_stripe_examples/invoice_item_examples.rb
+- spec/shared_stripe_examples/payment_intent_examples.rb
+- spec/shared_stripe_examples/payment_method_examples.rb
+- spec/shared_stripe_examples/payout_examples.rb
+- spec/shared_stripe_examples/plan_examples.rb
+- spec/shared_stripe_examples/price_examples.rb
+- spec/shared_stripe_examples/product_examples.rb
+- spec/shared_stripe_examples/promotion_code_examples.rb
+- spec/shared_stripe_examples/recipient_examples.rb
+- spec/shared_stripe_examples/refund_examples.rb
+- spec/shared_stripe_examples/setup_intent_examples.rb
+- spec/shared_stripe_examples/subscription_examples.rb
+- spec/shared_stripe_examples/subscription_items_examples.rb
+- spec/shared_stripe_examples/tax_rate_examples.rb
+- spec/shared_stripe_examples/transfer_examples.rb
+- spec/shared_stripe_examples/validation_examples.rb
+- spec/shared_stripe_examples/webhook_event_examples.rb
+- spec/spec_helper.rb
+- spec/stripe_mock_spec.rb
+- spec/support/shared_contexts/stripe_validator_spec.rb
+- spec/support/stripe_examples.rb
+- spec/util_spec.rb
+- stripe-ruby-mock.gemspec
+homepage: https://github.com/stripe-ruby-mock/stripe-ruby-mock
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/stripe-ruby-mock/stripe-ruby-mock/issues
+  changelog_uri: https://github.com/stripe-ruby-mock/stripe-ruby-mock/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/stripe-ruby-mock/stripe-ruby-mock
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: TDD with stripe
+test_files:
+- spec/_dummy/webhooks/dummy.event.json
+- spec/api/instance_spec.rb
+- spec/fixtures/create_refund.yml
+- spec/fixtures/stripe_webhooks/account.updated.json
+- spec/fixtures/stripe_webhooks/custom.account.updated.json
+- spec/instance_spec.rb
+- spec/integration_examples/charge_token_examples.rb
+- spec/integration_examples/completing_checkout_sessions_example.rb
+- spec/integration_examples/customer_card_examples.rb
+- spec/integration_examples/prepare_error_examples.rb
+- spec/list_spec.rb
+- spec/readme_spec.rb
+- spec/server_spec.rb
+- spec/shared_stripe_examples/account_examples.rb
+- spec/shared_stripe_examples/account_link_examples.rb
+- spec/shared_stripe_examples/balance_examples.rb
+- spec/shared_stripe_examples/balance_transaction_examples.rb
+- spec/shared_stripe_examples/bank_examples.rb
+- spec/shared_stripe_examples/bank_token_examples.rb
+- spec/shared_stripe_examples/card_examples.rb
+- spec/shared_stripe_examples/card_token_examples.rb
+- spec/shared_stripe_examples/charge_examples.rb
+- spec/shared_stripe_examples/checkout_session_examples.rb
+- spec/shared_stripe_examples/country_specs_examples.rb
+- spec/shared_stripe_examples/coupon_examples.rb
+- spec/shared_stripe_examples/customer_examples.rb
+- spec/shared_stripe_examples/dispute_examples.rb
+- spec/shared_stripe_examples/ephemeral_key_examples.rb
+- spec/shared_stripe_examples/error_mock_examples.rb
+- spec/shared_stripe_examples/express_login_link_examples.rb
+- spec/shared_stripe_examples/external_account_examples.rb
+- spec/shared_stripe_examples/extra_features_examples.rb
+- spec/shared_stripe_examples/invoice_examples.rb
+- spec/shared_stripe_examples/invoice_item_examples.rb
+- spec/shared_stripe_examples/payment_intent_examples.rb
+- spec/shared_stripe_examples/payment_method_examples.rb
+- spec/shared_stripe_examples/payout_examples.rb
+- spec/shared_stripe_examples/plan_examples.rb
+- spec/shared_stripe_examples/price_examples.rb
+- spec/shared_stripe_examples/product_examples.rb
+- spec/shared_stripe_examples/promotion_code_examples.rb
+- spec/shared_stripe_examples/recipient_examples.rb
+- spec/shared_stripe_examples/refund_examples.rb
+- spec/shared_stripe_examples/setup_intent_examples.rb
+- spec/shared_stripe_examples/subscription_examples.rb
+- spec/shared_stripe_examples/subscription_items_examples.rb
+- spec/shared_stripe_examples/tax_rate_examples.rb
+- spec/shared_stripe_examples/transfer_examples.rb
+- spec/shared_stripe_examples/validation_examples.rb
+- spec/shared_stripe_examples/webhook_event_examples.rb
+- spec/spec_helper.rb
+- spec/stripe_mock_spec.rb
+- spec/support/shared_contexts/stripe_validator_spec.rb
+- spec/support/stripe_examples.rb
+- spec/util_spec.rb

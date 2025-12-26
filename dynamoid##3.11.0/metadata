@@ -1,0 +1,290 @@
+--- !ruby/object:Gem::Specification
+name: dynamoid
+version: !ruby/object:Gem::Version
+  version: 3.11.0
+platform: ruby
+authors:
+- Josh Symonds
+- Logan Bowers
+- Craig Heneveld
+- Anatha Kumaran
+- Jason Dew
+- Luis Arias
+- Stefan Neculai
+- Philip White
+- Peeyush Kumar
+- Sumanth Ravipati
+- Pascal Corpet
+- Brian Glusman
+- Peter Boling
+- Andrew Konchin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-dynamodb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Dynamoid is an ORM for Amazon's DynamoDB that supports offline development,
+  associations, querying, and everything else you'd expect from an ActiveRecord-style
+  replacement.
+email:
+- andry.konchin@gmail.com
+- peter.boling@gmail.com
+- brian@stellaservice.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- SECURITY.md
+- dynamoid.gemspec
+- lib/dynamoid.rb
+- lib/dynamoid/adapter.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/batch_get_item.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/create_table.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/execute_statement.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/filter_expression_convertor.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/item_updater.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/middleware/backoff.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/middleware/limit.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/middleware/start_key.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/projection_expression_convertor.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/query.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/scan.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/table.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/transact.rb
+- lib/dynamoid/adapter_plugin/aws_sdk_v3/until_past_table_status.rb
+- lib/dynamoid/application_time_zone.rb
+- lib/dynamoid/associations.rb
+- lib/dynamoid/associations/association.rb
+- lib/dynamoid/associations/belongs_to.rb
+- lib/dynamoid/associations/has_and_belongs_to_many.rb
+- lib/dynamoid/associations/has_many.rb
+- lib/dynamoid/associations/has_one.rb
+- lib/dynamoid/associations/many_association.rb
+- lib/dynamoid/associations/single_association.rb
+- lib/dynamoid/components.rb
+- lib/dynamoid/config.rb
+- lib/dynamoid/config/backoff_strategies/constant_backoff.rb
+- lib/dynamoid/config/backoff_strategies/exponential_backoff.rb
+- lib/dynamoid/config/options.rb
+- lib/dynamoid/criteria.rb
+- lib/dynamoid/criteria/chain.rb
+- lib/dynamoid/criteria/key_fields_detector.rb
+- lib/dynamoid/criteria/nonexistent_fields_detector.rb
+- lib/dynamoid/criteria/where_conditions.rb
+- lib/dynamoid/dirty.rb
+- lib/dynamoid/document.rb
+- lib/dynamoid/dumping.rb
+- lib/dynamoid/dynamodb_time_zone.rb
+- lib/dynamoid/errors.rb
+- lib/dynamoid/fields.rb
+- lib/dynamoid/fields/declare.rb
+- lib/dynamoid/finders.rb
+- lib/dynamoid/identity_map.rb
+- lib/dynamoid/indexes.rb
+- lib/dynamoid/loadable.rb
+- lib/dynamoid/log/formatter.rb
+- lib/dynamoid/middleware/identity_map.rb
+- lib/dynamoid/persistence.rb
+- lib/dynamoid/persistence/import.rb
+- lib/dynamoid/persistence/inc.rb
+- lib/dynamoid/persistence/item_updater_with_casting_and_dumping.rb
+- lib/dynamoid/persistence/item_updater_with_dumping.rb
+- lib/dynamoid/persistence/save.rb
+- lib/dynamoid/persistence/update_fields.rb
+- lib/dynamoid/persistence/update_validations.rb
+- lib/dynamoid/persistence/upsert.rb
+- lib/dynamoid/primary_key_type_mapping.rb
+- lib/dynamoid/railtie.rb
+- lib/dynamoid/tasks.rb
+- lib/dynamoid/tasks/database.rake
+- lib/dynamoid/tasks/database.rb
+- lib/dynamoid/transaction_write.rb
+- lib/dynamoid/transaction_write/base.rb
+- lib/dynamoid/transaction_write/create.rb
+- lib/dynamoid/transaction_write/delete_with_instance.rb
+- lib/dynamoid/transaction_write/delete_with_primary_key.rb
+- lib/dynamoid/transaction_write/destroy.rb
+- lib/dynamoid/transaction_write/save.rb
+- lib/dynamoid/transaction_write/update_attributes.rb
+- lib/dynamoid/transaction_write/update_fields.rb
+- lib/dynamoid/transaction_write/upsert.rb
+- lib/dynamoid/type_casting.rb
+- lib/dynamoid/undumping.rb
+- lib/dynamoid/validations.rb
+- lib/dynamoid/version.rb
+homepage: http://github.com/Dynamoid/dynamoid
+licenses:
+- MIT
+metadata:
+  homepage_uri: http://github.com/Dynamoid/dynamoid
+  source_code_uri: https://github.com/Dynamoid/dynamoid/tree/v3.11.0
+  changelog_uri: https://github.com/Dynamoid/dynamoid/blob/v3.11.0/CHANGELOG.md
+  bug_tracker_uri: https://github.com/Dynamoid/dynamoid/issues
+  documentation_uri: https://www.rubydoc.info/gems/dynamoid/3.11.0
+  funding_uri: https://opencollective.com/dynamoid
+  wiki_uri: https://github.com/Dynamoid/dynamoid/wiki
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Dynamoid is an ORM for Amazon's DynamoDB
+test_files: []

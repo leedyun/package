@@ -1,0 +1,142 @@
+--- !ruby/object:Gem::Specification
+name: google-cloud-logging
+version: !ruby/object:Gem::Version
+  version: 2.5.0
+platform: ruby
+authors:
+- Mike Moore
+- Chris Smith
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-07-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: google-cloud-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-logging-v2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+- !ruby/object:Gem::Dependency
+  name: stackdriver-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: google-cloud-logging is the official library for Stackdriver Logging.
+email:
+- mike@blowmage.com
+- quartzmo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- AUTHENTICATION.md
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- INSTRUMENTATION.md
+- LICENSE
+- LOGGING.md
+- OVERVIEW.md
+- TROUBLESHOOTING.md
+- lib/google-cloud-logging.rb
+- lib/google/cloud/logging.rb
+- lib/google/cloud/logging/async_writer.rb
+- lib/google/cloud/logging/convert.rb
+- lib/google/cloud/logging/credentials.rb
+- lib/google/cloud/logging/entry.rb
+- lib/google/cloud/logging/entry/http_request.rb
+- lib/google/cloud/logging/entry/list.rb
+- lib/google/cloud/logging/entry/operation.rb
+- lib/google/cloud/logging/entry/source_location.rb
+- lib/google/cloud/logging/errors.rb
+- lib/google/cloud/logging/log/list.rb
+- lib/google/cloud/logging/logger.rb
+- lib/google/cloud/logging/metric.rb
+- lib/google/cloud/logging/metric/list.rb
+- lib/google/cloud/logging/middleware.rb
+- lib/google/cloud/logging/project.rb
+- lib/google/cloud/logging/rails.rb
+- lib/google/cloud/logging/resource.rb
+- lib/google/cloud/logging/resource_descriptor.rb
+- lib/google/cloud/logging/resource_descriptor/list.rb
+- lib/google/cloud/logging/service.rb
+- lib/google/cloud/logging/sink.rb
+- lib/google/cloud/logging/sink/list.rb
+- lib/google/cloud/logging/version.rb
+homepage: https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-logging
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key: 
+specification_version: 4
+summary: API Client library for Stackdriver Logging
+test_files: []

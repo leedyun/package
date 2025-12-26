@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: chef-rewind
+version: !ruby/object:Gem::Version
+  version: 0.0.9
+platform: ruby
+authors:
+- Bryan Berry
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-12-20 00:00:00.000000000 Z
+dependencies: []
+description: Monkey patches Chef to allow rewinding and unwinding of existing resources
+email:
+- bryan.berry@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".kitchen.yml"
+- ".travis.yml"
+- Berksfile
+- CHANGELOG
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- chef-rewind.gemspec
+- gemfiles/chef-11.gemfile
+- gemfiles/chef-12.gemfile
+- lib/chef/rewind.rb
+- spec/data/cookbooks/rewind/Berksfile
+- spec/data/cookbooks/rewind/README.md
+- spec/data/cookbooks/rewind/files/default/test/default_test.rb
+- spec/data/cookbooks/rewind/metadata.rb
+- spec/data/cookbooks/rewind/recipes/base.rb
+- spec/data/cookbooks/rewind/recipes/default.rb
+- spec/rewind_recipe_spec.rb
+- spec/rewind_resource_spec.rb
+- spec/spec_helper.rb
+- spec/support/chef_helpers.rb
+- spec/support/lib/chef/provider/cat.rb
+- spec/support/lib/chef/provider/zen_master.rb
+- spec/support/lib/chef/resource/cat.rb
+- spec/support/lib/chef/resource/zen_master.rb
+- spec/unwind_recipe_spec.rb
+homepage: ''
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Monkey patches Chef to allow rewinding and unwinding of existing resources
+test_files:
+- spec/data/cookbooks/rewind/Berksfile
+- spec/data/cookbooks/rewind/README.md
+- spec/data/cookbooks/rewind/files/default/test/default_test.rb
+- spec/data/cookbooks/rewind/metadata.rb
+- spec/data/cookbooks/rewind/recipes/base.rb
+- spec/data/cookbooks/rewind/recipes/default.rb
+- spec/rewind_recipe_spec.rb
+- spec/rewind_resource_spec.rb
+- spec/spec_helper.rb
+- spec/support/chef_helpers.rb
+- spec/support/lib/chef/provider/cat.rb
+- spec/support/lib/chef/provider/zen_master.rb
+- spec/support/lib/chef/resource/cat.rb
+- spec/support/lib/chef/resource/zen_master.rb
+- spec/unwind_recipe_spec.rb

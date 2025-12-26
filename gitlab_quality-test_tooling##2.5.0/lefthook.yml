@@ -1,0 +1,29 @@
+# Lefthook configuration. For more information, see:
+# https://github.com/Arkweid/lefthook/blob/master/docs/full_guide.md
+
+pre-push:
+  parallel: true
+  commands:
+    # Run all tests (warn if there are any missing tools required for tests).
+    rspec:
+      run: bundle exec rspec -f progress
+      glob: '*.rb'
+
+    # Run ruby linting
+    rubocop:
+      run: bundle exec rubocop
+      glob: '*.rb'
+
+    # Changelog git trailer for the first commit of the branch
+    changelog-on-first-commit:
+      run: |
+        git fetch origin main
+        first_commit_message=$(git log --format=%B -n 1 $(git log origin/main..HEAD --pretty=format:"%h" | tail -1))
+        if ! echo ${first_commit_message} | grep "Changelog:"; then
+          echo Could not find a Changelog: git trailer on the first commit for this branch.
+          echo
+          echo Please add a trailer by amending the git commit message.
+          echo
+          echo See https://docs.gitlab.com/ee/development/changelog.html#overview for more info.
+          exit 1
+        fi

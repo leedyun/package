@@ -1,0 +1,157 @@
+--- !ruby/object:Gem::Specification
+name: em-synchrony
+version: !ruby/object:Gem::Version
+  version: 1.0.6
+platform: ruby
+authors:
+- Ilya Grigorik
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-12-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: eventmachine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0.beta.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0.beta.1
+description: Fiber aware EventMachine libraries
+email:
+- ilya@igvita.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- em-synchrony.gemspec
+- examples/all.rb
+- examples/go/README.md
+- examples/go/channel.go
+- examples/go/channel.rb
+- examples/go/consumer-publisher.go
+- examples/go/consumer-publisher.rb
+- examples/go/go.rb
+- examples/nethttp.rb
+- lib/active_record/connection_adapters/em_mysql2_adapter.rb
+- lib/em-synchrony.rb
+- lib/em-synchrony/activerecord.rb
+- lib/em-synchrony/activerecord_4_2.rb
+- lib/em-synchrony/amqp.rb
+- lib/em-synchrony/connection_pool.rb
+- lib/em-synchrony/core_ext.rb
+- lib/em-synchrony/em-hiredis.rb
+- lib/em-synchrony/em-http.rb
+- lib/em-synchrony/em-jack.rb
+- lib/em-synchrony/em-memcache.rb
+- lib/em-synchrony/em-mongo.rb
+- lib/em-synchrony/em-multi.rb
+- lib/em-synchrony/em-redis.rb
+- lib/em-synchrony/em-remcached.rb
+- lib/em-synchrony/fiber_iterator.rb
+- lib/em-synchrony/iterator.rb
+- lib/em-synchrony/kernel.rb
+- lib/em-synchrony/keyboard.rb
+- lib/em-synchrony/mechanize.rb
+- lib/em-synchrony/mongo.rb
+- lib/em-synchrony/mongoid.rb
+- lib/em-synchrony/mysql2.rb
+- lib/em-synchrony/tcpsocket.rb
+- lib/em-synchrony/thread.rb
+- spec/activerecord_spec.rb
+- spec/amqp_spec.rb
+- spec/beanstalk_spec.rb
+- spec/connection_pool_spec.rb
+- spec/defer_spec.rb
+- spec/em-mongo_spec.rb
+- spec/fiber_iterator_spec.rb
+- spec/helper/all.rb
+- spec/helper/core.rb
+- spec/helper/stub-http-server.rb
+- spec/helper/tolerance_matcher.rb
+- spec/hiredis_spec.rb
+- spec/http_spec.rb
+- spec/inlinesync_spec.rb
+- spec/iterator_spec.rb
+- spec/kernel_override_spec.rb
+- spec/keyboard_spec.rb
+- spec/memcache_spec.rb
+- spec/mongo_spec.rb
+- spec/multi_spec.rb
+- spec/mysql2_spec.rb
+- spec/redis_spec.rb
+- spec/remcached_spec.rb
+- spec/synchrony_spec.rb
+- spec/system_spec.rb
+- spec/tcpsocket_spec.rb
+- spec/thread_spec.rb
+- spec/timer_spec.rb
+- spec/widgets.sql
+homepage: http://github.com/igrigorik/em-synchrony
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: Fiber aware EventMachine libraries
+test_files:
+- spec/activerecord_spec.rb
+- spec/amqp_spec.rb
+- spec/beanstalk_spec.rb
+- spec/connection_pool_spec.rb
+- spec/defer_spec.rb
+- spec/em-mongo_spec.rb
+- spec/fiber_iterator_spec.rb
+- spec/helper/all.rb
+- spec/helper/core.rb
+- spec/helper/stub-http-server.rb
+- spec/helper/tolerance_matcher.rb
+- spec/hiredis_spec.rb
+- spec/http_spec.rb
+- spec/inlinesync_spec.rb
+- spec/iterator_spec.rb
+- spec/kernel_override_spec.rb
+- spec/keyboard_spec.rb
+- spec/memcache_spec.rb
+- spec/mongo_spec.rb
+- spec/multi_spec.rb
+- spec/mysql2_spec.rb
+- spec/redis_spec.rb
+- spec/remcached_spec.rb
+- spec/synchrony_spec.rb
+- spec/system_spec.rb
+- spec/tcpsocket_spec.rb
+- spec/thread_spec.rb
+- spec/timer_spec.rb
+- spec/widgets.sql

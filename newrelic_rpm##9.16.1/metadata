@@ -1,0 +1,789 @@
+--- !ruby/object:Gem::Specification
+name: newrelic_rpm
+version: !ruby/object:Gem::Version
+  version: 9.16.1
+platform: ruby
+authors:
+- Tanna McClure
+- Kayla Reopelle
+- James Bunch
+- Hannah Ramadan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.3.3
+- !ruby/object:Gem::Dependency
+  name: minitest-stub-const
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.57.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.57.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-ast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.28.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.28.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.27.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.27.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: warning
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  New Relic is a performance management system, developed by New Relic,
+  Inc (http://www.newrelic.com).  New Relic provides you with deep
+  information about the performance of your web application as it runs
+  in production. The New Relic Ruby agent is dual-purposed as a either a
+  Gem or plugin, hosted on
+  https://github.com/newrelic/newrelic-ruby-agent/
+email: support@newrelic.com
+executables:
+- newrelic_rpm
+- newrelic
+- nrdebug
+extensions: []
+extra_rdoc_files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- CONTRIBUTING.md
+- newrelic.yml
+files:
+- ".build_ignore"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- THIRD_PARTY_NOTICES.md
+- Thorfile
+- bin/newrelic
+- bin/newrelic_rpm
+- bin/nrdebug
+- init.rb
+- install.rb
+- lib/boot/strap.rb
+- lib/new_relic/agent.rb
+- lib/new_relic/agent/adaptive_sampler.rb
+- lib/new_relic/agent/agent.rb
+- lib/new_relic/agent/agent_helpers/connect.rb
+- lib/new_relic/agent/agent_helpers/harvest.rb
+- lib/new_relic/agent/agent_helpers/shutdown.rb
+- lib/new_relic/agent/agent_helpers/special_startup.rb
+- lib/new_relic/agent/agent_helpers/start_worker_thread.rb
+- lib/new_relic/agent/agent_helpers/startup.rb
+- lib/new_relic/agent/agent_helpers/transmit.rb
+- lib/new_relic/agent/agent_logger.rb
+- lib/new_relic/agent/attribute_filter.rb
+- lib/new_relic/agent/attribute_pre_filtering.rb
+- lib/new_relic/agent/attribute_processing.rb
+- lib/new_relic/agent/attributes.rb
+- lib/new_relic/agent/audit_logger.rb
+- lib/new_relic/agent/autostart.rb
+- lib/new_relic/agent/aws.rb
+- lib/new_relic/agent/chained_call.rb
+- lib/new_relic/agent/commands/agent_command.rb
+- lib/new_relic/agent/commands/agent_command_router.rb
+- lib/new_relic/agent/commands/thread_profiler_session.rb
+- lib/new_relic/agent/configuration.rb
+- lib/new_relic/agent/configuration/default_source.rb
+- lib/new_relic/agent/configuration/dotted_hash.rb
+- lib/new_relic/agent/configuration/environment_source.rb
+- lib/new_relic/agent/configuration/event_harvest_config.rb
+- lib/new_relic/agent/configuration/high_security_source.rb
+- lib/new_relic/agent/configuration/manager.rb
+- lib/new_relic/agent/configuration/manual_source.rb
+- lib/new_relic/agent/configuration/mask_defaults.rb
+- lib/new_relic/agent/configuration/security_policy_source.rb
+- lib/new_relic/agent/configuration/server_source.rb
+- lib/new_relic/agent/configuration/yaml_source.rb
+- lib/new_relic/agent/connect/request_builder.rb
+- lib/new_relic/agent/connect/response_handler.rb
+- lib/new_relic/agent/custom_event_aggregator.rb
+- lib/new_relic/agent/database.rb
+- lib/new_relic/agent/database/explain_plan_helpers.rb
+- lib/new_relic/agent/database/obfuscation_helpers.rb
+- lib/new_relic/agent/database/obfuscator.rb
+- lib/new_relic/agent/database/postgres_explain_obfuscator.rb
+- lib/new_relic/agent/database_adapter.rb
+- lib/new_relic/agent/datastores.rb
+- lib/new_relic/agent/datastores/metric_helper.rb
+- lib/new_relic/agent/datastores/mongo.rb
+- lib/new_relic/agent/datastores/mongo/event_formatter.rb
+- lib/new_relic/agent/datastores/mongo/metric_translator.rb
+- lib/new_relic/agent/datastores/nosql_obfuscator.rb
+- lib/new_relic/agent/datastores/redis.rb
+- lib/new_relic/agent/deprecator.rb
+- lib/new_relic/agent/distributed_tracing.rb
+- lib/new_relic/agent/distributed_tracing/cross_app_payload.rb
+- lib/new_relic/agent/distributed_tracing/cross_app_tracing.rb
+- lib/new_relic/agent/distributed_tracing/distributed_trace_attributes.rb
+- lib/new_relic/agent/distributed_tracing/distributed_trace_metrics.rb
+- lib/new_relic/agent/distributed_tracing/distributed_trace_payload.rb
+- lib/new_relic/agent/distributed_tracing/distributed_trace_transport_type.rb
+- lib/new_relic/agent/distributed_tracing/trace_context.rb
+- lib/new_relic/agent/distributed_tracing/trace_context_payload.rb
+- lib/new_relic/agent/encoding_normalizer.rb
+- lib/new_relic/agent/error_collector.rb
+- lib/new_relic/agent/error_event_aggregator.rb
+- lib/new_relic/agent/error_filter.rb
+- lib/new_relic/agent/error_trace_aggregator.rb
+- lib/new_relic/agent/event_aggregator.rb
+- lib/new_relic/agent/event_buffer.rb
+- lib/new_relic/agent/event_listener.rb
+- lib/new_relic/agent/event_loop.rb
+- lib/new_relic/agent/external.rb
+- lib/new_relic/agent/guid_generator.rb
+- lib/new_relic/agent/harvester.rb
+- lib/new_relic/agent/heap.rb
+- lib/new_relic/agent/hostname.rb
+- lib/new_relic/agent/http_clients/abstract.rb
+- lib/new_relic/agent/http_clients/async_http_wrappers.rb
+- lib/new_relic/agent/http_clients/curb_wrappers.rb
+- lib/new_relic/agent/http_clients/ethon_wrappers.rb
+- lib/new_relic/agent/http_clients/excon_wrappers.rb
+- lib/new_relic/agent/http_clients/http_rb_wrappers.rb
+- lib/new_relic/agent/http_clients/httpclient_wrappers.rb
+- lib/new_relic/agent/http_clients/httpx_wrappers.rb
+- lib/new_relic/agent/http_clients/net_http_wrappers.rb
+- lib/new_relic/agent/http_clients/typhoeus_wrappers.rb
+- lib/new_relic/agent/http_clients/uri_util.rb
+- lib/new_relic/agent/instrumentation.rb
+- lib/new_relic/agent/instrumentation/action_cable_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_controller_other_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_controller_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_dispatch.rb
+- lib/new_relic/agent/instrumentation/action_dispatch_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_mailbox.rb
+- lib/new_relic/agent/instrumentation/action_mailbox_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_mailer.rb
+- lib/new_relic/agent/instrumentation/action_mailer_subscriber.rb
+- lib/new_relic/agent/instrumentation/action_view_subscriber.rb
+- lib/new_relic/agent/instrumentation/active_job.rb
+- lib/new_relic/agent/instrumentation/active_job_subscriber.rb
+- lib/new_relic/agent/instrumentation/active_merchant.rb
+- lib/new_relic/agent/instrumentation/active_record.rb
+- lib/new_relic/agent/instrumentation/active_record_helper.rb
+- lib/new_relic/agent/instrumentation/active_record_notifications.rb
+- lib/new_relic/agent/instrumentation/active_record_prepend.rb
+- lib/new_relic/agent/instrumentation/active_record_subscriber.rb
+- lib/new_relic/agent/instrumentation/active_storage.rb
+- lib/new_relic/agent/instrumentation/active_storage_subscriber.rb
+- lib/new_relic/agent/instrumentation/active_support.rb
+- lib/new_relic/agent/instrumentation/active_support_broadcast_logger.rb
+- lib/new_relic/agent/instrumentation/active_support_broadcast_logger/chain.rb
+- lib/new_relic/agent/instrumentation/active_support_broadcast_logger/instrumentation.rb
+- lib/new_relic/agent/instrumentation/active_support_broadcast_logger/prepend.rb
+- lib/new_relic/agent/instrumentation/active_support_logger.rb
+- lib/new_relic/agent/instrumentation/active_support_logger/chain.rb
+- lib/new_relic/agent/instrumentation/active_support_logger/instrumentation.rb
+- lib/new_relic/agent/instrumentation/active_support_logger/prepend.rb
+- lib/new_relic/agent/instrumentation/active_support_subscriber.rb
+- lib/new_relic/agent/instrumentation/async_http.rb
+- lib/new_relic/agent/instrumentation/async_http/chain.rb
+- lib/new_relic/agent/instrumentation/async_http/instrumentation.rb
+- lib/new_relic/agent/instrumentation/async_http/prepend.rb
+- lib/new_relic/agent/instrumentation/aws_sdk_lambda.rb
+- lib/new_relic/agent/instrumentation/aws_sdk_lambda/chain.rb
+- lib/new_relic/agent/instrumentation/aws_sdk_lambda/instrumentation.rb
+- lib/new_relic/agent/instrumentation/aws_sdk_lambda/prepend.rb
+- lib/new_relic/agent/instrumentation/aws_sqs.rb
+- lib/new_relic/agent/instrumentation/aws_sqs/chain.rb
+- lib/new_relic/agent/instrumentation/aws_sqs/instrumentation.rb
+- lib/new_relic/agent/instrumentation/aws_sqs/prepend.rb
+- lib/new_relic/agent/instrumentation/bunny.rb
+- lib/new_relic/agent/instrumentation/bunny/chain.rb
+- lib/new_relic/agent/instrumentation/bunny/instrumentation.rb
+- lib/new_relic/agent/instrumentation/bunny/prepend.rb
+- lib/new_relic/agent/instrumentation/concurrent_ruby.rb
+- lib/new_relic/agent/instrumentation/concurrent_ruby/chain.rb
+- lib/new_relic/agent/instrumentation/concurrent_ruby/instrumentation.rb
+- lib/new_relic/agent/instrumentation/concurrent_ruby/prepend.rb
+- lib/new_relic/agent/instrumentation/controller_instrumentation.rb
+- lib/new_relic/agent/instrumentation/curb.rb
+- lib/new_relic/agent/instrumentation/curb/chain.rb
+- lib/new_relic/agent/instrumentation/curb/instrumentation.rb
+- lib/new_relic/agent/instrumentation/curb/prepend.rb
+- lib/new_relic/agent/instrumentation/custom_events.rb
+- lib/new_relic/agent/instrumentation/custom_events_subscriber.rb
+- lib/new_relic/agent/instrumentation/delayed_job/chain.rb
+- lib/new_relic/agent/instrumentation/delayed_job/instrumentation.rb
+- lib/new_relic/agent/instrumentation/delayed_job/prepend.rb
+- lib/new_relic/agent/instrumentation/delayed_job_instrumentation.rb
+- lib/new_relic/agent/instrumentation/dynamodb.rb
+- lib/new_relic/agent/instrumentation/dynamodb/chain.rb
+- lib/new_relic/agent/instrumentation/dynamodb/instrumentation.rb
+- lib/new_relic/agent/instrumentation/dynamodb/prepend.rb
+- lib/new_relic/agent/instrumentation/elasticsearch.rb
+- lib/new_relic/agent/instrumentation/elasticsearch/chain.rb
+- lib/new_relic/agent/instrumentation/elasticsearch/instrumentation.rb
+- lib/new_relic/agent/instrumentation/elasticsearch/prepend.rb
+- lib/new_relic/agent/instrumentation/ethon.rb
+- lib/new_relic/agent/instrumentation/ethon/chain.rb
+- lib/new_relic/agent/instrumentation/ethon/instrumentation.rb
+- lib/new_relic/agent/instrumentation/ethon/prepend.rb
+- lib/new_relic/agent/instrumentation/excon.rb
+- lib/new_relic/agent/instrumentation/excon/middleware.rb
+- lib/new_relic/agent/instrumentation/fiber.rb
+- lib/new_relic/agent/instrumentation/fiber/chain.rb
+- lib/new_relic/agent/instrumentation/fiber/instrumentation.rb
+- lib/new_relic/agent/instrumentation/fiber/prepend.rb
+- lib/new_relic/agent/instrumentation/grape.rb
+- lib/new_relic/agent/instrumentation/grape/chain.rb
+- lib/new_relic/agent/instrumentation/grape/instrumentation.rb
+- lib/new_relic/agent/instrumentation/grape/prepend.rb
+- lib/new_relic/agent/instrumentation/grpc/client/chain.rb
+- lib/new_relic/agent/instrumentation/grpc/client/instrumentation.rb
+- lib/new_relic/agent/instrumentation/grpc/client/prepend.rb
+- lib/new_relic/agent/instrumentation/grpc/client/request_wrapper.rb
+- lib/new_relic/agent/instrumentation/grpc/helper.rb
+- lib/new_relic/agent/instrumentation/grpc/server/chain.rb
+- lib/new_relic/agent/instrumentation/grpc/server/instrumentation.rb
+- lib/new_relic/agent/instrumentation/grpc/server/rpc_desc_prepend.rb
+- lib/new_relic/agent/instrumentation/grpc/server/rpc_server_prepend.rb
+- lib/new_relic/agent/instrumentation/grpc_client.rb
+- lib/new_relic/agent/instrumentation/grpc_server.rb
+- lib/new_relic/agent/instrumentation/httpclient.rb
+- lib/new_relic/agent/instrumentation/httpclient/chain.rb
+- lib/new_relic/agent/instrumentation/httpclient/instrumentation.rb
+- lib/new_relic/agent/instrumentation/httpclient/prepend.rb
+- lib/new_relic/agent/instrumentation/httprb.rb
+- lib/new_relic/agent/instrumentation/httprb/chain.rb
+- lib/new_relic/agent/instrumentation/httprb/instrumentation.rb
+- lib/new_relic/agent/instrumentation/httprb/prepend.rb
+- lib/new_relic/agent/instrumentation/httpx.rb
+- lib/new_relic/agent/instrumentation/httpx/chain.rb
+- lib/new_relic/agent/instrumentation/httpx/instrumentation.rb
+- lib/new_relic/agent/instrumentation/httpx/prepend.rb
+- lib/new_relic/agent/instrumentation/ignore_actions.rb
+- lib/new_relic/agent/instrumentation/logger.rb
+- lib/new_relic/agent/instrumentation/logger/chain.rb
+- lib/new_relic/agent/instrumentation/logger/instrumentation.rb
+- lib/new_relic/agent/instrumentation/logger/prepend.rb
+- lib/new_relic/agent/instrumentation/logstasher.rb
+- lib/new_relic/agent/instrumentation/logstasher/chain.rb
+- lib/new_relic/agent/instrumentation/logstasher/instrumentation.rb
+- lib/new_relic/agent/instrumentation/logstasher/prepend.rb
+- lib/new_relic/agent/instrumentation/memcache.rb
+- lib/new_relic/agent/instrumentation/memcache/chain.rb
+- lib/new_relic/agent/instrumentation/memcache/dalli.rb
+- lib/new_relic/agent/instrumentation/memcache/helper.rb
+- lib/new_relic/agent/instrumentation/memcache/instrumentation.rb
+- lib/new_relic/agent/instrumentation/memcache/prepend.rb
+- lib/new_relic/agent/instrumentation/middleware_proxy.rb
+- lib/new_relic/agent/instrumentation/middleware_tracing.rb
+- lib/new_relic/agent/instrumentation/mongo.rb
+- lib/new_relic/agent/instrumentation/mongodb_command_subscriber.rb
+- lib/new_relic/agent/instrumentation/net_http.rb
+- lib/new_relic/agent/instrumentation/net_http/chain.rb
+- lib/new_relic/agent/instrumentation/net_http/instrumentation.rb
+- lib/new_relic/agent/instrumentation/net_http/prepend.rb
+- lib/new_relic/agent/instrumentation/notifications_subscriber.rb
+- lib/new_relic/agent/instrumentation/opensearch.rb
+- lib/new_relic/agent/instrumentation/opensearch/chain.rb
+- lib/new_relic/agent/instrumentation/opensearch/instrumentation.rb
+- lib/new_relic/agent/instrumentation/opensearch/prepend.rb
+- lib/new_relic/agent/instrumentation/padrino.rb
+- lib/new_relic/agent/instrumentation/padrino/chain.rb
+- lib/new_relic/agent/instrumentation/padrino/instrumentation.rb
+- lib/new_relic/agent/instrumentation/padrino/prepend.rb
+- lib/new_relic/agent/instrumentation/passenger_instrumentation.rb
+- lib/new_relic/agent/instrumentation/queue_time.rb
+- lib/new_relic/agent/instrumentation/rack.rb
+- lib/new_relic/agent/instrumentation/rack/chain.rb
+- lib/new_relic/agent/instrumentation/rack/helpers.rb
+- lib/new_relic/agent/instrumentation/rack/instrumentation.rb
+- lib/new_relic/agent/instrumentation/rack/prepend.rb
+- lib/new_relic/agent/instrumentation/rails3/action_controller.rb
+- lib/new_relic/agent/instrumentation/rails_middleware.rb
+- lib/new_relic/agent/instrumentation/rails_notifications/action_cable.rb
+- lib/new_relic/agent/instrumentation/rails_notifications/action_controller.rb
+- lib/new_relic/agent/instrumentation/rails_notifications/action_view.rb
+- lib/new_relic/agent/instrumentation/rails_notifications/custom_events.rb
+- lib/new_relic/agent/instrumentation/rake.rb
+- lib/new_relic/agent/instrumentation/rake/chain.rb
+- lib/new_relic/agent/instrumentation/rake/instrumentation.rb
+- lib/new_relic/agent/instrumentation/rake/prepend.rb
+- lib/new_relic/agent/instrumentation/rdkafka.rb
+- lib/new_relic/agent/instrumentation/rdkafka/chain.rb
+- lib/new_relic/agent/instrumentation/rdkafka/instrumentation.rb
+- lib/new_relic/agent/instrumentation/rdkafka/prepend.rb
+- lib/new_relic/agent/instrumentation/redis.rb
+- lib/new_relic/agent/instrumentation/redis/chain.rb
+- lib/new_relic/agent/instrumentation/redis/cluster_middleware.rb
+- lib/new_relic/agent/instrumentation/redis/constants.rb
+- lib/new_relic/agent/instrumentation/redis/instrumentation.rb
+- lib/new_relic/agent/instrumentation/redis/middleware.rb
+- lib/new_relic/agent/instrumentation/redis/prepend.rb
+- lib/new_relic/agent/instrumentation/resque.rb
+- lib/new_relic/agent/instrumentation/resque/chain.rb
+- lib/new_relic/agent/instrumentation/resque/helper.rb
+- lib/new_relic/agent/instrumentation/resque/instrumentation.rb
+- lib/new_relic/agent/instrumentation/resque/prepend.rb
+- lib/new_relic/agent/instrumentation/roda.rb
+- lib/new_relic/agent/instrumentation/roda/chain.rb
+- lib/new_relic/agent/instrumentation/roda/ignorer.rb
+- lib/new_relic/agent/instrumentation/roda/instrumentation.rb
+- lib/new_relic/agent/instrumentation/roda/prepend.rb
+- lib/new_relic/agent/instrumentation/roda/roda_transaction_namer.rb
+- lib/new_relic/agent/instrumentation/ruby_kafka.rb
+- lib/new_relic/agent/instrumentation/ruby_kafka/chain.rb
+- lib/new_relic/agent/instrumentation/ruby_kafka/instrumentation.rb
+- lib/new_relic/agent/instrumentation/ruby_kafka/prepend.rb
+- lib/new_relic/agent/instrumentation/ruby_openai.rb
+- lib/new_relic/agent/instrumentation/ruby_openai/chain.rb
+- lib/new_relic/agent/instrumentation/ruby_openai/instrumentation.rb
+- lib/new_relic/agent/instrumentation/ruby_openai/prepend.rb
+- lib/new_relic/agent/instrumentation/sequel.rb
+- lib/new_relic/agent/instrumentation/sequel_helper.rb
+- lib/new_relic/agent/instrumentation/sidekiq.rb
+- lib/new_relic/agent/instrumentation/sidekiq/client.rb
+- lib/new_relic/agent/instrumentation/sidekiq/extensions/delayed_class.rb
+- lib/new_relic/agent/instrumentation/sidekiq/server.rb
+- lib/new_relic/agent/instrumentation/sinatra.rb
+- lib/new_relic/agent/instrumentation/sinatra/chain.rb
+- lib/new_relic/agent/instrumentation/sinatra/ignorer.rb
+- lib/new_relic/agent/instrumentation/sinatra/instrumentation.rb
+- lib/new_relic/agent/instrumentation/sinatra/prepend.rb
+- lib/new_relic/agent/instrumentation/sinatra/transaction_namer.rb
+- lib/new_relic/agent/instrumentation/stripe.rb
+- lib/new_relic/agent/instrumentation/stripe_subscriber.rb
+- lib/new_relic/agent/instrumentation/thread.rb
+- lib/new_relic/agent/instrumentation/thread/chain.rb
+- lib/new_relic/agent/instrumentation/thread/instrumentation.rb
+- lib/new_relic/agent/instrumentation/thread/prepend.rb
+- lib/new_relic/agent/instrumentation/tilt.rb
+- lib/new_relic/agent/instrumentation/tilt/chain.rb
+- lib/new_relic/agent/instrumentation/tilt/instrumentation.rb
+- lib/new_relic/agent/instrumentation/tilt/prepend.rb
+- lib/new_relic/agent/instrumentation/typhoeus.rb
+- lib/new_relic/agent/instrumentation/typhoeus/chain.rb
+- lib/new_relic/agent/instrumentation/typhoeus/instrumentation.rb
+- lib/new_relic/agent/instrumentation/typhoeus/prepend.rb
+- lib/new_relic/agent/instrumentation/view_component.rb
+- lib/new_relic/agent/instrumentation/view_component/chain.rb
+- lib/new_relic/agent/instrumentation/view_component/instrumentation.rb
+- lib/new_relic/agent/instrumentation/view_component/prepend.rb
+- lib/new_relic/agent/internal_agent_error.rb
+- lib/new_relic/agent/javascript_instrumentor.rb
+- lib/new_relic/agent/linking_metadata.rb
+- lib/new_relic/agent/llm.rb
+- lib/new_relic/agent/llm/chat_completion_message.rb
+- lib/new_relic/agent/llm/chat_completion_summary.rb
+- lib/new_relic/agent/llm/embedding.rb
+- lib/new_relic/agent/llm/llm_event.rb
+- lib/new_relic/agent/llm/response_headers.rb
+- lib/new_relic/agent/local_log_decorator.rb
+- lib/new_relic/agent/log_event_aggregator.rb
+- lib/new_relic/agent/log_event_attributes.rb
+- lib/new_relic/agent/log_once.rb
+- lib/new_relic/agent/log_priority.rb
+- lib/new_relic/agent/logging.rb
+- lib/new_relic/agent/memory_logger.rb
+- lib/new_relic/agent/messaging.rb
+- lib/new_relic/agent/method_tracer.rb
+- lib/new_relic/agent/method_tracer_helpers.rb
+- lib/new_relic/agent/monitors.rb
+- lib/new_relic/agent/monitors/cross_app_monitor.rb
+- lib/new_relic/agent/monitors/distributed_tracing_monitor.rb
+- lib/new_relic/agent/monitors/inbound_request_monitor.rb
+- lib/new_relic/agent/monitors/synthetics_monitor.rb
+- lib/new_relic/agent/new_relic_service.rb
+- lib/new_relic/agent/new_relic_service/encoders.rb
+- lib/new_relic/agent/new_relic_service/json_marshaller.rb
+- lib/new_relic/agent/new_relic_service/marshaller.rb
+- lib/new_relic/agent/new_relic_service/security_policy_settings.rb
+- lib/new_relic/agent/noticeable_error.rb
+- lib/new_relic/agent/null_logger.rb
+- lib/new_relic/agent/obfuscator.rb
+- lib/new_relic/agent/parameter_filtering.rb
+- lib/new_relic/agent/payload_metric_mapping.rb
+- lib/new_relic/agent/pipe_channel_manager.rb
+- lib/new_relic/agent/pipe_service.rb
+- lib/new_relic/agent/prepend_supportability.rb
+- lib/new_relic/agent/priority_sampled_buffer.rb
+- lib/new_relic/agent/rules_engine.rb
+- lib/new_relic/agent/rules_engine/replacement_rule.rb
+- lib/new_relic/agent/rules_engine/segment_terms_rule.rb
+- lib/new_relic/agent/sampler.rb
+- lib/new_relic/agent/sampler_collection.rb
+- lib/new_relic/agent/samplers/cpu_sampler.rb
+- lib/new_relic/agent/samplers/delayed_job_sampler.rb
+- lib/new_relic/agent/samplers/memory_sampler.rb
+- lib/new_relic/agent/samplers/object_sampler.rb
+- lib/new_relic/agent/samplers/vm_sampler.rb
+- lib/new_relic/agent/serverless_handler.rb
+- lib/new_relic/agent/serverless_handler_event_sources.json
+- lib/new_relic/agent/serverless_handler_event_sources.rb
+- lib/new_relic/agent/span_event_aggregator.rb
+- lib/new_relic/agent/span_event_primitive.rb
+- lib/new_relic/agent/sql_sampler.rb
+- lib/new_relic/agent/stats.rb
+- lib/new_relic/agent/stats_engine.rb
+- lib/new_relic/agent/stats_engine/gc_profiler.rb
+- lib/new_relic/agent/stats_engine/stats_hash.rb
+- lib/new_relic/agent/synthetics_event_aggregator.rb
+- lib/new_relic/agent/system_info.rb
+- lib/new_relic/agent/threading/agent_thread.rb
+- lib/new_relic/agent/threading/backtrace_node.rb
+- lib/new_relic/agent/threading/backtrace_service.rb
+- lib/new_relic/agent/threading/thread_profile.rb
+- lib/new_relic/agent/timestamp_sampled_buffer.rb
+- lib/new_relic/agent/tracer.rb
+- lib/new_relic/agent/transaction.rb
+- lib/new_relic/agent/transaction/abstract_segment.rb
+- lib/new_relic/agent/transaction/datastore_segment.rb
+- lib/new_relic/agent/transaction/distributed_tracer.rb
+- lib/new_relic/agent/transaction/distributed_tracing.rb
+- lib/new_relic/agent/transaction/external_request_segment.rb
+- lib/new_relic/agent/transaction/message_broker_segment.rb
+- lib/new_relic/agent/transaction/request_attributes.rb
+- lib/new_relic/agent/transaction/segment.rb
+- lib/new_relic/agent/transaction/slowest_sample_buffer.rb
+- lib/new_relic/agent/transaction/synthetics_sample_buffer.rb
+- lib/new_relic/agent/transaction/trace.rb
+- lib/new_relic/agent/transaction/trace_builder.rb
+- lib/new_relic/agent/transaction/trace_context.rb
+- lib/new_relic/agent/transaction/trace_node.rb
+- lib/new_relic/agent/transaction/tracing.rb
+- lib/new_relic/agent/transaction/transaction_sample_buffer.rb
+- lib/new_relic/agent/transaction_error_primitive.rb
+- lib/new_relic/agent/transaction_event_aggregator.rb
+- lib/new_relic/agent/transaction_event_primitive.rb
+- lib/new_relic/agent/transaction_event_recorder.rb
+- lib/new_relic/agent/transaction_metrics.rb
+- lib/new_relic/agent/transaction_sampler.rb
+- lib/new_relic/agent/transaction_time_aggregator.rb
+- lib/new_relic/agent/utilization/aws.rb
+- lib/new_relic/agent/utilization/azure.rb
+- lib/new_relic/agent/utilization/gcp.rb
+- lib/new_relic/agent/utilization/pcf.rb
+- lib/new_relic/agent/utilization/vendor.rb
+- lib/new_relic/agent/utilization_data.rb
+- lib/new_relic/agent/vm.rb
+- lib/new_relic/agent/vm/c_ruby_vm.rb
+- lib/new_relic/agent/vm/jruby_vm.rb
+- lib/new_relic/agent/vm/monotonic_gc_profiler.rb
+- lib/new_relic/agent/vm/snapshot.rb
+- lib/new_relic/agent/worker_loop.rb
+- lib/new_relic/base64.rb
+- lib/new_relic/cli/command.rb
+- lib/new_relic/cli/commands/deployments.rb
+- lib/new_relic/cli/commands/install.rb
+- lib/new_relic/coerce.rb
+- lib/new_relic/collection_helper.rb
+- lib/new_relic/constants.rb
+- lib/new_relic/control.rb
+- lib/new_relic/control/class_methods.rb
+- lib/new_relic/control/frameworks.rb
+- lib/new_relic/control/frameworks/external.rb
+- lib/new_relic/control/frameworks/grape.rb
+- lib/new_relic/control/frameworks/padrino.rb
+- lib/new_relic/control/frameworks/rails.rb
+- lib/new_relic/control/frameworks/rails3.rb
+- lib/new_relic/control/frameworks/rails4.rb
+- lib/new_relic/control/frameworks/rails_notifications.rb
+- lib/new_relic/control/frameworks/roda.rb
+- lib/new_relic/control/frameworks/ruby.rb
+- lib/new_relic/control/frameworks/sinatra.rb
+- lib/new_relic/control/instance_methods.rb
+- lib/new_relic/control/instrumentation.rb
+- lib/new_relic/control/private_instance_methods.rb
+- lib/new_relic/control/security_interface.rb
+- lib/new_relic/control/server_methods.rb
+- lib/new_relic/delayed_job_injection.rb
+- lib/new_relic/dependency_detection.rb
+- lib/new_relic/environment_report.rb
+- lib/new_relic/helper.rb
+- lib/new_relic/language_support.rb
+- lib/new_relic/latest_changes.rb
+- lib/new_relic/local_environment.rb
+- lib/new_relic/metric_data.rb
+- lib/new_relic/metric_spec.rb
+- lib/new_relic/noticed_error.rb
+- lib/new_relic/rack.rb
+- lib/new_relic/rack/agent_hooks.rb
+- lib/new_relic/rack/agent_middleware.rb
+- lib/new_relic/rack/browser_monitoring.rb
+- lib/new_relic/recipes.rb
+- lib/new_relic/recipes/capistrano3.rb
+- lib/new_relic/recipes/capistrano_legacy.rb
+- lib/new_relic/recipes/helpers/send_deployment.rb
+- lib/new_relic/supportability_helper.rb
+- lib/new_relic/thread_local_storage.rb
+- lib/new_relic/traced_thread.rb
+- lib/new_relic/version.rb
+- lib/newrelic_rpm.rb
+- lib/sequel/extensions/new_relic_instrumentation.rb
+- lib/sequel/plugins/new_relic_instrumentation.rb
+- lib/tasks/all.rb
+- lib/tasks/bump_version.rake
+- lib/tasks/config.rake
+- lib/tasks/coverage_report.rake
+- lib/tasks/gha.rake
+- lib/tasks/helpers/config.html.erb
+- lib/tasks/helpers/config.text.erb
+- lib/tasks/helpers/format.rb
+- lib/tasks/helpers/matches.rb
+- lib/tasks/helpers/newrelicyml.rb
+- lib/tasks/helpers/prompt.rb
+- lib/tasks/helpers/version_bump.rb
+- lib/tasks/install.rake
+- lib/tasks/instrumentation_generator/README.md
+- lib/tasks/instrumentation_generator/TODO.md
+- lib/tasks/instrumentation_generator/instrumentation.thor
+- lib/tasks/instrumentation_generator/templates/Envfile.tt
+- lib/tasks/instrumentation_generator/templates/chain.tt
+- lib/tasks/instrumentation_generator/templates/chain_method.tt
+- lib/tasks/instrumentation_generator/templates/dependency_detection.tt
+- lib/tasks/instrumentation_generator/templates/instrumentation.tt
+- lib/tasks/instrumentation_generator/templates/instrumentation_method.tt
+- lib/tasks/instrumentation_generator/templates/newrelic.yml.tt
+- lib/tasks/instrumentation_generator/templates/prepend.tt
+- lib/tasks/instrumentation_generator/templates/prepend_method.tt
+- lib/tasks/instrumentation_generator/templates/test.tt
+- lib/tasks/newrelic.rb
+- lib/tasks/newrelicyml.rake
+- lib/tasks/tests.rake
+- newrelic.yml
+- newrelic_rpm.gemspec
+- recipes/newrelic.rb
+- test/agent_helper.rb
+homepage: https://github.com/newrelic/newrelic-ruby-agent
+licenses:
+- Apache-2.0
+metadata:
+  bug_tracker_uri: https://github.com/newrelic/newrelic-ruby-agent/issues
+  changelog_uri: https://github.com/newrelic/newrelic-ruby-agent/blob/main/CHANGELOG.md
+  documentation_uri: https://docs.newrelic.com/docs/agents/ruby-agent
+  source_code_uri: https://github.com/newrelic/newrelic-ruby-agent
+  homepage_uri: https://newrelic.com/ruby
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">"
+    - !ruby/object:Gem::Version
+      version: 1.3.1
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: New Relic Ruby Agent
+test_files: []

@@ -1,0 +1,174 @@
+--- !ruby/object:Gem::Specification
+name: gpgme
+version: !ruby/object:Gem::Version
+  version: 2.0.24
+platform: ruby
+authors:
+- Daiki Ueno
+- Albert Llop
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: mini_portile2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.12
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+- !ruby/object:Gem::Dependency
+  name: coveralls_reborn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  Ruby-GPGME is a Ruby language binding of GPGME (GnuPG
+  Made Easy). GnuPG Made Easy (GPGME) is a library designed to make access to
+  GnuPG easier for applications. It provides a High-Level Crypto API for
+  encryption, decryption, signing, signature verification and key management.
+email: ueno@gnu.org
+executables: []
+extensions:
+- ext/gpgme/extconf.rb
+extra_rdoc_files: []
+files:
+- examples/edit.rb
+- examples/genkey.rb
+- examples/keylist.rb
+- examples/roundtrip.rb
+- examples/sign.rb
+- examples/verify.rb
+- ext/gpgme/extconf.rb
+- ext/gpgme/gpgme_n.c
+- lib/gpgme.rb
+- lib/gpgme/compat.rb
+- lib/gpgme/constants.rb
+- lib/gpgme/crypto.rb
+- lib/gpgme/ctx.rb
+- lib/gpgme/data.rb
+- lib/gpgme/engine.rb
+- lib/gpgme/error.rb
+- lib/gpgme/io_callbacks.rb
+- lib/gpgme/key.rb
+- lib/gpgme/key_common.rb
+- lib/gpgme/key_sig.rb
+- lib/gpgme/misc.rb
+- lib/gpgme/signature.rb
+- lib/gpgme/sub_key.rb
+- lib/gpgme/user_id.rb
+- lib/gpgme/version.rb
+- ports/archives/gpgme-1.21.0.tar.bz2
+- ports/archives/libassuan-2.5.6.tar.bz2
+- ports/archives/libgpg-error-1.47.tar.bz2
+- test/crypto_test.rb
+- test/ctx_test.rb
+- test/data_test.rb
+- test/files/testkey_pub.gpg
+- test/files/testkey_pub_invalid.gpg
+- test/files/testkey_sec.gpg
+- test/gpgme_test.rb
+- test/key_test.rb
+- test/pinentry
+- test/signature_test.rb
+- test/sub_key_test.rb
+- test/support/resources.rb
+- test/test_helper.rb
+homepage: http://github.com/ueno/ruby-gpgme
+licenses:
+- LGPL-2.1+
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Ruby binding of GPGME.
+test_files: []

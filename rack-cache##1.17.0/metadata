@@ -1,0 +1,186 @@
+--- !ruby/object:Gem::Specification
+name: rack-cache
+version: !ruby/object:Gem::Version
+  version: 1.17.0
+platform: ruby
+authors:
+- Ryan Tomayko
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: maxitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dalli
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bump
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hanna-nouveau
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Rack::Cache is suitable as a quick drop-in component to enable HTTP caching
+  for Rack-based applications that produce freshness (expires, cache-control) and/or
+  validation (last-modified, etag) information.
+email: r@tomayko.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- MIT-LICENSE
+- CHANGES
+files:
+- CHANGES
+- MIT-LICENSE
+- README.md
+- lib/rack-cache.rb
+- lib/rack/cache.rb
+- lib/rack/cache/app_engine.rb
+- lib/rack/cache/appengine.rb
+- lib/rack/cache/cache_control.rb
+- lib/rack/cache/cachecontrol.rb
+- lib/rack/cache/context.rb
+- lib/rack/cache/entity_store.rb
+- lib/rack/cache/entitystore.rb
+- lib/rack/cache/headers.rb
+- lib/rack/cache/key.rb
+- lib/rack/cache/meta_store.rb
+- lib/rack/cache/metastore.rb
+- lib/rack/cache/options.rb
+- lib/rack/cache/request.rb
+- lib/rack/cache/response.rb
+- lib/rack/cache/storage.rb
+- lib/rack/cache/version.rb
+homepage: https://github.com/rack/rack-cache
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Rack::Cache
+- "--main"
+- Rack::Cache
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: HTTP Caching for Rack
+test_files: []

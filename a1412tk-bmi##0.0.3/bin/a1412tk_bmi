@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'a1412tk_bmi'
+puts A1412tkBmi.calc(ARGV[0].to_f, ARGV[1].to_f)

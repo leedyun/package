@@ -1,0 +1,150 @@
+--- !ruby/object:Gem::Specification
+name: statsd-ruby
+version: !ruby/object:Gem::Version
+  version: 1.5.0
+platform: ruby
+authors:
+- Agis Anastasopoulos
+- Alex Williams
+- Andrew Meyer
+- Bill Franklin
+- Chris Gaffney
+- Cody Cutrer
+- Corey Donohoe
+- Dotan Nahum
+- Elyahou Ittah
+- Erez Rabih
+- Eric Chapweske
+- Gabriel Burt
+- Hannes Georg
+- James Tucker
+- Jeremy Kemper
+- John Nunemaker
+- Kyrylo Silin
+- Lann Martin
+- Mahesh Murthy
+- Manu J
+- Matt Sanford
+- Nate Bird
+- Noah Lorang
+- Olle Jonsson
+- Oscar Del Ben
+- Peter Mounce
+- Ray Krueger
+- Reed Lipman
+- Rein Henrichs
+- rick
+- Ryan Tomayko
+- Schuyler Erle
+- Thomas Whaples
+- Trae Robrock
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.6.0
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.4
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Ruby StatsD client (https://github.com/etsy/statsd)
+email: reinh@reinh.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.rdoc
+files:
+- ".document"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.rdoc
+- Rakefile
+- lib/statsd-ruby.rb
+- lib/statsd.rb
+- lib/statsd/monotonic_time.rb
+- spec/helper.rb
+- spec/statsd_admin_spec.rb
+- spec/statsd_spec.rb
+- statsd-ruby.gemspec
+homepage: https://github.com/reinh/statsd
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: A Ruby StatsD client
+test_files:
+- spec/helper.rb
+- spec/statsd_admin_spec.rb
+- spec/statsd_spec.rb

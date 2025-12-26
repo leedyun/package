@@ -1,0 +1,76 @@
+--- !ruby/object:Gem::Specification
+name: pry-remote
+version: !ruby/object:Gem::Version
+  version: 0.1.8
+platform: ruby
+authors:
+- Mon ouie
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-01-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: slop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: Connect to Pry remotely using DRb
+email: mon.ouie@gmail.com
+executables:
+- pry-remote
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/pry-remote.rb
+- README.md
+- LICENSE
+- bin/pry-remote
+homepage: http://github.com/Mon-Ouie/pry-remote
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: Connect to Pry remotely
+test_files: []
+has_rdoc: 

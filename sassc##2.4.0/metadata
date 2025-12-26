@@ -1,0 +1,390 @@
+--- !ruby/object:Gem::Specification
+name: sassc
+version: !ruby/object:Gem::Version
+  version: 2.4.0
+platform: ruby
+authors:
+- Ryan Boland
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-06-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.5.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.5.1
+- !ruby/object:Gem::Dependency
+  name: minitest-around
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test_construct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler-dock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+description: Use libsass with Ruby!
+email:
+- ryan@tanookilabs.com
+executables: []
+extensions:
+- ext/extconf.rb
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitmodules"
+- ".travis.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/depend
+- ext/extconf.rb
+- ext/libsass/VERSION
+- ext/libsass/contrib/plugin.cpp
+- ext/libsass/include/sass.h
+- ext/libsass/include/sass/base.h
+- ext/libsass/include/sass/context.h
+- ext/libsass/include/sass/functions.h
+- ext/libsass/include/sass/values.h
+- ext/libsass/include/sass/version.h
+- ext/libsass/include/sass2scss.h
+- ext/libsass/src/MurmurHash2.hpp
+- ext/libsass/src/ast.cpp
+- ext/libsass/src/ast.hpp
+- ext/libsass/src/ast2c.cpp
+- ext/libsass/src/ast2c.hpp
+- ext/libsass/src/ast_def_macros.hpp
+- ext/libsass/src/ast_fwd_decl.cpp
+- ext/libsass/src/ast_fwd_decl.hpp
+- ext/libsass/src/ast_helpers.hpp
+- ext/libsass/src/ast_sel_cmp.cpp
+- ext/libsass/src/ast_sel_super.cpp
+- ext/libsass/src/ast_sel_unify.cpp
+- ext/libsass/src/ast_sel_weave.cpp
+- ext/libsass/src/ast_selectors.cpp
+- ext/libsass/src/ast_selectors.hpp
+- ext/libsass/src/ast_supports.cpp
+- ext/libsass/src/ast_supports.hpp
+- ext/libsass/src/ast_values.cpp
+- ext/libsass/src/ast_values.hpp
+- ext/libsass/src/b64/cencode.h
+- ext/libsass/src/b64/encode.h
+- ext/libsass/src/backtrace.cpp
+- ext/libsass/src/backtrace.hpp
+- ext/libsass/src/base64vlq.cpp
+- ext/libsass/src/base64vlq.hpp
+- ext/libsass/src/bind.cpp
+- ext/libsass/src/bind.hpp
+- ext/libsass/src/c2ast.cpp
+- ext/libsass/src/c2ast.hpp
+- ext/libsass/src/c99func.c
+- ext/libsass/src/cencode.c
+- ext/libsass/src/check_nesting.cpp
+- ext/libsass/src/check_nesting.hpp
+- ext/libsass/src/color_maps.cpp
+- ext/libsass/src/color_maps.hpp
+- ext/libsass/src/constants.cpp
+- ext/libsass/src/constants.hpp
+- ext/libsass/src/context.cpp
+- ext/libsass/src/context.hpp
+- ext/libsass/src/cssize.cpp
+- ext/libsass/src/cssize.hpp
+- ext/libsass/src/dart_helpers.hpp
+- ext/libsass/src/debug.hpp
+- ext/libsass/src/debugger.hpp
+- ext/libsass/src/emitter.cpp
+- ext/libsass/src/emitter.hpp
+- ext/libsass/src/environment.cpp
+- ext/libsass/src/environment.hpp
+- ext/libsass/src/error_handling.cpp
+- ext/libsass/src/error_handling.hpp
+- ext/libsass/src/eval.cpp
+- ext/libsass/src/eval.hpp
+- ext/libsass/src/eval_selectors.cpp
+- ext/libsass/src/expand.cpp
+- ext/libsass/src/expand.hpp
+- ext/libsass/src/extender.cpp
+- ext/libsass/src/extender.hpp
+- ext/libsass/src/extension.cpp
+- ext/libsass/src/extension.hpp
+- ext/libsass/src/file.cpp
+- ext/libsass/src/file.hpp
+- ext/libsass/src/fn_colors.cpp
+- ext/libsass/src/fn_colors.hpp
+- ext/libsass/src/fn_lists.cpp
+- ext/libsass/src/fn_lists.hpp
+- ext/libsass/src/fn_maps.cpp
+- ext/libsass/src/fn_maps.hpp
+- ext/libsass/src/fn_miscs.cpp
+- ext/libsass/src/fn_miscs.hpp
+- ext/libsass/src/fn_numbers.cpp
+- ext/libsass/src/fn_numbers.hpp
+- ext/libsass/src/fn_selectors.cpp
+- ext/libsass/src/fn_selectors.hpp
+- ext/libsass/src/fn_strings.cpp
+- ext/libsass/src/fn_strings.hpp
+- ext/libsass/src/fn_utils.cpp
+- ext/libsass/src/fn_utils.hpp
+- ext/libsass/src/inspect.cpp
+- ext/libsass/src/inspect.hpp
+- ext/libsass/src/json.cpp
+- ext/libsass/src/json.hpp
+- ext/libsass/src/kwd_arg_macros.hpp
+- ext/libsass/src/lexer.cpp
+- ext/libsass/src/lexer.hpp
+- ext/libsass/src/listize.cpp
+- ext/libsass/src/listize.hpp
+- ext/libsass/src/mapping.hpp
+- ext/libsass/src/memory.hpp
+- ext/libsass/src/memory/allocator.cpp
+- ext/libsass/src/memory/allocator.hpp
+- ext/libsass/src/memory/config.hpp
+- ext/libsass/src/memory/memory_pool.hpp
+- ext/libsass/src/memory/shared_ptr.cpp
+- ext/libsass/src/memory/shared_ptr.hpp
+- ext/libsass/src/operation.hpp
+- ext/libsass/src/operators.cpp
+- ext/libsass/src/operators.hpp
+- ext/libsass/src/ordered_map.hpp
+- ext/libsass/src/output.cpp
+- ext/libsass/src/output.hpp
+- ext/libsass/src/parser.cpp
+- ext/libsass/src/parser.hpp
+- ext/libsass/src/parser_selectors.cpp
+- ext/libsass/src/permutate.hpp
+- ext/libsass/src/plugins.cpp
+- ext/libsass/src/plugins.hpp
+- ext/libsass/src/position.cpp
+- ext/libsass/src/position.hpp
+- ext/libsass/src/prelexer.cpp
+- ext/libsass/src/prelexer.hpp
+- ext/libsass/src/remove_placeholders.cpp
+- ext/libsass/src/remove_placeholders.hpp
+- ext/libsass/src/sass.cpp
+- ext/libsass/src/sass.hpp
+- ext/libsass/src/sass2scss.cpp
+- ext/libsass/src/sass_context.cpp
+- ext/libsass/src/sass_context.hpp
+- ext/libsass/src/sass_functions.cpp
+- ext/libsass/src/sass_functions.hpp
+- ext/libsass/src/sass_values.cpp
+- ext/libsass/src/sass_values.hpp
+- ext/libsass/src/settings.hpp
+- ext/libsass/src/source.cpp
+- ext/libsass/src/source.hpp
+- ext/libsass/src/source_data.hpp
+- ext/libsass/src/source_map.cpp
+- ext/libsass/src/source_map.hpp
+- ext/libsass/src/stylesheet.cpp
+- ext/libsass/src/stylesheet.hpp
+- ext/libsass/src/to_value.cpp
+- ext/libsass/src/to_value.hpp
+- ext/libsass/src/units.cpp
+- ext/libsass/src/units.hpp
+- ext/libsass/src/utf8.h
+- ext/libsass/src/utf8/checked.h
+- ext/libsass/src/utf8/core.h
+- ext/libsass/src/utf8/unchecked.h
+- ext/libsass/src/utf8_string.cpp
+- ext/libsass/src/utf8_string.hpp
+- ext/libsass/src/util.cpp
+- ext/libsass/src/util.hpp
+- ext/libsass/src/util_string.cpp
+- ext/libsass/src/util_string.hpp
+- ext/libsass/src/values.cpp
+- ext/libsass/src/values.hpp
+- lib/sassc.rb
+- lib/sassc/dependency.rb
+- lib/sassc/engine.rb
+- lib/sassc/error.rb
+- lib/sassc/functions_handler.rb
+- lib/sassc/import_handler.rb
+- lib/sassc/importer.rb
+- lib/sassc/native.rb
+- lib/sassc/native/native_context_api.rb
+- lib/sassc/native/native_functions_api.rb
+- lib/sassc/native/sass2scss_api.rb
+- lib/sassc/native/sass_input_style.rb
+- lib/sassc/native/sass_output_style.rb
+- lib/sassc/native/sass_value.rb
+- lib/sassc/native/string_list.rb
+- lib/sassc/sass_2_scss.rb
+- lib/sassc/script.rb
+- lib/sassc/script/functions.rb
+- lib/sassc/script/value.rb
+- lib/sassc/script/value/bool.rb
+- lib/sassc/script/value/color.rb
+- lib/sassc/script/value/list.rb
+- lib/sassc/script/value/map.rb
+- lib/sassc/script/value/number.rb
+- lib/sassc/script/value/string.rb
+- lib/sassc/script/value_conversion.rb
+- lib/sassc/script/value_conversion/base.rb
+- lib/sassc/script/value_conversion/bool.rb
+- lib/sassc/script/value_conversion/color.rb
+- lib/sassc/script/value_conversion/list.rb
+- lib/sassc/script/value_conversion/map.rb
+- lib/sassc/script/value_conversion/number.rb
+- lib/sassc/script/value_conversion/string.rb
+- lib/sassc/util.rb
+- lib/sassc/util/normalized_map.rb
+- lib/sassc/version.rb
+- sassc.gemspec
+- test/custom_importer_test.rb
+- test/engine_test.rb
+- test/error_test.rb
+- test/fixtures/paths.scss
+- test/functions_test.rb
+- test/native_test.rb
+- test/output_style_test.rb
+- test/sass_2_scss_test.rb
+- test/test_helper.rb
+homepage: https://github.com/sass/sassc-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Use libsass with Ruby!
+test_files:
+- test/custom_importer_test.rb
+- test/engine_test.rb
+- test/error_test.rb
+- test/fixtures/paths.scss
+- test/functions_test.rb
+- test/native_test.rb
+- test/output_style_test.rb
+- test/sass_2_scss_test.rb
+- test/test_helper.rb

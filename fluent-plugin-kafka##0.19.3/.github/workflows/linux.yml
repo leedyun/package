@@ -1,0 +1,60 @@
+name: linux
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    env:
+      USE_RDKAFKA: 1
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: [ '3.3', '3.2', '3.1', '3.0' ]
+        os:
+          - ubuntu-latest
+        rdkafka_versions:
+          - { min: '>= 0.6.0', max: '< 0.12.0' }
+          - { min: '>= 0.12.0', max: '< 0.14.0' }
+          - { min: '>= 0.14.0', max: '< 0.16.0' }
+          - { min: '>= 0.16.0', max: '>= 0.16.0' }
+        bundler_version:
+          - '2.5.16'
+        # rdkafka 0.15.2 is the last version which supports Ruby 2.7
+        include:
+          - ruby: '2.7'
+            os: ubuntu-latest
+            rdkafka_versions: { min: '>= 0.6.0', max: '< 0.12.0' }
+            bundler_version: '2.4.22'
+          - ruby: '2.7'
+            os: ubuntu-latest
+            rdkafka_versions: { min: '>= 0.12.0', max: '= 0.15.2' }
+            bundler_version: '2.4.22'
+    name: Ruby ${{ matrix.ruby }} unit testing on ${{ matrix.os }} with rdkafka gem version (min ${{ matrix.rdkafka_versions.min }} max ${{ matrix.rdkafka_versions.max }})
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+    - name: Install confluent-kafka
+      run: |
+        sudo apt install -V -y gnupg2 wget
+        wget https://packages.confluent.io/deb/6.0/archive.key
+        sudo gpg2 --homedir /tmp --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/confluent-archive-keyring.gpg --import archive.key
+        sudo chmod 644 /usr/share/keyrings/confluent-archive-keyring.gpg
+        sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/confluent-archive-keyring.gpg] https://packages.confluent.io/deb/6.0 stable main" > /etc/apt/sources.list.d/confluent.list'
+        sudo apt update
+        sudo apt install -y confluent-community-2.13 openjdk-11-jre netcat-openbsd
+    - name: unit testing
+      env:
+        CI: true
+        RDKAFKA_VERSION_MIN_RANGE: ${{ matrix.rdkafka_versions.min }}
+        RDKAFKA_VERSION_MAX_RANGE: ${{ matrix.rdkafka_versions.max }}
+      run: |
+        sudo ./ci/prepare-kafka-server.sh
+        gem install bundler -v ${{ matrix.bundler_version }}
+        gem install rake
+        bundle _${{ matrix.bundler_version }}_ install --jobs 4 --retry 3
+        bundle _${{ matrix.bundler_version }}_ exec rake test

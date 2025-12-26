@@ -1,0 +1,227 @@
+--- !ruby/object:Gem::Specification
+name: cose
+version: !ruby/object:Gem::Version
+  version: 1.3.1
+platform: ruby
+authors:
+- Gonzalo Rodriguez
+- Braulio Martinez
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-08-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cbor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.9
+- !ruby/object:Gem::Dependency
+  name: openssl-signature_algorithm
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.80.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.80.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+description:
+email:
+- gonzalo@cedarcode.com
+- braulio@cedarcode.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/build.yml"
+- ".gitignore"
+- ".gitmodules"
+- ".rspec"
+- ".rubocop.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- bin/console
+- bin/setup
+- cose.gemspec
+- gemfiles/openssl_2_1.gemfile
+- gemfiles/openssl_2_2.gemfile
+- gemfiles/openssl_3_0.gemfile
+- gemfiles/openssl_default.gemfile
+- lib/cose.rb
+- lib/cose/algorithm.rb
+- lib/cose/algorithm/base.rb
+- lib/cose/algorithm/ecdsa.rb
+- lib/cose/algorithm/eddsa.rb
+- lib/cose/algorithm/hmac.rb
+- lib/cose/algorithm/rsa_pss.rb
+- lib/cose/algorithm/signature_algorithm.rb
+- lib/cose/encrypt.rb
+- lib/cose/encrypt0.rb
+- lib/cose/error.rb
+- lib/cose/key.rb
+- lib/cose/key/base.rb
+- lib/cose/key/curve.rb
+- lib/cose/key/curve_key.rb
+- lib/cose/key/ec2.rb
+- lib/cose/key/okp.rb
+- lib/cose/key/rsa.rb
+- lib/cose/key/symmetric.rb
+- lib/cose/mac.rb
+- lib/cose/mac0.rb
+- lib/cose/recipient.rb
+- lib/cose/security_message.rb
+- lib/cose/security_message/headers.rb
+- lib/cose/sign.rb
+- lib/cose/sign1.rb
+- lib/cose/signature.rb
+- lib/cose/version.rb
+homepage: https://github.com/cedarcode/cose-ruby
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cedarcode/cose-ruby/issues
+  changelog_uri: https://github.com/cedarcode/cose-ruby/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/cedarcode/cose-ruby
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Ruby implementation of RFC 8152 CBOR Object Signing and Encryption (COSE)
+test_files: []

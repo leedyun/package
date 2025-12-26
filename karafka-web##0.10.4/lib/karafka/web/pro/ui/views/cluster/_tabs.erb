@@ -1,0 +1,17 @@
+<div class="tab-container-wrapper">
+  <div class="tab-container">
+    <a
+      href="<%= root_path('cluster') %>"
+      class="custom-tab <%= nav_class(end_with: 'cluster') %>"
+    >
+      Brokers
+    </a>
+
+    <a
+      href="<%= root_path('cluster', 'replication') %>"
+      class="custom-tab <%= nav_class(include: 'replication') %>"
+    >
+      Replication
+    </a>
+  </div>
+</div>

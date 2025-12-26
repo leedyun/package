@@ -1,0 +1,184 @@
+--- !ruby/object:Gem::Specification
+name: acts-as_explorable
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- Mathias Schneider
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: factory_girl_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Adds GitHub-like search function to your models
+email:
+- mathias@hiasinho.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Appraisals
+- Gemfile
+- Guardfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- acts-as_explorable.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- gemfiles/activerecord_4.0.gemfile
+- gemfiles/activerecord_4.1.gemfile
+- gemfiles/activerecord_4.2.gemfile
+- lib/acts_as_explorable.rb
+- lib/acts_as_explorable/configuration.rb
+- lib/acts_as_explorable/element.rb
+- lib/acts_as_explorable/element/base.rb
+- lib/acts_as_explorable/element/dynamic_filter.rb
+- lib/acts_as_explorable/element/in.rb
+- lib/acts_as_explorable/element/sort.rb
+- lib/acts_as_explorable/explorable.rb
+- lib/acts_as_explorable/ext/string.rb
+- lib/acts_as_explorable/parser.rb
+- lib/acts_as_explorable/query.rb
+- lib/acts_as_explorable/version.rb
+- lib/tasks/acts_as_explorable_tasks.rake
+- spec/factories/players.rb
+- spec/lib/acts_as_explorable/element/dynamic_filter_spec.rb
+- spec/lib/acts_as_explorable/element/in.rb
+- spec/lib/acts_as_explorable/element_spec.rb
+- spec/lib/acts_as_explorable/explorable_spec.rb
+- spec/lib/acts_as_explorable/parser_spec.rb
+- spec/lib/acts_as_explorable/query_spec.rb
+- spec/spec_helper.rb
+- spec/support/database.rb
+- spec/support/database_cleaner.rb
+homepage: https://github.com/hiasinho/acts_as_explorable
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Adds GitHub-like search function to your models
+test_files: []

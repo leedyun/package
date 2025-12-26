@@ -1,0 +1,110 @@
+--- !ruby/object:Gem::Specification
+name: pundit-matchers
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Chris Alley
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rspec-expectations
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rspec-mocks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rspec-support
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+description: A set of RSpec matchers for testing Pundit authorisation policies
+email: chris@chrisalley.info
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/pundit/matchers.rb
+- lib/pundit/matchers/actions_matcher.rb
+- lib/pundit/matchers/attributes_matcher.rb
+- lib/pundit/matchers/base_matcher.rb
+- lib/pundit/matchers/forbid_all_actions_matcher.rb
+- lib/pundit/matchers/forbid_only_actions_matcher.rb
+- lib/pundit/matchers/permit_actions_matcher.rb
+- lib/pundit/matchers/permit_all_actions_matcher.rb
+- lib/pundit/matchers/permit_attributes_matcher.rb
+- lib/pundit/matchers/permit_only_actions_matcher.rb
+- lib/pundit/matchers/utils/policy_info.rb
+homepage: https://github.com/pundit-community/pundit-matchers
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: RSpec matchers for Pundit policies
+test_files: []

@@ -1,0 +1,41 @@
+# frozen_string_literal: true
+
+lib = File.expand_path('../lib', __FILE__)
+
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'dog_biscuits/version'
+
+Gem::Specification.new do |spec|
+spec.name = 'dog-biscuits'
+  spec.version       = DogBiscuits::VERSION
+  spec.authors       = ['Julie Allinson']
+  spec.email         = ['julie.allinson@london.ac.uk']
+
+  spec.summary       = 'DogBiscuits provides re-usable models, vocabularies and other services for Hyrax applications.'
+  spec.description   = 'DogBiscuits provides re-usable models, vocabularies and other services for Hyrax applications.'
+  spec.homepage      = 'https://github.com/samvera-labs/dog_biscuits'
+  spec.license       = 'APACHE2'
+
+  spec.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.bindir        = 'exe'
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ['lib']
+
+  spec.add_dependency 'hyrax', '>= 2', '< 3'
+
+  spec.add_development_dependency 'bixby'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'engine_cart'
+  spec.add_development_dependency 'factory_bot_rails', '~> 4.11'
+  spec.add_development_dependency 'fcrepo_wrapper'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'solr_wrapper'
+  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'i18n-tasks'
+  spec.add_development_dependency 'easy_translate'
+spec.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

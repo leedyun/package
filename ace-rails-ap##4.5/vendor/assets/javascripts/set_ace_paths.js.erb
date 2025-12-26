@@ -1,0 +1,33 @@
+ace.config.set('basePath', '/assets/ace');
+<%
+  if Ace::Rails.include_modes.present?
+    Ace::Rails.include_modes.each do |worker|
+%>
+ace.config.setModuleUrl("ace/mode/<%= worker %>_worker", "<%= asset_path "ace/worker-#{worker}.js" %>");
+<%
+    end
+  else
+    Dir[File.dirname(__FILE__) + '/ace/worker-*.js'].sort.each do |file|
+%>
+<% worker = File.basename(file, '.js').sub(/^worker-/, '') %>
+ace.config.setModuleUrl("ace/mode/<%= worker %>_worker", "<%= asset_path "ace/worker-#{worker}.js" %>");
+<%
+    end
+  end
+%>
+<%
+  if Ace::Rails.include_modes.present?
+    Ace::Rails.include_modes.each do |mode|
+%>
+      ace.config.setModuleUrl("ace/mode/<%= mode %>", "<%= asset_path "ace/mode-#{mode}.js" %>");
+<%
+    end
+  else
+    Dir[File.dirname(__FILE__) + '/ace/mode-*.js'].sort.each do |file|
+%>
+<% mode = File.basename(file, '.js').sub(/^mode-/, '') %>
+ace.config.setModuleUrl("ace/mode/<%= mode %>", "<%= asset_path "ace/mode-#{mode}.js" %>");
+<%
+    end
+  end
+%>

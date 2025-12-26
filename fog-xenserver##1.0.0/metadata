@@ -1,0 +1,744 @@
+--- !ruby/object:Gem::Specification
+name: fog-xenserver
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Paulo Henrique Lopes Ribeiro
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-09-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: xmlrpc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jazz_fingers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: turn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Module for the 'fog' gem to support XENSERVER.
+email: plribeiro3000@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-xenserver.gemspec
+- gemfiles/Gemfile.1.9.2+
+- gemfiles/Gemfile.1.9.2-
+- lib/fog/bin/xenserver.rb
+- lib/fog/xenserver.rb
+- lib/fog/xenserver/compute.rb
+- lib/fog/xenserver/compute/mock.rb
+- lib/fog/xenserver/compute/models.rb
+- lib/fog/xenserver/compute/models/blob.rb
+- lib/fog/xenserver/compute/models/blobs.rb
+- lib/fog/xenserver/compute/models/bond.rb
+- lib/fog/xenserver/compute/models/bonds.rb
+- lib/fog/xenserver/compute/models/class_methods.rb
+- lib/fog/xenserver/compute/models/collection.rb
+- lib/fog/xenserver/compute/models/console.rb
+- lib/fog/xenserver/compute/models/consoles.rb
+- lib/fog/xenserver/compute/models/crash_dump.rb
+- lib/fog/xenserver/compute/models/crash_dumps.rb
+- lib/fog/xenserver/compute/models/dr_task.rb
+- lib/fog/xenserver/compute/models/dr_tasks.rb
+- lib/fog/xenserver/compute/models/event.rb
+- lib/fog/xenserver/compute/models/events.rb
+- lib/fog/xenserver/compute/models/gpu_group.rb
+- lib/fog/xenserver/compute/models/gpu_groups.rb
+- lib/fog/xenserver/compute/models/guest_metrics.rb
+- lib/fog/xenserver/compute/models/guests_metrics.rb
+- lib/fog/xenserver/compute/models/host.rb
+- lib/fog/xenserver/compute/models/host_cpu.rb
+- lib/fog/xenserver/compute/models/host_cpus.rb
+- lib/fog/xenserver/compute/models/host_crash_dump.rb
+- lib/fog/xenserver/compute/models/host_crash_dumps.rb
+- lib/fog/xenserver/compute/models/host_metrics.rb
+- lib/fog/xenserver/compute/models/host_patch.rb
+- lib/fog/xenserver/compute/models/host_patchs.rb
+- lib/fog/xenserver/compute/models/hosts.rb
+- lib/fog/xenserver/compute/models/hosts_metrics.rb
+- lib/fog/xenserver/compute/models/instance_methods.rb
+- lib/fog/xenserver/compute/models/model.rb
+- lib/fog/xenserver/compute/models/network.rb
+- lib/fog/xenserver/compute/models/networks.rb
+- lib/fog/xenserver/compute/models/pbd.rb
+- lib/fog/xenserver/compute/models/pbds.rb
+- lib/fog/xenserver/compute/models/pci.rb
+- lib/fog/xenserver/compute/models/pcis.rb
+- lib/fog/xenserver/compute/models/pgpu.rb
+- lib/fog/xenserver/compute/models/pgpus.rb
+- lib/fog/xenserver/compute/models/pif.rb
+- lib/fog/xenserver/compute/models/pif_metrics.rb
+- lib/fog/xenserver/compute/models/pifs.rb
+- lib/fog/xenserver/compute/models/pifs_metrics.rb
+- lib/fog/xenserver/compute/models/pool.rb
+- lib/fog/xenserver/compute/models/pool_patch.rb
+- lib/fog/xenserver/compute/models/pool_patchs.rb
+- lib/fog/xenserver/compute/models/pools.rb
+- lib/fog/xenserver/compute/models/role.rb
+- lib/fog/xenserver/compute/models/roles.rb
+- lib/fog/xenserver/compute/models/server.rb
+- lib/fog/xenserver/compute/models/server_appliance.rb
+- lib/fog/xenserver/compute/models/server_appliances.rb
+- lib/fog/xenserver/compute/models/server_metrics.rb
+- lib/fog/xenserver/compute/models/servers.rb
+- lib/fog/xenserver/compute/models/servers_metrics.rb
+- lib/fog/xenserver/compute/models/storage_manager.rb
+- lib/fog/xenserver/compute/models/storage_managers.rb
+- lib/fog/xenserver/compute/models/storage_repositories.rb
+- lib/fog/xenserver/compute/models/storage_repository.rb
+- lib/fog/xenserver/compute/models/tunnel.rb
+- lib/fog/xenserver/compute/models/tunnels.rb
+- lib/fog/xenserver/compute/models/vbd.rb
+- lib/fog/xenserver/compute/models/vbd_metrics.rb
+- lib/fog/xenserver/compute/models/vbds.rb
+- lib/fog/xenserver/compute/models/vbds_metrics.rb
+- lib/fog/xenserver/compute/models/vdi.rb
+- lib/fog/xenserver/compute/models/vdis.rb
+- lib/fog/xenserver/compute/models/vif.rb
+- lib/fog/xenserver/compute/models/vif_metrics.rb
+- lib/fog/xenserver/compute/models/vifs.rb
+- lib/fog/xenserver/compute/models/vifs_metrics.rb
+- lib/fog/xenserver/compute/models/vlan.rb
+- lib/fog/xenserver/compute/models/vlans.rb
+- lib/fog/xenserver/compute/models/vmpp.rb
+- lib/fog/xenserver/compute/models/vmpps.rb
+- lib/fog/xenserver/compute/models/vtpm.rb
+- lib/fog/xenserver/compute/models/vtpms.rb
+- lib/fog/xenserver/compute/real.rb
+- lib/fog/xenserver/compute/requests/add_ipv4_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/add_ipv6_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/add_to_vcpus_params_live_server.rb
+- lib/fog/xenserver/compute/requests/apply_edition_host.rb
+- lib/fog/xenserver/compute/requests/apply_edition_pool.rb
+- lib/fog/xenserver/compute/requests/assert_agile_server.rb
+- lib/fog/xenserver/compute/requests/assert_attachable_vbd.rb
+- lib/fog/xenserver/compute/requests/assert_can_be_recovered_server.rb
+- lib/fog/xenserver/compute/requests/assert_can_boot_here_server.rb
+- lib/fog/xenserver/compute/requests/assert_can_evacuate_host.rb
+- lib/fog/xenserver/compute/requests/assert_can_host_ha_statefile_sr.rb
+- lib/fog/xenserver/compute/requests/assert_can_migrate_server.rb
+- lib/fog/xenserver/compute/requests/assert_operation_valid_server.rb
+- lib/fog/xenserver/compute/requests/assert_supports_database_replication_sr.rb
+- lib/fog/xenserver/compute/requests/backup_rrds_host.rb
+- lib/fog/xenserver/compute/requests/bugreport_upload_host.rb
+- lib/fog/xenserver/compute/requests/builtin_templates.rb
+- lib/fog/xenserver/compute/requests/call_plugin_host.rb
+- lib/fog/xenserver/compute/requests/certificate_install_pool.rb
+- lib/fog/xenserver/compute/requests/certificate_list_pool.rb
+- lib/fog/xenserver/compute/requests/certificate_sync_pool.rb
+- lib/fog/xenserver/compute/requests/certificate_uninstall_pool.rb
+- lib/fog/xenserver/compute/requests/checkpoint_server.rb
+- lib/fog/xenserver/compute/requests/clean_reboot_server.rb
+- lib/fog/xenserver/compute/requests/clean_shutdown_server.rb
+- lib/fog/xenserver/compute/requests/clone_server.rb
+- lib/fog/xenserver/compute/requests/clone_vdi.rb
+- lib/fog/xenserver/compute/requests/compute_free_memory_host.rb
+- lib/fog/xenserver/compute/requests/compute_memory_overhead_host.rb
+- lib/fog/xenserver/compute/requests/compute_memory_overhead_server.rb
+- lib/fog/xenserver/compute/requests/copy_bios_strings_server.rb
+- lib/fog/xenserver/compute/requests/copy_server.rb
+- lib/fog/xenserver/compute/requests/copy_vdi.rb
+- lib/fog/xenserver/compute/requests/create_network.rb
+- lib/fog/xenserver/compute/requests/create_new_blob_host.rb
+- lib/fog/xenserver/compute/requests/create_new_blob_network.rb
+- lib/fog/xenserver/compute/requests/create_new_blob_pool.rb
+- lib/fog/xenserver/compute/requests/create_new_blob_server.rb
+- lib/fog/xenserver/compute/requests/create_new_blob_sr.rb
+- lib/fog/xenserver/compute/requests/create_pbd.rb
+- lib/fog/xenserver/compute/requests/create_server.rb
+- lib/fog/xenserver/compute/requests/create_sr.rb
+- lib/fog/xenserver/compute/requests/create_vbd.rb
+- lib/fog/xenserver/compute/requests/create_vdi.rb
+- lib/fog/xenserver/compute/requests/create_vif.rb
+- lib/fog/xenserver/compute/requests/create_vlan.rb
+- lib/fog/xenserver/compute/requests/create_vlan_from_pif_pool.rb
+- lib/fog/xenserver/compute/requests/create_vlan_pool.rb
+- lib/fog/xenserver/compute/requests/crl_install_pool.rb
+- lib/fog/xenserver/compute/requests/crl_list_pool.rb
+- lib/fog/xenserver/compute/requests/crl_uninstall_pool.rb
+- lib/fog/xenserver/compute/requests/custom_templates.rb
+- lib/fog/xenserver/compute/requests/db_forget_pif.rb
+- lib/fog/xenserver/compute/requests/db_forget_vdi.rb
+- lib/fog/xenserver/compute/requests/db_introduce_pif.rb
+- lib/fog/xenserver/compute/requests/db_introduce_vdi.rb
+- lib/fog/xenserver/compute/requests/declare_dead_host.rb
+- lib/fog/xenserver/compute/requests/designate_new_master_pool.rb
+- lib/fog/xenserver/compute/requests/destroy_record.rb
+- lib/fog/xenserver/compute/requests/detect_nonhomogeneous_external_auth_pool.rb
+- lib/fog/xenserver/compute/requests/disable_database_replication_sr.rb
+- lib/fog/xenserver/compute/requests/disable_external_auth_host.rb
+- lib/fog/xenserver/compute/requests/disable_external_auth_pool.rb
+- lib/fog/xenserver/compute/requests/disable_ha_pool.rb
+- lib/fog/xenserver/compute/requests/disable_host.rb
+- lib/fog/xenserver/compute/requests/disable_local_storage_caching_host.rb
+- lib/fog/xenserver/compute/requests/disable_local_storage_caching_pool.rb
+- lib/fog/xenserver/compute/requests/disable_redo_log_pool.rb
+- lib/fog/xenserver/compute/requests/dmesg_clear_host.rb
+- lib/fog/xenserver/compute/requests/dmesg_host.rb
+- lib/fog/xenserver/compute/requests/eject_pool.rb
+- lib/fog/xenserver/compute/requests/eject_vbd.rb
+- lib/fog/xenserver/compute/requests/emergency_ha_disable_host.rb
+- lib/fog/xenserver/compute/requests/emergency_reset_master_pool.rb
+- lib/fog/xenserver/compute/requests/emergency_transition_to_master_pool.rb
+- lib/fog/xenserver/compute/requests/enable_database_replication_sr.rb
+- lib/fog/xenserver/compute/requests/enable_external_auth_host.rb
+- lib/fog/xenserver/compute/requests/enable_external_auth_pool.rb
+- lib/fog/xenserver/compute/requests/enable_ha_pool.rb
+- lib/fog/xenserver/compute/requests/enable_host.rb
+- lib/fog/xenserver/compute/requests/enable_local_storage_caching_host.rb
+- lib/fog/xenserver/compute/requests/enable_local_storage_caching_pool.rb
+- lib/fog/xenserver/compute/requests/enable_redo_log_pool.rb
+- lib/fog/xenserver/compute/requests/evacuate_host.rb
+- lib/fog/xenserver/compute/requests/forget_data_source_archives_host.rb
+- lib/fog/xenserver/compute/requests/forget_data_source_archives_server.rb
+- lib/fog/xenserver/compute/requests/forget_pif.rb
+- lib/fog/xenserver/compute/requests/forget_sr.rb
+- lib/fog/xenserver/compute/requests/forget_vdi.rb
+- lib/fog/xenserver/compute/requests/from_event.rb
+- lib/fog/xenserver/compute/requests/get_allowed_vbd_devices_server.rb
+- lib/fog/xenserver/compute/requests/get_allowed_vif_devices_server.rb
+- lib/fog/xenserver/compute/requests/get_boot_record_server.rb
+- lib/fog/xenserver/compute/requests/get_current_id_event.rb
+- lib/fog/xenserver/compute/requests/get_data_sources_host.rb
+- lib/fog/xenserver/compute/requests/get_data_sources_server.rb
+- lib/fog/xenserver/compute/requests/get_license_state_pool.rb
+- lib/fog/xenserver/compute/requests/get_log_host.rb
+- lib/fog/xenserver/compute/requests/get_management_interface_host.rb
+- lib/fog/xenserver/compute/requests/get_possible_hosts_server.rb
+- lib/fog/xenserver/compute/requests/get_record.rb
+- lib/fog/xenserver/compute/requests/get_records.rb
+- lib/fog/xenserver/compute/requests/get_server_certificate_host.rb
+- lib/fog/xenserver/compute/requests/get_server_localtime_host.rb
+- lib/fog/xenserver/compute/requests/get_servertime_host.rb
+- lib/fog/xenserver/compute/requests/get_supported_types_sr.rb
+- lib/fog/xenserver/compute/requests/get_system_status_capabilities_host.rb
+- lib/fog/xenserver/compute/requests/get_vms_which_prevent_evacuation_host.rb
+- lib/fog/xenserver/compute/requests/ha_compute_hypothetical_max_host_failures_to_tolerate_pool.rb
+- lib/fog/xenserver/compute/requests/ha_compute_max_host_failures_to_tolerate_pool.rb
+- lib/fog/xenserver/compute/requests/ha_compute_vm_failover_plan_pool.rb
+- lib/fog/xenserver/compute/requests/ha_failover_plan_exists_pool.rb
+- lib/fog/xenserver/compute/requests/ha_prevent_restarts_for_pool.rb
+- lib/fog/xenserver/compute/requests/hard_reboot_server.rb
+- lib/fog/xenserver/compute/requests/hard_shutdown_server.rb
+- lib/fog/xenserver/compute/requests/import_convert_server.rb
+- lib/fog/xenserver/compute/requests/inject_event.rb
+- lib/fog/xenserver/compute/requests/insert_vbd.rb
+- lib/fog/xenserver/compute/requests/introduce_pif.rb
+- lib/fog/xenserver/compute/requests/introduce_sr.rb
+- lib/fog/xenserver/compute/requests/introduce_vdi.rb
+- lib/fog/xenserver/compute/requests/join_force_pool.rb
+- lib/fog/xenserver/compute/requests/join_pool.rb
+- lib/fog/xenserver/compute/requests/list_methods_host.rb
+- lib/fog/xenserver/compute/requests/local_management_reconfigure_host.rb
+- lib/fog/xenserver/compute/requests/management_disable_host.rb
+- lib/fog/xenserver/compute/requests/management_reconfigure_host.rb
+- lib/fog/xenserver/compute/requests/maximise_memory_server.rb
+- lib/fog/xenserver/compute/requests/migrate_receive_host.rb
+- lib/fog/xenserver/compute/requests/migrate_send_server.rb
+- lib/fog/xenserver/compute/requests/next_event.rb
+- lib/fog/xenserver/compute/requests/open_database_vdi.rb
+- lib/fog/xenserver/compute/requests/pause_server.rb
+- lib/fog/xenserver/compute/requests/plug_pbd.rb
+- lib/fog/xenserver/compute/requests/plug_pif.rb
+- lib/fog/xenserver/compute/requests/plug_vbd.rb
+- lib/fog/xenserver/compute/requests/plug_vif.rb
+- lib/fog/xenserver/compute/requests/pool_migrate_server.rb
+- lib/fog/xenserver/compute/requests/pool_migrate_vdi.rb
+- lib/fog/xenserver/compute/requests/power_on_host.rb
+- lib/fog/xenserver/compute/requests/power_state_reset_server.rb
+- lib/fog/xenserver/compute/requests/probe_sr.rb
+- lib/fog/xenserver/compute/requests/provision_server.rb
+- lib/fog/xenserver/compute/requests/query_data_source_host.rb
+- lib/fog/xenserver/compute/requests/query_data_source_server.rb
+- lib/fog/xenserver/compute/requests/query_services_server.rb
+- lib/fog/xenserver/compute/requests/read_database_pool_uuid_vdi.rb
+- lib/fog/xenserver/compute/requests/reboot_host.rb
+- lib/fog/xenserver/compute/requests/reboot_server.rb
+- lib/fog/xenserver/compute/requests/reconfigure_ip_pif.rb
+- lib/fog/xenserver/compute/requests/reconfigure_ipv6_pif.rb
+- lib/fog/xenserver/compute/requests/record_data_source_host.rb
+- lib/fog/xenserver/compute/requests/record_data_source_server.rb
+- lib/fog/xenserver/compute/requests/recover_server.rb
+- lib/fog/xenserver/compute/requests/recover_slaves_pool.rb
+- lib/fog/xenserver/compute/requests/refresh_pack_info_host.rb
+- lib/fog/xenserver/compute/requests/register_event.rb
+- lib/fog/xenserver/compute/requests/remove_ipv4_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/remove_ipv6_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/reset_cpu_features_host.rb
+- lib/fog/xenserver/compute/requests/resize_online_vdi.rb
+- lib/fog/xenserver/compute/requests/resize_vdi.rb
+- lib/fog/xenserver/compute/requests/restart_agent_host.rb
+- lib/fog/xenserver/compute/requests/resume_on_server.rb
+- lib/fog/xenserver/compute/requests/resume_server.rb
+- lib/fog/xenserver/compute/requests/revert_server.rb
+- lib/fog/xenserver/compute/requests/revert_to_server.rb
+- lib/fog/xenserver/compute/requests/scan_pif.rb
+- lib/fog/xenserver/compute/requests/scan_sr.rb
+- lib/fog/xenserver/compute/requests/send_debug_keys_host.rb
+- lib/fog/xenserver/compute/requests/send_sysrq_server.rb
+- lib/fog/xenserver/compute/requests/send_test_post_pool.rb
+- lib/fog/xenserver/compute/requests/send_trigger_server.rb
+- lib/fog/xenserver/compute/requests/set_affinity_server.rb
+- lib/fog/xenserver/compute/requests/set_allow_caching_vdi.rb
+- lib/fog/xenserver/compute/requests/set_appliance_server.rb
+- lib/fog/xenserver/compute/requests/set_attribute.rb
+- lib/fog/xenserver/compute/requests/set_cpu_features_host.rb
+- lib/fog/xenserver/compute/requests/set_default_locking_mode_network.rb
+- lib/fog/xenserver/compute/requests/set_device_config_pbd.rb
+- lib/fog/xenserver/compute/requests/set_ha_host_failures_to_tolerate_pool.rb
+- lib/fog/xenserver/compute/requests/set_ha_restart_priority_server.rb
+- lib/fog/xenserver/compute/requests/set_hostname_live_host.rb
+- lib/fog/xenserver/compute/requests/set_hvm_shadow_multiplier_server.rb
+- lib/fog/xenserver/compute/requests/set_ipv4_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/set_ipv6_allowed_vif.rb
+- lib/fog/xenserver/compute/requests/set_is_a_snapshot_vdi.rb
+- lib/fog/xenserver/compute/requests/set_locking_mode_vif.rb
+- lib/fog/xenserver/compute/requests/set_managed_vdi.rb
+- lib/fog/xenserver/compute/requests/set_memory_dynamic_max_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_dynamic_min_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_dynamic_range_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_limits_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_static_max_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_static_min_server.rb
+- lib/fog/xenserver/compute/requests/set_memory_static_range_server.rb
+- lib/fog/xenserver/compute/requests/set_metadata_of_pool_vdi.rb
+- lib/fog/xenserver/compute/requests/set_missing_vdi.rb
+- lib/fog/xenserver/compute/requests/set_name_description_sr.rb
+- lib/fog/xenserver/compute/requests/set_name_description_vdi.rb
+- lib/fog/xenserver/compute/requests/set_name_label_sr.rb
+- lib/fog/xenserver/compute/requests/set_name_label_vdi.rb
+- lib/fog/xenserver/compute/requests/set_on_boot_vdi.rb
+- lib/fog/xenserver/compute/requests/set_order_server.rb
+- lib/fog/xenserver/compute/requests/set_physical_size_sr.rb
+- lib/fog/xenserver/compute/requests/set_physical_utilisation_sr.rb
+- lib/fog/xenserver/compute/requests/set_physical_utilisation_vdi.rb
+- lib/fog/xenserver/compute/requests/set_power_on_mode_host.rb
+- lib/fog/xenserver/compute/requests/set_primary_address_type_pif.rb
+- lib/fog/xenserver/compute/requests/set_protection_policy_server.rb
+- lib/fog/xenserver/compute/requests/set_read_only_vdi.rb
+- lib/fog/xenserver/compute/requests/set_shadow_multiplier_live_server.rb
+- lib/fog/xenserver/compute/requests/set_sharable_vdi.rb
+- lib/fog/xenserver/compute/requests/set_shared_sr.rb
+- lib/fog/xenserver/compute/requests/set_shutdown_delay_server.rb
+- lib/fog/xenserver/compute/requests/set_snapshot_of_vdi.rb
+- lib/fog/xenserver/compute/requests/set_snapshot_time_vdi.rb
+- lib/fog/xenserver/compute/requests/set_start_delay_server.rb
+- lib/fog/xenserver/compute/requests/set_suspend_vdi_server.rb
+- lib/fog/xenserver/compute/requests/set_vcpus_at_startup_server.rb
+- lib/fog/xenserver/compute/requests/set_vcpus_max_server.rb
+- lib/fog/xenserver/compute/requests/set_vcpus_number_live_server.rb
+- lib/fog/xenserver/compute/requests/set_virtual_allocation_sr.rb
+- lib/fog/xenserver/compute/requests/set_virtual_size_vdi.rb
+- lib/fog/xenserver/compute/requests/set_vswitch_controller_pool.rb
+- lib/fog/xenserver/compute/requests/shutdown_agent_host.rb
+- lib/fog/xenserver/compute/requests/shutdown_host.rb
+- lib/fog/xenserver/compute/requests/shutdown_server.rb
+- lib/fog/xenserver/compute/requests/snapshot_server.rb
+- lib/fog/xenserver/compute/requests/snapshot_vdi.rb
+- lib/fog/xenserver/compute/requests/snapshot_with_quiesce_server.rb
+- lib/fog/xenserver/compute/requests/snapshots.rb
+- lib/fog/xenserver/compute/requests/start_on_server.rb
+- lib/fog/xenserver/compute/requests/start_server.rb
+- lib/fog/xenserver/compute/requests/suspend_server.rb
+- lib/fog/xenserver/compute/requests/sync_data_host.rb
+- lib/fog/xenserver/compute/requests/sync_database_pool.rb
+- lib/fog/xenserver/compute/requests/templates.rb
+- lib/fog/xenserver/compute/requests/unpause_server.rb
+- lib/fog/xenserver/compute/requests/unplug_force_vbd.rb
+- lib/fog/xenserver/compute/requests/unplug_pbd.rb
+- lib/fog/xenserver/compute/requests/unplug_vbd.rb
+- lib/fog/xenserver/compute/requests/unplug_vif.rb
+- lib/fog/xenserver/compute/requests/unregister_event.rb
+- lib/fog/xenserver/compute/requests/update_sr.rb
+- lib/fog/xenserver/compute/requests/update_vdi.rb
+- lib/fog/xenserver/connection.rb
+- lib/fog/xenserver/invalid_login.rb
+- lib/fog/xenserver/nokogiri_stream_parser.rb
+- lib/fog/xenserver/not_found.rb
+- lib/fog/xenserver/parsers.rb
+- lib/fog/xenserver/parsers/base.rb
+- lib/fog/xenserver/parsers/get_records.rb
+- lib/fog/xenserver/request_failed.rb
+- lib/fog/xenserver/version.rb
+- spec/cassettes/builtin_templates.yml
+- spec/cassettes/clone_server.yml
+- spec/cassettes/create_network.yml
+- spec/cassettes/create_server_create_vm.yml
+- spec/cassettes/create_server_get_all_hosts.yml
+- spec/cassettes/create_server_open_connection.yml
+- spec/cassettes/create_vbd_create_vbd.yml
+- spec/cassettes/create_vbd_create_vdi.yml
+- spec/cassettes/create_vbd_create_vm.yml
+- spec/cassettes/create_vbd_get_all_hosts.yml
+- spec/cassettes/create_vbd_get_storage_repository.yml
+- spec/cassettes/create_vbd_open_connection.yml
+- spec/cassettes/create_vdi.yml
+- spec/cassettes/create_vif_create_vif.yml
+- spec/cassettes/create_vif_get_network_by_name.yml
+- spec/cassettes/create_vif_open_connection.yml
+- spec/cassettes/create_vif_vif_set_device_number.yml
+- spec/cassettes/get_all_hosts.yml
+- spec/cassettes/get_network_by_name.yml
+- spec/cassettes/get_storage_repository.yml
+- spec/cassettes/get_vm_by_name.yml
+- spec/cassettes/open_connection.yml
+- spec/cassettes/vif_set_device_number.yml
+- spec/fog/xenserver/compute/models/blob_spec.rb
+- spec/fog/xenserver/compute/models/blobs_spec.rb
+- spec/fog/xenserver/compute/models/bond_spec.rb
+- spec/fog/xenserver/compute/models/bonds_spec.rb
+- spec/fog/xenserver/compute/models/console_spec.rb
+- spec/fog/xenserver/compute/models/consoles_spec.rb
+- spec/fog/xenserver/compute/models/crash_dump_spec.rb
+- spec/fog/xenserver/compute/models/crash_dumps_spec.rb
+- spec/fog/xenserver/compute/models/dr_task_spec.rb
+- spec/fog/xenserver/compute/models/dr_tasks_spec.rb
+- spec/fog/xenserver/compute/models/event_spec.rb
+- spec/fog/xenserver/compute/models/events_spec.rb
+- spec/fog/xenserver/compute/models/gpu_group_spec.rb
+- spec/fog/xenserver/compute/models/gpu_groups_spec.rb
+- spec/fog/xenserver/compute/models/guest_metrics_spec.rb
+- spec/fog/xenserver/compute/models/guests_metrics_spec.rb
+- spec/fog/xenserver/compute/models/host_cpu_spec.rb
+- spec/fog/xenserver/compute/models/host_cpus_spec.rb
+- spec/fog/xenserver/compute/models/host_crash_dump_spec.rb
+- spec/fog/xenserver/compute/models/host_crash_dumps_spec.rb
+- spec/fog/xenserver/compute/models/host_metrics_spec.rb
+- spec/fog/xenserver/compute/models/host_patch_spec.rb
+- spec/fog/xenserver/compute/models/host_patchs_spec.rb
+- spec/fog/xenserver/compute/models/host_spec.rb
+- spec/fog/xenserver/compute/models/hosts_metrics_spec.rb
+- spec/fog/xenserver/compute/models/hosts_spec.rb
+- spec/fog/xenserver/compute/models/network_spec.rb
+- spec/fog/xenserver/compute/models/networks_spec.rb
+- spec/fog/xenserver/compute/models/pbd_spec.rb
+- spec/fog/xenserver/compute/models/pbds_spec.rb
+- spec/fog/xenserver/compute/models/pci_spec.rb
+- spec/fog/xenserver/compute/models/pcis_spec.rb
+- spec/fog/xenserver/compute/models/pgpu_spec.rb
+- spec/fog/xenserver/compute/models/pgpus_spec.rb
+- spec/fog/xenserver/compute/models/pif_metrics_spec.rb
+- spec/fog/xenserver/compute/models/pif_spec.rb
+- spec/fog/xenserver/compute/models/pifs_metrics_spec.rb
+- spec/fog/xenserver/compute/models/pifs_spec.rb
+- spec/fog/xenserver/compute/models/pool_patch_spec.rb
+- spec/fog/xenserver/compute/models/pool_patchs_spec.rb
+- spec/fog/xenserver/compute/models/pool_spec.rb
+- spec/fog/xenserver/compute/models/pools_spec.rb
+- spec/fog/xenserver/compute/models/role_spec.rb
+- spec/fog/xenserver/compute/models/roles_spec.rb
+- spec/fog/xenserver/compute/models/server_appliance_spec.rb
+- spec/fog/xenserver/compute/models/server_appliances_spec.rb
+- spec/fog/xenserver/compute/models/server_metrics_spec.rb
+- spec/fog/xenserver/compute/models/server_spec.rb
+- spec/fog/xenserver/compute/models/servers_metrics_spec.rb
+- spec/fog/xenserver/compute/models/servers_spec.rb
+- spec/fog/xenserver/compute/models/storage_manager_spec.rb
+- spec/fog/xenserver/compute/models/storage_managers_spec.rb
+- spec/fog/xenserver/compute/models/storage_repositories_spec.rb
+- spec/fog/xenserver/compute/models/storage_repository_spec.rb
+- spec/fog/xenserver/compute/models/tunnel_spec.rb
+- spec/fog/xenserver/compute/models/tunnels_spec.rb
+- spec/fog/xenserver/compute/models/vbd_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vbd_spec.rb
+- spec/fog/xenserver/compute/models/vbds_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vbds_spec.rb
+- spec/fog/xenserver/compute/models/vdi_spec.rb
+- spec/fog/xenserver/compute/models/vdis_spec.rb
+- spec/fog/xenserver/compute/models/vif_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vif_spec.rb
+- spec/fog/xenserver/compute/models/vifs_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vifs_spec.rb
+- spec/fog/xenserver/compute/models/vlan_spec.rb
+- spec/fog/xenserver/compute/models/vlans_spec.rb
+- spec/fog/xenserver/compute/models/vmpp_spec.rb
+- spec/fog/xenserver/compute/models/vmpps_spec.rb
+- spec/fog/xenserver/compute/models/vtpm_spec.rb
+- spec/fog/xenserver/compute/models/vtpms_spec.rb
+- spec/fog/xenserver/compute/requests/builtin_templates_spec.rb
+- spec/fog/xenserver/compute/requests/clone_server_spec.rb
+- spec/fog/xenserver/compute/requests/create_network_spec.rb
+- spec/fog/xenserver/compute/requests/create_server_spec.rb
+- spec/fog/xenserver/compute/requests/create_vbd_spec.rb
+- spec/fog/xenserver/compute/requests/create_vdi_spec.rb
+- spec/fog/xenserver/compute/requests/create_vif_spec.rb
+- spec/fog/xenserver/compute_spec.rb
+- spec/minitest_helper.rb
+homepage: https://github.com/fog/fog-xenserver
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.14
+signing_key: 
+specification_version: 4
+summary: This library can be used as a module for `fog` or as standalone provider
+  to use the XENSERVER in applications.
+test_files:
+- spec/cassettes/builtin_templates.yml
+- spec/cassettes/clone_server.yml
+- spec/cassettes/create_network.yml
+- spec/cassettes/create_server_create_vm.yml
+- spec/cassettes/create_server_get_all_hosts.yml
+- spec/cassettes/create_server_open_connection.yml
+- spec/cassettes/create_vbd_create_vbd.yml
+- spec/cassettes/create_vbd_create_vdi.yml
+- spec/cassettes/create_vbd_create_vm.yml
+- spec/cassettes/create_vbd_get_all_hosts.yml
+- spec/cassettes/create_vbd_get_storage_repository.yml
+- spec/cassettes/create_vbd_open_connection.yml
+- spec/cassettes/create_vdi.yml
+- spec/cassettes/create_vif_create_vif.yml
+- spec/cassettes/create_vif_get_network_by_name.yml
+- spec/cassettes/create_vif_open_connection.yml
+- spec/cassettes/create_vif_vif_set_device_number.yml
+- spec/cassettes/get_all_hosts.yml
+- spec/cassettes/get_network_by_name.yml
+- spec/cassettes/get_storage_repository.yml
+- spec/cassettes/get_vm_by_name.yml
+- spec/cassettes/open_connection.yml
+- spec/cassettes/vif_set_device_number.yml
+- spec/fog/xenserver/compute/models/blob_spec.rb
+- spec/fog/xenserver/compute/models/blobs_spec.rb
+- spec/fog/xenserver/compute/models/bond_spec.rb
+- spec/fog/xenserver/compute/models/bonds_spec.rb
+- spec/fog/xenserver/compute/models/console_spec.rb
+- spec/fog/xenserver/compute/models/consoles_spec.rb
+- spec/fog/xenserver/compute/models/crash_dump_spec.rb
+- spec/fog/xenserver/compute/models/crash_dumps_spec.rb
+- spec/fog/xenserver/compute/models/dr_task_spec.rb
+- spec/fog/xenserver/compute/models/dr_tasks_spec.rb
+- spec/fog/xenserver/compute/models/event_spec.rb
+- spec/fog/xenserver/compute/models/events_spec.rb
+- spec/fog/xenserver/compute/models/gpu_group_spec.rb
+- spec/fog/xenserver/compute/models/gpu_groups_spec.rb
+- spec/fog/xenserver/compute/models/guest_metrics_spec.rb
+- spec/fog/xenserver/compute/models/guests_metrics_spec.rb
+- spec/fog/xenserver/compute/models/host_cpu_spec.rb
+- spec/fog/xenserver/compute/models/host_cpus_spec.rb
+- spec/fog/xenserver/compute/models/host_crash_dump_spec.rb
+- spec/fog/xenserver/compute/models/host_crash_dumps_spec.rb
+- spec/fog/xenserver/compute/models/host_metrics_spec.rb
+- spec/fog/xenserver/compute/models/host_patch_spec.rb
+- spec/fog/xenserver/compute/models/host_patchs_spec.rb
+- spec/fog/xenserver/compute/models/host_spec.rb
+- spec/fog/xenserver/compute/models/hosts_metrics_spec.rb
+- spec/fog/xenserver/compute/models/hosts_spec.rb
+- spec/fog/xenserver/compute/models/network_spec.rb
+- spec/fog/xenserver/compute/models/networks_spec.rb
+- spec/fog/xenserver/compute/models/pbd_spec.rb
+- spec/fog/xenserver/compute/models/pbds_spec.rb
+- spec/fog/xenserver/compute/models/pci_spec.rb
+- spec/fog/xenserver/compute/models/pcis_spec.rb
+- spec/fog/xenserver/compute/models/pgpu_spec.rb
+- spec/fog/xenserver/compute/models/pgpus_spec.rb
+- spec/fog/xenserver/compute/models/pif_metrics_spec.rb
+- spec/fog/xenserver/compute/models/pif_spec.rb
+- spec/fog/xenserver/compute/models/pifs_metrics_spec.rb
+- spec/fog/xenserver/compute/models/pifs_spec.rb
+- spec/fog/xenserver/compute/models/pool_patch_spec.rb
+- spec/fog/xenserver/compute/models/pool_patchs_spec.rb
+- spec/fog/xenserver/compute/models/pool_spec.rb
+- spec/fog/xenserver/compute/models/pools_spec.rb
+- spec/fog/xenserver/compute/models/role_spec.rb
+- spec/fog/xenserver/compute/models/roles_spec.rb
+- spec/fog/xenserver/compute/models/server_appliance_spec.rb
+- spec/fog/xenserver/compute/models/server_appliances_spec.rb
+- spec/fog/xenserver/compute/models/server_metrics_spec.rb
+- spec/fog/xenserver/compute/models/server_spec.rb
+- spec/fog/xenserver/compute/models/servers_metrics_spec.rb
+- spec/fog/xenserver/compute/models/servers_spec.rb
+- spec/fog/xenserver/compute/models/storage_manager_spec.rb
+- spec/fog/xenserver/compute/models/storage_managers_spec.rb
+- spec/fog/xenserver/compute/models/storage_repositories_spec.rb
+- spec/fog/xenserver/compute/models/storage_repository_spec.rb
+- spec/fog/xenserver/compute/models/tunnel_spec.rb
+- spec/fog/xenserver/compute/models/tunnels_spec.rb
+- spec/fog/xenserver/compute/models/vbd_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vbd_spec.rb
+- spec/fog/xenserver/compute/models/vbds_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vbds_spec.rb
+- spec/fog/xenserver/compute/models/vdi_spec.rb
+- spec/fog/xenserver/compute/models/vdis_spec.rb
+- spec/fog/xenserver/compute/models/vif_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vif_spec.rb
+- spec/fog/xenserver/compute/models/vifs_metrics_spec.rb
+- spec/fog/xenserver/compute/models/vifs_spec.rb
+- spec/fog/xenserver/compute/models/vlan_spec.rb
+- spec/fog/xenserver/compute/models/vlans_spec.rb
+- spec/fog/xenserver/compute/models/vmpp_spec.rb
+- spec/fog/xenserver/compute/models/vmpps_spec.rb
+- spec/fog/xenserver/compute/models/vtpm_spec.rb
+- spec/fog/xenserver/compute/models/vtpms_spec.rb
+- spec/fog/xenserver/compute/requests/builtin_templates_spec.rb
+- spec/fog/xenserver/compute/requests/clone_server_spec.rb
+- spec/fog/xenserver/compute/requests/create_network_spec.rb
+- spec/fog/xenserver/compute/requests/create_server_spec.rb
+- spec/fog/xenserver/compute/requests/create_vbd_spec.rb
+- spec/fog/xenserver/compute/requests/create_vdi_spec.rb
+- spec/fog/xenserver/compute/requests/create_vif_spec.rb
+- spec/fog/xenserver/compute_spec.rb
+- spec/minitest_helper.rb

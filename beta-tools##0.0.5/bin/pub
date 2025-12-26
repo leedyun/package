@@ -1,0 +1,91 @@
+#!/usr/bin/env ruby
+
+require 'logger'
+require 'optparse'
+require_relative '../test/it_tools/test_publisher2_support'
+require_relative '../lib/it_tools/pub_driver'
+require_relative '../lib/it_tools/network_tools'
+
+src_dir = '/home/fenton/projects/documentation'
+dest_dir = '/home/fenton/bin/website'
+stat_dir = '/home/fenton/bin/website_static'
+solr_search_files_dir = '/home/fenton/projects/documentation'
+index_category = 'public'
+
+# src_dir =  '/home/fenton/projects/beta_tools/testdata/publish/src_dir'
+# dest_dir = '/home/fenton/projects/beta_tools/testdata/publish/target_dir'
+# stat_dir = '/home/fenton/projects/beta_tools/testdata/publish/target_dir_static'
+
+#support = PublisherSupport.new
+#support.before src_dir
+
+ARGV[0] = '-s'
+ARGV[1] = src_dir
+ARGV[2] = '-w'
+ARGV[3] = dest_dir
+ARGV[4] = '-t'
+ARGV[5] = stat_dir 
+ARGV[6] = '-d'
+ARGV[7] = 'debug'
+ARGV[8] = '-l'
+ARGV[9] = solr_search_files_dir
+ARGV[10] = '-c'
+ARGV[11] = index_category
+
+
+pub = PubDriver::Pub.new
+pub.publish_locally2
+
+# support.after [dest_dir, stat_dir]
+
+# -----------------------------------------------------
+
+
+src_dir = '/home/fenton/projects/work-doco/docs'
+dest_dir = '/home/fenton/bin/work-doco'
+stat_dir = '/home/fenton/bin/work-doco_static'
+solr_search_files_dir = '/home/fenton/projects/documentation'
+index_category = 'work'
+
+ARGV[0] = '-s'
+ARGV[1] = src_dir
+ARGV[2] = '-w'
+ARGV[3] = dest_dir
+ARGV[4] = '-t'
+ARGV[5] = stat_dir 
+ARGV[6] = '-d'
+ARGV[7] = 'debug'
+ARGV[8] = '-l'
+ARGV[9] = solr_search_files_dir
+ARGV[10] = '-c'
+ARGV[11] = index_category
+
+pub = PubDriver::Pub.new
+pub.publish_locally2
+
+# ---------------------------------------------------------
+vpnTools = NetworkTools::VpnTools.new
+if not vpnTools.on_vpn
+  ops = { :wdoc => '/home/fenton/bin/work-doco_static/',
+    :doc => '/home/fenton/bin/website_static/',
+    :int_docs => '/home/fenton/website/',
+    :int_wdocs => '/home/fenton/work-doco/',
+    :ext_docs => '/home/ftravers/spicevan.com/current/public/',
+    :int_host => 'l1',
+    :ext_host => 'dh'}
+  pub = PubDriver::Pub.new
+  pub.publish_remote ops
+
+  rsync_ops = {}
+  rsync_ops[:from_dir] = '/home/fenton/bin/website/'
+  rsync_ops[:to_host] = 'searcher'
+  rsync_ops[:to_dir] = '/data/documentation/'
+  rsync_ops[:as_user] = 'docs'
+  pub.rsync_it rsync_ops
+
+  rsync_ops[:from_dir] = '/home/fenton/bin/work-doco/'
+  rsync_ops[:to_host] = 'searcher'
+  rsync_ops[:to_dir] = '/data/documentation/'
+  rsync_ops[:as_user] = 'docs'
+  pub.rsync_it rsync_ops
+end

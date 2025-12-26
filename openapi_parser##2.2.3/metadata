@@ -1,0 +1,247 @@
+--- !ruby/object:Gem::Specification
+name: openapi_parser
+version: !ruby/object:Gem::Version
+  version: 2.2.3
+platform: ruby
+authors:
+- ota42y
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-12-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.16'
+- !ruby/object:Gem::Dependency
+  name: fincop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: steep
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+description: parser for OpenAPI 3.0 or later
+email:
+- ota42y@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yaml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_ignore.yml"
+- ".ruby-version"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- Steepfile
+- bin/console
+- bin/setup
+- lib/openapi_parser.rb
+- lib/openapi_parser/concern.rb
+- lib/openapi_parser/concerns/expandable.rb
+- lib/openapi_parser/concerns/findable.rb
+- lib/openapi_parser/concerns/media_type_selectable.rb
+- lib/openapi_parser/concerns/parameter_validatable.rb
+- lib/openapi_parser/concerns/parser.rb
+- lib/openapi_parser/concerns/parser/core.rb
+- lib/openapi_parser/concerns/parser/hash.rb
+- lib/openapi_parser/concerns/parser/hash_body.rb
+- lib/openapi_parser/concerns/parser/list.rb
+- lib/openapi_parser/concerns/parser/object.rb
+- lib/openapi_parser/concerns/parser/value.rb
+- lib/openapi_parser/concerns/schema_loader.rb
+- lib/openapi_parser/concerns/schema_loader/base.rb
+- lib/openapi_parser/concerns/schema_loader/creator.rb
+- lib/openapi_parser/concerns/schema_loader/hash_body_loader.rb
+- lib/openapi_parser/concerns/schema_loader/hash_objects_loader.rb
+- lib/openapi_parser/concerns/schema_loader/list_loader.rb
+- lib/openapi_parser/concerns/schema_loader/objects_loader.rb
+- lib/openapi_parser/concerns/schema_loader/values_loader.rb
+- lib/openapi_parser/config.rb
+- lib/openapi_parser/errors.rb
+- lib/openapi_parser/parameter_validator.rb
+- lib/openapi_parser/path_item_finder.rb
+- lib/openapi_parser/reference_expander.rb
+- lib/openapi_parser/request_operation.rb
+- lib/openapi_parser/schema_validator.rb
+- lib/openapi_parser/schema_validator/all_of_validator.rb
+- lib/openapi_parser/schema_validator/any_of_validator.rb
+- lib/openapi_parser/schema_validator/array_validator.rb
+- lib/openapi_parser/schema_validator/base.rb
+- lib/openapi_parser/schema_validator/boolean_validator.rb
+- lib/openapi_parser/schema_validator/enumable.rb
+- lib/openapi_parser/schema_validator/float_validator.rb
+- lib/openapi_parser/schema_validator/integer_validator.rb
+- lib/openapi_parser/schema_validator/minimum_maximum.rb
+- lib/openapi_parser/schema_validator/nil_validator.rb
+- lib/openapi_parser/schema_validator/object_validator.rb
+- lib/openapi_parser/schema_validator/one_of_validator.rb
+- lib/openapi_parser/schema_validator/options.rb
+- lib/openapi_parser/schema_validator/properties_number.rb
+- lib/openapi_parser/schema_validator/string_validator.rb
+- lib/openapi_parser/schema_validator/unspecified_type_validator.rb
+- lib/openapi_parser/schemas.rb
+- lib/openapi_parser/schemas/base.rb
+- lib/openapi_parser/schemas/classes.rb
+- lib/openapi_parser/schemas/components.rb
+- lib/openapi_parser/schemas/discriminator.rb
+- lib/openapi_parser/schemas/header.rb
+- lib/openapi_parser/schemas/info.rb
+- lib/openapi_parser/schemas/media_type.rb
+- lib/openapi_parser/schemas/openapi.rb
+- lib/openapi_parser/schemas/operation.rb
+- lib/openapi_parser/schemas/parameter.rb
+- lib/openapi_parser/schemas/path_item.rb
+- lib/openapi_parser/schemas/paths.rb
+- lib/openapi_parser/schemas/reference.rb
+- lib/openapi_parser/schemas/request_body.rb
+- lib/openapi_parser/schemas/response.rb
+- lib/openapi_parser/schemas/responses.rb
+- lib/openapi_parser/schemas/schema.rb
+- lib/openapi_parser/version.rb
+- openapi_parser.gemspec
+- sig/openapi_parser.rbs
+- sig/openapi_parser/config.rbs
+- sig/openapi_parser/errors.rbs
+- sig/openapi_parser/reference_expander.rbs
+- sig/openapi_parser/schema_validator.rbs
+- sig/openapi_parser/schema_validators/base.rbs
+- sig/openapi_parser/schema_validators/options.rbs
+- sig/openapi_parser/schemas/base.rbs
+- sig/openapi_parser/version.rbs
+- sig/types.rbs
+- sig/wip_types.rbs
+homepage: https://github.com/ota42y/openapi_parser
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: OpenAPI3 parser
+test_files: []

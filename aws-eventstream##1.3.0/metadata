@@ -1,0 +1,55 @@
+--- !ruby/object:Gem::Specification
+name: aws-eventstream
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-22 00:00:00.000000000 Z
+dependencies: []
+description: Amazon Web Services event stream library. Decodes and encodes binary
+  stream under `vnd.amazon.event-stream` content-type
+email: 
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- VERSION
+- lib/aws-eventstream.rb
+- lib/aws-eventstream/decoder.rb
+- lib/aws-eventstream/encoder.rb
+- lib/aws-eventstream/errors.rb
+- lib/aws-eventstream/header_value.rb
+- lib/aws-eventstream/message.rb
+- lib/aws-eventstream/types.rb
+homepage: https://github.com/aws/aws-sdk-ruby
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-eventstream
+  changelog_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-eventstream/CHANGELOG.md
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: AWS Event Stream Library
+test_files: []

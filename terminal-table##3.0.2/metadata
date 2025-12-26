@@ -1,0 +1,163 @@
+--- !ruby/object:Gem::Specification
+name: terminal-table
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- TJ Holowaychuk
+- Scott J. Goldman
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-09-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: term-ansicolor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: unicode-display_width
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description:
+email:
+- tj@vision-media.ca
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Gemfile
+- History.rdoc
+- LICENSE.txt
+- Manifest
+- README.md
+- Rakefile
+- Todo.rdoc
+- examples/data.csv
+- examples/examples.rb
+- examples/examples_unicode.rb
+- examples/issue100.rb
+- examples/issue111.rb
+- examples/issue118.rb
+- examples/issue95.rb
+- examples/show_csv_table.rb
+- examples/strong_separator.rb
+- lib/terminal-table.rb
+- lib/terminal-table/cell.rb
+- lib/terminal-table/import.rb
+- lib/terminal-table/row.rb
+- lib/terminal-table/separator.rb
+- lib/terminal-table/style.rb
+- lib/terminal-table/table.rb
+- lib/terminal-table/table_helper.rb
+- lib/terminal-table/util.rb
+- lib/terminal-table/version.rb
+- terminal-table.gemspec
+homepage: https://github.com/tj/terminal-table
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key:
+specification_version: 4
+summary: Simple, feature rich ascii table generation library
+test_files: []

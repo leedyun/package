@@ -1,0 +1,166 @@
+--- !ruby/object:Gem::Specification
+name: railroady
+version: !ruby/object:Gem::Version
+  version: 1.6.0
+platform: ruby
+authors:
+- Preston Lee
+- Tobias Crawley
+- Peter Hoeg
+- Javier Smaldone
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-07-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby on Rails model and controller UML class diagram generator. Originally
+  based on the 'railroad' plugin and contributions of many others. (`brew install
+  graphviz` before use!)
+email:
+- preston.lee@prestonlee.com
+- tcrawley@gmail.com
+- peter@hoeg.com
+- p.hoeg@northwind.sg
+- javier@smaldone.com.ar
+executables:
+- railroady
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- AUTHORS.rdoc
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE.rdoc
+- README.md
+- Rakefile
+- bin/railroady
+- lib/railroady.rb
+- lib/railroady/aasm_diagram.rb
+- lib/railroady/app_diagram.rb
+- lib/railroady/controllers_diagram.rb
+- lib/railroady/diagram_graph.rb
+- lib/railroady/models_diagram.rb
+- lib/railroady/options_struct.rb
+- lib/railroady/railtie.rb
+- lib/railroady/version.rb
+- railroady.gemspec
+- tasks/railroady.rake
+- test/file_fixture/app/controllers/application_controller.rb
+- test/file_fixture/app/controllers/dummy1_controller.rb
+- test/file_fixture/app/controllers/dummy2_controller.rb
+- test/file_fixture/app/controllers/sub-dir/sub_dummy_controller.rb
+- test/file_fixture/app/models/concerns/author_settings.rb
+- test/file_fixture/app/models/concerns/taggable.rb
+- test/file_fixture/app/models/dummy1.rb
+- test/file_fixture/app/models/dummy2.rb
+- test/file_fixture/app/models/sub-dir/sub_dummy.rb
+- test/file_fixture/lib/app/controllers/dummy/dummy_controller.rb
+- test/file_fixture/lib/app/models/dummy1.rb
+- test/lib/railroady/aasm_diagram_spec.rb
+- test/lib/railroady/app_diagram_spec.rb
+- test/lib/railroady/controllers_diagram_spec.rb
+- test/lib/railroady/core_ext_spec.rb
+- test/lib/railroady/diagram_graph_spec.rb
+- test/lib/railroady/models_diagram_spec.rb
+- test/spec_helper.rb
+homepage: http://github.com/preston/railroady
+licenses:
+- GPLv2
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.25
+signing_key:
+specification_version: 4
+summary: Ruby on Rails model and controller UML class diagram generator.
+test_files:
+- test/file_fixture/app/controllers/application_controller.rb
+- test/file_fixture/app/controllers/dummy1_controller.rb
+- test/file_fixture/app/controllers/dummy2_controller.rb
+- test/file_fixture/app/controllers/sub-dir/sub_dummy_controller.rb
+- test/file_fixture/app/models/concerns/author_settings.rb
+- test/file_fixture/app/models/concerns/taggable.rb
+- test/file_fixture/app/models/dummy1.rb
+- test/file_fixture/app/models/dummy2.rb
+- test/file_fixture/app/models/sub-dir/sub_dummy.rb
+- test/file_fixture/lib/app/controllers/dummy/dummy_controller.rb
+- test/file_fixture/lib/app/models/dummy1.rb
+- test/lib/railroady/aasm_diagram_spec.rb
+- test/lib/railroady/app_diagram_spec.rb
+- test/lib/railroady/controllers_diagram_spec.rb
+- test/lib/railroady/core_ext_spec.rb
+- test/lib/railroady/diagram_graph_spec.rb
+- test/lib/railroady/models_diagram_spec.rb
+- test/spec_helper.rb

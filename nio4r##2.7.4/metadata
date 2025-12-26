@@ -1,0 +1,165 @@
+--- !ruby/object:Gem::Specification
+name: nio4r
+version: !ruby/object:Gem::Version
+  version: 2.7.4
+platform: ruby
+authors:
+- Tony Arcieri
+- Samuel Williams
+- Olle Jonsson
+- Gregory Longtin
+- Tiago Cardoso
+- Joao Fernandes
+- Thomas Dziedzic
+- Boaz Segev
+- Logan Bowers
+- Pedro Paiva
+- Jun Aruga
+- Omer Katz
+- Upekshe Jayasekera
+- Tim Carey-Smith
+- Benoit Daloze
+- Sergey Avseyev
+- Tomoya Ishida
+- Usaku Nakamura
+- Cédric Boutillier
+- Daniel Berger
+- Dirkjan Bussink
+- Hiroshi Shibata
+- Jesús Burgos Maciá
+- Luis Lavena
+- Pavel Rosický
+- Sadayuki Furuhashi
+- Stephen von Takach
+- Vladimir Kochnev
+- Vít Ondruch
+- Anatol Pomozov
+- Bernd Ahlers
+- Charles Oliver Nutter
+- Denis Washington
+- Elad Eyal
+- Jean byroot Boussier
+- Jeffrey Martin
+- John Thornton
+- Jun Jiang
+- Lars Kanis
+- Marek Kowalcze
+- Maxime Demolin
+- Orien Madgwick
+- Pavel Lobashov
+- Per Lundberg
+- Phillip Aldridge
+- Ravil Bayramgalin
+- Shannon Skipper
+- Tao Luo
+- Thomas Kuntz
+- Tsimnuj Hawj
+- Zhang Kang
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIE2DCCA0CgAwIBAgIBATANBgkqhkiG9w0BAQsFADBhMRgwFgYDVQQDDA9zYW11
+  ZWwud2lsbGlhbXMxHTAbBgoJkiaJk/IsZAEZFg1vcmlvbnRyYW5zZmVyMRIwEAYK
+  CZImiZPyLGQBGRYCY28xEjAQBgoJkiaJk/IsZAEZFgJuejAeFw0yMjA4MDYwNDUz
+  MjRaFw0zMjA4MDMwNDUzMjRaMGExGDAWBgNVBAMMD3NhbXVlbC53aWxsaWFtczEd
+  MBsGCgmSJomT8ixkARkWDW9yaW9udHJhbnNmZXIxEjAQBgoJkiaJk/IsZAEZFgJj
+  bzESMBAGCgmSJomT8ixkARkWAm56MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIB
+  igKCAYEAomvSopQXQ24+9DBB6I6jxRI2auu3VVb4nOjmmHq7XWM4u3HL+pni63X2
+  9qZdoq9xt7H+RPbwL28LDpDNflYQXoOhoVhQ37Pjn9YDjl8/4/9xa9+NUpl9XDIW
+  sGkaOY0eqsQm1pEWkHJr3zn/fxoKPZPfaJOglovdxf7dgsHz67Xgd/ka+Wo1YqoE
+  e5AUKRwUuvaUaumAKgPH+4E4oiLXI4T1Ff5Q7xxv6yXvHuYtlMHhYfgNn8iiW8WN
+  XibYXPNP7NtieSQqwR/xM6IRSoyXKuS+ZNGDPUUGk8RoiV/xvVN4LrVm9upSc0ss
+  RZ6qwOQmXCo/lLcDUxJAgG95cPw//sI00tZan75VgsGzSWAOdjQpFM0l4dxvKwHn
+  tUeT3ZsAgt0JnGqNm2Bkz81kG4A2hSyFZTFA8vZGhp+hz+8Q573tAR89y9YJBdYM
+  zp0FM4zwMNEUwgfRzv1tEVVUEXmoFCyhzonUUw4nE4CFu/sE3ffhjKcXcY//qiSW
+  xm4erY3XAgMBAAGjgZowgZcwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAwHQYDVR0O
+  BBYEFO9t7XWuFf2SKLmuijgqR4sGDlRsMC4GA1UdEQQnMCWBI3NhbXVlbC53aWxs
+  aWFtc0BvcmlvbnRyYW5zZmVyLmNvLm56MC4GA1UdEgQnMCWBI3NhbXVlbC53aWxs
+  aWFtc0BvcmlvbnRyYW5zZmVyLmNvLm56MA0GCSqGSIb3DQEBCwUAA4IBgQB5sxkE
+  cBsSYwK6fYpM+hA5B5yZY2+L0Z+27jF1pWGgbhPH8/FjjBLVn+VFok3CDpRqwXCl
+  xCO40JEkKdznNy2avOMra6PFiQyOE74kCtv7P+Fdc+FhgqI5lMon6tt9rNeXmnW/
+  c1NaMRdxy999hmRGzUSFjozcCwxpy/LwabxtdXwXgSay4mQ32EDjqR1TixS1+smp
+  8C/NCWgpIfzpHGJsjvmH2wAfKtTTqB9CVKLCWEnCHyCaRVuKkrKjqhYCdmMBqCws
+  JkxfQWC+jBVeG9ZtPhQgZpfhvh+6hMhraUYRQ6XGyvBqEUe+yo6DKIT3MtGE2+CP
+  eX9i9ZWBydWb8/rvmwmX2kkcBbX0hZS1rcR593hGc61JR6lvkGYQ2MYskBveyaxt
+  Q2K9NVun/S785AP05vKkXZEFYxqG6EW012U4oLcFl5MySFajYXRYbuUpH6AY+HP8
+  voD0MPg1DssDLKwXyt1eKD/+Fq0bFWhwVM/1XiAXL7lyYUyOq24KHgQ2Csg=
+  -----END CERTIFICATE-----
+date: 2024-10-28 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+executables: []
+extensions:
+- ext/nio4r/extconf.rb
+extra_rdoc_files: []
+files:
+- changes.md
+- ext/libev/Changes
+- ext/libev/LICENSE
+- ext/libev/README
+- ext/libev/ev.c
+- ext/libev/ev.h
+- ext/libev/ev_epoll.c
+- ext/libev/ev_iouring.c
+- ext/libev/ev_kqueue.c
+- ext/libev/ev_linuxaio.c
+- ext/libev/ev_poll.c
+- ext/libev/ev_port.c
+- ext/libev/ev_select.c
+- ext/libev/ev_vars.h
+- ext/libev/ev_win32.c
+- ext/libev/ev_wrap.h
+- ext/nio4r/.clang-format
+- ext/nio4r/bytebuffer.c
+- ext/nio4r/extconf.rb
+- ext/nio4r/libev.h
+- ext/nio4r/monitor.c
+- ext/nio4r/nio4r.h
+- ext/nio4r/nio4r_ext.c
+- ext/nio4r/org/nio4r/ByteBuffer.java
+- ext/nio4r/org/nio4r/Monitor.java
+- ext/nio4r/org/nio4r/Nio4r.java
+- ext/nio4r/org/nio4r/Selector.java
+- ext/nio4r/selector.c
+- lib/nio.rb
+- lib/nio/bytebuffer.rb
+- lib/nio/monitor.rb
+- lib/nio/selector.rb
+- lib/nio/version.rb
+- lib/nio4r.rb
+- license.md
+- readme.md
+homepage: https://github.com/socketry/nio4r
+licenses:
+- MIT
+- BSD-2-Clause
+metadata:
+  bug_tracker_uri: https://github.com/socketry/nio4r/issues
+  changelog_uri: https://github.com/socketry/nio4r/blob/main/changes.md
+  documentation_uri: https://www.rubydoc.info/gems/nio4r
+  funding_uri: https://github.com/sponsors/ioquatix/
+  source_code_uri: https://github.com/socketry/nio4r.git
+  wiki_uri: https://github.com/socketry/nio4r/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: New IO for Ruby
+test_files: []

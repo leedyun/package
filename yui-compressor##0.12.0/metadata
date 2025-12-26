@@ -1,0 +1,52 @@
+--- !ruby/object:Gem::Specification
+name: yui-compressor
+version: !ruby/object:Gem::Version
+  version: 0.12.0
+platform: ruby
+authors:
+- Sam Stephenson
+- Stephen Crosby
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-09-29 00:00:00.000000000 Z
+dependencies: []
+description: A Ruby interface to YUI Compressor for minifying JavaScript and CSS assets.
+email: stevecrozz@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.rdoc
+- Rakefile
+- lib/yuicompressor-2.4.8.jar
+- lib/yui/compressor.rb
+- test/compressor_test.rb
+homepage: http://github.com/sstephenson/ruby-yui-compressor/
+licenses:
+- MIT
+- BSD-3-clause
+- MPL
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: yui
+rubygems_version: 2.0.0
+signing_key: 
+specification_version: 4
+summary: JavaScript and CSS minification library
+test_files:
+- test/compressor_test.rb

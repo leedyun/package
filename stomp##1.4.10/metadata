@@ -1,0 +1,167 @@
+--- !ruby/object:Gem::Specification
+name: stomp
+version: !ruby/object:Gem::Version
+  version: 1.4.10
+platform: ruby
+authors:
+- Brian McCallister
+- Marius Mathiesen
+- Thiago Morello
+- Guy M. Allard
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-08-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+description: Ruby client for the Stomp messaging protocol.
+email:
+- brianm@apache.org
+- marius@stones.com
+- morellon@gmail.com
+- allard.guy.m@gmail.com
+executables:
+- catstomp
+- stompcat
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- CHANGELOG.md
+- CONTRIBUTORS.md
+- LICENSE
+- README.md
+- Rakefile
+- adhoc/.gitignore
+- adhoc/README.md
+- adhoc/issue121_01.rb
+- adhoc/issue121_01_conn.rb
+- adhoc/issue121_02.rb
+- adhoc/issue121_03.rb
+- adhoc/payload_generator.rb
+- adhoc/payload_generator_adhoctest.rb
+- adhoc/stomp_adhoc_common.rb
+- bin/catstomp
+- bin/stompcat
+- examples/EXAMPLES.md
+- examples/amqdurasub.rb
+- examples/artemis/cliwaiter_not_reliable.rb
+- examples/artemis/cliwaiter_reliable_hb.rb
+- examples/client_conndisc.rb
+- examples/client_putget.rb
+- examples/conn_conndisc.rb
+- examples/conn_get.rb
+- examples/conn_put.rb
+- examples/conn_put_pace.rb
+- examples/conn_putget.rb
+- examples/contrib.sh
+- examples/contributors.rb
+- examples/examplogger.rb
+- examples/historical/consumer.rb
+- examples/historical/publisher.rb
+- examples/historical/topic_consumer.rb
+- examples/historical/topic_publisher.rb
+- examples/logexamp.rb
+- examples/putget_file.rb
+- examples/putget_rephdrs.rb
+- examples/showver.rb
+- examples/ssl/SSL.md
+- examples/ssl/misc/ssl_ctxoptions.rb
+- examples/ssl/misc/ssl_newparm.rb
+- examples/ssl/misc/ssl_ucx_default_ciphers.rb
+- examples/ssl/ssl_common.rb
+- examples/ssl/sslexall.sh
+- examples/ssl/uc1/ssl_uc1.rb
+- examples/ssl/uc1/ssl_uc1_ciphers.rb
+- examples/ssl/uc2/ssl_uc2.rb
+- examples/ssl/uc2/ssl_uc2_ciphers.rb
+- examples/ssl/uc3/ssl_uc3_from_files.rb
+- examples/ssl/uc3/ssl_uc3_from_files_ciphers.rb
+- examples/ssl/uc3/ssl_uc3_without_files.rb
+- examples/ssl/uc3/ssl_uc3_without_files_ciphers.rb
+- examples/ssl/uc4/ssl_uc4.rb
+- examples/ssl/uc4/ssl_uc4_ciphers.rb
+- examples/stomp_common.rb
+- lib/client/utils.rb
+- lib/connection/heartbeats.rb
+- lib/connection/netio.rb
+- lib/connection/utf8.rb
+- lib/connection/utils.rb
+- lib/stomp.rb
+- lib/stomp/client.rb
+- lib/stomp/codec.rb
+- lib/stomp/connection.rb
+- lib/stomp/constants.rb
+- lib/stomp/errors.rb
+- lib/stomp/ext/hash.rb
+- lib/stomp/message.rb
+- lib/stomp/null_logger.rb
+- lib/stomp/slogger.rb
+- lib/stomp/sslparams.rb
+- lib/stomp/version.rb
+- notes/heartbeat_readme.txt
+- spec/client_shared_examples.rb
+- spec/client_spec.rb
+- spec/connection_spec.rb
+- spec/message_spec.rb
+- spec/spec_helper.rb
+- stomp.gemspec
+- test/.gitignore
+- test/MultiBrokerUnitTestExample.sh
+- test/funcs.sh
+- test/test_anonymous.rb
+- test/test_client.rb
+- test/test_codec.rb
+- test/test_connection.rb
+- test/test_connection1p.rb
+- test/test_helper.rb
+- test/test_message.rb
+- test/test_ssl.rb
+- test/test_urlogin.rb
+- test/tlogger.rb
+- test/unitst.sh
+homepage: https://github.com/stompgem/stomp
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: Ruby client for the Stomp messaging protocol
+test_files: []

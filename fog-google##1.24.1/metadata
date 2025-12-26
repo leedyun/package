@@ -1,0 +1,991 @@
+--- !ruby/object:Gem::Specification
+name: fog-google
+version: !ruby/object:Gem::Version
+  version: 1.24.1
+platform: ruby
+authors:
+- Nat Welch
+- Artem Yakimenko
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  name: google-apis-storage_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: google-apis-iamcredentials_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.15'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.15'
+- !ruby/object:Gem::Dependency
+  name: google-apis-compute_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.53'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.53'
+- !ruby/object:Gem::Dependency
+  name: google-apis-monitoring_v3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.37'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.37'
+- !ruby/object:Gem::Dependency
+  name: google-apis-dns_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.28'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.28'
+- !ruby/object:Gem::Dependency
+  name: google-apis-pubsub_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.30'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.30'
+- !ruby/object:Gem::Dependency
+  name: google-apis-sqladmin_v1beta4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.38'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.38'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-env
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.14.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.14.2
+- !ruby/object:Gem::Dependency
+  name: retriable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This library can be used as a module for `fog` or as standalone provider
+  to use the Google Cloud in applications.
+email:
+- nat@natwelch.com
+- temikus@google.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codecov.yml"
+- ".editorconfig"
+- ".fog.example"
+- ".github/dependabot.yml"
+- ".github/scripts/setup_creds.sh"
+- ".github/workflows/integration-compute-core.yml"
+- ".github/workflows/integration-compute-instance_groups.yml"
+- ".github/workflows/integration-compute-loadbalancing.yml"
+- ".github/workflows/integration-compute-networking.yml"
+- ".github/workflows/integration-monitoring.yml"
+- ".github/workflows/integration-pubsub.yml"
+- ".github/workflows/integration-sql.yml"
+- ".github/workflows/integration-storage.yml"
+- ".github/workflows/stale.yml"
+- ".github/workflows/unit.yml"
+- ".gitignore"
+- ".hound.yml"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- MIGRATING.md
+- README.md
+- Rakefile
+- SECURITY.md
+- examples/backend_services.rb
+- examples/bootstrap.rb
+- examples/create_instance.rb
+- examples/create_instance_and_attach_disk_later.rb
+- examples/create_instance_with_attached_disk.rb
+- examples/dns/project.rb
+- examples/dns/zones.rb
+- examples/get_list_images.rb
+- examples/get_list_snapshots.rb
+- examples/image_create.rb
+- examples/l7_load_balance.rb
+- examples/load-balance.rb
+- examples/metadata.rb
+- examples/monitoring/metric_descriptors.rb
+- examples/monitoring/monitored_resource_descriptors.rb
+- examples/monitoring/timeseries_collection.rb
+- examples/network.rb
+- examples/precreated_client.rb
+- examples/pubsub/subscriptions.rb
+- examples/pubsub/topics.rb
+- examples/sql/flags.rb
+- examples/sql/instances.rb
+- examples/sql/operations.rb
+- examples/sql/ssl_certs.rb
+- examples/sql/tiers.rb
+- examples/storage.rb
+- examples/storage_json.rb
+- fog-google.gemspec
+- lib/fog/bin/google.rb
+- lib/fog/compute/google.rb
+- lib/fog/compute/google/mock.rb
+- lib/fog/compute/google/models/address.rb
+- lib/fog/compute/google/models/addresses.rb
+- lib/fog/compute/google/models/backend_service.rb
+- lib/fog/compute/google/models/backend_services.rb
+- lib/fog/compute/google/models/disk.rb
+- lib/fog/compute/google/models/disk_type.rb
+- lib/fog/compute/google/models/disk_types.rb
+- lib/fog/compute/google/models/disks.rb
+- lib/fog/compute/google/models/firewall.rb
+- lib/fog/compute/google/models/firewalls.rb
+- lib/fog/compute/google/models/forwarding_rule.rb
+- lib/fog/compute/google/models/forwarding_rules.rb
+- lib/fog/compute/google/models/global_address.rb
+- lib/fog/compute/google/models/global_addresses.rb
+- lib/fog/compute/google/models/global_forwarding_rule.rb
+- lib/fog/compute/google/models/global_forwarding_rules.rb
+- lib/fog/compute/google/models/http_health_check.rb
+- lib/fog/compute/google/models/http_health_checks.rb
+- lib/fog/compute/google/models/image.rb
+- lib/fog/compute/google/models/images.rb
+- lib/fog/compute/google/models/instance_group.rb
+- lib/fog/compute/google/models/instance_group_manager.rb
+- lib/fog/compute/google/models/instance_group_managers.rb
+- lib/fog/compute/google/models/instance_groups.rb
+- lib/fog/compute/google/models/instance_template.rb
+- lib/fog/compute/google/models/instance_templates.rb
+- lib/fog/compute/google/models/machine_type.rb
+- lib/fog/compute/google/models/machine_types.rb
+- lib/fog/compute/google/models/network.rb
+- lib/fog/compute/google/models/networks.rb
+- lib/fog/compute/google/models/operation.rb
+- lib/fog/compute/google/models/operations.rb
+- lib/fog/compute/google/models/project.rb
+- lib/fog/compute/google/models/projects.rb
+- lib/fog/compute/google/models/region.rb
+- lib/fog/compute/google/models/regions.rb
+- lib/fog/compute/google/models/route.rb
+- lib/fog/compute/google/models/routes.rb
+- lib/fog/compute/google/models/server.rb
+- lib/fog/compute/google/models/servers.rb
+- lib/fog/compute/google/models/snapshot.rb
+- lib/fog/compute/google/models/snapshots.rb
+- lib/fog/compute/google/models/ssl_certificate.rb
+- lib/fog/compute/google/models/ssl_certificates.rb
+- lib/fog/compute/google/models/subnetwork.rb
+- lib/fog/compute/google/models/subnetworks.rb
+- lib/fog/compute/google/models/target_http_proxies.rb
+- lib/fog/compute/google/models/target_http_proxy.rb
+- lib/fog/compute/google/models/target_https_proxies.rb
+- lib/fog/compute/google/models/target_https_proxy.rb
+- lib/fog/compute/google/models/target_instance.rb
+- lib/fog/compute/google/models/target_instances.rb
+- lib/fog/compute/google/models/target_pool.rb
+- lib/fog/compute/google/models/target_pools.rb
+- lib/fog/compute/google/models/url_map.rb
+- lib/fog/compute/google/models/url_maps.rb
+- lib/fog/compute/google/models/zone.rb
+- lib/fog/compute/google/models/zones.rb
+- lib/fog/compute/google/real.rb
+- lib/fog/compute/google/requests/abandon_instances.rb
+- lib/fog/compute/google/requests/add_backend_service_backends.rb
+- lib/fog/compute/google/requests/add_instance_group_instances.rb
+- lib/fog/compute/google/requests/add_server_access_config.rb
+- lib/fog/compute/google/requests/add_target_pool_health_checks.rb
+- lib/fog/compute/google/requests/add_target_pool_instances.rb
+- lib/fog/compute/google/requests/attach_disk.rb
+- lib/fog/compute/google/requests/create_disk_snapshot.rb
+- lib/fog/compute/google/requests/delete_address.rb
+- lib/fog/compute/google/requests/delete_backend_service.rb
+- lib/fog/compute/google/requests/delete_disk.rb
+- lib/fog/compute/google/requests/delete_firewall.rb
+- lib/fog/compute/google/requests/delete_forwarding_rule.rb
+- lib/fog/compute/google/requests/delete_global_address.rb
+- lib/fog/compute/google/requests/delete_global_forwarding_rule.rb
+- lib/fog/compute/google/requests/delete_global_operation.rb
+- lib/fog/compute/google/requests/delete_http_health_check.rb
+- lib/fog/compute/google/requests/delete_image.rb
+- lib/fog/compute/google/requests/delete_instance_group.rb
+- lib/fog/compute/google/requests/delete_instance_group_manager.rb
+- lib/fog/compute/google/requests/delete_instance_template.rb
+- lib/fog/compute/google/requests/delete_network.rb
+- lib/fog/compute/google/requests/delete_region_operation.rb
+- lib/fog/compute/google/requests/delete_route.rb
+- lib/fog/compute/google/requests/delete_server.rb
+- lib/fog/compute/google/requests/delete_server_access_config.rb
+- lib/fog/compute/google/requests/delete_snapshot.rb
+- lib/fog/compute/google/requests/delete_ssl_certificate.rb
+- lib/fog/compute/google/requests/delete_subnetwork.rb
+- lib/fog/compute/google/requests/delete_target_http_proxy.rb
+- lib/fog/compute/google/requests/delete_target_https_proxy.rb
+- lib/fog/compute/google/requests/delete_target_instance.rb
+- lib/fog/compute/google/requests/delete_target_pool.rb
+- lib/fog/compute/google/requests/delete_url_map.rb
+- lib/fog/compute/google/requests/delete_zone_operation.rb
+- lib/fog/compute/google/requests/deprecate_image.rb
+- lib/fog/compute/google/requests/detach_disk.rb
+- lib/fog/compute/google/requests/expand_subnetwork_ip_cidr_range.rb
+- lib/fog/compute/google/requests/get_address.rb
+- lib/fog/compute/google/requests/get_backend_service.rb
+- lib/fog/compute/google/requests/get_backend_service_health.rb
+- lib/fog/compute/google/requests/get_disk.rb
+- lib/fog/compute/google/requests/get_disk_type.rb
+- lib/fog/compute/google/requests/get_firewall.rb
+- lib/fog/compute/google/requests/get_forwarding_rule.rb
+- lib/fog/compute/google/requests/get_global_address.rb
+- lib/fog/compute/google/requests/get_global_forwarding_rule.rb
+- lib/fog/compute/google/requests/get_global_operation.rb
+- lib/fog/compute/google/requests/get_http_health_check.rb
+- lib/fog/compute/google/requests/get_image.rb
+- lib/fog/compute/google/requests/get_image_from_family.rb
+- lib/fog/compute/google/requests/get_instance_group.rb
+- lib/fog/compute/google/requests/get_instance_group_manager.rb
+- lib/fog/compute/google/requests/get_instance_template.rb
+- lib/fog/compute/google/requests/get_machine_type.rb
+- lib/fog/compute/google/requests/get_network.rb
+- lib/fog/compute/google/requests/get_project.rb
+- lib/fog/compute/google/requests/get_region.rb
+- lib/fog/compute/google/requests/get_region_operation.rb
+- lib/fog/compute/google/requests/get_route.rb
+- lib/fog/compute/google/requests/get_server.rb
+- lib/fog/compute/google/requests/get_server_serial_port_output.rb
+- lib/fog/compute/google/requests/get_snapshot.rb
+- lib/fog/compute/google/requests/get_ssl_certificate.rb
+- lib/fog/compute/google/requests/get_subnetwork.rb
+- lib/fog/compute/google/requests/get_target_http_proxy.rb
+- lib/fog/compute/google/requests/get_target_https_proxy.rb
+- lib/fog/compute/google/requests/get_target_instance.rb
+- lib/fog/compute/google/requests/get_target_pool.rb
+- lib/fog/compute/google/requests/get_target_pool_health.rb
+- lib/fog/compute/google/requests/get_url_map.rb
+- lib/fog/compute/google/requests/get_zone.rb
+- lib/fog/compute/google/requests/get_zone_operation.rb
+- lib/fog/compute/google/requests/insert_address.rb
+- lib/fog/compute/google/requests/insert_backend_service.rb
+- lib/fog/compute/google/requests/insert_disk.rb
+- lib/fog/compute/google/requests/insert_firewall.rb
+- lib/fog/compute/google/requests/insert_forwarding_rule.rb
+- lib/fog/compute/google/requests/insert_global_address.rb
+- lib/fog/compute/google/requests/insert_global_forwarding_rule.rb
+- lib/fog/compute/google/requests/insert_http_health_check.rb
+- lib/fog/compute/google/requests/insert_image.rb
+- lib/fog/compute/google/requests/insert_instance_group.rb
+- lib/fog/compute/google/requests/insert_instance_group_manager.rb
+- lib/fog/compute/google/requests/insert_instance_template.rb
+- lib/fog/compute/google/requests/insert_network.rb
+- lib/fog/compute/google/requests/insert_route.rb
+- lib/fog/compute/google/requests/insert_server.rb
+- lib/fog/compute/google/requests/insert_ssl_certificate.rb
+- lib/fog/compute/google/requests/insert_subnetwork.rb
+- lib/fog/compute/google/requests/insert_target_http_proxy.rb
+- lib/fog/compute/google/requests/insert_target_https_proxy.rb
+- lib/fog/compute/google/requests/insert_target_instance.rb
+- lib/fog/compute/google/requests/insert_target_pool.rb
+- lib/fog/compute/google/requests/insert_url_map.rb
+- lib/fog/compute/google/requests/invalidate_url_map_cache.rb
+- lib/fog/compute/google/requests/list_addresses.rb
+- lib/fog/compute/google/requests/list_aggregated_addresses.rb
+- lib/fog/compute/google/requests/list_aggregated_disk_types.rb
+- lib/fog/compute/google/requests/list_aggregated_disks.rb
+- lib/fog/compute/google/requests/list_aggregated_forwarding_rules.rb
+- lib/fog/compute/google/requests/list_aggregated_instance_group_managers.rb
+- lib/fog/compute/google/requests/list_aggregated_instance_groups.rb
+- lib/fog/compute/google/requests/list_aggregated_machine_types.rb
+- lib/fog/compute/google/requests/list_aggregated_servers.rb
+- lib/fog/compute/google/requests/list_aggregated_subnetworks.rb
+- lib/fog/compute/google/requests/list_aggregated_target_instances.rb
+- lib/fog/compute/google/requests/list_aggregated_target_pools.rb
+- lib/fog/compute/google/requests/list_backend_services.rb
+- lib/fog/compute/google/requests/list_disk_types.rb
+- lib/fog/compute/google/requests/list_disks.rb
+- lib/fog/compute/google/requests/list_firewalls.rb
+- lib/fog/compute/google/requests/list_forwarding_rules.rb
+- lib/fog/compute/google/requests/list_global_addresses.rb
+- lib/fog/compute/google/requests/list_global_forwarding_rules.rb
+- lib/fog/compute/google/requests/list_global_operations.rb
+- lib/fog/compute/google/requests/list_http_health_checks.rb
+- lib/fog/compute/google/requests/list_images.rb
+- lib/fog/compute/google/requests/list_instance_group_instances.rb
+- lib/fog/compute/google/requests/list_instance_group_managers.rb
+- lib/fog/compute/google/requests/list_instance_groups.rb
+- lib/fog/compute/google/requests/list_instance_templates.rb
+- lib/fog/compute/google/requests/list_machine_types.rb
+- lib/fog/compute/google/requests/list_networks.rb
+- lib/fog/compute/google/requests/list_region_operations.rb
+- lib/fog/compute/google/requests/list_regions.rb
+- lib/fog/compute/google/requests/list_routes.rb
+- lib/fog/compute/google/requests/list_servers.rb
+- lib/fog/compute/google/requests/list_snapshots.rb
+- lib/fog/compute/google/requests/list_ssl_certificates.rb
+- lib/fog/compute/google/requests/list_subnetworks.rb
+- lib/fog/compute/google/requests/list_target_http_proxies.rb
+- lib/fog/compute/google/requests/list_target_https_proxies.rb
+- lib/fog/compute/google/requests/list_target_instances.rb
+- lib/fog/compute/google/requests/list_target_pools.rb
+- lib/fog/compute/google/requests/list_url_maps.rb
+- lib/fog/compute/google/requests/list_zone_operations.rb
+- lib/fog/compute/google/requests/list_zones.rb
+- lib/fog/compute/google/requests/patch_firewall.rb
+- lib/fog/compute/google/requests/patch_url_map.rb
+- lib/fog/compute/google/requests/recreate_instances.rb
+- lib/fog/compute/google/requests/remove_instance_group_instances.rb
+- lib/fog/compute/google/requests/remove_target_pool_health_checks.rb
+- lib/fog/compute/google/requests/remove_target_pool_instance.rb
+- lib/fog/compute/google/requests/remove_target_pool_instances.rb
+- lib/fog/compute/google/requests/reset_server.rb
+- lib/fog/compute/google/requests/reset_windows_password.rb
+- lib/fog/compute/google/requests/set_common_instance_metadata.rb
+- lib/fog/compute/google/requests/set_forwarding_rule_target.rb
+- lib/fog/compute/google/requests/set_global_forwarding_rule_target.rb
+- lib/fog/compute/google/requests/set_instance_template.rb
+- lib/fog/compute/google/requests/set_server_disk_auto_delete.rb
+- lib/fog/compute/google/requests/set_server_machine_type.rb
+- lib/fog/compute/google/requests/set_server_metadata.rb
+- lib/fog/compute/google/requests/set_server_scheduling.rb
+- lib/fog/compute/google/requests/set_server_tags.rb
+- lib/fog/compute/google/requests/set_snapshot_labels.rb
+- lib/fog/compute/google/requests/set_subnetwork_private_ip_google_access.rb
+- lib/fog/compute/google/requests/set_target_http_proxy_url_map.rb
+- lib/fog/compute/google/requests/set_target_https_proxy_ssl_certificates.rb
+- lib/fog/compute/google/requests/set_target_https_proxy_url_map.rb
+- lib/fog/compute/google/requests/set_target_pool_backup.rb
+- lib/fog/compute/google/requests/start_server.rb
+- lib/fog/compute/google/requests/stop_server.rb
+- lib/fog/compute/google/requests/update_firewall.rb
+- lib/fog/compute/google/requests/update_http_health_check.rb
+- lib/fog/compute/google/requests/update_url_map.rb
+- lib/fog/compute/google/requests/validate_url_map.rb
+- lib/fog/dns/google.rb
+- lib/fog/dns/google/mock.rb
+- lib/fog/dns/google/models/change.rb
+- lib/fog/dns/google/models/changes.rb
+- lib/fog/dns/google/models/project.rb
+- lib/fog/dns/google/models/projects.rb
+- lib/fog/dns/google/models/record.rb
+- lib/fog/dns/google/models/records.rb
+- lib/fog/dns/google/models/zone.rb
+- lib/fog/dns/google/models/zones.rb
+- lib/fog/dns/google/real.rb
+- lib/fog/dns/google/requests/create_change.rb
+- lib/fog/dns/google/requests/create_managed_zone.rb
+- lib/fog/dns/google/requests/delete_managed_zone.rb
+- lib/fog/dns/google/requests/get_change.rb
+- lib/fog/dns/google/requests/get_managed_zone.rb
+- lib/fog/dns/google/requests/get_project.rb
+- lib/fog/dns/google/requests/list_changes.rb
+- lib/fog/dns/google/requests/list_managed_zones.rb
+- lib/fog/dns/google/requests/list_resource_record_sets.rb
+- lib/fog/google.rb
+- lib/fog/google/mock.rb
+- lib/fog/google/models/monitoring/metric_descriptor.rb
+- lib/fog/google/models/monitoring/metric_descriptors.rb
+- lib/fog/google/models/monitoring/monitored_resource_descriptor.rb
+- lib/fog/google/models/monitoring/monitored_resource_descriptors.rb
+- lib/fog/google/models/monitoring/timeseries.rb
+- lib/fog/google/models/monitoring/timeseries_collection.rb
+- lib/fog/google/models/pubsub/received_message.rb
+- lib/fog/google/models/pubsub/subscription.rb
+- lib/fog/google/models/pubsub/subscriptions.rb
+- lib/fog/google/models/pubsub/topic.rb
+- lib/fog/google/models/pubsub/topics.rb
+- lib/fog/google/models/sql/backup_run.rb
+- lib/fog/google/models/sql/backup_runs.rb
+- lib/fog/google/models/sql/flag.rb
+- lib/fog/google/models/sql/flags.rb
+- lib/fog/google/models/sql/instance.rb
+- lib/fog/google/models/sql/instances.rb
+- lib/fog/google/models/sql/operation.rb
+- lib/fog/google/models/sql/operations.rb
+- lib/fog/google/models/sql/ssl_cert.rb
+- lib/fog/google/models/sql/ssl_certs.rb
+- lib/fog/google/models/sql/tier.rb
+- lib/fog/google/models/sql/tiers.rb
+- lib/fog/google/models/sql/user.rb
+- lib/fog/google/models/sql/users.rb
+- lib/fog/google/monitoring.rb
+- lib/fog/google/monitoring/mock.rb
+- lib/fog/google/monitoring/real.rb
+- lib/fog/google/pubsub.rb
+- lib/fog/google/pubsub/mock.rb
+- lib/fog/google/pubsub/real.rb
+- lib/fog/google/requests/monitoring/create_metric_descriptor.rb
+- lib/fog/google/requests/monitoring/create_timeseries.rb
+- lib/fog/google/requests/monitoring/delete_metric_descriptor.rb
+- lib/fog/google/requests/monitoring/get_metric_descriptor.rb
+- lib/fog/google/requests/monitoring/get_monitored_resource_descriptor.rb
+- lib/fog/google/requests/monitoring/list_metric_descriptors.rb
+- lib/fog/google/requests/monitoring/list_monitored_resource_descriptors.rb
+- lib/fog/google/requests/monitoring/list_timeseries.rb
+- lib/fog/google/requests/pubsub/acknowledge_subscription.rb
+- lib/fog/google/requests/pubsub/create_subscription.rb
+- lib/fog/google/requests/pubsub/create_topic.rb
+- lib/fog/google/requests/pubsub/delete_subscription.rb
+- lib/fog/google/requests/pubsub/delete_topic.rb
+- lib/fog/google/requests/pubsub/get_subscription.rb
+- lib/fog/google/requests/pubsub/get_topic.rb
+- lib/fog/google/requests/pubsub/list_subscriptions.rb
+- lib/fog/google/requests/pubsub/list_topics.rb
+- lib/fog/google/requests/pubsub/publish_topic.rb
+- lib/fog/google/requests/pubsub/pull_subscription.rb
+- lib/fog/google/requests/sql/clone_instance.rb
+- lib/fog/google/requests/sql/delete_backup_run.rb
+- lib/fog/google/requests/sql/delete_instance.rb
+- lib/fog/google/requests/sql/delete_ssl_cert.rb
+- lib/fog/google/requests/sql/delete_user.rb
+- lib/fog/google/requests/sql/export_instance.rb
+- lib/fog/google/requests/sql/get_backup_run.rb
+- lib/fog/google/requests/sql/get_instance.rb
+- lib/fog/google/requests/sql/get_operation.rb
+- lib/fog/google/requests/sql/get_ssl_cert.rb
+- lib/fog/google/requests/sql/import_instance.rb
+- lib/fog/google/requests/sql/insert_backup_run.rb
+- lib/fog/google/requests/sql/insert_instance.rb
+- lib/fog/google/requests/sql/insert_ssl_cert.rb
+- lib/fog/google/requests/sql/insert_user.rb
+- lib/fog/google/requests/sql/list_backup_runs.rb
+- lib/fog/google/requests/sql/list_flags.rb
+- lib/fog/google/requests/sql/list_instances.rb
+- lib/fog/google/requests/sql/list_operations.rb
+- lib/fog/google/requests/sql/list_ssl_certs.rb
+- lib/fog/google/requests/sql/list_tiers.rb
+- lib/fog/google/requests/sql/list_users.rb
+- lib/fog/google/requests/sql/reset_instance_ssl_config.rb
+- lib/fog/google/requests/sql/restart_instance.rb
+- lib/fog/google/requests/sql/restore_instance_backup.rb
+- lib/fog/google/requests/sql/update_instance.rb
+- lib/fog/google/requests/sql/update_user.rb
+- lib/fog/google/shared.rb
+- lib/fog/google/sql.rb
+- lib/fog/google/sql/mock.rb
+- lib/fog/google/sql/real.rb
+- lib/fog/google/version.rb
+- lib/fog/parsers/storage/google.rb
+- lib/fog/parsers/storage/google/access_control_list.rb
+- lib/fog/parsers/storage/google/copy_object.rb
+- lib/fog/parsers/storage/google/get_bucket.rb
+- lib/fog/parsers/storage/google/get_bucket_logging.rb
+- lib/fog/parsers/storage/google/get_bucket_object_versions.rb
+- lib/fog/parsers/storage/google/get_bucket_versioning.rb
+- lib/fog/parsers/storage/google/get_request_payment.rb
+- lib/fog/parsers/storage/google/get_service.rb
+- lib/fog/storage/google.rb
+- lib/fog/storage/google_json.rb
+- lib/fog/storage/google_json/mock.rb
+- lib/fog/storage/google_json/models/directories.rb
+- lib/fog/storage/google_json/models/directory.rb
+- lib/fog/storage/google_json/models/file.rb
+- lib/fog/storage/google_json/models/files.rb
+- lib/fog/storage/google_json/real.rb
+- lib/fog/storage/google_json/requests/copy_object.rb
+- lib/fog/storage/google_json/requests/delete_bucket.rb
+- lib/fog/storage/google_json/requests/delete_object.rb
+- lib/fog/storage/google_json/requests/delete_object_url.rb
+- lib/fog/storage/google_json/requests/get_bucket.rb
+- lib/fog/storage/google_json/requests/get_bucket_acl.rb
+- lib/fog/storage/google_json/requests/get_object.rb
+- lib/fog/storage/google_json/requests/get_object_acl.rb
+- lib/fog/storage/google_json/requests/get_object_http_url.rb
+- lib/fog/storage/google_json/requests/get_object_https_url.rb
+- lib/fog/storage/google_json/requests/get_object_metadata.rb
+- lib/fog/storage/google_json/requests/get_object_url.rb
+- lib/fog/storage/google_json/requests/list_bucket_acl.rb
+- lib/fog/storage/google_json/requests/list_buckets.rb
+- lib/fog/storage/google_json/requests/list_object_acl.rb
+- lib/fog/storage/google_json/requests/list_objects.rb
+- lib/fog/storage/google_json/requests/put_bucket.rb
+- lib/fog/storage/google_json/requests/put_bucket_acl.rb
+- lib/fog/storage/google_json/requests/put_object.rb
+- lib/fog/storage/google_json/requests/put_object_acl.rb
+- lib/fog/storage/google_json/requests/put_object_url.rb
+- lib/fog/storage/google_json/utils.rb
+- lib/fog/storage/google_xml.rb
+- lib/fog/storage/google_xml/mock.rb
+- lib/fog/storage/google_xml/models/directories.rb
+- lib/fog/storage/google_xml/models/directory.rb
+- lib/fog/storage/google_xml/models/file.rb
+- lib/fog/storage/google_xml/models/files.rb
+- lib/fog/storage/google_xml/real.rb
+- lib/fog/storage/google_xml/requests/copy_object.rb
+- lib/fog/storage/google_xml/requests/delete_bucket.rb
+- lib/fog/storage/google_xml/requests/delete_object.rb
+- lib/fog/storage/google_xml/requests/delete_object_url.rb
+- lib/fog/storage/google_xml/requests/get_bucket.rb
+- lib/fog/storage/google_xml/requests/get_bucket_acl.rb
+- lib/fog/storage/google_xml/requests/get_object.rb
+- lib/fog/storage/google_xml/requests/get_object_acl.rb
+- lib/fog/storage/google_xml/requests/get_object_http_url.rb
+- lib/fog/storage/google_xml/requests/get_object_https_url.rb
+- lib/fog/storage/google_xml/requests/get_object_url.rb
+- lib/fog/storage/google_xml/requests/get_service.rb
+- lib/fog/storage/google_xml/requests/head_object.rb
+- lib/fog/storage/google_xml/requests/put_bucket.rb
+- lib/fog/storage/google_xml/requests/put_bucket_acl.rb
+- lib/fog/storage/google_xml/requests/put_object.rb
+- lib/fog/storage/google_xml/requests/put_object_acl.rb
+- lib/fog/storage/google_xml/requests/put_object_url.rb
+- lib/fog/storage/google_xml/utils.rb
+- tasks/bundler.rake
+- tasks/changelog.rake
+- tasks/console.rake
+- tasks/lint.rake
+- tasks/test.rake
+- test/helpers/client_helper.rb
+- test/helpers/integration_test_helper.rb
+- test/helpers/test_collection.rb
+- test/helpers/test_helper.rb
+- test/integration/compute/core_compute/test_client_options.rb
+- test/integration/compute/core_compute/test_coverage.rb
+- test/integration/compute/core_compute/test_disk_types.rb
+- test/integration/compute/core_compute/test_disks.rb
+- test/integration/compute/core_compute/test_images.rb
+- test/integration/compute/core_compute/test_machine_types.rb
+- test/integration/compute/core_compute/test_operations.rb
+- test/integration/compute/core_compute/test_projects.rb
+- test/integration/compute/core_compute/test_regions.rb
+- test/integration/compute/core_compute/test_servers.rb
+- test/integration/compute/core_compute/test_snapshots.rb
+- test/integration/compute/core_compute/test_zones.rb
+- test/integration/compute/core_networking/test_addresses.rb
+- test/integration/compute/core_networking/test_coverage.rb
+- test/integration/compute/core_networking/test_firewalls.rb
+- test/integration/compute/core_networking/test_networks.rb
+- test/integration/compute/core_networking/test_routes.rb
+- test/integration/compute/core_networking/test_subnetworks.rb
+- test/integration/compute/instance_groups/test_coverage.rb
+- test/integration/compute/instance_groups/test_instance_group_managers.rb
+- test/integration/compute/instance_groups/test_instance_groups.rb
+- test/integration/compute/instance_groups/test_instance_templates.rb
+- test/integration/compute/loadbalancing/test_backend_services.rb
+- test/integration/compute/loadbalancing/test_coverage.rb
+- test/integration/compute/loadbalancing/test_forwarding_rules.rb
+- test/integration/compute/loadbalancing/test_global_addresses.rb
+- test/integration/compute/loadbalancing/test_global_forwarding_rules.rb
+- test/integration/compute/loadbalancing/test_http_health_checks.rb
+- test/integration/compute/loadbalancing/test_ssl_certificates.rb
+- test/integration/compute/loadbalancing/test_target_http_proxies.rb
+- test/integration/compute/loadbalancing/test_target_https_proxies.rb
+- test/integration/compute/loadbalancing/test_target_instances.rb
+- test/integration/compute/loadbalancing/test_target_pools.rb
+- test/integration/compute/loadbalancing/test_url_maps.rb
+- test/integration/factories/addresses_factory.rb
+- test/integration/factories/backend_services_factory.rb
+- test/integration/factories/collection_factory.rb
+- test/integration/factories/disks_factory.rb
+- test/integration/factories/firewalls_factory.rb
+- test/integration/factories/forwarding_rules_factory.rb
+- test/integration/factories/global_addresses_factory.rb
+- test/integration/factories/global_forwarding_rules_factory.rb
+- test/integration/factories/http_health_checks_factory.rb
+- test/integration/factories/images_factory.rb
+- test/integration/factories/instance_group_manager_factory.rb
+- test/integration/factories/instance_groups_factory.rb
+- test/integration/factories/instance_template_factory.rb
+- test/integration/factories/networks_factory.rb
+- test/integration/factories/servers_factory.rb
+- test/integration/factories/sql_certs_factory.rb
+- test/integration/factories/sql_instances_factory.rb
+- test/integration/factories/sql_users_factory.rb
+- test/integration/factories/ssl_certificates_factory.rb
+- test/integration/factories/subnetworks_factory.rb
+- test/integration/factories/target_http_proxies_factory.rb
+- test/integration/factories/target_https_proxies_factory.rb
+- test/integration/factories/target_instances_factory.rb
+- test/integration/factories/target_pools_factory.rb
+- test/integration/factories/url_maps_factory.rb
+- test/integration/monitoring/test_coverage.rb
+- test/integration/monitoring/test_metric_descriptors.rb
+- test/integration/monitoring/test_monitored_resource_descriptors.rb
+- test/integration/monitoring/test_timeseries.rb
+- test/integration/pubsub/pubsub_shared.rb
+- test/integration/pubsub/test_coverage.rb
+- test/integration/pubsub/test_pubsub_models.rb
+- test/integration/pubsub/test_pubsub_requests.rb
+- test/integration/sql/test_certs.rb
+- test/integration/sql/test_common_flags.rb
+- test/integration/sql/test_common_tiers.rb
+- test/integration/sql/test_coverage.rb
+- test/integration/sql/test_instances.rb
+- test/integration/sql/test_users.rb
+- test/integration/storage/storage_shared.rb
+- test/integration/storage/test_buckets.rb
+- test/integration/storage/test_coverage.rb
+- test/integration/storage/test_directories.rb
+- test/integration/storage/test_files.rb
+- test/integration/storage/test_objects.rb
+- test/integration/test_authentication.rb
+- test/unit/compute/test_common_collections.rb
+- test/unit/compute/test_common_models.rb
+- test/unit/compute/test_disk.rb
+- test/unit/compute/test_server.rb
+- test/unit/dns/test_common_collections.rb
+- test/unit/monitoring/test_comon_collections.rb
+- test/unit/pubsub/test_common_collections.rb
+- test/unit/sql/test_common_collections.rb
+- test/unit/storage/test_common_json_collections.rb
+- test/unit/storage/test_common_xml_collections.rb
+- test/unit/storage/test_json_requests.rb
+- test/unit/storage/test_xml_requests.rb
+homepage: https://github.com/fog/fog-google
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Module for the 'fog' gem to support Google.
+test_files:
+- test/helpers/client_helper.rb
+- test/helpers/integration_test_helper.rb
+- test/helpers/test_collection.rb
+- test/helpers/test_helper.rb
+- test/integration/compute/core_compute/test_client_options.rb
+- test/integration/compute/core_compute/test_coverage.rb
+- test/integration/compute/core_compute/test_disk_types.rb
+- test/integration/compute/core_compute/test_disks.rb
+- test/integration/compute/core_compute/test_images.rb
+- test/integration/compute/core_compute/test_machine_types.rb
+- test/integration/compute/core_compute/test_operations.rb
+- test/integration/compute/core_compute/test_projects.rb
+- test/integration/compute/core_compute/test_regions.rb
+- test/integration/compute/core_compute/test_servers.rb
+- test/integration/compute/core_compute/test_snapshots.rb
+- test/integration/compute/core_compute/test_zones.rb
+- test/integration/compute/core_networking/test_addresses.rb
+- test/integration/compute/core_networking/test_coverage.rb
+- test/integration/compute/core_networking/test_firewalls.rb
+- test/integration/compute/core_networking/test_networks.rb
+- test/integration/compute/core_networking/test_routes.rb
+- test/integration/compute/core_networking/test_subnetworks.rb
+- test/integration/compute/instance_groups/test_coverage.rb
+- test/integration/compute/instance_groups/test_instance_group_managers.rb
+- test/integration/compute/instance_groups/test_instance_groups.rb
+- test/integration/compute/instance_groups/test_instance_templates.rb
+- test/integration/compute/loadbalancing/test_backend_services.rb
+- test/integration/compute/loadbalancing/test_coverage.rb
+- test/integration/compute/loadbalancing/test_forwarding_rules.rb
+- test/integration/compute/loadbalancing/test_global_addresses.rb
+- test/integration/compute/loadbalancing/test_global_forwarding_rules.rb
+- test/integration/compute/loadbalancing/test_http_health_checks.rb
+- test/integration/compute/loadbalancing/test_ssl_certificates.rb
+- test/integration/compute/loadbalancing/test_target_http_proxies.rb
+- test/integration/compute/loadbalancing/test_target_https_proxies.rb
+- test/integration/compute/loadbalancing/test_target_instances.rb
+- test/integration/compute/loadbalancing/test_target_pools.rb
+- test/integration/compute/loadbalancing/test_url_maps.rb
+- test/integration/factories/addresses_factory.rb
+- test/integration/factories/backend_services_factory.rb
+- test/integration/factories/collection_factory.rb
+- test/integration/factories/disks_factory.rb
+- test/integration/factories/firewalls_factory.rb
+- test/integration/factories/forwarding_rules_factory.rb
+- test/integration/factories/global_addresses_factory.rb
+- test/integration/factories/global_forwarding_rules_factory.rb
+- test/integration/factories/http_health_checks_factory.rb
+- test/integration/factories/images_factory.rb
+- test/integration/factories/instance_group_manager_factory.rb
+- test/integration/factories/instance_groups_factory.rb
+- test/integration/factories/instance_template_factory.rb
+- test/integration/factories/networks_factory.rb
+- test/integration/factories/servers_factory.rb
+- test/integration/factories/sql_certs_factory.rb
+- test/integration/factories/sql_instances_factory.rb
+- test/integration/factories/sql_users_factory.rb
+- test/integration/factories/ssl_certificates_factory.rb
+- test/integration/factories/subnetworks_factory.rb
+- test/integration/factories/target_http_proxies_factory.rb
+- test/integration/factories/target_https_proxies_factory.rb
+- test/integration/factories/target_instances_factory.rb
+- test/integration/factories/target_pools_factory.rb
+- test/integration/factories/url_maps_factory.rb
+- test/integration/monitoring/test_coverage.rb
+- test/integration/monitoring/test_metric_descriptors.rb
+- test/integration/monitoring/test_monitored_resource_descriptors.rb
+- test/integration/monitoring/test_timeseries.rb
+- test/integration/pubsub/pubsub_shared.rb
+- test/integration/pubsub/test_coverage.rb
+- test/integration/pubsub/test_pubsub_models.rb
+- test/integration/pubsub/test_pubsub_requests.rb
+- test/integration/sql/test_certs.rb
+- test/integration/sql/test_common_flags.rb
+- test/integration/sql/test_common_tiers.rb
+- test/integration/sql/test_coverage.rb
+- test/integration/sql/test_instances.rb
+- test/integration/sql/test_users.rb
+- test/integration/storage/storage_shared.rb
+- test/integration/storage/test_buckets.rb
+- test/integration/storage/test_coverage.rb
+- test/integration/storage/test_directories.rb
+- test/integration/storage/test_files.rb
+- test/integration/storage/test_objects.rb
+- test/integration/test_authentication.rb
+- test/unit/compute/test_common_collections.rb
+- test/unit/compute/test_common_models.rb
+- test/unit/compute/test_disk.rb
+- test/unit/compute/test_server.rb
+- test/unit/dns/test_common_collections.rb
+- test/unit/monitoring/test_comon_collections.rb
+- test/unit/pubsub/test_common_collections.rb
+- test/unit/sql/test_common_collections.rb
+- test/unit/storage/test_common_json_collections.rb
+- test/unit/storage/test_common_xml_collections.rb
+- test/unit/storage/test_json_requests.rb
+- test/unit/storage/test_xml_requests.rb

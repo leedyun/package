@@ -1,0 +1,197 @@
+--- !ruby/object:Gem::Specification
+name: minitest-reporters
+version: !ruby/object:Gem::Version
+  version: 1.7.1
+platform: ruby
+authors:
+- Alexander Kern
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: ansi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-progressbar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Death to haphazard monkey-patching! Extend Minitest through simple hooks.
+email:
+- alex@kernul.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".ruby-gemset"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- appveyor.yml
+- assets/default-reporter.png
+- assets/mean_time_reporter.png
+- assets/progress-reporter.png
+- assets/spec-reporter.png
+- lib/minitest/extensible_backtrace_filter.rb
+- lib/minitest/minitest_reporter_plugin.rb
+- lib/minitest/old_activesupport_fix.rb
+- lib/minitest/relative_position.rb
+- lib/minitest/reporters.rb
+- lib/minitest/reporters/ansi.rb
+- lib/minitest/reporters/base_reporter.rb
+- lib/minitest/reporters/default_reporter.rb
+- lib/minitest/reporters/html_reporter.rb
+- lib/minitest/reporters/junit_reporter.rb
+- lib/minitest/reporters/mean_time_reporter.rb
+- lib/minitest/reporters/progress_reporter.rb
+- lib/minitest/reporters/ruby_mate_reporter.rb
+- lib/minitest/reporters/rubymine_reporter.rb
+- lib/minitest/reporters/spec_reporter.rb
+- lib/minitest/reporters/version.rb
+- lib/minitest/templates/index.html.erb
+- minitest-reporters.gemspec
+- test/fixtures/junit_filename_bug_example_test.rb
+- test/fixtures/mean_time_test.rb
+- test/fixtures/progress_detailed_skip_test.rb
+- test/fixtures/progress_test.rb
+- test/fixtures/sample_test.rb
+- test/fixtures/spec_test.rb
+- test/gallery/bad_test.rb
+- test/gallery/good_test.rb
+- test/integration/reporters/junit_reporter_test.rb
+- test/integration/reporters/mean_time_reporter_test.rb
+- test/integration/reporters/progress_reporter_test.rb
+- test/test_helper.rb
+- test/unit/minitest/extensible_backtrace_filter_test.rb
+- test/unit/minitest/junit_reporter_test.rb
+- test/unit/minitest/mean_time_reporter_unit_test.rb
+- test/unit/minitest/minitest_reporter_plugin_test.rb
+- test/unit/minitest/reporters_test.rb
+- test/unit/minitest/spec_reporter_test.rb
+homepage: https://github.com/minitest-reporters/minitest-reporters
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.14
+signing_key:
+specification_version: 4
+summary: Create customizable Minitest output formats
+test_files:
+- test/fixtures/junit_filename_bug_example_test.rb
+- test/fixtures/mean_time_test.rb
+- test/fixtures/progress_detailed_skip_test.rb
+- test/fixtures/progress_test.rb
+- test/fixtures/sample_test.rb
+- test/fixtures/spec_test.rb
+- test/gallery/bad_test.rb
+- test/gallery/good_test.rb
+- test/integration/reporters/junit_reporter_test.rb
+- test/integration/reporters/mean_time_reporter_test.rb
+- test/integration/reporters/progress_reporter_test.rb
+- test/test_helper.rb
+- test/unit/minitest/extensible_backtrace_filter_test.rb
+- test/unit/minitest/junit_reporter_test.rb
+- test/unit/minitest/mean_time_reporter_unit_test.rb
+- test/unit/minitest/minitest_reporter_plugin_test.rb
+- test/unit/minitest/reporters_test.rb
+- test/unit/minitest/spec_reporter_test.rb

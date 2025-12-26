@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: tty-reader
+version: !ruby/object:Gem::Version
+  version: 0.9.0
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-12-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: tty-screen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: tty-cursor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: wisper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: A set of methods for processing keyboard input in character, line and
+  multiline modes. It maintains history of entered input with an ability to recall
+  and re-edit those inputs. It lets you register to listen for keystroke events and
+  trigger custom key events yourself.
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/tty-reader.rb
+- lib/tty/reader.rb
+- lib/tty/reader/console.rb
+- lib/tty/reader/history.rb
+- lib/tty/reader/key_event.rb
+- lib/tty/reader/keys.rb
+- lib/tty/reader/line.rb
+- lib/tty/reader/mode.rb
+- lib/tty/reader/version.rb
+- lib/tty/reader/win_api.rb
+- lib/tty/reader/win_console.rb
+homepage: https://ttytoolkit.org
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/piotrmurach/tty-reader/issues
+  changelog_uri: https://github.com/piotrmurach/tty-reader/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/tty-reader
+  homepage_uri: https://ttytoolkit.org
+  source_code_uri: https://github.com/piotrmurach/tty-reader
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: A set of methods for processing keyboard input in character, line and multiline
+  modes.
+test_files: []

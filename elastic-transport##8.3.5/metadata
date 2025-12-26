@@ -1,0 +1,370 @@
+--- !ruby/object:Gem::Specification
+name: elastic-transport
+version: !ruby/object:Gem::Version
+  version: 8.3.5
+platform: ruby
+authors:
+- Elastic Client Library Maintainers
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-07-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: curb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: require-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 'Low level Ruby client for Elastic. See the `elasticsearch` or `elastic-enterprise-search`
+  gems for full integration.
+
+  '
+email:
+- client-libs@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".github/check_license_headers.rb"
+- ".github/license-header.txt"
+- ".github/workflows/license.yml"
+- ".github/workflows/otel.yml"
+- ".github/workflows/tests.yml"
+- ".gitignore"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile-faraday1.gemfile
+- LICENSE
+- README.md
+- Rakefile
+- elastic-transport.gemspec
+- lib/elastic-transport.rb
+- lib/elastic/transport.rb
+- lib/elastic/transport/client.rb
+- lib/elastic/transport/meta_header.rb
+- lib/elastic/transport/opentelemetry.rb
+- lib/elastic/transport/redacted.rb
+- lib/elastic/transport/transport/base.rb
+- lib/elastic/transport/transport/connections/collection.rb
+- lib/elastic/transport/transport/connections/connection.rb
+- lib/elastic/transport/transport/connections/selector.rb
+- lib/elastic/transport/transport/errors.rb
+- lib/elastic/transport/transport/http/curb.rb
+- lib/elastic/transport/transport/http/faraday.rb
+- lib/elastic/transport/transport/http/manticore.rb
+- lib/elastic/transport/transport/loggable.rb
+- lib/elastic/transport/transport/response.rb
+- lib/elastic/transport/transport/serializer/multi_json.rb
+- lib/elastic/transport/transport/sniffer.rb
+- lib/elastic/transport/version.rb
+- spec/elastic/connections/collection_spec.rb
+- spec/elastic/connections/selector_spec.rb
+- spec/elastic/transport/base_spec.rb
+- spec/elastic/transport/client_spec.rb
+- spec/elastic/transport/http/curb_spec.rb
+- spec/elastic/transport/http/faraday_spec.rb
+- spec/elastic/transport/http/manticore_spec.rb
+- spec/elastic/transport/meta_header_spec.rb
+- spec/elastic/transport/opentelemetry_spec.rb
+- spec/elastic/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/jruby_test.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/adapters_test.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb
+homepage: https://github.com/elastic/elastic-transport-ruby
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://github.com/elastic/elastic-transport-ruby
+  changelog_uri: https://github.com/elastic/elastic-transport-ruby/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/elastic/elastic-transport-ruby
+  bug_tracker_uri: https://github.com/elastic/elastic-transport-ruby/issues
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Low level Ruby client for Elastic services.
+test_files:
+- spec/elastic/connections/collection_spec.rb
+- spec/elastic/connections/selector_spec.rb
+- spec/elastic/transport/base_spec.rb
+- spec/elastic/transport/client_spec.rb
+- spec/elastic/transport/http/curb_spec.rb
+- spec/elastic/transport/http/faraday_spec.rb
+- spec/elastic/transport/http/manticore_spec.rb
+- spec/elastic/transport/meta_header_spec.rb
+- spec/elastic/transport/opentelemetry_spec.rb
+- spec/elastic/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/jruby_test.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/adapters_test.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb

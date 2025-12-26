@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: semantic_logger
+version: !ruby/object:Gem::Version
+  version: 4.16.1
+platform: ruby
+authors:
+- Reid Morrison
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description:
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/semantic_logger.rb
+- lib/semantic_logger/ansi_colors.rb
+- lib/semantic_logger/appender.rb
+- lib/semantic_logger/appender/async.rb
+- lib/semantic_logger/appender/async_batch.rb
+- lib/semantic_logger/appender/bugsnag.rb
+- lib/semantic_logger/appender/elasticsearch.rb
+- lib/semantic_logger/appender/elasticsearch_http.rb
+- lib/semantic_logger/appender/file.rb
+- lib/semantic_logger/appender/graylog.rb
+- lib/semantic_logger/appender/honeybadger.rb
+- lib/semantic_logger/appender/honeybadger_insights.rb
+- lib/semantic_logger/appender/http.rb
+- lib/semantic_logger/appender/io.rb
+- lib/semantic_logger/appender/kafka.rb
+- lib/semantic_logger/appender/mongodb.rb
+- lib/semantic_logger/appender/new_relic.rb
+- lib/semantic_logger/appender/new_relic_logs.rb
+- lib/semantic_logger/appender/rabbitmq.rb
+- lib/semantic_logger/appender/sentry.rb
+- lib/semantic_logger/appender/sentry_ruby.rb
+- lib/semantic_logger/appender/splunk.rb
+- lib/semantic_logger/appender/splunk_http.rb
+- lib/semantic_logger/appender/syslog.rb
+- lib/semantic_logger/appender/tcp.rb
+- lib/semantic_logger/appender/udp.rb
+- lib/semantic_logger/appender/wrapper.rb
+- lib/semantic_logger/appenders.rb
+- lib/semantic_logger/base.rb
+- lib/semantic_logger/concerns/compatibility.rb
+- lib/semantic_logger/core_ext/thread.rb
+- lib/semantic_logger/debug_as_trace_logger.rb
+- lib/semantic_logger/formatters.rb
+- lib/semantic_logger/formatters/base.rb
+- lib/semantic_logger/formatters/color.rb
+- lib/semantic_logger/formatters/default.rb
+- lib/semantic_logger/formatters/fluentd.rb
+- lib/semantic_logger/formatters/json.rb
+- lib/semantic_logger/formatters/logfmt.rb
+- lib/semantic_logger/formatters/new_relic_logs.rb
+- lib/semantic_logger/formatters/one_line.rb
+- lib/semantic_logger/formatters/raw.rb
+- lib/semantic_logger/formatters/signalfx.rb
+- lib/semantic_logger/formatters/syslog.rb
+- lib/semantic_logger/formatters/syslog_cee.rb
+- lib/semantic_logger/jruby/garbage_collection_logger.rb
+- lib/semantic_logger/levels.rb
+- lib/semantic_logger/log.rb
+- lib/semantic_logger/loggable.rb
+- lib/semantic_logger/logger.rb
+- lib/semantic_logger/metric/new_relic.rb
+- lib/semantic_logger/metric/signalfx.rb
+- lib/semantic_logger/metric/statsd.rb
+- lib/semantic_logger/processor.rb
+- lib/semantic_logger/reporters/minitest.rb
+- lib/semantic_logger/semantic_logger.rb
+- lib/semantic_logger/subscriber.rb
+- lib/semantic_logger/sync.rb
+- lib/semantic_logger/sync_processor.rb
+- lib/semantic_logger/test/capture_log_events.rb
+- lib/semantic_logger/test/minitest.rb
+- lib/semantic_logger/utils.rb
+- lib/semantic_logger/version.rb
+homepage: https://logger.rocketjob.io
+licenses:
+- Apache-2.0
+metadata:
+  bug_tracker_uri: https://github.com/reidmorrison/semantic_logger/issues
+  documentation_uri: https://logger.rocketjob.io
+  source_code_uri: https://github.com/reidmorrison/semantic_logger/tree/4.16.1
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Feature rich logging framework, and replacement for existing Ruby & Rails
+  loggers.
+test_files: []

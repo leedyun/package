@@ -1,0 +1,74 @@
+--- !ruby/object:Gem::Specification
+name: angular_rails_csrf
+version: !ruby/object:Gem::Version
+  version: 7.0.0
+platform: ruby
+authors:
+- James Sanders
+- Ilya Krukowski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+description: AngularJS style CSRF protection for Rails
+email:
+- sanderjd@gmail.com
+- golosizpru@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.md
+- README.md
+- Rakefile
+- lib/angular_rails_csrf.rb
+- lib/angular_rails_csrf/concern.rb
+- lib/angular_rails_csrf/railtie.rb
+- lib/angular_rails_csrf/version.rb
+homepage: https://github.com/jsanders/angular_rails_csrf
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: Support for AngularJS $http service style CSRF protection in Rails
+test_files: []

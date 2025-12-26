@@ -1,0 +1,44 @@
+--- !ruby/object:Gem::Specification
+name: sorbet-static
+version: !ruby/object:Gem::Version
+  version: 0.5.11766
+platform: x86_64-linux
+authors:
+- Stripe
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-19 00:00:00.000000000 Z
+dependencies: []
+description: The Sorbet typechecker binary
+email: sorbet@stripe.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- libexec/sorbet
+homepage: https://sorbet.org
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/sorbet/sorbet
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: A Typechecker for Ruby
+test_files: []

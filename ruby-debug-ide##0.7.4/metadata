@@ -1,0 +1,110 @@
+--- !ruby/object:Gem::Specification
+name: ruby-debug-ide
+version: !ruby/object:Gem::Version
+  version: 0.7.4
+platform: ruby
+authors:
+- Markus Barchfeld, Martin Krauskopf, Mark Moseley, Alexandr Evstigneev
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.1
+description: 'An interface which glues ruby-debug to IDEs like Eclipse (RDT), NetBeans
+  and RubyMine.
+
+  '
+email: hurricup@gmail.com
+executables:
+- rdebug-ide
+- gdb_wrapper
+extensions:
+- ext/mkrf_conf.rb
+extra_rdoc_files: []
+files:
+- CHANGES
+- ChangeLog.archive
+- ChangeLog.md
+- Gemfile
+- MIT-LICENSE
+- Rakefile
+- bin/gdb_wrapper
+- bin/rdebug-ide
+- ext/mkrf_conf.rb
+- lib/ruby-debug-ide.rb
+- lib/ruby-debug-ide/attach/debugger_loader.rb
+- lib/ruby-debug-ide/attach/gdb.rb
+- lib/ruby-debug-ide/attach/lldb.rb
+- lib/ruby-debug-ide/attach/native_debugger.rb
+- lib/ruby-debug-ide/attach/process_thread.rb
+- lib/ruby-debug-ide/attach/util.rb
+- lib/ruby-debug-ide/command.rb
+- lib/ruby-debug-ide/commands/breakpoints.rb
+- lib/ruby-debug-ide/commands/catchpoint.rb
+- lib/ruby-debug-ide/commands/condition.rb
+- lib/ruby-debug-ide/commands/control.rb
+- lib/ruby-debug-ide/commands/enable.rb
+- lib/ruby-debug-ide/commands/eval.rb
+- lib/ruby-debug-ide/commands/expression_info.rb
+- lib/ruby-debug-ide/commands/file_filtering.rb
+- lib/ruby-debug-ide/commands/frame.rb
+- lib/ruby-debug-ide/commands/inspect.rb
+- lib/ruby-debug-ide/commands/jump.rb
+- lib/ruby-debug-ide/commands/load.rb
+- lib/ruby-debug-ide/commands/pause.rb
+- lib/ruby-debug-ide/commands/set_type.rb
+- lib/ruby-debug-ide/commands/stepping.rb
+- lib/ruby-debug-ide/commands/threads.rb
+- lib/ruby-debug-ide/commands/variables.rb
+- lib/ruby-debug-ide/event_processor.rb
+- lib/ruby-debug-ide/greeter.rb
+- lib/ruby-debug-ide/helper.rb
+- lib/ruby-debug-ide/ide_processor.rb
+- lib/ruby-debug-ide/interface.rb
+- lib/ruby-debug-ide/multiprocess.rb
+- lib/ruby-debug-ide/multiprocess/monkey.rb
+- lib/ruby-debug-ide/multiprocess/pre_child.rb
+- lib/ruby-debug-ide/multiprocess/starter.rb
+- lib/ruby-debug-ide/multiprocess/unmonkey.rb
+- lib/ruby-debug-ide/thread_alias.rb
+- lib/ruby-debug-ide/version.rb
+- lib/ruby-debug-ide/xml_printer.rb
+- ruby-debug-ide.gemspec
+homepage: https://github.com/ruby-debug/ruby-debug-ide
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.8.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key: 
+specification_version: 4
+summary: IDE interface for ruby-debug.
+test_files: []

@@ -1,0 +1,274 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-experiment
+version: !ruby/object:Gem::Version
+  version: 0.9.1
+platform: ruby
+authors:
+- GitLab
+autorequire:
+bindir: bin
+cert_chain: []
+date:
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: request_store
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: gitlab-dangerfiles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+- !ruby/object:Gem::Dependency
+  name: gitlab-styles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+- !ruby/object:Gem::Dependency
+  name: lefthook
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.7
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.10.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.10.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.20.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.20.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.22.0
+- !ruby/object:Gem::Dependency
+  name: flipper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.26.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.26.2
+- !ruby/object:Gem::Dependency
+  name: generator_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized-table_syntax
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 6.0.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 6.0.3
+- !ruby/object:Gem::Dependency
+  name: simplecov-cobertura
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+description:
+email:
+- gitlab_rubygems@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/generators/gitlab
+- lib/generators/gitlab/experiment
+- lib/generators/gitlab/experiment/USAGE
+- lib/generators/gitlab/experiment/experiment_generator.rb
+- lib/generators/gitlab/experiment/install
+- lib/generators/gitlab/experiment/install/install_generator.rb
+- lib/generators/gitlab/experiment/install/templates
+- lib/generators/gitlab/experiment/install/templates/POST_INSTALL
+- lib/generators/gitlab/experiment/install/templates/application_experiment.rb.tt
+- lib/generators/gitlab/experiment/install/templates/initializer.rb.tt
+- lib/generators/gitlab/experiment/templates
+- lib/generators/gitlab/experiment/templates/experiment.rb.tt
+- lib/generators/rspec
+- lib/generators/rspec/experiment
+- lib/generators/rspec/experiment/experiment_generator.rb
+- lib/generators/rspec/experiment/templates
+- lib/generators/rspec/experiment/templates/experiment_spec.rb.tt
+- lib/generators/test_unit
+- lib/generators/test_unit/experiment
+- lib/generators/test_unit/experiment/experiment_generator.rb
+- lib/generators/test_unit/experiment/templates
+- lib/generators/test_unit/experiment/templates/experiment_test.rb.tt
+- lib/gitlab/experiment
+- lib/gitlab/experiment/base_interface.rb
+- lib/gitlab/experiment/cache
+- lib/gitlab/experiment/cache/redis_hash_store.rb
+- lib/gitlab/experiment/cache.rb
+- lib/gitlab/experiment/callbacks.rb
+- lib/gitlab/experiment/configuration.rb
+- lib/gitlab/experiment/context.rb
+- lib/gitlab/experiment/cookies.rb
+- lib/gitlab/experiment/dsl.rb
+- lib/gitlab/experiment/engine.rb
+- lib/gitlab/experiment/errors.rb
+- lib/gitlab/experiment/middleware.rb
+- lib/gitlab/experiment/nestable.rb
+- lib/gitlab/experiment/rollout
+- lib/gitlab/experiment/rollout/percent.rb
+- lib/gitlab/experiment/rollout/random.rb
+- lib/gitlab/experiment/rollout/round_robin.rb
+- lib/gitlab/experiment/rollout.rb
+- lib/gitlab/experiment/rspec.rb
+- lib/gitlab/experiment/test_behaviors
+- lib/gitlab/experiment/test_behaviors/trackable.rb
+- lib/gitlab/experiment/variant.rb
+- lib/gitlab/experiment/version.rb
+- lib/gitlab/experiment.rb
+- LICENSE.txt
+- README.md
+homepage: https://gitlab.com/gitlab-org/ruby/gems/gitlab-experiment
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: GitLab experimentation library.
+test_files: []

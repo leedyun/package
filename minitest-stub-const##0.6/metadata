@@ -1,0 +1,50 @@
+--- !ruby/object:Gem::Specification
+name: minitest-stub-const
+version: !ruby/object:Gem::Version
+  version: '0.6'
+platform: ruby
+authors:
+- Adam Mckaig
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-11-29 00:00:00.000000000 Z
+dependencies: []
+description: 
+email:
+- adam.mckaig@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/minitest/stub/const.rb
+- lib/minitest/stub_const.rb
+- LICENSE
+- README.md
+- test/test_stub_const.rb
+homepage: https://github.com/adammck/minitest-stub-const
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14.1
+signing_key: 
+specification_version: 4
+summary: Stub constants for the duration of a block in MiniTest
+test_files:
+- test/test_stub_const.rb

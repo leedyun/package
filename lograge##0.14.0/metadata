@@ -1,0 +1,171 @@
+--- !ruby/object:Gem::Specification
+name: lograge
+version: !ruby/object:Gem::Version
+  version: 0.14.0
+platform: ruby
+authors:
+- Mathias Meyer
+- Ben Lovell
+- Michael Bianco
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.23'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.23'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: request_store
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Tame Rails' multi-line logging into a single line per request
+email:
+- meyer@paperplanes.de
+- benjamin.lovell@gmail.com
+- mike@mikebian.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- lib/lograge.rb
+- lib/lograge/formatters/cee.rb
+- lib/lograge/formatters/graylog2.rb
+- lib/lograge/formatters/helpers/method_and_path.rb
+- lib/lograge/formatters/json.rb
+- lib/lograge/formatters/key_value.rb
+- lib/lograge/formatters/key_value_deep.rb
+- lib/lograge/formatters/l2met.rb
+- lib/lograge/formatters/lines.rb
+- lib/lograge/formatters/logstash.rb
+- lib/lograge/formatters/ltsv.rb
+- lib/lograge/formatters/raw.rb
+- lib/lograge/log_subscribers/action_cable.rb
+- lib/lograge/log_subscribers/action_controller.rb
+- lib/lograge/log_subscribers/base.rb
+- lib/lograge/ordered_options.rb
+- lib/lograge/rails_ext/action_cable/channel/base.rb
+- lib/lograge/rails_ext/action_cable/connection/base.rb
+- lib/lograge/rails_ext/action_cable/server/base.rb
+- lib/lograge/rails_ext/rack/logger.rb
+- lib/lograge/railtie.rb
+- lib/lograge/silent_logger.rb
+- lib/lograge/version.rb
+homepage: https://github.com/roidrage/lograge
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+  changelog_uri: https://github.com/roidrage/lograge/blob/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Tame Rails' multi-line logging into a single line per request
+test_files: []

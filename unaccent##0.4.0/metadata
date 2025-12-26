@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: unaccent
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Jonian Guveli
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-08-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+description: Replace accented characters with unaccented characters.
+email:
+- jonian@hardpixel.eu
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CODE_OF_CONDUCT.md
+- LICENSE.txt
+- README.md
+- lib/unaccent.rb
+- lib/unaccent/accentmap.rb
+- lib/unaccent/string.rb
+- lib/unaccent/version.rb
+homepage: https://github.com/hardpixel/unaccent
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Replace accented characters with unaccented characters
+test_files: []

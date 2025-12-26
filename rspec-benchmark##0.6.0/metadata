@@ -1,0 +1,136 @@
+--- !ruby/object:Gem::Specification
+name: rspec-benchmark
+version: !ruby/object:Gem::Version
+  version: 0.6.0
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-03-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: benchmark-malloc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: benchmark-perf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: benchmark-trend
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Performance testing matchers for RSpec to set expectations on speed,
+  resources usage and scalibility.
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/rspec-benchmark.rb
+- lib/rspec/benchmark.rb
+- lib/rspec/benchmark/allocation_matcher.rb
+- lib/rspec/benchmark/comparison_matcher.rb
+- lib/rspec/benchmark/complexity_matcher.rb
+- lib/rspec/benchmark/configuration.rb
+- lib/rspec/benchmark/formatter.rb
+- lib/rspec/benchmark/iteration_matcher.rb
+- lib/rspec/benchmark/matchers.rb
+- lib/rspec/benchmark/timing_matcher.rb
+- lib/rspec/benchmark/version.rb
+homepage: https://github.com/piotrmurach/rspec-benchmark
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/piotrmurach/rspec-benchmark/issues
+  changelog_uri: https://github.com/piotrmurach/rspec-benchmark/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/rspec-benchmark
+  homepage_uri: https://github.com/piotrmurach/rspec-benchmark
+  source_code_uri: https://github.com/piotrmurach/rspec-benchmark
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Performance testing matchers for RSpec
+test_files: []

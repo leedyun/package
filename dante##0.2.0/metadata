@@ -1,0 +1,100 @@
+--- !ruby/object:Gem::Specification
+name: dante
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Nathan Esquenazi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-12-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Turn any process into a demon.
+email:
+- nesquena@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- dante.gemspec
+- lib/dante.rb
+- lib/dante/runner.rb
+- lib/dante/version.rb
+- test/dante_test.rb
+- test/runner_test.rb
+- test/test_helper.rb
+homepage: https://github.com/bazaarlabs/dante
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: dante
+rubygems_version: 2.0.7
+signing_key: 
+specification_version: 4
+summary: Turn any process into a demon
+test_files:
+- test/dante_test.rb
+- test/runner_test.rb
+- test/test_helper.rb

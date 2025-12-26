@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: http-2
+version: !ruby/object:Gem::Version
+  version: 1.0.2
+platform: ruby
+authors:
+- Tiago Cardoso
+- Ilya Grigorik
+- Kaoru Maeda
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-05 00:00:00.000000000 Z
+dependencies: []
+description: Pure-ruby HTTP 2.0 protocol implementation
+email:
+- cardoso_tiago@hotmail.com
+- ilya@igvita.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/http/2.rb
+- lib/http/2/base64.rb
+- lib/http/2/client.rb
+- lib/http/2/connection.rb
+- lib/http/2/emitter.rb
+- lib/http/2/error.rb
+- lib/http/2/extensions.rb
+- lib/http/2/flow_buffer.rb
+- lib/http/2/framer.rb
+- lib/http/2/header.rb
+- lib/http/2/header/compressor.rb
+- lib/http/2/header/decompressor.rb
+- lib/http/2/header/encoding_context.rb
+- lib/http/2/header/huffman.rb
+- lib/http/2/header/huffman_statemachine.rb
+- lib/http/2/server.rb
+- lib/http/2/stream.rb
+- lib/http/2/version.rb
+- sig/client.rbs
+- sig/connection.rbs
+- sig/emitter.rbs
+- sig/error.rbs
+- sig/extensions.rbs
+- sig/flow_buffer.rbs
+- sig/frame_buffer.rbs
+- sig/framer.rbs
+- sig/header.rbs
+- sig/header/compressor.rbs
+- sig/header/decompressor.rbs
+- sig/header/encoding_context.rbs
+- sig/header/huffman.rbs
+- sig/next.rbs
+- sig/server.rbs
+- sig/stream.rbs
+homepage: https://github.com/igrigorik/http-2
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/igrigorik/http-2/issues
+  changelog_uri: https://github.com/igrigorik/http-2/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/igrigorik/http-2
+  homepage_uri: https://github.com/igrigorik/http-2
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Pure-ruby HTTP 2.0 protocol implementation
+test_files: []

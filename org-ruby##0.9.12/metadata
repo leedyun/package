@@ -1,0 +1,78 @@
+--- !ruby/object:Gem::Specification
+name: org-ruby
+version: !ruby/object:Gem::Version
+  version: 0.9.12
+platform: ruby
+authors:
+- Brian Dewey
+- Waldemar Quevedo
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-12-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubypants
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+description: An Org mode parser written in Ruby.
+email: waldemar.quevedo@gmail.com
+executables:
+- org-ruby
+extensions: []
+extra_rdoc_files:
+- History.org
+- README.org
+- bin/org-ruby
+files:
+- History.org
+- README.org
+- bin/org-ruby
+- lib/org-ruby.rb
+- lib/org-ruby/headline.rb
+- lib/org-ruby/html_output_buffer.rb
+- lib/org-ruby/html_symbol_replace.rb
+- lib/org-ruby/line.rb
+- lib/org-ruby/markdown_output_buffer.rb
+- lib/org-ruby/output_buffer.rb
+- lib/org-ruby/parser.rb
+- lib/org-ruby/regexp_helper.rb
+- lib/org-ruby/textile_output_buffer.rb
+- lib/org-ruby/textile_symbol_replace.rb
+- lib/org-ruby/tilt.rb
+- lib/org-ruby/version.rb
+homepage: https://github.com/wallyqs/org-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: org-ruby
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 3
+summary: This gem contains Ruby routines for parsing org-mode files.
+test_files: []

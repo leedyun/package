@@ -1,0 +1,117 @@
+--- !ruby/object:Gem::Specification
+name: turbo-rails
+version: !ruby/object:Gem::Version
+  version: 2.0.11
+platform: ruby
+authors:
+- Sam Stephenson
+- Javan Mahkmali
+- David Heinemeier Hansson
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+description:
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- Rakefile
+- app/assets/javascripts/turbo.js
+- app/assets/javascripts/turbo.min.js
+- app/assets/javascripts/turbo.min.js.map
+- app/channels/turbo/streams/broadcasts.rb
+- app/channels/turbo/streams/stream_name.rb
+- app/channels/turbo/streams_channel.rb
+- app/controllers/concerns/turbo/request_id_tracking.rb
+- app/controllers/turbo/frames/frame_request.rb
+- app/controllers/turbo/native/navigation.rb
+- app/controllers/turbo/native/navigation_controller.rb
+- app/controllers/turbo/streams/turbo_streams_tag_builder.rb
+- app/helpers/turbo/drive_helper.rb
+- app/helpers/turbo/frames_helper.rb
+- app/helpers/turbo/includes_helper.rb
+- app/helpers/turbo/streams/action_helper.rb
+- app/helpers/turbo/streams_helper.rb
+- app/javascript/turbo/cable.js
+- app/javascript/turbo/cable_stream_source_element.js
+- app/javascript/turbo/fetch_requests.js
+- app/javascript/turbo/index.js
+- app/javascript/turbo/snakeize.js
+- app/jobs/turbo/streams/action_broadcast_job.rb
+- app/jobs/turbo/streams/broadcast_job.rb
+- app/jobs/turbo/streams/broadcast_stream_job.rb
+- app/models/concerns/turbo/broadcastable.rb
+- app/models/turbo/debouncer.rb
+- app/models/turbo/streams/tag_builder.rb
+- app/models/turbo/thread_debouncer.rb
+- app/views/layouts/turbo_rails/frame.html.erb
+- config/routes.rb
+- lib/install/turbo_with_bun.rb
+- lib/install/turbo_with_importmap.rb
+- lib/install/turbo_with_node.rb
+- lib/tasks/turbo_tasks.rake
+- lib/turbo-rails.rb
+- lib/turbo/broadcastable/test_helper.rb
+- lib/turbo/engine.rb
+- lib/turbo/system_test_helper.rb
+- lib/turbo/test_assertions.rb
+- lib/turbo/test_assertions/integration_test_assertions.rb
+- lib/turbo/version.rb
+homepage: https://github.com/hotwired/turbo-rails
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/hotwired/turbo-rails/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: The speed of a single-page web application without having to write any JavaScript.
+test_files: []

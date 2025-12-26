@@ -1,0 +1,162 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-expressions
+version: !ruby/object:Gem::Version
+  version: 8.3.0
+platform: ruby
+authors:
+- Aslak Hellesøy
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.9.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.9.0
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.23
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.23
+description: Cucumber Expressions - a simpler alternative to Regular Expressions
+email: cukes@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/ISSUE_TEMPLATE.md"
+- ".github/PULL_REQUEST_TEMPLATE.md"
+- ".rspec"
+- ".rsync"
+- ".subrepo"
+- Gemfile
+- LICENSE
+- Makefile
+- README.md
+- Rakefile
+- cucumber-expressions.gemspec
+- default.mk
+- examples.txt
+- lib/cucumber/cucumber_expressions/argument.rb
+- lib/cucumber/cucumber_expressions/combinatorial_generated_expression_factory.rb
+- lib/cucumber/cucumber_expressions/cucumber_expression.rb
+- lib/cucumber/cucumber_expressions/cucumber_expression_generator.rb
+- lib/cucumber/cucumber_expressions/errors.rb
+- lib/cucumber/cucumber_expressions/generated_expression.rb
+- lib/cucumber/cucumber_expressions/group.rb
+- lib/cucumber/cucumber_expressions/group_builder.rb
+- lib/cucumber/cucumber_expressions/parameter_type.rb
+- lib/cucumber/cucumber_expressions/parameter_type_matcher.rb
+- lib/cucumber/cucumber_expressions/parameter_type_registry.rb
+- lib/cucumber/cucumber_expressions/regular_expression.rb
+- lib/cucumber/cucumber_expressions/tree_regexp.rb
+- scripts/update-gemspec
+- spec/capture_warnings.rb
+- spec/coverage.rb
+- spec/cucumber/cucumber_expressions/argument_spec.rb
+- spec/cucumber/cucumber_expressions/combinatorial_generated_expression_factory_test.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_generator_spec.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_regexp_spec.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_spec.rb
+- spec/cucumber/cucumber_expressions/custom_parameter_type_spec.rb
+- spec/cucumber/cucumber_expressions/expression_examples_spec.rb
+- spec/cucumber/cucumber_expressions/parameter_type_registry_spec.rb
+- spec/cucumber/cucumber_expressions/parameter_type_spec.rb
+- spec/cucumber/cucumber_expressions/regular_expression_spec.rb
+- spec/cucumber/cucumber_expressions/tree_regexp_spec.rb
+homepage: https://github.com/cucumber/cucumber-expressions-ruby#readme
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/cucumber/issues
+  changelog_uri: https://github.com/cucumber/cucumber/blob/master/cucumber-expressions/CHANGELOG.md
+  documentation_uri: https://cucumber.io/docs/cucumber/cucumber-expressions/
+  mailing_list_uri: https://groups.google.com/forum/#!forum/cukes
+  source_code_uri: https://github.com/cucumber/cucumber/blob/master/cucumber-expressions/ruby
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6.2
+signing_key: 
+specification_version: 4
+summary: cucumber-expressions-8.3.0
+test_files:
+- spec/capture_warnings.rb
+- spec/coverage.rb
+- spec/cucumber/cucumber_expressions/argument_spec.rb
+- spec/cucumber/cucumber_expressions/combinatorial_generated_expression_factory_test.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_generator_spec.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_regexp_spec.rb
+- spec/cucumber/cucumber_expressions/cucumber_expression_spec.rb
+- spec/cucumber/cucumber_expressions/custom_parameter_type_spec.rb
+- spec/cucumber/cucumber_expressions/expression_examples_spec.rb
+- spec/cucumber/cucumber_expressions/parameter_type_registry_spec.rb
+- spec/cucumber/cucumber_expressions/parameter_type_spec.rb
+- spec/cucumber/cucumber_expressions/regular_expression_spec.rb
+- spec/cucumber/cucumber_expressions/tree_regexp_spec.rb

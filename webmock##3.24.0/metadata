@@ -1,0 +1,399 @@
+--- !ruby/object:Gem::Specification
+name: webmock
+version: !ruby/object:Gem::Version
+  version: 3.24.0
+platform: ruby
+authors:
+- Bartosz Blimke
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+- !ruby/object:Gem::Dependency
+  name: crack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+- !ruby/object:Gem::Dependency
+  name: hashdiff
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: patron
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.18
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.18
+- !ruby/object:Gem::Dependency
+  name: curb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.16
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.16
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: em-http-request
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+- !ruby/object:Gem::Dependency
+  name: em-synchrony
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: async-http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.48.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.48.0
+- !ruby/object:Gem::Dependency
+  name: http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.4
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: excon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.27.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.27.5
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-retry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: WebMock allows stubbing HTTP requests and setting expectations on HTTP
+  requests.
+email:
+- bartosz.blimke@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/webmock.rb
+- lib/webmock/api.rb
+- lib/webmock/assertion_failure.rb
+- lib/webmock/callback_registry.rb
+- lib/webmock/config.rb
+- lib/webmock/cucumber.rb
+- lib/webmock/deprecation.rb
+- lib/webmock/errors.rb
+- lib/webmock/http_lib_adapters/async_http_client_adapter.rb
+- lib/webmock/http_lib_adapters/curb_adapter.rb
+- lib/webmock/http_lib_adapters/em_http_request_adapter.rb
+- lib/webmock/http_lib_adapters/excon_adapter.rb
+- lib/webmock/http_lib_adapters/http_lib_adapter.rb
+- lib/webmock/http_lib_adapters/http_lib_adapter_registry.rb
+- lib/webmock/http_lib_adapters/http_rb/client.rb
+- lib/webmock/http_lib_adapters/http_rb/request.rb
+- lib/webmock/http_lib_adapters/http_rb/response.rb
+- lib/webmock/http_lib_adapters/http_rb/streamer.rb
+- lib/webmock/http_lib_adapters/http_rb/webmock.rb
+- lib/webmock/http_lib_adapters/http_rb_adapter.rb
+- lib/webmock/http_lib_adapters/httpclient_adapter.rb
+- lib/webmock/http_lib_adapters/manticore_adapter.rb
+- lib/webmock/http_lib_adapters/net_http.rb
+- lib/webmock/http_lib_adapters/net_http_response.rb
+- lib/webmock/http_lib_adapters/patron_adapter.rb
+- lib/webmock/http_lib_adapters/typhoeus_hydra_adapter.rb
+- lib/webmock/matchers/any_arg_matcher.rb
+- lib/webmock/matchers/hash_argument_matcher.rb
+- lib/webmock/matchers/hash_excluding_matcher.rb
+- lib/webmock/matchers/hash_including_matcher.rb
+- lib/webmock/minitest.rb
+- lib/webmock/rack_response.rb
+- lib/webmock/request_body_diff.rb
+- lib/webmock/request_execution_verifier.rb
+- lib/webmock/request_pattern.rb
+- lib/webmock/request_registry.rb
+- lib/webmock/request_signature.rb
+- lib/webmock/request_signature_snippet.rb
+- lib/webmock/request_stub.rb
+- lib/webmock/response.rb
+- lib/webmock/responses_sequence.rb
+- lib/webmock/rspec.rb
+- lib/webmock/rspec/matchers.rb
+- lib/webmock/rspec/matchers/request_pattern_matcher.rb
+- lib/webmock/rspec/matchers/webmock_matcher.rb
+- lib/webmock/stub_registry.rb
+- lib/webmock/stub_request_snippet.rb
+- lib/webmock/test_unit.rb
+- lib/webmock/util/hash_counter.rb
+- lib/webmock/util/hash_keys_stringifier.rb
+- lib/webmock/util/hash_validator.rb
+- lib/webmock/util/headers.rb
+- lib/webmock/util/parsers/json.rb
+- lib/webmock/util/parsers/parse_error.rb
+- lib/webmock/util/parsers/xml.rb
+- lib/webmock/util/query_mapper.rb
+- lib/webmock/util/uri.rb
+- lib/webmock/util/values_stringifier.rb
+- lib/webmock/util/version_checker.rb
+- lib/webmock/version.rb
+- lib/webmock/webmock.rb
+homepage: https://github.com/bblimke/webmock
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/bblimke/webmock/issues
+  changelog_uri: https://github.com/bblimke/webmock/blob/v3.24.0/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/webmock/3.24.0
+  source_code_uri: https://github.com/bblimke/webmock/tree/v3.24.0
+  wiki_uri: https://github.com/bblimke/webmock/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Library for stubbing HTTP requests in Ruby.
+test_files: []

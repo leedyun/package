@@ -1,0 +1,329 @@
+--- !ruby/object:Gem::Specification
+name: overcommit
+version: !ruby/object:Gem::Version
+  version: 0.64.1
+platform: ruby
+authors:
+- Shane da Silva
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: childprocess
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: iniparse
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.9
+description: Utility to install, configure, and extend Git hooks
+email:
+- shane@dasilva.io
+executables:
+- overcommit
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/overcommit
+- config/default.yml
+- config/starter.yml
+- lib/overcommit.rb
+- lib/overcommit/cli.rb
+- lib/overcommit/command_splitter.rb
+- lib/overcommit/configuration.rb
+- lib/overcommit/configuration_loader.rb
+- lib/overcommit/configuration_validator.rb
+- lib/overcommit/constants.rb
+- lib/overcommit/exceptions.rb
+- lib/overcommit/git_config.rb
+- lib/overcommit/git_repo.rb
+- lib/overcommit/git_version.rb
+- lib/overcommit/hook/base.rb
+- lib/overcommit/hook/commit_msg/base.rb
+- lib/overcommit/hook/commit_msg/capitalized_subject.rb
+- lib/overcommit/hook/commit_msg/empty_message.rb
+- lib/overcommit/hook/commit_msg/gerrit_change_id.rb
+- lib/overcommit/hook/commit_msg/hard_tabs.rb
+- lib/overcommit/hook/commit_msg/message_format.rb
+- lib/overcommit/hook/commit_msg/russian_novel.rb
+- lib/overcommit/hook/commit_msg/single_line_subject.rb
+- lib/overcommit/hook/commit_msg/spell_check.rb
+- lib/overcommit/hook/commit_msg/text_width.rb
+- lib/overcommit/hook/commit_msg/trailing_period.rb
+- lib/overcommit/hook/post_checkout/base.rb
+- lib/overcommit/hook/post_checkout/bower_install.rb
+- lib/overcommit/hook/post_checkout/bundle_install.rb
+- lib/overcommit/hook/post_checkout/composer_install.rb
+- lib/overcommit/hook/post_checkout/index_tags.rb
+- lib/overcommit/hook/post_checkout/npm_install.rb
+- lib/overcommit/hook/post_checkout/submodule_status.rb
+- lib/overcommit/hook/post_checkout/yarn_install.rb
+- lib/overcommit/hook/post_commit/base.rb
+- lib/overcommit/hook/post_commit/bower_install.rb
+- lib/overcommit/hook/post_commit/bundle_install.rb
+- lib/overcommit/hook/post_commit/commitplease.rb
+- lib/overcommit/hook/post_commit/composer_install.rb
+- lib/overcommit/hook/post_commit/git_guilt.rb
+- lib/overcommit/hook/post_commit/index_tags.rb
+- lib/overcommit/hook/post_commit/npm_install.rb
+- lib/overcommit/hook/post_commit/submodule_status.rb
+- lib/overcommit/hook/post_commit/yarn_install.rb
+- lib/overcommit/hook/post_merge/base.rb
+- lib/overcommit/hook/post_merge/bower_install.rb
+- lib/overcommit/hook/post_merge/bundle_install.rb
+- lib/overcommit/hook/post_merge/composer_install.rb
+- lib/overcommit/hook/post_merge/index_tags.rb
+- lib/overcommit/hook/post_merge/npm_install.rb
+- lib/overcommit/hook/post_merge/submodule_status.rb
+- lib/overcommit/hook/post_merge/yarn_install.rb
+- lib/overcommit/hook/post_rewrite/base.rb
+- lib/overcommit/hook/post_rewrite/bower_install.rb
+- lib/overcommit/hook/post_rewrite/bundle_install.rb
+- lib/overcommit/hook/post_rewrite/composer_install.rb
+- lib/overcommit/hook/post_rewrite/index_tags.rb
+- lib/overcommit/hook/post_rewrite/npm_install.rb
+- lib/overcommit/hook/post_rewrite/submodule_status.rb
+- lib/overcommit/hook/post_rewrite/yarn_install.rb
+- lib/overcommit/hook/pre_commit/author_email.rb
+- lib/overcommit/hook/pre_commit/author_name.rb
+- lib/overcommit/hook/pre_commit/base.rb
+- lib/overcommit/hook/pre_commit/berksfile_check.rb
+- lib/overcommit/hook/pre_commit/broken_symlinks.rb
+- lib/overcommit/hook/pre_commit/bundle_audit.rb
+- lib/overcommit/hook/pre_commit/bundle_check.rb
+- lib/overcommit/hook/pre_commit/bundle_outdated.rb
+- lib/overcommit/hook/pre_commit/case_conflicts.rb
+- lib/overcommit/hook/pre_commit/chamber_compare.rb
+- lib/overcommit/hook/pre_commit/chamber_security.rb
+- lib/overcommit/hook/pre_commit/chamber_verification.rb
+- lib/overcommit/hook/pre_commit/code_spell_check.rb
+- lib/overcommit/hook/pre_commit/coffee_lint.rb
+- lib/overcommit/hook/pre_commit/cook_style.rb
+- lib/overcommit/hook/pre_commit/credo.rb
+- lib/overcommit/hook/pre_commit/css_lint.rb
+- lib/overcommit/hook/pre_commit/dart_analyzer.rb
+- lib/overcommit/hook/pre_commit/dogma.rb
+- lib/overcommit/hook/pre_commit/erb_lint.rb
+- lib/overcommit/hook/pre_commit/es_lint.rb
+- lib/overcommit/hook/pre_commit/execute_permissions.rb
+- lib/overcommit/hook/pre_commit/fasterer.rb
+- lib/overcommit/hook/pre_commit/file_size.rb
+- lib/overcommit/hook/pre_commit/fix_me.rb
+- lib/overcommit/hook/pre_commit/flay.rb
+- lib/overcommit/hook/pre_commit/foodcritic.rb
+- lib/overcommit/hook/pre_commit/forbidden_branches.rb
+- lib/overcommit/hook/pre_commit/ginkgo_focus.rb
+- lib/overcommit/hook/pre_commit/go_fmt.rb
+- lib/overcommit/hook/pre_commit/go_lint.rb
+- lib/overcommit/hook/pre_commit/go_vet.rb
+- lib/overcommit/hook/pre_commit/golangci_lint.rb
+- lib/overcommit/hook/pre_commit/hadolint.rb
+- lib/overcommit/hook/pre_commit/haml_lint.rb
+- lib/overcommit/hook/pre_commit/hard_tabs.rb
+- lib/overcommit/hook/pre_commit/hlint.rb
+- lib/overcommit/hook/pre_commit/html_hint.rb
+- lib/overcommit/hook/pre_commit/html_tidy.rb
+- lib/overcommit/hook/pre_commit/image_optim.rb
+- lib/overcommit/hook/pre_commit/java_checkstyle.rb
+- lib/overcommit/hook/pre_commit/js_hint.rb
+- lib/overcommit/hook/pre_commit/js_lint.rb
+- lib/overcommit/hook/pre_commit/jscs.rb
+- lib/overcommit/hook/pre_commit/jsl.rb
+- lib/overcommit/hook/pre_commit/json_syntax.rb
+- lib/overcommit/hook/pre_commit/kt_lint.rb
+- lib/overcommit/hook/pre_commit/license_finder.rb
+- lib/overcommit/hook/pre_commit/license_header.rb
+- lib/overcommit/hook/pre_commit/line_endings.rb
+- lib/overcommit/hook/pre_commit/local_paths_in_gemfile.rb
+- lib/overcommit/hook/pre_commit/mdl.rb
+- lib/overcommit/hook/pre_commit/merge_conflicts.rb
+- lib/overcommit/hook/pre_commit/mix_format.rb
+- lib/overcommit/hook/pre_commit/nginx_test.rb
+- lib/overcommit/hook/pre_commit/pep257.rb
+- lib/overcommit/hook/pre_commit/pep8.rb
+- lib/overcommit/hook/pre_commit/php_cs.rb
+- lib/overcommit/hook/pre_commit/php_cs_fixer.rb
+- lib/overcommit/hook/pre_commit/php_lint.rb
+- lib/overcommit/hook/pre_commit/php_stan.rb
+- lib/overcommit/hook/pre_commit/pronto.rb
+- lib/overcommit/hook/pre_commit/puppet_lint.rb
+- lib/overcommit/hook/pre_commit/puppet_metadata_json_lint.rb
+- lib/overcommit/hook/pre_commit/pycodestyle.rb
+- lib/overcommit/hook/pre_commit/pydocstyle.rb
+- lib/overcommit/hook/pre_commit/pyflakes.rb
+- lib/overcommit/hook/pre_commit/pylint.rb
+- lib/overcommit/hook/pre_commit/python_flake8.rb
+- lib/overcommit/hook/pre_commit/r_spec.rb
+- lib/overcommit/hook/pre_commit/rails_best_practices.rb
+- lib/overcommit/hook/pre_commit/rails_schema_up_to_date.rb
+- lib/overcommit/hook/pre_commit/rake_target.rb
+- lib/overcommit/hook/pre_commit/reek.rb
+- lib/overcommit/hook/pre_commit/rst_lint.rb
+- lib/overcommit/hook/pre_commit/rubo_cop.rb
+- lib/overcommit/hook/pre_commit/ruby_lint.rb
+- lib/overcommit/hook/pre_commit/ruby_syntax.rb
+- lib/overcommit/hook/pre_commit/scalariform.rb
+- lib/overcommit/hook/pre_commit/scalastyle.rb
+- lib/overcommit/hook/pre_commit/scss_lint.rb
+- lib/overcommit/hook/pre_commit/semi_standard.rb
+- lib/overcommit/hook/pre_commit/shell_check.rb
+- lib/overcommit/hook/pre_commit/slim_lint.rb
+- lib/overcommit/hook/pre_commit/sorbet.rb
+- lib/overcommit/hook/pre_commit/sqlint.rb
+- lib/overcommit/hook/pre_commit/standard.rb
+- lib/overcommit/hook/pre_commit/stylelint.rb
+- lib/overcommit/hook/pre_commit/swift_lint.rb
+- lib/overcommit/hook/pre_commit/terraform_format.rb
+- lib/overcommit/hook/pre_commit/trailing_whitespace.rb
+- lib/overcommit/hook/pre_commit/travis_lint.rb
+- lib/overcommit/hook/pre_commit/ts_lint.rb
+- lib/overcommit/hook/pre_commit/vint.rb
+- lib/overcommit/hook/pre_commit/w3c_css.rb
+- lib/overcommit/hook/pre_commit/w3c_html.rb
+- lib/overcommit/hook/pre_commit/xml_lint.rb
+- lib/overcommit/hook/pre_commit/xml_syntax.rb
+- lib/overcommit/hook/pre_commit/yaml_lint.rb
+- lib/overcommit/hook/pre_commit/yaml_syntax.rb
+- lib/overcommit/hook/pre_commit/yard_coverage.rb
+- lib/overcommit/hook/pre_commit/yarn_check.rb
+- lib/overcommit/hook/pre_push/base.rb
+- lib/overcommit/hook/pre_push/brakeman.rb
+- lib/overcommit/hook/pre_push/cargo_test.rb
+- lib/overcommit/hook/pre_push/flutter_test.rb
+- lib/overcommit/hook/pre_push/go_test.rb
+- lib/overcommit/hook/pre_push/golangci_lint.rb
+- lib/overcommit/hook/pre_push/minitest.rb
+- lib/overcommit/hook/pre_push/mix_test.rb
+- lib/overcommit/hook/pre_push/php_unit.rb
+- lib/overcommit/hook/pre_push/pronto.rb
+- lib/overcommit/hook/pre_push/protected_branches.rb
+- lib/overcommit/hook/pre_push/pub_test.rb
+- lib/overcommit/hook/pre_push/pytest.rb
+- lib/overcommit/hook/pre_push/python_nose.rb
+- lib/overcommit/hook/pre_push/r_spec.rb
+- lib/overcommit/hook/pre_push/rake_target.rb
+- lib/overcommit/hook/pre_push/test_unit.rb
+- lib/overcommit/hook/pre_rebase/base.rb
+- lib/overcommit/hook/pre_rebase/merged_commits.rb
+- lib/overcommit/hook/prepare_commit_msg/base.rb
+- lib/overcommit/hook/prepare_commit_msg/replace_branch.rb
+- lib/overcommit/hook/shared/bower_install.rb
+- lib/overcommit/hook/shared/bundle_install.rb
+- lib/overcommit/hook/shared/composer_install.rb
+- lib/overcommit/hook/shared/index_tags.rb
+- lib/overcommit/hook/shared/npm_install.rb
+- lib/overcommit/hook/shared/pronto.rb
+- lib/overcommit/hook/shared/r_spec.rb
+- lib/overcommit/hook/shared/rake_target.rb
+- lib/overcommit/hook/shared/submodule_status.rb
+- lib/overcommit/hook/shared/yarn_install.rb
+- lib/overcommit/hook_context.rb
+- lib/overcommit/hook_context/base.rb
+- lib/overcommit/hook_context/commit_msg.rb
+- lib/overcommit/hook_context/helpers/file_modifications.rb
+- lib/overcommit/hook_context/helpers/stash_unstaged_changes.rb
+- lib/overcommit/hook_context/post_checkout.rb
+- lib/overcommit/hook_context/post_commit.rb
+- lib/overcommit/hook_context/post_merge.rb
+- lib/overcommit/hook_context/post_rewrite.rb
+- lib/overcommit/hook_context/pre_commit.rb
+- lib/overcommit/hook_context/pre_push.rb
+- lib/overcommit/hook_context/pre_rebase.rb
+- lib/overcommit/hook_context/prepare_commit_msg.rb
+- lib/overcommit/hook_context/run_all.rb
+- lib/overcommit/hook_loader/base.rb
+- lib/overcommit/hook_loader/built_in_hook_loader.rb
+- lib/overcommit/hook_loader/plugin_hook_loader.rb
+- lib/overcommit/hook_runner.rb
+- lib/overcommit/hook_signer.rb
+- lib/overcommit/installer.rb
+- lib/overcommit/interrupt_handler.rb
+- lib/overcommit/logger.rb
+- lib/overcommit/message_processor.rb
+- lib/overcommit/os.rb
+- lib/overcommit/printer.rb
+- lib/overcommit/subprocess.rb
+- lib/overcommit/utils.rb
+- lib/overcommit/utils/file_utils.rb
+- lib/overcommit/utils/messages_utils.rb
+- lib/overcommit/version.rb
+- libexec/gerrit-change-id
+- libexec/index-tags
+- template-dir/hooks/commit-msg
+- template-dir/hooks/overcommit-hook
+- template-dir/hooks/post-checkout
+- template-dir/hooks/post-commit
+- template-dir/hooks/post-merge
+- template-dir/hooks/post-rewrite
+- template-dir/hooks/pre-commit
+- template-dir/hooks/pre-push
+- template-dir/hooks/pre-rebase
+- template-dir/hooks/prepare-commit-msg
+homepage: https://github.com/sds/overcommit
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/sds/overcommit/blob/main/CHANGELOG.md
+post_install_message: Install hooks by running `overcommit --install` in your Git
+  repository
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Git hook manager
+test_files: []

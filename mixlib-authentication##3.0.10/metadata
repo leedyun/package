@@ -1,0 +1,50 @@
+--- !ruby/object:Gem::Specification
+name: mixlib-authentication
+version: !ruby/object:Gem::Version
+  version: 3.0.10
+platform: ruby
+authors:
+- Chef Software, Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-03-15 00:00:00.000000000 Z
+dependencies: []
+description: Mixes in simple per-request authentication
+email: info@chef.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/mixlib/authentication.rb
+- lib/mixlib/authentication/digester.rb
+- lib/mixlib/authentication/http_authentication_request.rb
+- lib/mixlib/authentication/null_logger.rb
+- lib/mixlib/authentication/signatureverification.rb
+- lib/mixlib/authentication/signedheaderauth.rb
+- lib/mixlib/authentication/version.rb
+homepage: https://github.com/chef/mixlib-authentication
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Mixes in simple per-request authentication
+test_files: []

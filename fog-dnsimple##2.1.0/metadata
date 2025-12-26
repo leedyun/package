@@ -1,0 +1,166 @@
+--- !ruby/object:Gem::Specification
+name: fog-dnsimple
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- Simone Carletti
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2018-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.38'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.38'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  This library can be used as a module for `fog` or as standalone provider
+                          to use the DNSimple in applications.
+email:
+- weppos@weppos.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".ruby-gemset"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- fog-dnsimple.gemspec
+- lib/fog/bin/dnsimple.rb
+- lib/fog/dnsimple.rb
+- lib/fog/dnsimple/dns.rb
+- lib/fog/dnsimple/models/dns/record.rb
+- lib/fog/dnsimple/models/dns/records.rb
+- lib/fog/dnsimple/models/dns/zone.rb
+- lib/fog/dnsimple/models/dns/zones.rb
+- lib/fog/dnsimple/requests/dns/create_domain.rb
+- lib/fog/dnsimple/requests/dns/create_record.rb
+- lib/fog/dnsimple/requests/dns/delete_domain.rb
+- lib/fog/dnsimple/requests/dns/delete_record.rb
+- lib/fog/dnsimple/requests/dns/get_domain.rb
+- lib/fog/dnsimple/requests/dns/get_record.rb
+- lib/fog/dnsimple/requests/dns/list_all_domains.rb
+- lib/fog/dnsimple/requests/dns/list_all_records.rb
+- lib/fog/dnsimple/requests/dns/list_domains.rb
+- lib/fog/dnsimple/requests/dns/list_records.rb
+- lib/fog/dnsimple/requests/dns/update_record.rb
+- lib/fog/dnsimple/version.rb
+homepage: https://github.com/fog/fog-dnsimple
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: Module for the 'fog' gem to support DNSimple.
+test_files: []

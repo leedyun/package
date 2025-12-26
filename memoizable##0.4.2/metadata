@@ -1,0 +1,130 @@
+--- !ruby/object:Gem::Specification
+name: memoizable
+version: !ruby/object:Gem::Version
+  version: 0.4.2
+platform: ruby
+authors:
+- Dan Kubb
+- Erik Michaels-Ober
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-03-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: thread_safe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '0.3'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '0.3'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+description: Memoize method return values
+email:
+- dan.kubb@gmail.com
+- sferik@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- CONTRIBUTING.md
+- LICENSE.md
+- README.md
+files:
+- CONTRIBUTING.md
+- LICENSE.md
+- README.md
+- Rakefile
+- lib/memoizable.rb
+- lib/memoizable/instance_methods.rb
+- lib/memoizable/memory.rb
+- lib/memoizable/method_builder.rb
+- lib/memoizable/module_methods.rb
+- lib/memoizable/version.rb
+- memoizable.gemspec
+- spec/integration/serializable_spec.rb
+- spec/shared/call_super_shared_spec.rb
+- spec/shared/command_method_behavior.rb
+- spec/spec_helper.rb
+- spec/unit/memoizable/class_methods/included_spec.rb
+- spec/unit/memoizable/fixtures/classes.rb
+- spec/unit/memoizable/instance_methods/freeze_spec.rb
+- spec/unit/memoizable/instance_methods/memoize_spec.rb
+- spec/unit/memoizable/memory_spec.rb
+- spec/unit/memoizable/method_builder/call_spec.rb
+- spec/unit/memoizable/method_builder/class_methods/new_spec.rb
+- spec/unit/memoizable/method_builder/original_method_spec.rb
+- spec/unit/memoizable/module_methods/included_spec.rb
+- spec/unit/memoizable/module_methods/memoize_spec.rb
+- spec/unit/memoizable/module_methods/memoized_predicate_spec.rb
+- spec/unit/memoizable/module_methods/unmemoized_instance_method_spec.rb
+homepage: https://github.com/dkubb/memoizable
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Memoize method return values
+test_files:
+- spec/unit/memoizable/class_methods/included_spec.rb
+- spec/unit/memoizable/fixtures/classes.rb
+- spec/unit/memoizable/instance_methods/freeze_spec.rb
+- spec/unit/memoizable/instance_methods/memoize_spec.rb
+- spec/unit/memoizable/memory_spec.rb
+- spec/unit/memoizable/method_builder/call_spec.rb
+- spec/unit/memoizable/method_builder/class_methods/new_spec.rb
+- spec/unit/memoizable/method_builder/original_method_spec.rb
+- spec/unit/memoizable/module_methods/included_spec.rb
+- spec/unit/memoizable/module_methods/memoize_spec.rb
+- spec/unit/memoizable/module_methods/memoized_predicate_spec.rb
+- spec/unit/memoizable/module_methods/unmemoized_instance_method_spec.rb
+- spec/integration/serializable_spec.rb
+has_rdoc: 

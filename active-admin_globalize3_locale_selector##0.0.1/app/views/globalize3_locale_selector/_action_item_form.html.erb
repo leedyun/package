@@ -1,0 +1,6 @@
+<%= semantic_form_for '', :html => {:class => 'globalize3-locale-change-form'}, :method => :get do |f| %>
+  <%= f.input :with_locale, :as => :select, :collection => language_list,
+        :label => false,
+        :input_html => {:name => :with_locale, :onchange => 'this.form.submit();'},
+        :selected => params[:with_locale] %>
+<% end %>

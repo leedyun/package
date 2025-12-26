@@ -1,0 +1,75 @@
+--- !ruby/object:Gem::Specification
+name: netrc
+version: !ruby/object:Gem::Version
+  version: 0.11.0
+platform: ruby
+authors:
+- Keith Rarick
+- geemus (Wesley Beary)
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-10-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This library can read and update netrc files, preserving formatting including
+  comments and whitespace.
+email: geemus@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.md
+- Readme.md
+- changelog.txt
+- data/default_only.netrc
+- data/login.netrc
+- data/newlineless.netrc
+- data/password.netrc
+- data/permissive.netrc
+- data/sample.netrc
+- data/sample_multi.netrc
+- data/sample_multi_with_default.netrc
+- data/sample_with_default.netrc
+- lib/netrc.rb
+- test/test_lex.rb
+- test/test_netrc.rb
+- test/test_parse.rb
+homepage: https://github.com/geemus/netrc
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5.1
+signing_key: 
+specification_version: 4
+summary: Library to read and write netrc files.
+test_files: []

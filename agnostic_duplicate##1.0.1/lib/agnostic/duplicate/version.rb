@@ -1,0 +1,6 @@
+module Agnostic
+  #:nodoc:
+  module Duplicate
+    VERSION = '1.0.1'
+  end
+end

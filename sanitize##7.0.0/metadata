@@ -1,0 +1,101 @@
+--- !ruby/object:Gem::Specification
+name: sanitize
+version: !ruby/object:Gem::Version
+  version: 7.0.0
+platform: ruby
+authors:
+- Ryan Grove
+bindir: bin
+cert_chain: []
+date: 2024-12-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: crass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.16.8
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.16.8
+description: |
+  Sanitize is an allowlist-based HTML and CSS sanitizer. It removes all HTML
+  and/or CSS from a string except the elements, attributes, and properties you
+  choose to allow.'
+email: ryan@wonko.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/sanitize.rb
+- lib/sanitize/config.rb
+- lib/sanitize/config/basic.rb
+- lib/sanitize/config/default.rb
+- lib/sanitize/config/relaxed.rb
+- lib/sanitize/config/restricted.rb
+- lib/sanitize/css.rb
+- lib/sanitize/transformers/clean_cdata.rb
+- lib/sanitize/transformers/clean_comment.rb
+- lib/sanitize/transformers/clean_css.rb
+- lib/sanitize/transformers/clean_doctype.rb
+- lib/sanitize/transformers/clean_element.rb
+- lib/sanitize/version.rb
+- test/common.rb
+- test/test_clean_comment.rb
+- test/test_clean_css.rb
+- test/test_clean_doctype.rb
+- test/test_clean_element.rb
+- test/test_config.rb
+- test/test_malicious_css.rb
+- test/test_malicious_html.rb
+- test/test_parser.rb
+- test/test_sanitize.rb
+- test/test_sanitize_css.rb
+- test/test_transformers.rb
+homepage: https://github.com/rgrove/sanitize/
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/rgrove/sanitize/blob/main/CHANGELOG.md
+  documentation_uri: https://rubydoc.info/github/rgrove/sanitize
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Allowlist-based HTML and CSS sanitizer.
+test_files: []

@@ -1,0 +1,243 @@
+--- !ruby/object:Gem::Specification
+name: moneta
+version: !ruby/object:Gem::Version
+  version: 1.6.0
+platform: ruby
+authors:
+- Daniel Mendler
+- Yehuda Katz
+- Hannes Georg
+- Alastair Pharo
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-03-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.15.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.15.0
+- !ruby/object:Gem::Dependency
+  name: parallel_tests
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.29.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.29.2
+- !ruby/object:Gem::Dependency
+  name: rantly
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-retry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.81.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.81.0
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.1
+description: A unified interface to key/value stores
+email:
+- mail@daniel-mendler.de
+- wycats@gmail.com
+- hannes.georg@googlemail.com
+- me@asph.dev
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- SPEC.md
+- LICENSE
+files:
+- CHANGES
+- CONTRIBUTORS
+- LICENSE
+- README.md
+- SPEC.md
+- lib/action_dispatch/middleware/session/moneta_store.rb
+- lib/active_support/cache/moneta_store.rb
+- lib/moneta.rb
+- lib/moneta/adapter.rb
+- lib/moneta/adapters/activerecord.rb
+- lib/moneta/adapters/activerecord/backend.rb
+- lib/moneta/adapters/activerecord/v5_backend.rb
+- lib/moneta/adapters/activesupportcache.rb
+- lib/moneta/adapters/cassandra.rb
+- lib/moneta/adapters/client.rb
+- lib/moneta/adapters/cookie.rb
+- lib/moneta/adapters/couch.rb
+- lib/moneta/adapters/datamapper.rb
+- lib/moneta/adapters/daybreak.rb
+- lib/moneta/adapters/dbm.rb
+- lib/moneta/adapters/file.rb
+- lib/moneta/adapters/fog.rb
+- lib/moneta/adapters/gdbm.rb
+- lib/moneta/adapters/hbase.rb
+- lib/moneta/adapters/kyotocabinet.rb
+- lib/moneta/adapters/leveldb.rb
+- lib/moneta/adapters/lmdb.rb
+- lib/moneta/adapters/localmemcache.rb
+- lib/moneta/adapters/lruhash.rb
+- lib/moneta/adapters/memcached.rb
+- lib/moneta/adapters/memcached/dalli.rb
+- lib/moneta/adapters/memcached/native.rb
+- lib/moneta/adapters/memory.rb
+- lib/moneta/adapters/mongo.rb
+- lib/moneta/adapters/null.rb
+- lib/moneta/adapters/pstore.rb
+- lib/moneta/adapters/redis.rb
+- lib/moneta/adapters/restclient.rb
+- lib/moneta/adapters/riak.rb
+- lib/moneta/adapters/sdbm.rb
+- lib/moneta/adapters/sequel.rb
+- lib/moneta/adapters/sequel/mysql.rb
+- lib/moneta/adapters/sequel/postgres.rb
+- lib/moneta/adapters/sequel/postgres_hstore.rb
+- lib/moneta/adapters/sequel/sqlite.rb
+- lib/moneta/adapters/sqlite.rb
+- lib/moneta/adapters/tdb.rb
+- lib/moneta/adapters/tokyocabinet.rb
+- lib/moneta/adapters/tokyotyrant.rb
+- lib/moneta/adapters/yaml.rb
+- lib/moneta/builder.rb
+- lib/moneta/cache.rb
+- lib/moneta/config.rb
+- lib/moneta/create_support.rb
+- lib/moneta/dbm_adapter.rb
+- lib/moneta/defaults.rb
+- lib/moneta/each_key_support.rb
+- lib/moneta/enumerable.rb
+- lib/moneta/expires.rb
+- lib/moneta/expires_support.rb
+- lib/moneta/fallback.rb
+- lib/moneta/hash_adapter.rb
+- lib/moneta/increment_support.rb
+- lib/moneta/lock.rb
+- lib/moneta/logger.rb
+- lib/moneta/nil_values.rb
+- lib/moneta/option_support.rb
+- lib/moneta/optionmerger.rb
+- lib/moneta/pool.rb
+- lib/moneta/proxy.rb
+- lib/moneta/server.rb
+- lib/moneta/shared.rb
+- lib/moneta/stack.rb
+- lib/moneta/synchronize.rb
+- lib/moneta/transformer.rb
+- lib/moneta/transformer/config.rb
+- lib/moneta/transformer/helper.rb
+- lib/moneta/transformer/helper/bson.rb
+- lib/moneta/utils.rb
+- lib/moneta/version.rb
+- lib/moneta/weak.rb
+- lib/moneta/weak_each_key.rb
+- lib/moneta/wrapper.rb
+- lib/rack/cache/moneta.rb
+- lib/rack/moneta_cookies.rb
+- lib/rack/moneta_rest.rb
+- lib/rack/moneta_store.rb
+- lib/rack/session/moneta.rb
+homepage: https://github.com/moneta-rb/moneta
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/moneta-rb/moneta/issues
+  changelog_uri: https://github.com/moneta-rb/moneta/blob/v1.6.0/CHANGES
+  documentation_uri: https://www.rubydoc.info/gems/moneta/1.6.0
+  source_code_uri: https://github.com/moneta-rb/moneta/tree/v1.6.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.25
+signing_key:
+specification_version: 4
+summary: A unified interface to key/value stores, including Redis, Memcached, TokyoCabinet,
+  ActiveRecord and many more
+test_files: []

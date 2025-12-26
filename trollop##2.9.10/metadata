@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: trollop
+version: !ruby/object:Gem::Version
+  version: 2.9.10
+platform: ruby
+authors:
+- William Morgan
+- Keenan Brock
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-11-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.3
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: chronic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  Trollop is a commandline option parser for Ruby that just gets out of your way.
+
+  **DEPRECATION** This gem has been renamed to optimist and will no longer be supported. Please switch to optimist as soon as possible.
+email: keenan@thebrocks.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- FAQ.txt
+- Gemfile
+- Gemfile.travis
+- History.txt
+- README.md
+- Rakefile
+- lib/trollop.rb
+- release-script.txt
+- test/support/assert_helpers.rb
+- test/test_helper.rb
+- test/trollop/command_line_error_test.rb
+- test/trollop/help_needed_test.rb
+- test/trollop/parser_educate_test.rb
+- test/trollop/parser_opt_test.rb
+- test/trollop/parser_parse_test.rb
+- test/trollop/parser_test.rb
+- test/trollop/version_needed_test.rb
+- test/trollop_test.rb
+- trollop.gemspec
+homepage: http://manageiq.github.io/optimist/
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/ManageIQ/optimist/blob/master/History.txt
+  source_code_uri: https://github.com/ManageIQ/optimist/
+  bug_tracker_uri: https://github.com/ManageIQ/optimist/issues
+post_install_message: |
+  !    The 'trollop' gem has been deprecated and has been replaced by 'optimist'.
+  !    See: https://rubygems.org/gems/optimist
+  !    And: https://github.com/ManageIQ/optimist
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6.2
+signing_key: 
+specification_version: 4
+summary: Trollop is a commandline option parser for Ruby that just gets out of your
+  way.
+test_files:
+- test/support/assert_helpers.rb
+- test/test_helper.rb
+- test/trollop/command_line_error_test.rb
+- test/trollop/help_needed_test.rb
+- test/trollop/parser_educate_test.rb
+- test/trollop/parser_opt_test.rb
+- test/trollop/parser_parse_test.rb
+- test/trollop/parser_test.rb
+- test/trollop/version_needed_test.rb
+- test/trollop_test.rb

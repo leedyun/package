@@ -1,0 +1,266 @@
+--- !ruby/object:Gem::Specification
+name: em-http-request
+version: !ruby/object:Gem::Version
+  version: 1.1.7
+platform: ruby
+authors:
+- Ilya Grigorik
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-08-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.4
+- !ruby/object:Gem::Dependency
+  name: cookiejar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+- !ruby/object:Gem::Dependency
+  name: em-socksify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.3'
+- !ruby/object:Gem::Dependency
+  name: eventmachine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+- !ruby/object:Gem::Dependency
+  name: http_parser.rb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: mongrel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0.pre2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0.pre2
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: EventMachine based, async HTTP Request client
+email:
+- ilya@igvita.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gemtest"
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Changelog.md
+- Gemfile
+- README.md
+- Rakefile
+- benchmarks/clients.rb
+- benchmarks/em-excon.rb
+- benchmarks/em-profile.gif
+- benchmarks/em-profile.txt
+- benchmarks/server.rb
+- em-http-request.gemspec
+- examples/.gitignore
+- examples/digest_auth/client.rb
+- examples/digest_auth/server.rb
+- examples/fetch.rb
+- examples/fibered-http.rb
+- examples/multi.rb
+- examples/oauth-tweet.rb
+- examples/socks5.rb
+- lib/em-http-request.rb
+- lib/em-http.rb
+- lib/em-http/client.rb
+- lib/em-http/core_ext/bytesize.rb
+- lib/em-http/decoders.rb
+- lib/em-http/http_client_options.rb
+- lib/em-http/http_connection.rb
+- lib/em-http/http_connection_options.rb
+- lib/em-http/http_encoding.rb
+- lib/em-http/http_header.rb
+- lib/em-http/http_status_codes.rb
+- lib/em-http/middleware/digest_auth.rb
+- lib/em-http/middleware/json_response.rb
+- lib/em-http/middleware/oauth.rb
+- lib/em-http/middleware/oauth2.rb
+- lib/em-http/multi.rb
+- lib/em-http/request.rb
+- lib/em-http/version.rb
+- lib/em/io_streamer.rb
+- spec/client_fiber_spec.rb
+- spec/client_spec.rb
+- spec/digest_auth_spec.rb
+- spec/dns_spec.rb
+- spec/encoding_spec.rb
+- spec/external_spec.rb
+- spec/fixtures/google.ca
+- spec/fixtures/gzip-sample.gz
+- spec/gzip_spec.rb
+- spec/helper.rb
+- spec/http_proxy_spec.rb
+- spec/middleware/oauth2_spec.rb
+- spec/middleware_spec.rb
+- spec/multi_spec.rb
+- spec/pipelining_spec.rb
+- spec/redirect_spec.rb
+- spec/socksify_proxy_spec.rb
+- spec/spec_helper.rb
+- spec/ssl_spec.rb
+- spec/stallion.rb
+- spec/stub_server.rb
+homepage: http://github.com/igrigorik/em-http-request
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: EventMachine based, async HTTP Request client
+test_files:
+- spec/client_fiber_spec.rb
+- spec/client_spec.rb
+- spec/digest_auth_spec.rb
+- spec/dns_spec.rb
+- spec/encoding_spec.rb
+- spec/external_spec.rb
+- spec/fixtures/google.ca
+- spec/fixtures/gzip-sample.gz
+- spec/gzip_spec.rb
+- spec/helper.rb
+- spec/http_proxy_spec.rb
+- spec/middleware/oauth2_spec.rb
+- spec/middleware_spec.rb
+- spec/multi_spec.rb
+- spec/pipelining_spec.rb
+- spec/redirect_spec.rb
+- spec/socksify_proxy_spec.rb
+- spec/spec_helper.rb
+- spec/ssl_spec.rb
+- spec/stallion.rb
+- spec/stub_server.rb

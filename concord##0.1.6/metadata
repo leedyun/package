@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: concord
+version: !ruby/object:Gem::Version
+  version: 0.1.6
+platform: ruby
+authors:
+- Markus Schirp
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-09-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: adamantium
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: equalizer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.9
+- !ruby/object:Gem::Dependency
+  name: devtools
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.26
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.26
+description: Helper for object composition
+email:
+- mbj@schirp-dso.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/concord.rb
+homepage: https://github.com/mbj/concord
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: Helper for object composition
+test_files: []

@@ -1,0 +1,295 @@
+--- !ruby/object:Gem::Specification
+name: knapsack
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- ArturT
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-08-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: spinach
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+description: Parallel tests across CI server nodes based on each test file's time
+  execution. It generates a test time execution report and uses it for future test
+  runs.
+email:
+- arturtrzop@gmail.com
+executables:
+- knapsack
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/knapsack
+- docs/images/logos/knapsack-@2.png
+- docs/images/logos/knapsack-big.png
+- docs/images/logos/knapsack-logo-@2.png
+- docs/images/logos/knapsack-logo-big.png
+- docs/images/logos/knapsack-logo.png
+- docs/images/logos/knapsack.png
+- docs/images/with_knapsack.png
+- docs/images/without_knapsack.png
+- knapsack.gemspec
+- knapsack_minitest_report.json
+- knapsack_rspec_report.json
+- knapsack_spinach_report.json
+- lib/knapsack.rb
+- lib/knapsack/adapters/base_adapter.rb
+- lib/knapsack/adapters/cucumber_adapter.rb
+- lib/knapsack/adapters/minitest_adapter.rb
+- lib/knapsack/adapters/rspec_adapter.rb
+- lib/knapsack/adapters/spinach_adapter.rb
+- lib/knapsack/allocator.rb
+- lib/knapsack/allocator_builder.rb
+- lib/knapsack/config/env.rb
+- lib/knapsack/config/tracker.rb
+- lib/knapsack/distributors/base_distributor.rb
+- lib/knapsack/distributors/leftover_distributor.rb
+- lib/knapsack/distributors/report_distributor.rb
+- lib/knapsack/extensions/time.rb
+- lib/knapsack/logger.rb
+- lib/knapsack/presenter.rb
+- lib/knapsack/report.rb
+- lib/knapsack/runners/cucumber_runner.rb
+- lib/knapsack/runners/minitest_runner.rb
+- lib/knapsack/runners/rspec_runner.rb
+- lib/knapsack/runners/spinach_runner.rb
+- lib/knapsack/task_loader.rb
+- lib/knapsack/tracker.rb
+- lib/knapsack/version.rb
+- lib/tasks/knapsack_cucumber.rake
+- lib/tasks/knapsack_minitest.rake
+- lib/tasks/knapsack_rspec.rake
+- lib/tasks/knapsack_spinach.rake
+- spec/knapsack/adapters/base_adapter_spec.rb
+- spec/knapsack/adapters/cucumber_adapter_spec.rb
+- spec/knapsack/adapters/minitest_adapter_spec.rb
+- spec/knapsack/adapters/rspec_adapter_spec.rb
+- spec/knapsack/adapters/spinach_adapter_spec.rb
+- spec/knapsack/allocator_builder_spec.rb
+- spec/knapsack/allocator_spec.rb
+- spec/knapsack/config/env_spec.rb
+- spec/knapsack/config/tracker_spec.rb
+- spec/knapsack/distributors/base_distributor_spec.rb
+- spec/knapsack/distributors/leftover_distributor_spec.rb
+- spec/knapsack/distributors/report_distributor_spec.rb
+- spec/knapsack/extensions/time_spec.rb
+- spec/knapsack/logger_spec.rb
+- spec/knapsack/presenter_spec.rb
+- spec/knapsack/report_spec.rb
+- spec/knapsack/task_loader_spec.rb
+- spec/knapsack/tracker_spec.rb
+- spec/knapsack_spec.rb
+- spec/spec_helper.rb
+- spec/support/env_helper.rb
+- spec/support/fakes/cucumber.rb
+- spec/support/fakes/minitest.rb
+- spec/support/shared_examples/adapter.rb
+- spec_engine_examples/1_spec.rb
+- spec_examples/fast/1_spec.rb
+- spec_examples/fast/2_spec.rb
+- spec_examples/fast/3_spec.rb
+- spec_examples/fast/4_spec.rb
+- spec_examples/fast/5_spec.rb
+- spec_examples/fast/6_spec.rb
+- spec_examples/fast/use_shared_example_spec.rb
+- spec_examples/leftover/1_spec.rb
+- spec_examples/leftover/a_spec.rb
+- spec_examples/slow/a_spec.rb
+- spec_examples/slow/b_spec.rb
+- spec_examples/slow/c_spec.rb
+- spec_examples/spec_helper.rb
+- spec_examples/support/shared_examples/common_example.rb
+- spinach_examples/scenario1.feature
+- spinach_examples/scenario2.feature
+- spinach_examples/steps/test_how_spinach_works_for_first_test.rb
+- spinach_examples/steps/test_how_spinach_works_for_second_test.rb
+- spinach_examples/support/env.rb
+- test_examples/fast/shared_examples_test.rb
+- test_examples/fast/spec_test.rb
+- test_examples/fast/unit_test.rb
+- test_examples/slow/slow_test.rb
+- test_examples/test_helper.rb
+homepage: https://github.com/KnapsackPro/knapsack
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.22
+signing_key:
+specification_version: 4
+summary: Knapsack splits tests across CI nodes and makes sure that tests will run
+  comparable time on each node.
+test_files:
+- spec/knapsack/adapters/base_adapter_spec.rb
+- spec/knapsack/adapters/cucumber_adapter_spec.rb
+- spec/knapsack/adapters/minitest_adapter_spec.rb
+- spec/knapsack/adapters/rspec_adapter_spec.rb
+- spec/knapsack/adapters/spinach_adapter_spec.rb
+- spec/knapsack/allocator_builder_spec.rb
+- spec/knapsack/allocator_spec.rb
+- spec/knapsack/config/env_spec.rb
+- spec/knapsack/config/tracker_spec.rb
+- spec/knapsack/distributors/base_distributor_spec.rb
+- spec/knapsack/distributors/leftover_distributor_spec.rb
+- spec/knapsack/distributors/report_distributor_spec.rb
+- spec/knapsack/extensions/time_spec.rb
+- spec/knapsack/logger_spec.rb
+- spec/knapsack/presenter_spec.rb
+- spec/knapsack/report_spec.rb
+- spec/knapsack/task_loader_spec.rb
+- spec/knapsack/tracker_spec.rb
+- spec/knapsack_spec.rb
+- spec/spec_helper.rb
+- spec/support/env_helper.rb
+- spec/support/fakes/cucumber.rb
+- spec/support/fakes/minitest.rb
+- spec/support/shared_examples/adapter.rb

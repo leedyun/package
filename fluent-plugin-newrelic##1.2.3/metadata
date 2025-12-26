@@ -1,0 +1,165 @@
+--- !ruby/object:Gem::Specification
+name: fluent-plugin-newrelic
+version: !ruby/object:Gem::Version
+  version: 1.2.3
+platform: ruby
+authors:
+- New Relic Logging Team
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2024-03-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fluentd
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec_junit_formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- logging-team@newrelic.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".dockerignore"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/workflows/merge-to-master.yml"
+- ".github/workflows/pr.yml"
+- ".github/workflows/repolinter.yml"
+- ".gitignore"
+- DEVELOPER.md
+- Dockerfile
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- examples/Dockerfile
+- examples/Windows-IIS.conf
+- examples/copy_output.conf
+- examples/custom_field.conf
+- examples/file_input.conf
+- examples/filter_logs.conf
+- examples/grok_parser.conf
+- examples/minimal_complete_config.conf
+- examples/multiline_log_parse.conf
+- examples/parse_nginx.conf
+- examples/readme.md
+- examples/syslog/fluentd.config
+- examples/syslog_input.conf
+- lib/fluent/plugin/out_newrelic.rb
+- lib/newrelic-fluentd-output/version.rb
+- merge-to-master-pipeline.yml
+- newrelic-fluentd-output.gemspec
+- playground/.env.example
+- playground/.gitignore
+- playground/Dockerfile
+- playground/README.md
+- playground/config/fluent.conf
+- playground/docker-compose.yml
+- playground/testlogs/.gitkeep
+- playground/testlogs/test.log
+- pr-pipeline.yml
+homepage: https://github.com/newrelic/newrelic-fluentd-output
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Sends FluentD events to New Relic
+test_files: []

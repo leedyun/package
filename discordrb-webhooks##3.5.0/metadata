@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: discordrb-webhooks
+version: !ruby/object:Gem::Version
+  version: 3.5.0
+platform: ruby
+authors:
+- meew0
+- swarley
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-07-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rest-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+description: A client for Discord's webhooks to fit alongside [discordrb](https://rubygems.org/gems/discordrb).
+email:
+- ''
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/discordrb/webhooks.rb
+- lib/discordrb/webhooks/builder.rb
+- lib/discordrb/webhooks/client.rb
+- lib/discordrb/webhooks/embeds.rb
+- lib/discordrb/webhooks/modal.rb
+- lib/discordrb/webhooks/version.rb
+- lib/discordrb/webhooks/view.rb
+homepage: https://github.com/shardlab/discordrb
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key:
+specification_version: 4
+summary: Webhook client for discordrb
+test_files: []

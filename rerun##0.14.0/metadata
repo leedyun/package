@@ -1,0 +1,75 @@
+--- !ruby/object:Gem::Specification
+name: rerun
+version: !ruby/object:Gem::Version
+  version: 0.14.0
+platform: ruby
+authors:
+- Alex Chaffee
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: listen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Restarts your app when a file changes. A no-frills, command-line alternative
+  to Guard, Shotgun, Autotest, etc.
+email: alexch@gmail.com
+executables:
+- rerun
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- LICENSE
+- README.md
+- Rakefile
+- bin/rerun
+- icons/rails_grn_sml.png
+- icons/rails_red_sml.png
+- lib/goo.rb
+- lib/rerun.rb
+- lib/rerun/glob.rb
+- lib/rerun/notification.rb
+- lib/rerun/options.rb
+- lib/rerun/runner.rb
+- lib/rerun/system.rb
+- lib/rerun/watcher.rb
+- rerun.gemspec
+homepage: http://github.com/alexch/rerun/
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.2
+signing_key:
+specification_version: 2
+summary: Launches an app, and restarts it whenever the filesystem changes. A no-frills,
+  command-line alternative to Guard, Shotgun, Autotest, etc.
+test_files: []

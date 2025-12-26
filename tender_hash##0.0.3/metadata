@@ -1,0 +1,108 @@
+--- !ruby/object:Gem::Specification
+name: tender_hash
+version: !ruby/object:Gem::Version
+  version: 0.0.3
+platform: ruby
+authors:
+- Rodrigo Pavano
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-01-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: TenderHash allows you to map hashes with ease. It offers a nice DSL to
+  define the set of rules used do the mapping.
+email:
+- rodrigopavano@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".ruby-version"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/tender_hash.rb
+- lib/tender_hash/caster.rb
+- lib/tender_hash/map.rb
+- lib/tender_hash/rule.rb
+- lib/tender_hash/scope_rule.rb
+- lib/tender_hash/version.rb
+- spec/spec_helper.rb
+- spec/tender_hash/map_spec.rb
+- spec/tender_hash_spec.rb
+- tender_hash.gemspec
+homepage: https://github.com/rodrei/tender_hash
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Utility to map a hash following a set of rules and conditions.
+test_files:
+- spec/spec_helper.rb
+- spec/tender_hash/map_spec.rb
+- spec/tender_hash_spec.rb

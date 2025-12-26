@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: lockbox
+version: !ruby/object:Gem::Version
+  version: 2.0.1
+platform: ruby
+authors:
+- Andrew Kane
+bindir: bin
+cert_chain: []
+date: 2024-12-29 00:00:00.000000000 Z
+dependencies: []
+email: andrew@ankane.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- SECURITY.md
+- lib/generators/lockbox/audits_generator.rb
+- lib/generators/lockbox/templates/migration.rb.tt
+- lib/generators/lockbox/templates/model.rb.tt
+- lib/lockbox.rb
+- lib/lockbox/active_storage_extensions.rb
+- lib/lockbox/aes_gcm.rb
+- lib/lockbox/box.rb
+- lib/lockbox/calculations.rb
+- lib/lockbox/carrier_wave_extensions.rb
+- lib/lockbox/encryptor.rb
+- lib/lockbox/io.rb
+- lib/lockbox/key_generator.rb
+- lib/lockbox/log_subscriber.rb
+- lib/lockbox/migrator.rb
+- lib/lockbox/model.rb
+- lib/lockbox/padding.rb
+- lib/lockbox/railtie.rb
+- lib/lockbox/utils.rb
+- lib/lockbox/version.rb
+homepage: https://github.com/ankane/lockbox
+licenses:
+- MIT
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Modern encryption for Ruby and Rails
+test_files: []

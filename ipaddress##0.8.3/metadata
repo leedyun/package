@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: ipaddress
+version: !ruby/object:Gem::Version
+  version: 0.8.3
+platform: ruby
+authors:
+- bluemonk
+- mikemackintosh
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-02-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: "IPAddress is a Ruby library designed to make manipulation \n      of
+  IPv4 and IPv6 addresses both powerful and simple. It mantains\n      a layer of
+  compatibility with Ruby's own IPAddr, while \n      addressing many of its issues."
+email:
+- ceresa@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- ".gitignore"
+- ".rock.yml"
+- CHANGELOG.rdoc
+- Gemfile
+- LICENSE.txt
+- README.rdoc
+- Rakefile
+- ipaddress.gemspec
+- lib/ipaddress.rb
+- lib/ipaddress/ipv4.rb
+- lib/ipaddress/ipv6.rb
+- lib/ipaddress/mongoid.rb
+- lib/ipaddress/prefix.rb
+- lib/ipaddress/version.rb
+- test/ipaddress/ipv4_test.rb
+- test/ipaddress/ipv6_test.rb
+- test/ipaddress/mongoid_test.rb
+- test/ipaddress/prefix_test.rb
+- test/ipaddress_test.rb
+- test/test_helper.rb
+homepage: https://github.com/bluemonk/ipaddress
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: IPv4/IPv6 address manipulation library
+test_files:
+- test/ipaddress/ipv4_test.rb
+- test/ipaddress/ipv6_test.rb
+- test/ipaddress/mongoid_test.rb
+- test/ipaddress/prefix_test.rb
+- test/ipaddress_test.rb
+- test/test_helper.rb

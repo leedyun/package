@@ -1,0 +1,148 @@
+--- !ruby/object:Gem::Specification
+name: rake-compiler
+version: !ruby/object:Gem::Version
+  version: 1.2.9
+platform: ruby
+authors:
+- Kouhei Sutou
+- Luis Lavena
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.8.0
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+description: |-
+  Provide a standard and simplified way to build and package
+  Ruby extensions (C, Java) using Rake as glue.
+email:
+- kou@cozmixng.org
+- luislavena@gmail.com
+executables:
+- rake-compiler
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE.txt
+- History.md
+files:
+- Gemfile
+- History.md
+- LICENSE.txt
+- README.md
+- Rakefile
+- appveyor.yml
+- bin/rake-compiler
+- cucumber.yml
+- features/compile.feature
+- features/cross-compile.feature
+- features/cross-package-multi.feature
+- features/cross-package.feature
+- features/java-compile.feature
+- features/java-no-native-compile.feature
+- features/java-package.feature
+- features/package.feature
+- features/step_definitions/compilation.rb
+- features/step_definitions/cross_compilation.rb
+- features/step_definitions/execution.rb
+- features/step_definitions/folders.rb
+- features/step_definitions/gem.rb
+- features/step_definitions/java_compilation.rb
+- features/support/env.rb
+- features/support/file_template_helpers.rb
+- features/support/generator_helpers.rb
+- features/support/platform_extension_helpers.rb
+- lib/rake/baseextensiontask.rb
+- lib/rake/compiler_config.rb
+- lib/rake/extensioncompiler.rb
+- lib/rake/extensiontask.rb
+- lib/rake/javaextensiontask.rb
+- tasks/bin/cross-ruby.rake
+- tasks/bootstrap.rake
+- tasks/common.rake
+- tasks/cucumber.rake
+- tasks/gem.rake
+- tasks/rspec.rake
+homepage: https://github.com/rake-compiler/rake-compiler
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--main"
+- README.md
+- "--title"
+- rake-compiler -- Documentation
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.8.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.8.23
+requirements: []
+rubygems_version: 3.4.20
+signing_key:
+specification_version: 4
+summary: Rake-based Ruby Extension (C, Java) task generator.
+test_files: []

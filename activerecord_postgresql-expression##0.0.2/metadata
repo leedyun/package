@@ -1,0 +1,147 @@
+--- !ruby/object:Gem::Specification
+name: activerecord_postgresql-expression
+version: !ruby/object:Gem::Version
+  version: 0.0.2
+platform: ruby
+authors:
+- Naoya Murakami
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Adds expression to migrations for ActiveRecord PostgreSQL adapters
+email:
+- naoya@createfield.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- activerecord_postgresql-expression.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/activerecord-postgresql-expression.rb
+- lib/activerecord-postgresql-expression/active_record/connection_adapters/postgresql/schema_statements.rb
+- lib/activerecord-postgresql-expression/active_record/schema_dumper.rb
+- lib/activerecord/postgresql/expression.rb
+- lib/activerecord/postgresql/expression/base.rb
+- lib/activerecord/postgresql/expression/railtie.rb
+- lib/activerecord/postgresql/expression/version.rb
+- test/cases/expression_test.rb
+- test/cases/helper.rb
+- test/cases/test_case.rb
+- test/config.example.yml
+- test/config.rb
+- test/support/config.rb
+- test/support/connection.rb
+- test/support/connection_helper.rb
+- test/support/schema_dumping_helper.rb
+homepage: https://github.com/naoa/activerecord-postgresql-expression
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Adds expression to migrations for ActiveRecord PostgreSQL adapters
+test_files:
+- test/cases/expression_test.rb
+- test/cases/helper.rb
+- test/cases/test_case.rb
+- test/config.example.yml
+- test/config.rb
+- test/support/config.rb
+- test/support/connection.rb
+- test/support/connection_helper.rb
+- test/support/schema_dumping_helper.rb

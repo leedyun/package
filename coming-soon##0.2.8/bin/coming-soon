@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+#shebang
+
+require "bundler/setup"
+require_relative "../lib/coming_soon"
+
+ComingSoon::CLI.new.call

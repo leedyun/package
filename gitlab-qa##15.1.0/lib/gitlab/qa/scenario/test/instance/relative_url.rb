@@ -1,0 +1,32 @@
+# frozen_string_literal: true
+
+module Gitlab
+  module QA
+    module Scenario
+      module Test
+        module Instance
+          class RelativeUrl < Image
+            def perform(release, *rspec_args)
+              Component::Gitlab.perform do |gitlab|
+                gitlab.release = release
+                gitlab.network = Runtime::Env.docker_network
+                gitlab.relative_path = '/relative'
+
+                gitlab.omnibus_configuration << "external_url '#{gitlab.address}'"
+
+                gitlab.instance do
+                  Component::Specs.perform do |specs|
+                    specs.suite = 'Test::Instance::All'
+                    specs.release = gitlab.release
+                    specs.network = gitlab.network
+                    specs.args = [gitlab.address, *rspec_args]
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

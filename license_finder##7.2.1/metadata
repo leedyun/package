@@ -1,0 +1,602 @@
+--- !ruby/object:Gem::Specification
+name: license_finder
+version: !ruby/object:Gem::Version
+  version: 7.2.1
+platform: ruby
+authors:
+- Ryan Collins
+- Daniil Kouznetsov
+- Andy Shen
+- Shane Lattanzio
+- Li Sheng Tai
+- Vlad vassilovski
+- Jacob Maine
+- Matthew Kane Parker
+- Ian Lesperance
+- David Edwards
+- Paul Meskers
+- Brent Wheeldon
+- Trevor John
+- David Tengdin
+- William Ramsey
+- David Dening
+- Geoff Pleiss
+- Mike Chinigo
+- Mike Dalessio
+- Jeff Jun
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-05-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: csv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: tomlrb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: with_env
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+- !ruby/object:Gem::Dependency
+  name: xml-simple
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.9
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.8.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.8.6
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.39.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.39.2
+- !ruby/object:Gem::Dependency
+  name: e2mmap
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: matrix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 3.5.2
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.1.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.60.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.60.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.20.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.20.2
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.14'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+description: |2
+      LicenseFinder works with your package managers to find
+      dependencies, detect the licenses of the packages in them, compare
+      those licenses against a user-defined list of permitted licenses,
+      and give you an actionable exception report.
+email:
+- labs-commoncode@pivotal.io
+executables:
+- license_finder
+- license_finder_pip.py
+extensions: []
+extra_rdoc_files: []
+files:
+- ".force-build"
+- ".github/dependabot.yml"
+- ".gitignore"
+- ".pre-commit-hooks.yaml"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Dockerfile
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO.md
+- VERSION
+- appveyor.yml
+- bin/license_finder
+- bin/license_finder_pip.py
+- ci/pipelines/pull-request.yml.erb
+- ci/pipelines/release.yml.erb
+- ci/scripts/containerize-tests.sh
+- ci/scripts/pushscript.sh
+- ci/scripts/run-rubocop.sh
+- ci/scripts/run-tests.sh
+- ci/scripts/test.ps1
+- ci/scripts/updateChangelog.sh
+- ci/tasks/build-and-push-gem.yml
+- ci/tasks/build-windows.yml
+- ci/tasks/build.yml
+- ci/tasks/rubocop.yml
+- ci/tasks/run-tests.yml
+- ci/tasks/update-changelog.yml
+- dlf
+- examples/Gemfile
+- examples/custom_erb_template.rb
+- examples/extract_license_data.rb
+- examples/sample_template.erb
+- lib/license_finder.rb
+- lib/license_finder/cli.rb
+- lib/license_finder/cli/approvals.rb
+- lib/license_finder/cli/base.rb
+- lib/license_finder/cli/dependencies.rb
+- lib/license_finder/cli/ignored_dependencies.rb
+- lib/license_finder/cli/ignored_groups.rb
+- lib/license_finder/cli/inherited_decisions.rb
+- lib/license_finder/cli/licenses.rb
+- lib/license_finder/cli/main.rb
+- lib/license_finder/cli/makes_decisions.rb
+- lib/license_finder/cli/patched_thor.rb
+- lib/license_finder/cli/permitted_licenses.rb
+- lib/license_finder/cli/project_name.rb
+- lib/license_finder/cli/restricted_licenses.rb
+- lib/license_finder/configuration.rb
+- lib/license_finder/core.rb
+- lib/license_finder/decision_applier.rb
+- lib/license_finder/decisions.rb
+- lib/license_finder/decisions_factory.rb
+- lib/license_finder/diff.rb
+- lib/license_finder/license.rb
+- lib/license_finder/license/any_matcher.rb
+- lib/license_finder/license/definitions.rb
+- lib/license_finder/license/header_matcher.rb
+- lib/license_finder/license/matcher.rb
+- lib/license_finder/license/none_matcher.rb
+- lib/license_finder/license/template.rb
+- lib/license_finder/license/templates/0BSD.txt
+- lib/license_finder/license/templates/AGPL3.txt
+- lib/license_finder/license/templates/Apache1_1.txt
+- lib/license_finder/license/templates/Apache2.txt
+- lib/license_finder/license/templates/Artistic.txt
+- lib/license_finder/license/templates/BSD.txt
+- lib/license_finder/license/templates/CC01.txt
+- lib/license_finder/license/templates/CC01_alt.txt
+- lib/license_finder/license/templates/CDDL1.txt
+- lib/license_finder/license/templates/CDDL1_1.txt
+- lib/license_finder/license/templates/CPL1.txt
+- lib/license_finder/license/templates/EPL1.txt
+- lib/license_finder/license/templates/EPL2.txt
+- lib/license_finder/license/templates/GPLv2.txt
+- lib/license_finder/license/templates/GPLv3.txt
+- lib/license_finder/license/templates/ISC.txt
+- lib/license_finder/license/templates/LGPL.txt
+- lib/license_finder/license/templates/LGPL2_1.txt
+- lib/license_finder/license/templates/MIT.txt
+- lib/license_finder/license/templates/MPL1_1.txt
+- lib/license_finder/license/templates/MPL2.txt
+- lib/license_finder/license/templates/NewBSD.txt
+- lib/license_finder/license/templates/OFL.txt
+- lib/license_finder/license/templates/Python.txt
+- lib/license_finder/license/templates/Ruby.txt
+- lib/license_finder/license/templates/SimplifiedBSD.txt
+- lib/license_finder/license/templates/Unlicense.txt
+- lib/license_finder/license/templates/WTFPL.txt
+- lib/license_finder/license/templates/Zlib.txt
+- lib/license_finder/license/text.rb
+- lib/license_finder/license_aggregator.rb
+- lib/license_finder/logger.rb
+- lib/license_finder/manual_licenses.rb
+- lib/license_finder/package.rb
+- lib/license_finder/package_delta.rb
+- lib/license_finder/package_manager.rb
+- lib/license_finder/package_managers/bower.rb
+- lib/license_finder/package_managers/bundler.rb
+- lib/license_finder/package_managers/cargo.rb
+- lib/license_finder/package_managers/carthage.rb
+- lib/license_finder/package_managers/cocoa_pods.rb
+- lib/license_finder/package_managers/composer.rb
+- lib/license_finder/package_managers/conan.rb
+- lib/license_finder/package_managers/conda.rb
+- lib/license_finder/package_managers/dep.rb
+- lib/license_finder/package_managers/dotnet.rb
+- lib/license_finder/package_managers/erlangmk.rb
+- lib/license_finder/package_managers/glide.rb
+- lib/license_finder/package_managers/go_15vendorexperiment.rb
+- lib/license_finder/package_managers/go_dep.rb
+- lib/license_finder/package_managers/go_modules.rb
+- lib/license_finder/package_managers/go_workspace.rb
+- lib/license_finder/package_managers/govendor.rb
+- lib/license_finder/package_managers/gradle.rb
+- lib/license_finder/package_managers/gvt.rb
+- lib/license_finder/package_managers/maven.rb
+- lib/license_finder/package_managers/mix.rb
+- lib/license_finder/package_managers/npm.rb
+- lib/license_finder/package_managers/nuget.rb
+- lib/license_finder/package_managers/pip.rb
+- lib/license_finder/package_managers/pipenv.rb
+- lib/license_finder/package_managers/pnpm.rb
+- lib/license_finder/package_managers/pub.rb
+- lib/license_finder/package_managers/rebar.rb
+- lib/license_finder/package_managers/sbt.rb
+- lib/license_finder/package_managers/spm.rb
+- lib/license_finder/package_managers/trash.rb
+- lib/license_finder/package_managers/yarn.rb
+- lib/license_finder/package_utils/activation.rb
+- lib/license_finder/package_utils/conan_info_parser.rb
+- lib/license_finder/package_utils/conan_info_parser_v2.rb
+- lib/license_finder/package_utils/gradle_dependency_finder.rb
+- lib/license_finder/package_utils/license_files.rb
+- lib/license_finder/package_utils/licensing.rb
+- lib/license_finder/package_utils/maven_dependency_finder.rb
+- lib/license_finder/package_utils/notice_files.rb
+- lib/license_finder/package_utils/possible_license_file.rb
+- lib/license_finder/package_utils/pypi.rb
+- lib/license_finder/package_utils/sbt_dependency_finder.rb
+- lib/license_finder/packages/bower_package.rb
+- lib/license_finder/packages/bundler_package.rb
+- lib/license_finder/packages/cargo_package.rb
+- lib/license_finder/packages/carthage_package.rb
+- lib/license_finder/packages/cocoa_pods_package.rb
+- lib/license_finder/packages/composer_package.rb
+- lib/license_finder/packages/conan_package.rb
+- lib/license_finder/packages/conda_package.rb
+- lib/license_finder/packages/erlangmk_package.rb
+- lib/license_finder/packages/go_package.rb
+- lib/license_finder/packages/gradle_package.rb
+- lib/license_finder/packages/manual_package.rb
+- lib/license_finder/packages/maven_package.rb
+- lib/license_finder/packages/merged_package.rb
+- lib/license_finder/packages/mix_package.rb
+- lib/license_finder/packages/npm_package.rb
+- lib/license_finder/packages/nuget_package.rb
+- lib/license_finder/packages/pip_package.rb
+- lib/license_finder/packages/pnpm_package.rb
+- lib/license_finder/packages/pubspec_package.rb
+- lib/license_finder/packages/rebar_package.rb
+- lib/license_finder/packages/sbt_package.rb
+- lib/license_finder/packages/spm_package.rb
+- lib/license_finder/packages/yarn_package.rb
+- lib/license_finder/platform.rb
+- lib/license_finder/printer.rb
+- lib/license_finder/project_finder.rb
+- lib/license_finder/report.rb
+- lib/license_finder/reports/csv_report.rb
+- lib/license_finder/reports/diff_report.rb
+- lib/license_finder/reports/erb_report.rb
+- lib/license_finder/reports/html_report.rb
+- lib/license_finder/reports/json_report.rb
+- lib/license_finder/reports/junit_report.rb
+- lib/license_finder/reports/markdown_report.rb
+- lib/license_finder/reports/merged_report.rb
+- lib/license_finder/reports/templates/bootstrap.css
+- lib/license_finder/reports/templates/html_report.erb
+- lib/license_finder/reports/templates/junit_report.erb
+- lib/license_finder/reports/templates/markdown_report.erb
+- lib/license_finder/reports/templates/xml_report.erb
+- lib/license_finder/reports/text_report.rb
+- lib/license_finder/reports/xml_report.rb
+- lib/license_finder/scanner.rb
+- lib/license_finder/shared_helpers/cmd.rb
+- lib/license_finder/shared_helpers/common_path.rb
+- lib/license_finder/version.rb
+- license_finder.gemspec
+- release/instructions.md
+- swift-all-keys.asc
+homepage: https://github.com/pivotal/LicenseFinder
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.10
+signing_key: 
+specification_version: 4
+summary: Audit the OSS licenses of your application's dependencies.
+test_files: []

@@ -1,0 +1,138 @@
+--- !ruby/object:Gem::Specification
+name: contracts
+version: !ruby/object:Gem::Version
+  version: 0.17.2
+platform: ruby
+authors:
+- Aditya Bhargava
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-15 00:00:00.000000000 Z
+dependencies: []
+description: This library provides contracts for Ruby. Contracts let you clearly express
+  how your code behaves, and free you from writing tons of boilerplate, defensive
+  code.
+email: bluemangroupie@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/code_style_checks.yaml"
+- ".github/workflows/tests.yaml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.markdown
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO.markdown
+- TUTORIAL.md
+- benchmarks/bench.rb
+- benchmarks/hash.rb
+- benchmarks/invariants.rb
+- benchmarks/io.rb
+- benchmarks/wrap_test.rb
+- contracts.gemspec
+- cucumber.yml
+- dependabot.yml
+- features/README.md
+- features/advanced/pattern_matching.feature
+- features/basics/functype.feature
+- features/basics/pretty-print.feature
+- features/basics/simple_example.feature
+- features/builtin_contracts/README.md
+- features/builtin_contracts/and.feature
+- features/builtin_contracts/any.feature
+- features/builtin_contracts/args.feature
+- features/builtin_contracts/array_of.feature
+- features/builtin_contracts/bool.feature
+- features/builtin_contracts/enum.feature
+- features/builtin_contracts/eq.feature
+- features/builtin_contracts/exactly.feature
+- features/builtin_contracts/func.feature
+- features/builtin_contracts/hash_of.feature
+- features/builtin_contracts/int.feature
+- features/builtin_contracts/keyword_args.feature
+- features/builtin_contracts/keyword_args_with_optional_positional_args.feature
+- features/builtin_contracts/maybe.feature
+- features/builtin_contracts/nat.feature
+- features/builtin_contracts/nat_pos.feature
+- features/builtin_contracts/neg.feature
+- features/builtin_contracts/none.feature
+- features/builtin_contracts/not.feature
+- features/builtin_contracts/num.feature
+- features/builtin_contracts/or.feature
+- features/builtin_contracts/pos.feature
+- features/builtin_contracts/range_of.feature
+- features/builtin_contracts/respond_to.feature
+- features/builtin_contracts/send.feature
+- features/builtin_contracts/set_of.feature
+- features/builtin_contracts/xor.feature
+- features/support/env.rb
+- lib/contracts.rb
+- lib/contracts/attrs.rb
+- lib/contracts/builtin_contracts.rb
+- lib/contracts/call_with.rb
+- lib/contracts/core.rb
+- lib/contracts/decorators.rb
+- lib/contracts/engine.rb
+- lib/contracts/engine/base.rb
+- lib/contracts/engine/eigenclass.rb
+- lib/contracts/engine/target.rb
+- lib/contracts/errors.rb
+- lib/contracts/formatters.rb
+- lib/contracts/invariants.rb
+- lib/contracts/method_handler.rb
+- lib/contracts/method_reference.rb
+- lib/contracts/support.rb
+- lib/contracts/validators.rb
+- lib/contracts/version.rb
+- script/docs-release
+- script/docs-staging
+- script/rubocop.rb
+- spec/attrs_spec.rb
+- spec/builtin_contracts_spec.rb
+- spec/contracts_spec.rb
+- spec/fixtures/fixtures.rb
+- spec/invariants_spec.rb
+- spec/methods_spec.rb
+- spec/module_spec.rb
+- spec/override_validators_spec.rb
+- spec/ruby_version_specific/contracts_spec_1.9.rb
+- spec/ruby_version_specific/contracts_spec_2.0.rb
+- spec/ruby_version_specific/contracts_spec_2.1.rb
+- spec/spec_helper.rb
+- spec/support.rb
+- spec/support_spec.rb
+- spec/validators_spec.rb
+homepage: https://github.com/egonSchiele/contracts.ruby
+licenses:
+- BSD-2-Clause
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+  - - "<"
+    - !ruby/object:Gem::Version
+      version: '4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Contracts for Ruby.
+test_files: []

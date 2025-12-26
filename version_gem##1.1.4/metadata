@@ -1,0 +1,150 @@
+--- !ruby/object:Gem::Specification
+name: version_gem
+version: !ruby/object:Gem::Version
+  version: 1.1.4
+platform: ruby
+authors:
+- Peter Boling
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEgDCCAuigAwIBAgIBATANBgkqhkiG9w0BAQsFADBDMRUwEwYDVQQDDAxwZXRl
+  ci5ib2xpbmcxFTATBgoJkiaJk/IsZAEZFgVnbWFpbDETMBEGCgmSJomT8ixkARkW
+  A2NvbTAeFw0yMzA5MjAxNzMwMjhaFw0yNDA5MTkxNzMwMjhaMEMxFTATBgNVBAMM
+  DHBldGVyLmJvbGluZzEVMBMGCgmSJomT8ixkARkWBWdtYWlsMRMwEQYKCZImiZPy
+  LGQBGRYDY29tMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA+a9UvHo3
+  84k96WgU5Kk5HB+cLZs/modjorsTfqY67MJF5nNvAoqcKTUBW4uG+Zpfnm3jaDO5
+  GxhJEIZWfndYzycHT2KMVQ1uTP82ba8ZaKrPlPIafkbui3mdds47qsmqHiblKERg
+  U532lkwfqHDlJwE7OBZQ59EwWWLynlT/yAUHpOBbqIuHKUxdpmBI+sIjrZcD1e05
+  WmjkO6fwIdC5oM757aoPxIgXD587VOViH11Vkm2doskj4T8yONtwVHlcrrhJ9Bzd
+  /zdp6vEn7GZQrABvpOlqwWxQ72ZnFhJe/RJZf6CXOPOh69Ai0QKYl2a1sYuCJKS3
+  nsBnxXJINEEznjR7rZjNUmYD+CZqfjzgPqedRxTlASe7iA4w7xZOqMDzcuhNwcUQ
+  tMEH6BTktxKP3jXZPXRfHCf6s+HRVb6vezAonTBVyydf5Xp5VwWkd6cwm+2BzHl5
+  7kc/3lLxKMcsyEUprAsk8LdHohwZdC267l+RS++AP6Cz6x+nB3oGob19AgMBAAGj
+  fzB9MAkGA1UdEwQCMAAwCwYDVR0PBAQDAgSwMB0GA1UdDgQWBBQCSSas60GqqMjt
+  xR7LoY1gucEvtzAhBgNVHREEGjAYgRZwZXRlci5ib2xpbmdAZ21haWwuY29tMCEG
+  A1UdEgQaMBiBFnBldGVyLmJvbGluZ0BnbWFpbC5jb20wDQYJKoZIhvcNAQELBQAD
+  ggGBAMl9ifcw5p+PdvB7dCPoNKoVdp/2LbC9ztETHuYL2gUMJB6UoS3o9c/piSuR
+  V3ZMQaijmNu6ms1bWAtJ66LjmYrVflJtf9yp31Kierr9LpisMSUx2qbMOHGa8d2Z
+  vCUWPF8E9Cg0mP3GAyZ6qql8jDh/anUKeksPXqJvNxNPDu2DVYsa/IWdl96whzS4
+  Bl7SwB1E7agps40UcshCSKaVDOU0M+XN6SrnJMElnBic+KSAkBkVFbzS0BE4ODZM
+  BgE6nYzQ05qhuvbE+oGdACTlemNtDDWCh0uw+7x0q2PocGIDU5zsPn/WNTkCXPmB
+  CHGvqDNWq4M7ncTKAaS2XExgyb7uPdq9fKiOW8nmH+zCiGzJXzBWwZlKf7L4Ht9E
+  a3f0e5C+zvee9Z5Ng9ciyfav9/fcXgYt5MjoBv27THr5XfBhgOCIHSYW2tqJmWKi
+  KuxrfYrN+9HvMdm+nZ6TypmKftHY3Gj+/uu+g8Icm/zrvTWAEE0mcJOkfrIoNPJb
+  pF8dMA==
+  -----END CERTIFICATE-----
+date: 2024-03-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rspec-block_is_expected
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+description: Versions are good. Versions are cool. Versions will win.
+email:
+- peter.boling@gmail.com
+- oauth-ruby@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE.txt
+- README.md
+- SECURITY.md
+- lib/version_gem.rb
+- lib/version_gem/api.rb
+- lib/version_gem/basic.rb
+- lib/version_gem/error.rb
+- lib/version_gem/rspec.rb
+- lib/version_gem/ruby.rb
+- lib/version_gem/version.rb
+homepage: https://gitlab.com/oauth-xx/version_gem
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://gitlab.com/oauth-xx/version_gem
+  source_code_uri: https://gitlab.com/oauth-xx/version_gem/-/tree/v1.1.4
+  changelog_uri: https://gitlab.com/oauth-xx/version_gem/-/blob/v1.1.4/CHANGELOG.md
+  bug_tracker_uri: https://gitlab.com/oauth-xx/version_gem/-/issues
+  documentation_uri: https://www.rubydoc.info/gems/version_gem/1.1.4
+  wiki_uri: https://gitlab.com/oauth-xx/version_gem/-/wiki
+  mailing_list_uri: https://groups.google.com/g/oauth-ruby
+  funding_uri: https://liberapay.com/pboling
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key:
+specification_version: 4
+summary: Enhance your VERSION! Sugar for Version modules.
+test_files: []

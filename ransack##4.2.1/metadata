@@ -1,0 +1,251 @@
+--- !ruby/object:Gem::Specification
+name: ransack
+version: !ruby/object:Gem::Version
+  version: 4.2.1
+platform: ruby
+authors:
+- Ernie Miller
+- Ryan Bigg
+- Jon Atack
+- Sean Carroll
+- David Rodríguez
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.5
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.5
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ransack is the successor to the MetaSearch gem. It improves and expands
+  upon MetaSearch's functionality, but does not have a 100%-compatible API.
+email:
+- ernie@erniemiller.org
+- radarlistener@gmail.com
+- jonnyatack@gmail.com
+- sfcarroll@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/SECURITY.md"
+- ".github/workflows/codeql.yml"
+- ".github/workflows/cronjob.yml"
+- ".github/workflows/deploy.yml"
+- ".github/workflows/rubocop.yml"
+- ".github/workflows/test-deploy.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".nojekyll"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bug_report_templates/test-ransack-scope-and-column-same-name.rb
+- bug_report_templates/test-ransacker-arel-present-predicate.rb
+- docs/.gitignore
+- docs/.nojekyll
+- docs/babel.config.js
+- docs/blog/2022-03-27-ransack-3.0.0.md
+- docs/docs/getting-started/_category_.json
+- docs/docs/getting-started/advanced-mode.md
+- docs/docs/getting-started/configuration.md
+- docs/docs/getting-started/search-matches.md
+- docs/docs/getting-started/simple-mode.md
+- docs/docs/getting-started/sorting.md
+- docs/docs/getting-started/using-predicates.md
+- docs/docs/going-further/_category_.json
+- docs/docs/going-further/acts-as-taggable-on.md
+- docs/docs/going-further/associations.md
+- docs/docs/going-further/custom-predicates.md
+- docs/docs/going-further/documentation.md
+- docs/docs/going-further/exporting-to-csv.md
+- docs/docs/going-further/external-guides.md
+- docs/docs/going-further/form-customisation.md
+- docs/docs/going-further/i18n.md
+- docs/docs/going-further/img/create_release.png
+- docs/docs/going-further/merging-searches.md
+- docs/docs/going-further/other-notes.md
+- docs/docs/going-further/polymorphic-search.md
+- docs/docs/going-further/ransackers.md
+- docs/docs/going-further/release_process.md
+- docs/docs/going-further/saving-queries.md
+- docs/docs/going-further/searching-postgres.md
+- docs/docs/going-further/wiki-contributors.md
+- docs/docs/intro.md
+- docs/docusaurus.config.js
+- docs/package.json
+- docs/sidebars.js
+- docs/src/components/HomepageFeatures/index.js
+- docs/src/components/HomepageFeatures/styles.module.css
+- docs/src/css/custom.css
+- docs/src/pages/index.module.css
+- docs/src/pages/markdown-page.md
+- docs/static/.nojekyll
+- docs/static/img/docusaurus.png
+- docs/static/img/favicon.ico
+- docs/static/img/logo.svg
+- docs/static/img/tutorial/docsVersionDropdown.png
+- docs/static/img/tutorial/localeDropdown.png
+- docs/static/img/undraw_docusaurus_mountain.svg
+- docs/static/img/undraw_docusaurus_react.svg
+- docs/static/img/undraw_docusaurus_tree.svg
+- docs/static/logo/ransack-h.png
+- docs/static/logo/ransack-h.svg
+- docs/static/logo/ransack-v.png
+- docs/static/logo/ransack-v.svg
+- docs/static/logo/ransack.png
+- docs/static/logo/ransack.svg
+- docs/yarn.lock
+- lib/polyamorous/activerecord/join_association.rb
+- lib/polyamorous/activerecord/join_association_7_2.rb
+- lib/polyamorous/activerecord/join_dependency.rb
+- lib/polyamorous/activerecord/reflection.rb
+- lib/polyamorous/join.rb
+- lib/polyamorous/polyamorous.rb
+- lib/polyamorous/swapping_reflection_class.rb
+- lib/polyamorous/tree_node.rb
+- lib/ransack.rb
+- lib/ransack/active_record.rb
+- lib/ransack/adapters/active_record/base.rb
+- lib/ransack/adapters/active_record/context.rb
+- lib/ransack/configuration.rb
+- lib/ransack/constants.rb
+- lib/ransack/context.rb
+- lib/ransack/helpers.rb
+- lib/ransack/helpers/form_builder.rb
+- lib/ransack/helpers/form_helper.rb
+- lib/ransack/locale/ar.yml
+- lib/ransack/locale/az.yml
+- lib/ransack/locale/bg.yml
+- lib/ransack/locale/ca.yml
+- lib/ransack/locale/cs.yml
+- lib/ransack/locale/da.yml
+- lib/ransack/locale/de.yml
+- lib/ransack/locale/el.yml
+- lib/ransack/locale/en.yml
+- lib/ransack/locale/es.yml
+- lib/ransack/locale/fa.yml
+- lib/ransack/locale/fi.yml
+- lib/ransack/locale/fr.yml
+- lib/ransack/locale/hu.yml
+- lib/ransack/locale/id.yml
+- lib/ransack/locale/it.yml
+- lib/ransack/locale/ja.yml
+- lib/ransack/locale/nl.yml
+- lib/ransack/locale/pt-BR.yml
+- lib/ransack/locale/ro.yml
+- lib/ransack/locale/ru.yml
+- lib/ransack/locale/sk.yml
+- lib/ransack/locale/sv.yml
+- lib/ransack/locale/tr.yml
+- lib/ransack/locale/zh-CN.yml
+- lib/ransack/locale/zh-TW.yml
+- lib/ransack/naming.rb
+- lib/ransack/nodes/attribute.rb
+- lib/ransack/nodes/bindable.rb
+- lib/ransack/nodes/condition.rb
+- lib/ransack/nodes/grouping.rb
+- lib/ransack/nodes/node.rb
+- lib/ransack/nodes/sort.rb
+- lib/ransack/nodes/value.rb
+- lib/ransack/predicate.rb
+- lib/ransack/ransacker.rb
+- lib/ransack/search.rb
+- lib/ransack/translate.rb
+- lib/ransack/version.rb
+- lib/ransack/visitor.rb
+- ransack.gemspec
+- spec/blueprints/articles.rb
+- spec/blueprints/comments.rb
+- spec/blueprints/notes.rb
+- spec/blueprints/people.rb
+- spec/blueprints/tags.rb
+- spec/console.rb
+- spec/helpers/polyamorous_helper.rb
+- spec/helpers/ransack_helper.rb
+- spec/polyamorous/activerecord_compatibility_spec.rb
+- spec/polyamorous/join_association_spec.rb
+- spec/polyamorous/join_dependency_spec.rb
+- spec/polyamorous/join_spec.rb
+- spec/ransack/adapters/active_record/base_spec.rb
+- spec/ransack/adapters/active_record/context_spec.rb
+- spec/ransack/configuration_spec.rb
+- spec/ransack/helpers/form_builder_spec.rb
+- spec/ransack/helpers/form_helper_spec.rb
+- spec/ransack/nodes/condition_spec.rb
+- spec/ransack/nodes/grouping_spec.rb
+- spec/ransack/nodes/value_spec.rb
+- spec/ransack/predicate_spec.rb
+- spec/ransack/search_spec.rb
+- spec/ransack/translate_spec.rb
+- spec/spec_helper.rb
+- spec/support/en.yml
+- spec/support/schema.rb
+homepage: https://github.com/activerecord-hackery/ransack
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Object-based searching for Active Record.
+test_files: []

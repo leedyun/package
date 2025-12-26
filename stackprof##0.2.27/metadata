@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification
+name: stackprof
+version: !ruby/object:Gem::Version
+  version: 0.2.27
+platform: ruby
+authors:
+- Aman Gupta
+bindir: bin
+cert_chain: []
+date: 2025-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+description: stackprof is a fast sampling profiler for ruby code, with cpu, wallclock
+  and object allocation samplers.
+email: aman@tmm1.net
+executables:
+- stackprof
+- stackprof-flamegraph.pl
+- stackprof-gprof2dot.py
+extensions:
+- ext/stackprof/extconf.rb
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/stackprof
+- bin/stackprof-flamegraph.pl
+- bin/stackprof-gprof2dot.py
+- ext/stackprof/extconf.rb
+- ext/stackprof/stackprof.c
+- lib/stackprof.rb
+- lib/stackprof/autorun.rb
+- lib/stackprof/flamegraph/flamegraph.js
+- lib/stackprof/flamegraph/viewer.html
+- lib/stackprof/middleware.rb
+- lib/stackprof/report.rb
+- lib/stackprof/truffleruby.rb
+- sample.rb
+- stackprof.gemspec
+- test/fixtures/profile.dump
+- test/fixtures/profile.json
+- test/test_middleware.rb
+- test/test_report.rb
+- test/test_stackprof.rb
+- test/test_truffleruby.rb
+- vendor/FlameGraph/README
+- vendor/FlameGraph/flamegraph.pl
+- vendor/gprof2dot/gprof2dot.py
+- vendor/gprof2dot/hotshotmain.py
+homepage: http://github.com/tmm1/stackprof
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/tmm1/stackprof/issues
+  changelog_uri: https://github.com/tmm1/stackprof/blob/v0.2.27/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/stackprof/0.2.27
+  source_code_uri: https://github.com/tmm1/stackprof/tree/v0.2.27
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.7.0.dev
+specification_version: 4
+summary: sampling callstack-profiler for ruby 2.2+
+test_files: []

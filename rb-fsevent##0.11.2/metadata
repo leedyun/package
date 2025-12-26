@@ -1,0 +1,115 @@
+--- !ruby/object:Gem::Specification
+name: rb-fsevent
+version: !ruby/object:Gem::Version
+  version: 0.11.2
+platform: ruby
+authors:
+- Thibaud Guillaume-Gentil
+- Travis Tilley
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-08-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+description: FSEvents API with Signals catching (without RubyCocoa)
+email:
+- thibaud@thibaud.gg
+- ttilley@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/fsevent_watch
+- ext/LICENSE
+- ext/fsevent_watch/FSEventsFix.c
+- ext/fsevent_watch/FSEventsFix.h
+- ext/fsevent_watch/TSICTString.c
+- ext/fsevent_watch/TSICTString.h
+- ext/fsevent_watch/cli.c
+- ext/fsevent_watch/cli.h
+- ext/fsevent_watch/common.h
+- ext/fsevent_watch/compat.c
+- ext/fsevent_watch/compat.h
+- ext/fsevent_watch/defines.h
+- ext/fsevent_watch/main.c
+- ext/fsevent_watch/signal_handlers.c
+- ext/fsevent_watch/signal_handlers.h
+- ext/rakefile.rb
+- lib/otnetstring.rb
+- lib/rb-fsevent.rb
+- lib/rb-fsevent/fsevent.rb
+- lib/rb-fsevent/version.rb
+- rb-fsevent.gemspec
+homepage: http://rubygems.org/gems/rb-fsevent
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/thibaudgg/rb-fsevent
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.10
+signing_key:
+specification_version: 4
+summary: Very simple & usable FSEvents API
+test_files: []

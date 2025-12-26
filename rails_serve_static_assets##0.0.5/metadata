@@ -1,0 +1,194 @@
+--- !ruby/object:Gem::Specification
+name: rails_serve_static_assets
+version: !ruby/object:Gem::Version
+  version: 0.0.5
+platform: ruby
+authors:
+- Pedro Belo
+- Jonathan Dance
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-02-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sprockets
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Force Rails to serve static assets
+email:
+- pedro@heroku.com
+- jd@heroku.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- gemfiles/3.2.gemfile
+- gemfiles/4.1.gemfile
+- gemfiles/4.2.gemfile
+- lib/rails_serve_static_assets.rb
+- lib/rails_serve_static_assets/railtie.rb
+- lib/rails_serve_static_assets/version.rb
+- rails_serve_static_assets.gemspec
+- test/integration/static_file_service_test.rb
+- test/rails_app/Rakefile
+- test/rails_app/app/assets/images/schneems.png
+- test/rails_app/app/assets/javascripts/application.js
+- test/rails_app/app/assets/javascripts/foo.js
+- test/rails_app/app/assets/stylesheets/application.css
+- test/rails_app/app/assets/stylesheets/foo.css
+- test/rails_app/app/controllers/application_controller.rb
+- test/rails_app/app/controllers/authenticated_controller.rb
+- test/rails_app/app/controllers/pages_controller.rb
+- test/rails_app/app/helpers/application_helper.rb
+- test/rails_app/app/helpers/authenticated_helper.rb
+- test/rails_app/app/views/authenticated/index.html.erb
+- test/rails_app/app/views/layouts/application.html.erb
+- test/rails_app/app/views/pages/index.html.erb
+- test/rails_app/config.ru
+- test/rails_app/config/application.rb
+- test/rails_app/config/boot.rb
+- test/rails_app/config/database.yml
+- test/rails_app/config/environment.rb
+- test/rails_app/config/environments/development.rb
+- test/rails_app/config/environments/production.rb
+- test/rails_app/config/environments/test.rb
+- test/rails_app/config/initializers/backtrace_silencers.rb
+- test/rails_app/config/initializers/inflections.rb
+- test/rails_app/config/initializers/mime_types.rb
+- test/rails_app/config/initializers/secret_token.rb
+- test/rails_app/config/initializers/session_store.rb
+- test/rails_app/config/locales/devise.en.yml
+- test/rails_app/config/locales/en.yml
+- test/rails_app/config/locales/es.yml
+- test/rails_app/config/routes.rb
+- test/rails_app/db/test.sqlite3
+- test/rails_app/perf.rake
+- test/rails_app/public/404.html
+- test/rails_app/public/422.html
+- test/rails_app/public/500.html
+- test/rails_app/public/assets/application-5f55f638b632759d9c9113417c3ac6bd.css
+- test/rails_app/public/assets/application-5f55f638b632759d9c9113417c3ac6bd.css.gz
+- test/rails_app/public/assets/application-89f8f774b6fb6783dfccc79d4103f256.js
+- test/rails_app/public/assets/application-89f8f774b6fb6783dfccc79d4103f256.js.gz
+- test/rails_app/public/assets/manifest-7bf37a2cd54094ac4d4308b706454b81.json
+- test/rails_app/public/assets/schneems-cb0905b917bde936182e153558f54a5f.png
+- test/rails_app/public/favicon.ico
+- test/rails_app/script/rails
+- test/test_helper.rb
+homepage: https://github.com/heroku/rails_serve_static_assets
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: Sets serve_static_assets to true so Rails will sere your static assets
+test_files:
+- test/integration/static_file_service_test.rb
+- test/rails_app/Rakefile
+- test/rails_app/app/assets/images/schneems.png
+- test/rails_app/app/assets/javascripts/application.js
+- test/rails_app/app/assets/javascripts/foo.js
+- test/rails_app/app/assets/stylesheets/application.css
+- test/rails_app/app/assets/stylesheets/foo.css
+- test/rails_app/app/controllers/application_controller.rb
+- test/rails_app/app/controllers/authenticated_controller.rb
+- test/rails_app/app/controllers/pages_controller.rb
+- test/rails_app/app/helpers/application_helper.rb
+- test/rails_app/app/helpers/authenticated_helper.rb
+- test/rails_app/app/views/authenticated/index.html.erb
+- test/rails_app/app/views/layouts/application.html.erb
+- test/rails_app/app/views/pages/index.html.erb
+- test/rails_app/config.ru
+- test/rails_app/config/application.rb
+- test/rails_app/config/boot.rb
+- test/rails_app/config/database.yml
+- test/rails_app/config/environment.rb
+- test/rails_app/config/environments/development.rb
+- test/rails_app/config/environments/production.rb
+- test/rails_app/config/environments/test.rb
+- test/rails_app/config/initializers/backtrace_silencers.rb
+- test/rails_app/config/initializers/inflections.rb
+- test/rails_app/config/initializers/mime_types.rb
+- test/rails_app/config/initializers/secret_token.rb
+- test/rails_app/config/initializers/session_store.rb
+- test/rails_app/config/locales/devise.en.yml
+- test/rails_app/config/locales/en.yml
+- test/rails_app/config/locales/es.yml
+- test/rails_app/config/routes.rb
+- test/rails_app/db/test.sqlite3
+- test/rails_app/perf.rake
+- test/rails_app/public/404.html
+- test/rails_app/public/422.html
+- test/rails_app/public/500.html
+- test/rails_app/public/assets/application-5f55f638b632759d9c9113417c3ac6bd.css
+- test/rails_app/public/assets/application-5f55f638b632759d9c9113417c3ac6bd.css.gz
+- test/rails_app/public/assets/application-89f8f774b6fb6783dfccc79d4103f256.js
+- test/rails_app/public/assets/application-89f8f774b6fb6783dfccc79d4103f256.js.gz
+- test/rails_app/public/assets/manifest-7bf37a2cd54094ac4d4308b706454b81.json
+- test/rails_app/public/assets/schneems-cb0905b917bde936182e153558f54a5f.png
+- test/rails_app/public/favicon.ico
+- test/rails_app/script/rails
+- test/test_helper.rb

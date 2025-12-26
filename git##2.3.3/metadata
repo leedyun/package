@@ -1,0 +1,268 @@
+--- !ruby/object:Gem::Specification
+name: git
+version: !ruby/object:Gem::Version
+  version: 2.3.3
+platform: ruby
+authors:
+- Scott Chacon and others
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+- !ruby/object:Gem::Dependency
+  name: process_executer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: rchardet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: create_github_release
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: minitar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.28
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.28
+- !ruby/object:Gem::Dependency
+  name: yardstick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: |
+  The git gem provides an API that can be used to
+  create, read, and manipulate Git repositories by wrapping system calls to the git
+  command line. The API can be used for working with Git in complex interactions
+  including branching and merging, object inspection and manipulation, history, patch
+  generation and more.
+email: schacon@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/issue_template.md"
+- ".github/pull_request_template.md"
+- ".github/workflows/continuous_integration.yml"
+- ".github/workflows/experimental_continuous_integration.yml"
+- ".gitignore"
+- ".yardopts"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- MAINTAINERS.md
+- README.md
+- RELEASING.md
+- Rakefile
+- git.gemspec
+- lib/git.rb
+- lib/git/author.rb
+- lib/git/base.rb
+- lib/git/branch.rb
+- lib/git/branches.rb
+- lib/git/command_line.rb
+- lib/git/command_line_result.rb
+- lib/git/config.rb
+- lib/git/diff.rb
+- lib/git/encoding_utils.rb
+- lib/git/errors.rb
+- lib/git/escaped_path.rb
+- lib/git/index.rb
+- lib/git/lib.rb
+- lib/git/log.rb
+- lib/git/object.rb
+- lib/git/path.rb
+- lib/git/remote.rb
+- lib/git/repository.rb
+- lib/git/stash.rb
+- lib/git/stashes.rb
+- lib/git/status.rb
+- lib/git/url.rb
+- lib/git/version.rb
+- lib/git/working_directory.rb
+- lib/git/worktree.rb
+- lib/git/worktrees.rb
+homepage: http://github.com/ruby-git/ruby-git
+licenses:
+- MIT
+metadata:
+  homepage_uri: http://github.com/ruby-git/ruby-git
+  source_code_uri: http://github.com/ruby-git/ruby-git
+  changelog_uri: https://rubydoc.info/gems/git/2.3.3/file/CHANGELOG.md
+  documentation_uri: https://rubydoc.info/gems/git/2.3.3
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements:
+- git 2.28.0 or greater
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: An API to create, read, and manipulate Git repositories
+test_files: []

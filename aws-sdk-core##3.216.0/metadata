@@ -1,0 +1,409 @@
+--- !ruby/object:Gem::Specification
+name: aws-sdk-core
+version: !ruby/object:Gem::Version
+  version: 3.216.0
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: jmespath
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+- !ruby/object:Gem::Dependency
+  name: aws-partitions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.992.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.992.0
+- !ruby/object:Gem::Dependency
+  name: aws-sigv4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+- !ruby/object:Gem::Dependency
+  name: aws-eventstream
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+description: Provides API clients for AWS. This gem is part of the official AWS SDK
+  for Ruby.
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- VERSION
+- ca-bundle.crt
+- lib/aws-defaults.rb
+- lib/aws-defaults/default_configuration.rb
+- lib/aws-defaults/defaults_mode_config_resolver.rb
+- lib/aws-sdk-core.rb
+- lib/aws-sdk-core/arn.rb
+- lib/aws-sdk-core/arn_parser.rb
+- lib/aws-sdk-core/assume_role_credentials.rb
+- lib/aws-sdk-core/assume_role_web_identity_credentials.rb
+- lib/aws-sdk-core/async_client_stubs.rb
+- lib/aws-sdk-core/binary.rb
+- lib/aws-sdk-core/binary/decode_handler.rb
+- lib/aws-sdk-core/binary/encode_handler.rb
+- lib/aws-sdk-core/binary/event_builder.rb
+- lib/aws-sdk-core/binary/event_parser.rb
+- lib/aws-sdk-core/binary/event_stream_decoder.rb
+- lib/aws-sdk-core/binary/event_stream_encoder.rb
+- lib/aws-sdk-core/cbor.rb
+- lib/aws-sdk-core/cbor/decoder.rb
+- lib/aws-sdk-core/cbor/encoder.rb
+- lib/aws-sdk-core/client_side_monitoring.rb
+- lib/aws-sdk-core/client_side_monitoring/publisher.rb
+- lib/aws-sdk-core/client_side_monitoring/request_metrics.rb
+- lib/aws-sdk-core/client_stubs.rb
+- lib/aws-sdk-core/credential_provider.rb
+- lib/aws-sdk-core/credential_provider_chain.rb
+- lib/aws-sdk-core/credentials.rb
+- lib/aws-sdk-core/deprecations.rb
+- lib/aws-sdk-core/eager_loader.rb
+- lib/aws-sdk-core/ec2_metadata.rb
+- lib/aws-sdk-core/ecs_credentials.rb
+- lib/aws-sdk-core/endpoint_cache.rb
+- lib/aws-sdk-core/endpoints.rb
+- lib/aws-sdk-core/endpoints/condition.rb
+- lib/aws-sdk-core/endpoints/endpoint.rb
+- lib/aws-sdk-core/endpoints/endpoint_rule.rb
+- lib/aws-sdk-core/endpoints/error_rule.rb
+- lib/aws-sdk-core/endpoints/function.rb
+- lib/aws-sdk-core/endpoints/matchers.rb
+- lib/aws-sdk-core/endpoints/reference.rb
+- lib/aws-sdk-core/endpoints/rule.rb
+- lib/aws-sdk-core/endpoints/rule_set.rb
+- lib/aws-sdk-core/endpoints/rules_provider.rb
+- lib/aws-sdk-core/endpoints/templater.rb
+- lib/aws-sdk-core/endpoints/tree_rule.rb
+- lib/aws-sdk-core/endpoints/url.rb
+- lib/aws-sdk-core/error_handler.rb
+- lib/aws-sdk-core/errors.rb
+- lib/aws-sdk-core/event_emitter.rb
+- lib/aws-sdk-core/ini_parser.rb
+- lib/aws-sdk-core/instance_profile_credentials.rb
+- lib/aws-sdk-core/json.rb
+- lib/aws-sdk-core/json/builder.rb
+- lib/aws-sdk-core/json/error_handler.rb
+- lib/aws-sdk-core/json/handler.rb
+- lib/aws-sdk-core/json/json_engine.rb
+- lib/aws-sdk-core/json/oj_engine.rb
+- lib/aws-sdk-core/json/parser.rb
+- lib/aws-sdk-core/log.rb
+- lib/aws-sdk-core/log/formatter.rb
+- lib/aws-sdk-core/log/handler.rb
+- lib/aws-sdk-core/log/param_filter.rb
+- lib/aws-sdk-core/log/param_formatter.rb
+- lib/aws-sdk-core/lru_cache.rb
+- lib/aws-sdk-core/pageable_response.rb
+- lib/aws-sdk-core/pager.rb
+- lib/aws-sdk-core/param_converter.rb
+- lib/aws-sdk-core/param_validator.rb
+- lib/aws-sdk-core/plugins.rb
+- lib/aws-sdk-core/plugins/api_key.rb
+- lib/aws-sdk-core/plugins/apig_authorizer_token.rb
+- lib/aws-sdk-core/plugins/apig_credentials_configuration.rb
+- lib/aws-sdk-core/plugins/apig_user_agent.rb
+- lib/aws-sdk-core/plugins/bearer_authorization.rb
+- lib/aws-sdk-core/plugins/checksum_algorithm.rb
+- lib/aws-sdk-core/plugins/client_metrics_plugin.rb
+- lib/aws-sdk-core/plugins/client_metrics_send_plugin.rb
+- lib/aws-sdk-core/plugins/credentials_configuration.rb
+- lib/aws-sdk-core/plugins/defaults_mode.rb
+- lib/aws-sdk-core/plugins/endpoint_discovery.rb
+- lib/aws-sdk-core/plugins/endpoint_pattern.rb
+- lib/aws-sdk-core/plugins/event_stream_configuration.rb
+- lib/aws-sdk-core/plugins/global_configuration.rb
+- lib/aws-sdk-core/plugins/helpful_socket_errors.rb
+- lib/aws-sdk-core/plugins/http_checksum.rb
+- lib/aws-sdk-core/plugins/idempotency_token.rb
+- lib/aws-sdk-core/plugins/invocation_id.rb
+- lib/aws-sdk-core/plugins/jsonvalue_converter.rb
+- lib/aws-sdk-core/plugins/logging.rb
+- lib/aws-sdk-core/plugins/param_converter.rb
+- lib/aws-sdk-core/plugins/param_validator.rb
+- lib/aws-sdk-core/plugins/protocols/api_gateway.rb
+- lib/aws-sdk-core/plugins/protocols/ec2.rb
+- lib/aws-sdk-core/plugins/protocols/json_rpc.rb
+- lib/aws-sdk-core/plugins/protocols/query.rb
+- lib/aws-sdk-core/plugins/protocols/rest_json.rb
+- lib/aws-sdk-core/plugins/protocols/rest_xml.rb
+- lib/aws-sdk-core/plugins/protocols/rpc_v2.rb
+- lib/aws-sdk-core/plugins/recursion_detection.rb
+- lib/aws-sdk-core/plugins/regional_endpoint.rb
+- lib/aws-sdk-core/plugins/request_compression.rb
+- lib/aws-sdk-core/plugins/response_paging.rb
+- lib/aws-sdk-core/plugins/retries/client_rate_limiter.rb
+- lib/aws-sdk-core/plugins/retries/clock_skew.rb
+- lib/aws-sdk-core/plugins/retries/error_inspector.rb
+- lib/aws-sdk-core/plugins/retries/retry_quota.rb
+- lib/aws-sdk-core/plugins/retry_errors.rb
+- lib/aws-sdk-core/plugins/sign.rb
+- lib/aws-sdk-core/plugins/signature_v2.rb
+- lib/aws-sdk-core/plugins/signature_v4.rb
+- lib/aws-sdk-core/plugins/stub_responses.rb
+- lib/aws-sdk-core/plugins/telemetry.rb
+- lib/aws-sdk-core/plugins/transfer_encoding.rb
+- lib/aws-sdk-core/plugins/user_agent.rb
+- lib/aws-sdk-core/process_credentials.rb
+- lib/aws-sdk-core/query.rb
+- lib/aws-sdk-core/query/ec2_handler.rb
+- lib/aws-sdk-core/query/ec2_param_builder.rb
+- lib/aws-sdk-core/query/handler.rb
+- lib/aws-sdk-core/query/param.rb
+- lib/aws-sdk-core/query/param_builder.rb
+- lib/aws-sdk-core/query/param_list.rb
+- lib/aws-sdk-core/refreshing_credentials.rb
+- lib/aws-sdk-core/refreshing_token.rb
+- lib/aws-sdk-core/resources.rb
+- lib/aws-sdk-core/resources/collection.rb
+- lib/aws-sdk-core/rest.rb
+- lib/aws-sdk-core/rest/content_type_handler.rb
+- lib/aws-sdk-core/rest/handler.rb
+- lib/aws-sdk-core/rest/request/body.rb
+- lib/aws-sdk-core/rest/request/builder.rb
+- lib/aws-sdk-core/rest/request/endpoint.rb
+- lib/aws-sdk-core/rest/request/headers.rb
+- lib/aws-sdk-core/rest/request/querystring_builder.rb
+- lib/aws-sdk-core/rest/response/body.rb
+- lib/aws-sdk-core/rest/response/header_list_parser.rb
+- lib/aws-sdk-core/rest/response/headers.rb
+- lib/aws-sdk-core/rest/response/parser.rb
+- lib/aws-sdk-core/rest/response/status_code.rb
+- lib/aws-sdk-core/rpc_v2.rb
+- lib/aws-sdk-core/rpc_v2/builder.rb
+- lib/aws-sdk-core/rpc_v2/cbor_engine.rb
+- lib/aws-sdk-core/rpc_v2/content_type_handler.rb
+- lib/aws-sdk-core/rpc_v2/error_handler.rb
+- lib/aws-sdk-core/rpc_v2/handler.rb
+- lib/aws-sdk-core/rpc_v2/parser.rb
+- lib/aws-sdk-core/shared_config.rb
+- lib/aws-sdk-core/shared_credentials.rb
+- lib/aws-sdk-core/sso_credentials.rb
+- lib/aws-sdk-core/sso_token_provider.rb
+- lib/aws-sdk-core/static_token_provider.rb
+- lib/aws-sdk-core/structure.rb
+- lib/aws-sdk-core/stubbing.rb
+- lib/aws-sdk-core/stubbing/data_applicator.rb
+- lib/aws-sdk-core/stubbing/empty_stub.rb
+- lib/aws-sdk-core/stubbing/protocols/api_gateway.rb
+- lib/aws-sdk-core/stubbing/protocols/ec2.rb
+- lib/aws-sdk-core/stubbing/protocols/json.rb
+- lib/aws-sdk-core/stubbing/protocols/query.rb
+- lib/aws-sdk-core/stubbing/protocols/rest.rb
+- lib/aws-sdk-core/stubbing/protocols/rest_json.rb
+- lib/aws-sdk-core/stubbing/protocols/rest_xml.rb
+- lib/aws-sdk-core/stubbing/protocols/rpc_v2.rb
+- lib/aws-sdk-core/stubbing/stub_data.rb
+- lib/aws-sdk-core/stubbing/xml_error.rb
+- lib/aws-sdk-core/telemetry.rb
+- lib/aws-sdk-core/telemetry/base.rb
+- lib/aws-sdk-core/telemetry/no_op.rb
+- lib/aws-sdk-core/telemetry/otel.rb
+- lib/aws-sdk-core/telemetry/span_kind.rb
+- lib/aws-sdk-core/telemetry/span_status.rb
+- lib/aws-sdk-core/token.rb
+- lib/aws-sdk-core/token_provider.rb
+- lib/aws-sdk-core/token_provider_chain.rb
+- lib/aws-sdk-core/type_builder.rb
+- lib/aws-sdk-core/util.rb
+- lib/aws-sdk-core/waiters.rb
+- lib/aws-sdk-core/waiters/errors.rb
+- lib/aws-sdk-core/waiters/poller.rb
+- lib/aws-sdk-core/waiters/waiter.rb
+- lib/aws-sdk-core/xml.rb
+- lib/aws-sdk-core/xml/builder.rb
+- lib/aws-sdk-core/xml/default_list.rb
+- lib/aws-sdk-core/xml/default_map.rb
+- lib/aws-sdk-core/xml/doc_builder.rb
+- lib/aws-sdk-core/xml/error_handler.rb
+- lib/aws-sdk-core/xml/parser.rb
+- lib/aws-sdk-core/xml/parser/frame.rb
+- lib/aws-sdk-core/xml/parser/libxml_engine.rb
+- lib/aws-sdk-core/xml/parser/nokogiri_engine.rb
+- lib/aws-sdk-core/xml/parser/oga_engine.rb
+- lib/aws-sdk-core/xml/parser/ox_engine.rb
+- lib/aws-sdk-core/xml/parser/parsing_error.rb
+- lib/aws-sdk-core/xml/parser/rexml_engine.rb
+- lib/aws-sdk-core/xml/parser/stack.rb
+- lib/aws-sdk-sso.rb
+- lib/aws-sdk-sso/client.rb
+- lib/aws-sdk-sso/client_api.rb
+- lib/aws-sdk-sso/customizations.rb
+- lib/aws-sdk-sso/endpoint_parameters.rb
+- lib/aws-sdk-sso/endpoint_provider.rb
+- lib/aws-sdk-sso/endpoints.rb
+- lib/aws-sdk-sso/errors.rb
+- lib/aws-sdk-sso/plugins/endpoints.rb
+- lib/aws-sdk-sso/resource.rb
+- lib/aws-sdk-sso/types.rb
+- lib/aws-sdk-ssooidc.rb
+- lib/aws-sdk-ssooidc/client.rb
+- lib/aws-sdk-ssooidc/client_api.rb
+- lib/aws-sdk-ssooidc/customizations.rb
+- lib/aws-sdk-ssooidc/endpoint_parameters.rb
+- lib/aws-sdk-ssooidc/endpoint_provider.rb
+- lib/aws-sdk-ssooidc/endpoints.rb
+- lib/aws-sdk-ssooidc/errors.rb
+- lib/aws-sdk-ssooidc/plugins/endpoints.rb
+- lib/aws-sdk-ssooidc/resource.rb
+- lib/aws-sdk-ssooidc/types.rb
+- lib/aws-sdk-sts.rb
+- lib/aws-sdk-sts/client.rb
+- lib/aws-sdk-sts/client_api.rb
+- lib/aws-sdk-sts/customizations.rb
+- lib/aws-sdk-sts/endpoint_parameters.rb
+- lib/aws-sdk-sts/endpoint_provider.rb
+- lib/aws-sdk-sts/endpoints.rb
+- lib/aws-sdk-sts/errors.rb
+- lib/aws-sdk-sts/plugins/endpoints.rb
+- lib/aws-sdk-sts/plugins/sts_regional_endpoints.rb
+- lib/aws-sdk-sts/presigner.rb
+- lib/aws-sdk-sts/resource.rb
+- lib/aws-sdk-sts/types.rb
+- lib/seahorse.rb
+- lib/seahorse/client/async_base.rb
+- lib/seahorse/client/async_response.rb
+- lib/seahorse/client/base.rb
+- lib/seahorse/client/block_io.rb
+- lib/seahorse/client/configuration.rb
+- lib/seahorse/client/events.rb
+- lib/seahorse/client/h2/connection.rb
+- lib/seahorse/client/h2/handler.rb
+- lib/seahorse/client/handler.rb
+- lib/seahorse/client/handler_builder.rb
+- lib/seahorse/client/handler_list.rb
+- lib/seahorse/client/handler_list_entry.rb
+- lib/seahorse/client/http/async_response.rb
+- lib/seahorse/client/http/headers.rb
+- lib/seahorse/client/http/request.rb
+- lib/seahorse/client/http/response.rb
+- lib/seahorse/client/logging/formatter.rb
+- lib/seahorse/client/logging/handler.rb
+- lib/seahorse/client/managed_file.rb
+- lib/seahorse/client/net_http/connection_pool.rb
+- lib/seahorse/client/net_http/handler.rb
+- lib/seahorse/client/net_http/patches.rb
+- lib/seahorse/client/networking_error.rb
+- lib/seahorse/client/plugin.rb
+- lib/seahorse/client/plugin_list.rb
+- lib/seahorse/client/plugins/content_length.rb
+- lib/seahorse/client/plugins/endpoint.rb
+- lib/seahorse/client/plugins/h2.rb
+- lib/seahorse/client/plugins/logging.rb
+- lib/seahorse/client/plugins/net_http.rb
+- lib/seahorse/client/plugins/operation_methods.rb
+- lib/seahorse/client/plugins/raise_response_errors.rb
+- lib/seahorse/client/plugins/request_callback.rb
+- lib/seahorse/client/plugins/response_target.rb
+- lib/seahorse/client/request.rb
+- lib/seahorse/client/request_context.rb
+- lib/seahorse/client/response.rb
+- lib/seahorse/model/api.rb
+- lib/seahorse/model/authorizer.rb
+- lib/seahorse/model/operation.rb
+- lib/seahorse/model/shapes.rb
+- lib/seahorse/util.rb
+- lib/seahorse/version.rb
+- sig/aws-sdk-core.rbs
+- sig/aws-sdk-core/client_stubs.rbs
+- sig/aws-sdk-core/errors.rbs
+- sig/aws-sdk-core/resources/collection.rbs
+- sig/aws-sdk-core/structure.rbs
+- sig/aws-sdk-core/telemetry/base.rbs
+- sig/aws-sdk-core/telemetry/otel.rbs
+- sig/aws-sdk-core/telemetry/span_kind.rbs
+- sig/aws-sdk-core/telemetry/span_status.rbs
+- sig/aws-sdk-core/waiters/errors.rbs
+- sig/seahorse/client/base.rbs
+- sig/seahorse/client/handler_builder.rbs
+- sig/seahorse/client/response.rbs
+homepage: https://github.com/aws/aws-sdk-ruby
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-core
+  changelog_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-core/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: AWS SDK for Ruby - Core
+test_files: []

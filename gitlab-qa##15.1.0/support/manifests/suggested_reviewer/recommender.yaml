@@ -1,0 +1,52 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommender-deployment
+  labels:
+    app: recommender
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recommender
+  template:
+    metadata:
+      labels:
+        app: recommender
+    spec:
+      containers:
+        - name: recommender
+          image: recommender-service:dev
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: models-mount
+              mountPath: /app/data/models
+          env:
+            - name: RECOMMENDER_SERVICE_PORT
+              value: "8080"
+            - name: RECOMMENDER_MODELS_STORAGE
+              value: local
+            - name: GRPC_VERBOSITY
+              value: debug
+      volumes:
+        - name: models-mount
+          hostPath:
+            path: /tmp/gitlab-qa/suggested_reviewer/data/models
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommender-service
+  labels:
+    app: recommender
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: recommender

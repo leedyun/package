@@ -1,0 +1,84 @@
+--- !ruby/object:Gem::Specification
+name: fabrication
+version: !ruby/object:Gem::Version
+  version: 2.31.0
+platform: ruby
+authors:
+- Paul Elliott
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-11-27 00:00:00.000000000 Z
+dependencies: []
+description: Fabrication is an object generation framework for ActiveRecord, Mongoid,
+  DataMapper, Sequel, or any other Ruby object.
+email:
+- paul@codingfrontier.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.markdown
+- Rakefile
+- lib/fabricate.rb
+- lib/fabrication.rb
+- lib/fabrication/config.rb
+- lib/fabrication/cucumber/step_fabricator.rb
+- lib/fabrication/errors/duplicate_fabricator_error.rb
+- lib/fabrication/errors/infinite_recursion_error.rb
+- lib/fabrication/errors/misplaced_fabricate_error.rb
+- lib/fabrication/errors/unfabricatable_error.rb
+- lib/fabrication/errors/unknown_fabricator_error.rb
+- lib/fabrication/generator/active_record.rb
+- lib/fabrication/generator/base.rb
+- lib/fabrication/generator/data_mapper.rb
+- lib/fabrication/generator/mongoid.rb
+- lib/fabrication/generator/sequel.rb
+- lib/fabrication/railtie.rb
+- lib/fabrication/schematic/attribute.rb
+- lib/fabrication/schematic/definition.rb
+- lib/fabrication/schematic/evaluator.rb
+- lib/fabrication/schematic/manager.rb
+- lib/fabrication/schematic/runner.rb
+- lib/fabrication/sequencer.rb
+- lib/fabrication/support.rb
+- lib/fabrication/syntax/make.rb
+- lib/fabrication/transform.rb
+- lib/fabrication/version.rb
+- lib/rails/generators/fabrication/cucumber_steps/cucumber_steps_generator.rb
+- lib/rails/generators/fabrication/cucumber_steps/templates/fabrication_steps.rb
+- lib/rails/generators/fabrication/model/model_generator.rb
+- lib/rails/generators/fabrication/model/templates/fabricator.erb
+- lib/tasks/defined_fabricators.rake
+homepage: http://fabricationgem.org
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://gitlab.com/fabrication-gem/fabrication/-/issues
+  changelog_uri: https://gitlab.com/fabrication-gem/fabrication/-/blob/master/Changelog.markdown
+  documentation_uri: https://fabricationgem.org
+  homepage_uri: https://fabricationgem.org
+  mailing_list_uri: https://groups.google.com/g/fabricationgem
+  rubygems_mfa_required: 'true'
+  source_code_uri: https://gitlab.com/fabrication-gem/fabrication
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Generates object instances for test suites, seed files, etc.
+test_files: []

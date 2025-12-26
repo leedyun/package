@@ -1,0 +1,359 @@
+--- !ruby/object:Gem::Specification
+name: dentaku
+version: !ruby/object:Gem::Version
+  version: 3.5.4
+platform: ruby
+authors:
+- Solomon White
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: codecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-stack_explorer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: "    Dentaku is a parser and evaluator for mathematical formulas\n"
+email:
+- rubysolo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".pryrc"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- dentaku.gemspec
+- lib/dentaku.rb
+- lib/dentaku/ast.rb
+- lib/dentaku/ast/access.rb
+- lib/dentaku/ast/arithmetic.rb
+- lib/dentaku/ast/array.rb
+- lib/dentaku/ast/bitwise.rb
+- lib/dentaku/ast/case.rb
+- lib/dentaku/ast/case/case_conditional.rb
+- lib/dentaku/ast/case/case_else.rb
+- lib/dentaku/ast/case/case_switch_variable.rb
+- lib/dentaku/ast/case/case_then.rb
+- lib/dentaku/ast/case/case_when.rb
+- lib/dentaku/ast/combinators.rb
+- lib/dentaku/ast/comparators.rb
+- lib/dentaku/ast/datetime.rb
+- lib/dentaku/ast/function.rb
+- lib/dentaku/ast/function_registry.rb
+- lib/dentaku/ast/functions/abs.rb
+- lib/dentaku/ast/functions/all.rb
+- lib/dentaku/ast/functions/and.rb
+- lib/dentaku/ast/functions/any.rb
+- lib/dentaku/ast/functions/avg.rb
+- lib/dentaku/ast/functions/count.rb
+- lib/dentaku/ast/functions/duration.rb
+- lib/dentaku/ast/functions/enum.rb
+- lib/dentaku/ast/functions/filter.rb
+- lib/dentaku/ast/functions/if.rb
+- lib/dentaku/ast/functions/intercept.rb
+- lib/dentaku/ast/functions/map.rb
+- lib/dentaku/ast/functions/max.rb
+- lib/dentaku/ast/functions/min.rb
+- lib/dentaku/ast/functions/mul.rb
+- lib/dentaku/ast/functions/not.rb
+- lib/dentaku/ast/functions/or.rb
+- lib/dentaku/ast/functions/pluck.rb
+- lib/dentaku/ast/functions/reduce.rb
+- lib/dentaku/ast/functions/round.rb
+- lib/dentaku/ast/functions/rounddown.rb
+- lib/dentaku/ast/functions/roundup.rb
+- lib/dentaku/ast/functions/ruby_math.rb
+- lib/dentaku/ast/functions/string_functions.rb
+- lib/dentaku/ast/functions/sum.rb
+- lib/dentaku/ast/functions/switch.rb
+- lib/dentaku/ast/functions/xor.rb
+- lib/dentaku/ast/grouping.rb
+- lib/dentaku/ast/identifier.rb
+- lib/dentaku/ast/literal.rb
+- lib/dentaku/ast/logical.rb
+- lib/dentaku/ast/negation.rb
+- lib/dentaku/ast/nil.rb
+- lib/dentaku/ast/node.rb
+- lib/dentaku/ast/numeric.rb
+- lib/dentaku/ast/operation.rb
+- lib/dentaku/ast/string.rb
+- lib/dentaku/bulk_expression_solver.rb
+- lib/dentaku/calculator.rb
+- lib/dentaku/date_arithmetic.rb
+- lib/dentaku/dependency_resolver.rb
+- lib/dentaku/exceptions.rb
+- lib/dentaku/flat_hash.rb
+- lib/dentaku/parser.rb
+- lib/dentaku/print_visitor.rb
+- lib/dentaku/string_casing.rb
+- lib/dentaku/token.rb
+- lib/dentaku/token_matcher.rb
+- lib/dentaku/token_matchers.rb
+- lib/dentaku/token_scanner.rb
+- lib/dentaku/tokenizer.rb
+- lib/dentaku/version.rb
+- lib/dentaku/visitor/infix.rb
+- spec/ast/abs_spec.rb
+- spec/ast/addition_spec.rb
+- spec/ast/all_spec.rb
+- spec/ast/and_function_spec.rb
+- spec/ast/and_spec.rb
+- spec/ast/any_spec.rb
+- spec/ast/arithmetic_spec.rb
+- spec/ast/avg_spec.rb
+- spec/ast/case_spec.rb
+- spec/ast/comparator_spec.rb
+- spec/ast/count_spec.rb
+- spec/ast/division_spec.rb
+- spec/ast/filter_spec.rb
+- spec/ast/function_spec.rb
+- spec/ast/intercept_spec.rb
+- spec/ast/map_spec.rb
+- spec/ast/max_spec.rb
+- spec/ast/min_spec.rb
+- spec/ast/mul_spec.rb
+- spec/ast/negation_spec.rb
+- spec/ast/node_spec.rb
+- spec/ast/numeric_spec.rb
+- spec/ast/or_spec.rb
+- spec/ast/pluck_spec.rb
+- spec/ast/reduce_spec.rb
+- spec/ast/round_spec.rb
+- spec/ast/rounddown_spec.rb
+- spec/ast/roundup_spec.rb
+- spec/ast/string_functions_spec.rb
+- spec/ast/sum_spec.rb
+- spec/ast/switch_spec.rb
+- spec/ast/xor_spec.rb
+- spec/benchmark.rb
+- spec/bulk_expression_solver_spec.rb
+- spec/calculator_spec.rb
+- spec/dentaku_spec.rb
+- spec/dependency_resolver_spec.rb
+- spec/exceptions_spec.rb
+- spec/external_function_spec.rb
+- spec/parser_spec.rb
+- spec/print_visitor_spec.rb
+- spec/spec_helper.rb
+- spec/token_matcher_spec.rb
+- spec/token_scanner_spec.rb
+- spec/token_spec.rb
+- spec/tokenizer_spec.rb
+- spec/visitor/infix_spec.rb
+- spec/visitor_spec.rb
+homepage: http://github.com/rubysolo/dentaku
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.9
+signing_key:
+specification_version: 4
+summary: A formula language parser and evaluator
+test_files:
+- spec/ast/abs_spec.rb
+- spec/ast/addition_spec.rb
+- spec/ast/all_spec.rb
+- spec/ast/and_function_spec.rb
+- spec/ast/and_spec.rb
+- spec/ast/any_spec.rb
+- spec/ast/arithmetic_spec.rb
+- spec/ast/avg_spec.rb
+- spec/ast/case_spec.rb
+- spec/ast/comparator_spec.rb
+- spec/ast/count_spec.rb
+- spec/ast/division_spec.rb
+- spec/ast/filter_spec.rb
+- spec/ast/function_spec.rb
+- spec/ast/intercept_spec.rb
+- spec/ast/map_spec.rb
+- spec/ast/max_spec.rb
+- spec/ast/min_spec.rb
+- spec/ast/mul_spec.rb
+- spec/ast/negation_spec.rb
+- spec/ast/node_spec.rb
+- spec/ast/numeric_spec.rb
+- spec/ast/or_spec.rb
+- spec/ast/pluck_spec.rb
+- spec/ast/reduce_spec.rb
+- spec/ast/round_spec.rb
+- spec/ast/rounddown_spec.rb
+- spec/ast/roundup_spec.rb
+- spec/ast/string_functions_spec.rb
+- spec/ast/sum_spec.rb
+- spec/ast/switch_spec.rb
+- spec/ast/xor_spec.rb
+- spec/benchmark.rb
+- spec/bulk_expression_solver_spec.rb
+- spec/calculator_spec.rb
+- spec/dentaku_spec.rb
+- spec/dependency_resolver_spec.rb
+- spec/exceptions_spec.rb
+- spec/external_function_spec.rb
+- spec/parser_spec.rb
+- spec/print_visitor_spec.rb
+- spec/spec_helper.rb
+- spec/token_matcher_spec.rb
+- spec/token_scanner_spec.rb
+- spec/token_spec.rb
+- spec/tokenizer_spec.rb
+- spec/visitor/infix_spec.rb
+- spec/visitor_spec.rb

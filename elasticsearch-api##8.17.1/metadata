@@ -1,0 +1,1835 @@
+--- !ruby/object:Gem::Specification
+name: elasticsearch-api
+version: !ruby/object:Gem::Version
+  version: 8.17.1
+platform: ruby
+authors:
+- Elastic Client Library Maintainers
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ansi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: elasticsearch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: elasticsearch-test-runner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jsonify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jbuilder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: escape_utils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: require-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+description: 'Ruby API for Elasticsearch. See the `elasticsearch` gem for full integration.
+
+  '
+email:
+- client-libs@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE.txt
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- api-spec-testing/README.md
+- api-spec-testing/custom_cleanup.rb
+- api-spec-testing/logging.rb
+- api-spec-testing/rspec_matchers.rb
+- api-spec-testing/test_file.rb
+- api-spec-testing/test_file/action.rb
+- api-spec-testing/test_file/task_group.rb
+- api-spec-testing/test_file/test.rb
+- api-spec-testing/wipe_cluster.rb
+- elasticsearch-api.gemspec
+- lib/elasticsearch-api.rb
+- lib/elasticsearch/api.rb
+- lib/elasticsearch/api/actions/async_search/delete.rb
+- lib/elasticsearch/api/actions/async_search/get.rb
+- lib/elasticsearch/api/actions/async_search/status.rb
+- lib/elasticsearch/api/actions/async_search/submit.rb
+- lib/elasticsearch/api/actions/autoscaling/delete_autoscaling_policy.rb
+- lib/elasticsearch/api/actions/autoscaling/get_autoscaling_capacity.rb
+- lib/elasticsearch/api/actions/autoscaling/get_autoscaling_policy.rb
+- lib/elasticsearch/api/actions/autoscaling/put_autoscaling_policy.rb
+- lib/elasticsearch/api/actions/bulk.rb
+- lib/elasticsearch/api/actions/capabilities.rb
+- lib/elasticsearch/api/actions/cat/aliases.rb
+- lib/elasticsearch/api/actions/cat/allocation.rb
+- lib/elasticsearch/api/actions/cat/component_templates.rb
+- lib/elasticsearch/api/actions/cat/count.rb
+- lib/elasticsearch/api/actions/cat/fielddata.rb
+- lib/elasticsearch/api/actions/cat/health.rb
+- lib/elasticsearch/api/actions/cat/help.rb
+- lib/elasticsearch/api/actions/cat/indices.rb
+- lib/elasticsearch/api/actions/cat/master.rb
+- lib/elasticsearch/api/actions/cat/ml_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/cat/ml_datafeeds.rb
+- lib/elasticsearch/api/actions/cat/ml_jobs.rb
+- lib/elasticsearch/api/actions/cat/ml_trained_models.rb
+- lib/elasticsearch/api/actions/cat/nodeattrs.rb
+- lib/elasticsearch/api/actions/cat/nodes.rb
+- lib/elasticsearch/api/actions/cat/pending_tasks.rb
+- lib/elasticsearch/api/actions/cat/plugins.rb
+- lib/elasticsearch/api/actions/cat/recovery.rb
+- lib/elasticsearch/api/actions/cat/repositories.rb
+- lib/elasticsearch/api/actions/cat/segments.rb
+- lib/elasticsearch/api/actions/cat/shards.rb
+- lib/elasticsearch/api/actions/cat/snapshots.rb
+- lib/elasticsearch/api/actions/cat/tasks.rb
+- lib/elasticsearch/api/actions/cat/templates.rb
+- lib/elasticsearch/api/actions/cat/thread_pool.rb
+- lib/elasticsearch/api/actions/cat/transforms.rb
+- lib/elasticsearch/api/actions/clear_scroll.rb
+- lib/elasticsearch/api/actions/close_point_in_time.rb
+- lib/elasticsearch/api/actions/cluster/allocation_explain.rb
+- lib/elasticsearch/api/actions/cluster/delete_component_template.rb
+- lib/elasticsearch/api/actions/cluster/delete_voting_config_exclusions.rb
+- lib/elasticsearch/api/actions/cluster/exists_component_template.rb
+- lib/elasticsearch/api/actions/cluster/get_component_template.rb
+- lib/elasticsearch/api/actions/cluster/get_settings.rb
+- lib/elasticsearch/api/actions/cluster/health.rb
+- lib/elasticsearch/api/actions/cluster/info.rb
+- lib/elasticsearch/api/actions/cluster/pending_tasks.rb
+- lib/elasticsearch/api/actions/cluster/post_voting_config_exclusions.rb
+- lib/elasticsearch/api/actions/cluster/put_component_template.rb
+- lib/elasticsearch/api/actions/cluster/put_settings.rb
+- lib/elasticsearch/api/actions/cluster/remote_info.rb
+- lib/elasticsearch/api/actions/cluster/reroute.rb
+- lib/elasticsearch/api/actions/cluster/state.rb
+- lib/elasticsearch/api/actions/cluster/stats.rb
+- lib/elasticsearch/api/actions/connector/check_in.rb
+- lib/elasticsearch/api/actions/connector/delete.rb
+- lib/elasticsearch/api/actions/connector/get.rb
+- lib/elasticsearch/api/actions/connector/last_sync.rb
+- lib/elasticsearch/api/actions/connector/list.rb
+- lib/elasticsearch/api/actions/connector/post.rb
+- lib/elasticsearch/api/actions/connector/put.rb
+- lib/elasticsearch/api/actions/connector/secret_delete.rb
+- lib/elasticsearch/api/actions/connector/secret_get.rb
+- lib/elasticsearch/api/actions/connector/secret_post.rb
+- lib/elasticsearch/api/actions/connector/secret_put.rb
+- lib/elasticsearch/api/actions/connector/sync_job_cancel.rb
+- lib/elasticsearch/api/actions/connector/sync_job_check_in.rb
+- lib/elasticsearch/api/actions/connector/sync_job_claim.rb
+- lib/elasticsearch/api/actions/connector/sync_job_delete.rb
+- lib/elasticsearch/api/actions/connector/sync_job_error.rb
+- lib/elasticsearch/api/actions/connector/sync_job_get.rb
+- lib/elasticsearch/api/actions/connector/sync_job_list.rb
+- lib/elasticsearch/api/actions/connector/sync_job_post.rb
+- lib/elasticsearch/api/actions/connector/sync_job_update_stats.rb
+- lib/elasticsearch/api/actions/connector/update_active_filtering.rb
+- lib/elasticsearch/api/actions/connector/update_api_key_id.rb
+- lib/elasticsearch/api/actions/connector/update_configuration.rb
+- lib/elasticsearch/api/actions/connector/update_error.rb
+- lib/elasticsearch/api/actions/connector/update_features.rb
+- lib/elasticsearch/api/actions/connector/update_filtering.rb
+- lib/elasticsearch/api/actions/connector/update_filtering_validation.rb
+- lib/elasticsearch/api/actions/connector/update_index_name.rb
+- lib/elasticsearch/api/actions/connector/update_name.rb
+- lib/elasticsearch/api/actions/connector/update_native.rb
+- lib/elasticsearch/api/actions/connector/update_pipeline.rb
+- lib/elasticsearch/api/actions/connector/update_scheduling.rb
+- lib/elasticsearch/api/actions/connector/update_service_type.rb
+- lib/elasticsearch/api/actions/connector/update_status.rb
+- lib/elasticsearch/api/actions/count.rb
+- lib/elasticsearch/api/actions/create.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/delete_auto_follow_pattern.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/follow.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/follow_info.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/follow_stats.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/forget_follower.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/get_auto_follow_pattern.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/pause_auto_follow_pattern.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/pause_follow.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/put_auto_follow_pattern.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/resume_auto_follow_pattern.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/resume_follow.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/stats.rb
+- lib/elasticsearch/api/actions/cross_cluster_replication/unfollow.rb
+- lib/elasticsearch/api/actions/dangling_indices/delete_dangling_index.rb
+- lib/elasticsearch/api/actions/dangling_indices/import_dangling_index.rb
+- lib/elasticsearch/api/actions/dangling_indices/list_dangling_indices.rb
+- lib/elasticsearch/api/actions/delete.rb
+- lib/elasticsearch/api/actions/delete_by_query.rb
+- lib/elasticsearch/api/actions/delete_by_query_rethrottle.rb
+- lib/elasticsearch/api/actions/delete_script.rb
+- lib/elasticsearch/api/actions/enrich/delete_policy.rb
+- lib/elasticsearch/api/actions/enrich/execute_policy.rb
+- lib/elasticsearch/api/actions/enrich/get_policy.rb
+- lib/elasticsearch/api/actions/enrich/put_policy.rb
+- lib/elasticsearch/api/actions/enrich/stats.rb
+- lib/elasticsearch/api/actions/eql/delete.rb
+- lib/elasticsearch/api/actions/eql/get.rb
+- lib/elasticsearch/api/actions/eql/get_status.rb
+- lib/elasticsearch/api/actions/eql/search.rb
+- lib/elasticsearch/api/actions/esql/async_query.rb
+- lib/elasticsearch/api/actions/esql/async_query_get.rb
+- lib/elasticsearch/api/actions/esql/query.rb
+- lib/elasticsearch/api/actions/exists.rb
+- lib/elasticsearch/api/actions/exists_source.rb
+- lib/elasticsearch/api/actions/explain.rb
+- lib/elasticsearch/api/actions/features/get_features.rb
+- lib/elasticsearch/api/actions/features/reset_features.rb
+- lib/elasticsearch/api/actions/field_caps.rb
+- lib/elasticsearch/api/actions/fleet/delete_secret.rb
+- lib/elasticsearch/api/actions/fleet/get_secret.rb
+- lib/elasticsearch/api/actions/fleet/global_checkpoints.rb
+- lib/elasticsearch/api/actions/fleet/msearch.rb
+- lib/elasticsearch/api/actions/fleet/post_secret.rb
+- lib/elasticsearch/api/actions/fleet/search.rb
+- lib/elasticsearch/api/actions/get.rb
+- lib/elasticsearch/api/actions/get_script.rb
+- lib/elasticsearch/api/actions/get_script_context.rb
+- lib/elasticsearch/api/actions/get_script_languages.rb
+- lib/elasticsearch/api/actions/get_source.rb
+- lib/elasticsearch/api/actions/graph/explore.rb
+- lib/elasticsearch/api/actions/health_report.rb
+- lib/elasticsearch/api/actions/index.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/delete_lifecycle.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/explain_lifecycle.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/get_lifecycle.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/get_status.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/migrate_to_data_tiers.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/move_to_step.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/put_lifecycle.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/remove_policy.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/retry.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/start.rb
+- lib/elasticsearch/api/actions/index_lifecycle_management/stop.rb
+- lib/elasticsearch/api/actions/indices/add_block.rb
+- lib/elasticsearch/api/actions/indices/analyze.rb
+- lib/elasticsearch/api/actions/indices/clear_cache.rb
+- lib/elasticsearch/api/actions/indices/clone.rb
+- lib/elasticsearch/api/actions/indices/close.rb
+- lib/elasticsearch/api/actions/indices/create.rb
+- lib/elasticsearch/api/actions/indices/create_data_stream.rb
+- lib/elasticsearch/api/actions/indices/data_streams_stats.rb
+- lib/elasticsearch/api/actions/indices/delete.rb
+- lib/elasticsearch/api/actions/indices/delete_alias.rb
+- lib/elasticsearch/api/actions/indices/delete_data_lifecycle.rb
+- lib/elasticsearch/api/actions/indices/delete_data_stream.rb
+- lib/elasticsearch/api/actions/indices/delete_index_template.rb
+- lib/elasticsearch/api/actions/indices/delete_template.rb
+- lib/elasticsearch/api/actions/indices/disk_usage.rb
+- lib/elasticsearch/api/actions/indices/downsample.rb
+- lib/elasticsearch/api/actions/indices/exists.rb
+- lib/elasticsearch/api/actions/indices/exists_alias.rb
+- lib/elasticsearch/api/actions/indices/exists_index_template.rb
+- lib/elasticsearch/api/actions/indices/exists_template.rb
+- lib/elasticsearch/api/actions/indices/explain_data_lifecycle.rb
+- lib/elasticsearch/api/actions/indices/field_usage_stats.rb
+- lib/elasticsearch/api/actions/indices/flush.rb
+- lib/elasticsearch/api/actions/indices/forcemerge.rb
+- lib/elasticsearch/api/actions/indices/get.rb
+- lib/elasticsearch/api/actions/indices/get_alias.rb
+- lib/elasticsearch/api/actions/indices/get_data_lifecycle.rb
+- lib/elasticsearch/api/actions/indices/get_data_stream.rb
+- lib/elasticsearch/api/actions/indices/get_field_mapping.rb
+- lib/elasticsearch/api/actions/indices/get_index_template.rb
+- lib/elasticsearch/api/actions/indices/get_mapping.rb
+- lib/elasticsearch/api/actions/indices/get_settings.rb
+- lib/elasticsearch/api/actions/indices/get_template.rb
+- lib/elasticsearch/api/actions/indices/migrate_to_data_stream.rb
+- lib/elasticsearch/api/actions/indices/modify_data_stream.rb
+- lib/elasticsearch/api/actions/indices/open.rb
+- lib/elasticsearch/api/actions/indices/promote_data_stream.rb
+- lib/elasticsearch/api/actions/indices/put_alias.rb
+- lib/elasticsearch/api/actions/indices/put_data_lifecycle.rb
+- lib/elasticsearch/api/actions/indices/put_index_template.rb
+- lib/elasticsearch/api/actions/indices/put_mapping.rb
+- lib/elasticsearch/api/actions/indices/put_settings.rb
+- lib/elasticsearch/api/actions/indices/put_template.rb
+- lib/elasticsearch/api/actions/indices/recovery.rb
+- lib/elasticsearch/api/actions/indices/refresh.rb
+- lib/elasticsearch/api/actions/indices/reload_search_analyzers.rb
+- lib/elasticsearch/api/actions/indices/resolve_cluster.rb
+- lib/elasticsearch/api/actions/indices/resolve_index.rb
+- lib/elasticsearch/api/actions/indices/rollover.rb
+- lib/elasticsearch/api/actions/indices/segments.rb
+- lib/elasticsearch/api/actions/indices/shard_stores.rb
+- lib/elasticsearch/api/actions/indices/shrink.rb
+- lib/elasticsearch/api/actions/indices/simulate_index_template.rb
+- lib/elasticsearch/api/actions/indices/simulate_template.rb
+- lib/elasticsearch/api/actions/indices/split.rb
+- lib/elasticsearch/api/actions/indices/stats.rb
+- lib/elasticsearch/api/actions/indices/unfreeze.rb
+- lib/elasticsearch/api/actions/indices/update_aliases.rb
+- lib/elasticsearch/api/actions/indices/validate_query.rb
+- lib/elasticsearch/api/actions/inference/delete.rb
+- lib/elasticsearch/api/actions/inference/get.rb
+- lib/elasticsearch/api/actions/inference/inference.rb
+- lib/elasticsearch/api/actions/inference/put.rb
+- lib/elasticsearch/api/actions/inference/stream_inference.rb
+- lib/elasticsearch/api/actions/info.rb
+- lib/elasticsearch/api/actions/ingest/delete_geoip_database.rb
+- lib/elasticsearch/api/actions/ingest/delete_ip_location_database.rb
+- lib/elasticsearch/api/actions/ingest/delete_pipeline.rb
+- lib/elasticsearch/api/actions/ingest/geo_ip_stats.rb
+- lib/elasticsearch/api/actions/ingest/get_geoip_database.rb
+- lib/elasticsearch/api/actions/ingest/get_ip_location_database.rb
+- lib/elasticsearch/api/actions/ingest/get_pipeline.rb
+- lib/elasticsearch/api/actions/ingest/processor_grok.rb
+- lib/elasticsearch/api/actions/ingest/put_geoip_database.rb
+- lib/elasticsearch/api/actions/ingest/put_ip_location_database.rb
+- lib/elasticsearch/api/actions/ingest/put_pipeline.rb
+- lib/elasticsearch/api/actions/ingest/simulate.rb
+- lib/elasticsearch/api/actions/knn_search.rb
+- lib/elasticsearch/api/actions/license/delete.rb
+- lib/elasticsearch/api/actions/license/get.rb
+- lib/elasticsearch/api/actions/license/get_basic_status.rb
+- lib/elasticsearch/api/actions/license/get_trial_status.rb
+- lib/elasticsearch/api/actions/license/post.rb
+- lib/elasticsearch/api/actions/license/post_start_basic.rb
+- lib/elasticsearch/api/actions/license/post_start_trial.rb
+- lib/elasticsearch/api/actions/logstash/delete_pipeline.rb
+- lib/elasticsearch/api/actions/logstash/get_pipeline.rb
+- lib/elasticsearch/api/actions/logstash/put_pipeline.rb
+- lib/elasticsearch/api/actions/machine_learning/clear_trained_model_deployment_cache.rb
+- lib/elasticsearch/api/actions/machine_learning/close_job.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_calendar.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_calendar_event.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_calendar_job.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_expired_data.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_filter.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_forecast.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_job.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_model_snapshot.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_trained_model.rb
+- lib/elasticsearch/api/actions/machine_learning/delete_trained_model_alias.rb
+- lib/elasticsearch/api/actions/machine_learning/estimate_model_memory.rb
+- lib/elasticsearch/api/actions/machine_learning/evaluate_data_frame.rb
+- lib/elasticsearch/api/actions/machine_learning/explain_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/flush_job.rb
+- lib/elasticsearch/api/actions/machine_learning/forecast.rb
+- lib/elasticsearch/api/actions/machine_learning/get_buckets.rb
+- lib/elasticsearch/api/actions/machine_learning/get_calendar_events.rb
+- lib/elasticsearch/api/actions/machine_learning/get_calendars.rb
+- lib/elasticsearch/api/actions/machine_learning/get_categories.rb
+- lib/elasticsearch/api/actions/machine_learning/get_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/get_data_frame_analytics_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/get_datafeed_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/get_datafeeds.rb
+- lib/elasticsearch/api/actions/machine_learning/get_filters.rb
+- lib/elasticsearch/api/actions/machine_learning/get_influencers.rb
+- lib/elasticsearch/api/actions/machine_learning/get_job_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/get_jobs.rb
+- lib/elasticsearch/api/actions/machine_learning/get_memory_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/get_model_snapshot_upgrade_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/get_model_snapshots.rb
+- lib/elasticsearch/api/actions/machine_learning/get_overall_buckets.rb
+- lib/elasticsearch/api/actions/machine_learning/get_records.rb
+- lib/elasticsearch/api/actions/machine_learning/get_trained_models.rb
+- lib/elasticsearch/api/actions/machine_learning/get_trained_models_stats.rb
+- lib/elasticsearch/api/actions/machine_learning/infer_trained_model.rb
+- lib/elasticsearch/api/actions/machine_learning/info.rb
+- lib/elasticsearch/api/actions/machine_learning/open_job.rb
+- lib/elasticsearch/api/actions/machine_learning/post_calendar_events.rb
+- lib/elasticsearch/api/actions/machine_learning/post_data.rb
+- lib/elasticsearch/api/actions/machine_learning/preview_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/preview_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/put_calendar.rb
+- lib/elasticsearch/api/actions/machine_learning/put_calendar_job.rb
+- lib/elasticsearch/api/actions/machine_learning/put_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/put_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/put_filter.rb
+- lib/elasticsearch/api/actions/machine_learning/put_job.rb
+- lib/elasticsearch/api/actions/machine_learning/put_trained_model.rb
+- lib/elasticsearch/api/actions/machine_learning/put_trained_model_alias.rb
+- lib/elasticsearch/api/actions/machine_learning/put_trained_model_definition_part.rb
+- lib/elasticsearch/api/actions/machine_learning/put_trained_model_vocabulary.rb
+- lib/elasticsearch/api/actions/machine_learning/reset_job.rb
+- lib/elasticsearch/api/actions/machine_learning/revert_model_snapshot.rb
+- lib/elasticsearch/api/actions/machine_learning/set_upgrade_mode.rb
+- lib/elasticsearch/api/actions/machine_learning/start_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/start_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/start_trained_model_deployment.rb
+- lib/elasticsearch/api/actions/machine_learning/stop_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/stop_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/stop_trained_model_deployment.rb
+- lib/elasticsearch/api/actions/machine_learning/update_data_frame_analytics.rb
+- lib/elasticsearch/api/actions/machine_learning/update_datafeed.rb
+- lib/elasticsearch/api/actions/machine_learning/update_filter.rb
+- lib/elasticsearch/api/actions/machine_learning/update_job.rb
+- lib/elasticsearch/api/actions/machine_learning/update_model_snapshot.rb
+- lib/elasticsearch/api/actions/machine_learning/update_trained_model_deployment.rb
+- lib/elasticsearch/api/actions/machine_learning/upgrade_job_snapshot.rb
+- lib/elasticsearch/api/actions/machine_learning/validate.rb
+- lib/elasticsearch/api/actions/machine_learning/validate_detector.rb
+- lib/elasticsearch/api/actions/mget.rb
+- lib/elasticsearch/api/actions/migration/deprecations.rb
+- lib/elasticsearch/api/actions/migration/get_feature_upgrade_status.rb
+- lib/elasticsearch/api/actions/migration/post_feature_upgrade.rb
+- lib/elasticsearch/api/actions/monitoring/bulk.rb
+- lib/elasticsearch/api/actions/msearch.rb
+- lib/elasticsearch/api/actions/msearch_template.rb
+- lib/elasticsearch/api/actions/mtermvectors.rb
+- lib/elasticsearch/api/actions/nodes/clear_repositories_metering_archive.rb
+- lib/elasticsearch/api/actions/nodes/get_repositories_metering_info.rb
+- lib/elasticsearch/api/actions/nodes/hot_threads.rb
+- lib/elasticsearch/api/actions/nodes/info.rb
+- lib/elasticsearch/api/actions/nodes/reload_secure_settings.rb
+- lib/elasticsearch/api/actions/nodes/stats.rb
+- lib/elasticsearch/api/actions/nodes/usage.rb
+- lib/elasticsearch/api/actions/open_point_in_time.rb
+- lib/elasticsearch/api/actions/ping.rb
+- lib/elasticsearch/api/actions/profiling/flamegraph.rb
+- lib/elasticsearch/api/actions/profiling/stacktraces.rb
+- lib/elasticsearch/api/actions/profiling/status.rb
+- lib/elasticsearch/api/actions/profiling/topn_functions.rb
+- lib/elasticsearch/api/actions/put_script.rb
+- lib/elasticsearch/api/actions/query_rules/delete_rule.rb
+- lib/elasticsearch/api/actions/query_rules/delete_ruleset.rb
+- lib/elasticsearch/api/actions/query_rules/get_rule.rb
+- lib/elasticsearch/api/actions/query_rules/get_ruleset.rb
+- lib/elasticsearch/api/actions/query_rules/list_rulesets.rb
+- lib/elasticsearch/api/actions/query_rules/put_rule.rb
+- lib/elasticsearch/api/actions/query_rules/put_ruleset.rb
+- lib/elasticsearch/api/actions/query_rules/test.rb
+- lib/elasticsearch/api/actions/rank_eval.rb
+- lib/elasticsearch/api/actions/reindex.rb
+- lib/elasticsearch/api/actions/reindex_rethrottle.rb
+- lib/elasticsearch/api/actions/render_search_template.rb
+- lib/elasticsearch/api/actions/rollup/delete_job.rb
+- lib/elasticsearch/api/actions/rollup/get_jobs.rb
+- lib/elasticsearch/api/actions/rollup/get_rollup_caps.rb
+- lib/elasticsearch/api/actions/rollup/get_rollup_index_caps.rb
+- lib/elasticsearch/api/actions/rollup/put_job.rb
+- lib/elasticsearch/api/actions/rollup/rollup_search.rb
+- lib/elasticsearch/api/actions/rollup/start_job.rb
+- lib/elasticsearch/api/actions/rollup/stop_job.rb
+- lib/elasticsearch/api/actions/scripts_painless_execute.rb
+- lib/elasticsearch/api/actions/scroll.rb
+- lib/elasticsearch/api/actions/search.rb
+- lib/elasticsearch/api/actions/search_application/delete.rb
+- lib/elasticsearch/api/actions/search_application/delete_behavioral_analytics.rb
+- lib/elasticsearch/api/actions/search_application/get.rb
+- lib/elasticsearch/api/actions/search_application/get_behavioral_analytics.rb
+- lib/elasticsearch/api/actions/search_application/list.rb
+- lib/elasticsearch/api/actions/search_application/post_behavioral_analytics_event.rb
+- lib/elasticsearch/api/actions/search_application/put.rb
+- lib/elasticsearch/api/actions/search_application/put_behavioral_analytics.rb
+- lib/elasticsearch/api/actions/search_application/render_query.rb
+- lib/elasticsearch/api/actions/search_application/search.rb
+- lib/elasticsearch/api/actions/search_mvt.rb
+- lib/elasticsearch/api/actions/search_shards.rb
+- lib/elasticsearch/api/actions/search_template.rb
+- lib/elasticsearch/api/actions/searchable_snapshots/cache_stats.rb
+- lib/elasticsearch/api/actions/searchable_snapshots/clear_cache.rb
+- lib/elasticsearch/api/actions/searchable_snapshots/mount.rb
+- lib/elasticsearch/api/actions/searchable_snapshots/stats.rb
+- lib/elasticsearch/api/actions/security/activate_user_profile.rb
+- lib/elasticsearch/api/actions/security/authenticate.rb
+- lib/elasticsearch/api/actions/security/bulk_delete_role.rb
+- lib/elasticsearch/api/actions/security/bulk_put_role.rb
+- lib/elasticsearch/api/actions/security/bulk_update_api_keys.rb
+- lib/elasticsearch/api/actions/security/change_password.rb
+- lib/elasticsearch/api/actions/security/clear_api_key_cache.rb
+- lib/elasticsearch/api/actions/security/clear_cached_privileges.rb
+- lib/elasticsearch/api/actions/security/clear_cached_realms.rb
+- lib/elasticsearch/api/actions/security/clear_cached_roles.rb
+- lib/elasticsearch/api/actions/security/clear_cached_service_tokens.rb
+- lib/elasticsearch/api/actions/security/create_api_key.rb
+- lib/elasticsearch/api/actions/security/create_cross_cluster_api_key.rb
+- lib/elasticsearch/api/actions/security/create_service_token.rb
+- lib/elasticsearch/api/actions/security/delete_privileges.rb
+- lib/elasticsearch/api/actions/security/delete_role.rb
+- lib/elasticsearch/api/actions/security/delete_role_mapping.rb
+- lib/elasticsearch/api/actions/security/delete_service_token.rb
+- lib/elasticsearch/api/actions/security/delete_user.rb
+- lib/elasticsearch/api/actions/security/disable_user.rb
+- lib/elasticsearch/api/actions/security/disable_user_profile.rb
+- lib/elasticsearch/api/actions/security/enable_user.rb
+- lib/elasticsearch/api/actions/security/enable_user_profile.rb
+- lib/elasticsearch/api/actions/security/enroll_kibana.rb
+- lib/elasticsearch/api/actions/security/enroll_node.rb
+- lib/elasticsearch/api/actions/security/get_api_key.rb
+- lib/elasticsearch/api/actions/security/get_builtin_privileges.rb
+- lib/elasticsearch/api/actions/security/get_privileges.rb
+- lib/elasticsearch/api/actions/security/get_role.rb
+- lib/elasticsearch/api/actions/security/get_role_mapping.rb
+- lib/elasticsearch/api/actions/security/get_service_accounts.rb
+- lib/elasticsearch/api/actions/security/get_service_credentials.rb
+- lib/elasticsearch/api/actions/security/get_settings.rb
+- lib/elasticsearch/api/actions/security/get_token.rb
+- lib/elasticsearch/api/actions/security/get_user.rb
+- lib/elasticsearch/api/actions/security/get_user_privileges.rb
+- lib/elasticsearch/api/actions/security/get_user_profile.rb
+- lib/elasticsearch/api/actions/security/grant_api_key.rb
+- lib/elasticsearch/api/actions/security/has_privileges.rb
+- lib/elasticsearch/api/actions/security/has_privileges_user_profile.rb
+- lib/elasticsearch/api/actions/security/invalidate_api_key.rb
+- lib/elasticsearch/api/actions/security/invalidate_token.rb
+- lib/elasticsearch/api/actions/security/oidc_authenticate.rb
+- lib/elasticsearch/api/actions/security/oidc_logout.rb
+- lib/elasticsearch/api/actions/security/oidc_prepare_authentication.rb
+- lib/elasticsearch/api/actions/security/put_privileges.rb
+- lib/elasticsearch/api/actions/security/put_role.rb
+- lib/elasticsearch/api/actions/security/put_role_mapping.rb
+- lib/elasticsearch/api/actions/security/put_user.rb
+- lib/elasticsearch/api/actions/security/query_api_keys.rb
+- lib/elasticsearch/api/actions/security/query_role.rb
+- lib/elasticsearch/api/actions/security/query_user.rb
+- lib/elasticsearch/api/actions/security/saml_authenticate.rb
+- lib/elasticsearch/api/actions/security/saml_complete_logout.rb
+- lib/elasticsearch/api/actions/security/saml_invalidate.rb
+- lib/elasticsearch/api/actions/security/saml_logout.rb
+- lib/elasticsearch/api/actions/security/saml_prepare_authentication.rb
+- lib/elasticsearch/api/actions/security/saml_service_provider_metadata.rb
+- lib/elasticsearch/api/actions/security/suggest_user_profiles.rb
+- lib/elasticsearch/api/actions/security/update_api_key.rb
+- lib/elasticsearch/api/actions/security/update_cross_cluster_api_key.rb
+- lib/elasticsearch/api/actions/security/update_settings.rb
+- lib/elasticsearch/api/actions/security/update_user_profile_data.rb
+- lib/elasticsearch/api/actions/shutdown/delete_node.rb
+- lib/elasticsearch/api/actions/shutdown/get_node.rb
+- lib/elasticsearch/api/actions/shutdown/put_node.rb
+- lib/elasticsearch/api/actions/simulate/ingest.rb
+- lib/elasticsearch/api/actions/snapshot/cleanup_repository.rb
+- lib/elasticsearch/api/actions/snapshot/clone.rb
+- lib/elasticsearch/api/actions/snapshot/create.rb
+- lib/elasticsearch/api/actions/snapshot/create_repository.rb
+- lib/elasticsearch/api/actions/snapshot/delete.rb
+- lib/elasticsearch/api/actions/snapshot/delete_repository.rb
+- lib/elasticsearch/api/actions/snapshot/get.rb
+- lib/elasticsearch/api/actions/snapshot/get_repository.rb
+- lib/elasticsearch/api/actions/snapshot/repository_analyze.rb
+- lib/elasticsearch/api/actions/snapshot/restore.rb
+- lib/elasticsearch/api/actions/snapshot/status.rb
+- lib/elasticsearch/api/actions/snapshot/verify_repository.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/delete_lifecycle.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/execute_lifecycle.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/execute_retention.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/get_lifecycle.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/get_stats.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/get_status.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/put_lifecycle.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/start.rb
+- lib/elasticsearch/api/actions/snapshot_lifecycle_management/stop.rb
+- lib/elasticsearch/api/actions/sql/clear_cursor.rb
+- lib/elasticsearch/api/actions/sql/delete_async.rb
+- lib/elasticsearch/api/actions/sql/get_async.rb
+- lib/elasticsearch/api/actions/sql/get_async_status.rb
+- lib/elasticsearch/api/actions/sql/query.rb
+- lib/elasticsearch/api/actions/sql/translate.rb
+- lib/elasticsearch/api/actions/ssl/certificates.rb
+- lib/elasticsearch/api/actions/synonyms/delete_synonym.rb
+- lib/elasticsearch/api/actions/synonyms/delete_synonym_rule.rb
+- lib/elasticsearch/api/actions/synonyms/get_synonym.rb
+- lib/elasticsearch/api/actions/synonyms/get_synonym_rule.rb
+- lib/elasticsearch/api/actions/synonyms/get_synonyms_sets.rb
+- lib/elasticsearch/api/actions/synonyms/put_synonym.rb
+- lib/elasticsearch/api/actions/synonyms/put_synonym_rule.rb
+- lib/elasticsearch/api/actions/tasks/cancel.rb
+- lib/elasticsearch/api/actions/tasks/get.rb
+- lib/elasticsearch/api/actions/tasks/list.rb
+- lib/elasticsearch/api/actions/terms_enum.rb
+- lib/elasticsearch/api/actions/termvectors.rb
+- lib/elasticsearch/api/actions/text_structure/find_field_structure.rb
+- lib/elasticsearch/api/actions/text_structure/find_message_structure.rb
+- lib/elasticsearch/api/actions/text_structure/find_structure.rb
+- lib/elasticsearch/api/actions/text_structure/test_grok_pattern.rb
+- lib/elasticsearch/api/actions/transform/delete_transform.rb
+- lib/elasticsearch/api/actions/transform/get_node_stats.rb
+- lib/elasticsearch/api/actions/transform/get_transform.rb
+- lib/elasticsearch/api/actions/transform/get_transform_stats.rb
+- lib/elasticsearch/api/actions/transform/preview_transform.rb
+- lib/elasticsearch/api/actions/transform/put_transform.rb
+- lib/elasticsearch/api/actions/transform/reset_transform.rb
+- lib/elasticsearch/api/actions/transform/schedule_now_transform.rb
+- lib/elasticsearch/api/actions/transform/start_transform.rb
+- lib/elasticsearch/api/actions/transform/stop_transform.rb
+- lib/elasticsearch/api/actions/transform/update_transform.rb
+- lib/elasticsearch/api/actions/transform/upgrade_transforms.rb
+- lib/elasticsearch/api/actions/update.rb
+- lib/elasticsearch/api/actions/update_by_query.rb
+- lib/elasticsearch/api/actions/update_by_query_rethrottle.rb
+- lib/elasticsearch/api/actions/watcher/ack_watch.rb
+- lib/elasticsearch/api/actions/watcher/activate_watch.rb
+- lib/elasticsearch/api/actions/watcher/deactivate_watch.rb
+- lib/elasticsearch/api/actions/watcher/delete_watch.rb
+- lib/elasticsearch/api/actions/watcher/execute_watch.rb
+- lib/elasticsearch/api/actions/watcher/get_settings.rb
+- lib/elasticsearch/api/actions/watcher/get_watch.rb
+- lib/elasticsearch/api/actions/watcher/put_watch.rb
+- lib/elasticsearch/api/actions/watcher/query_watches.rb
+- lib/elasticsearch/api/actions/watcher/start.rb
+- lib/elasticsearch/api/actions/watcher/stats.rb
+- lib/elasticsearch/api/actions/watcher/stop.rb
+- lib/elasticsearch/api/actions/watcher/update_settings.rb
+- lib/elasticsearch/api/actions/xpack/info.rb
+- lib/elasticsearch/api/actions/xpack/usage.rb
+- lib/elasticsearch/api/namespace/async_search.rb
+- lib/elasticsearch/api/namespace/autoscaling.rb
+- lib/elasticsearch/api/namespace/cat.rb
+- lib/elasticsearch/api/namespace/cluster.rb
+- lib/elasticsearch/api/namespace/common.rb
+- lib/elasticsearch/api/namespace/connector.rb
+- lib/elasticsearch/api/namespace/cross_cluster_replication.rb
+- lib/elasticsearch/api/namespace/dangling_indices.rb
+- lib/elasticsearch/api/namespace/data_frame_transform_deprecated.rb
+- lib/elasticsearch/api/namespace/enrich.rb
+- lib/elasticsearch/api/namespace/eql.rb
+- lib/elasticsearch/api/namespace/esql.rb
+- lib/elasticsearch/api/namespace/features.rb
+- lib/elasticsearch/api/namespace/fleet.rb
+- lib/elasticsearch/api/namespace/graph.rb
+- lib/elasticsearch/api/namespace/index_lifecycle_management.rb
+- lib/elasticsearch/api/namespace/indices.rb
+- lib/elasticsearch/api/namespace/inference.rb
+- lib/elasticsearch/api/namespace/ingest.rb
+- lib/elasticsearch/api/namespace/license.rb
+- lib/elasticsearch/api/namespace/logstash.rb
+- lib/elasticsearch/api/namespace/machine_learning.rb
+- lib/elasticsearch/api/namespace/migration.rb
+- lib/elasticsearch/api/namespace/monitoring.rb
+- lib/elasticsearch/api/namespace/nodes.rb
+- lib/elasticsearch/api/namespace/profiling.rb
+- lib/elasticsearch/api/namespace/query_rules.rb
+- lib/elasticsearch/api/namespace/query_ruleset.rb
+- lib/elasticsearch/api/namespace/remote.rb
+- lib/elasticsearch/api/namespace/rollup.rb
+- lib/elasticsearch/api/namespace/search_application.rb
+- lib/elasticsearch/api/namespace/searchable_snapshots.rb
+- lib/elasticsearch/api/namespace/security.rb
+- lib/elasticsearch/api/namespace/shutdown.rb
+- lib/elasticsearch/api/namespace/simulate.rb
+- lib/elasticsearch/api/namespace/snapshot.rb
+- lib/elasticsearch/api/namespace/snapshot_lifecycle_management.rb
+- lib/elasticsearch/api/namespace/sql.rb
+- lib/elasticsearch/api/namespace/ssl.rb
+- lib/elasticsearch/api/namespace/synonyms.rb
+- lib/elasticsearch/api/namespace/tasks.rb
+- lib/elasticsearch/api/namespace/text_structure.rb
+- lib/elasticsearch/api/namespace/transform.rb
+- lib/elasticsearch/api/namespace/watcher.rb
+- lib/elasticsearch/api/namespace/xpack.rb
+- lib/elasticsearch/api/response.rb
+- lib/elasticsearch/api/utils.rb
+- lib/elasticsearch/api/version.rb
+- spec/elasticsearch/api/actions/bulk_spec.rb
+- spec/elasticsearch/api/actions/capabilities_spec.rb
+- spec/elasticsearch/api/actions/cat/aliases_spec.rb
+- spec/elasticsearch/api/actions/cat/allocation_spec.rb
+- spec/elasticsearch/api/actions/cat/component_templates_spec.rb
+- spec/elasticsearch/api/actions/cat/count_spec.rb
+- spec/elasticsearch/api/actions/cat/fielddata_spec.rb
+- spec/elasticsearch/api/actions/cat/health_spec.rb
+- spec/elasticsearch/api/actions/cat/help_spec.rb
+- spec/elasticsearch/api/actions/cat/indices_spec.rb
+- spec/elasticsearch/api/actions/cat/master_spec.rb
+- spec/elasticsearch/api/actions/cat/nodeattrs_spec.rb
+- spec/elasticsearch/api/actions/cat/nodes_spec.rb
+- spec/elasticsearch/api/actions/cat/pending_tasks_spec.rb
+- spec/elasticsearch/api/actions/cat/plugins_spec.rb
+- spec/elasticsearch/api/actions/cat/recovery_spec.rb
+- spec/elasticsearch/api/actions/cat/repositories_spec.rb
+- spec/elasticsearch/api/actions/cat/segments_spec.rb
+- spec/elasticsearch/api/actions/cat/shards_spec.rb
+- spec/elasticsearch/api/actions/cat/snapshot_spec.rb
+- spec/elasticsearch/api/actions/cat/tasks_spec.rb
+- spec/elasticsearch/api/actions/cat/templates_spec.rb
+- spec/elasticsearch/api/actions/cat/thread_pool_spec.rb
+- spec/elasticsearch/api/actions/clear_scroll_spec.rb
+- spec/elasticsearch/api/actions/close_point_in_time_spec.rb
+- spec/elasticsearch/api/actions/cluster/allocation_explain_spec.rb
+- spec/elasticsearch/api/actions/cluster/get_settings_spec.rb
+- spec/elasticsearch/api/actions/cluster/health_spec.rb
+- spec/elasticsearch/api/actions/cluster/info_spec.rb
+- spec/elasticsearch/api/actions/cluster/pending_tasks_spec.rb
+- spec/elasticsearch/api/actions/cluster/put_settings_spec.rb
+- spec/elasticsearch/api/actions/cluster/remote_info_spec.rb
+- spec/elasticsearch/api/actions/cluster/reroute_spec.rb
+- spec/elasticsearch/api/actions/cluster/state_spec.rb
+- spec/elasticsearch/api/actions/cluster/stats_spec.rb
+- spec/elasticsearch/api/actions/connector/check_in_spec.rb
+- spec/elasticsearch/api/actions/connector/delete_spec.rb
+- spec/elasticsearch/api/actions/connector/get_spec.rb
+- spec/elasticsearch/api/actions/connector/last_sync_spec.rb
+- spec/elasticsearch/api/actions/connector/list_spec.rb
+- spec/elasticsearch/api/actions/connector/post_spec.rb
+- spec/elasticsearch/api/actions/connector/put_spec.rb
+- spec/elasticsearch/api/actions/connector/sync_job_claim_spec.rb
+- spec/elasticsearch/api/actions/connector/update_active_filtering_spec.rb
+- spec/elasticsearch/api/actions/connector/update_api_key_id_spec.rb
+- spec/elasticsearch/api/actions/connector/update_configuration_spec.rb
+- spec/elasticsearch/api/actions/connector/update_error_spec.rb
+- spec/elasticsearch/api/actions/connector/update_features_spec.rb
+- spec/elasticsearch/api/actions/connector/update_filtering_spec.rb
+- spec/elasticsearch/api/actions/connector/update_filtering_validation_spec.rb
+- spec/elasticsearch/api/actions/connector/update_index_name_spec.rb
+- spec/elasticsearch/api/actions/connector/update_name_spec.rb
+- spec/elasticsearch/api/actions/connector/update_native_spec.rb
+- spec/elasticsearch/api/actions/connector/update_pipeline_spec.rb
+- spec/elasticsearch/api/actions/connector/update_scheduling_spec.rb
+- spec/elasticsearch/api/actions/connector/update_service_type_spec.rb
+- spec/elasticsearch/api/actions/connector/update_status_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/delete_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/get_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/post_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/put_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/cancel_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/check_in_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/delete_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/error_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/get_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/list_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/post_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/update_stats_spec.rb
+- spec/elasticsearch/api/actions/count_spec.rb
+- spec/elasticsearch/api/actions/create_document_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/delete_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/import_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/list_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/data_frame/update_data_frame_transform_spec.rb
+- spec/elasticsearch/api/actions/delete_by_query_spec.rb
+- spec/elasticsearch/api/actions/delete_document_spec.rb
+- spec/elasticsearch/api/actions/delete_script_spec.rb
+- spec/elasticsearch/api/actions/esql/async_query_get._spec.rb
+- spec/elasticsearch/api/actions/esql/async_query_spec.rb
+- spec/elasticsearch/api/actions/esql/query_spec.rb
+- spec/elasticsearch/api/actions/exists_document_spec.rb
+- spec/elasticsearch/api/actions/explain_document_spec.rb
+- spec/elasticsearch/api/actions/features/get_features_spec.rb
+- spec/elasticsearch/api/actions/features/reset_features_spec.rb
+- spec/elasticsearch/api/actions/field_caps_spec.rb
+- spec/elasticsearch/api/actions/fleet/global_checkpoints_spec.rb
+- spec/elasticsearch/api/actions/fleet/msearch_spec.rb
+- spec/elasticsearch/api/actions/fleet/search_spec.rb
+- spec/elasticsearch/api/actions/get_document_source_spec.rb
+- spec/elasticsearch/api/actions/get_document_spec.rb
+- spec/elasticsearch/api/actions/get_script_spec.rb
+- spec/elasticsearch/api/actions/hashie_spec.rb
+- spec/elasticsearch/api/actions/health_report_spec.rb
+- spec/elasticsearch/api/actions/index_document_spec.rb
+- spec/elasticsearch/api/actions/index_lifecycle_management/migrate_to_data_tiers_spec.rb
+- spec/elasticsearch/api/actions/indices/add_block_spec.rb
+- spec/elasticsearch/api/actions/indices/analyze_spec.rb
+- spec/elasticsearch/api/actions/indices/clear_cache_spec.rb
+- spec/elasticsearch/api/actions/indices/clone_spec.rb
+- spec/elasticsearch/api/actions/indices/close_spec.rb
+- spec/elasticsearch/api/actions/indices/create_spec.rb
+- spec/elasticsearch/api/actions/indices/data_streams_stats_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_template_spec.rb
+- spec/elasticsearch/api/actions/indices/disk_usage_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_template_spec.rb
+- spec/elasticsearch/api/actions/indices/explain_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/field_usage_stats_spec.rb
+- spec/elasticsearch/api/actions/indices/flush_spec.rb
+- spec/elasticsearch/api/actions/indices/forcemerge_spec.rb
+- spec/elasticsearch/api/actions/indices/get_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/get_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/get_field_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/get_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/get_settings_spec.rb
+- spec/elasticsearch/api/actions/indices/get_spec.rb
+- spec/elasticsearch/api/actions/indices/open_spec.rb
+- spec/elasticsearch/api/actions/indices/put_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/put_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/put_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/put_settings_spec.rb
+- spec/elasticsearch/api/actions/indices/put_template_spec.rb
+- spec/elasticsearch/api/actions/indices/recovery_spec.rb
+- spec/elasticsearch/api/actions/indices/refresh_spec.rb
+- spec/elasticsearch/api/actions/indices/resolve_cluster_spec.rb
+- spec/elasticsearch/api/actions/indices/rollover_spec.rb
+- spec/elasticsearch/api/actions/indices/segments_spec.rb
+- spec/elasticsearch/api/actions/indices/shard_stores_spec.rb
+- spec/elasticsearch/api/actions/indices/shrink_spec.rb
+- spec/elasticsearch/api/actions/indices/split_spec.rb
+- spec/elasticsearch/api/actions/indices/stats_spec.rb
+- spec/elasticsearch/api/actions/indices/unfreeze_spec.rb
+- spec/elasticsearch/api/actions/indices/update_aliases_spec.rb
+- spec/elasticsearch/api/actions/indices/validate_query_spec.rb
+- spec/elasticsearch/api/actions/inference/delete_spec.rb
+- spec/elasticsearch/api/actions/inference/get_spec.rb
+- spec/elasticsearch/api/actions/inference/inference_spec.rb
+- spec/elasticsearch/api/actions/inference/put_spec.rb
+- spec/elasticsearch/api/actions/inference/stream_inference_spec.rb
+- spec/elasticsearch/api/actions/info_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/geo_ip_stats_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/simulate_spec.rb
+- spec/elasticsearch/api/actions/json_builders_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/get_memory_stats_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/get_model_snapshot_upgrade_stats_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/infer_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/put_trained_model_definition_part_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/put_trained_model_vocabulary_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/reset_job_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/set_upgrade_mode_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/start_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/stop_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/update_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/mget_spec.rb
+- spec/elasticsearch/api/actions/migration/get_feature_upgrade_status_spec.rb
+- spec/elasticsearch/api/actions/migration/post_feature_upgrade_spec.rb
+- spec/elasticsearch/api/actions/msearch_spec.rb
+- spec/elasticsearch/api/actions/msearch_template_spec.rb
+- spec/elasticsearch/api/actions/mtermvectors_spec.rb
+- spec/elasticsearch/api/actions/nodes/clear_repositories_metering_archive_spec.rb
+- spec/elasticsearch/api/actions/nodes/get_repositories_metering_info_spec.rb
+- spec/elasticsearch/api/actions/nodes/hot_threads_spec.rb
+- spec/elasticsearch/api/actions/nodes/info_spec.rb
+- spec/elasticsearch/api/actions/nodes/reload_secure_settings_spec.rb
+- spec/elasticsearch/api/actions/nodes/stats_spec.rb
+- spec/elasticsearch/api/actions/open_point_in_time_spec.rb
+- spec/elasticsearch/api/actions/ping_spec.rb
+- spec/elasticsearch/api/actions/profiling/flamegraph_spec.rb
+- spec/elasticsearch/api/actions/profiling/stacktraces_spec.rb
+- spec/elasticsearch/api/actions/profiling/status_spec.rb
+- spec/elasticsearch/api/actions/profiling/topn_functions_spec.rb
+- spec/elasticsearch/api/actions/put_script_spec.rb
+- spec/elasticsearch/api/actions/query_rules/delete_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/delete_spec.rb
+- spec/elasticsearch/api/actions/query_rules/get_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/get_spec.rb
+- spec/elasticsearch/api/actions/query_rules/put_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/put_spec.rb
+- spec/elasticsearch/api/actions/query_rules/test_spec.rb
+- spec/elasticsearch/api/actions/rank_eval_spec.rb
+- spec/elasticsearch/api/actions/reindex_spec.rb
+- spec/elasticsearch/api/actions/render_search_template_spec.rb
+- spec/elasticsearch/api/actions/scroll_spec.rb
+- spec/elasticsearch/api/actions/search_application/delete_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/delete_spec.rb
+- spec/elasticsearch/api/actions/search_application/get_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/get_spec.rb
+- spec/elasticsearch/api/actions/search_application/list_spec.rb
+- spec/elasticsearch/api/actions/search_application/post_behavioral_analytics_event_spec.rb
+- spec/elasticsearch/api/actions/search_application/put_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/put_spec.rb
+- spec/elasticsearch/api/actions/search_application/render_query_spec.rb
+- spec/elasticsearch/api/actions/search_application/search_spec.rb
+- spec/elasticsearch/api/actions/search_mvt_spec.rb
+- spec/elasticsearch/api/actions/search_shards_spec.rb
+- spec/elasticsearch/api/actions/search_spec.rb
+- spec/elasticsearch/api/actions/search_template_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/cache_stats_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/clear_cache_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/mount_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/stats_spec.rb
+- spec/elasticsearch/api/actions/security/bulk_delete_role_spec.rb
+- spec/elasticsearch/api/actions/security/bulk_put_role_spec.rb
+- spec/elasticsearch/api/actions/security/clear_cached_service_tokens_spec.rb
+- spec/elasticsearch/api/actions/security/create_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/create_cross_cluster_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/create_service_token_spec.rb
+- spec/elasticsearch/api/actions/security/delete_service_token_spec.rb
+- spec/elasticsearch/api/actions/security/disable_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/enable_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/enroll_kibana_spec.rb
+- spec/elasticsearch/api/actions/security/get_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/get_builtin_privileges_spec.rb
+- spec/elasticsearch/api/actions/security/get_service_accounts_spec.rb
+- spec/elasticsearch/api/actions/security/get_service_credentials_spec.rb
+- spec/elasticsearch/api/actions/security/has_privileges_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/invalidate_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/query_api_keys_spec.rb
+- spec/elasticsearch/api/actions/security/query_role_spec.rb
+- spec/elasticsearch/api/actions/security/query_user_spec.rb
+- spec/elasticsearch/api/actions/security/saml_authenticate_spec.rb
+- spec/elasticsearch/api/actions/security/saml_complete_logout_spec.rb
+- spec/elasticsearch/api/actions/security/saml_invalidate_spec.rb
+- spec/elasticsearch/api/actions/security/saml_logout_spec.rb
+- spec/elasticsearch/api/actions/security/saml_prepare_authentication_spec.rb
+- spec/elasticsearch/api/actions/security/saml_service_provider_metadata_spec.rb
+- spec/elasticsearch/api/actions/security/suggest_user_profiles_spec.rb
+- spec/elasticsearch/api/actions/security/update_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/update_cross_cluster_api_key_spec.rb
+- spec/elasticsearch/api/actions/shutdown/delete_node_spec.rb
+- spec/elasticsearch/api/actions/shutdown/get_node_spec.rb
+- spec/elasticsearch/api/actions/shutdown/put_node_spec.rb
+- spec/elasticsearch/api/actions/simulate/ingest_spec.rb
+- spec/elasticsearch/api/actions/snapshot/clone_spec.rb
+- spec/elasticsearch/api/actions/snapshot/create_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/create_spec.rb
+- spec/elasticsearch/api/actions/snapshot/delete_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/delete_spec.rb
+- spec/elasticsearch/api/actions/snapshot/get_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/get_spec.rb
+- spec/elasticsearch/api/actions/snapshot/repository_analize_spec.rb
+- spec/elasticsearch/api/actions/snapshot/restore_spec.rb
+- spec/elasticsearch/api/actions/snapshot/status_spec.rb
+- spec/elasticsearch/api/actions/snapshot/verify_repository_spec.rb
+- spec/elasticsearch/api/actions/sql/delete_async_spec.rb
+- spec/elasticsearch/api/actions/sql/get_async_spec.rb
+- spec/elasticsearch/api/actions/sql/get_async_stats_spec.rb
+- spec/elasticsearch/api/actions/tasks/cancel_spec.rb
+- spec/elasticsearch/api/actions/tasks/get_spec.rb
+- spec/elasticsearch/api/actions/tasks/list_spec.rb
+- spec/elasticsearch/api/actions/terms_enum_spec.rb
+- spec/elasticsearch/api/actions/termvectors_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_field_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_message_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/test_grok_pattern_spec.rb
+- spec/elasticsearch/api/actions/transform/get_node_stats_spec.rb
+- spec/elasticsearch/api/actions/transform/schedule_now_transform_spec.rb
+- spec/elasticsearch/api/actions/update_by_query_spec.rb
+- spec/elasticsearch/api/actions/update_document_spec.rb
+- spec/elasticsearch/api/actions/watcher/get_settings_spec.rb
+- spec/elasticsearch/api/actions/watcher/update_settings_spec.rb
+- spec/elasticsearch/api/api_response_spec.rb
+- spec/elasticsearch/api/api_spec.rb
+- spec/elasticsearch/api/client_spec.rb
+- spec/elasticsearch/api/perform_request_spec.rb
+- spec/elasticsearch/api/utils_spec.rb
+- spec/free/integration/capabilities_spec.rb
+- spec/free/integration/health_spec.rb
+- spec/free/integration/spec_helper.rb
+- spec/platinum/integration/analytics/usage_spec.rb
+- spec/platinum/integration/api_key/admin_user_query_api_keys_spec.rb
+- spec/platinum/integration/api_key/api_key_admin_user_spec.rb
+- spec/platinum/integration/api_key/api_key_cross_cluster_spec.rb
+- spec/platinum/integration/api_key/api_key_invalidation_spec.rb
+- spec/platinum/integration/api_key/api_key_query_spec.rb
+- spec/platinum/integration/api_key/api_key_query_with_aggs_spec.rb
+- spec/platinum/integration/api_key/api_key_spec.rb
+- spec/platinum/integration/api_key/api_key_update_spec.rb
+- spec/platinum/integration/eql/eql_async_spec.rb
+- spec/platinum/integration/health/health_spec.rb
+- spec/platinum/integration/ml/get_memory_stats_spec.rb
+- spec/platinum/integration/platinum_helper.rb
+- spec/platinum/integration/security/users_query_spec.rb
+- spec/platinum/integration/service_accounts/service_accounts_spec.rb
+- spec/platinum/integration/snapshots/snapshots_spec.rb
+- spec/platinum/integration/spatial/script_doc_values_spec.rb
+- spec/platinum/integration/token/token_spec.rb
+- spec/platinum/unit/async_search/delete_test.rb
+- spec/platinum/unit/async_search/get_test.rb
+- spec/platinum/unit/async_search/status_test.rb
+- spec/platinum/unit/async_search/submit_test.rb
+- spec/platinum/unit/autoscaling/delete_autoscaling_policy_test.rb
+- spec/platinum/unit/autoscaling/get_autoscaling_capacity_test.rb
+- spec/platinum/unit/autoscaling/get_autoscaling_policy_test.rb
+- spec/platinum/unit/autoscaling/put_autoscaling_policy_test.rb
+- spec/platinum/unit/enrich/delete_policy_test.rb
+- spec/platinum/unit/eql/delete_test.rb
+- spec/platinum/unit/eql/get_status_test.rb
+- spec/platinum/unit/eql/get_test.rb
+- spec/platinum/unit/eql/search_test.rb
+- spec/platinum/unit/graph/explore_test.rb
+- spec/platinum/unit/index_lifecycle_management/explain_test.rb
+- spec/platinum/unit/index_lifecycle_management/get_status_test.rb
+- spec/platinum/unit/index_lifecycle_management/move_to_step.rb
+- spec/platinum/unit/index_lifecycle_management/remove_policy_test.rb
+- spec/platinum/unit/index_lifecycle_management/retry_policy_test.rb
+- spec/platinum/unit/index_lifecycle_management/start_test.rb
+- spec/platinum/unit/index_lifecycle_management/stop_test.rb
+- spec/platinum/unit/indices/create_data_stream_test.rb
+- spec/platinum/unit/indices/data_stream_stats_test.rb
+- spec/platinum/unit/indices/delete_data_stream_test.rb
+- spec/platinum/unit/indices/downsample_test.rb
+- spec/platinum/unit/indices/get_data_stream_test.rb
+- spec/platinum/unit/indices/migrate_to_data_stream_test.rb
+- spec/platinum/unit/indices/modify_data_stream_test.rb
+- spec/platinum/unit/indices/promote_data_stream_test.rb
+- spec/platinum/unit/info_test.rb
+- spec/platinum/unit/knn_search_test.rb
+- spec/platinum/unit/license/delete_test.rb
+- spec/platinum/unit/license/get_test.rb
+- spec/platinum/unit/license/post_test.rb
+- spec/platinum/unit/logstash/delete_pipeline_test.rb
+- spec/platinum/unit/logstash/get_pipeline_test.rb
+- spec/platinum/unit/logstash/put_pipeline_test.rb
+- spec/platinum/unit/machine_learning/clear_trained_model_deployment_cache_test.rb
+- spec/platinum/unit/machine_learning/close_job_test.rb
+- spec/platinum/unit/machine_learning/delete_datafeed_test.rb
+- spec/platinum/unit/machine_learning/delete_expired_data_test.rb
+- spec/platinum/unit/machine_learning/delete_filter_test.rb
+- spec/platinum/unit/machine_learning/delete_forecast_test.rb
+- spec/platinum/unit/machine_learning/delete_job_test.rb
+- spec/platinum/unit/machine_learning/delete_model_alias_test.rb
+- spec/platinum/unit/machine_learning/delete_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/flush_job_test.rb
+- spec/platinum/unit/machine_learning/forecast_test.rb
+- spec/platinum/unit/machine_learning/get_buckets_test.rb
+- spec/platinum/unit/machine_learning/get_categories_test.rb
+- spec/platinum/unit/machine_learning/get_datafeed_stats_test.rb
+- spec/platinum/unit/machine_learning/get_datafeeds_test.rb
+- spec/platinum/unit/machine_learning/get_filters_test.rb
+- spec/platinum/unit/machine_learning/get_influencers_test.rb
+- spec/platinum/unit/machine_learning/get_job_stats_test.rb
+- spec/platinum/unit/machine_learning/get_jobs_test.rb
+- spec/platinum/unit/machine_learning/get_model_snapshots_test.rb
+- spec/platinum/unit/machine_learning/get_overall_buckets_test.rb
+- spec/platinum/unit/machine_learning/get_records_test.rb
+- spec/platinum/unit/machine_learning/open_job_test.rb
+- spec/platinum/unit/machine_learning/post_data_test.rb
+- spec/platinum/unit/machine_learning/preview_data_frame_analytics_test.rb
+- spec/platinum/unit/machine_learning/preview_datafeed_test.rb
+- spec/platinum/unit/machine_learning/put_datafeed_test.rb
+- spec/platinum/unit/machine_learning/put_filter_test.rb
+- spec/platinum/unit/machine_learning/put_job_test.rb
+- spec/platinum/unit/machine_learning/put_trained_model_alias_test.rb
+- spec/platinum/unit/machine_learning/revert_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/start_datafeed_test.rb
+- spec/platinum/unit/machine_learning/stop_datafeed_test.rb
+- spec/platinum/unit/machine_learning/update_data_frame_analytics_test.rb
+- spec/platinum/unit/machine_learning/update_datafeed_test.rb
+- spec/platinum/unit/machine_learning/update_filter_test.rb
+- spec/platinum/unit/machine_learning/update_job_test.rb
+- spec/platinum/unit/machine_learning/update_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/upgrade_job_snapshot_test.rb
+- spec/platinum/unit/machine_learning/validate_detector_test.rb
+- spec/platinum/unit/machine_learning/validate_test.rb
+- spec/platinum/unit/migration/deprecations_test.rb
+- spec/platinum/unit/monitoring/bulk_test.rb
+- spec/platinum/unit/rollup/get_rollup_index_caps_test.rb
+- spec/platinum/unit/security/activate_user_profile_test.rb
+- spec/platinum/unit/security/authenticate_test.rb
+- spec/platinum/unit/security/bulk_update_api_key_test.rb
+- spec/platinum/unit/security/change_password_test.rb
+- spec/platinum/unit/security/clear_api_key_cache_test.rb
+- spec/platinum/unit/security/clear_cached_privileges_test.rb
+- spec/platinum/unit/security/clear_cached_realms_test.rb
+- spec/platinum/unit/security/clear_cached_roles_test.rb
+- spec/platinum/unit/security/delete_privileges_test.rb
+- spec/platinum/unit/security/delete_role_mapping_test.rb
+- spec/platinum/unit/security/delete_role_test.rb
+- spec/platinum/unit/security/delete_user_test.rb
+- spec/platinum/unit/security/disable_user_test.rb
+- spec/platinum/unit/security/enable_user_test.rb
+- spec/platinum/unit/security/get_privileges_test.rb
+- spec/platinum/unit/security/get_role_mapping_test.rb
+- spec/platinum/unit/security/get_role_test.rb
+- spec/platinum/unit/security/get_token_test.rb
+- spec/platinum/unit/security/get_user_privileges_test.rb
+- spec/platinum/unit/security/get_user_profile_test.rb
+- spec/platinum/unit/security/get_user_test.rb
+- spec/platinum/unit/security/grant_api_key_test.rb
+- spec/platinum/unit/security/has_privileges_test.rb
+- spec/platinum/unit/security/invalidate_token_test.rb
+- spec/platinum/unit/security/oidc_authenticate_test.rb
+- spec/platinum/unit/security/oidc_logout_test.rb
+- spec/platinum/unit/security/oidc_prepare_authentication_test.rb
+- spec/platinum/unit/security/put_privileges_test.rb
+- spec/platinum/unit/security/put_role_mapping_test.rb
+- spec/platinum/unit/security/put_role_test.rb
+- spec/platinum/unit/security/put_user_test.rb
+- spec/platinum/unit/security/update_user_profile_data_test.rb
+- spec/platinum/unit/ssl/certificates_test.rb
+- spec/platinum/unit/test_helper.rb
+- spec/platinum/unit/transform/reset_transform_spec.rb
+- spec/platinum/unit/transform/upgrade_transforms_spec.rb
+- spec/platinum/unit/usage_test.rb
+- spec/platinum/unit/watcher/ack_watch_test.rb
+- spec/platinum/unit/watcher/activate_watch_test.rb
+- spec/platinum/unit/watcher/deactivate_watch_test.rb
+- spec/platinum/unit/watcher/delete_watch_test.rb
+- spec/platinum/unit/watcher/execute_watch_test.rb
+- spec/platinum/unit/watcher/get_watch_test.rb
+- spec/platinum/unit/watcher/put_watch_test.rb
+- spec/platinum/unit/watcher/query_watches_test.rb
+- spec/platinum/unit/watcher/start_test.rb
+- spec/platinum/unit/watcher/stats_test.rb
+- spec/platinum/unit/watcher/stop_test.rb
+- spec/rest_api/rest_api_tests_helper.rb
+- spec/rest_api/rest_api_yaml_spec.rb
+- spec/rest_api/run_rspec_matchers.rb
+- spec/rest_api/skipped_tests_free.yml
+- spec/rest_api/skipped_tests_platinum.yml
+- spec/rspec_formatter.rb
+- spec/spec_helper.rb
+- spec/yaml-test-runner/run.rb
+- utils/Gemfile
+- utils/README.md
+- utils/Thorfile
+- utils/thor/.rubocop.yml
+- utils/thor/endpoint_spec.rb
+- utils/thor/endpoint_specifics.rb
+- utils/thor/generate_source.rb
+- utils/thor/generator/build_hash_helper.rb
+- utils/thor/generator/docs_helper.rb
+- utils/thor/generator/files_helper.rb
+- utils/thor/lister.rb
+- utils/thor/templates/_body.erb
+- utils/thor/templates/_documentation_top.erb
+- utils/thor/templates/_method_setup.erb
+- utils/thor/templates/_perform_request.erb
+- utils/thor/templates/method.erb
+- utils/thor/templates/test.erb
+- utils/thor/templates/test_helper.rb
+homepage: https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/current/index.html
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/current/index.html
+  changelog_uri: https://github.com/elastic/elasticsearch-ruby/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/elastic/elasticsearch-ruby/tree/main/elasticsearch-api
+  bug_tracker_uri: https://github.com/elastic/elasticsearch-ruby/issues
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Ruby API for Elasticsearch.
+test_files:
+- spec/elasticsearch/api/actions/bulk_spec.rb
+- spec/elasticsearch/api/actions/capabilities_spec.rb
+- spec/elasticsearch/api/actions/cat/aliases_spec.rb
+- spec/elasticsearch/api/actions/cat/allocation_spec.rb
+- spec/elasticsearch/api/actions/cat/component_templates_spec.rb
+- spec/elasticsearch/api/actions/cat/count_spec.rb
+- spec/elasticsearch/api/actions/cat/fielddata_spec.rb
+- spec/elasticsearch/api/actions/cat/health_spec.rb
+- spec/elasticsearch/api/actions/cat/help_spec.rb
+- spec/elasticsearch/api/actions/cat/indices_spec.rb
+- spec/elasticsearch/api/actions/cat/master_spec.rb
+- spec/elasticsearch/api/actions/cat/nodeattrs_spec.rb
+- spec/elasticsearch/api/actions/cat/nodes_spec.rb
+- spec/elasticsearch/api/actions/cat/pending_tasks_spec.rb
+- spec/elasticsearch/api/actions/cat/plugins_spec.rb
+- spec/elasticsearch/api/actions/cat/recovery_spec.rb
+- spec/elasticsearch/api/actions/cat/repositories_spec.rb
+- spec/elasticsearch/api/actions/cat/segments_spec.rb
+- spec/elasticsearch/api/actions/cat/shards_spec.rb
+- spec/elasticsearch/api/actions/cat/snapshot_spec.rb
+- spec/elasticsearch/api/actions/cat/tasks_spec.rb
+- spec/elasticsearch/api/actions/cat/templates_spec.rb
+- spec/elasticsearch/api/actions/cat/thread_pool_spec.rb
+- spec/elasticsearch/api/actions/clear_scroll_spec.rb
+- spec/elasticsearch/api/actions/close_point_in_time_spec.rb
+- spec/elasticsearch/api/actions/cluster/allocation_explain_spec.rb
+- spec/elasticsearch/api/actions/cluster/get_settings_spec.rb
+- spec/elasticsearch/api/actions/cluster/health_spec.rb
+- spec/elasticsearch/api/actions/cluster/info_spec.rb
+- spec/elasticsearch/api/actions/cluster/pending_tasks_spec.rb
+- spec/elasticsearch/api/actions/cluster/put_settings_spec.rb
+- spec/elasticsearch/api/actions/cluster/remote_info_spec.rb
+- spec/elasticsearch/api/actions/cluster/reroute_spec.rb
+- spec/elasticsearch/api/actions/cluster/state_spec.rb
+- spec/elasticsearch/api/actions/cluster/stats_spec.rb
+- spec/elasticsearch/api/actions/connector/check_in_spec.rb
+- spec/elasticsearch/api/actions/connector/delete_spec.rb
+- spec/elasticsearch/api/actions/connector/get_spec.rb
+- spec/elasticsearch/api/actions/connector/last_sync_spec.rb
+- spec/elasticsearch/api/actions/connector/list_spec.rb
+- spec/elasticsearch/api/actions/connector/post_spec.rb
+- spec/elasticsearch/api/actions/connector/put_spec.rb
+- spec/elasticsearch/api/actions/connector/sync_job_claim_spec.rb
+- spec/elasticsearch/api/actions/connector/update_active_filtering_spec.rb
+- spec/elasticsearch/api/actions/connector/update_api_key_id_spec.rb
+- spec/elasticsearch/api/actions/connector/update_configuration_spec.rb
+- spec/elasticsearch/api/actions/connector/update_error_spec.rb
+- spec/elasticsearch/api/actions/connector/update_features_spec.rb
+- spec/elasticsearch/api/actions/connector/update_filtering_spec.rb
+- spec/elasticsearch/api/actions/connector/update_filtering_validation_spec.rb
+- spec/elasticsearch/api/actions/connector/update_index_name_spec.rb
+- spec/elasticsearch/api/actions/connector/update_name_spec.rb
+- spec/elasticsearch/api/actions/connector/update_native_spec.rb
+- spec/elasticsearch/api/actions/connector/update_pipeline_spec.rb
+- spec/elasticsearch/api/actions/connector/update_scheduling_spec.rb
+- spec/elasticsearch/api/actions/connector/update_service_type_spec.rb
+- spec/elasticsearch/api/actions/connector/update_status_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/delete_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/get_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/post_spec.rb
+- spec/elasticsearch/api/actions/connector_secret/put_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/cancel_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/check_in_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/delete_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/error_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/get_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/list_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/post_spec.rb
+- spec/elasticsearch/api/actions/connector_sync_job/update_stats_spec.rb
+- spec/elasticsearch/api/actions/count_spec.rb
+- spec/elasticsearch/api/actions/create_document_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/delete_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/import_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/dangling_indices/list_dangling_indices_spec.rb
+- spec/elasticsearch/api/actions/data_frame/update_data_frame_transform_spec.rb
+- spec/elasticsearch/api/actions/delete_by_query_spec.rb
+- spec/elasticsearch/api/actions/delete_document_spec.rb
+- spec/elasticsearch/api/actions/delete_script_spec.rb
+- spec/elasticsearch/api/actions/esql/async_query_get._spec.rb
+- spec/elasticsearch/api/actions/esql/async_query_spec.rb
+- spec/elasticsearch/api/actions/esql/query_spec.rb
+- spec/elasticsearch/api/actions/exists_document_spec.rb
+- spec/elasticsearch/api/actions/explain_document_spec.rb
+- spec/elasticsearch/api/actions/features/get_features_spec.rb
+- spec/elasticsearch/api/actions/features/reset_features_spec.rb
+- spec/elasticsearch/api/actions/field_caps_spec.rb
+- spec/elasticsearch/api/actions/fleet/global_checkpoints_spec.rb
+- spec/elasticsearch/api/actions/fleet/msearch_spec.rb
+- spec/elasticsearch/api/actions/fleet/search_spec.rb
+- spec/elasticsearch/api/actions/get_document_source_spec.rb
+- spec/elasticsearch/api/actions/get_document_spec.rb
+- spec/elasticsearch/api/actions/get_script_spec.rb
+- spec/elasticsearch/api/actions/hashie_spec.rb
+- spec/elasticsearch/api/actions/health_report_spec.rb
+- spec/elasticsearch/api/actions/index_document_spec.rb
+- spec/elasticsearch/api/actions/index_lifecycle_management/migrate_to_data_tiers_spec.rb
+- spec/elasticsearch/api/actions/indices/add_block_spec.rb
+- spec/elasticsearch/api/actions/indices/analyze_spec.rb
+- spec/elasticsearch/api/actions/indices/clear_cache_spec.rb
+- spec/elasticsearch/api/actions/indices/clone_spec.rb
+- spec/elasticsearch/api/actions/indices/close_spec.rb
+- spec/elasticsearch/api/actions/indices/create_spec.rb
+- spec/elasticsearch/api/actions/indices/data_streams_stats_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_spec.rb
+- spec/elasticsearch/api/actions/indices/delete_template_spec.rb
+- spec/elasticsearch/api/actions/indices/disk_usage_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_spec.rb
+- spec/elasticsearch/api/actions/indices/exists_template_spec.rb
+- spec/elasticsearch/api/actions/indices/explain_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/field_usage_stats_spec.rb
+- spec/elasticsearch/api/actions/indices/flush_spec.rb
+- spec/elasticsearch/api/actions/indices/forcemerge_spec.rb
+- spec/elasticsearch/api/actions/indices/get_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/get_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/get_field_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/get_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/get_settings_spec.rb
+- spec/elasticsearch/api/actions/indices/get_spec.rb
+- spec/elasticsearch/api/actions/indices/open_spec.rb
+- spec/elasticsearch/api/actions/indices/put_alias_spec.rb
+- spec/elasticsearch/api/actions/indices/put_data_lifecycle_spec.rb
+- spec/elasticsearch/api/actions/indices/put_mapping_spec.rb
+- spec/elasticsearch/api/actions/indices/put_settings_spec.rb
+- spec/elasticsearch/api/actions/indices/put_template_spec.rb
+- spec/elasticsearch/api/actions/indices/recovery_spec.rb
+- spec/elasticsearch/api/actions/indices/refresh_spec.rb
+- spec/elasticsearch/api/actions/indices/resolve_cluster_spec.rb
+- spec/elasticsearch/api/actions/indices/rollover_spec.rb
+- spec/elasticsearch/api/actions/indices/segments_spec.rb
+- spec/elasticsearch/api/actions/indices/shard_stores_spec.rb
+- spec/elasticsearch/api/actions/indices/shrink_spec.rb
+- spec/elasticsearch/api/actions/indices/split_spec.rb
+- spec/elasticsearch/api/actions/indices/stats_spec.rb
+- spec/elasticsearch/api/actions/indices/unfreeze_spec.rb
+- spec/elasticsearch/api/actions/indices/update_aliases_spec.rb
+- spec/elasticsearch/api/actions/indices/validate_query_spec.rb
+- spec/elasticsearch/api/actions/inference/delete_spec.rb
+- spec/elasticsearch/api/actions/inference/get_spec.rb
+- spec/elasticsearch/api/actions/inference/inference_spec.rb
+- spec/elasticsearch/api/actions/inference/put_spec.rb
+- spec/elasticsearch/api/actions/inference/stream_inference_spec.rb
+- spec/elasticsearch/api/actions/info_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/delete_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/geo_ip_stats_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/get_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_geoip_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_ip_location_database_spec.rb
+- spec/elasticsearch/api/actions/ingest/put_pipeline_spec.rb
+- spec/elasticsearch/api/actions/ingest/simulate_spec.rb
+- spec/elasticsearch/api/actions/json_builders_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/get_memory_stats_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/get_model_snapshot_upgrade_stats_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/infer_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/put_trained_model_definition_part_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/put_trained_model_vocabulary_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/reset_job_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/set_upgrade_mode_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/start_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/stop_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/machine_learning/update_trained_model_deployment_spec.rb
+- spec/elasticsearch/api/actions/mget_spec.rb
+- spec/elasticsearch/api/actions/migration/get_feature_upgrade_status_spec.rb
+- spec/elasticsearch/api/actions/migration/post_feature_upgrade_spec.rb
+- spec/elasticsearch/api/actions/msearch_spec.rb
+- spec/elasticsearch/api/actions/msearch_template_spec.rb
+- spec/elasticsearch/api/actions/mtermvectors_spec.rb
+- spec/elasticsearch/api/actions/nodes/clear_repositories_metering_archive_spec.rb
+- spec/elasticsearch/api/actions/nodes/get_repositories_metering_info_spec.rb
+- spec/elasticsearch/api/actions/nodes/hot_threads_spec.rb
+- spec/elasticsearch/api/actions/nodes/info_spec.rb
+- spec/elasticsearch/api/actions/nodes/reload_secure_settings_spec.rb
+- spec/elasticsearch/api/actions/nodes/stats_spec.rb
+- spec/elasticsearch/api/actions/open_point_in_time_spec.rb
+- spec/elasticsearch/api/actions/ping_spec.rb
+- spec/elasticsearch/api/actions/profiling/flamegraph_spec.rb
+- spec/elasticsearch/api/actions/profiling/stacktraces_spec.rb
+- spec/elasticsearch/api/actions/profiling/status_spec.rb
+- spec/elasticsearch/api/actions/profiling/topn_functions_spec.rb
+- spec/elasticsearch/api/actions/put_script_spec.rb
+- spec/elasticsearch/api/actions/query_rules/delete_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/delete_spec.rb
+- spec/elasticsearch/api/actions/query_rules/get_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/get_spec.rb
+- spec/elasticsearch/api/actions/query_rules/put_ruleset_spec.rb
+- spec/elasticsearch/api/actions/query_rules/put_spec.rb
+- spec/elasticsearch/api/actions/query_rules/test_spec.rb
+- spec/elasticsearch/api/actions/rank_eval_spec.rb
+- spec/elasticsearch/api/actions/reindex_spec.rb
+- spec/elasticsearch/api/actions/render_search_template_spec.rb
+- spec/elasticsearch/api/actions/scroll_spec.rb
+- spec/elasticsearch/api/actions/search_application/delete_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/delete_spec.rb
+- spec/elasticsearch/api/actions/search_application/get_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/get_spec.rb
+- spec/elasticsearch/api/actions/search_application/list_spec.rb
+- spec/elasticsearch/api/actions/search_application/post_behavioral_analytics_event_spec.rb
+- spec/elasticsearch/api/actions/search_application/put_behavioral_analytics_spec.rb
+- spec/elasticsearch/api/actions/search_application/put_spec.rb
+- spec/elasticsearch/api/actions/search_application/render_query_spec.rb
+- spec/elasticsearch/api/actions/search_application/search_spec.rb
+- spec/elasticsearch/api/actions/search_mvt_spec.rb
+- spec/elasticsearch/api/actions/search_shards_spec.rb
+- spec/elasticsearch/api/actions/search_spec.rb
+- spec/elasticsearch/api/actions/search_template_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/cache_stats_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/clear_cache_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/mount_spec.rb
+- spec/elasticsearch/api/actions/searchable_snapshots/stats_spec.rb
+- spec/elasticsearch/api/actions/security/bulk_delete_role_spec.rb
+- spec/elasticsearch/api/actions/security/bulk_put_role_spec.rb
+- spec/elasticsearch/api/actions/security/clear_cached_service_tokens_spec.rb
+- spec/elasticsearch/api/actions/security/create_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/create_cross_cluster_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/create_service_token_spec.rb
+- spec/elasticsearch/api/actions/security/delete_service_token_spec.rb
+- spec/elasticsearch/api/actions/security/disable_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/enable_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/enroll_kibana_spec.rb
+- spec/elasticsearch/api/actions/security/get_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/get_builtin_privileges_spec.rb
+- spec/elasticsearch/api/actions/security/get_service_accounts_spec.rb
+- spec/elasticsearch/api/actions/security/get_service_credentials_spec.rb
+- spec/elasticsearch/api/actions/security/has_privileges_user_profile_spec.rb
+- spec/elasticsearch/api/actions/security/invalidate_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/query_api_keys_spec.rb
+- spec/elasticsearch/api/actions/security/query_role_spec.rb
+- spec/elasticsearch/api/actions/security/query_user_spec.rb
+- spec/elasticsearch/api/actions/security/saml_authenticate_spec.rb
+- spec/elasticsearch/api/actions/security/saml_complete_logout_spec.rb
+- spec/elasticsearch/api/actions/security/saml_invalidate_spec.rb
+- spec/elasticsearch/api/actions/security/saml_logout_spec.rb
+- spec/elasticsearch/api/actions/security/saml_prepare_authentication_spec.rb
+- spec/elasticsearch/api/actions/security/saml_service_provider_metadata_spec.rb
+- spec/elasticsearch/api/actions/security/suggest_user_profiles_spec.rb
+- spec/elasticsearch/api/actions/security/update_api_key_spec.rb
+- spec/elasticsearch/api/actions/security/update_cross_cluster_api_key_spec.rb
+- spec/elasticsearch/api/actions/shutdown/delete_node_spec.rb
+- spec/elasticsearch/api/actions/shutdown/get_node_spec.rb
+- spec/elasticsearch/api/actions/shutdown/put_node_spec.rb
+- spec/elasticsearch/api/actions/simulate/ingest_spec.rb
+- spec/elasticsearch/api/actions/snapshot/clone_spec.rb
+- spec/elasticsearch/api/actions/snapshot/create_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/create_spec.rb
+- spec/elasticsearch/api/actions/snapshot/delete_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/delete_spec.rb
+- spec/elasticsearch/api/actions/snapshot/get_repository_spec.rb
+- spec/elasticsearch/api/actions/snapshot/get_spec.rb
+- spec/elasticsearch/api/actions/snapshot/repository_analize_spec.rb
+- spec/elasticsearch/api/actions/snapshot/restore_spec.rb
+- spec/elasticsearch/api/actions/snapshot/status_spec.rb
+- spec/elasticsearch/api/actions/snapshot/verify_repository_spec.rb
+- spec/elasticsearch/api/actions/sql/delete_async_spec.rb
+- spec/elasticsearch/api/actions/sql/get_async_spec.rb
+- spec/elasticsearch/api/actions/sql/get_async_stats_spec.rb
+- spec/elasticsearch/api/actions/tasks/cancel_spec.rb
+- spec/elasticsearch/api/actions/tasks/get_spec.rb
+- spec/elasticsearch/api/actions/tasks/list_spec.rb
+- spec/elasticsearch/api/actions/terms_enum_spec.rb
+- spec/elasticsearch/api/actions/termvectors_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_field_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_message_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/find_structure_spec.rb
+- spec/elasticsearch/api/actions/text_structure/test_grok_pattern_spec.rb
+- spec/elasticsearch/api/actions/transform/get_node_stats_spec.rb
+- spec/elasticsearch/api/actions/transform/schedule_now_transform_spec.rb
+- spec/elasticsearch/api/actions/update_by_query_spec.rb
+- spec/elasticsearch/api/actions/update_document_spec.rb
+- spec/elasticsearch/api/actions/watcher/get_settings_spec.rb
+- spec/elasticsearch/api/actions/watcher/update_settings_spec.rb
+- spec/elasticsearch/api/api_response_spec.rb
+- spec/elasticsearch/api/api_spec.rb
+- spec/elasticsearch/api/client_spec.rb
+- spec/elasticsearch/api/perform_request_spec.rb
+- spec/elasticsearch/api/utils_spec.rb
+- spec/free/integration/capabilities_spec.rb
+- spec/free/integration/health_spec.rb
+- spec/free/integration/spec_helper.rb
+- spec/platinum/integration/analytics/usage_spec.rb
+- spec/platinum/integration/api_key/admin_user_query_api_keys_spec.rb
+- spec/platinum/integration/api_key/api_key_admin_user_spec.rb
+- spec/platinum/integration/api_key/api_key_cross_cluster_spec.rb
+- spec/platinum/integration/api_key/api_key_invalidation_spec.rb
+- spec/platinum/integration/api_key/api_key_query_spec.rb
+- spec/platinum/integration/api_key/api_key_query_with_aggs_spec.rb
+- spec/platinum/integration/api_key/api_key_spec.rb
+- spec/platinum/integration/api_key/api_key_update_spec.rb
+- spec/platinum/integration/eql/eql_async_spec.rb
+- spec/platinum/integration/health/health_spec.rb
+- spec/platinum/integration/ml/get_memory_stats_spec.rb
+- spec/platinum/integration/platinum_helper.rb
+- spec/platinum/integration/security/users_query_spec.rb
+- spec/platinum/integration/service_accounts/service_accounts_spec.rb
+- spec/platinum/integration/snapshots/snapshots_spec.rb
+- spec/platinum/integration/spatial/script_doc_values_spec.rb
+- spec/platinum/integration/token/token_spec.rb
+- spec/platinum/unit/async_search/delete_test.rb
+- spec/platinum/unit/async_search/get_test.rb
+- spec/platinum/unit/async_search/status_test.rb
+- spec/platinum/unit/async_search/submit_test.rb
+- spec/platinum/unit/autoscaling/delete_autoscaling_policy_test.rb
+- spec/platinum/unit/autoscaling/get_autoscaling_capacity_test.rb
+- spec/platinum/unit/autoscaling/get_autoscaling_policy_test.rb
+- spec/platinum/unit/autoscaling/put_autoscaling_policy_test.rb
+- spec/platinum/unit/enrich/delete_policy_test.rb
+- spec/platinum/unit/eql/delete_test.rb
+- spec/platinum/unit/eql/get_status_test.rb
+- spec/platinum/unit/eql/get_test.rb
+- spec/platinum/unit/eql/search_test.rb
+- spec/platinum/unit/graph/explore_test.rb
+- spec/platinum/unit/index_lifecycle_management/explain_test.rb
+- spec/platinum/unit/index_lifecycle_management/get_status_test.rb
+- spec/platinum/unit/index_lifecycle_management/move_to_step.rb
+- spec/platinum/unit/index_lifecycle_management/remove_policy_test.rb
+- spec/platinum/unit/index_lifecycle_management/retry_policy_test.rb
+- spec/platinum/unit/index_lifecycle_management/start_test.rb
+- spec/platinum/unit/index_lifecycle_management/stop_test.rb
+- spec/platinum/unit/indices/create_data_stream_test.rb
+- spec/platinum/unit/indices/data_stream_stats_test.rb
+- spec/platinum/unit/indices/delete_data_stream_test.rb
+- spec/platinum/unit/indices/downsample_test.rb
+- spec/platinum/unit/indices/get_data_stream_test.rb
+- spec/platinum/unit/indices/migrate_to_data_stream_test.rb
+- spec/platinum/unit/indices/modify_data_stream_test.rb
+- spec/platinum/unit/indices/promote_data_stream_test.rb
+- spec/platinum/unit/info_test.rb
+- spec/platinum/unit/knn_search_test.rb
+- spec/platinum/unit/license/delete_test.rb
+- spec/platinum/unit/license/get_test.rb
+- spec/platinum/unit/license/post_test.rb
+- spec/platinum/unit/logstash/delete_pipeline_test.rb
+- spec/platinum/unit/logstash/get_pipeline_test.rb
+- spec/platinum/unit/logstash/put_pipeline_test.rb
+- spec/platinum/unit/machine_learning/clear_trained_model_deployment_cache_test.rb
+- spec/platinum/unit/machine_learning/close_job_test.rb
+- spec/platinum/unit/machine_learning/delete_datafeed_test.rb
+- spec/platinum/unit/machine_learning/delete_expired_data_test.rb
+- spec/platinum/unit/machine_learning/delete_filter_test.rb
+- spec/platinum/unit/machine_learning/delete_forecast_test.rb
+- spec/platinum/unit/machine_learning/delete_job_test.rb
+- spec/platinum/unit/machine_learning/delete_model_alias_test.rb
+- spec/platinum/unit/machine_learning/delete_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/flush_job_test.rb
+- spec/platinum/unit/machine_learning/forecast_test.rb
+- spec/platinum/unit/machine_learning/get_buckets_test.rb
+- spec/platinum/unit/machine_learning/get_categories_test.rb
+- spec/platinum/unit/machine_learning/get_datafeed_stats_test.rb
+- spec/platinum/unit/machine_learning/get_datafeeds_test.rb
+- spec/platinum/unit/machine_learning/get_filters_test.rb
+- spec/platinum/unit/machine_learning/get_influencers_test.rb
+- spec/platinum/unit/machine_learning/get_job_stats_test.rb
+- spec/platinum/unit/machine_learning/get_jobs_test.rb
+- spec/platinum/unit/machine_learning/get_model_snapshots_test.rb
+- spec/platinum/unit/machine_learning/get_overall_buckets_test.rb
+- spec/platinum/unit/machine_learning/get_records_test.rb
+- spec/platinum/unit/machine_learning/open_job_test.rb
+- spec/platinum/unit/machine_learning/post_data_test.rb
+- spec/platinum/unit/machine_learning/preview_data_frame_analytics_test.rb
+- spec/platinum/unit/machine_learning/preview_datafeed_test.rb
+- spec/platinum/unit/machine_learning/put_datafeed_test.rb
+- spec/platinum/unit/machine_learning/put_filter_test.rb
+- spec/platinum/unit/machine_learning/put_job_test.rb
+- spec/platinum/unit/machine_learning/put_trained_model_alias_test.rb
+- spec/platinum/unit/machine_learning/revert_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/start_datafeed_test.rb
+- spec/platinum/unit/machine_learning/stop_datafeed_test.rb
+- spec/platinum/unit/machine_learning/update_data_frame_analytics_test.rb
+- spec/platinum/unit/machine_learning/update_datafeed_test.rb
+- spec/platinum/unit/machine_learning/update_filter_test.rb
+- spec/platinum/unit/machine_learning/update_job_test.rb
+- spec/platinum/unit/machine_learning/update_model_snapshot_test.rb
+- spec/platinum/unit/machine_learning/upgrade_job_snapshot_test.rb
+- spec/platinum/unit/machine_learning/validate_detector_test.rb
+- spec/platinum/unit/machine_learning/validate_test.rb
+- spec/platinum/unit/migration/deprecations_test.rb
+- spec/platinum/unit/monitoring/bulk_test.rb
+- spec/platinum/unit/rollup/get_rollup_index_caps_test.rb
+- spec/platinum/unit/security/activate_user_profile_test.rb
+- spec/platinum/unit/security/authenticate_test.rb
+- spec/platinum/unit/security/bulk_update_api_key_test.rb
+- spec/platinum/unit/security/change_password_test.rb
+- spec/platinum/unit/security/clear_api_key_cache_test.rb
+- spec/platinum/unit/security/clear_cached_privileges_test.rb
+- spec/platinum/unit/security/clear_cached_realms_test.rb
+- spec/platinum/unit/security/clear_cached_roles_test.rb
+- spec/platinum/unit/security/delete_privileges_test.rb
+- spec/platinum/unit/security/delete_role_mapping_test.rb
+- spec/platinum/unit/security/delete_role_test.rb
+- spec/platinum/unit/security/delete_user_test.rb
+- spec/platinum/unit/security/disable_user_test.rb
+- spec/platinum/unit/security/enable_user_test.rb
+- spec/platinum/unit/security/get_privileges_test.rb
+- spec/platinum/unit/security/get_role_mapping_test.rb
+- spec/platinum/unit/security/get_role_test.rb
+- spec/platinum/unit/security/get_token_test.rb
+- spec/platinum/unit/security/get_user_privileges_test.rb
+- spec/platinum/unit/security/get_user_profile_test.rb
+- spec/platinum/unit/security/get_user_test.rb
+- spec/platinum/unit/security/grant_api_key_test.rb
+- spec/platinum/unit/security/has_privileges_test.rb
+- spec/platinum/unit/security/invalidate_token_test.rb
+- spec/platinum/unit/security/oidc_authenticate_test.rb
+- spec/platinum/unit/security/oidc_logout_test.rb
+- spec/platinum/unit/security/oidc_prepare_authentication_test.rb
+- spec/platinum/unit/security/put_privileges_test.rb
+- spec/platinum/unit/security/put_role_mapping_test.rb
+- spec/platinum/unit/security/put_role_test.rb
+- spec/platinum/unit/security/put_user_test.rb
+- spec/platinum/unit/security/update_user_profile_data_test.rb
+- spec/platinum/unit/ssl/certificates_test.rb
+- spec/platinum/unit/test_helper.rb
+- spec/platinum/unit/transform/reset_transform_spec.rb
+- spec/platinum/unit/transform/upgrade_transforms_spec.rb
+- spec/platinum/unit/usage_test.rb
+- spec/platinum/unit/watcher/ack_watch_test.rb
+- spec/platinum/unit/watcher/activate_watch_test.rb
+- spec/platinum/unit/watcher/deactivate_watch_test.rb
+- spec/platinum/unit/watcher/delete_watch_test.rb
+- spec/platinum/unit/watcher/execute_watch_test.rb
+- spec/platinum/unit/watcher/get_watch_test.rb
+- spec/platinum/unit/watcher/put_watch_test.rb
+- spec/platinum/unit/watcher/query_watches_test.rb
+- spec/platinum/unit/watcher/start_test.rb
+- spec/platinum/unit/watcher/stats_test.rb
+- spec/platinum/unit/watcher/stop_test.rb
+- spec/rest_api/rest_api_tests_helper.rb
+- spec/rest_api/rest_api_yaml_spec.rb
+- spec/rest_api/run_rspec_matchers.rb
+- spec/rest_api/skipped_tests_free.yml
+- spec/rest_api/skipped_tests_platinum.yml
+- spec/rspec_formatter.rb
+- spec/spec_helper.rb
+- spec/yaml-test-runner/run.rb

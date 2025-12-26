@@ -1,0 +1,219 @@
+--- !ruby/object:Gem::Specification
+name: airbrake-ruby
+version: !ruby/object:Gem::Version
+  version: 6.2.2
+platform: ruby
+authors:
+- Airbrake Technologies, Inc.
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rbtree3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: |
+  Airbrake Ruby is a plain Ruby notifier for Airbrake (https://airbrake.io), the
+  leading exception reporting service. Airbrake Ruby provides minimalist API that
+  enables the ability to send any Ruby exception to the Airbrake dashboard. The
+  library is extremely lightweight and it perfectly suits plain Ruby applications.
+  For apps that are built with Rails, Sinatra or any other Rack-compliant web
+  framework we offer the airbrake gem (https://github.com/airbrake/airbrake). It
+  has additional features such as reporting of any unhandled exceptions
+  automatically, integrations with Resque, Sidekiq, Delayed Job and many more.
+email: support@airbrake.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/airbrake-ruby.rb
+- lib/airbrake-ruby/async_sender.rb
+- lib/airbrake-ruby/backlog.rb
+- lib/airbrake-ruby/backtrace.rb
+- lib/airbrake-ruby/benchmark.rb
+- lib/airbrake-ruby/code_hunk.rb
+- lib/airbrake-ruby/config.rb
+- lib/airbrake-ruby/config/processor.rb
+- lib/airbrake-ruby/config/validator.rb
+- lib/airbrake-ruby/context.rb
+- lib/airbrake-ruby/deploy_notifier.rb
+- lib/airbrake-ruby/file_cache.rb
+- lib/airbrake-ruby/filter_chain.rb
+- lib/airbrake-ruby/filters/context_filter.rb
+- lib/airbrake-ruby/filters/dependency_filter.rb
+- lib/airbrake-ruby/filters/exception_attributes_filter.rb
+- lib/airbrake-ruby/filters/gem_root_filter.rb
+- lib/airbrake-ruby/filters/git_last_checkout_filter.rb
+- lib/airbrake-ruby/filters/git_repository_filter.rb
+- lib/airbrake-ruby/filters/git_revision_filter.rb
+- lib/airbrake-ruby/filters/keys_allowlist.rb
+- lib/airbrake-ruby/filters/keys_blocklist.rb
+- lib/airbrake-ruby/filters/keys_filter.rb
+- lib/airbrake-ruby/filters/root_directory_filter.rb
+- lib/airbrake-ruby/filters/sql_filter.rb
+- lib/airbrake-ruby/filters/system_exit_filter.rb
+- lib/airbrake-ruby/filters/thread_filter.rb
+- lib/airbrake-ruby/grouppable.rb
+- lib/airbrake-ruby/hash_keyable.rb
+- lib/airbrake-ruby/ignorable.rb
+- lib/airbrake-ruby/inspectable.rb
+- lib/airbrake-ruby/loggable.rb
+- lib/airbrake-ruby/mergeable.rb
+- lib/airbrake-ruby/monotonic_time.rb
+- lib/airbrake-ruby/nested_exception.rb
+- lib/airbrake-ruby/notice.rb
+- lib/airbrake-ruby/notice_notifier.rb
+- lib/airbrake-ruby/performance_breakdown.rb
+- lib/airbrake-ruby/performance_notifier.rb
+- lib/airbrake-ruby/promise.rb
+- lib/airbrake-ruby/query.rb
+- lib/airbrake-ruby/queue.rb
+- lib/airbrake-ruby/remote_settings.rb
+- lib/airbrake-ruby/remote_settings/callback.rb
+- lib/airbrake-ruby/remote_settings/settings_data.rb
+- lib/airbrake-ruby/request.rb
+- lib/airbrake-ruby/response.rb
+- lib/airbrake-ruby/stashable.rb
+- lib/airbrake-ruby/stat.rb
+- lib/airbrake-ruby/sync_sender.rb
+- lib/airbrake-ruby/tdigest.rb
+- lib/airbrake-ruby/thread_pool.rb
+- lib/airbrake-ruby/time_truncate.rb
+- lib/airbrake-ruby/timed_trace.rb
+- lib/airbrake-ruby/truncator.rb
+- lib/airbrake-ruby/version.rb
+homepage: https://airbrake.io
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: Ruby notifier for https://airbrake.io
+test_files: []

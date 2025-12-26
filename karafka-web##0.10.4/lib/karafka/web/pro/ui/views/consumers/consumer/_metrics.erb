@@ -1,0 +1,127 @@
+<div id="metrics" class="w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+    <div class="card-metric">
+      <h3>Process</h3>
+      <ul>
+        <li>
+          Status:
+
+          <span class="badge <%= status_badge @process.status %>">
+            <%= @process.status %>
+          </span>
+        </li>
+
+        <li>
+          Started:
+          <span class="badge badge-secondary">
+            <%== relative_time @process.started_at %>
+          </span>
+        </li>
+
+        <li>
+          State from:
+          <span class="badge badge-secondary">
+            <%== relative_time @process.dispatched_at %>
+          </span>
+        </li>
+      </ul>
+
+      <% unless @process.tags.empty? %>
+        <p class="mt-4 text-right">
+          <%== tags(@process.tags) %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="card-metric">
+      <h3>Utilization</h3>
+      <ul>
+        <li>
+          Workers:
+          <span class="badge badge-primary">
+            <%= @process.workers %>
+          </span>
+        </li>
+        <li>
+          Utilization:
+          <span class="badge badge-primary">
+            <%= @process.utilization.round(2) %>%
+          </span>
+        </li>
+        <li>
+          CPUs:
+          <span class="badge badge-primary">
+            <%= @process.cpus %>
+          </span>
+        </li>
+        <li>
+          CPU usage:
+          <% @process.cpu_usage.each_with_index do |usage, i| %>
+            <span class="badge badge-primary">
+              <%= usage %>
+            </span>
+            <%= i < 2 ? '/' : '' %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-metric">
+      <h3>Memory usage</h3>
+      <ul>
+        <li>
+          RSS:
+          <span class="badge badge-primary">
+            <%= format_memory @process.memory_usage %>
+          </span>
+        </li>
+        <li>
+          OS memory used:
+          <span class="badge badge-primary">
+            <%= format_memory @process.memory_total_usage %>
+          </span>
+        </li>
+        <li>
+          OS memory available:
+          <span class="badge badge-primary">
+            <%= format_memory @process.memory_size %>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-metric">
+      <h3>Versions</h3>
+
+      <div class="text-center">
+        <span class="badge badge-secondary">
+          <%= @process.ruby %>
+        </span>
+
+        <span class="badge badge-secondary">
+          karafka <%= @process.karafka %>
+        </span>
+
+        <span class="badge badge-secondary">
+          karafka-web <%= @process.karafka_web %>
+        </span>
+
+        <span class="badge badge-secondary">
+          karafka-core <%= @process.karafka_core %>
+        </span>
+
+        <span class="badge badge-secondary">
+          rdkafka <%= @process.rdkafka %>
+        </span>
+
+        <span class="badge badge-secondary">
+          librdkafka <%= @process.librdkafka %>
+        </span>
+
+        <span class="badge badge-secondary">
+          waterdrop <%= @process.waterdrop %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

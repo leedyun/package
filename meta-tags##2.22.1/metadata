@@ -1,0 +1,282 @@
+--- !ruby/object:Gem::Specification
+name: meta-tags
+version: !ruby/object:Gem::Version
+  version: 2.22.1
+platform: ruby
+authors:
+- Dmytro Shteflyuk
+autorequire: 
+bindir: exe
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDcDCCAligAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MQ8wDQYDVQQDDAZrcHVt
+  dWsxFjAUBgoJkiaJk/IsZAEZFgZrcHVtdWsxFDASBgoJkiaJk/IsZAEZFgRpbmZv
+  MB4XDTI0MDcxNTIxMzIyNFoXDTI1MDcxNTIxMzIyNFowPzEPMA0GA1UEAwwGa3B1
+  bXVrMRYwFAYKCZImiZPyLGQBGRYGa3B1bXVrMRQwEgYKCZImiZPyLGQBGRYEaW5m
+  bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALw2YroZc+IT+rs8NuPu
+  c13DelrxrpAgPEu1zuRb3l7WaHRNWA4TyS8Z6Aa1G2O+FdUZNMW1n7IwP/QMJ9Mz
+  ahRBiTmhik5kasJ9s0h1lq5/hZiycm0o5OtGioUzCkvk+UEMpzMHbLmVSZCzYciy
+  NDRDbXB0rLLu1eJk+gKgn6Qf5vj93h1w28BdWdaA7YegtbmipZ+pjmzCQAfPActT
+  6uXHG4dSo7Lz9jiFRI5dUizFbGXcRqkQ2b5AB8FFmfcvbqERvzQKBICnybjsKP0N
+  pJ3vGgO2sh5GvJFOPk1Vlur2nX9ZFznPEP1CEAQ+NFrmKRt355Z5sgOkAojSGnIL
+  /1sCAwEAAaN3MHUwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAwHQYDVR0OBBYEFPa4
+  VFc1YOlV1u/7EGTwMCAk8YE9MB0GA1UdEQQWMBSBEmtwdW11a0BrcHVtdWsuaW5m
+  bzAdBgNVHRIEFjAUgRJrcHVtdWtAa3B1bXVrLmluZm8wDQYJKoZIhvcNAQELBQAD
+  ggEBADXj54X1y7Pw0Wp5wdniZE13a8EwWC41BEIsSoBLkGQhZ2OOR+5tVUM9kCwG
+  kX6YdliORLuLevYXKiXFluiETwKTeAd6zUURy7eLlwQ1GvhE8wmGk0TQY11v8FMj
+  7AupDtulpP01gLDZwbysovu/3btfhrLVncJ2zIpB5sx68fDCOmOGSUbdgOCV+S+O
+  CyTFctYlJNXZgv2kl76TII7jbZikT/7hVOhCO48OdMQ/s26zabbJrcV2pJOLKKkP
+  BKX4xDo6SbsGmqjFkknT6WiiE94rQxGCb9JNiSyl3SncEw+Ysx6yVKYB5WAEy8s1
+  M0VQvDzd77bxj3lx/P6ifll3yUs=
+  -----END CERTIFICATE-----
+date: 2024-09-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.13.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.13.0
+- !ruby/object:Gem::Dependency
+  name: rspec-html-matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.10.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.26.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.1
+- !ruby/object:Gem::Dependency
+  name: standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.31'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.31'
+- !ruby/object:Gem::Dependency
+  name: rspec_junit_formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+description: Search Engine Optimization (SEO) plugin for Ruby on Rails applications.
+email:
+- kpumuk@kpumuk.info
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- MIT-LICENSE
+- README.md
+- certs/kpumuk.pem
+- lib/generators/meta_tags/install_generator.rb
+- lib/generators/meta_tags/templates/config/initializers/meta_tags.rb
+- lib/meta-tags.rb
+- lib/meta_tags.rb
+- lib/meta_tags/configuration.rb
+- lib/meta_tags/content_tag.rb
+- lib/meta_tags/controller_helper.rb
+- lib/meta_tags/meta_tags_collection.rb
+- lib/meta_tags/railtie.rb
+- lib/meta_tags/renderer.rb
+- lib/meta_tags/tag.rb
+- lib/meta_tags/text_normalizer.rb
+- lib/meta_tags/version.rb
+- lib/meta_tags/view_helper.rb
+- sig/lib/_internal/rails.rbs
+- sig/lib/meta_tags.rbs
+- sig/lib/meta_tags/configuration.rbs
+- sig/lib/meta_tags/content_tag.rbs
+- sig/lib/meta_tags/controller_helper.rbs
+- sig/lib/meta_tags/meta_tags_collection.rbs
+- sig/lib/meta_tags/renderer.rbs
+- sig/lib/meta_tags/tag.rbs
+- sig/lib/meta_tags/text_normalizer.rbs
+- sig/lib/meta_tags/version.rbs
+- sig/lib/meta_tags/view_helper.rbs
+homepage: https://github.com/kpumuk/meta-tags
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/kpumuk/meta-tags/issues/
+  changelog_uri: https://github.com/kpumuk/meta-tags/blob/main/CHANGELOG.md
+  documentation_uri: https://rubydoc.info/github/kpumuk/meta-tags/
+  homepage_uri: https://github.com/kpumuk/meta-tags/
+  source_code_uri: https://github.com/kpumuk/meta-tags/
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Collection of SEO helpers for Ruby on Rails.
+test_files: []

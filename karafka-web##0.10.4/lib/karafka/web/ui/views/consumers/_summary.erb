@@ -1,0 +1,70 @@
+<div id="summary" class="col-span-12">
+  <div class="mb-5 px-4 lg:px-10 text-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-center mb-10">
+      <div class="card-summary-container">
+        <div class="card-summary">
+          <div class="card-summary-body">
+            <div class="card-summary-value">
+              <%= @counters.processes %>
+            </div>
+            <div class="card-summary-title">
+              Processes
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-summary-container">
+        <div class="card-summary">
+          <div class="card-summary-body">
+            <div class="card-summary-value">
+              <%= @counters.workers %>
+            </div>
+            <div class="card-summary-title">
+              Workers
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-summary-container">
+        <div class="card-summary">
+          <div class="card-summary-body">
+            <div class="card-summary-value">
+              <%= @counters.listeners.fetch(:active) %>
+            </div>
+            <div class="card-summary-title">
+              Active Listeners
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-summary-container">
+        <div class="card-summary">
+          <div class="card-summary-body">
+            <div class="card-summary-value">
+              <%= @counters.utilization.round(2) %> %
+            </div>
+            <div class="card-summary-title">
+              Utilization
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-summary-container">
+        <div class="card-summary">
+          <div class="card-summary-body">
+            <div class="card-summary-value">
+              <%= format_memory @counters.rss %>
+            </div>
+            <div class="card-summary-title">
+              RSS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

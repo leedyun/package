@@ -1,0 +1,82 @@
+--- !ruby/object:Gem::Specification
+name: amazing_print
+version: !ruby/object:Gem::Version
+  version: 1.7.2
+platform: ruby
+authors:
+- Michael Dvorkin
+- Kevin McCormackPatrik Wenger
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies: []
+description: 'Great Ruby debugging companion: pretty print Ruby objects to visualize
+  their structure. Supports custom object formatting via plugins'
+email: harlemsquirrel@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- README.md
+- lib/amazing_print.rb
+- lib/amazing_print/colorize.rb
+- lib/amazing_print/colors.rb
+- lib/amazing_print/core_ext/awesome_method_array.rb
+- lib/amazing_print/core_ext/class.rb
+- lib/amazing_print/core_ext/kernel.rb
+- lib/amazing_print/core_ext/logger.rb
+- lib/amazing_print/core_ext/object.rb
+- lib/amazing_print/custom_defaults.rb
+- lib/amazing_print/ext/action_view.rb
+- lib/amazing_print/ext/active_record.rb
+- lib/amazing_print/ext/active_support.rb
+- lib/amazing_print/ext/mongo_mapper.rb
+- lib/amazing_print/ext/mongoid.rb
+- lib/amazing_print/ext/nobrainer.rb
+- lib/amazing_print/ext/nokogiri.rb
+- lib/amazing_print/ext/ostruct.rb
+- lib/amazing_print/ext/ripple.rb
+- lib/amazing_print/ext/sequel.rb
+- lib/amazing_print/ext_loader.rb
+- lib/amazing_print/formatter.rb
+- lib/amazing_print/formatters.rb
+- lib/amazing_print/formatters/array_formatter.rb
+- lib/amazing_print/formatters/base_formatter.rb
+- lib/amazing_print/formatters/class_formatter.rb
+- lib/amazing_print/formatters/dir_formatter.rb
+- lib/amazing_print/formatters/file_formatter.rb
+- lib/amazing_print/formatters/hash_formatter.rb
+- lib/amazing_print/formatters/method_formatter.rb
+- lib/amazing_print/formatters/mswin_helper.rb
+- lib/amazing_print/formatters/object_formatter.rb
+- lib/amazing_print/formatters/simple_formatter.rb
+- lib/amazing_print/formatters/struct_formatter.rb
+- lib/amazing_print/indentator.rb
+- lib/amazing_print/inspector.rb
+- lib/amazing_print/version.rb
+- lib/ap.rb
+homepage: https://github.com/amazing-print/amazing_print
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/amazing-print/amazing_print/blob/master/CHANGELOG.md
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Pretty print Ruby objects with proper indentation and colors
+test_files: []

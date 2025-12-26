@@ -1,0 +1,10 @@
+pkg/
+._*
+*~
+.DS_Store
+.*.swp
+*.log
+.bundle/
+bin/
+vendor/
+Gemfile.lock

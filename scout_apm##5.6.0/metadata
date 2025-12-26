@@ -1,0 +1,511 @@
+--- !ruby/object:Gem::Specification
+name: scout_apm
+version: !ruby/object:Gem::Version
+  version: 5.6.0
+platform: ruby
+authors:
+- Derek Haynes
+- Andre Lewis
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Monitors Ruby apps and reports detailed metrics on performance to Scout.
+email:
+- support@scoutapp.com
+executables: []
+extensions:
+- ext/allocations/extconf.rb
+- ext/rusage/extconf.rb
+extra_rdoc_files: []
+files:
+- ".github/workflows/release.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.markdown
+- Gemfile
+- Guardfile
+- LICENSE.md
+- README.markdown
+- Rakefile
+- data/cacert.pem
+- ext/allocations/allocations.c
+- ext/allocations/extconf.rb
+- ext/rusage/README.md
+- ext/rusage/extconf.rb
+- ext/rusage/rusage.c
+- gems/README.md
+- gems/instruments.gemfile
+- gems/octoshark.gemfile
+- gems/rails3.gemfile
+- gems/rails4.gemfile
+- gems/rails5.gemfile
+- gems/rails6.gemfile
+- gems/sidekiq.gemfile
+- gems/sqlite3-v2.gemfile
+- gems/typhoeus.gemfile
+- lib/scout_apm.rb
+- lib/scout_apm/agent.rb
+- lib/scout_apm/agent/exit_handler.rb
+- lib/scout_apm/agent/preconditions.rb
+- lib/scout_apm/agent_context.rb
+- lib/scout_apm/app_server_load.rb
+- lib/scout_apm/attribute_arranger.rb
+- lib/scout_apm/auto_instrument.rb
+- lib/scout_apm/auto_instrument/instruction_sequence.rb
+- lib/scout_apm/auto_instrument/layer.rb
+- lib/scout_apm/auto_instrument/parser.rb
+- lib/scout_apm/auto_instrument/rails.rb
+- lib/scout_apm/background_job_integrations/delayed_job.rb
+- lib/scout_apm/background_job_integrations/faktory.rb
+- lib/scout_apm/background_job_integrations/good_job.rb
+- lib/scout_apm/background_job_integrations/legacy_sneakers.rb
+- lib/scout_apm/background_job_integrations/que.rb
+- lib/scout_apm/background_job_integrations/resque.rb
+- lib/scout_apm/background_job_integrations/shoryuken.rb
+- lib/scout_apm/background_job_integrations/sidekiq.rb
+- lib/scout_apm/background_job_integrations/sneakers.rb
+- lib/scout_apm/background_job_integrations/solid_queue.rb
+- lib/scout_apm/background_recorder.rb
+- lib/scout_apm/background_worker.rb
+- lib/scout_apm/bucket_name_splitter.rb
+- lib/scout_apm/call_set.rb
+- lib/scout_apm/config.rb
+- lib/scout_apm/context.rb
+- lib/scout_apm/db_query_metric_set.rb
+- lib/scout_apm/db_query_metric_stats.rb
+- lib/scout_apm/debug.rb
+- lib/scout_apm/detailed_trace.rb
+- lib/scout_apm/environment.rb
+- lib/scout_apm/error.rb
+- lib/scout_apm/error_service.rb
+- lib/scout_apm/error_service/error_buffer.rb
+- lib/scout_apm/error_service/error_record.rb
+- lib/scout_apm/error_service/ignored_exceptions.rb
+- lib/scout_apm/error_service/middleware.rb
+- lib/scout_apm/error_service/notifier.rb
+- lib/scout_apm/error_service/payload.rb
+- lib/scout_apm/error_service/periodic_work.rb
+- lib/scout_apm/error_service/railtie.rb
+- lib/scout_apm/error_service/sidekiq.rb
+- lib/scout_apm/exceptions.rb
+- lib/scout_apm/extensions/config.rb
+- lib/scout_apm/extensions/transaction_callback_payload.rb
+- lib/scout_apm/external_service_metric_set.rb
+- lib/scout_apm/external_service_metric_stats.rb
+- lib/scout_apm/fake_store.rb
+- lib/scout_apm/framework_integrations/rails_2.rb
+- lib/scout_apm/framework_integrations/rails_3_or_4.rb
+- lib/scout_apm/framework_integrations/ruby.rb
+- lib/scout_apm/framework_integrations/sinatra.rb
+- lib/scout_apm/git_revision.rb
+- lib/scout_apm/histogram.rb
+- lib/scout_apm/ignored_uris.rb
+- lib/scout_apm/instant/assets/xmlhttp_instrumentation.html
+- lib/scout_apm/instant/middleware.rb
+- lib/scout_apm/instant_reporting.rb
+- lib/scout_apm/instrument_manager.rb
+- lib/scout_apm/instruments/action_controller_rails_2.rb
+- lib/scout_apm/instruments/action_controller_rails_3_rails4.rb
+- lib/scout_apm/instruments/action_view.rb
+- lib/scout_apm/instruments/active_record.rb
+- lib/scout_apm/instruments/elasticsearch.rb
+- lib/scout_apm/instruments/grape.rb
+- lib/scout_apm/instruments/http.rb
+- lib/scout_apm/instruments/http_client.rb
+- lib/scout_apm/instruments/influxdb.rb
+- lib/scout_apm/instruments/memcached.rb
+- lib/scout_apm/instruments/middleware_detailed.rb
+- lib/scout_apm/instruments/middleware_summary.rb
+- lib/scout_apm/instruments/mongoid.rb
+- lib/scout_apm/instruments/moped.rb
+- lib/scout_apm/instruments/net_http.rb
+- lib/scout_apm/instruments/percentile_sampler.rb
+- lib/scout_apm/instruments/process/process_cpu.rb
+- lib/scout_apm/instruments/process/process_memory.rb
+- lib/scout_apm/instruments/rails_router.rb
+- lib/scout_apm/instruments/redis.rb
+- lib/scout_apm/instruments/redis5.rb
+- lib/scout_apm/instruments/resque.rb
+- lib/scout_apm/instruments/samplers.rb
+- lib/scout_apm/instruments/sinatra.rb
+- lib/scout_apm/instruments/typhoeus.rb
+- lib/scout_apm/job_record.rb
+- lib/scout_apm/layaway.rb
+- lib/scout_apm/layaway_file.rb
+- lib/scout_apm/layer.rb
+- lib/scout_apm/layer_children_set.rb
+- lib/scout_apm/layer_converters/allocation_metric_converter.rb
+- lib/scout_apm/layer_converters/converter_base.rb
+- lib/scout_apm/layer_converters/database_converter.rb
+- lib/scout_apm/layer_converters/depth_first_walker.rb
+- lib/scout_apm/layer_converters/error_converter.rb
+- lib/scout_apm/layer_converters/external_service_converter.rb
+- lib/scout_apm/layer_converters/find_layer_by_type.rb
+- lib/scout_apm/layer_converters/histograms.rb
+- lib/scout_apm/layer_converters/job_converter.rb
+- lib/scout_apm/layer_converters/metric_converter.rb
+- lib/scout_apm/layer_converters/request_queue_time_converter.rb
+- lib/scout_apm/layer_converters/slow_job_converter.rb
+- lib/scout_apm/layer_converters/slow_request_converter.rb
+- lib/scout_apm/layer_converters/trace_converter.rb
+- lib/scout_apm/limited_layer.rb
+- lib/scout_apm/logger.rb
+- lib/scout_apm/metric_meta.rb
+- lib/scout_apm/metric_set.rb
+- lib/scout_apm/metric_stats.rb
+- lib/scout_apm/middleware.rb
+- lib/scout_apm/periodic_work.rb
+- lib/scout_apm/platform_integrations/cloud_foundry.rb
+- lib/scout_apm/platform_integrations/heroku.rb
+- lib/scout_apm/platform_integrations/server.rb
+- lib/scout_apm/rack.rb
+- lib/scout_apm/remote/message.rb
+- lib/scout_apm/remote/recorder.rb
+- lib/scout_apm/remote/router.rb
+- lib/scout_apm/remote/server.rb
+- lib/scout_apm/reporter.rb
+- lib/scout_apm/reporting.rb
+- lib/scout_apm/request_histograms.rb
+- lib/scout_apm/request_manager.rb
+- lib/scout_apm/sampling.rb
+- lib/scout_apm/scored_item_set.rb
+- lib/scout_apm/serializers/app_server_load_serializer.rb
+- lib/scout_apm/serializers/db_query_serializer_to_json.rb
+- lib/scout_apm/serializers/directive_serializer.rb
+- lib/scout_apm/serializers/external_service_serializer_to_json.rb
+- lib/scout_apm/serializers/histograms_serializer_to_json.rb
+- lib/scout_apm/serializers/jobs_serializer_to_json.rb
+- lib/scout_apm/serializers/metrics_to_json_serializer.rb
+- lib/scout_apm/serializers/payload_serializer.rb
+- lib/scout_apm/serializers/payload_serializer_to_json.rb
+- lib/scout_apm/serializers/slow_jobs_serializer_to_json.rb
+- lib/scout_apm/server_integrations/null.rb
+- lib/scout_apm/server_integrations/passenger.rb
+- lib/scout_apm/server_integrations/puma.rb
+- lib/scout_apm/server_integrations/rainbows.rb
+- lib/scout_apm/server_integrations/thin.rb
+- lib/scout_apm/server_integrations/unicorn.rb
+- lib/scout_apm/server_integrations/webrick.rb
+- lib/scout_apm/slow_job_record.rb
+- lib/scout_apm/slow_policy/age_policy.rb
+- lib/scout_apm/slow_policy/percent_policy.rb
+- lib/scout_apm/slow_policy/percentile_policy.rb
+- lib/scout_apm/slow_policy/policy.rb
+- lib/scout_apm/slow_policy/speed_policy.rb
+- lib/scout_apm/slow_request_policy.rb
+- lib/scout_apm/slow_transaction.rb
+- lib/scout_apm/stack_item.rb
+- lib/scout_apm/store.rb
+- lib/scout_apm/synchronous_recorder.rb
+- lib/scout_apm/tasks/doctor.rb
+- lib/scout_apm/tasks/support.rb
+- lib/scout_apm/tracer.rb
+- lib/scout_apm/tracked_request.rb
+- lib/scout_apm/transaction.rb
+- lib/scout_apm/transaction_time_consumed.rb
+- lib/scout_apm/utils/active_record_metric_name.rb
+- lib/scout_apm/utils/backtrace_parser.rb
+- lib/scout_apm/utils/gzip_helper.rb
+- lib/scout_apm/utils/installed_gems.rb
+- lib/scout_apm/utils/klass_helper.rb
+- lib/scout_apm/utils/marshal_logging.rb
+- lib/scout_apm/utils/numbers.rb
+- lib/scout_apm/utils/scm.rb
+- lib/scout_apm/utils/sql_sanitizer.rb
+- lib/scout_apm/utils/time.rb
+- lib/scout_apm/utils/unique_id.rb
+- lib/scout_apm/version.rb
+- lib/tasks/doctor.rake
+- scout_apm.gemspec
+- test/data/config_test_1.yml
+- test/test_helper.rb
+- test/tmp/README.md
+- test/unit/agent_context_test.rb
+- test/unit/agent_test.rb
+- test/unit/auto_instrument/anonymous_block_value.rb
+- test/unit/auto_instrument/assignments-instrumented.rb
+- test/unit/auto_instrument/assignments.rb
+- test/unit/auto_instrument/controller-ast.txt
+- test/unit/auto_instrument/controller-instrumented.rb
+- test/unit/auto_instrument/controller.rb
+- test/unit/auto_instrument/hanging_method.rb
+- test/unit/auto_instrument/hash_shorthand_controller-instrumented.rb
+- test/unit/auto_instrument/hash_shorthand_controller.rb
+- test/unit/auto_instrument/rescue_from-instrumented.rb
+- test/unit/auto_instrument/rescue_from.rb
+- test/unit/auto_instrument_test.rb
+- test/unit/background_job_integrations/sidekiq_test.rb
+- test/unit/config_test.rb
+- test/unit/context_test.rb
+- test/unit/db_query_metric_set_test.rb
+- test/unit/db_query_metric_stats_test.rb
+- test/unit/environment_test.rb
+- test/unit/error_service/error_buffer_test.rb
+- test/unit/error_service/ignored_exceptions_test.rb
+- test/unit/extensions/periodic_callbacks_test.rb
+- test/unit/extensions/transaction_callbacks_test.rb
+- test/unit/external_service_metric_set_test.rb
+- test/unit/external_service_metric_stats_test.rb
+- test/unit/fake_store_test.rb
+- test/unit/git_revision_test.rb
+- test/unit/histogram_test.rb
+- test/unit/ignored_uris_test.rb
+- test/unit/instruments/action_view_test.rb
+- test/unit/instruments/active_record_test.rb
+- test/unit/instruments/fixtures/test/_test_partial.html.erb
+- test/unit/instruments/fixtures/test/_test_partial_collection.html.erb
+- test/unit/instruments/fixtures/test_view.html.erb
+- test/unit/instruments/http_client_test.rb
+- test/unit/instruments/http_test.rb
+- test/unit/instruments/moped_test.rb
+- test/unit/instruments/net_http_test.rb
+- test/unit/instruments/percentile_sampler_test.rb
+- test/unit/instruments/redis_test.rb
+- test/unit/instruments/typhoeus_test.rb
+- test/unit/layaway_test.rb
+- test/unit/layer_children_set_test.rb
+- test/unit/layer_converters/depth_first_walker_test.rb
+- test/unit/layer_converters/metric_converter_test.rb
+- test/unit/layer_converters/stubs.rb
+- test/unit/limited_layer_test.rb
+- test/unit/logger_test.rb
+- test/unit/metric_set_test.rb
+- test/unit/remote/message_test.rb
+- test/unit/remote/route_test.rb
+- test/unit/remote/server_test.rb
+- test/unit/request_histograms_test.rb
+- test/unit/sampling_test.rb
+- test/unit/scored_item_set_test.rb
+- test/unit/serializers/payload_serializer_test.rb
+- test/unit/slow_request_policy_test.rb
+- test/unit/sql_sanitizer_test.rb
+- test/unit/store_test.rb
+- test/unit/tracer_test.rb
+- test/unit/tracked_request_test.rb
+- test/unit/transaction_test.rb
+- test/unit/transaction_time_consumed_test.rb
+- test/unit/utils/active_record_metric_name_test.rb
+- test/unit/utils/backtrace_parser_test.rb
+- test/unit/utils/numbers_test.rb
+- test/unit/utils/scm.rb
+homepage: https://github.com/scoutapp/scout_apm_ruby
+licenses:
+- MIT
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+- data
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Ruby application performance monitoring
+test_files: []

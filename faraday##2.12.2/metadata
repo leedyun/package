@@ -1,0 +1,173 @@
+--- !ruby/object:Gem::Specification
+name: faraday
+version: !ruby/object:Gem::Version
+  version: 2.12.2
+platform: ruby
+authors:
+- "@technoweenie"
+- "@iMacTia"
+- "@olleolleolle"
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday-net_http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email: technoweenie@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.md
+- README.md
+- Rakefile
+- examples/client_spec.rb
+- examples/client_test.rb
+- lib/faraday.rb
+- lib/faraday/adapter.rb
+- lib/faraday/adapter/test.rb
+- lib/faraday/adapter_registry.rb
+- lib/faraday/connection.rb
+- lib/faraday/encoders/flat_params_encoder.rb
+- lib/faraday/encoders/nested_params_encoder.rb
+- lib/faraday/error.rb
+- lib/faraday/logging/formatter.rb
+- lib/faraday/methods.rb
+- lib/faraday/middleware.rb
+- lib/faraday/middleware_registry.rb
+- lib/faraday/options.rb
+- lib/faraday/options/connection_options.rb
+- lib/faraday/options/env.rb
+- lib/faraday/options/proxy_options.rb
+- lib/faraday/options/request_options.rb
+- lib/faraday/options/ssl_options.rb
+- lib/faraday/parameters.rb
+- lib/faraday/rack_builder.rb
+- lib/faraday/request.rb
+- lib/faraday/request/authorization.rb
+- lib/faraday/request/instrumentation.rb
+- lib/faraday/request/json.rb
+- lib/faraday/request/url_encoded.rb
+- lib/faraday/response.rb
+- lib/faraday/response/json.rb
+- lib/faraday/response/logger.rb
+- lib/faraday/response/raise_error.rb
+- lib/faraday/utils.rb
+- lib/faraday/utils/headers.rb
+- lib/faraday/utils/params_hash.rb
+- lib/faraday/version.rb
+- spec/external_adapters/faraday_specs_setup.rb
+- spec/faraday/adapter/test_spec.rb
+- spec/faraday/adapter_registry_spec.rb
+- spec/faraday/adapter_spec.rb
+- spec/faraday/connection_spec.rb
+- spec/faraday/error_spec.rb
+- spec/faraday/middleware_registry_spec.rb
+- spec/faraday/middleware_spec.rb
+- spec/faraday/options/env_spec.rb
+- spec/faraday/options/options_spec.rb
+- spec/faraday/options/proxy_options_spec.rb
+- spec/faraday/options/request_options_spec.rb
+- spec/faraday/params_encoders/flat_spec.rb
+- spec/faraday/params_encoders/nested_spec.rb
+- spec/faraday/rack_builder_spec.rb
+- spec/faraday/request/authorization_spec.rb
+- spec/faraday/request/instrumentation_spec.rb
+- spec/faraday/request/json_spec.rb
+- spec/faraday/request/url_encoded_spec.rb
+- spec/faraday/request_spec.rb
+- spec/faraday/response/json_spec.rb
+- spec/faraday/response/logger_spec.rb
+- spec/faraday/response/raise_error_spec.rb
+- spec/faraday/response_spec.rb
+- spec/faraday/utils/headers_spec.rb
+- spec/faraday/utils_spec.rb
+- spec/faraday_spec.rb
+- spec/spec_helper.rb
+- spec/support/disabling_stub.rb
+- spec/support/fake_safe_buffer.rb
+- spec/support/faraday_middleware_subclasses.rb
+- spec/support/helper_methods.rb
+- spec/support/shared_examples/adapter.rb
+- spec/support/shared_examples/params_encoder.rb
+- spec/support/shared_examples/request_method.rb
+- spec/support/streaming_response_checker.rb
+homepage: https://lostisland.github.io/faraday
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://lostisland.github.io/faraday
+  changelog_uri: https://github.com/lostisland/faraday/releases/tag/v2.12.2
+  source_code_uri: https://github.com/lostisland/faraday
+  bug_tracker_uri: https://github.com/lostisland/faraday/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- spec/external_adapters
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: HTTP/REST API client library.
+test_files: []

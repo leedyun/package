@@ -1,0 +1,418 @@
+--- !ruby/object:Gem::Specification
+name: pact-mock_service
+version: !ruby/object:Gem::Version
+  version: 3.12.3
+platform: ruby
+authors:
+- James Fraser
+- Sergei Matheson
+- Brent Snook
+- Ronald Holshausen
+- Beth Skurrie
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: rackup
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+- !ruby/object:Gem::Dependency
+  name: find_a_port
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: pact-support
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.16.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.16.4
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+- !ruby/object:Gem::Dependency
+  name: octokit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.7'
+- !ruby/object:Gem::Dependency
+  name: conventional-changelog
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: bump
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+description:
+email:
+- james.fraser@alumni.swinburne.edu
+- sergei.matheson@gmail.com
+- brent@fuglylogic.com
+- uglyog@gmail.com
+- beth@bethesque.com
+executables:
+- pact-mock-service
+- pact-stub-service
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- bin/pact-mock-service
+- bin/pact-stub-service
+- lib/pact/consumer/mock_service/cors_origin_header_middleware.rb
+- lib/pact/consumer/mock_service/error_handler.rb
+- lib/pact/consumer/mock_service/rack_request_helper.rb
+- lib/pact/consumer/mock_service/set_location.rb
+- lib/pact/consumer/server.rb
+- lib/pact/consumer_contract/consumer_contract_decorator.rb
+- lib/pact/consumer_contract/consumer_contract_writer.rb
+- lib/pact/consumer_contract/interaction_decorator.rb
+- lib/pact/consumer_contract/request_decorator.rb
+- lib/pact/consumer_contract/response_decorator.rb
+- lib/pact/mock_service.rb
+- lib/pact/mock_service/app.rb
+- lib/pact/mock_service/app_manager.rb
+- lib/pact/mock_service/cli.rb
+- lib/pact/mock_service/cli/custom_thor.rb
+- lib/pact/mock_service/cli/pidfile.rb
+- lib/pact/mock_service/client.rb
+- lib/pact/mock_service/control_server/app.rb
+- lib/pact/mock_service/control_server/delegator.rb
+- lib/pact/mock_service/control_server/index.rb
+- lib/pact/mock_service/control_server/mock_service_creator.rb
+- lib/pact/mock_service/control_server/mock_services.rb
+- lib/pact/mock_service/control_server/require_pacticipant_headers.rb
+- lib/pact/mock_service/control_server/run.rb
+- lib/pact/mock_service/errors.rb
+- lib/pact/mock_service/interaction_decorator.rb
+- lib/pact/mock_service/interactions/actual_interactions.rb
+- lib/pact/mock_service/interactions/candidate_interactions.rb
+- lib/pact/mock_service/interactions/expected_interactions.rb
+- lib/pact/mock_service/interactions/interaction_diff_message.rb
+- lib/pact/mock_service/interactions/interaction_mismatch.rb
+- lib/pact/mock_service/interactions/interactions_filter.rb
+- lib/pact/mock_service/interactions/verification.rb
+- lib/pact/mock_service/interactions/verified_interactions.rb
+- lib/pact/mock_service/logger.rb
+- lib/pact/mock_service/request_decorator.rb
+- lib/pact/mock_service/request_handlers.rb
+- lib/pact/mock_service/request_handlers/base_administration_request_handler.rb
+- lib/pact/mock_service/request_handlers/base_request_handler.rb
+- lib/pact/mock_service/request_handlers/index_get.rb
+- lib/pact/mock_service/request_handlers/interaction_delete.rb
+- lib/pact/mock_service/request_handlers/interaction_post.rb
+- lib/pact/mock_service/request_handlers/interaction_replay.rb
+- lib/pact/mock_service/request_handlers/interactions_put.rb
+- lib/pact/mock_service/request_handlers/log_get.rb
+- lib/pact/mock_service/request_handlers/missing_interactions_get.rb
+- lib/pact/mock_service/request_handlers/options.rb
+- lib/pact/mock_service/request_handlers/pact_post.rb
+- lib/pact/mock_service/request_handlers/session_delete.rb
+- lib/pact/mock_service/request_handlers/verification_get.rb
+- lib/pact/mock_service/response_decorator.rb
+- lib/pact/mock_service/run.rb
+- lib/pact/mock_service/server/respawn.rb
+- lib/pact/mock_service/server/spawn.rb
+- lib/pact/mock_service/server/wait_for_server_up.rb
+- lib/pact/mock_service/server/webrick_request_monkeypatch.rb
+- lib/pact/mock_service/session.rb
+- lib/pact/mock_service/spawn.rb
+- lib/pact/mock_service/version.rb
+- lib/pact/stub_service/cli.rb
+- lib/pact/support/expand_file_list.rb
+- lib/pact/support/metrics.rb
+- lib/rack/handler/webbrick.rb
+homepage: https://github.com/bethesque/pact-mock_service
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.17
+signing_key:
+specification_version: 4
+summary: Provides a mock service for use with Pact
+test_files: []

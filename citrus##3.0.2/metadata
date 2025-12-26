@@ -1,0 +1,149 @@
+--- !ruby/object:Gem::Specification
+name: citrus
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Michael Jackson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-02-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Parsing Expressions for Ruby
+email: mjijackson@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGES
+files:
+- CHANGES
+- README.md
+- Rakefile
+- benchmark/seqpar.citrus
+- benchmark/seqpar.gnuplot
+- benchmark/seqpar.rb
+- citrus.gemspec
+- doc/background.markdown
+- doc/example.markdown
+- doc/extras.markdown
+- doc/index.markdown
+- doc/license.markdown
+- doc/links.markdown
+- doc/syntax.markdown
+- doc/testing.markdown
+- lib/citrus.rb
+- lib/citrus/core_ext.rb
+- lib/citrus/file.rb
+- lib/citrus/grammars.rb
+- lib/citrus/version.rb
+- test/_files/alias.citrus
+- test/_files/file1.citrus
+- test/_files/file2.citrus
+- test/_files/file3.citrus
+- test/_files/grammar1.citrus
+- test/_files/grammar2.citrus
+- test/_files/grammar3.citrus
+- test/_files/rule1.citrus
+- test/_files/rule2.citrus
+- test/_files/rule3.citrus
+- test/_files/rule4.citrus
+- test/_files/rule5.citrus
+- test/_files/rule6.citrus
+- test/_files/rule7.citrus
+- test/alias_test.rb
+- test/and_predicate_test.rb
+- test/but_predicate_test.rb
+- test/choice_test.rb
+- test/extension_test.rb
+- test/file_test.rb
+- test/grammar_test.rb
+- test/grammars/calc_test.rb
+- test/grammars/email_test.rb
+- test/grammars/ipaddress_test.rb
+- test/grammars/ipv4address_test.rb
+- test/grammars/ipv6address_test.rb
+- test/grammars/uri_test.rb
+- test/helper.rb
+- test/input_test.rb
+- test/label_test.rb
+- test/match_test.rb
+- test/memoized_input_test.rb
+- test/multibyte_test.rb
+- test/not_predicate_test.rb
+- test/parse_error_test.rb
+- test/repeat_test.rb
+- test/sequence_test.rb
+- test/string_terminal_test.rb
+- test/super_test.rb
+- test/terminal_test.rb
+homepage: http://mjackson.github.io/citrus
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Citrus
+- "--main"
+- Citrus
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Parsing Expressions for Ruby
+test_files:
+- test/alias_test.rb
+- test/and_predicate_test.rb
+- test/but_predicate_test.rb
+- test/choice_test.rb
+- test/extension_test.rb
+- test/file_test.rb
+- test/grammar_test.rb
+- test/grammars/calc_test.rb
+- test/grammars/email_test.rb
+- test/grammars/ipaddress_test.rb
+- test/grammars/ipv4address_test.rb
+- test/grammars/ipv6address_test.rb
+- test/grammars/uri_test.rb
+- test/input_test.rb
+- test/label_test.rb
+- test/match_test.rb
+- test/memoized_input_test.rb
+- test/multibyte_test.rb
+- test/not_predicate_test.rb
+- test/parse_error_test.rb
+- test/repeat_test.rb
+- test/sequence_test.rb
+- test/string_terminal_test.rb
+- test/super_test.rb
+- test/terminal_test.rb

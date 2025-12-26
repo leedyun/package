@@ -1,0 +1,55 @@
+--- !ruby/object:Gem::Specification
+name: mixlib-versioning
+version: !ruby/object:Gem::Version
+  version: 1.2.12
+platform: ruby
+authors:
+- Seth Chisamore
+- Christopher Maier
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-30 00:00:00.000000000 Z
+dependencies: []
+description: General purpose Ruby library that allows you to parse, compare and manipulate
+  version strings in multiple formats.
+email: info@chef.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/mixlib/versioning.rb
+- lib/mixlib/versioning/exceptions.rb
+- lib/mixlib/versioning/format.rb
+- lib/mixlib/versioning/format/git_describe.rb
+- lib/mixlib/versioning/format/opscode_semver.rb
+- lib/mixlib/versioning/format/partial_semver.rb
+- lib/mixlib/versioning/format/rubygems.rb
+- lib/mixlib/versioning/format/semver.rb
+- lib/mixlib/versioning/version.rb
+homepage: https://github.com/chef/mixlib-versioning
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: General purpose Ruby library that allows you to parse, compare and manipulate
+  version strings in multiple formats.
+test_files: []

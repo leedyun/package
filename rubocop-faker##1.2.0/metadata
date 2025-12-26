@@ -1,0 +1,97 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-faker
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Koichi ITO
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-10-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.12.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.12.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.13.0
+description: A RuboCop extension for Faker.
+email:
+- koic.ito@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".circleci/config.yml"
+- ".github/FUNDING.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- config/default.yml
+- lib/rubocop-faker.rb
+- lib/rubocop/cop/faker/deprecated_arguments.rb
+- lib/rubocop/cop/faker_cops.rb
+- lib/rubocop/faker.rb
+- lib/rubocop/faker/inject.rb
+- lib/rubocop/faker/version.rb
+- manual/cops.md
+- manual/cops_faker.md
+- rubocop-faker.gemspec
+- tasks/cops_documentation.rake
+homepage: https://github.com/koic/rubocop-faker
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/koic/rubocop-faker
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: A RuboCop extension for Faker.
+test_files: []

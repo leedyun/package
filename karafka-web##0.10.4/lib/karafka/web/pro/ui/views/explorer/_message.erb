@@ -1,0 +1,49 @@
+<% safe_key = ::Karafka::Web::Pro::Ui::Lib::SafeRunner.new { message.key } %>
+
+<% if message.is_a?(Array) %>
+  <tr>
+    <td class="text-muted">
+      <%= message[0] %>
+    </td>
+    <td class="text-muted">
+      <%= message[1] %>
+    </td>
+    <td colspan="4" class="text-center text-muted">
+      This offset does not contain any data. The message may have been compacted or is a system entry.
+    </td>
+  </tr>
+<% else %>
+  <tr>
+    <td>
+      <%= message.partition %>
+    </td>
+    <td>
+      <%= message.offset %>
+    </td>
+    <td>
+      <%== (message.timestamp.to_f * 1_000).to_i %>
+    </td>
+    <td>
+      <%== time_with_label(message.timestamp) %>
+    </td>
+    <td>
+      <% if @visibility_filter.key?(message) %>
+        <% if safe_key.success? %>
+          <%= safe_key.result %>
+        <% else %>
+          <span class="text-muted">[Deserialization Failed]</span>
+        <% end %>
+      <% else %>
+        <span class="text-muted">[Filtered]</span>
+      <% end %>
+    </td>
+    <td>
+      <%==
+        link_button_primary_sm(
+          'Details',
+          explorer_path(message.topic, message.partition, message.offset)
+        )
+      %>
+    </td>
+  </tr>
+<% end %>

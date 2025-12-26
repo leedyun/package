@@ -1,0 +1,345 @@
+--- !ruby/object:Gem::Specification
+name: active-rest_client
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Which Ltd
+- Andy Jeffries
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec_junit_formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov-rcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: terminal-notifier-guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: api-auth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: crack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Accessing REST services in an ActiveRecord style
+email:
+- swlicensing@which.co.uk
+- andy@andyjeffries.co.uk
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- active-rest_client.gemspec
+- doc/ActiveRestClient Internals.graffle
+- doc/ActiveRestClient Internals.png
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/active_rest_client.rb
+- lib/active_rest_client/base.rb
+- lib/active_rest_client/caching.rb
+- lib/active_rest_client/configuration.rb
+- lib/active_rest_client/connection.rb
+- lib/active_rest_client/connection_manager.rb
+- lib/active_rest_client/headers_list.rb
+- lib/active_rest_client/instrumentation.rb
+- lib/active_rest_client/lazy_association_loader.rb
+- lib/active_rest_client/lazy_loader.rb
+- lib/active_rest_client/logger.rb
+- lib/active_rest_client/mapping.rb
+- lib/active_rest_client/monkey_patching.rb
+- lib/active_rest_client/proxy_base.rb
+- lib/active_rest_client/recording.rb
+- lib/active_rest_client/request.rb
+- lib/active_rest_client/request_delegator.rb
+- lib/active_rest_client/request_filtering.rb
+- lib/active_rest_client/result_iterator.rb
+- lib/active_rest_client/validation.rb
+- lib/active_rest_client/version.rb
+- spec/lib/base_spec.rb
+- spec/lib/caching_spec.rb
+- spec/lib/configuration_spec.rb
+- spec/lib/connection_manager_spec.rb
+- spec/lib/connection_spec.rb
+- spec/lib/headers_list_spec.rb
+- spec/lib/instrumentation_spec.rb
+- spec/lib/lazy_association_loader_spec.rb
+- spec/lib/lazy_loader_spec.rb
+- spec/lib/logger_spec.rb
+- spec/lib/mapping_spec.rb
+- spec/lib/proxy_spec.rb
+- spec/lib/recording_spec.rb
+- spec/lib/request_filtering_spec.rb
+- spec/lib/request_spec.rb
+- spec/lib/result_iterator_spec.rb
+- spec/lib/validation_spec.rb
+- spec/lib/xml_spec.rb
+- spec/spec_helper.rb
+homepage: http://whichdigital.github.io/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: This gem is for accessing REST services in an ActiveRecord style.  ActiveResource
+  already exists for this, but it doesn't work where the resource naming doesn't follow
+  Rails conventions, it doesn't have in-built caching and it's not as flexible in
+  general.
+test_files:
+- spec/lib/base_spec.rb
+- spec/lib/caching_spec.rb
+- spec/lib/configuration_spec.rb
+- spec/lib/connection_manager_spec.rb
+- spec/lib/connection_spec.rb
+- spec/lib/headers_list_spec.rb
+- spec/lib/instrumentation_spec.rb
+- spec/lib/lazy_association_loader_spec.rb
+- spec/lib/lazy_loader_spec.rb
+- spec/lib/logger_spec.rb
+- spec/lib/mapping_spec.rb
+- spec/lib/proxy_spec.rb
+- spec/lib/recording_spec.rb
+- spec/lib/request_filtering_spec.rb
+- spec/lib/request_spec.rb
+- spec/lib/result_iterator_spec.rb
+- spec/lib/validation_spec.rb
+- spec/lib/xml_spec.rb
+- spec/spec_helper.rb

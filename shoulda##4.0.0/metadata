@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: shoulda
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Tammer Saleh
+- Joe Ferris
+- Ryan McGeary
+- Dan Croak
+- Matt Jankowski
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-06-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: shoulda-matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+description: Making tests easy on the fingers and eyes
+email: support@thoughtbot.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".autotest"
+- ".gitignore"
+- ".hound.yml"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- gemfiles/rails_4_2.gemfile
+- gemfiles/rails_4_2.gemfile.lock
+- gemfiles/rails_5_0.gemfile
+- gemfiles/rails_5_0.gemfile.lock
+- gemfiles/rails_5_1.gemfile
+- gemfiles/rails_5_1.gemfile.lock
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_5_2.gemfile.lock
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_0.gemfile.lock
+- lib/shoulda.rb
+- lib/shoulda/version.rb
+- script/install_gems_in_all_appraisals
+- script/run_all_tests
+- script/supported_ruby_versions
+- script/update_gem_in_all_appraisals
+- script/update_gems_in_all_appraisals
+- shoulda.gemspec
+- test/acceptance/integrates_with_rails_test.rb
+- test/acceptance_test_helper.rb
+- test/support/acceptance/add_shoulda_to_project.rb
+- test/support/acceptance/helpers/array_helpers.rb
+- test/support/acceptance/helpers/pluralization_helpers.rb
+- test/support/acceptance/matchers/have_output.rb
+- test/support/acceptance/matchers/indicate_that_tests_were_run.rb
+- test/support/acceptance/rails_application_with_shoulda.rb
+- test/support/current_bundle.rb
+- test/support/snowglobe.rb
+- test/test_helper.rb
+homepage: https://github.com/thoughtbot/shoulda
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Making tests easy on the fingers and eyes
+test_files:
+- test/acceptance/integrates_with_rails_test.rb
+- test/acceptance_test_helper.rb
+- test/support/acceptance/add_shoulda_to_project.rb
+- test/support/acceptance/helpers/array_helpers.rb
+- test/support/acceptance/helpers/pluralization_helpers.rb
+- test/support/acceptance/matchers/have_output.rb
+- test/support/acceptance/matchers/indicate_that_tests_were_run.rb
+- test/support/acceptance/rails_application_with_shoulda.rb
+- test/support/current_bundle.rb
+- test/support/snowglobe.rb
+- test/test_helper.rb

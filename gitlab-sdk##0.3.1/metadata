@@ -1,0 +1,141 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-sdk
+version: !ruby/object:Gem::Version
+  version: 0.3.1
+platform: ruby
+authors:
+- GitLab
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-02-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: snowplow-tracker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: gitlab-styles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Client side Ruby SDK for GitLab Application services
+email:
+- gitlab_rubygems@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".rspec"
+- ".rubocop.yml"
+- Gemfile
+- Gemfile.lock
+- README.md
+- Rakefile
+- lib/gitlab-sdk.rb
+- lib/gitlab-sdk/client.rb
+- lib/gitlab-sdk/current_user.rb
+- lib/gitlab-sdk/version.rb
+homepage: https://gitlab.com/gitlab-org/analytics-section/product-analytics/gl-application-sdk-rb
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  homepage_uri: https://gitlab.com/gitlab-org/analytics-section/product-analytics/gl-application-sdk-rb
+  source_code_uri: https://gitlab.com/gitlab-org/analytics-section/product-analytics/gl-application-sdk-rb
+  changelog_uri: https://gitlab.com/gitlab-org/analytics-section/product-analytics/gl-application-sdk-rb/-/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: Client side Ruby SDK for GitLab Application services
+test_files: []

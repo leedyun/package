@@ -1,0 +1,82 @@
+--- !ruby/object:Gem::Specification
+name: cri
+version: !ruby/object:Gem::Version
+  version: 2.15.12
+platform: ruby
+authors:
+- Denis Defreyne
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-09 00:00:00.000000000 Z
+dependencies: []
+description: Cri allows building easy-to-use command-line interfaces with support
+  for subcommands.
+email: denis.defreyne@stoneship.org
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+- NEWS.md
+files:
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- NEWS.md
+- README.md
+- Rakefile
+- cri.gemspec
+- lib/cri.rb
+- lib/cri/argument_list.rb
+- lib/cri/command.rb
+- lib/cri/command_dsl.rb
+- lib/cri/command_runner.rb
+- lib/cri/commands/basic_help.rb
+- lib/cri/commands/basic_root.rb
+- lib/cri/help_renderer.rb
+- lib/cri/option_definition.rb
+- lib/cri/param_definition.rb
+- lib/cri/parser.rb
+- lib/cri/platform.rb
+- lib/cri/string_formatter.rb
+- lib/cri/version.rb
+- test/helper.rb
+- test/test_argument_list.rb
+- test/test_base.rb
+- test/test_basic_help.rb
+- test/test_basic_root.rb
+- test/test_command.rb
+- test/test_command_dsl.rb
+- test/test_command_runner.rb
+- test/test_help_renderer.rb
+- test/test_parser.rb
+- test/test_string_formatter.rb
+homepage: https://github.com/ddfreyne/cri
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options:
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: a library for building easy-to-use command-line tools
+test_files: []

@@ -1,0 +1,371 @@
+--- !ruby/object:Gem::Specification
+name: fog-storm_on_demand
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- Paulo Henrique Lopes Ribeiro
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-04-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: turn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  This library can be used as a module for `fog` or as standalone provider
+                          to use the StormOnDemand in applications.
+email:
+- plribeiro3000@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-storm_on_demand.gemspec
+- gemfiles/Gemfile.1.9.2-
+- gemfiles/Gemfile.1.9.3+
+- lib/fog/account/storm_on_demand.rb
+- lib/fog/account/storm_on_demand/models/token.rb
+- lib/fog/account/storm_on_demand/models/tokens.rb
+- lib/fog/account/storm_on_demand/requests/create_token.rb
+- lib/fog/account/storm_on_demand/requests/expire_token.rb
+- lib/fog/billing/storm_on_demand.rb
+- lib/fog/billing/storm_on_demand/models/invoice.rb
+- lib/fog/billing/storm_on_demand/models/invoices.rb
+- lib/fog/billing/storm_on_demand/models/payment.rb
+- lib/fog/billing/storm_on_demand/models/payments.rb
+- lib/fog/billing/storm_on_demand/requests/get_invoice.rb
+- lib/fog/billing/storm_on_demand/requests/list_invoices.rb
+- lib/fog/billing/storm_on_demand/requests/make_payment.rb
+- lib/fog/billing/storm_on_demand/requests/next_invoice.rb
+- lib/fog/bin/storm_on_demand.rb
+- lib/fog/compute/storm_on_demand.rb
+- lib/fog/compute/storm_on_demand/models/config.rb
+- lib/fog/compute/storm_on_demand/models/configs.rb
+- lib/fog/compute/storm_on_demand/models/image.rb
+- lib/fog/compute/storm_on_demand/models/images.rb
+- lib/fog/compute/storm_on_demand/models/notification.rb
+- lib/fog/compute/storm_on_demand/models/notifications.rb
+- lib/fog/compute/storm_on_demand/models/product.rb
+- lib/fog/compute/storm_on_demand/models/products.rb
+- lib/fog/compute/storm_on_demand/models/server.rb
+- lib/fog/compute/storm_on_demand/models/servers.rb
+- lib/fog/compute/storm_on_demand/models/template.rb
+- lib/fog/compute/storm_on_demand/models/templates.rb
+- lib/fog/compute/storm_on_demand/requests/clone_server.rb
+- lib/fog/compute/storm_on_demand/requests/create_image.rb
+- lib/fog/compute/storm_on_demand/requests/create_server.rb
+- lib/fog/compute/storm_on_demand/requests/current_notifications.rb
+- lib/fog/compute/storm_on_demand/requests/delete_image.rb
+- lib/fog/compute/storm_on_demand/requests/delete_server.rb
+- lib/fog/compute/storm_on_demand/requests/get_config_details.rb
+- lib/fog/compute/storm_on_demand/requests/get_image_details.rb
+- lib/fog/compute/storm_on_demand/requests/get_notification.rb
+- lib/fog/compute/storm_on_demand/requests/get_product.rb
+- lib/fog/compute/storm_on_demand/requests/get_product_code.rb
+- lib/fog/compute/storm_on_demand/requests/get_product_price.rb
+- lib/fog/compute/storm_on_demand/requests/get_product_starting_price.rb
+- lib/fog/compute/storm_on_demand/requests/get_server.rb
+- lib/fog/compute/storm_on_demand/requests/get_template_details.rb
+- lib/fog/compute/storm_on_demand/requests/list_configs.rb
+- lib/fog/compute/storm_on_demand/requests/list_images.rb
+- lib/fog/compute/storm_on_demand/requests/list_notifications.rb
+- lib/fog/compute/storm_on_demand/requests/list_products.rb
+- lib/fog/compute/storm_on_demand/requests/list_servers.rb
+- lib/fog/compute/storm_on_demand/requests/list_templates.rb
+- lib/fog/compute/storm_on_demand/requests/reboot_server.rb
+- lib/fog/compute/storm_on_demand/requests/resize_server.rb
+- lib/fog/compute/storm_on_demand/requests/resolve_notification.rb
+- lib/fog/compute/storm_on_demand/requests/restore_image.rb
+- lib/fog/compute/storm_on_demand/requests/restore_template.rb
+- lib/fog/compute/storm_on_demand/requests/server_history.rb
+- lib/fog/compute/storm_on_demand/requests/server_status.rb
+- lib/fog/compute/storm_on_demand/requests/shutdown_server.rb
+- lib/fog/compute/storm_on_demand/requests/start_server.rb
+- lib/fog/compute/storm_on_demand/requests/update_image.rb
+- lib/fog/compute/storm_on_demand/requests/update_server.rb
+- lib/fog/dns/storm_on_demand.rb
+- lib/fog/dns/storm_on_demand/models/domain.rb
+- lib/fog/dns/storm_on_demand/models/domains.rb
+- lib/fog/dns/storm_on_demand/models/record.rb
+- lib/fog/dns/storm_on_demand/models/records.rb
+- lib/fog/dns/storm_on_demand/models/reverse.rb
+- lib/fog/dns/storm_on_demand/models/reverses.rb
+- lib/fog/dns/storm_on_demand/models/zone.rb
+- lib/fog/dns/storm_on_demand/models/zones.rb
+- lib/fog/dns/storm_on_demand/requests/check_zone_delegation.rb
+- lib/fog/dns/storm_on_demand/requests/create_record.rb
+- lib/fog/dns/storm_on_demand/requests/create_record_region.rb
+- lib/fog/dns/storm_on_demand/requests/create_zone.rb
+- lib/fog/dns/storm_on_demand/requests/delete_record.rb
+- lib/fog/dns/storm_on_demand/requests/delete_record_region.rb
+- lib/fog/dns/storm_on_demand/requests/delete_reverse.rb
+- lib/fog/dns/storm_on_demand/requests/delete_zone.rb
+- lib/fog/dns/storm_on_demand/requests/get_record.rb
+- lib/fog/dns/storm_on_demand/requests/get_zone.rb
+- lib/fog/dns/storm_on_demand/requests/list_domains.rb
+- lib/fog/dns/storm_on_demand/requests/list_records.rb
+- lib/fog/dns/storm_on_demand/requests/list_zones.rb
+- lib/fog/dns/storm_on_demand/requests/renew_domain.rb
+- lib/fog/dns/storm_on_demand/requests/update_record.rb
+- lib/fog/dns/storm_on_demand/requests/update_record_region.rb
+- lib/fog/dns/storm_on_demand/requests/update_reverse.rb
+- lib/fog/dns/storm_on_demand/requests/update_zone.rb
+- lib/fog/monitoring/storm_on_demand.rb
+- lib/fog/monitoring/storm_on_demand/models/bandwidth.rb
+- lib/fog/monitoring/storm_on_demand/models/bandwidths.rb
+- lib/fog/monitoring/storm_on_demand/models/load.rb
+- lib/fog/monitoring/storm_on_demand/models/loads.rb
+- lib/fog/monitoring/storm_on_demand/models/monitor_service.rb
+- lib/fog/monitoring/storm_on_demand/models/monitor_services.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_bandwidth_graph.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_bandwidth_stats.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_load_graph.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_load_stats.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_service.rb
+- lib/fog/monitoring/storm_on_demand/requests/get_service_status.rb
+- lib/fog/monitoring/storm_on_demand/requests/monitoring_ips.rb
+- lib/fog/monitoring/storm_on_demand/requests/update_service.rb
+- lib/fog/network/storm_on_demand.rb
+- lib/fog/network/storm_on_demand/models/balancer.rb
+- lib/fog/network/storm_on_demand/models/balancers.rb
+- lib/fog/network/storm_on_demand/models/firewall.rb
+- lib/fog/network/storm_on_demand/models/firewalls.rb
+- lib/fog/network/storm_on_demand/models/network_ip.rb
+- lib/fog/network/storm_on_demand/models/network_ips.rb
+- lib/fog/network/storm_on_demand/models/pool.rb
+- lib/fog/network/storm_on_demand/models/pools.rb
+- lib/fog/network/storm_on_demand/models/private_ip.rb
+- lib/fog/network/storm_on_demand/models/private_ips.rb
+- lib/fog/network/storm_on_demand/models/ruleset.rb
+- lib/fog/network/storm_on_demand/models/rulesets.rb
+- lib/fog/network/storm_on_demand/models/zone.rb
+- lib/fog/network/storm_on_demand/models/zones.rb
+- lib/fog/network/storm_on_demand/requests/add_balancer_node.rb
+- lib/fog/network/storm_on_demand/requests/add_balancer_service.rb
+- lib/fog/network/storm_on_demand/requests/add_ip_to_server.rb
+- lib/fog/network/storm_on_demand/requests/attach_server_to_private_ip.rb
+- lib/fog/network/storm_on_demand/requests/check_balancer_available.rb
+- lib/fog/network/storm_on_demand/requests/check_server_attached.rb
+- lib/fog/network/storm_on_demand/requests/create_balancer.rb
+- lib/fog/network/storm_on_demand/requests/create_pool.rb
+- lib/fog/network/storm_on_demand/requests/create_ruleset.rb
+- lib/fog/network/storm_on_demand/requests/delete_balancer.rb
+- lib/fog/network/storm_on_demand/requests/delete_pool.rb
+- lib/fog/network/storm_on_demand/requests/detach_server_from_private_ip.rb
+- lib/fog/network/storm_on_demand/requests/get_assignments.rb
+- lib/fog/network/storm_on_demand/requests/get_balancer_details.rb
+- lib/fog/network/storm_on_demand/requests/get_balancer_possible_nodes.rb
+- lib/fog/network/storm_on_demand/requests/get_balancer_strategies.rb
+- lib/fog/network/storm_on_demand/requests/get_firewall.rb
+- lib/fog/network/storm_on_demand/requests/get_firewall_basic_options.rb
+- lib/fog/network/storm_on_demand/requests/get_firewall_rules.rb
+- lib/fog/network/storm_on_demand/requests/get_ip_details.rb
+- lib/fog/network/storm_on_demand/requests/get_pool.rb
+- lib/fog/network/storm_on_demand/requests/get_private_ip.rb
+- lib/fog/network/storm_on_demand/requests/get_ruleset.rb
+- lib/fog/network/storm_on_demand/requests/get_zone.rb
+- lib/fog/network/storm_on_demand/requests/list_balancers.rb
+- lib/fog/network/storm_on_demand/requests/list_ip_public_accounts.rb
+- lib/fog/network/storm_on_demand/requests/list_network_ips.rb
+- lib/fog/network/storm_on_demand/requests/list_network_public_ips.rb
+- lib/fog/network/storm_on_demand/requests/list_private_ips.rb
+- lib/fog/network/storm_on_demand/requests/list_rulesets.rb
+- lib/fog/network/storm_on_demand/requests/list_zones.rb
+- lib/fog/network/storm_on_demand/requests/remove_balancer_node.rb
+- lib/fog/network/storm_on_demand/requests/remove_balancer_service.rb
+- lib/fog/network/storm_on_demand/requests/remove_ip_from_server.rb
+- lib/fog/network/storm_on_demand/requests/request_new_ips.rb
+- lib/fog/network/storm_on_demand/requests/set_default_zone.rb
+- lib/fog/network/storm_on_demand/requests/update_balancer.rb
+- lib/fog/network/storm_on_demand/requests/update_firewall.rb
+- lib/fog/network/storm_on_demand/requests/update_pool.rb
+- lib/fog/network/storm_on_demand/requests/update_ruleset.rb
+- lib/fog/storage/storm_on_demand.rb
+- lib/fog/storage/storm_on_demand/models/cluster.rb
+- lib/fog/storage/storm_on_demand/models/clusters.rb
+- lib/fog/storage/storm_on_demand/models/volume.rb
+- lib/fog/storage/storm_on_demand/models/volumes.rb
+- lib/fog/storage/storm_on_demand/requests/attach_volume_to_server.rb
+- lib/fog/storage/storm_on_demand/requests/create_volume.rb
+- lib/fog/storage/storm_on_demand/requests/delete_volume.rb
+- lib/fog/storage/storm_on_demand/requests/detach_volume_from_server.rb
+- lib/fog/storage/storm_on_demand/requests/get_volume.rb
+- lib/fog/storage/storm_on_demand/requests/list_clusters.rb
+- lib/fog/storage/storm_on_demand/requests/list_volumes.rb
+- lib/fog/storage/storm_on_demand/requests/resize_volume.rb
+- lib/fog/storage/storm_on_demand/requests/update_volume.rb
+- lib/fog/storm_on_demand.rb
+- lib/fog/storm_on_demand/shared.rb
+- lib/fog/storm_on_demand/version.rb
+- lib/fog/support/storm_on_demand.rb
+- lib/fog/support/storm_on_demand/models/alert.rb
+- lib/fog/support/storm_on_demand/models/alerts.rb
+- lib/fog/support/storm_on_demand/models/ticket.rb
+- lib/fog/support/storm_on_demand/models/tickets.rb
+- lib/fog/support/storm_on_demand/requests/add_feedback.rb
+- lib/fog/support/storm_on_demand/requests/add_transaction_feedback.rb
+- lib/fog/support/storm_on_demand/requests/authenticate.rb
+- lib/fog/support/storm_on_demand/requests/close_ticket.rb
+- lib/fog/support/storm_on_demand/requests/create_ticket.rb
+- lib/fog/support/storm_on_demand/requests/get_active_alert.rb
+- lib/fog/support/storm_on_demand/requests/get_ticket_details.rb
+- lib/fog/support/storm_on_demand/requests/list_ticket_types.rb
+- lib/fog/support/storm_on_demand/requests/list_tickets.rb
+- lib/fog/support/storm_on_demand/requests/reopen_ticket.rb
+- lib/fog/support/storm_on_demand/requests/reply_ticket.rb
+- lib/fog/vpn/storm_on_demand.rb
+- lib/fog/vpn/storm_on_demand/models/vpn.rb
+- lib/fog/vpn/storm_on_demand/models/vpns.rb
+- lib/fog/vpn/storm_on_demand/requests/create_vpn.rb
+- lib/fog/vpn/storm_on_demand/requests/get_vpn.rb
+- lib/fog/vpn/storm_on_demand/requests/list_vpn_users.rb
+- lib/fog/vpn/storm_on_demand/requests/update_vpn.rb
+- spec/minitest_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.3
+signing_key: 
+specification_version: 4
+summary: Module for the 'fog' gem to support StormOnDemand.
+test_files:
+- spec/minitest_helper.rb

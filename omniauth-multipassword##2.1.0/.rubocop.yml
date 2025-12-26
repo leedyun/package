@@ -1,0 +1,10 @@
+inherit_gem:
+  rubocop-config: default.yml
+
+AllCops:
+  TargetRubyVersion: "2.7"
+  SuggestExtensions: False
+
+Naming/FileName:
+  Exclude:
+    - lib/omniauth-multipassword.rb

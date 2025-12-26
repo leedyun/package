@@ -1,0 +1,181 @@
+--- !ruby/object:Gem::Specification
+name: dbus-systemd
+version: !ruby/object:Gem::Version
+  version: 1.1.2
+platform: ruby
+authors:
+- Nathan Williams
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2017-11-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby-dbus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.16'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.51'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.51'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: library for interfacing with systemd D-Bus APIs
+email:
+- nath.e.will@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- Vagrantfile
+- bin/console
+- bin/setup
+- dbus-systemd.gemspec
+- lib/dbus/systemd.rb
+- lib/dbus/systemd/helpers.rb
+- lib/dbus/systemd/hostnamed.rb
+- lib/dbus/systemd/importd.rb
+- lib/dbus/systemd/importd/manager.rb
+- lib/dbus/systemd/importd/transfer.rb
+- lib/dbus/systemd/job.rb
+- lib/dbus/systemd/localed.rb
+- lib/dbus/systemd/logind.rb
+- lib/dbus/systemd/logind/manager.rb
+- lib/dbus/systemd/logind/seat.rb
+- lib/dbus/systemd/logind/session.rb
+- lib/dbus/systemd/logind/user.rb
+- lib/dbus/systemd/machined.rb
+- lib/dbus/systemd/machined/image.rb
+- lib/dbus/systemd/machined/machine.rb
+- lib/dbus/systemd/machined/manager.rb
+- lib/dbus/systemd/manager.rb
+- lib/dbus/systemd/mixin.rb
+- lib/dbus/systemd/networkd.rb
+- lib/dbus/systemd/networkd/link.rb
+- lib/dbus/systemd/networkd/manager.rb
+- lib/dbus/systemd/resolved.rb
+- lib/dbus/systemd/resolved/link.rb
+- lib/dbus/systemd/resolved/manager.rb
+- lib/dbus/systemd/timedated.rb
+- lib/dbus/systemd/unit.rb
+- lib/dbus/systemd/unit/automount.rb
+- lib/dbus/systemd/unit/device.rb
+- lib/dbus/systemd/unit/mount.rb
+- lib/dbus/systemd/unit/path.rb
+- lib/dbus/systemd/unit/scope.rb
+- lib/dbus/systemd/unit/service.rb
+- lib/dbus/systemd/unit/slice.rb
+- lib/dbus/systemd/unit/snapshot.rb
+- lib/dbus/systemd/unit/socket.rb
+- lib/dbus/systemd/unit/swap.rb
+- lib/dbus/systemd/unit/target.rb
+- lib/dbus/systemd/unit/timer.rb
+- lib/dbus/systemd/version.rb
+homepage: https://github.com/nathwill/ruby-dbus-systemd
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.11
+signing_key: 
+specification_version: 4
+summary: systemd D-Bus API library
+test_files: []

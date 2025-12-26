@@ -1,0 +1,394 @@
+--- !ruby/object:Gem::Specification
+name: pact-support
+version: !ruby/object:Gem::Version
+  version: 1.21.2
+platform: ruby
+authors:
+- James Fraser
+- Sergei Matheson
+- Brent Snook
+- Ronald Holshausen
+- Beth Skurrie
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rainbow
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+- !ruby/object:Gem::Dependency
+  name: diff-lcs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: expgen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: string_pattern
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: jsonpath
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: conventional-changelog
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: bump
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email:
+- james.fraser@alumni.swinburne.edu
+- sergei.matheson@gmail.com
+- brent@fuglylogic.com
+- uglyog@gmail.com
+- bskurrie@dius.com.au
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/pact/array_like.rb
+- lib/pact/configuration.rb
+- lib/pact/consumer/request.rb
+- lib/pact/consumer_contract.rb
+- lib/pact/consumer_contract/consumer_contract.rb
+- lib/pact/consumer_contract/file_name.rb
+- lib/pact/consumer_contract/headers.rb
+- lib/pact/consumer_contract/http_consumer_contract_parser.rb
+- lib/pact/consumer_contract/interaction.rb
+- lib/pact/consumer_contract/interaction_parser.rb
+- lib/pact/consumer_contract/interaction_v2_parser.rb
+- lib/pact/consumer_contract/interaction_v3_parser.rb
+- lib/pact/consumer_contract/pact_file.rb
+- lib/pact/consumer_contract/provider_state.rb
+- lib/pact/consumer_contract/query.rb
+- lib/pact/consumer_contract/query_hash.rb
+- lib/pact/consumer_contract/query_string.rb
+- lib/pact/consumer_contract/request.rb
+- lib/pact/consumer_contract/response.rb
+- lib/pact/consumer_contract/service_consumer.rb
+- lib/pact/consumer_contract/service_provider.rb
+- lib/pact/consumer_contract/string_with_matching_rules.rb
+- lib/pact/errors.rb
+- lib/pact/generator/date.rb
+- lib/pact/generator/datetime.rb
+- lib/pact/generator/provider_state.rb
+- lib/pact/generator/random_boolean.rb
+- lib/pact/generator/random_decimal.rb
+- lib/pact/generator/random_hexadecimal.rb
+- lib/pact/generator/random_int.rb
+- lib/pact/generator/random_string.rb
+- lib/pact/generator/regex.rb
+- lib/pact/generator/time.rb
+- lib/pact/generator/uuid.rb
+- lib/pact/generators.rb
+- lib/pact/helpers.rb
+- lib/pact/http/authorization_header_redactor.rb
+- lib/pact/logging.rb
+- lib/pact/matchers.rb
+- lib/pact/matchers/actual_type.rb
+- lib/pact/matchers/base_difference.rb
+- lib/pact/matchers/differ.rb
+- lib/pact/matchers/difference.rb
+- lib/pact/matchers/difference_indicator.rb
+- lib/pact/matchers/embedded_diff_formatter.rb
+- lib/pact/matchers/expected_type.rb
+- lib/pact/matchers/extract_diff_messages.rb
+- lib/pact/matchers/index_not_found.rb
+- lib/pact/matchers/list_diff_formatter.rb
+- lib/pact/matchers/matchers.rb
+- lib/pact/matchers/multipart_form_diff_formatter.rb
+- lib/pact/matchers/no_diff_at_index.rb
+- lib/pact/matchers/regexp_difference.rb
+- lib/pact/matchers/type_difference.rb
+- lib/pact/matchers/unexpected_index.rb
+- lib/pact/matchers/unexpected_key.rb
+- lib/pact/matchers/unix_diff_formatter.rb
+- lib/pact/matching_rules.rb
+- lib/pact/matching_rules/extract.rb
+- lib/pact/matching_rules/jsonpath.rb
+- lib/pact/matching_rules/merge.rb
+- lib/pact/matching_rules/v3/extract.rb
+- lib/pact/matching_rules/v3/merge.rb
+- lib/pact/reification.rb
+- lib/pact/rspec.rb
+- lib/pact/shared/active_support_support.rb
+- lib/pact/shared/dsl.rb
+- lib/pact/shared/form_differ.rb
+- lib/pact/shared/jruby_support.rb
+- lib/pact/shared/json_differ.rb
+- lib/pact/shared/key_not_found.rb
+- lib/pact/shared/multipart_form_differ.rb
+- lib/pact/shared/null_expectation.rb
+- lib/pact/shared/request.rb
+- lib/pact/shared/text_differ.rb
+- lib/pact/something_like.rb
+- lib/pact/specification_version.rb
+- lib/pact/support.rb
+- lib/pact/support/version.rb
+- lib/pact/symbolize_keys.rb
+- lib/pact/term.rb
+- lib/tasks/pact.rake
+homepage: https://github.com/pact-foundation/pact-support
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: Shared code for Pact gems
+test_files: []

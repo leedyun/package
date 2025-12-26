@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: ref
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Brian Durand
+- The Ruby Concurrency Team
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2015-07-10 00:00:00.000000000 Z
+dependencies: []
+description: Library that implements weak, soft, and strong references in Ruby that work across multiple runtimes (MRI,Jruby and Rubinius). Also includes implementation of maps/hashes that use references and a reference queue.
+email:
+- bbdurand@gmail.com
+- concurrent-ruby@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- MIT_LICENSE
+- README.md
+- ext/java/org/jruby/ext/ref/ReferencesService.java
+- ext/java/org/jruby/ext/ref/RubySoftReference.java
+- ext/java/org/jruby/ext/ref/RubyWeakReference.java
+- lib/ref.rb
+- lib/ref/abstract_reference_key_map.rb
+- lib/ref/abstract_reference_value_map.rb
+- lib/ref/reference.rb
+- lib/ref/reference_queue.rb
+- lib/ref/soft_key_map.rb
+- lib/ref/soft_reference.rb
+- lib/ref/soft_value_map.rb
+- lib/ref/strong_reference.rb
+- lib/ref/version.rb
+- lib/ref/weak_key_map.rb
+- lib/ref/weak_reference.rb
+- lib/ref/weak_reference/pure_ruby.rb
+- lib/ref/weak_reference/weak_ref.rb
+- lib/ref/weak_value_map.rb
+- lib/ref_ext.jar
+homepage: http://github.com/ruby-concurrency/ref
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- --charset=UTF-8
+- --main
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project:
+rubygems_version: 2.4.5
+signing_key:
+specification_version: 4
+summary: Library that implements weak, soft, and strong references in Ruby.
+test_files: []
+has_rdoc: true

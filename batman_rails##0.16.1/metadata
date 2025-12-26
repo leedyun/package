@@ -1,0 +1,253 @@
+--- !ruby/object:Gem::Specification
+name: batman_rails
+version: !ruby/object:Gem::Version
+  version: 0.16.1
+platform: ruby
+authors:
+- Nick Small
+- Matt Helm
+- John Duff
+- Kristian PD
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Quickly get started with batman.js in a Rails app. Provides generators
+  to get started and bundles in the latest version of batman.js.
+email:
+- batmanjs@shopify.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- batman_rails.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/batman-rails.rb
+- lib/batman-rails/helpers/define_view_helper.rb
+- lib/batman-rails/version.rb
+- lib/generators/batman/app_generator.rb
+- lib/generators/batman/controller_generator.rb
+- lib/generators/batman/html_generator.rb
+- lib/generators/batman/model_generator.rb
+- lib/generators/batman/scaffold_generator.rb
+- lib/generators/batman/view_generator.rb
+- lib/generators/common.rb
+- lib/templates/batman/application_controller.coffee
+- lib/templates/batman/batman_app.coffee
+- lib/templates/batman/controller.coffee
+- lib/templates/batman/html/edit.html
+- lib/templates/batman/html/index.html
+- lib/templates/batman/html/main_index.html
+- lib/templates/batman/html/new.html
+- lib/templates/batman/html/show.html
+- lib/templates/batman/main_controller.coffee
+- lib/templates/batman/main_index_view.coffee
+- lib/templates/batman/model.coffee
+- lib/templates/batman/view.coffee
+- lib/templates/rails/controller.rb
+- lib/templates/rails/index.html
+- lib/templates/rails/layout.html
+- test/app_generator_test.rb
+- test/controller_generator_test.rb
+- test/define_view_helper_test.rb
+- test/fixtures/application.js
+- test/fixtures/application.js.coffee
+- test/model_generator_test.rb
+- test/sample/Gemfile
+- test/sample/README.rdoc
+- test/sample/Rakefile
+- test/sample/app/assets/javascripts/application.js
+- test/sample/app/assets/stylesheets/application.css
+- test/sample/app/controllers/application_controller.rb
+- test/sample/app/helpers/application_helper.rb
+- test/sample/app/views/layouts/application.html.erb
+- test/sample/bin/bundle
+- test/sample/bin/rails
+- test/sample/bin/rake
+- test/sample/bin/spring
+- test/sample/config.ru
+- test/sample/config/application.rb
+- test/sample/config/boot.rb
+- test/sample/config/database.yml
+- test/sample/config/environment.rb
+- test/sample/config/environments/development.rb
+- test/sample/config/environments/production.rb
+- test/sample/config/environments/test.rb
+- test/sample/config/initializers/backtrace_silencers.rb
+- test/sample/config/initializers/cookies_serializer.rb
+- test/sample/config/initializers/filter_parameter_logging.rb
+- test/sample/config/initializers/inflections.rb
+- test/sample/config/initializers/mime_types.rb
+- test/sample/config/initializers/session_store.rb
+- test/sample/config/initializers/wrap_parameters.rb
+- test/sample/config/locales/en.yml
+- test/sample/config/routes.rb
+- test/sample/config/secrets.yml
+- test/sample/db/seeds.rb
+- test/sample/public/404.html
+- test/sample/public/422.html
+- test/sample/public/500.html
+- test/sample/public/favicon.ico
+- test/sample/public/robots.txt
+- test/sample/test/test_helper.rb
+- test/test_helper.rb
+- test/view_generator_test.rb
+- vendor.sh
+- vendor/assets/images/batman/bullet.png
+- vendor/assets/images/batman/content-bg-fade.png
+- vendor/assets/images/batman/content-bg.png
+- vendor/assets/images/batman/header-wrapper-bg.jpg
+- vendor/assets/images/batman/logo.png
+- vendor/assets/javascripts/batman/batman.i18n.js
+- vendor/assets/javascripts/batman/batman.jquery.js
+- vendor/assets/javascripts/batman/batman.js
+- vendor/assets/javascripts/batman/batman.paginator.js
+- vendor/assets/javascripts/batman/batman.rails.js
+- vendor/assets/javascripts/batman/batman.testing.js
+- vendor/assets/javascripts/batman/es5-shim.js
+homepage: https://github.com/Shopify/batman-rails
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Use batman.js with Rails
+test_files:
+- test/app_generator_test.rb
+- test/controller_generator_test.rb
+- test/define_view_helper_test.rb
+- test/fixtures/application.js
+- test/fixtures/application.js.coffee
+- test/model_generator_test.rb
+- test/sample/Gemfile
+- test/sample/README.rdoc
+- test/sample/Rakefile
+- test/sample/app/assets/javascripts/application.js
+- test/sample/app/assets/stylesheets/application.css
+- test/sample/app/controllers/application_controller.rb
+- test/sample/app/helpers/application_helper.rb
+- test/sample/app/views/layouts/application.html.erb
+- test/sample/bin/bundle
+- test/sample/bin/rails
+- test/sample/bin/rake
+- test/sample/bin/spring
+- test/sample/config.ru
+- test/sample/config/application.rb
+- test/sample/config/boot.rb
+- test/sample/config/database.yml
+- test/sample/config/environment.rb
+- test/sample/config/environments/development.rb
+- test/sample/config/environments/production.rb
+- test/sample/config/environments/test.rb
+- test/sample/config/initializers/backtrace_silencers.rb
+- test/sample/config/initializers/cookies_serializer.rb
+- test/sample/config/initializers/filter_parameter_logging.rb
+- test/sample/config/initializers/inflections.rb
+- test/sample/config/initializers/mime_types.rb
+- test/sample/config/initializers/session_store.rb
+- test/sample/config/initializers/wrap_parameters.rb
+- test/sample/config/locales/en.yml
+- test/sample/config/routes.rb
+- test/sample/config/secrets.yml
+- test/sample/db/seeds.rb
+- test/sample/public/404.html
+- test/sample/public/422.html
+- test/sample/public/500.html
+- test/sample/public/favicon.ico
+- test/sample/public/robots.txt
+- test/sample/test/test_helper.rb
+- test/test_helper.rb
+- test/view_generator_test.rb

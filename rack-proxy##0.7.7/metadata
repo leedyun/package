@@ -1,0 +1,111 @@
+--- !ruby/object:Gem::Specification
+name: rack-proxy
+version: !ruby/object:Gem::Version
+  version: 0.7.7
+platform: ruby
+authors:
+- Jacek Becela
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-09-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Rack app that provides request/response rewriting proxy capabilities
+  with streaming.
+email:
+- jacek.becela@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- lib/net_http_hacked.rb
+- lib/rack-proxy.rb
+- lib/rack/http_streaming_response.rb
+- lib/rack/proxy.rb
+- lib/rack_proxy_examples/example_service_proxy.rb
+- lib/rack_proxy_examples/forward_host.rb
+- lib/rack_proxy_examples/rack_php_proxy.rb
+- lib/rack_proxy_examples/trusting_proxy.rb
+- rack-proxy.gemspec
+- test/http_streaming_response_test.rb
+- test/net_http_hacked_test.rb
+- test/rack_proxy_test.rb
+- test/test_helper.rb
+homepage: https://github.com/ncr/rack-proxy
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key:
+specification_version: 4
+summary: A request/response rewriting HTTP proxy. A Rack app.
+test_files:
+- test/http_streaming_response_test.rb
+- test/net_http_hacked_test.rb
+- test/rack_proxy_test.rb
+- test/test_helper.rb

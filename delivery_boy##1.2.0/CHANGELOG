@@ -1,0 +1,48 @@
+# Changelog
+
+## Unreleased
+
+## v1.2.0
+
+* Test with Ruby 3.1 & 3.2
+* Add config support for AWS MSK IAM auth (#66)
+
+## v1.1.0
+
+* Support for `ssl_client_cert_key_password` in the configuration (#52)
+* Add `DeliveryBoy.buffer_size` to return the number of messages in the buffer
+* Add `DeliveryBoy::Fake#clear_buffer` and `DeliveryBoy::Fake#buffer_size` to
+support the public API when using the test helper.
+* Support for `sasl_oauth_token_provider` in the configuration. (#55)
+
+## v1.0.1
+
+* Require ruby-kafka v1.0 or higher.
+
+## v1.0.0
+
+* Add `DeliveryBoy.clear_buffer` method.
+* Support exactly once delivery and transactional messaging (#50)
+* Check that Rails::Railtie is defined (#48)
+
+## v0.2.8
+
+* Support `log_level` config option.
+* Support for ssl_verify_hostname in the configuration (#44)
+* Upgrade dependency on KingKonf.
+* Allow configuring `sasl_over_ssl`.
+
+## v0.2.7
+
+* Support for ssl_ca_certs_from_system #18
+* Interface synchronisation in test #24
+* Fixed error for require in railtie.rb #23
+
+## v0.2.4
+
+* Add support for SASL SCRAM
+
+## v0.2.0
+
+* Add a test mode
+* Improve config system

@@ -1,0 +1,49 @@
+--- !ruby/object:Gem::Specification
+name: parallel
+version: !ruby/object:Gem::Version
+  version: 1.26.3
+platform: ruby
+authors:
+- Michael Grosser
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-16 00:00:00.000000000 Z
+dependencies: []
+description:
+email: michael@grosser.it
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE.txt
+- lib/parallel.rb
+- lib/parallel/version.rb
+homepage: https://github.com/grosser/parallel
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/grosser/parallel/issues
+  documentation_uri: https://github.com/grosser/parallel/blob/v1.26.3/Readme.md
+  source_code_uri: https://github.com/grosser/parallel/tree/v1.26.3
+  wiki_uri: https://github.com/grosser/parallel/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Run any kind of code in parallel processes
+test_files: []

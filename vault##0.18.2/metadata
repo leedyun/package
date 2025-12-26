@@ -1,0 +1,200 @@
+--- !ruby/object:Gem::Specification
+name: vault
+version: !ruby/object:Gem::Version
+  version: 0.18.2
+platform: ruby
+authors:
+- Seth Vargo
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-11-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aws-sigv4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.13.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.24
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.24
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.8.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.8.3
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+description: Vault is a Ruby API client for interacting with a Vault server.
+email:
+- team-vault-devex@hashicorp.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/vault.rb
+- lib/vault/api.rb
+- lib/vault/api/approle.rb
+- lib/vault/api/auth.rb
+- lib/vault/api/auth_tls.rb
+- lib/vault/api/auth_token.rb
+- lib/vault/api/help.rb
+- lib/vault/api/kv.rb
+- lib/vault/api/logical.rb
+- lib/vault/api/secret.rb
+- lib/vault/api/sys.rb
+- lib/vault/api/sys/audit.rb
+- lib/vault/api/sys/auth.rb
+- lib/vault/api/sys/health.rb
+- lib/vault/api/sys/init.rb
+- lib/vault/api/sys/leader.rb
+- lib/vault/api/sys/lease.rb
+- lib/vault/api/sys/mount.rb
+- lib/vault/api/sys/namespace.rb
+- lib/vault/api/sys/policy.rb
+- lib/vault/api/sys/quota.rb
+- lib/vault/api/sys/seal.rb
+- lib/vault/api/transform.rb
+- lib/vault/api/transform/alphabet.rb
+- lib/vault/api/transform/role.rb
+- lib/vault/api/transform/template.rb
+- lib/vault/api/transform/transformation.rb
+- lib/vault/client.rb
+- lib/vault/configurable.rb
+- lib/vault/defaults.rb
+- lib/vault/encode.rb
+- lib/vault/errors.rb
+- lib/vault/persistent.rb
+- lib/vault/persistent/connection.rb
+- lib/vault/persistent/pool.rb
+- lib/vault/persistent/timed_stack_multi.rb
+- lib/vault/request.rb
+- lib/vault/response.rb
+- lib/vault/vendor/connection_pool.rb
+- lib/vault/vendor/connection_pool/timed_stack.rb
+- lib/vault/vendor/connection_pool/version.rb
+- lib/vault/version.rb
+homepage: https://github.com/hashicorp/vault-ruby
+licenses:
+- MPL-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Vault is a Ruby API client for interacting with a Vault server.
+test_files: []

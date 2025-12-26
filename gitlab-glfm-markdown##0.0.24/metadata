@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-glfm-markdown
+version: !ruby/object:Gem::Version
+  version: 0.0.24
+platform: ruby
+authors:
+- Brett Walker
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rb_sys
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.9.107
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.9.107
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler-dock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+description: Markdown processing for GitLab Flavored Markdown
+email:
+- bwalker@gitlab.com
+executables: []
+extensions:
+- ext/glfm_markdown/extconf.rb
+extra_rdoc_files: []
+files:
+- Cargo.lock
+- LICENSE
+- README.md
+- ext/glfm_markdown/Cargo.toml
+- ext/glfm_markdown/extconf.rb
+- ext/glfm_markdown/src/glfm.rs
+- ext/glfm_markdown/src/lib.rs
+- ext/glfm_markdown/src/main.rs
+- lib/glfm_markdown.rb
+- lib/glfm_markdown/loader.rb
+- lib/glfm_markdown/version.rb
+homepage: https://gitlab.com/gitlab-org/ruby/gems/gitlab-glfm-markdown
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-glfm-markdown
+  source_code_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-glfm-markdown
+  changelog_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-glfm-markdown/-/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: GLFM Markdown
+test_files: []

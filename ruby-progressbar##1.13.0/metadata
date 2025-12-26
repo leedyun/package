@@ -1,0 +1,163 @@
+--- !ruby/object:Gem::Specification
+name: ruby-progressbar
+version: !ruby/object:Gem::Version
+  version: 1.13.0
+platform: ruby
+authors:
+- thekompanee
+- jfelchner
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEdjCCAt6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAyMTAwLgYDVQQDDCdhY2Nv
+  dW50c19ydWJ5Z2Vtcy9EQz10aGVrb21wYW5lZS9EQz1jb20wHhcNMjMwMjI2MTcx
+  MDI1WhcNMjYwMjI1MTcxMDI1WjAyMTAwLgYDVQQDDCdhY2NvdW50c19ydWJ5Z2Vt
+  cy9EQz10aGVrb21wYW5lZS9EQz1jb20wggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAw
+  ggGKAoIBgQCqhYn5ODEoLvuBIF2M1GzoaZU28+ntP5QApvDE0Te04n0JbBC1cNYH
+  mr71neeSx7tlZ9w9kJ/8GNcY5bm7pNJqhyhfc+uG9M7FttcxM8AYXogjcdUDP234
+  +TdmZIz20JxtWBgAZK2I3ktlgLFLC3Pxq63yzhJ75Xok07Wh+ypwjGzDNofPhz+y
+  XR+UeUTp2UGe7kDVoqu/AwwPVhk1qUIRFLfC8SLDTD0CuNW3/AnkwQrKSm8vkiIn
+  q9GCnOq0+jQly0b6a1Gi3ZDYEEswnTzziw2gotUZnQkF5bcOcxK1CB/Okk2jtG7i
+  ztMEU785tERbOSszZrz9rBS/+GnMxlD0pxy50zFfHX3jY1hwnwGjE8Gg+0iYr/tm
+  eysjhcbZfKrMynoqAioCSwstIwtYYYYpYzCPZzwaIBaBqQmUTkuMeiGbAdOdFOrR
+  lOgl5jxCYbNOOTaXbm0nGBFaTucB88+JLbsNAuoNGUf/ybDcZ1zKRkMr2vtb+OtL
+  GoP81fN6l88CAwEAAaOBljCBkzAJBgNVHRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNV
+  HQ4EFgQUL4eV4OM9h7fkM27qf9p4ragHi6AwLAYDVR0RBCUwI4EhYWNjb3VudHMr
+  cnVieWdlbXNAdGhla29tcGFuZWUuY29tMCwGA1UdEgQlMCOBIWFjY291bnRzK3J1
+  YnlnZW1zQHRoZWtvbXBhbmVlLmNvbTANBgkqhkiG9w0BAQsFAAOCAYEAD/tBN1cM
+  8Qu6u+rPM3SEtlEK/ZdVY0IowXtXMskkderNBJ4HY+xBfIWyAXLTr3Fy6xscVZ95
+  raFCiWHqvR577u3/BsVZ5BoQ0g25oY2bwoamQSdx71ygs25Q+UFbg6lHq6olszj0
+  HqKXUy/iPFb+OzGq7NOtKOD5pHl3ew8H7U5tfh0kx6B5TdL9BZLurjskW0n2G+kY
+  NSGCTGYU8wY4Bsk/AmfoFT/ATwmrf68CTD+IBY5yvt2DGvcyuSrX1RQP8Vk//0EP
+  J2ezTNGIBeQFcyyo09gMfy1yxv9XAvwmy6pAx7/m/F2XzTiXuzmJ7zJ6J0OaHUG4
+  svJgf3o9Eor2okQND60Qdpdl4qdSy3KaNqvQQbTRB96e/+K8ksz4rras5jPaAs0p
+  DV37k4cni6c/jUm2CqepsJ/dbzeWdkhcuO6hwEQV0jvFky5C6d5hHcrbJwxl1sTL
+  V+pWW6L9MSZzKkjWVJXD43B3tWBjIDthQVTzS4j90PUkUXgBXjS7Jxj/
+  -----END CERTIFICATE-----
+date: 2023-03-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: rspectacular
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.70.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.70.6
+- !ruby/object:Gem::Dependency
+  name: fuubar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: 'Ruby/ProgressBar is an extremely flexible text progress bar library
+  for Ruby. The output can be customized with a flexible formatting system including:
+  percentage, bars of various formats, elapsed time and estimated time remaining.'
+email:
+- support@thekompanee.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/ruby-progressbar.rb
+- lib/ruby-progressbar/base.rb
+- lib/ruby-progressbar/calculators/length.rb
+- lib/ruby-progressbar/components/bar.rb
+- lib/ruby-progressbar/components/percentage.rb
+- lib/ruby-progressbar/components/rate.rb
+- lib/ruby-progressbar/components/time.rb
+- lib/ruby-progressbar/components/title.rb
+- lib/ruby-progressbar/errors/invalid_progress_error.rb
+- lib/ruby-progressbar/format/formatter.rb
+- lib/ruby-progressbar/format/molecule.rb
+- lib/ruby-progressbar/format/string.rb
+- lib/ruby-progressbar/output.rb
+- lib/ruby-progressbar/outputs/non_tty.rb
+- lib/ruby-progressbar/outputs/null.rb
+- lib/ruby-progressbar/outputs/tty.rb
+- lib/ruby-progressbar/progress.rb
+- lib/ruby-progressbar/projector.rb
+- lib/ruby-progressbar/projectors/smoothed_average.rb
+- lib/ruby-progressbar/refinements.rb
+- lib/ruby-progressbar/refinements/progress_enumerator.rb
+- lib/ruby-progressbar/throttle.rb
+- lib/ruby-progressbar/time.rb
+- lib/ruby-progressbar/timer.rb
+- lib/ruby-progressbar/version.rb
+homepage: https://github.com/jfelchner/ruby-progressbar
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/jfelchner/ruby-progressbar/issues
+  changelog_uri: https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md
+  documentation_uri: https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.13.0
+  homepage_uri: https://github.com/jfelchner/ruby-progressbar
+  source_code_uri: https://github.com/jfelchner/ruby-progressbar
+  wiki_uri: https://github.com/jfelchner/ruby-progressbar/wiki
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Ruby/ProgressBar is a flexible text progress bar library for Ruby.
+test_files: []

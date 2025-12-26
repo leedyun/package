@@ -1,0 +1,53 @@
+inherit_from: .rubocop_todo.yml
+
+inherit_gem:
+  gitlab-styles:
+    - rubocop-default.yml
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
+  Exclude:
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+  CacheRootDirectory: tmp
+
+Layout/LineLength:
+  Max: 152
+
+Style/SingleArgumentDig:
+  Enabled: false
+
+GitlabSecurity/PublicSend:
+  Enabled: true
+  Exclude:
+    # FIXME: this is not an entirely good practice and we should aim to correct these!
+    # See https://gitlab.com/gitlab-org/ruby/gems/gitlab-triage/-/issues/342
+    - 'spec/**/*.rb'
+
+# rationale: no easy autocorrection, makes the specs fail.
+# should be possible to fix with some additional work, but
+# the gains do not seem to be worth the effort.
+RSpec/Rails/TravelAround:
+  Enabled: false
+
+# rationale: we upload via CI - so this is currently not supported in our workflow.
+# context: https://gitlab.com/gitlab-org/ruby/gems/gitlab-triage/-/merge_requests/313#note_1601520801
+Gemspec/RequireMFA:
+  Enabled: false
+
+# rationale: it's okay to have empty blocks in specs
+Lint/EmptyBlock:
+  Exclude:
+    - 'spec/**/*.rb'
+
+# rationale: these files do not seem overly harmful to violate this rule,
+# but overall, seems good to keep enabled
+RSpec/IndexedLet:
+  Exclude:
+    - 'spec/integration/select_issues_by_weight_spec.rb'
+    - 'spec/integration/select_merge_requests_by_source_branch_spec.rb'
+
+# rationale: Maybe we should? For now, let's keep it disabled and revisit at a later point.
+Rails/Output:
+  Enabled: false

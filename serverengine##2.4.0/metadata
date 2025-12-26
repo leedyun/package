@@ -1,0 +1,227 @@
+--- !ruby/object:Gem::Specification
+name: serverengine
+version: !ruby/object:Gem::Version
+  version: 2.4.0
+platform: ruby
+authors:
+- Sadayuki Furuhashi
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sigdump
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.2
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+- !ruby/object:Gem::Dependency
+  name: rake-compiler-dock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.4
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+- !ruby/object:Gem::Dependency
+  name: rr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+description: A framework to implement robust multiprocess servers like Unicorn
+email:
+- frsyuki@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- Changelog
+- Gemfile
+- LICENSE
+- NOTICE
+- README.md
+- Rakefile
+- examples/server.rb
+- examples/spawn_worker_script.rb
+- lib/serverengine.rb
+- lib/serverengine/blocking_flag.rb
+- lib/serverengine/command_sender.rb
+- lib/serverengine/config_loader.rb
+- lib/serverengine/daemon.rb
+- lib/serverengine/daemon_logger.rb
+- lib/serverengine/embedded_server.rb
+- lib/serverengine/multi_process_server.rb
+- lib/serverengine/multi_spawn_server.rb
+- lib/serverengine/multi_thread_server.rb
+- lib/serverengine/multi_worker_server.rb
+- lib/serverengine/privilege.rb
+- lib/serverengine/process_manager.rb
+- lib/serverengine/server.rb
+- lib/serverengine/signal_thread.rb
+- lib/serverengine/signals.rb
+- lib/serverengine/socket_manager.rb
+- lib/serverengine/socket_manager_unix.rb
+- lib/serverengine/socket_manager_win.rb
+- lib/serverengine/supervisor.rb
+- lib/serverengine/utils.rb
+- lib/serverengine/version.rb
+- lib/serverengine/winsock.rb
+- lib/serverengine/worker.rb
+- serverengine.gemspec
+- spec/blocking_flag_spec.rb
+- spec/daemon_logger_spec.rb
+- spec/daemon_spec.rb
+- spec/multi_process_server_spec.rb
+- spec/multi_spawn_server_spec.rb
+- spec/server_worker_context.rb
+- spec/signal_thread_spec.rb
+- spec/socket_manager_spec.rb
+- spec/spec_helper.rb
+- spec/supervisor_spec.rb
+- spec/winsock_spec.rb
+homepage: https://github.com/fluent/serverengine
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: ServerEngine - multiprocess server framework
+test_files:
+- spec/blocking_flag_spec.rb
+- spec/daemon_logger_spec.rb
+- spec/daemon_spec.rb
+- spec/multi_process_server_spec.rb
+- spec/multi_spawn_server_spec.rb
+- spec/server_worker_context.rb
+- spec/signal_thread_spec.rb
+- spec/socket_manager_spec.rb
+- spec/spec_helper.rb
+- spec/supervisor_spec.rb
+- spec/winsock_spec.rb

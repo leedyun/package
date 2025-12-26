@@ -1,0 +1,224 @@
+--- !ruby/object:Gem::Specification
+name: rails-controller-testing
+version: !ruby/object:Gem::Version
+  version: 1.0.5
+platform: ruby
+authors:
+- Rails Core Team
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-06-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+- !ruby/object:Gem::Dependency
+  name: actionview
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.1.rc1
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email: 
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- Rakefile
+- lib/rails-controller-testing.rb
+- lib/rails/controller/testing.rb
+- lib/rails/controller/testing/integration.rb
+- lib/rails/controller/testing/railtie.rb
+- lib/rails/controller/testing/template_assertions.rb
+- lib/rails/controller/testing/test_process.rb
+- lib/rails/controller/testing/version.rb
+- test/controllers/assigns_test.rb
+- test/controllers/template_assertions_test.rb
+- test/dummy/README.rdoc
+- test/dummy/Rakefile
+- test/dummy/app/controllers/assigns_controller.rb
+- test/dummy/app/controllers/template_assertions_controller.rb
+- test/dummy/app/controllers/view_assigns_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/app/views/layouts/standard.html.erb
+- test/dummy/app/views/test/_directory/_partial_with_locales.html.erb
+- test/dummy/app/views/test/_layout_for_partial.html.erb
+- test/dummy/app/views/test/_partial.html.erb
+- test/dummy/app/views/test/_partial_for_use_in_layout.html.erb
+- test/dummy/app/views/test/calling_partial_with_layout.html.erb
+- test/dummy/app/views/test/hello/hello.html.erb
+- test/dummy/app/views/test/hello_world.html.erb
+- test/dummy/app/views/test/hello_world_with_partial.html.erb
+- test/dummy/app/views/test/render_partial_inside_directory.html.erb
+- test/dummy/app/views/test/render_two_partials.html.erb
+- test/dummy/bin/bundle
+- test/dummy/bin/rails
+- test/dummy/bin/rake
+- test/dummy/bin/setup
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/assets.rb
+- test/dummy/config/initializers/backtrace_silencers.rb
+- test/dummy/config/initializers/cookies_serializer.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/mime_types.rb
+- test/dummy/config/initializers/session_store.rb
+- test/dummy/config/initializers/wrap_parameters.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/routes.rb
+- test/dummy/config/secrets.yml
+- test/dummy/log/test.log
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/favicon.ico
+- test/helpers/template_assertions_test.rb
+- test/integration/template_assertions_test.rb
+- test/test_helper.rb
+homepage: https://github.com/rails/rails-controller-testing
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.2.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Extracting `assigns` and `assert_template` from ActionDispatch.
+test_files:
+- test/dummy/app/controllers/view_assigns_controller.rb
+- test/dummy/app/controllers/template_assertions_controller.rb
+- test/dummy/app/controllers/assigns_controller.rb
+- test/dummy/app/views/test/hello_world_with_partial.html.erb
+- test/dummy/app/views/test/hello_world.html.erb
+- test/dummy/app/views/test/_partial.html.erb
+- test/dummy/app/views/test/calling_partial_with_layout.html.erb
+- test/dummy/app/views/test/render_two_partials.html.erb
+- test/dummy/app/views/test/_partial_for_use_in_layout.html.erb
+- test/dummy/app/views/test/_directory/_partial_with_locales.html.erb
+- test/dummy/app/views/test/_layout_for_partial.html.erb
+- test/dummy/app/views/test/hello/hello.html.erb
+- test/dummy/app/views/test/render_partial_inside_directory.html.erb
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/app/views/layouts/standard.html.erb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/bin/rake
+- test/dummy/bin/setup
+- test/dummy/bin/bundle
+- test/dummy/bin/rails
+- test/dummy/config/secrets.yml
+- test/dummy/config/routes.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/environment.rb
+- test/dummy/config/application.rb
+- test/dummy/config/database.yml
+- test/dummy/config/boot.rb
+- test/dummy/config/initializers/backtrace_silencers.rb
+- test/dummy/config/initializers/mime_types.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/session_store.rb
+- test/dummy/config/initializers/wrap_parameters.rb
+- test/dummy/config/initializers/assets.rb
+- test/dummy/config/initializers/cookies_serializer.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config.ru
+- test/dummy/Rakefile
+- test/dummy/public/favicon.ico
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/404.html
+- test/dummy/log/test.log
+- test/dummy/README.rdoc
+- test/integration/template_assertions_test.rb
+- test/test_helper.rb
+- test/controllers/template_assertions_test.rb
+- test/controllers/assigns_test.rb
+- test/helpers/template_assertions_test.rb

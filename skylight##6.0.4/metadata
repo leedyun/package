@@ -1,0 +1,406 @@
+--- !ruby/object:Gem::Specification
+name: skylight
+version: !ruby/object:Gem::Version
+  version: 6.0.4
+platform: ruby
+authors:
+- Tilde, Inc.
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+- !ruby/object:Gem::Dependency
+  name: beefcake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.17.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.17.3
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.7'
+- !ruby/object:Gem::Dependency
+  name: rspec-collection_matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.31.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.31.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+- !ruby/object:Gem::Dependency
+  name: syntax_tree
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email:
+- engineering@tilde.io
+executables:
+- skylight
+extensions:
+- ext/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CLA.md
+- CONTRIBUTING.md
+- ERRORS.md
+- LICENSE.md
+- README.md
+- bin/skylight
+- ext/extconf.rb
+- ext/skylight_memprof.c
+- ext/skylight_native.c
+- ext/skylight_native.h
+- lib/skylight.rb
+- lib/skylight/api.rb
+- lib/skylight/cli.rb
+- lib/skylight/cli/doctor.rb
+- lib/skylight/cli/helpers.rb
+- lib/skylight/cli/merger.rb
+- lib/skylight/config.rb
+- lib/skylight/data/cacert.pem
+- lib/skylight/deprecation.rb
+- lib/skylight/errors.rb
+- lib/skylight/extensions.rb
+- lib/skylight/extensions/source_location.rb
+- lib/skylight/formatters/http.rb
+- lib/skylight/gc.rb
+- lib/skylight/helpers.rb
+- lib/skylight/instrumenter.rb
+- lib/skylight/middleware.rb
+- lib/skylight/native.rb
+- lib/skylight/native_ext_fetcher.rb
+- lib/skylight/normalizers.rb
+- lib/skylight/normalizers/action_controller/process_action.rb
+- lib/skylight/normalizers/action_controller/send_file.rb
+- lib/skylight/normalizers/action_dispatch/process_middleware.rb
+- lib/skylight/normalizers/action_dispatch/route_set.rb
+- lib/skylight/normalizers/action_view/render_collection.rb
+- lib/skylight/normalizers/action_view/render_layout.rb
+- lib/skylight/normalizers/action_view/render_partial.rb
+- lib/skylight/normalizers/action_view/render_template.rb
+- lib/skylight/normalizers/active_job/perform.rb
+- lib/skylight/normalizers/active_model_serializers/render.rb
+- lib/skylight/normalizers/active_record/instantiation.rb
+- lib/skylight/normalizers/active_record/sql.rb
+- lib/skylight/normalizers/active_storage.rb
+- lib/skylight/normalizers/active_support/cache.rb
+- lib/skylight/normalizers/active_support/cache_clear.rb
+- lib/skylight/normalizers/active_support/cache_decrement.rb
+- lib/skylight/normalizers/active_support/cache_delete.rb
+- lib/skylight/normalizers/active_support/cache_exist.rb
+- lib/skylight/normalizers/active_support/cache_fetch_hit.rb
+- lib/skylight/normalizers/active_support/cache_generate.rb
+- lib/skylight/normalizers/active_support/cache_increment.rb
+- lib/skylight/normalizers/active_support/cache_read.rb
+- lib/skylight/normalizers/active_support/cache_read_multi.rb
+- lib/skylight/normalizers/active_support/cache_write.rb
+- lib/skylight/normalizers/coach/handler_finish.rb
+- lib/skylight/normalizers/coach/middleware_finish.rb
+- lib/skylight/normalizers/couch_potato/query.rb
+- lib/skylight/normalizers/data_mapper/sql.rb
+- lib/skylight/normalizers/default.rb
+- lib/skylight/normalizers/elasticsearch/request.rb
+- lib/skylight/normalizers/faraday/request.rb
+- lib/skylight/normalizers/grape/endpoint.rb
+- lib/skylight/normalizers/grape/endpoint_render.rb
+- lib/skylight/normalizers/grape/endpoint_run.rb
+- lib/skylight/normalizers/grape/endpoint_run_filters.rb
+- lib/skylight/normalizers/grape/format_response.rb
+- lib/skylight/normalizers/graphiti/render.rb
+- lib/skylight/normalizers/graphiti/resolve.rb
+- lib/skylight/normalizers/graphql/base.rb
+- lib/skylight/normalizers/render.rb
+- lib/skylight/normalizers/sequel/sql.rb
+- lib/skylight/normalizers/shrine.rb
+- lib/skylight/normalizers/sql.rb
+- lib/skylight/probes.rb
+- lib/skylight/probes/action_controller.rb
+- lib/skylight/probes/action_dispatch.rb
+- lib/skylight/probes/action_dispatch/request_id.rb
+- lib/skylight/probes/action_dispatch/routing/route_set.rb
+- lib/skylight/probes/action_dispatch/show_exceptions.rb
+- lib/skylight/probes/action_view.rb
+- lib/skylight/probes/active_job.rb
+- lib/skylight/probes/active_job_enqueue.rb
+- lib/skylight/probes/active_model_serializers.rb
+- lib/skylight/probes/active_record_async.rb
+- lib/skylight/probes/delayed_job.rb
+- lib/skylight/probes/elasticsearch.rb
+- lib/skylight/probes/excon.rb
+- lib/skylight/probes/excon/middleware.rb
+- lib/skylight/probes/faraday.rb
+- lib/skylight/probes/graphql.rb
+- lib/skylight/probes/httpclient.rb
+- lib/skylight/probes/middleware.rb
+- lib/skylight/probes/mongo.rb
+- lib/skylight/probes/mongoid.rb
+- lib/skylight/probes/net_http.rb
+- lib/skylight/probes/rack_builder.rb
+- lib/skylight/probes/redis.rb
+- lib/skylight/probes/sequel.rb
+- lib/skylight/probes/sinatra.rb
+- lib/skylight/probes/sinatra_add_middleware.rb
+- lib/skylight/probes/tilt.rb
+- lib/skylight/railtie.rb
+- lib/skylight/sidekiq.rb
+- lib/skylight/sinatra.rb
+- lib/skylight/subscriber.rb
+- lib/skylight/test.rb
+- lib/skylight/trace.rb
+- lib/skylight/user_config.rb
+- lib/skylight/util.rb
+- lib/skylight/util/allocation_free.rb
+- lib/skylight/util/clock.rb
+- lib/skylight/util/component.rb
+- lib/skylight/util/deploy.rb
+- lib/skylight/util/gzip.rb
+- lib/skylight/util/hostname.rb
+- lib/skylight/util/http.rb
+- lib/skylight/util/instrumenter_method.rb
+- lib/skylight/util/logging.rb
+- lib/skylight/util/lru_cache.rb
+- lib/skylight/util/platform.rb
+- lib/skylight/util/proxy.rb
+- lib/skylight/util/ssl.rb
+- lib/skylight/vendor/cli/highline.rb
+- lib/skylight/vendor/cli/highline/color_scheme.rb
+- lib/skylight/vendor/cli/highline/compatibility.rb
+- lib/skylight/vendor/cli/highline/import.rb
+- lib/skylight/vendor/cli/highline/menu.rb
+- lib/skylight/vendor/cli/highline/question.rb
+- lib/skylight/vendor/cli/highline/simulate.rb
+- lib/skylight/vendor/cli/highline/string_extensions.rb
+- lib/skylight/vendor/cli/highline/style.rb
+- lib/skylight/vendor/cli/highline/system_extensions.rb
+- lib/skylight/vendor/cli/thor.rb
+- lib/skylight/vendor/cli/thor/actions.rb
+- lib/skylight/vendor/cli/thor/actions/create_file.rb
+- lib/skylight/vendor/cli/thor/actions/create_link.rb
+- lib/skylight/vendor/cli/thor/actions/directory.rb
+- lib/skylight/vendor/cli/thor/actions/empty_directory.rb
+- lib/skylight/vendor/cli/thor/actions/file_manipulation.rb
+- lib/skylight/vendor/cli/thor/actions/inject_into_file.rb
+- lib/skylight/vendor/cli/thor/base.rb
+- lib/skylight/vendor/cli/thor/command.rb
+- lib/skylight/vendor/cli/thor/core_ext/hash_with_indifferent_access.rb
+- lib/skylight/vendor/cli/thor/core_ext/io_binary_read.rb
+- lib/skylight/vendor/cli/thor/core_ext/ordered_hash.rb
+- lib/skylight/vendor/cli/thor/error.rb
+- lib/skylight/vendor/cli/thor/group.rb
+- lib/skylight/vendor/cli/thor/invocation.rb
+- lib/skylight/vendor/cli/thor/parser.rb
+- lib/skylight/vendor/cli/thor/parser/argument.rb
+- lib/skylight/vendor/cli/thor/parser/arguments.rb
+- lib/skylight/vendor/cli/thor/parser/option.rb
+- lib/skylight/vendor/cli/thor/parser/options.rb
+- lib/skylight/vendor/cli/thor/rake_compat.rb
+- lib/skylight/vendor/cli/thor/runner.rb
+- lib/skylight/vendor/cli/thor/shell.rb
+- lib/skylight/vendor/cli/thor/shell/basic.rb
+- lib/skylight/vendor/cli/thor/shell/color.rb
+- lib/skylight/vendor/cli/thor/shell/html.rb
+- lib/skylight/vendor/cli/thor/util.rb
+- lib/skylight/vendor/cli/thor/version.rb
+- lib/skylight/version.rb
+- lib/skylight/vm/gc.rb
+homepage: https://www.skylight.io
+licenses:
+- Nonstandard
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Skylight is a smart profiler for Rails, Sinatra, and other Ruby apps.
+test_files: []

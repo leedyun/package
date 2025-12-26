@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: geoip
+version: !ruby/object:Gem::Version
+  version: 1.6.4
+platform: ruby
+authors:
+- Clifford Heath
+- Roland Moriz
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-08-03 00:00:00.000000000 Z
+dependencies: []
+description: |-
+  GeoIP searches a GeoIP database for a given host or IP address, and
+  returns information about the country where the IP address is allocated,
+  and the city, ISP and other information, if you have that database version.
+email:
+- clifford.heath@gmail.com
+- rmoriz@gmail.com
+executables:
+- geoip
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- History.rdoc
+- LICENSE
+- README.rdoc
+- bin/geoip
+- data/geoip/country_code.yml
+- data/geoip/country_code3.yml
+- data/geoip/country_continent.yml
+- data/geoip/country_name.yml
+- data/geoip/region.yml
+- data/geoip/time_zone.yml
+- geoip.gemspec
+- lib/geoip.rb
+- test/csvORG2dat.py
+- test/organizations.csv
+- test/organizations.dat
+- test/test_file.rb
+- test/test_geoip.rb
+- test/test_helper.rb
+homepage: http://github.com/cjheath/geoip
+licenses:
+- LGPL-2.1
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.13
+signing_key: 
+specification_version: 4
+summary: GeoIP searches a GeoIP database for a given host or IP address, and returns
+  information about the country where the IP address is allocated, and the city, ISP
+  and other information, if you have that database version.
+test_files: []

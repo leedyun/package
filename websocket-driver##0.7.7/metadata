@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: websocket-driver
+version: !ruby/object:Gem::Version
+  version: 0.7.7
+platform: ruby
+authors:
+- James Coglan
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: websocket-extensions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  name: eventmachine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: permessage_deflate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+email: jcoglan@gmail.com
+executables: []
+extensions:
+- ext/websocket-driver/extconf.rb
+extra_rdoc_files:
+- README.md
+files:
+- CHANGELOG.md
+- LICENSE.md
+- README.md
+- ext/websocket-driver/WebsocketMaskService.java
+- ext/websocket-driver/extconf.rb
+- ext/websocket-driver/websocket_mask.c
+- lib/websocket/driver.rb
+- lib/websocket/driver/client.rb
+- lib/websocket/driver/draft75.rb
+- lib/websocket/driver/draft76.rb
+- lib/websocket/driver/event_emitter.rb
+- lib/websocket/driver/headers.rb
+- lib/websocket/driver/hybi.rb
+- lib/websocket/driver/hybi/frame.rb
+- lib/websocket/driver/hybi/message.rb
+- lib/websocket/driver/proxy.rb
+- lib/websocket/driver/server.rb
+- lib/websocket/driver/stream_reader.rb
+- lib/websocket/http.rb
+- lib/websocket/http/headers.rb
+- lib/websocket/http/request.rb
+- lib/websocket/http/response.rb
+- lib/websocket/mask.rb
+- lib/websocket/websocket_mask.rb
+homepage: https://github.com/faye/websocket-driver-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+rdoc_options:
+- "--main"
+- README.md
+- "--markup"
+- markdown
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: WebSocket protocol handler with pluggable I/O
+test_files: []

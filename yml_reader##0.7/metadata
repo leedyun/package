@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: yml_reader
+version: !ruby/object:Gem::Version
+  version: '0.7'
+platform: ruby
+authors:
+- Jeffrey S. Morgan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-01-06 00:00:00.000000000 Z
+dependencies: []
+description: Sets a directory and reads yml files
+email:
+- jeff.morgan@leandog.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .rspec
+- .ruby-gemset
+- .ruby-version
+- ChangeLog
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/yml_reader.rb
+- lib/yml_reader/version.rb
+- spec/spec_helper.rb
+- spec/yml_reader/data/include1.yml
+- spec/yml_reader/data/with_includes.yml
+- spec/yml_reader/yml_reader_spec.rb
+- yml_reader.gemspec
+homepage: http://github.com/cheezy/yml_reader
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: Sets a directory and reads yml files
+test_files:
+- spec/spec_helper.rb
+- spec/yml_reader/data/include1.yml
+- spec/yml_reader/data/with_includes.yml
+- spec/yml_reader/yml_reader_spec.rb

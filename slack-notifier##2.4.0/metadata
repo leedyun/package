@@ -1,0 +1,84 @@
+--- !ruby/object:Gem::Specification
+name: slack-notifier
+version: !ruby/object:Gem::Version
+  version: 2.4.0
+platform: ruby
+authors:
+- Steven Sloan
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-05-07 00:00:00.000000000 Z
+dependencies: []
+description: " A slim ruby wrapper for posting to slack webhooks "
+email:
+- stevenosloan@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/slack-notifier.rb
+- lib/slack-notifier/config.rb
+- lib/slack-notifier/payload_middleware.rb
+- lib/slack-notifier/payload_middleware/at.rb
+- lib/slack-notifier/payload_middleware/base.rb
+- lib/slack-notifier/payload_middleware/channels.rb
+- lib/slack-notifier/payload_middleware/format_attachments.rb
+- lib/slack-notifier/payload_middleware/format_message.rb
+- lib/slack-notifier/payload_middleware/stack.rb
+- lib/slack-notifier/util/escape.rb
+- lib/slack-notifier/util/http_client.rb
+- lib/slack-notifier/util/link_formatter.rb
+- lib/slack-notifier/version.rb
+- spec/end_to_end_spec.rb
+- spec/integration/ping_integration_test.rb
+- spec/lib/slack-notifier/config_spec.rb
+- spec/lib/slack-notifier/payload_middleware/at_spec.rb
+- spec/lib/slack-notifier/payload_middleware/base_spec.rb
+- spec/lib/slack-notifier/payload_middleware/channels_spec.rb
+- spec/lib/slack-notifier/payload_middleware/format_attachments_spec.rb
+- spec/lib/slack-notifier/payload_middleware/format_message_spec.rb
+- spec/lib/slack-notifier/payload_middleware/stack_spec.rb
+- spec/lib/slack-notifier/payload_middleware_spec.rb
+- spec/lib/slack-notifier/util/http_client_spec.rb
+- spec/lib/slack-notifier/util/link_formatter_spec.rb
+- spec/lib/slack-notifier_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/stevenosloan/slack-notifier
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: A slim ruby wrapper for posting to slack webhooks
+test_files:
+- spec/end_to_end_spec.rb
+- spec/integration/ping_integration_test.rb
+- spec/lib/slack-notifier/config_spec.rb
+- spec/lib/slack-notifier/payload_middleware/at_spec.rb
+- spec/lib/slack-notifier/payload_middleware/base_spec.rb
+- spec/lib/slack-notifier/payload_middleware/channels_spec.rb
+- spec/lib/slack-notifier/payload_middleware/format_attachments_spec.rb
+- spec/lib/slack-notifier/payload_middleware/format_message_spec.rb
+- spec/lib/slack-notifier/payload_middleware/stack_spec.rb
+- spec/lib/slack-notifier/payload_middleware_spec.rb
+- spec/lib/slack-notifier/util/http_client_spec.rb
+- spec/lib/slack-notifier/util/link_formatter_spec.rb
+- spec/lib/slack-notifier_spec.rb
+- spec/spec_helper.rb

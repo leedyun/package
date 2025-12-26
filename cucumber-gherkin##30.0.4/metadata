@@ -1,0 +1,133 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-gherkin
+version: !ruby/object:Gem::Version
+  version: 30.0.4
+platform: ruby
+authors:
+- Gáspár Nagy
+- Aslak Hellesøy
+- Steve Tooke
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cucumber-messages
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '28'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '28'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.26.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.26.0
+description: Gherkin parser
+email: cukes@googlegroups.com
+executables:
+- gherkin-ruby
+- gherkin
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- bin/gherkin
+- bin/gherkin-ruby
+- lib/gherkin.rb
+- lib/gherkin/ast_builder.rb
+- lib/gherkin/ast_node.rb
+- lib/gherkin/dialect.rb
+- lib/gherkin/errors.rb
+- lib/gherkin/gherkin-languages.json
+- lib/gherkin/gherkin_line.rb
+- lib/gherkin/parser.rb
+- lib/gherkin/pickles/compiler.rb
+- lib/gherkin/query.rb
+- lib/gherkin/stream/parser_message_stream.rb
+- lib/gherkin/token.rb
+- lib/gherkin/token_formatter_builder.rb
+- lib/gherkin/token_matcher.rb
+- lib/gherkin/token_scanner.rb
+homepage: https://github.com/cucumber/gherkin
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/gherkin/issues
+  changelog_uri: https://github.com/cucumber/gherkin/blob/main/CHANGELOG.md
+  documentation_uri: https://cucumber.io/docs/gherkin/
+  mailing_list_uri: https://groups.google.com/forum/#!forum/cukes
+  source_code_uri: https://github.com/cucumber/gherkin/blob/main/ruby
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.8
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: cucumber-gherkin-30.0.4
+test_files: []

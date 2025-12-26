@@ -1,0 +1,92 @@
+- authors = stats.author_stats.to_a.sort{ |a, b| b[1].commits <=> a[1].commits }
+- fc = stats.general_stats.first_commit
+- lc = stats.general_stats.last_commit
+
+-# truncate the number of authors
+- truncatedAuthors = true if authors.length > maxAuthorDetails
+- authors = authors[0..maxAuthorDetails-1] if truncatedAuthors
+
+- block(:commits_per_author_detailed,12) do
+  - authors.each_with_index do |v,i|
+    - daysTable = v[1].daystats.map{|d,s| [d, "Date.UTC(#{d.year},#{d.mon-1},#{d.mday})", s.commits, s.lines_added, s.lines_deleted, s.files_added, s.files_deleted]}.sort{|a,b| a[0] <=> b[0]}
+    - daysGraph = daysTable
+
+    -# truncate the number of days per authors in graph
+    - truncatedGraph = true if daysGraph.length > maxDaysPerAuthorInGraph
+    - daysGraph = daysGraph[-maxDaysPerAuthorInGraph..-1] if truncatedGraph
+
+    -# truncate the number of days per authors in table
+    - truncatedTable = true if daysTable.length > maxDaysPerAuthorInTable
+    - daysTable = daysTable[-maxDaysPerAuthorInTable..-1] if truncatedTable
+
+    - commits_str = "[#{daysGraph.map{|v| "[#{v[1]}, #{v[2]}]"}.join(", ")}]"
+    - added_lines_str   = "[#{daysGraph.map{|v| "[#{v[1]}, #{v[3]}]"}.join(", ")}]"
+    - deleted_lines_str = "[#{daysGraph.map{|v| "[#{v[1]}, #{v[4]}]"}.join(", ")}]"
+
+    %div.thumbnail.col-md-6
+      %h4
+        #{v[0].name}
+        %br
+        %small= v[0].email 
+      %h5= v[1].commits
+      %div.panel.panel-default
+        %div.panel-heading{"data-toggle" => "collapse", "data-target" => "#activity_per_author_#{i}"}= label(:activity_per_day)
+        %div.panel-body.col-md-12{:class => (i > expandedAuthors-1 ? "collapse" : "collapse in" ), :id => "activity_per_author_#{i}"}
+          %div{:id => "chart_commits_per_author_#{i}", :style => "height: 300px; width: 95%"}
+
+          - if truncatedGraph
+            .alert.alert-danger Too many active days. Data of the graph has been truncated!
+
+          %div.panel.panel-default
+            %div.panel-heading{"data-toggle" => "collapse", "data-target" => "#commits_per_author_#{i}_box"} Table
+            %div.panel-body.collapse{:id => "commits_per_author_#{i}_box"}
+              %table.table.table-striped.table-hover{:id => "commits_per_author_#{i}_table"}
+                %thead
+                  %tr
+                    %th Date
+                    %th Commits
+                    %th Files added
+                    %th Files deleted
+                    %th Lines added
+                    %th Lines deleted
+                %tbody
+                  - daysTable.each do |date, dateJs, commits, lines_added, lines_deleted, files_added, files_deleted|
+                    %tr
+                      %td&= date
+                      %td&= commits
+                      %td&= files_added
+                      %td&= files_deleted
+                      %td&= lines_added
+                      %td&= lines_deleted
+              - if truncatedTable
+                .alert.alert-danger Too many active days. Data of the table has been truncated!
+
+      %script
+        var chart_commits_per_author_#{i}           = new Object();
+        chart_commits_per_author_#{i}.x_min         = Date.UTC(#{fc.year},#{fc.mon-1},#{fc.mday})
+        chart_commits_per_author_#{i}.x_max         = Date.UTC(#{lc.year},#{lc.mon-1},#{lc.mday})
+        chart_commits_per_author_#{i}.label         = '#{label(:commits_per_author_detailed)}';
+        chart_commits_per_author_#{i}.label_y_axis  = "Number of commits";
+        chart_commits_per_author_#{i}.label_y2_axis = "Changed lines";
+        chart_commits_per_author_#{i}.target        = '#chart_commits_per_author_#{i}';
+        chart_commits_per_author_#{i}.series        = [{"name":"Commits","yAxis": 0,"data":#{commits_str}},{"name":"Added lines","color": "#6CC644","yAxis": 1,"data":#{added_lines_str}},{"name":"Deleted lines","color": "#BD2C00","yAxis": 1,"data":#{deleted_lines_str}}];
+        chart_commits_per_author_#{i}.legend        = {};
+
+        $("#commits_per_author_#{i}_box").one('show.bs.collapse', function () {
+        $("#commits_per_author_#{i}_table").DataTable({
+        "order": [[ 0, "asc" ]]
+        });
+        });
+
+        - if i > expandedAuthors-1
+          $("#activity_per_author_#{i}").one('shown.bs.collapse', function () {
+          createDateAreaChart(chart_commits_per_author_#{i});
+          });
+        - else
+          $(document).ready(function() {
+          createDateAreaChart(chart_commits_per_author_#{i});
+          });
+
+  - if truncatedAuthors
+    .row
+      .col-md-12.alert.alert-danger Too many authors. Listing has been truncated!

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# set custom qa cache key because upstream template by default installs gitlab-qa from rubygems and uses cache key
+# based on globally defined gitlab-qa version
+#
+# UPDATE_QA_CACHE needs to be passed to included child pipeline because e2e specs run on separate runners which don't share
+# same infrastructure and this variable allows to populate cache for e2e spec specific runners
+qa_cache_key="${RUBY_VERSION}-$(md5sum Gemfile.lock | awk '{ print $1 }')"
+
+echo "Saving environment variables for package-and-test trigger"
+echo "GITLAB_QA_CACHE_KEY=$qa_cache_key" > $BUILD_ENV
+echo "UPDATE_QA_CACHE=$UPDATE_QA_CACHE" >> $BUILD_ENV
+
+echo "Created $BUILD_ENV file:"
+cat $BUILD_ENV

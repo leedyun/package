@@ -1,0 +1,192 @@
+--- !ruby/object:Gem::Specification
+name: cocaine
+version: !ruby/object:Gem::Version
+  version: 0.6.0
+platform: ruby
+authors:
+- Jon Yurek
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-02-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: terrapin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bourne
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A small library for doing (command) lines
+email: jyurek@thoughtbot.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- GOALS
+- Gemfile
+- LICENSE
+- NEWS.md
+- README.md
+- Rakefile
+- cocaine.gemspec
+- lib/cocaine.rb
+- lib/cocaine/version.rb
+- spec/cocaine/command_line/output_spec.rb
+- spec/cocaine/command_line/runners/backticks_runner_spec.rb
+- spec/cocaine/command_line/runners/fake_runner_spec.rb
+- spec/cocaine/command_line/runners/popen_runner_spec.rb
+- spec/cocaine/command_line/runners/posix_runner_spec.rb
+- spec/cocaine/command_line/runners/process_runner_spec.rb
+- spec/cocaine/command_line_spec.rb
+- spec/cocaine/errors_spec.rb
+- spec/cocaine/os_detector_spec.rb
+- spec/cocaine/runners_spec.rb
+- spec/spec_helper.rb
+- spec/support/fake_logger.rb
+- spec/support/have_output.rb
+- spec/support/nonblocking_examples.rb
+- spec/support/stub_os.rb
+- spec/support/unsetting_exitstatus.rb
+- spec/support/with_exitstatus.rb
+homepage: https://github.com/thoughtbot/cocaine
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: A small library for doing (command) lines
+test_files:
+- spec/cocaine/command_line/output_spec.rb
+- spec/cocaine/command_line/runners/backticks_runner_spec.rb
+- spec/cocaine/command_line/runners/fake_runner_spec.rb
+- spec/cocaine/command_line/runners/popen_runner_spec.rb
+- spec/cocaine/command_line/runners/posix_runner_spec.rb
+- spec/cocaine/command_line/runners/process_runner_spec.rb
+- spec/cocaine/command_line_spec.rb
+- spec/cocaine/errors_spec.rb
+- spec/cocaine/os_detector_spec.rb
+- spec/cocaine/runners_spec.rb
+- spec/spec_helper.rb
+- spec/support/fake_logger.rb
+- spec/support/have_output.rb
+- spec/support/nonblocking_examples.rb
+- spec/support/stub_os.rb
+- spec/support/unsetting_exitstatus.rb
+- spec/support/with_exitstatus.rb

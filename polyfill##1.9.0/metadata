@@ -1,0 +1,157 @@
+--- !ruby/object:Gem::Specification
+name: polyfill
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Aaron Lasseigne
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2020-12-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.57.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.57.0
+description:
+email:
+- aaron.lasseigne@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/polyfill.rb
+- lib/polyfill/internal_utils.rb
+- lib/polyfill/v2_2.rb
+- lib/polyfill/v2_2/enumerable.rb
+- lib/polyfill/v2_2/kernel.rb
+- lib/polyfill/v2_2/math.rb
+- lib/polyfill/v2_2/prime.rb
+- lib/polyfill/v2_2/vector.rb
+- lib/polyfill/v2_3.rb
+- lib/polyfill/v2_3/array.rb
+- lib/polyfill/v2_3/enumerable.rb
+- lib/polyfill/v2_3/enumerator/lazy.rb
+- lib/polyfill/v2_3/hash.rb
+- lib/polyfill/v2_3/kernel.rb
+- lib/polyfill/v2_3/numeric.rb
+- lib/polyfill/v2_3/prime.rb
+- lib/polyfill/v2_3/string.rb
+- lib/polyfill/v2_3/struct.rb
+- lib/polyfill/v2_4.rb
+- lib/polyfill/v2_4/array.rb
+- lib/polyfill/v2_4/comparable.rb
+- lib/polyfill/v2_4/dir.rb
+- lib/polyfill/v2_4/enumerable.rb
+- lib/polyfill/v2_4/enumerator/lazy.rb
+- lib/polyfill/v2_4/file.rb
+- lib/polyfill/v2_4/float.rb
+- lib/polyfill/v2_4/hash.rb
+- lib/polyfill/v2_4/i_p_addr.rb
+- lib/polyfill/v2_4/integer.rb
+- lib/polyfill/v2_4/io.rb
+- lib/polyfill/v2_4/match_data.rb
+- lib/polyfill/v2_4/numeric.rb
+- lib/polyfill/v2_4/object.rb
+- lib/polyfill/v2_4/pathname.rb
+- lib/polyfill/v2_4/regexp.rb
+- lib/polyfill/v2_4/string.rb
+- lib/polyfill/v2_4/string_io.rb
+- lib/polyfill/v2_4/symbol.rb
+- lib/polyfill/v2_5.rb
+- lib/polyfill/v2_5/array.rb
+- lib/polyfill/v2_5/big_decimal.rb
+- lib/polyfill/v2_5/dir.rb
+- lib/polyfill/v2_5/enumerable.rb
+- lib/polyfill/v2_5/hash.rb
+- lib/polyfill/v2_5/integer.rb
+- lib/polyfill/v2_5/kernel.rb
+- lib/polyfill/v2_5/set.rb
+- lib/polyfill/v2_5/string.rb
+- lib/polyfill/v2_5/struct.rb
+- lib/polyfill/v2_5/time.rb
+- lib/polyfill/v2_6.rb
+- lib/polyfill/v2_6/array.rb
+- lib/polyfill/v2_6/enumerable.rb
+- lib/polyfill/v2_6/hash.rb
+- lib/polyfill/v2_6/kernel.rb
+- lib/polyfill/v2_6/open_struct.rb
+- lib/polyfill/v2_6/string.rb
+- lib/polyfill/v2_6/struct.rb
+- lib/polyfill/version.rb
+- polyfill.gemspec
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key:
+specification_version: 4
+summary: Adds newer Ruby methods to older versions.
+test_files: []

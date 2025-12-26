@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: select2-rails
+version: !ruby/object:Gem::Version
+  version: 4.0.13
+platform: ruby
+authors:
+- Rogerio Medeiros
+- Pedro Nascimento
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-07-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+description: Select2 is a jQuery based replacement for select boxes. It supports searching,
+  remote data sets, and infinite scrolling of results. This gem integrates Select2
+  with Rails asset pipeline for easy of use.
+email:
+- argerim@gmail.com
+- pnascimento@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- README.md
+- Rakefile
+- lib/select2-rails.rb
+- lib/select2-rails/engine.rb
+- lib/select2-rails/source_file.rb
+- lib/select2-rails/version.rb
+- select2-rails.gemspec
+- vendor/assets/javascripts/select2-full.js
+- vendor/assets/javascripts/select2.js
+- vendor/assets/javascripts/select2_locale_af.js
+- vendor/assets/javascripts/select2_locale_ar.js
+- vendor/assets/javascripts/select2_locale_az.js
+- vendor/assets/javascripts/select2_locale_bg.js
+- vendor/assets/javascripts/select2_locale_bn.js
+- vendor/assets/javascripts/select2_locale_bs.js
+- vendor/assets/javascripts/select2_locale_ca.js
+- vendor/assets/javascripts/select2_locale_cs.js
+- vendor/assets/javascripts/select2_locale_da.js
+- vendor/assets/javascripts/select2_locale_de.js
+- vendor/assets/javascripts/select2_locale_dsb.js
+- vendor/assets/javascripts/select2_locale_el.js
+- vendor/assets/javascripts/select2_locale_en.js
+- vendor/assets/javascripts/select2_locale_es.js
+- vendor/assets/javascripts/select2_locale_et.js
+- vendor/assets/javascripts/select2_locale_eu.js
+- vendor/assets/javascripts/select2_locale_fa.js
+- vendor/assets/javascripts/select2_locale_fi.js
+- vendor/assets/javascripts/select2_locale_fr.js
+- vendor/assets/javascripts/select2_locale_gl.js
+- vendor/assets/javascripts/select2_locale_he.js
+- vendor/assets/javascripts/select2_locale_hi.js
+- vendor/assets/javascripts/select2_locale_hr.js
+- vendor/assets/javascripts/select2_locale_hsb.js
+- vendor/assets/javascripts/select2_locale_hu.js
+- vendor/assets/javascripts/select2_locale_hy.js
+- vendor/assets/javascripts/select2_locale_id.js
+- vendor/assets/javascripts/select2_locale_is.js
+- vendor/assets/javascripts/select2_locale_it.js
+- vendor/assets/javascripts/select2_locale_ja.js
+- vendor/assets/javascripts/select2_locale_ka.js
+- vendor/assets/javascripts/select2_locale_km.js
+- vendor/assets/javascripts/select2_locale_ko.js
+- vendor/assets/javascripts/select2_locale_lt.js
+- vendor/assets/javascripts/select2_locale_lv.js
+- vendor/assets/javascripts/select2_locale_mk.js
+- vendor/assets/javascripts/select2_locale_ms.js
+- vendor/assets/javascripts/select2_locale_nb.js
+- vendor/assets/javascripts/select2_locale_ne.js
+- vendor/assets/javascripts/select2_locale_nl.js
+- vendor/assets/javascripts/select2_locale_pl.js
+- vendor/assets/javascripts/select2_locale_ps.js
+- vendor/assets/javascripts/select2_locale_pt-BR.js
+- vendor/assets/javascripts/select2_locale_pt.js
+- vendor/assets/javascripts/select2_locale_ro.js
+- vendor/assets/javascripts/select2_locale_ru.js
+- vendor/assets/javascripts/select2_locale_sk.js
+- vendor/assets/javascripts/select2_locale_sl.js
+- vendor/assets/javascripts/select2_locale_sq.js
+- vendor/assets/javascripts/select2_locale_sr-Cyrl.js
+- vendor/assets/javascripts/select2_locale_sr.js
+- vendor/assets/javascripts/select2_locale_sv.js
+- vendor/assets/javascripts/select2_locale_th.js
+- vendor/assets/javascripts/select2_locale_tk.js
+- vendor/assets/javascripts/select2_locale_tr.js
+- vendor/assets/javascripts/select2_locale_uk.js
+- vendor/assets/javascripts/select2_locale_vi.js
+- vendor/assets/javascripts/select2_locale_zh-CN.js
+- vendor/assets/javascripts/select2_locale_zh-TW.js
+- vendor/assets/stylesheets/select2-bootstrap.css
+- vendor/assets/stylesheets/select2.css
+homepage: https://github.com/argerim/select2-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Integrate Select2 javascript library with Rails asset pipeline
+test_files: []

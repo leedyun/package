@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification
+name: murmurhash3
+version: !ruby/object:Gem::Version
+  version: 0.1.7
+platform: ruby
+authors:
+- Sokolov Yura 'funny-falcon'
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-01-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: implementation of murmur3 hashing function
+email:
+- funny.falcon@gmail.com
+executables: []
+extensions:
+- ext/murmurhash3/extconf.rb
+extra_rdoc_files: []
+files:
+- LICENSE
+- ext/murmurhash3/extconf.rb
+- ext/murmurhash3/murmur3.c
+- lib/murmurhash3.rb
+- lib/murmurhash3/aliaser.rb
+- lib/murmurhash3/native_murmur.rb
+- lib/murmurhash3/pure_ruby.rb
+- lib/murmurhash3/version.rb
+- test/test_murmur.rb
+homepage: https://github.com/funny-falcon/murmurhash3-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.1
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: implements mumur3 hashing function
+test_files:
+- test/test_murmur.rb

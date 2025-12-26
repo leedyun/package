@@ -1,0 +1,98 @@
+--- !ruby/object:Gem::Specification
+name: sax-machine
+version: !ruby/object:Gem::Version
+  version: 1.3.2
+platform: ruby
+authors:
+- Paul Dix
+- Julien Kirch
+- Ezekiel Templin
+- Dmitry Krasnoukhov
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-04-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: 
+email: paul@pauldix.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- Guardfile
+- HISTORY.md
+- README.md
+- Rakefile
+- lib/sax-machine.rb
+- lib/sax-machine/config/sax_ancestor.rb
+- lib/sax-machine/config/sax_attribute.rb
+- lib/sax-machine/config/sax_collection.rb
+- lib/sax-machine/config/sax_element.rb
+- lib/sax-machine/config/sax_element_value.rb
+- lib/sax-machine/handlers/sax_abstract_handler.rb
+- lib/sax-machine/handlers/sax_nokogiri_handler.rb
+- lib/sax-machine/handlers/sax_oga_handler.rb
+- lib/sax-machine/handlers/sax_ox_handler.rb
+- lib/sax-machine/sax_config.rb
+- lib/sax-machine/sax_configure.rb
+- lib/sax-machine/sax_document.rb
+- lib/sax-machine/version.rb
+- sax-machine.gemspec
+- spec/fixtures/atom-content.html
+- spec/fixtures/atom.xml
+- spec/sax-machine/sax_activerecord_spec.rb
+- spec/sax-machine/sax_configure_spec.rb
+- spec/sax-machine/sax_document_spec.rb
+- spec/sax-machine/sax_include_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/pauldix/sax-machine
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Declarative SAX Parsing with Nokogiri, Ox or Oga
+test_files:
+- spec/fixtures/atom-content.html
+- spec/fixtures/atom.xml
+- spec/sax-machine/sax_activerecord_spec.rb
+- spec/sax-machine/sax_configure_spec.rb
+- spec/sax-machine/sax_document_spec.rb
+- spec/sax-machine/sax_include_spec.rb
+- spec/spec_helper.rb
+has_rdoc: 

@@ -1,0 +1,28 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - gemfile: rails_8_0
+            ruby: 3.2
+          - gemfile: rails_8_0
+            ruby: 3.3
+
+    name: ${{ matrix.gemfile }}, ruby ${{ matrix.ruby }}
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+
+    - name: Run specs
+      run: bundle exec rspec

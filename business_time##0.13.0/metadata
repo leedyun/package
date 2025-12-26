@@ -1,0 +1,143 @@
+--- !ruby/object:Gem::Specification
+name: business_time
+version: !ruby/object:Gem::Version
+  version: 0.13.0
+platform: ruby
+authors:
+- bokmann
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-06-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+- !ruby/object:Gem::Dependency
+  name: tzinfo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-rg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Have you ever wanted to do things like "6.business_days.from_now" and
+  have weekends and holidays taken into account?  Now you can.
+email: dbock@javaguy.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/business_time.rb
+- lib/business_time/business_days.rb
+- lib/business_time/business_hours.rb
+- lib/business_time/config.rb
+- lib/business_time/core_ext/active_support/time_with_zone.rb
+- lib/business_time/core_ext/date.rb
+- lib/business_time/core_ext/integer.rb
+- lib/business_time/core_ext/time.rb
+- lib/business_time/parsed_time.rb
+- lib/business_time/time_extensions.rb
+- lib/business_time/version.rb
+- lib/generators/business_time/config_generator.rb
+- rails_generators/business_time_config/business_time_config_generator.rb
+- rails_generators/business_time_config/templates/business_time.rb
+- rails_generators/business_time_config/templates/business_time.yml
+homepage: https://github.com/bokmann/business_time
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.12
+signing_key:
+specification_version: 4
+summary: Support for doing time math in business hours and days
+test_files: []

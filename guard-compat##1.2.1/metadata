@@ -1,0 +1,95 @@
+--- !ruby/object:Gem::Specification
+name: guard-compat
+version: !ruby/object:Gem::Version
+  version: 1.2.1
+platform: ruby
+authors:
+- Cezary Baginski
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: Helps creating valid Guard plugins and testing them
+email:
+- cezary@chronomantic.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- guard-compat.gemspec
+- lib/guard/compat.rb
+- lib/guard/compat/example.rb
+- lib/guard/compat/plugin.rb
+- lib/guard/compat/test/helper.rb
+- lib/guard/compat/test/template.rb
+- lib/guard/compat/version.rb
+- spec/guard/compat/example_spec.rb
+- spec/guard/compat/example_template_spec.rb
+- spec/guard/compat/no_guard_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.3
+signing_key: 
+specification_version: 4
+summary: Tools for developing Guard compatible plugins
+test_files:
+- spec/guard/compat/example_spec.rb
+- spec/guard/compat/example_template_spec.rb
+- spec/guard/compat/no_guard_spec.rb
+- spec/spec_helper.rb

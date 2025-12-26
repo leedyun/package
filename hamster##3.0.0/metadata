@@ -1,0 +1,890 @@
+--- !ruby/object:Gem::Specification
+name: hamster
+version: !ruby/object:Gem::Version
+  version: 3.0.0
+platform: ruby
+authors:
+- Simon Harris
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: pry-doc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: codeclimate-test-reporter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+description: Efficient, immutable, thread-safe collection classes for Ruby
+email:
+- haruki_zaemon@mac.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/hamster.rb
+- lib/hamster/associable.rb
+- lib/hamster/core_ext.rb
+- lib/hamster/core_ext/enumerable.rb
+- lib/hamster/core_ext/io.rb
+- lib/hamster/core_ext/struct.rb
+- lib/hamster/deque.rb
+- lib/hamster/enumerable.rb
+- lib/hamster/experimental/mutable_queue.rb
+- lib/hamster/experimental/mutable_set.rb
+- lib/hamster/hash.rb
+- lib/hamster/immutable.rb
+- lib/hamster/list.rb
+- lib/hamster/mutable_hash.rb
+- lib/hamster/nested.rb
+- lib/hamster/read_copy_update.rb
+- lib/hamster/set.rb
+- lib/hamster/sorted_set.rb
+- lib/hamster/trie.rb
+- lib/hamster/undefined.rb
+- lib/hamster/vector.rb
+- lib/hamster/version.rb
+- spec/fixtures/io_spec.txt
+- spec/lib/hamster/associable/associable_spec.rb
+- spec/lib/hamster/core_ext/array_spec.rb
+- spec/lib/hamster/core_ext/enumerable_spec.rb
+- spec/lib/hamster/core_ext/io_spec.rb
+- spec/lib/hamster/deque/clear_spec.rb
+- spec/lib/hamster/deque/construction_spec.rb
+- spec/lib/hamster/deque/copying_spec.rb
+- spec/lib/hamster/deque/dequeue_spec.rb
+- spec/lib/hamster/deque/empty_spec.rb
+- spec/lib/hamster/deque/enqueue_spec.rb
+- spec/lib/hamster/deque/first_spec.rb
+- spec/lib/hamster/deque/inspect_spec.rb
+- spec/lib/hamster/deque/last_spec.rb
+- spec/lib/hamster/deque/marshal_spec.rb
+- spec/lib/hamster/deque/new_spec.rb
+- spec/lib/hamster/deque/pop_spec.rb
+- spec/lib/hamster/deque/pretty_print_spec.rb
+- spec/lib/hamster/deque/push_spec.rb
+- spec/lib/hamster/deque/random_modification_spec.rb
+- spec/lib/hamster/deque/shift_spec.rb
+- spec/lib/hamster/deque/size_spec.rb
+- spec/lib/hamster/deque/to_a_spec.rb
+- spec/lib/hamster/deque/to_ary_spec.rb
+- spec/lib/hamster/deque/to_list_spec.rb
+- spec/lib/hamster/deque/unshift_spec.rb
+- spec/lib/hamster/experimental/mutable_set/add_qm_spec.rb
+- spec/lib/hamster/experimental/mutable_set/add_spec.rb
+- spec/lib/hamster/experimental/mutable_set/delete_qm_spec.rb
+- spec/lib/hamster/experimental/mutable_set/delete_spec.rb
+- spec/lib/hamster/hash/all_spec.rb
+- spec/lib/hamster/hash/any_spec.rb
+- spec/lib/hamster/hash/assoc_spec.rb
+- spec/lib/hamster/hash/clear_spec.rb
+- spec/lib/hamster/hash/construction_spec.rb
+- spec/lib/hamster/hash/copying_spec.rb
+- spec/lib/hamster/hash/default_proc_spec.rb
+- spec/lib/hamster/hash/delete_spec.rb
+- spec/lib/hamster/hash/dig_spec.rb
+- spec/lib/hamster/hash/each_spec.rb
+- spec/lib/hamster/hash/each_with_index_spec.rb
+- spec/lib/hamster/hash/empty_spec.rb
+- spec/lib/hamster/hash/eql_spec.rb
+- spec/lib/hamster/hash/except_spec.rb
+- spec/lib/hamster/hash/fetch_spec.rb
+- spec/lib/hamster/hash/fetch_values_spec.rb
+- spec/lib/hamster/hash/find_spec.rb
+- spec/lib/hamster/hash/flat_map_spec.rb
+- spec/lib/hamster/hash/flatten_spec.rb
+- spec/lib/hamster/hash/get_spec.rb
+- spec/lib/hamster/hash/has_key_spec.rb
+- spec/lib/hamster/hash/has_value_spec.rb
+- spec/lib/hamster/hash/hash_spec.rb
+- spec/lib/hamster/hash/immutable_spec.rb
+- spec/lib/hamster/hash/inspect_spec.rb
+- spec/lib/hamster/hash/invert_spec.rb
+- spec/lib/hamster/hash/key_spec.rb
+- spec/lib/hamster/hash/keys_spec.rb
+- spec/lib/hamster/hash/map_spec.rb
+- spec/lib/hamster/hash/marshal_spec.rb
+- spec/lib/hamster/hash/merge_spec.rb
+- spec/lib/hamster/hash/min_max_spec.rb
+- spec/lib/hamster/hash/new_spec.rb
+- spec/lib/hamster/hash/none_spec.rb
+- spec/lib/hamster/hash/partition_spec.rb
+- spec/lib/hamster/hash/pretty_print_spec.rb
+- spec/lib/hamster/hash/put_spec.rb
+- spec/lib/hamster/hash/reduce_spec.rb
+- spec/lib/hamster/hash/reject_spec.rb
+- spec/lib/hamster/hash/reverse_each_spec.rb
+- spec/lib/hamster/hash/sample_spec.rb
+- spec/lib/hamster/hash/select_spec.rb
+- spec/lib/hamster/hash/size_spec.rb
+- spec/lib/hamster/hash/slice_spec.rb
+- spec/lib/hamster/hash/sort_spec.rb
+- spec/lib/hamster/hash/store_spec.rb
+- spec/lib/hamster/hash/subset_spec.rb
+- spec/lib/hamster/hash/superset_spec.rb
+- spec/lib/hamster/hash/take_spec.rb
+- spec/lib/hamster/hash/to_a_spec.rb
+- spec/lib/hamster/hash/to_hash_spec.rb
+- spec/lib/hamster/hash/to_proc_spec.rb
+- spec/lib/hamster/hash/values_at_spec.rb
+- spec/lib/hamster/hash/values_spec.rb
+- spec/lib/hamster/immutable/copying_spec.rb
+- spec/lib/hamster/immutable/immutable_spec.rb
+- spec/lib/hamster/immutable/memoize_spec.rb
+- spec/lib/hamster/immutable/new_spec.rb
+- spec/lib/hamster/immutable/transform_spec.rb
+- spec/lib/hamster/immutable/transform_unless_spec.rb
+- spec/lib/hamster/list/add_spec.rb
+- spec/lib/hamster/list/all_spec.rb
+- spec/lib/hamster/list/any_spec.rb
+- spec/lib/hamster/list/append_spec.rb
+- spec/lib/hamster/list/at_spec.rb
+- spec/lib/hamster/list/break_spec.rb
+- spec/lib/hamster/list/cadr_spec.rb
+- spec/lib/hamster/list/chunk_spec.rb
+- spec/lib/hamster/list/clear_spec.rb
+- spec/lib/hamster/list/combination_spec.rb
+- spec/lib/hamster/list/compact_spec.rb
+- spec/lib/hamster/list/compare_spec.rb
+- spec/lib/hamster/list/cons_spec.rb
+- spec/lib/hamster/list/construction_spec.rb
+- spec/lib/hamster/list/copying_spec.rb
+- spec/lib/hamster/list/count_spec.rb
+- spec/lib/hamster/list/cycle_spec.rb
+- spec/lib/hamster/list/delete_at_spec.rb
+- spec/lib/hamster/list/delete_spec.rb
+- spec/lib/hamster/list/drop_spec.rb
+- spec/lib/hamster/list/drop_while_spec.rb
+- spec/lib/hamster/list/each_slice_spec.rb
+- spec/lib/hamster/list/each_spec.rb
+- spec/lib/hamster/list/each_with_index_spec.rb
+- spec/lib/hamster/list/empty_spec.rb
+- spec/lib/hamster/list/eql_spec.rb
+- spec/lib/hamster/list/fill_spec.rb
+- spec/lib/hamster/list/find_all_spec.rb
+- spec/lib/hamster/list/find_index_spec.rb
+- spec/lib/hamster/list/find_spec.rb
+- spec/lib/hamster/list/flat_map_spec.rb
+- spec/lib/hamster/list/flatten_spec.rb
+- spec/lib/hamster/list/grep_spec.rb
+- spec/lib/hamster/list/group_by_spec.rb
+- spec/lib/hamster/list/hash_spec.rb
+- spec/lib/hamster/list/head_spec.rb
+- spec/lib/hamster/list/include_spec.rb
+- spec/lib/hamster/list/index_spec.rb
+- spec/lib/hamster/list/indices_spec.rb
+- spec/lib/hamster/list/init_spec.rb
+- spec/lib/hamster/list/inits_spec.rb
+- spec/lib/hamster/list/insert_spec.rb
+- spec/lib/hamster/list/inspect_spec.rb
+- spec/lib/hamster/list/intersperse_spec.rb
+- spec/lib/hamster/list/join_spec.rb
+- spec/lib/hamster/list/last_spec.rb
+- spec/lib/hamster/list/ltlt_spec.rb
+- spec/lib/hamster/list/map_spec.rb
+- spec/lib/hamster/list/maximum_spec.rb
+- spec/lib/hamster/list/merge_by_spec.rb
+- spec/lib/hamster/list/merge_spec.rb
+- spec/lib/hamster/list/minimum_spec.rb
+- spec/lib/hamster/list/multithreading_spec.rb
+- spec/lib/hamster/list/none_spec.rb
+- spec/lib/hamster/list/one_spec.rb
+- spec/lib/hamster/list/partition_spec.rb
+- spec/lib/hamster/list/permutation_spec.rb
+- spec/lib/hamster/list/pop_spec.rb
+- spec/lib/hamster/list/product_spec.rb
+- spec/lib/hamster/list/reduce_spec.rb
+- spec/lib/hamster/list/reject_spec.rb
+- spec/lib/hamster/list/reverse_spec.rb
+- spec/lib/hamster/list/rotate_spec.rb
+- spec/lib/hamster/list/sample_spec.rb
+- spec/lib/hamster/list/select_spec.rb
+- spec/lib/hamster/list/size_spec.rb
+- spec/lib/hamster/list/slice_spec.rb
+- spec/lib/hamster/list/sorting_spec.rb
+- spec/lib/hamster/list/span_spec.rb
+- spec/lib/hamster/list/split_at_spec.rb
+- spec/lib/hamster/list/subsequences_spec.rb
+- spec/lib/hamster/list/sum_spec.rb
+- spec/lib/hamster/list/tail_spec.rb
+- spec/lib/hamster/list/tails_spec.rb
+- spec/lib/hamster/list/take_spec.rb
+- spec/lib/hamster/list/take_while_spec.rb
+- spec/lib/hamster/list/to_a_spec.rb
+- spec/lib/hamster/list/to_ary_spec.rb
+- spec/lib/hamster/list/to_list_spec.rb
+- spec/lib/hamster/list/to_set_spec.rb
+- spec/lib/hamster/list/transpose_spec.rb
+- spec/lib/hamster/list/union_spec.rb
+- spec/lib/hamster/list/uniq_spec.rb
+- spec/lib/hamster/list/zip_spec.rb
+- spec/lib/hamster/nested/construction_spec.rb
+- spec/lib/hamster/set/add_spec.rb
+- spec/lib/hamster/set/all_spec.rb
+- spec/lib/hamster/set/any_spec.rb
+- spec/lib/hamster/set/clear_spec.rb
+- spec/lib/hamster/set/compact_spec.rb
+- spec/lib/hamster/set/construction_spec.rb
+- spec/lib/hamster/set/copying_spec.rb
+- spec/lib/hamster/set/count_spec.rb
+- spec/lib/hamster/set/delete_spec.rb
+- spec/lib/hamster/set/difference_spec.rb
+- spec/lib/hamster/set/disjoint_spec.rb
+- spec/lib/hamster/set/each_spec.rb
+- spec/lib/hamster/set/empty_spec.rb
+- spec/lib/hamster/set/eqeq_spec.rb
+- spec/lib/hamster/set/eql_spec.rb
+- spec/lib/hamster/set/exclusion_spec.rb
+- spec/lib/hamster/set/find_spec.rb
+- spec/lib/hamster/set/first_spec.rb
+- spec/lib/hamster/set/flatten_spec.rb
+- spec/lib/hamster/set/grep_spec.rb
+- spec/lib/hamster/set/grep_v_spec.rb
+- spec/lib/hamster/set/group_by_spec.rb
+- spec/lib/hamster/set/hash_spec.rb
+- spec/lib/hamster/set/immutable_spec.rb
+- spec/lib/hamster/set/include_spec.rb
+- spec/lib/hamster/set/inspect_spec.rb
+- spec/lib/hamster/set/intersect_spec.rb
+- spec/lib/hamster/set/intersection_spec.rb
+- spec/lib/hamster/set/join_spec.rb
+- spec/lib/hamster/set/map_spec.rb
+- spec/lib/hamster/set/marshal_spec.rb
+- spec/lib/hamster/set/maximum_spec.rb
+- spec/lib/hamster/set/minimum_spec.rb
+- spec/lib/hamster/set/new_spec.rb
+- spec/lib/hamster/set/none_spec.rb
+- spec/lib/hamster/set/one_spec.rb
+- spec/lib/hamster/set/partition_spec.rb
+- spec/lib/hamster/set/product_spec.rb
+- spec/lib/hamster/set/reduce_spec.rb
+- spec/lib/hamster/set/reject_spec.rb
+- spec/lib/hamster/set/reverse_each_spec.rb
+- spec/lib/hamster/set/sample_spec.rb
+- spec/lib/hamster/set/select_spec.rb
+- spec/lib/hamster/set/size_spec.rb
+- spec/lib/hamster/set/sorting_spec.rb
+- spec/lib/hamster/set/subset_spec.rb
+- spec/lib/hamster/set/sum_spec.rb
+- spec/lib/hamster/set/superset_spec.rb
+- spec/lib/hamster/set/to_a_spec.rb
+- spec/lib/hamster/set/to_list_spec.rb
+- spec/lib/hamster/set/to_set_spec.rb
+- spec/lib/hamster/set/union_spec.rb
+- spec/lib/hamster/sorted_set/above_spec.rb
+- spec/lib/hamster/sorted_set/add_spec.rb
+- spec/lib/hamster/sorted_set/at_spec.rb
+- spec/lib/hamster/sorted_set/below_spec.rb
+- spec/lib/hamster/sorted_set/between_spec.rb
+- spec/lib/hamster/sorted_set/clear_spec.rb
+- spec/lib/hamster/sorted_set/copying_spec.rb
+- spec/lib/hamster/sorted_set/delete_at_spec.rb
+- spec/lib/hamster/sorted_set/delete_spec.rb
+- spec/lib/hamster/sorted_set/difference_spec.rb
+- spec/lib/hamster/sorted_set/disjoint_spec.rb
+- spec/lib/hamster/sorted_set/drop_spec.rb
+- spec/lib/hamster/sorted_set/drop_while_spec.rb
+- spec/lib/hamster/sorted_set/each_spec.rb
+- spec/lib/hamster/sorted_set/empty_spec.rb
+- spec/lib/hamster/sorted_set/eql_spec.rb
+- spec/lib/hamster/sorted_set/exclusion_spec.rb
+- spec/lib/hamster/sorted_set/fetch_spec.rb
+- spec/lib/hamster/sorted_set/find_index_spec.rb
+- spec/lib/hamster/sorted_set/first_spec.rb
+- spec/lib/hamster/sorted_set/from_spec.rb
+- spec/lib/hamster/sorted_set/group_by_spec.rb
+- spec/lib/hamster/sorted_set/include_spec.rb
+- spec/lib/hamster/sorted_set/inspect_spec.rb
+- spec/lib/hamster/sorted_set/intersect_spec.rb
+- spec/lib/hamster/sorted_set/intersection_spec.rb
+- spec/lib/hamster/sorted_set/last_spec.rb
+- spec/lib/hamster/sorted_set/map_spec.rb
+- spec/lib/hamster/sorted_set/marshal_spec.rb
+- spec/lib/hamster/sorted_set/maximum_spec.rb
+- spec/lib/hamster/sorted_set/minimum_spec.rb
+- spec/lib/hamster/sorted_set/new_spec.rb
+- spec/lib/hamster/sorted_set/reverse_each_spec.rb
+- spec/lib/hamster/sorted_set/sample_spec.rb
+- spec/lib/hamster/sorted_set/select_spec.rb
+- spec/lib/hamster/sorted_set/size_spec.rb
+- spec/lib/hamster/sorted_set/slice_spec.rb
+- spec/lib/hamster/sorted_set/sorting_spec.rb
+- spec/lib/hamster/sorted_set/subset_spec.rb
+- spec/lib/hamster/sorted_set/superset_spec.rb
+- spec/lib/hamster/sorted_set/take_spec.rb
+- spec/lib/hamster/sorted_set/take_while_spec.rb
+- spec/lib/hamster/sorted_set/to_set_spec.rb
+- spec/lib/hamster/sorted_set/union_spec.rb
+- spec/lib/hamster/sorted_set/up_to_spec.rb
+- spec/lib/hamster/sorted_set/values_at_spec.rb
+- spec/lib/hamster/vector/add_spec.rb
+- spec/lib/hamster/vector/any_spec.rb
+- spec/lib/hamster/vector/assoc_spec.rb
+- spec/lib/hamster/vector/bsearch_spec.rb
+- spec/lib/hamster/vector/clear_spec.rb
+- spec/lib/hamster/vector/combination_spec.rb
+- spec/lib/hamster/vector/compact_spec.rb
+- spec/lib/hamster/vector/compare_spec.rb
+- spec/lib/hamster/vector/concat_spec.rb
+- spec/lib/hamster/vector/copying_spec.rb
+- spec/lib/hamster/vector/count_spec.rb
+- spec/lib/hamster/vector/delete_at_spec.rb
+- spec/lib/hamster/vector/delete_spec.rb
+- spec/lib/hamster/vector/dig_spec.rb
+- spec/lib/hamster/vector/drop_spec.rb
+- spec/lib/hamster/vector/drop_while_spec.rb
+- spec/lib/hamster/vector/each_index_spec.rb
+- spec/lib/hamster/vector/each_spec.rb
+- spec/lib/hamster/vector/each_with_index_spec.rb
+- spec/lib/hamster/vector/empty_spec.rb
+- spec/lib/hamster/vector/eql_spec.rb
+- spec/lib/hamster/vector/fetch_spec.rb
+- spec/lib/hamster/vector/fill_spec.rb
+- spec/lib/hamster/vector/first_spec.rb
+- spec/lib/hamster/vector/flat_map_spec.rb
+- spec/lib/hamster/vector/flatten_spec.rb
+- spec/lib/hamster/vector/get_spec.rb
+- spec/lib/hamster/vector/group_by_spec.rb
+- spec/lib/hamster/vector/include_spec.rb
+- spec/lib/hamster/vector/insert_spec.rb
+- spec/lib/hamster/vector/inspect_spec.rb
+- spec/lib/hamster/vector/join_spec.rb
+- spec/lib/hamster/vector/last_spec.rb
+- spec/lib/hamster/vector/length_spec.rb
+- spec/lib/hamster/vector/ltlt_spec.rb
+- spec/lib/hamster/vector/map_spec.rb
+- spec/lib/hamster/vector/marshal_spec.rb
+- spec/lib/hamster/vector/maximum_spec.rb
+- spec/lib/hamster/vector/minimum_spec.rb
+- spec/lib/hamster/vector/multiply_spec.rb
+- spec/lib/hamster/vector/new_spec.rb
+- spec/lib/hamster/vector/partition_spec.rb
+- spec/lib/hamster/vector/permutation_spec.rb
+- spec/lib/hamster/vector/pop_spec.rb
+- spec/lib/hamster/vector/product_spec.rb
+- spec/lib/hamster/vector/put_spec.rb
+- spec/lib/hamster/vector/reduce_spec.rb
+- spec/lib/hamster/vector/reject_spec.rb
+- spec/lib/hamster/vector/repeated_combination_spec.rb
+- spec/lib/hamster/vector/repeated_permutation_spec.rb
+- spec/lib/hamster/vector/reverse_each_spec.rb
+- spec/lib/hamster/vector/reverse_spec.rb
+- spec/lib/hamster/vector/rindex_spec.rb
+- spec/lib/hamster/vector/rotate_spec.rb
+- spec/lib/hamster/vector/sample_spec.rb
+- spec/lib/hamster/vector/select_spec.rb
+- spec/lib/hamster/vector/set_spec.rb
+- spec/lib/hamster/vector/shift_spec.rb
+- spec/lib/hamster/vector/shuffle_spec.rb
+- spec/lib/hamster/vector/slice_spec.rb
+- spec/lib/hamster/vector/sorting_spec.rb
+- spec/lib/hamster/vector/sum_spec.rb
+- spec/lib/hamster/vector/take_spec.rb
+- spec/lib/hamster/vector/take_while_spec.rb
+- spec/lib/hamster/vector/to_a_spec.rb
+- spec/lib/hamster/vector/to_ary_spec.rb
+- spec/lib/hamster/vector/to_list_spec.rb
+- spec/lib/hamster/vector/to_set_spec.rb
+- spec/lib/hamster/vector/transpose_spec.rb
+- spec/lib/hamster/vector/uniq_spec.rb
+- spec/lib/hamster/vector/unshift_spec.rb
+- spec/lib/hamster/vector/values_at_spec.rb
+- spec/lib/hamster/vector/zip_spec.rb
+- spec/lib/load_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/hamstergem/hamster
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.8
+signing_key: 
+specification_version: 4
+summary: Efficient, immutable, thread-safe collection classes for Ruby
+test_files:
+- spec/fixtures/io_spec.txt
+- spec/lib/hamster/associable/associable_spec.rb
+- spec/lib/hamster/core_ext/array_spec.rb
+- spec/lib/hamster/core_ext/enumerable_spec.rb
+- spec/lib/hamster/core_ext/io_spec.rb
+- spec/lib/hamster/deque/clear_spec.rb
+- spec/lib/hamster/deque/construction_spec.rb
+- spec/lib/hamster/deque/copying_spec.rb
+- spec/lib/hamster/deque/dequeue_spec.rb
+- spec/lib/hamster/deque/empty_spec.rb
+- spec/lib/hamster/deque/enqueue_spec.rb
+- spec/lib/hamster/deque/first_spec.rb
+- spec/lib/hamster/deque/inspect_spec.rb
+- spec/lib/hamster/deque/last_spec.rb
+- spec/lib/hamster/deque/marshal_spec.rb
+- spec/lib/hamster/deque/new_spec.rb
+- spec/lib/hamster/deque/pop_spec.rb
+- spec/lib/hamster/deque/pretty_print_spec.rb
+- spec/lib/hamster/deque/push_spec.rb
+- spec/lib/hamster/deque/random_modification_spec.rb
+- spec/lib/hamster/deque/shift_spec.rb
+- spec/lib/hamster/deque/size_spec.rb
+- spec/lib/hamster/deque/to_a_spec.rb
+- spec/lib/hamster/deque/to_ary_spec.rb
+- spec/lib/hamster/deque/to_list_spec.rb
+- spec/lib/hamster/deque/unshift_spec.rb
+- spec/lib/hamster/experimental/mutable_set/add_qm_spec.rb
+- spec/lib/hamster/experimental/mutable_set/add_spec.rb
+- spec/lib/hamster/experimental/mutable_set/delete_qm_spec.rb
+- spec/lib/hamster/experimental/mutable_set/delete_spec.rb
+- spec/lib/hamster/hash/all_spec.rb
+- spec/lib/hamster/hash/any_spec.rb
+- spec/lib/hamster/hash/assoc_spec.rb
+- spec/lib/hamster/hash/clear_spec.rb
+- spec/lib/hamster/hash/construction_spec.rb
+- spec/lib/hamster/hash/copying_spec.rb
+- spec/lib/hamster/hash/default_proc_spec.rb
+- spec/lib/hamster/hash/delete_spec.rb
+- spec/lib/hamster/hash/dig_spec.rb
+- spec/lib/hamster/hash/each_spec.rb
+- spec/lib/hamster/hash/each_with_index_spec.rb
+- spec/lib/hamster/hash/empty_spec.rb
+- spec/lib/hamster/hash/eql_spec.rb
+- spec/lib/hamster/hash/except_spec.rb
+- spec/lib/hamster/hash/fetch_spec.rb
+- spec/lib/hamster/hash/fetch_values_spec.rb
+- spec/lib/hamster/hash/find_spec.rb
+- spec/lib/hamster/hash/flat_map_spec.rb
+- spec/lib/hamster/hash/flatten_spec.rb
+- spec/lib/hamster/hash/get_spec.rb
+- spec/lib/hamster/hash/has_key_spec.rb
+- spec/lib/hamster/hash/has_value_spec.rb
+- spec/lib/hamster/hash/hash_spec.rb
+- spec/lib/hamster/hash/immutable_spec.rb
+- spec/lib/hamster/hash/inspect_spec.rb
+- spec/lib/hamster/hash/invert_spec.rb
+- spec/lib/hamster/hash/key_spec.rb
+- spec/lib/hamster/hash/keys_spec.rb
+- spec/lib/hamster/hash/map_spec.rb
+- spec/lib/hamster/hash/marshal_spec.rb
+- spec/lib/hamster/hash/merge_spec.rb
+- spec/lib/hamster/hash/min_max_spec.rb
+- spec/lib/hamster/hash/new_spec.rb
+- spec/lib/hamster/hash/none_spec.rb
+- spec/lib/hamster/hash/partition_spec.rb
+- spec/lib/hamster/hash/pretty_print_spec.rb
+- spec/lib/hamster/hash/put_spec.rb
+- spec/lib/hamster/hash/reduce_spec.rb
+- spec/lib/hamster/hash/reject_spec.rb
+- spec/lib/hamster/hash/reverse_each_spec.rb
+- spec/lib/hamster/hash/sample_spec.rb
+- spec/lib/hamster/hash/select_spec.rb
+- spec/lib/hamster/hash/size_spec.rb
+- spec/lib/hamster/hash/slice_spec.rb
+- spec/lib/hamster/hash/sort_spec.rb
+- spec/lib/hamster/hash/store_spec.rb
+- spec/lib/hamster/hash/subset_spec.rb
+- spec/lib/hamster/hash/superset_spec.rb
+- spec/lib/hamster/hash/take_spec.rb
+- spec/lib/hamster/hash/to_a_spec.rb
+- spec/lib/hamster/hash/to_hash_spec.rb
+- spec/lib/hamster/hash/to_proc_spec.rb
+- spec/lib/hamster/hash/values_at_spec.rb
+- spec/lib/hamster/hash/values_spec.rb
+- spec/lib/hamster/immutable/copying_spec.rb
+- spec/lib/hamster/immutable/immutable_spec.rb
+- spec/lib/hamster/immutable/memoize_spec.rb
+- spec/lib/hamster/immutable/new_spec.rb
+- spec/lib/hamster/immutable/transform_spec.rb
+- spec/lib/hamster/immutable/transform_unless_spec.rb
+- spec/lib/hamster/list/add_spec.rb
+- spec/lib/hamster/list/all_spec.rb
+- spec/lib/hamster/list/any_spec.rb
+- spec/lib/hamster/list/append_spec.rb
+- spec/lib/hamster/list/at_spec.rb
+- spec/lib/hamster/list/break_spec.rb
+- spec/lib/hamster/list/cadr_spec.rb
+- spec/lib/hamster/list/chunk_spec.rb
+- spec/lib/hamster/list/clear_spec.rb
+- spec/lib/hamster/list/combination_spec.rb
+- spec/lib/hamster/list/compact_spec.rb
+- spec/lib/hamster/list/compare_spec.rb
+- spec/lib/hamster/list/cons_spec.rb
+- spec/lib/hamster/list/construction_spec.rb
+- spec/lib/hamster/list/copying_spec.rb
+- spec/lib/hamster/list/count_spec.rb
+- spec/lib/hamster/list/cycle_spec.rb
+- spec/lib/hamster/list/delete_at_spec.rb
+- spec/lib/hamster/list/delete_spec.rb
+- spec/lib/hamster/list/drop_spec.rb
+- spec/lib/hamster/list/drop_while_spec.rb
+- spec/lib/hamster/list/each_slice_spec.rb
+- spec/lib/hamster/list/each_spec.rb
+- spec/lib/hamster/list/each_with_index_spec.rb
+- spec/lib/hamster/list/empty_spec.rb
+- spec/lib/hamster/list/eql_spec.rb
+- spec/lib/hamster/list/fill_spec.rb
+- spec/lib/hamster/list/find_all_spec.rb
+- spec/lib/hamster/list/find_index_spec.rb
+- spec/lib/hamster/list/find_spec.rb
+- spec/lib/hamster/list/flat_map_spec.rb
+- spec/lib/hamster/list/flatten_spec.rb
+- spec/lib/hamster/list/grep_spec.rb
+- spec/lib/hamster/list/group_by_spec.rb
+- spec/lib/hamster/list/hash_spec.rb
+- spec/lib/hamster/list/head_spec.rb
+- spec/lib/hamster/list/include_spec.rb
+- spec/lib/hamster/list/index_spec.rb
+- spec/lib/hamster/list/indices_spec.rb
+- spec/lib/hamster/list/init_spec.rb
+- spec/lib/hamster/list/inits_spec.rb
+- spec/lib/hamster/list/insert_spec.rb
+- spec/lib/hamster/list/inspect_spec.rb
+- spec/lib/hamster/list/intersperse_spec.rb
+- spec/lib/hamster/list/join_spec.rb
+- spec/lib/hamster/list/last_spec.rb
+- spec/lib/hamster/list/ltlt_spec.rb
+- spec/lib/hamster/list/map_spec.rb
+- spec/lib/hamster/list/maximum_spec.rb
+- spec/lib/hamster/list/merge_by_spec.rb
+- spec/lib/hamster/list/merge_spec.rb
+- spec/lib/hamster/list/minimum_spec.rb
+- spec/lib/hamster/list/multithreading_spec.rb
+- spec/lib/hamster/list/none_spec.rb
+- spec/lib/hamster/list/one_spec.rb
+- spec/lib/hamster/list/partition_spec.rb
+- spec/lib/hamster/list/permutation_spec.rb
+- spec/lib/hamster/list/pop_spec.rb
+- spec/lib/hamster/list/product_spec.rb
+- spec/lib/hamster/list/reduce_spec.rb
+- spec/lib/hamster/list/reject_spec.rb
+- spec/lib/hamster/list/reverse_spec.rb
+- spec/lib/hamster/list/rotate_spec.rb
+- spec/lib/hamster/list/sample_spec.rb
+- spec/lib/hamster/list/select_spec.rb
+- spec/lib/hamster/list/size_spec.rb
+- spec/lib/hamster/list/slice_spec.rb
+- spec/lib/hamster/list/sorting_spec.rb
+- spec/lib/hamster/list/span_spec.rb
+- spec/lib/hamster/list/split_at_spec.rb
+- spec/lib/hamster/list/subsequences_spec.rb
+- spec/lib/hamster/list/sum_spec.rb
+- spec/lib/hamster/list/tail_spec.rb
+- spec/lib/hamster/list/tails_spec.rb
+- spec/lib/hamster/list/take_spec.rb
+- spec/lib/hamster/list/take_while_spec.rb
+- spec/lib/hamster/list/to_a_spec.rb
+- spec/lib/hamster/list/to_ary_spec.rb
+- spec/lib/hamster/list/to_list_spec.rb
+- spec/lib/hamster/list/to_set_spec.rb
+- spec/lib/hamster/list/transpose_spec.rb
+- spec/lib/hamster/list/union_spec.rb
+- spec/lib/hamster/list/uniq_spec.rb
+- spec/lib/hamster/list/zip_spec.rb
+- spec/lib/hamster/nested/construction_spec.rb
+- spec/lib/hamster/set/add_spec.rb
+- spec/lib/hamster/set/all_spec.rb
+- spec/lib/hamster/set/any_spec.rb
+- spec/lib/hamster/set/clear_spec.rb
+- spec/lib/hamster/set/compact_spec.rb
+- spec/lib/hamster/set/construction_spec.rb
+- spec/lib/hamster/set/copying_spec.rb
+- spec/lib/hamster/set/count_spec.rb
+- spec/lib/hamster/set/delete_spec.rb
+- spec/lib/hamster/set/difference_spec.rb
+- spec/lib/hamster/set/disjoint_spec.rb
+- spec/lib/hamster/set/each_spec.rb
+- spec/lib/hamster/set/empty_spec.rb
+- spec/lib/hamster/set/eqeq_spec.rb
+- spec/lib/hamster/set/eql_spec.rb
+- spec/lib/hamster/set/exclusion_spec.rb
+- spec/lib/hamster/set/find_spec.rb
+- spec/lib/hamster/set/first_spec.rb
+- spec/lib/hamster/set/flatten_spec.rb
+- spec/lib/hamster/set/grep_spec.rb
+- spec/lib/hamster/set/grep_v_spec.rb
+- spec/lib/hamster/set/group_by_spec.rb
+- spec/lib/hamster/set/hash_spec.rb
+- spec/lib/hamster/set/immutable_spec.rb
+- spec/lib/hamster/set/include_spec.rb
+- spec/lib/hamster/set/inspect_spec.rb
+- spec/lib/hamster/set/intersect_spec.rb
+- spec/lib/hamster/set/intersection_spec.rb
+- spec/lib/hamster/set/join_spec.rb
+- spec/lib/hamster/set/map_spec.rb
+- spec/lib/hamster/set/marshal_spec.rb
+- spec/lib/hamster/set/maximum_spec.rb
+- spec/lib/hamster/set/minimum_spec.rb
+- spec/lib/hamster/set/new_spec.rb
+- spec/lib/hamster/set/none_spec.rb
+- spec/lib/hamster/set/one_spec.rb
+- spec/lib/hamster/set/partition_spec.rb
+- spec/lib/hamster/set/product_spec.rb
+- spec/lib/hamster/set/reduce_spec.rb
+- spec/lib/hamster/set/reject_spec.rb
+- spec/lib/hamster/set/reverse_each_spec.rb
+- spec/lib/hamster/set/sample_spec.rb
+- spec/lib/hamster/set/select_spec.rb
+- spec/lib/hamster/set/size_spec.rb
+- spec/lib/hamster/set/sorting_spec.rb
+- spec/lib/hamster/set/subset_spec.rb
+- spec/lib/hamster/set/sum_spec.rb
+- spec/lib/hamster/set/superset_spec.rb
+- spec/lib/hamster/set/to_a_spec.rb
+- spec/lib/hamster/set/to_list_spec.rb
+- spec/lib/hamster/set/to_set_spec.rb
+- spec/lib/hamster/set/union_spec.rb
+- spec/lib/hamster/sorted_set/above_spec.rb
+- spec/lib/hamster/sorted_set/add_spec.rb
+- spec/lib/hamster/sorted_set/at_spec.rb
+- spec/lib/hamster/sorted_set/below_spec.rb
+- spec/lib/hamster/sorted_set/between_spec.rb
+- spec/lib/hamster/sorted_set/clear_spec.rb
+- spec/lib/hamster/sorted_set/copying_spec.rb
+- spec/lib/hamster/sorted_set/delete_at_spec.rb
+- spec/lib/hamster/sorted_set/delete_spec.rb
+- spec/lib/hamster/sorted_set/difference_spec.rb
+- spec/lib/hamster/sorted_set/disjoint_spec.rb
+- spec/lib/hamster/sorted_set/drop_spec.rb
+- spec/lib/hamster/sorted_set/drop_while_spec.rb
+- spec/lib/hamster/sorted_set/each_spec.rb
+- spec/lib/hamster/sorted_set/empty_spec.rb
+- spec/lib/hamster/sorted_set/eql_spec.rb
+- spec/lib/hamster/sorted_set/exclusion_spec.rb
+- spec/lib/hamster/sorted_set/fetch_spec.rb
+- spec/lib/hamster/sorted_set/find_index_spec.rb
+- spec/lib/hamster/sorted_set/first_spec.rb
+- spec/lib/hamster/sorted_set/from_spec.rb
+- spec/lib/hamster/sorted_set/group_by_spec.rb
+- spec/lib/hamster/sorted_set/include_spec.rb
+- spec/lib/hamster/sorted_set/inspect_spec.rb
+- spec/lib/hamster/sorted_set/intersect_spec.rb
+- spec/lib/hamster/sorted_set/intersection_spec.rb
+- spec/lib/hamster/sorted_set/last_spec.rb
+- spec/lib/hamster/sorted_set/map_spec.rb
+- spec/lib/hamster/sorted_set/marshal_spec.rb
+- spec/lib/hamster/sorted_set/maximum_spec.rb
+- spec/lib/hamster/sorted_set/minimum_spec.rb
+- spec/lib/hamster/sorted_set/new_spec.rb
+- spec/lib/hamster/sorted_set/reverse_each_spec.rb
+- spec/lib/hamster/sorted_set/sample_spec.rb
+- spec/lib/hamster/sorted_set/select_spec.rb
+- spec/lib/hamster/sorted_set/size_spec.rb
+- spec/lib/hamster/sorted_set/slice_spec.rb
+- spec/lib/hamster/sorted_set/sorting_spec.rb
+- spec/lib/hamster/sorted_set/subset_spec.rb
+- spec/lib/hamster/sorted_set/superset_spec.rb
+- spec/lib/hamster/sorted_set/take_spec.rb
+- spec/lib/hamster/sorted_set/take_while_spec.rb
+- spec/lib/hamster/sorted_set/to_set_spec.rb
+- spec/lib/hamster/sorted_set/union_spec.rb
+- spec/lib/hamster/sorted_set/up_to_spec.rb
+- spec/lib/hamster/sorted_set/values_at_spec.rb
+- spec/lib/hamster/vector/add_spec.rb
+- spec/lib/hamster/vector/any_spec.rb
+- spec/lib/hamster/vector/assoc_spec.rb
+- spec/lib/hamster/vector/bsearch_spec.rb
+- spec/lib/hamster/vector/clear_spec.rb
+- spec/lib/hamster/vector/combination_spec.rb
+- spec/lib/hamster/vector/compact_spec.rb
+- spec/lib/hamster/vector/compare_spec.rb
+- spec/lib/hamster/vector/concat_spec.rb
+- spec/lib/hamster/vector/copying_spec.rb
+- spec/lib/hamster/vector/count_spec.rb
+- spec/lib/hamster/vector/delete_at_spec.rb
+- spec/lib/hamster/vector/delete_spec.rb
+- spec/lib/hamster/vector/dig_spec.rb
+- spec/lib/hamster/vector/drop_spec.rb
+- spec/lib/hamster/vector/drop_while_spec.rb
+- spec/lib/hamster/vector/each_index_spec.rb
+- spec/lib/hamster/vector/each_spec.rb
+- spec/lib/hamster/vector/each_with_index_spec.rb
+- spec/lib/hamster/vector/empty_spec.rb
+- spec/lib/hamster/vector/eql_spec.rb
+- spec/lib/hamster/vector/fetch_spec.rb
+- spec/lib/hamster/vector/fill_spec.rb
+- spec/lib/hamster/vector/first_spec.rb
+- spec/lib/hamster/vector/flat_map_spec.rb
+- spec/lib/hamster/vector/flatten_spec.rb
+- spec/lib/hamster/vector/get_spec.rb
+- spec/lib/hamster/vector/group_by_spec.rb
+- spec/lib/hamster/vector/include_spec.rb
+- spec/lib/hamster/vector/insert_spec.rb
+- spec/lib/hamster/vector/inspect_spec.rb
+- spec/lib/hamster/vector/join_spec.rb
+- spec/lib/hamster/vector/last_spec.rb
+- spec/lib/hamster/vector/length_spec.rb
+- spec/lib/hamster/vector/ltlt_spec.rb
+- spec/lib/hamster/vector/map_spec.rb
+- spec/lib/hamster/vector/marshal_spec.rb
+- spec/lib/hamster/vector/maximum_spec.rb
+- spec/lib/hamster/vector/minimum_spec.rb
+- spec/lib/hamster/vector/multiply_spec.rb
+- spec/lib/hamster/vector/new_spec.rb
+- spec/lib/hamster/vector/partition_spec.rb
+- spec/lib/hamster/vector/permutation_spec.rb
+- spec/lib/hamster/vector/pop_spec.rb
+- spec/lib/hamster/vector/product_spec.rb
+- spec/lib/hamster/vector/put_spec.rb
+- spec/lib/hamster/vector/reduce_spec.rb
+- spec/lib/hamster/vector/reject_spec.rb
+- spec/lib/hamster/vector/repeated_combination_spec.rb
+- spec/lib/hamster/vector/repeated_permutation_spec.rb
+- spec/lib/hamster/vector/reverse_each_spec.rb
+- spec/lib/hamster/vector/reverse_spec.rb
+- spec/lib/hamster/vector/rindex_spec.rb
+- spec/lib/hamster/vector/rotate_spec.rb
+- spec/lib/hamster/vector/sample_spec.rb
+- spec/lib/hamster/vector/select_spec.rb
+- spec/lib/hamster/vector/set_spec.rb
+- spec/lib/hamster/vector/shift_spec.rb
+- spec/lib/hamster/vector/shuffle_spec.rb
+- spec/lib/hamster/vector/slice_spec.rb
+- spec/lib/hamster/vector/sorting_spec.rb
+- spec/lib/hamster/vector/sum_spec.rb
+- spec/lib/hamster/vector/take_spec.rb
+- spec/lib/hamster/vector/take_while_spec.rb
+- spec/lib/hamster/vector/to_a_spec.rb
+- spec/lib/hamster/vector/to_ary_spec.rb
+- spec/lib/hamster/vector/to_list_spec.rb
+- spec/lib/hamster/vector/to_set_spec.rb
+- spec/lib/hamster/vector/transpose_spec.rb
+- spec/lib/hamster/vector/uniq_spec.rb
+- spec/lib/hamster/vector/unshift_spec.rb
+- spec/lib/hamster/vector/values_at_spec.rb
+- spec/lib/hamster/vector/zip_spec.rb
+- spec/lib/load_spec.rb
+- spec/spec_helper.rb
+has_rdoc: 

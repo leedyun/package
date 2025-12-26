@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: auto_deploy-test
+version: !ruby/object:Gem::Version
+  version: 0.1.19
+platform: ruby
+authors:
+- Trevor Rowe
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies: []
+description: |-
+  A simple project to test auto building and release using GitHub and Travis-CI.
+  The goal is to fully automate test, build, and release as the result of a
+  tag push. The release needs to have release artifacts including the gem,
+  docs, and release notes.
+email: trevorrowe@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- README.md
+- Rakefile
+- auto_deploy-test.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/auto-deploy-test.rb
+- lib/auto_deploy_test/version.rb
+- spec/auto_deploy_test_spec.rb
+- spec/spec_helper.rb
+- tasks/changelog.rake
+- tasks/docs.rake
+- tasks/gem.rake
+- tasks/release.rake
+- tasks/test.rake
+homepage: http://github.com/trevorrowe/AutoDeployTest
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A project for testing build and release features of Travis-CI and GitHub.
+test_files: []

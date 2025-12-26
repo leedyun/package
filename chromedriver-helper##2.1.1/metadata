@@ -1,0 +1,151 @@
+--- !ruby/object:Gem::Specification
+name: chromedriver-helper
+version: !ruby/object:Gem::Version
+  version: 2.1.1
+platform: ruby
+authors:
+- Mike Dalessio
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-03-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: concourse
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.23'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.23'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: archive-zip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+description: Deprecated in favor of the 'webdrivers' gem as of 2019-03-31. See https://github.com/flavorjones/chromedriver-helper/issues/83
+email:
+- mike.dalessio@gmail.com
+executables:
+- chromedriver-helper
+- chromedriver-update
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/chromedriver-helper
+- bin/chromedriver-update
+- chromedriver-helper.gemspec
+- concourse/chromedriver-helper-pr.yml
+- concourse/chromedriver-helper-pr.yml.generated
+- concourse/chromedriver-helper.yml
+- concourse/chromedriver-helper.yml.generated
+- concourse/tasks/rake-test/run.ps1
+- concourse/tasks/rake-test/run.sh
+- lib/chromedriver-helper.rb
+- lib/chromedriver/helper.rb
+- lib/chromedriver/helper/google_code_parser.rb
+- lib/chromedriver/helper/version.rb
+- spec/assets/google-code-bucket.xml
+- spec/assets/google-code.html
+- spec/google_code_parser_spec.rb
+- spec/helper_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/flavorjones/chromedriver-helper
+licenses:
+- MIT
+metadata: {}
+post_install_message: |2+
+
+    +--------------------------------------------------------------------+
+    |                                                                    |
+    |  NOTICE: chromedriver-helper is deprecated after 2019-03-31.       |
+    |                                                                    |
+    |  Please update to use the 'webdrivers' gem instead.                |
+    |  See https://github.com/flavorjones/chromedriver-helper/issues/83  |
+    |                                                                    |
+    +--------------------------------------------------------------------+
+
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Deprecated in favor of the 'webdrivers' gem.
+test_files: []

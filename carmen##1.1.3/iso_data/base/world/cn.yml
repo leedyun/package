@@ -1,0 +1,69 @@
+---
+- code: AH
+  type: province
+- code: BJ
+  type: municipality
+- code: CQ
+  type: municipality
+- code: FJ
+  type: province
+- code: GD
+  type: province
+- code: GS
+  type: province
+- code: GX
+  type: autonomous region
+- code: GZ
+  type: province
+- code: HA
+  type: province
+- code: HB
+  type: province
+- code: HE
+  type: province
+- code: HI
+  type: province
+- code: HK
+  type: special administrative region
+- code: HL
+  type: province
+- code: HN
+  type: province
+- code: JL
+  type: province
+- code: JS
+  type: province
+- code: JX
+  type: province
+- code: LN
+  type: province
+- code: MO
+  type: special administrative region
+- code: NM
+  type: autonomous region
+- code: NX
+  type: autonomous region
+- code: QH
+  type: province
+- code: SC
+  type: province
+- code: SD
+  type: province
+- code: SH
+  type: municipality
+- code: SN
+  type: province
+- code: SX
+  type: province
+- code: TJ
+  type: municipality
+- code: TW
+  type: province
+- code: XJ
+  type: autonomous region
+- code: XZ
+  type: autonomous region
+- code: YN
+  type: province
+- code: ZJ
+  type: province

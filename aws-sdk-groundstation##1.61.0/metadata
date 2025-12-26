@@ -1,0 +1,100 @@
+--- !ruby/object:Gem::Specification
+name: aws-sdk-groundstation
+version: !ruby/object:Gem::Version
+  version: 1.61.0
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+- !ruby/object:Gem::Dependency
+  name: aws-sigv4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+description: Official AWS Ruby gem for AWS Ground Station. This gem is part of the
+  AWS SDK for Ruby.
+email:
+- aws-dr-rubygems@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- VERSION
+- lib/aws-sdk-groundstation.rb
+- lib/aws-sdk-groundstation/client.rb
+- lib/aws-sdk-groundstation/client_api.rb
+- lib/aws-sdk-groundstation/customizations.rb
+- lib/aws-sdk-groundstation/endpoint_parameters.rb
+- lib/aws-sdk-groundstation/endpoint_provider.rb
+- lib/aws-sdk-groundstation/endpoints.rb
+- lib/aws-sdk-groundstation/errors.rb
+- lib/aws-sdk-groundstation/plugins/endpoints.rb
+- lib/aws-sdk-groundstation/resource.rb
+- lib/aws-sdk-groundstation/types.rb
+- lib/aws-sdk-groundstation/waiters.rb
+- sig/client.rbs
+- sig/errors.rbs
+- sig/resource.rbs
+- sig/types.rbs
+- sig/waiters.rbs
+homepage: https://github.com/aws/aws-sdk-ruby
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-groundstation
+  changelog_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-groundstation/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: AWS SDK for Ruby - AWS Ground Station
+test_files: []

@@ -1,0 +1,165 @@
+--- !ruby/object:Gem::Specification
+name: fog-radosgw
+version: !ruby/object:Gem::Version
+  version: 0.0.5
+platform: ruby
+authors:
+- Jon Kåre Hellan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-01-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.1
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Fog backend for provisioning users on Ceph Radosgw - the Swift and S3
+  compatible REST API for Ceph.
+email: hellan@acm.org
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE.md
+files:
+- ".gitignore"
+- ".travis.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-radosgw.gemspec
+- gemfiles/Gemfile.1.9.2-
+- gemfiles/Gemfile.1.9.3+
+- lib/fog/radosgw.rb
+- lib/fog/radosgw/multipart_utils.rb
+- lib/fog/radosgw/multipart_utils/headers.rb
+- lib/fog/radosgw/provisioning.rb
+- lib/fog/radosgw/requests/provisioning/create_user.rb
+- lib/fog/radosgw/requests/provisioning/delete_user.rb
+- lib/fog/radosgw/requests/provisioning/disable_user.rb
+- lib/fog/radosgw/requests/provisioning/enable_user.rb
+- lib/fog/radosgw/requests/provisioning/get_user.rb
+- lib/fog/radosgw/requests/provisioning/list_users.rb
+- lib/fog/radosgw/requests/provisioning/update_user.rb
+- lib/fog/radosgw/requests/provisioning/user.json
+- lib/fog/radosgw/requests/usage/get_usage.rb
+- lib/fog/radosgw/usage.rb
+- lib/fog/radosgw/user_utils.rb
+- lib/fog/radosgw/utils.rb
+- lib/fog/radosgw/version.rb
+- tests/helper.rb
+- tests/helpers/mock_helper.rb
+- tests/radosgw/helper.rb
+- tests/radosgw/requests/provisioning/provisioning_tests.rb
+- tests/radosgw/requests/usage/usage_tests.rb
+homepage: https://github.com/fog/fog-radosgw
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Fog backend for provisioning Ceph Radosgw.
+test_files: []
+has_rdoc: 

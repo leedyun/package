@@ -1,0 +1,147 @@
+--- !ruby/object:Gem::Specification
+name: compass-rails
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Scott Davis
+- Chris Eppstein
+- Craig McNamara
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: compass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: sprockets
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: sass-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+description: Integrate Compass into Rails 3.0 and up.
+email:
+- jetviper21@gmail.com
+- chris@eppsteins.net
+- craig.mcnamara@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- compass-rails.gemspec
+- gemfiles/rails52.gemfile
+- gemfiles/rails60.gemfile
+- gemfiles/rails_edge.gemfile
+- lib/compass-rails.rb
+- lib/compass-rails/configuration.rb
+- lib/compass-rails/patches.rb
+- lib/compass-rails/patches/3_1.rb
+- lib/compass-rails/patches/4_0.rb
+- lib/compass-rails/patches/compass.rb
+- lib/compass-rails/patches/importer.rb
+- lib/compass-rails/patches/sass_importer.rb
+- lib/compass-rails/patches/sprite_importer.rb
+- lib/compass-rails/patches/static_compiler.rb
+- lib/compass-rails/railties.rb
+- lib/compass-rails/railties/3_1.rb
+- lib/compass-rails/railties/4_0.rb
+- lib/compass-rails/version.rb
+- sache.json
+- test/compass_rails_spec.rb
+- test/fixtures/.gitkeep
+- test/fixtures/assets/images/letters/a.png
+- test/fixtures/assets/images/letters/b.png
+- test/fixtures/assets/images/numbers/sprite-1.png
+- test/fixtures/assets/images/numbers/sprite-2.png
+- test/fixtures/assets/stylesheets/application.css.scss
+- test/fixtures/assets/stylesheets/partials/_partial_1.scss
+- test/fixtures/assets/stylesheets/partials/_partial_2.scss
+- test/helpers/command_helper.rb
+- test/helpers/debug_helper.rb
+- test/helpers/file_helper.rb
+- test/helpers/rails_helper.rb
+- test/helpers/rails_project.rb
+- test/test_helper.rb
+homepage: https://github.com/Compass/compass-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Integrate Compass into Rails 3.0 and up.
+test_files:
+- test/compass_rails_spec.rb
+- test/fixtures/.gitkeep
+- test/fixtures/assets/images/letters/a.png
+- test/fixtures/assets/images/letters/b.png
+- test/fixtures/assets/images/numbers/sprite-1.png
+- test/fixtures/assets/images/numbers/sprite-2.png
+- test/fixtures/assets/stylesheets/application.css.scss
+- test/fixtures/assets/stylesheets/partials/_partial_1.scss
+- test/fixtures/assets/stylesheets/partials/_partial_2.scss
+- test/helpers/command_helper.rb
+- test/helpers/debug_helper.rb
+- test/helpers/file_helper.rb
+- test/helpers/rails_helper.rb
+- test/helpers/rails_project.rb
+- test/test_helper.rb

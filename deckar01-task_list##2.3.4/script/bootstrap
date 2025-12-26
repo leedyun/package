@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e 0
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+curl -sL https://deb.nodesource.com/setup_19.x | bash - 
+apt-get update -qq && apt-get install -y nodejs google-chrome-stable
+
+gem install bundler
+
+if ! bundle check 1>/dev/null 2>&1; then
+  bundle install --no-color --binstubs --path vendor/gems
+fi
+
+npm install
+npm exec -- bower install --no-color

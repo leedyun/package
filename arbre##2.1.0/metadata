@@ -1,0 +1,91 @@
+--- !ruby/object:Gem::Specification
+name: arbre
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- Greg Bell
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7.0'
+description: Arbre makes it easy to generate HTML directly in Ruby
+email:
+- gregdbell@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- CHANGELOG.md
+- README.md
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- docs/Gemfile
+- docs/_config.yml
+- docs/_includes/footer.html
+- docs/_includes/google-analytics.html
+- docs/_includes/head.html
+- docs/_includes/toc.html
+- docs/_includes/top-menu.html
+- docs/_layouts/default.html
+- docs/index.md
+- docs/stylesheets/main.css
+- lib/arbre.rb
+- lib/arbre/component.rb
+- lib/arbre/context.rb
+- lib/arbre/element.rb
+- lib/arbre/element/builder_methods.rb
+- lib/arbre/element/proxy.rb
+- lib/arbre/element_collection.rb
+- lib/arbre/html/attributes.rb
+- lib/arbre/html/class_list.rb
+- lib/arbre/html/document.rb
+- lib/arbre/html/html5_elements.rb
+- lib/arbre/html/tag.rb
+- lib/arbre/html/text_node.rb
+- lib/arbre/rails/forms.rb
+- lib/arbre/rails/rendering.rb
+- lib/arbre/rails/template_handler.rb
+- lib/arbre/railtie.rb
+- lib/arbre/version.rb
+homepage: https://github.com/activeadmin/arbre
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: An Object Oriented DOM Tree in Ruby
+test_files: []

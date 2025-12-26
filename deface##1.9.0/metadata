@@ -1,0 +1,405 @@
+--- !ruby/object:Gem::Specification
+name: deface
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Brian D Quinn
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2022-04-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: actionview
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: rainbow
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: polyglot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: erubis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: gem-release
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: slim
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.4
+- !ruby/object:Gem::Dependency
+  name: generator_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Deface is a library that allows you to customize ERB, Haml and Slim views
+  in a Rails application without editing the underlying view.
+email: brian@spreecommerce.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.markdown
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rspec"
+- Appraisals
+- CHANGELOG.markdown
+- CONTRIBUTING.md
+- Gemfile
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- bin/rails
+- bin/rails-engine
+- bin/rails-sandbox
+- bin/sandbox
+- bin/sandbox-setup
+- bin/setup
+- deface.gemspec
+- gemfiles/rails_5.2.gemfile
+- gemfiles/rails_6.0.gemfile
+- gemfiles/rails_6.1.gemfile
+- gemfiles/rails_7.0.gemfile
+- lib/deface.rb
+- lib/deface/action_view_extensions.rb
+- lib/deface/actions/action.rb
+- lib/deface/actions/add_to_attributes.rb
+- lib/deface/actions/attribute_action.rb
+- lib/deface/actions/element_action.rb
+- lib/deface/actions/insert_after.rb
+- lib/deface/actions/insert_before.rb
+- lib/deface/actions/insert_bottom.rb
+- lib/deface/actions/insert_top.rb
+- lib/deface/actions/remove.rb
+- lib/deface/actions/remove_from_attributes.rb
+- lib/deface/actions/replace.rb
+- lib/deface/actions/replace_contents.rb
+- lib/deface/actions/set_attributes.rb
+- lib/deface/actions/surround.rb
+- lib/deface/actions/surround_action.rb
+- lib/deface/actions/surround_contents.rb
+- lib/deface/applicator.rb
+- lib/deface/digest.rb
+- lib/deface/dsl/context.rb
+- lib/deface/dsl/loader.rb
+- lib/deface/environment.rb
+- lib/deface/errors.rb
+- lib/deface/generators
+- lib/deface/haml_converter.rb
+- lib/deface/matchers/element.rb
+- lib/deface/matchers/range.rb
+- lib/deface/original_validator.rb
+- lib/deface/override.rb
+- lib/deface/parser.rb
+- lib/deface/precompiler.rb
+- lib/deface/railtie.rb
+- lib/deface/search.rb
+- lib/deface/slim_converter.rb
+- lib/deface/sources/copy.rb
+- lib/deface/sources/cut.rb
+- lib/deface/sources/erb.rb
+- lib/deface/sources/haml.rb
+- lib/deface/sources/partial.rb
+- lib/deface/sources/slim.rb
+- lib/deface/sources/source.rb
+- lib/deface/sources/template.rb
+- lib/deface/sources/text.rb
+- lib/deface/template_helper.rb
+- lib/deface/utils/failure_finder.rb
+- lib/deface/version.rb
+- lib/generators/deface/USAGE
+- lib/generators/deface/override_generator.rb
+- lib/generators/deface/templates/override.html.erb.deface
+- lib/generators/deface/templates/override.html.haml.deface
+- lib/generators/deface/templates/override.html.slim.deface
+- spec/assets/admin/posts/index.html.erb
+- spec/assets/dummy_app/overrides/posts/index/app_override.html.erb.deface
+- spec/assets/dummy_app/overrides/posts/precompileme/precompileme.html.erb.deface
+- spec/assets/dummy_engine/overrides/users/index/engine_override.html.erb.deface
+- spec/assets/posts/precompileme.html.erb
+- spec/assets/shared/_hello.html.haml
+- spec/assets/shared/_hi.html.slim
+- spec/assets/shared/_post.html.erb
+- spec/assets/shared/person.html.erb
+- spec/assets/shared/pirate.html.haml
+- spec/assets/shared/public.html.slim
+- spec/deface/action_view_template_spec.rb
+- spec/deface/actions/add_to_attributes_spec.rb
+- spec/deface/actions/insert_after_spec.rb
+- spec/deface/actions/insert_before_spec.rb
+- spec/deface/actions/insert_bottom_spec.rb
+- spec/deface/actions/insert_top_spec.rb
+- spec/deface/actions/remove_from_attributes_spec.rb
+- spec/deface/actions/remove_spec.rb
+- spec/deface/actions/replace_contents_spec.rb
+- spec/deface/actions/replace_spec.rb
+- spec/deface/actions/set_attributes_spec.rb
+- spec/deface/actions/surround_contents_spec.rb
+- spec/deface/actions/surround_spec.rb
+- spec/deface/applicator_spec.rb
+- spec/deface/digest_spec.rb
+- spec/deface/dsl/context_spec.rb
+- spec/deface/dsl/loader_spec.rb
+- spec/deface/environment_spec.rb
+- spec/deface/haml_converter_spec.rb
+- spec/deface/override_spec.rb
+- spec/deface/parser_spec.rb
+- spec/deface/precompiler_spec.rb
+- spec/deface/search_spec.rb
+- spec/deface/slim_converter_spec.rb
+- spec/deface/template_helper_spec.rb
+- spec/deface/utils/failure_finder_spec.rb
+- spec/generators/deface/override_generator_spec.rb
+- spec/spec_helper.rb
+- tasks/precompile.rake
+- tasks/utils.rake
+homepage: https://github.com/spree/deface#readme
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/spree/deface#readme
+  source_code_uri: https://github.com/spree/deface
+  changelog_uri: https://github.com/spree/deface/releases
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: Deface is a library that allows you to customize ERB, Haml and Slim views
+  in Rails
+test_files:
+- spec/assets/admin/posts/index.html.erb
+- spec/assets/dummy_app/overrides/posts/index/app_override.html.erb.deface
+- spec/assets/dummy_app/overrides/posts/precompileme/precompileme.html.erb.deface
+- spec/assets/dummy_engine/overrides/users/index/engine_override.html.erb.deface
+- spec/assets/posts/precompileme.html.erb
+- spec/assets/shared/_hello.html.haml
+- spec/assets/shared/_hi.html.slim
+- spec/assets/shared/_post.html.erb
+- spec/assets/shared/person.html.erb
+- spec/assets/shared/pirate.html.haml
+- spec/assets/shared/public.html.slim
+- spec/deface/action_view_template_spec.rb
+- spec/deface/actions/add_to_attributes_spec.rb
+- spec/deface/actions/insert_after_spec.rb
+- spec/deface/actions/insert_before_spec.rb
+- spec/deface/actions/insert_bottom_spec.rb
+- spec/deface/actions/insert_top_spec.rb
+- spec/deface/actions/remove_from_attributes_spec.rb
+- spec/deface/actions/remove_spec.rb
+- spec/deface/actions/replace_contents_spec.rb
+- spec/deface/actions/replace_spec.rb
+- spec/deface/actions/set_attributes_spec.rb
+- spec/deface/actions/surround_contents_spec.rb
+- spec/deface/actions/surround_spec.rb
+- spec/deface/applicator_spec.rb
+- spec/deface/digest_spec.rb
+- spec/deface/dsl/context_spec.rb
+- spec/deface/dsl/loader_spec.rb
+- spec/deface/environment_spec.rb
+- spec/deface/haml_converter_spec.rb
+- spec/deface/override_spec.rb
+- spec/deface/parser_spec.rb
+- spec/deface/precompiler_spec.rb
+- spec/deface/search_spec.rb
+- spec/deface/slim_converter_spec.rb
+- spec/deface/template_helper_spec.rb
+- spec/deface/utils/failure_finder_spec.rb
+- spec/generators/deface/override_generator_spec.rb
+- spec/spec_helper.rb

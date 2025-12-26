@@ -1,0 +1,141 @@
+--- !ruby/object:Gem::Specification
+name: data_magic
+version: !ruby/object:Gem::Version
+  version: '1.2'
+platform: ruby
+authors:
+- Jeff Morgan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-09-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+- !ruby/object:Gem::Dependency
+  name: yml_reader
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.12.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.12.0
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+description: Provides datasets to application stored in YAML files
+email:
+- jeff.morgan@leandog.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- ChangeLog
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- config/data/default.yml
+- config/data/user.yml
+- cucumber.yml
+- data_magic.gemspec
+- features/data_magic.feature
+- features/defaults.feature
+- features/step_definitions/data_magic_steps.rb
+- features/support/env.rb
+- features/yaml/another.yml
+- features/yaml/example.yml
+- lib/data_magic.rb
+- lib/data_magic/core_ext/hash.rb
+- lib/data_magic/core_ext/integer.rb
+- lib/data_magic/core_ext/string.rb
+- lib/data_magic/date_translation.rb
+- lib/data_magic/standard_translation.rb
+- lib/data_magic/translation.rb
+- lib/data_magic/version.rb
+- spec/lib/data_magic_spec.rb
+- spec/lib/translation_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/cheezy/data_magic
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.2
+signing_key: 
+specification_version: 4
+summary: Provides datasets to application via YAML files
+test_files:
+- features/data_magic.feature
+- features/defaults.feature
+- features/step_definitions/data_magic_steps.rb
+- features/support/env.rb
+- features/yaml/another.yml
+- features/yaml/example.yml
+- spec/lib/data_magic_spec.rb
+- spec/lib/translation_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,113 @@
+--- !ruby/object:Gem::Specification
+name: capistrano-rails
+version: !ruby/object:Gem::Version
+  version: 1.7.0
+platform: ruby
+authors:
+- Tom Clements
+- Lee Hambley
+- Kir Shatrov
+bindir: bin
+cert_chain: []
+date: 2024-12-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: capistrano
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: capistrano-bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: danger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Rails specific Capistrano tasks
+email:
+- seenmyfate@gmail.com
+- lee.hambley@gmail.com
+- shatrov@me.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/issue_template.md"
+- ".github/pull_request_template.md"
+- ".github/release-drafter.yml"
+- ".github/workflows/push.yml"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Dangerfile
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- capistrano-rails.gemspec
+- lib/capistrano-rails.rb
+- lib/capistrano/rails.rb
+- lib/capistrano/rails/assets.rb
+- lib/capistrano/rails/migrations.rb
+- lib/capistrano/tasks/assets.rake
+- lib/capistrano/tasks/migrations.rake
+- lib/capistrano/tasks/set_rails_env.rake
+homepage: https://github.com/capistrano/rails
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/capistrano/rails/releases
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Rails specific Capistrano tasks
+test_files: []

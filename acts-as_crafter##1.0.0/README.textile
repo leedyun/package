@@ -1,0 +1,11 @@
+h1. Mate, ActsAsCrafter, mate.
+
+Mate, bring a little bit of "Marcus Crafter":http://github.com/crafterm awesomeness into your HTML responses with this Rack Middleware, mate.
+
+h2. Mate, installation, mate.
+
+Mate, Bundle it in to your app now, mate.
+
+h2. Mate, features, mate.
+
+Mate, just one feature. It fiddles with headings, list items and paragraphs in your HTML response to make sure you have the full Marcus Crafter experience anywhere, any time, mate.

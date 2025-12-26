@@ -1,0 +1,237 @@
+--- !ruby/object:Gem::Specification
+name: page-object
+version: !ruby/object:Gem::Version
+  version: 2.3.1
+platform: ruby
+authors:
+- Jeff Morgan
+- Alexis Andersen
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-03-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: watir
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.10.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.10.3
+- !ruby/object:Gem::Dependency
+  name: page_navigation
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.2
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.1
+- !ruby/object:Gem::Dependency
+  name: net-http-persistent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webdrivers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Page Object DSL that works with both Watir and Selenium
+email:
+- jeff.morgan@leandog.com
+- alexis.t.andersen@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coveralls.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- ChangeLog
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- cucumber.yml
+- lib/page-object.rb
+- lib/page-object/accessors.rb
+- lib/page-object/element_locators.rb
+- lib/page-object/elements.rb
+- lib/page-object/elements/area.rb
+- lib/page-object/elements/audio.rb
+- lib/page-object/elements/bold.rb
+- lib/page-object/elements/button.rb
+- lib/page-object/elements/canvas.rb
+- lib/page-object/elements/check_box.rb
+- lib/page-object/elements/date_field.rb
+- lib/page-object/elements/div.rb
+- lib/page-object/elements/element.rb
+- lib/page-object/elements/file_field.rb
+- lib/page-object/elements/form.rb
+- lib/page-object/elements/heading.rb
+- lib/page-object/elements/hidden_field.rb
+- lib/page-object/elements/image.rb
+- lib/page-object/elements/italic.rb
+- lib/page-object/elements/label.rb
+- lib/page-object/elements/link.rb
+- lib/page-object/elements/list_item.rb
+- lib/page-object/elements/media.rb
+- lib/page-object/elements/option.rb
+- lib/page-object/elements/ordered_list.rb
+- lib/page-object/elements/paragraph.rb
+- lib/page-object/elements/radio_button.rb
+- lib/page-object/elements/select_list.rb
+- lib/page-object/elements/span.rb
+- lib/page-object/elements/table.rb
+- lib/page-object/elements/table_cell.rb
+- lib/page-object/elements/table_row.rb
+- lib/page-object/elements/text_area.rb
+- lib/page-object/elements/text_field.rb
+- lib/page-object/elements/unordered_list.rb
+- lib/page-object/elements/video.rb
+- lib/page-object/indexed_properties.rb
+- lib/page-object/javascript/angularjs.rb
+- lib/page-object/javascript/jquery.rb
+- lib/page-object/javascript/prototype.rb
+- lib/page-object/javascript/yui.rb
+- lib/page-object/javascript_framework_facade.rb
+- lib/page-object/locator_generator.rb
+- lib/page-object/nested_elements.rb
+- lib/page-object/page_factory.rb
+- lib/page-object/page_populator.rb
+- lib/page-object/platforms/watir.rb
+- lib/page-object/platforms/watir/page_object.rb
+- lib/page-object/section_collection.rb
+- lib/page-object/version.rb
+- lib/page-object/widgets.rb
+- page-object.gemspec
+- pageobject.gems
+homepage: http://github.com/cheezy/page-object
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.12
+signing_key: 
+specification_version: 4
+summary: Page Object DSL for browser testing
+test_files: []

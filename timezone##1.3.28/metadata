@@ -1,0 +1,811 @@
+--- !ruby/object:Gem::Specification
+name: timezone
+version: !ruby/object:Gem::Version
+  version: 1.3.28
+platform: ruby
+authors:
+- Pan Thomakos
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+description: Accurate current and historical timezones for Ruby with support for Geonames
+  and Google latitude - longitude lookups.
+email:
+- pan.thomakos@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.markdown
+- License.txt
+files:
+- ".codeclimate.yml"
+- ".editorconfig"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGES.markdown
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.markdown
+- Gemfile
+- License.txt
+- README.markdown
+- Rakefile
+- benchmark.rb
+- data/Africa/Abidjan
+- data/Africa/Accra
+- data/Africa/Addis_Ababa
+- data/Africa/Algiers
+- data/Africa/Asmara
+- data/Africa/Asmera
+- data/Africa/Bamako
+- data/Africa/Bangui
+- data/Africa/Banjul
+- data/Africa/Bissau
+- data/Africa/Blantyre
+- data/Africa/Brazzaville
+- data/Africa/Bujumbura
+- data/Africa/Cairo
+- data/Africa/Casablanca
+- data/Africa/Ceuta
+- data/Africa/Conakry
+- data/Africa/Dakar
+- data/Africa/Dar_es_Salaam
+- data/Africa/Djibouti
+- data/Africa/Douala
+- data/Africa/El_Aaiun
+- data/Africa/Freetown
+- data/Africa/Gaborone
+- data/Africa/Harare
+- data/Africa/Johannesburg
+- data/Africa/Juba
+- data/Africa/Kampala
+- data/Africa/Khartoum
+- data/Africa/Kigali
+- data/Africa/Kinshasa
+- data/Africa/Lagos
+- data/Africa/Libreville
+- data/Africa/Lome
+- data/Africa/Luanda
+- data/Africa/Lubumbashi
+- data/Africa/Lusaka
+- data/Africa/Malabo
+- data/Africa/Maputo
+- data/Africa/Maseru
+- data/Africa/Mbabane
+- data/Africa/Mogadishu
+- data/Africa/Monrovia
+- data/Africa/Nairobi
+- data/Africa/Ndjamena
+- data/Africa/Niamey
+- data/Africa/Nouakchott
+- data/Africa/Ouagadougou
+- data/Africa/Porto-Novo
+- data/Africa/Sao_Tome
+- data/Africa/Timbuktu
+- data/Africa/Tripoli
+- data/Africa/Tunis
+- data/Africa/Windhoek
+- data/America/Adak
+- data/America/Anchorage
+- data/America/Anguilla
+- data/America/Antigua
+- data/America/Araguaina
+- data/America/Argentina/Buenos_Aires
+- data/America/Argentina/Catamarca
+- data/America/Argentina/ComodRivadavia
+- data/America/Argentina/Cordoba
+- data/America/Argentina/Jujuy
+- data/America/Argentina/La_Rioja
+- data/America/Argentina/Mendoza
+- data/America/Argentina/Rio_Gallegos
+- data/America/Argentina/Salta
+- data/America/Argentina/San_Juan
+- data/America/Argentina/San_Luis
+- data/America/Argentina/Tucuman
+- data/America/Argentina/Ushuaia
+- data/America/Aruba
+- data/America/Asuncion
+- data/America/Atikokan
+- data/America/Atka
+- data/America/Bahia
+- data/America/Bahia_Banderas
+- data/America/Barbados
+- data/America/Belem
+- data/America/Belize
+- data/America/Blanc-Sablon
+- data/America/Boa_Vista
+- data/America/Bogota
+- data/America/Boise
+- data/America/Buenos_Aires
+- data/America/Cambridge_Bay
+- data/America/Campo_Grande
+- data/America/Cancun
+- data/America/Caracas
+- data/America/Catamarca
+- data/America/Cayenne
+- data/America/Cayman
+- data/America/Chicago
+- data/America/Chihuahua
+- data/America/Ciudad_Juarez
+- data/America/Coral_Harbour
+- data/America/Cordoba
+- data/America/Costa_Rica
+- data/America/Creston
+- data/America/Cuiaba
+- data/America/Curacao
+- data/America/Danmarkshavn
+- data/America/Dawson
+- data/America/Dawson_Creek
+- data/America/Denver
+- data/America/Detroit
+- data/America/Dominica
+- data/America/Edmonton
+- data/America/Eirunepe
+- data/America/El_Salvador
+- data/America/Ensenada
+- data/America/Fort_Nelson
+- data/America/Fort_Wayne
+- data/America/Fortaleza
+- data/America/Glace_Bay
+- data/America/Godthab
+- data/America/Goose_Bay
+- data/America/Grand_Turk
+- data/America/Grenada
+- data/America/Guadeloupe
+- data/America/Guatemala
+- data/America/Guayaquil
+- data/America/Guyana
+- data/America/Halifax
+- data/America/Havana
+- data/America/Hermosillo
+- data/America/Indiana/Indianapolis
+- data/America/Indiana/Knox
+- data/America/Indiana/Marengo
+- data/America/Indiana/Petersburg
+- data/America/Indiana/Tell_City
+- data/America/Indiana/Vevay
+- data/America/Indiana/Vincennes
+- data/America/Indiana/Winamac
+- data/America/Indianapolis
+- data/America/Inuvik
+- data/America/Iqaluit
+- data/America/Jamaica
+- data/America/Jujuy
+- data/America/Juneau
+- data/America/Kentucky/Louisville
+- data/America/Kentucky/Monticello
+- data/America/Knox_IN
+- data/America/Kralendijk
+- data/America/La_Paz
+- data/America/Lima
+- data/America/Los_Angeles
+- data/America/Louisville
+- data/America/Lower_Princes
+- data/America/Maceio
+- data/America/Managua
+- data/America/Manaus
+- data/America/Marigot
+- data/America/Martinique
+- data/America/Matamoros
+- data/America/Mazatlan
+- data/America/Mendoza
+- data/America/Menominee
+- data/America/Merida
+- data/America/Metlakatla
+- data/America/Mexico_City
+- data/America/Miquelon
+- data/America/Moncton
+- data/America/Monterrey
+- data/America/Montevideo
+- data/America/Montreal
+- data/America/Montserrat
+- data/America/Nassau
+- data/America/New_York
+- data/America/Nipigon
+- data/America/Nome
+- data/America/Noronha
+- data/America/North_Dakota/Beulah
+- data/America/North_Dakota/Center
+- data/America/North_Dakota/New_Salem
+- data/America/Nuuk
+- data/America/Ojinaga
+- data/America/Panama
+- data/America/Pangnirtung
+- data/America/Paramaribo
+- data/America/Phoenix
+- data/America/Port-au-Prince
+- data/America/Port_of_Spain
+- data/America/Porto_Acre
+- data/America/Porto_Velho
+- data/America/Puerto_Rico
+- data/America/Punta_Arenas
+- data/America/Rainy_River
+- data/America/Rankin_Inlet
+- data/America/Recife
+- data/America/Regina
+- data/America/Resolute
+- data/America/Rio_Branco
+- data/America/Rosario
+- data/America/Santa_Isabel
+- data/America/Santarem
+- data/America/Santiago
+- data/America/Santo_Domingo
+- data/America/Sao_Paulo
+- data/America/Scoresbysund
+- data/America/Shiprock
+- data/America/Sitka
+- data/America/St_Barthelemy
+- data/America/St_Johns
+- data/America/St_Kitts
+- data/America/St_Lucia
+- data/America/St_Thomas
+- data/America/St_Vincent
+- data/America/Swift_Current
+- data/America/Tegucigalpa
+- data/America/Thule
+- data/America/Thunder_Bay
+- data/America/Tijuana
+- data/America/Toronto
+- data/America/Tortola
+- data/America/Vancouver
+- data/America/Virgin
+- data/America/Whitehorse
+- data/America/Winnipeg
+- data/America/Yakutat
+- data/America/Yellowknife
+- data/Antarctica/Casey
+- data/Antarctica/Davis
+- data/Antarctica/DumontDUrville
+- data/Antarctica/Macquarie
+- data/Antarctica/Mawson
+- data/Antarctica/McMurdo
+- data/Antarctica/Palmer
+- data/Antarctica/Rothera
+- data/Antarctica/South_Pole
+- data/Antarctica/Syowa
+- data/Antarctica/Troll
+- data/Antarctica/Vostok
+- data/Arctic/Longyearbyen
+- data/Asia/Aden
+- data/Asia/Almaty
+- data/Asia/Amman
+- data/Asia/Anadyr
+- data/Asia/Aqtau
+- data/Asia/Aqtobe
+- data/Asia/Ashgabat
+- data/Asia/Ashkhabad
+- data/Asia/Atyrau
+- data/Asia/Baghdad
+- data/Asia/Bahrain
+- data/Asia/Baku
+- data/Asia/Bangkok
+- data/Asia/Barnaul
+- data/Asia/Beirut
+- data/Asia/Bishkek
+- data/Asia/Brunei
+- data/Asia/Calcutta
+- data/Asia/Chita
+- data/Asia/Choibalsan
+- data/Asia/Chongqing
+- data/Asia/Chungking
+- data/Asia/Colombo
+- data/Asia/Dacca
+- data/Asia/Damascus
+- data/Asia/Dhaka
+- data/Asia/Dili
+- data/Asia/Dubai
+- data/Asia/Dushanbe
+- data/Asia/Famagusta
+- data/Asia/Gaza
+- data/Asia/Harbin
+- data/Asia/Hebron
+- data/Asia/Ho_Chi_Minh
+- data/Asia/Hong_Kong
+- data/Asia/Hovd
+- data/Asia/Irkutsk
+- data/Asia/Istanbul
+- data/Asia/Jakarta
+- data/Asia/Jayapura
+- data/Asia/Jerusalem
+- data/Asia/Kabul
+- data/Asia/Kamchatka
+- data/Asia/Karachi
+- data/Asia/Kashgar
+- data/Asia/Kathmandu
+- data/Asia/Katmandu
+- data/Asia/Khandyga
+- data/Asia/Kolkata
+- data/Asia/Krasnoyarsk
+- data/Asia/Kuala_Lumpur
+- data/Asia/Kuching
+- data/Asia/Kuwait
+- data/Asia/Macao
+- data/Asia/Macau
+- data/Asia/Magadan
+- data/Asia/Makassar
+- data/Asia/Manila
+- data/Asia/Muscat
+- data/Asia/Nicosia
+- data/Asia/Novokuznetsk
+- data/Asia/Novosibirsk
+- data/Asia/Omsk
+- data/Asia/Oral
+- data/Asia/Phnom_Penh
+- data/Asia/Pontianak
+- data/Asia/Pyongyang
+- data/Asia/Qatar
+- data/Asia/Qostanay
+- data/Asia/Qyzylorda
+- data/Asia/Rangoon
+- data/Asia/Riyadh
+- data/Asia/Saigon
+- data/Asia/Sakhalin
+- data/Asia/Samarkand
+- data/Asia/Seoul
+- data/Asia/Shanghai
+- data/Asia/Singapore
+- data/Asia/Srednekolymsk
+- data/Asia/Taipei
+- data/Asia/Tashkent
+- data/Asia/Tbilisi
+- data/Asia/Tehran
+- data/Asia/Tel_Aviv
+- data/Asia/Thimbu
+- data/Asia/Thimphu
+- data/Asia/Tokyo
+- data/Asia/Tomsk
+- data/Asia/Ujung_Pandang
+- data/Asia/Ulaanbaatar
+- data/Asia/Ulan_Bator
+- data/Asia/Urumqi
+- data/Asia/Ust-Nera
+- data/Asia/Vientiane
+- data/Asia/Vladivostok
+- data/Asia/Yakutsk
+- data/Asia/Yangon
+- data/Asia/Yekaterinburg
+- data/Asia/Yerevan
+- data/Atlantic/Azores
+- data/Atlantic/Bermuda
+- data/Atlantic/Canary
+- data/Atlantic/Cape_Verde
+- data/Atlantic/Faeroe
+- data/Atlantic/Faroe
+- data/Atlantic/Jan_Mayen
+- data/Atlantic/Madeira
+- data/Atlantic/Reykjavik
+- data/Atlantic/South_Georgia
+- data/Atlantic/St_Helena
+- data/Atlantic/Stanley
+- data/Australia/ACT
+- data/Australia/Adelaide
+- data/Australia/Brisbane
+- data/Australia/Broken_Hill
+- data/Australia/Canberra
+- data/Australia/Currie
+- data/Australia/Darwin
+- data/Australia/Eucla
+- data/Australia/Hobart
+- data/Australia/LHI
+- data/Australia/Lindeman
+- data/Australia/Lord_Howe
+- data/Australia/Melbourne
+- data/Australia/NSW
+- data/Australia/North
+- data/Australia/Perth
+- data/Australia/Queensland
+- data/Australia/South
+- data/Australia/Sydney
+- data/Australia/Tasmania
+- data/Australia/Victoria
+- data/Australia/West
+- data/Australia/Yancowinna
+- data/Brazil/Acre
+- data/Brazil/DeNoronha
+- data/Brazil/East
+- data/Brazil/West
+- data/CET
+- data/CST6CDT
+- data/Canada/Atlantic
+- data/Canada/Central
+- data/Canada/Eastern
+- data/Canada/Mountain
+- data/Canada/Newfoundland
+- data/Canada/Pacific
+- data/Canada/Saskatchewan
+- data/Canada/Yukon
+- data/Chile/Continental
+- data/Chile/EasterIsland
+- data/Cuba
+- data/EET
+- data/EST
+- data/EST5EDT
+- data/Egypt
+- data/Eire
+- data/Etc/GMT
+- data/Etc/GMT+0
+- data/Etc/GMT+1
+- data/Etc/GMT+10
+- data/Etc/GMT+11
+- data/Etc/GMT+12
+- data/Etc/GMT+2
+- data/Etc/GMT+3
+- data/Etc/GMT+4
+- data/Etc/GMT+5
+- data/Etc/GMT+6
+- data/Etc/GMT+7
+- data/Etc/GMT+8
+- data/Etc/GMT+9
+- data/Etc/GMT-0
+- data/Etc/GMT-1
+- data/Etc/GMT-10
+- data/Etc/GMT-11
+- data/Etc/GMT-12
+- data/Etc/GMT-13
+- data/Etc/GMT-14
+- data/Etc/GMT-2
+- data/Etc/GMT-3
+- data/Etc/GMT-4
+- data/Etc/GMT-5
+- data/Etc/GMT-6
+- data/Etc/GMT-7
+- data/Etc/GMT-8
+- data/Etc/GMT-9
+- data/Etc/GMT0
+- data/Etc/Greenwich
+- data/Etc/UCT
+- data/Etc/UTC
+- data/Etc/Universal
+- data/Etc/Zulu
+- data/Europe/Amsterdam
+- data/Europe/Andorra
+- data/Europe/Astrakhan
+- data/Europe/Athens
+- data/Europe/Belfast
+- data/Europe/Belgrade
+- data/Europe/Berlin
+- data/Europe/Bratislava
+- data/Europe/Brussels
+- data/Europe/Bucharest
+- data/Europe/Budapest
+- data/Europe/Busingen
+- data/Europe/Chisinau
+- data/Europe/Copenhagen
+- data/Europe/Dublin
+- data/Europe/Gibraltar
+- data/Europe/Guernsey
+- data/Europe/Helsinki
+- data/Europe/Isle_of_Man
+- data/Europe/Istanbul
+- data/Europe/Jersey
+- data/Europe/Kaliningrad
+- data/Europe/Kiev
+- data/Europe/Kirov
+- data/Europe/Kyiv
+- data/Europe/Lisbon
+- data/Europe/Ljubljana
+- data/Europe/London
+- data/Europe/Luxembourg
+- data/Europe/Madrid
+- data/Europe/Malta
+- data/Europe/Mariehamn
+- data/Europe/Minsk
+- data/Europe/Monaco
+- data/Europe/Moscow
+- data/Europe/Nicosia
+- data/Europe/Oslo
+- data/Europe/Paris
+- data/Europe/Podgorica
+- data/Europe/Prague
+- data/Europe/Riga
+- data/Europe/Rome
+- data/Europe/Samara
+- data/Europe/San_Marino
+- data/Europe/Sarajevo
+- data/Europe/Saratov
+- data/Europe/Simferopol
+- data/Europe/Skopje
+- data/Europe/Sofia
+- data/Europe/Stockholm
+- data/Europe/Tallinn
+- data/Europe/Tirane
+- data/Europe/Tiraspol
+- data/Europe/Ulyanovsk
+- data/Europe/Uzhgorod
+- data/Europe/Vaduz
+- data/Europe/Vatican
+- data/Europe/Vienna
+- data/Europe/Vilnius
+- data/Europe/Volgograd
+- data/Europe/Warsaw
+- data/Europe/Zagreb
+- data/Europe/Zaporozhye
+- data/Europe/Zurich
+- data/Factory
+- data/GB
+- data/GB-Eire
+- data/GMT
+- data/GMT+0
+- data/GMT-0
+- data/GMT0
+- data/Greenwich
+- data/HST
+- data/Hongkong
+- data/Iceland
+- data/Indian/Antananarivo
+- data/Indian/Chagos
+- data/Indian/Christmas
+- data/Indian/Cocos
+- data/Indian/Comoro
+- data/Indian/Kerguelen
+- data/Indian/Mahe
+- data/Indian/Maldives
+- data/Indian/Mauritius
+- data/Indian/Mayotte
+- data/Indian/Reunion
+- data/Iran
+- data/Israel
+- data/Jamaica
+- data/Japan
+- data/Kwajalein
+- data/Libya
+- data/MET
+- data/MST
+- data/MST7MDT
+- data/Mexico/BajaNorte
+- data/Mexico/BajaSur
+- data/Mexico/General
+- data/NZ
+- data/NZ-CHAT
+- data/Navajo
+- data/PRC
+- data/PST8PDT
+- data/Pacific/Apia
+- data/Pacific/Auckland
+- data/Pacific/Bougainville
+- data/Pacific/Chatham
+- data/Pacific/Chuuk
+- data/Pacific/Easter
+- data/Pacific/Efate
+- data/Pacific/Enderbury
+- data/Pacific/Fakaofo
+- data/Pacific/Fiji
+- data/Pacific/Funafuti
+- data/Pacific/Galapagos
+- data/Pacific/Gambier
+- data/Pacific/Guadalcanal
+- data/Pacific/Guam
+- data/Pacific/Honolulu
+- data/Pacific/Johnston
+- data/Pacific/Kanton
+- data/Pacific/Kiritimati
+- data/Pacific/Kosrae
+- data/Pacific/Kwajalein
+- data/Pacific/Majuro
+- data/Pacific/Marquesas
+- data/Pacific/Midway
+- data/Pacific/Nauru
+- data/Pacific/Niue
+- data/Pacific/Norfolk
+- data/Pacific/Noumea
+- data/Pacific/Pago_Pago
+- data/Pacific/Palau
+- data/Pacific/Pitcairn
+- data/Pacific/Pohnpei
+- data/Pacific/Ponape
+- data/Pacific/Port_Moresby
+- data/Pacific/Rarotonga
+- data/Pacific/Saipan
+- data/Pacific/Samoa
+- data/Pacific/Tahiti
+- data/Pacific/Tarawa
+- data/Pacific/Tongatapu
+- data/Pacific/Truk
+- data/Pacific/Wake
+- data/Pacific/Wallis
+- data/Pacific/Yap
+- data/Poland
+- data/Portugal
+- data/ROC
+- data/ROK
+- data/Singapore
+- data/Turkey
+- data/UCT
+- data/US/Alaska
+- data/US/Aleutian
+- data/US/Arizona
+- data/US/Central
+- data/US/East-Indiana
+- data/US/Eastern
+- data/US/Hawaii
+- data/US/Indiana-Starke
+- data/US/Michigan
+- data/US/Mountain
+- data/US/Pacific
+- data/US/Samoa
+- data/UTC
+- data/Universal
+- data/W-SU
+- data/WET
+- data/Zulu
+- lib/timezone.rb
+- lib/timezone/deprecate.rb
+- lib/timezone/error.rb
+- lib/timezone/loader.rb
+- lib/timezone/lookup.rb
+- lib/timezone/lookup/basic.rb
+- lib/timezone/lookup/geonames.rb
+- lib/timezone/lookup/google.rb
+- lib/timezone/lookup/test.rb
+- lib/timezone/net_http_client.rb
+- lib/timezone/nil_zone.rb
+- lib/timezone/parser.rb
+- lib/timezone/version.rb
+- lib/timezone/zone.rb
+- test/data/Helsinki_rules_without_timestamps.json
+- test/data/asia
+- test/http_test_client.rb
+- test/mocks/api_limit_reached.json
+- test/mocks/google_lat_lon_coords.txt
+- test/mocks/google_no_result_found.json
+- test/mocks/google_request_denied.txt
+- test/mocks/invalid_latlong.json
+- test/mocks/invalid_parameter.json
+- test/mocks/lat_lon_coords.txt
+- test/mocks/lat_lon_coords_arctic.txt
+- test/mocks/lat_lon_coords_atlantic.txt
+- test/mocks/lat_lon_coords_norfolk.txt
+- test/mocks/lat_lon_coords_wrong_offset.txt
+- test/mocks/no_result_found.json
+- test/test_timezone.rb
+- test/threadsafe_lookup.rb
+- test/timezone/lookup/test_basic.rb
+- test/timezone/lookup/test_geonames.rb
+- test/timezone/lookup/test_google.rb
+- test/timezone/lookup/test_test.rb
+- test/timezone/test_deprecate.rb
+- test/timezone/test_loader.rb
+- test/timezone/test_lookup.rb
+- test/timezone/test_mathn_compatibility.rb
+- test/timezone/test_nil_zone.rb
+- test/timezone/test_zone.rb
+- timezone.gemspec
+homepage: https://github.com/panthomakos/timezone
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/panthomakos/timezone/blob/master/CHANGES.markdown
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: timezone-1.3.28
+test_files:
+- test/data/Helsinki_rules_without_timestamps.json
+- test/data/asia
+- test/http_test_client.rb
+- test/mocks/api_limit_reached.json
+- test/mocks/google_lat_lon_coords.txt
+- test/mocks/google_no_result_found.json
+- test/mocks/google_request_denied.txt
+- test/mocks/invalid_latlong.json
+- test/mocks/invalid_parameter.json
+- test/mocks/lat_lon_coords.txt
+- test/mocks/lat_lon_coords_arctic.txt
+- test/mocks/lat_lon_coords_atlantic.txt
+- test/mocks/lat_lon_coords_norfolk.txt
+- test/mocks/lat_lon_coords_wrong_offset.txt
+- test/mocks/no_result_found.json
+- test/test_timezone.rb
+- test/threadsafe_lookup.rb
+- test/timezone/lookup/test_basic.rb
+- test/timezone/lookup/test_geonames.rb
+- test/timezone/lookup/test_google.rb
+- test/timezone/lookup/test_test.rb
+- test/timezone/test_deprecate.rb
+- test/timezone/test_loader.rb
+- test/timezone/test_lookup.rb
+- test/timezone/test_mathn_compatibility.rb
+- test/timezone/test_nil_zone.rb
+- test/timezone/test_zone.rb

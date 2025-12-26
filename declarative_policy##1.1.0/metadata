@@ -1,0 +1,88 @@
+--- !ruby/object:Gem::Specification
+name: declarative_policy
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Jeanine Adkisson
+- Alexis Kalderimis
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2021-11-05 00:00:00.000000000 Z
+dependencies: []
+description: |
+  This library provides an authorization framework with a declarative DSL
+
+  With this library, you can write permission policies that are separate
+  from business logic.
+
+  This library is in production use at GitLab.com
+email:
+- akalderimis@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dangerfile
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- benchmarks/repeated_invocation.rb
+- danger/plugins/project_helper.rb
+- danger/roulette/Dangerfile
+- declarative_policy.gemspec
+- doc/caching.md
+- doc/configuration.md
+- doc/defining-policies.md
+- doc/optimization.md
+- lib/declarative_policy.rb
+- lib/declarative_policy/base.rb
+- lib/declarative_policy/cache.rb
+- lib/declarative_policy/condition.rb
+- lib/declarative_policy/configuration.rb
+- lib/declarative_policy/delegate_dsl.rb
+- lib/declarative_policy/nil_policy.rb
+- lib/declarative_policy/policy_dsl.rb
+- lib/declarative_policy/preferred_scope.rb
+- lib/declarative_policy/rule.rb
+- lib/declarative_policy/rule_dsl.rb
+- lib/declarative_policy/runner.rb
+- lib/declarative_policy/step.rb
+- lib/declarative_policy/version.rb
+homepage: https://gitlab.com/gitlab-org/declarative-policy
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://gitlab.com/gitlab-org/declarative-policy
+  source_code_uri: https://gitlab.com/gitlab-org/declarative-policy
+  changelog_uri: https://gitlab.com/gitlab-org/declarative-policy/-/blobs/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: An authorization library with a focus on declarative policy definitions.
+test_files: []

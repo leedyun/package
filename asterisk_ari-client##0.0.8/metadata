@@ -1,0 +1,287 @@
+--- !ruby/object:Gem::Specification
+name: asterisk_ari-client
+version: !ruby/object:Gem::Version
+  version: 0.0.8
+platform: ruby
+authors:
+- Jan Svoboda
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.2
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.9.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.9.3
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.19.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.19.0
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.6
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: websocket-client-simple
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: event_emitter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.5
+description: Ruby client library for the Asterisk REST Interface (ARI).
+email:
+- jan@mluv.cz
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- asterisk_ari-client.gemspec
+- examples/list_channels.rb
+- examples/websocket.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/ari.rb
+- lib/ari/client.rb
+- lib/ari/generators/api.rb
+- lib/ari/generators/attribute.rb
+- lib/ari/generators/model.rb
+- lib/ari/generators/operation.rb
+- lib/ari/generators/parameter.rb
+- lib/ari/generators/property.rb
+- lib/ari/generators/resource_generator.rb
+- lib/ari/generators/templates/model.rb.erb
+- lib/ari/generators/templates/resource.rb.erb
+- lib/ari/list_resource.rb
+- lib/ari/model.rb
+- lib/ari/models.rb
+- lib/ari/models/application_replaced.rb
+- lib/ari/models/asterisk_info.rb
+- lib/ari/models/bridge_attended_transfer.rb
+- lib/ari/models/bridge_blind_transfer.rb
+- lib/ari/models/bridge_created.rb
+- lib/ari/models/bridge_destroyed.rb
+- lib/ari/models/bridge_merged.rb
+- lib/ari/models/build_info.rb
+- lib/ari/models/caller_id.rb
+- lib/ari/models/channel_caller_id.rb
+- lib/ari/models/channel_connected_line.rb
+- lib/ari/models/channel_created.rb
+- lib/ari/models/channel_destroyed.rb
+- lib/ari/models/channel_dialplan.rb
+- lib/ari/models/channel_dtmf_received.rb
+- lib/ari/models/channel_entered_bridge.rb
+- lib/ari/models/channel_hangup_request.rb
+- lib/ari/models/channel_hold.rb
+- lib/ari/models/channel_left_bridge.rb
+- lib/ari/models/channel_state_change.rb
+- lib/ari/models/channel_talking_finished.rb
+- lib/ari/models/channel_talking_started.rb
+- lib/ari/models/channel_unhold.rb
+- lib/ari/models/channel_userevent.rb
+- lib/ari/models/channel_varset.rb
+- lib/ari/models/config_info.rb
+- lib/ari/models/device_state_changed.rb
+- lib/ari/models/dial.rb
+- lib/ari/models/dialed.rb
+- lib/ari/models/dialplan_cep.rb
+- lib/ari/models/endpoint_state_change.rb
+- lib/ari/models/format_lang_pair.rb
+- lib/ari/models/live_recording.rb
+- lib/ari/models/message.rb
+- lib/ari/models/missing_params.rb
+- lib/ari/models/playback_finished.rb
+- lib/ari/models/playback_started.rb
+- lib/ari/models/recording_failed.rb
+- lib/ari/models/recording_finished.rb
+- lib/ari/models/recording_started.rb
+- lib/ari/models/set_id.rb
+- lib/ari/models/stasis_end.rb
+- lib/ari/models/stasis_start.rb
+- lib/ari/models/status_info.rb
+- lib/ari/models/stored_recording.rb
+- lib/ari/models/system_info.rb
+- lib/ari/models/text_message.rb
+- lib/ari/models/text_message_received.rb
+- lib/ari/models/text_message_variable.rb
+- lib/ari/models/variable.rb
+- lib/ari/request_error.rb
+- lib/ari/resource.rb
+- lib/ari/resources.rb
+- lib/ari/resources/application.rb
+- lib/ari/resources/asterisk.rb
+- lib/ari/resources/bridge.rb
+- lib/ari/resources/channel.rb
+- lib/ari/resources/device_state.rb
+- lib/ari/resources/endpoint.rb
+- lib/ari/resources/event.rb
+- lib/ari/resources/mailbox.rb
+- lib/ari/resources/playback.rb
+- lib/ari/resources/recording.rb
+- lib/ari/resources/sound.rb
+- lib/ari/server_error.rb
+- lib/asterisk/ari/client.rb
+- lib/asterisk/ari/client/version.rb
+- test/fixtures/bridge_create.json
+- test/fixtures/bridge_get.json
+- test/fixtures/bridges_list.json
+- test/fixtures/channel_get.json
+- test/fixtures/channel_originate.json
+- test/fixtures/channel_originate_with_channel_vars.json
+- test/fixtures/channel_originate_with_id.json
+- test/fixtures/channels_list.json
+- test/fixtures/sounds_list.json
+- test/lib/asterisk-ari-client/bridge_test.rb
+- test/lib/asterisk-ari-client/channel_test.rb
+- test/lib/asterisk-ari-client/sound_test.rb
+- test/test_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.9'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby client library for the Asterisk REST Interface (ARI).
+test_files:
+- test/fixtures/bridge_create.json
+- test/fixtures/bridge_get.json
+- test/fixtures/bridges_list.json
+- test/fixtures/channel_get.json
+- test/fixtures/channel_originate.json
+- test/fixtures/channel_originate_with_channel_vars.json
+- test/fixtures/channel_originate_with_id.json
+- test/fixtures/channels_list.json
+- test/fixtures/sounds_list.json
+- test/lib/asterisk-ari-client/bridge_test.rb
+- test/lib/asterisk-ari-client/channel_test.rb
+- test/lib/asterisk-ari-client/sound_test.rb
+- test/test_helper.rb

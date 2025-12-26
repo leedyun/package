@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: currencies
+version: !ruby/object:Gem::Version
+  version: 0.4.2
+platform: ruby
+authors:
+- hexorx
+- pr0d1r2
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-06-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: ! 'If you are tracking any kind of assets the currencies gem is for you.
+  It contains every currency in the ISO 4217 standard and allows you to add your own
+  as well. So if you decide to take sparkly buttons as a form of payment you can use
+  currencies to display the shiny button unicode symbol ☼ (disclaimer: ☼ may not look
+  like a shiny button to everyone.) when used with something like the money gem. Speaking
+  of the money gem, currencies gives you an ExchangeBank that the money gem can use
+  to convert from one currency to another. There are plans to have ExchangeRate provider
+  plugin system. Right now the rates are either set manually or pulled from Yahoo
+  Finance.'
+email:
+- hexorx@gmail.com
+- pr0d1r2@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .document
+- .gitignore
+- .rvmrc
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.markdown
+- Rakefile
+- currencies.gemspec
+- lib/currencies.rb
+- lib/currencies/currency.rb
+- lib/currencies/exchange_bank.rb
+- lib/currencies/extentions.rb
+- lib/currencies/version.rb
+- lib/data/iso4217.yaml
+- lib/iso4217.rb
+- spec/currency_spec.rb
+- spec/exchange_bank_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/hexorx/currencies
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.3
+signing_key: 
+specification_version: 4
+summary: Simple gem for working with currencies. It is extracted from the countries
+  gem and contains all the currency information in the ISO 4217 standard.
+test_files:
+- spec/currency_spec.rb
+- spec/exchange_bank_spec.rb
+- spec/spec_helper.rb
+has_rdoc: 

@@ -1,0 +1,250 @@
+--- !ruby/object:Gem::Specification
+name: parlour
+version: !ruby/object:Gem::Version
+  version: 9.0.0
+platform: ruby
+authors:
+- Aaron Christiansen
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-06-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sorbet-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.5'
+- !ruby/object:Gem::Dependency
+  name: rainbow
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: commander
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: sorbet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email:
+- hello@aaronc.cc
+executables:
+- parlour
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/ISSUE_TEMPLATE/bug-report.md"
+- ".github/ISSUE_TEMPLATE/feature-request.md"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".parlour"
+- ".rspec"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ci/check_rbi.sh
+- exe/parlour
+- lib/parlour.rb
+- lib/parlour/conflict_resolver.rb
+- lib/parlour/conversion/converter.rb
+- lib/parlour/conversion/rbi_to_rbs.rb
+- lib/parlour/debugging.rb
+- lib/parlour/detached_rbi_generator.rb
+- lib/parlour/detached_rbs_generator.rb
+- lib/parlour/generator.rb
+- lib/parlour/kernel_hack.rb
+- lib/parlour/mixin/searchable.rb
+- lib/parlour/options.rb
+- lib/parlour/parse_error.rb
+- lib/parlour/plugin.rb
+- lib/parlour/rbi_generator.rb
+- lib/parlour/rbi_generator/arbitrary.rb
+- lib/parlour/rbi_generator/attribute.rb
+- lib/parlour/rbi_generator/class_namespace.rb
+- lib/parlour/rbi_generator/constant.rb
+- lib/parlour/rbi_generator/enum_class_namespace.rb
+- lib/parlour/rbi_generator/extend.rb
+- lib/parlour/rbi_generator/include.rb
+- lib/parlour/rbi_generator/method.rb
+- lib/parlour/rbi_generator/module_namespace.rb
+- lib/parlour/rbi_generator/namespace.rb
+- lib/parlour/rbi_generator/parameter.rb
+- lib/parlour/rbi_generator/rbi_object.rb
+- lib/parlour/rbi_generator/struct_class_namespace.rb
+- lib/parlour/rbi_generator/struct_prop.rb
+- lib/parlour/rbi_generator/type_alias.rb
+- lib/parlour/rbs_generator.rb
+- lib/parlour/rbs_generator/arbitrary.rb
+- lib/parlour/rbs_generator/attribute.rb
+- lib/parlour/rbs_generator/block.rb
+- lib/parlour/rbs_generator/class_namespace.rb
+- lib/parlour/rbs_generator/constant.rb
+- lib/parlour/rbs_generator/extend.rb
+- lib/parlour/rbs_generator/include.rb
+- lib/parlour/rbs_generator/interface_namespace.rb
+- lib/parlour/rbs_generator/method.rb
+- lib/parlour/rbs_generator/method_signature.rb
+- lib/parlour/rbs_generator/module_namespace.rb
+- lib/parlour/rbs_generator/namespace.rb
+- lib/parlour/rbs_generator/parameter.rb
+- lib/parlour/rbs_generator/rbs_object.rb
+- lib/parlour/rbs_generator/type_alias.rb
+- lib/parlour/type_loader.rb
+- lib/parlour/type_parser.rb
+- lib/parlour/typed_object.rb
+- lib/parlour/types.rb
+- lib/parlour/version.rb
+- parlour.gemspec
+- plugin_examples/foobar_plugin.rb
+homepage: https://github.com/AaronC81/parlour
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: A type information generator, merger and parser for Sorbet and Ruby 3/Steep
+test_files: []

@@ -1,0 +1,143 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-ci-environment
+version: !ruby/object:Gem::Version
+  version: 10.0.1
+platform: ruby
+authors:
+- Vincent Prêtre
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.44.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.44.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.16.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.15.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.15.0
+description: Detect CI Environment from environment variables
+email: cukes@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/cucumber/ci_environment.rb
+- lib/cucumber/ci_environment/CiEnvironments.json
+- lib/cucumber/ci_environment/variable_expression.rb
+- spec/cucumber/ci_environment/ci_environment_spec.rb
+- spec/cucumber/ci_environment/evaluate_variable_expression_spec.rb
+- spec/cucumber/ci_environment/github_pull_request_integration_spec.rb
+- spec/cucumber/ci_environment/remove_userinfo_from_url_spec.rb
+homepage: https://github.com/cucumber/ci-environment
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/ci-environment/issues
+  changelog_uri: https://github.com/cucumber/ci-environment/blob/main/CHANGELOG.md
+  documentation_uri: https://cucumber.io/docs/gherkin/
+  source_code_uri: https://github.com/cucumber/ci-environment/tree/main/ruby
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.3
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: cucumber-ci-environment-10.0.1
+test_files:
+- spec/cucumber/ci_environment/ci_environment_spec.rb
+- spec/cucumber/ci_environment/evaluate_variable_expression_spec.rb
+- spec/cucumber/ci_environment/github_pull_request_integration_spec.rb
+- spec/cucumber/ci_environment/remove_userinfo_from_url_spec.rb

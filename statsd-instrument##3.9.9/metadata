@@ -1,0 +1,169 @@
+--- !ruby/object:Gem::Specification
+name: statsd-instrument
+version: !ruby/object:Gem::Version
+  version: 3.9.9
+platform: ruby
+authors:
+- Jesse Storimer
+- Tobias Lutke
+- Willem van Bergen
+bindir: bin
+cert_chain: []
+date: 2025-01-14 00:00:00.000000000 Z
+dependencies: []
+description: A StatsD client for Ruby apps. Provides metaprogramming methods to inject
+  StatsD instrumentation into your code.
+email:
+- jesse@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/CODEOWNERS"
+- ".github/pull_request_template.md"
+- ".github/workflows/benchmark.yml"
+- ".github/workflows/cla.yml"
+- ".github/workflows/lint.yml"
+- ".github/workflows/tests.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".yardopts"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- Makefile
+- README.md
+- Rakefile
+- benchmark/README.md
+- benchmark/local-udp-throughput
+- benchmark/send-metrics-to-dev-null-log
+- benchmark/send-metrics-to-local-udp-receiver
+- bin/rake
+- bin/rubocop
+- lib/statsd-instrument.rb
+- lib/statsd/instrument.rb
+- lib/statsd/instrument/aggregator.rb
+- lib/statsd/instrument/assertions.rb
+- lib/statsd/instrument/batched_sink.rb
+- lib/statsd/instrument/capture_sink.rb
+- lib/statsd/instrument/client.rb
+- lib/statsd/instrument/connection_behavior.rb
+- lib/statsd/instrument/datagram.rb
+- lib/statsd/instrument/datagram_builder.rb
+- lib/statsd/instrument/dogstatsd_datagram.rb
+- lib/statsd/instrument/dogstatsd_datagram_builder.rb
+- lib/statsd/instrument/environment.rb
+- lib/statsd/instrument/expectation.rb
+- lib/statsd/instrument/helpers.rb
+- lib/statsd/instrument/log_sink.rb
+- lib/statsd/instrument/matchers.rb
+- lib/statsd/instrument/null_sink.rb
+- lib/statsd/instrument/railtie.rb
+- lib/statsd/instrument/rubocop.rb
+- lib/statsd/instrument/rubocop/measure_as_dist_argument.rb
+- lib/statsd/instrument/rubocop/metaprogramming_positional_arguments.rb
+- lib/statsd/instrument/rubocop/metric_prefix_argument.rb
+- lib/statsd/instrument/rubocop/metric_return_value.rb
+- lib/statsd/instrument/rubocop/metric_value_keyword_argument.rb
+- lib/statsd/instrument/rubocop/positional_arguments.rb
+- lib/statsd/instrument/rubocop/singleton_configuration.rb
+- lib/statsd/instrument/rubocop/splat_arguments.rb
+- lib/statsd/instrument/sink.rb
+- lib/statsd/instrument/statsd_datagram_builder.rb
+- lib/statsd/instrument/strict.rb
+- lib/statsd/instrument/udp_connection.rb
+- lib/statsd/instrument/uds_connection.rb
+- lib/statsd/instrument/version.rb
+- shipit.rubygems.yml
+- statsd-instrument.gemspec
+- test/aggregator_test.rb
+- test/assertions_test.rb
+- test/benchmark/clock_gettime.rb
+- test/benchmark/metrics.rb
+- test/benchmark/tags.rb
+- test/capture_sink_test.rb
+- test/changelog_test.rb
+- test/client_test.rb
+- test/datagram_builder_test.rb
+- test/datagram_test.rb
+- test/dispatcher_stats_test.rb
+- test/dogstatsd_datagram_builder_test.rb
+- test/environment_test.rb
+- test/helpers/rubocop_helper.rb
+- test/helpers_test.rb
+- test/integration_test.rb
+- test/log_sink_test.rb
+- test/matchers_test.rb
+- test/null_sink_test.rb
+- test/rubocop/measure_as_dist_argument_test.rb
+- test/rubocop/metaprogramming_positional_arguments_test.rb
+- test/rubocop/metric_prefix_argument_test.rb
+- test/rubocop/metric_return_value_test.rb
+- test/rubocop/metric_value_keyword_argument_test.rb
+- test/rubocop/positional_arguments_test.rb
+- test/rubocop/singleton_configuration_test.rb
+- test/rubocop/splat_arguments_test.rb
+- test/statsd_datagram_builder_test.rb
+- test/statsd_instrumentation_test.rb
+- test/statsd_test.rb
+- test/test_helper.rb
+- test/udp_sink_test.rb
+- test/uds_sink_test.rb
+homepage: https://github.com/Shopify/statsd-instrument
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: A StatsD client for Ruby apps
+test_files:
+- test/aggregator_test.rb
+- test/assertions_test.rb
+- test/benchmark/clock_gettime.rb
+- test/benchmark/metrics.rb
+- test/benchmark/tags.rb
+- test/capture_sink_test.rb
+- test/changelog_test.rb
+- test/client_test.rb
+- test/datagram_builder_test.rb
+- test/datagram_test.rb
+- test/dispatcher_stats_test.rb
+- test/dogstatsd_datagram_builder_test.rb
+- test/environment_test.rb
+- test/helpers/rubocop_helper.rb
+- test/helpers_test.rb
+- test/integration_test.rb
+- test/log_sink_test.rb
+- test/matchers_test.rb
+- test/null_sink_test.rb
+- test/rubocop/measure_as_dist_argument_test.rb
+- test/rubocop/metaprogramming_positional_arguments_test.rb
+- test/rubocop/metric_prefix_argument_test.rb
+- test/rubocop/metric_return_value_test.rb
+- test/rubocop/metric_value_keyword_argument_test.rb
+- test/rubocop/positional_arguments_test.rb
+- test/rubocop/singleton_configuration_test.rb
+- test/rubocop/splat_arguments_test.rb
+- test/statsd_datagram_builder_test.rb
+- test/statsd_instrumentation_test.rb
+- test/statsd_test.rb
+- test/test_helper.rb
+- test/udp_sink_test.rb
+- test/uds_sink_test.rb

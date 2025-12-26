@@ -1,0 +1,1348 @@
+--- !ruby/object:Gem::Specification
+name: sorbet-rails
+version: !ruby/object:Gem::Version
+  version: 0.7.34
+platform: ruby
+authors:
+- Chan Zuckerberg Initiative
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-04-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: parlour
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.1
+- !ruby/object:Gem::Dependency
+  name: sorbet-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.9892
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.9892
+- !ruby/object:Gem::Dependency
+  name: sorbet-coerce
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.6
+- !ruby/object:Gem::Dependency
+  name: method_source
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.2
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.7'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 11.1.3
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 11.1.3
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.3
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.8.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.8.2
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.12.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.12.1
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+description: 
+email: opensource@chanzuckerberg.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codecov.yml"
+- ".gitattributes"
+- ".github/ISSUE_TEMPLATE/bug.md"
+- ".github/dependabot.yml"
+- ".github/workflows/ci-master.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/publish-gem.yml"
+- ".gitignore"
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- SECURITY.md
+- bin/sorbet
+- lib/bundled_rbi/customizabel_rbi_formatter.rbi
+- lib/bundled_rbi/pluck_to_tstruct.rbi
+- lib/bundled_rbi/type_assert.rbi
+- lib/bundled_rbi/typed_enum.rbi
+- lib/bundled_rbi/typed_params.rbi
+- lib/sorbet-rails.rb
+- lib/sorbet-rails/active_record_rbi_formatter.rb
+- lib/sorbet-rails/config.rb
+- lib/sorbet-rails/dependent_gem_rbis/README.md
+- lib/sorbet-rails/dependent_gem_rbis/actionmailer.rbi
+- lib/sorbet-rails/dependent_gem_rbis/activejob.rbi
+- lib/sorbet-rails/dependent_gem_rbis/activerecord.rbi
+- lib/sorbet-rails/dependent_gem_rbis/parlour.rbi
+- lib/sorbet-rails/deprecation.rb
+- lib/sorbet-rails/gem_plugins/aasm_plugin.rb
+- lib/sorbet-rails/gem_plugins/active_flag_plugin.rb
+- lib/sorbet-rails/gem_plugins/attr_json_plugin.rb
+- lib/sorbet-rails/gem_plugins/elastic_search_plugin.rb
+- lib/sorbet-rails/gem_plugins/flag_shih_tzu_plugin.rb
+- lib/sorbet-rails/gem_plugins/friendly_id_plugin.rb
+- lib/sorbet-rails/gem_plugins/kaminari_plugin.rb
+- lib/sorbet-rails/gem_plugins/money_rails_plugin.rb
+- lib/sorbet-rails/gem_plugins/paperclip_plugin.rb
+- lib/sorbet-rails/gem_plugins/pg_search_plugin.rb
+- lib/sorbet-rails/gem_plugins/shrine_plugin.rb
+- lib/sorbet-rails/helper_rbi_formatter.rb
+- lib/sorbet-rails/job_rbi_formatter.rb
+- lib/sorbet-rails/mailer_rbi_formatter.rb
+- lib/sorbet-rails/model_column_utils.rb
+- lib/sorbet-rails/model_plugins/active_record_assoc.rb
+- lib/sorbet-rails/model_plugins/active_record_attribute.rb
+- lib/sorbet-rails/model_plugins/active_record_enum.rb
+- lib/sorbet-rails/model_plugins/active_record_named_scope.rb
+- lib/sorbet-rails/model_plugins/active_record_querying.rb
+- lib/sorbet-rails/model_plugins/active_record_serialized_attribute.rb
+- lib/sorbet-rails/model_plugins/active_relation_where_not.rb
+- lib/sorbet-rails/model_plugins/active_storage_methods.rb
+- lib/sorbet-rails/model_plugins/base.rb
+- lib/sorbet-rails/model_plugins/custom_finder_methods.rb
+- lib/sorbet-rails/model_plugins/enumerable_collections.rb
+- lib/sorbet-rails/model_plugins/plugins.rb
+- lib/sorbet-rails/model_rbi_formatter.rb
+- lib/sorbet-rails/model_utils.rb
+- lib/sorbet-rails/rails_mixins/active_record_overrides.rb
+- lib/sorbet-rails/rails_mixins/custom_finder_methods.rb
+- lib/sorbet-rails/rails_mixins/generated_url_helpers.rb
+- lib/sorbet-rails/rails_mixins/pluck_to_tstruct.rb
+- lib/sorbet-rails/railtie.rb
+- lib/sorbet-rails/routes_rbi_formatter.rb
+- lib/sorbet-rails/sorbet_utils.rb
+- lib/sorbet-rails/tasks/rails_rbi.rake
+- lib/sorbet-rails/type_assert/type_assert.rb
+- lib/sorbet-rails/type_assert/type_assert_impl.rb
+- lib/sorbet-rails/type_assert/type_assert_interface.rb
+- lib/sorbet-rails/typed_params.rb
+- lib/sorbet-rails/utils.rb
+- sorbet-rails.gemspec
+- spec/active_record_rbi_formatter_spec.rb
+- spec/bin/run_all_specs.sh
+- spec/bin/run_spec.sh
+- spec/bin/update_test_data.sh
+- spec/custom_finder_methods_spec.rb
+- spec/generators/rails-template.rb
+- spec/generators/sorbet_test_cases.rb
+- spec/helper_rbi_formatter_spec.rb
+- spec/job_rbi_formatter_spec.rb
+- spec/mailer_rbi_formatter_spec.rb
+- spec/model_plugins_spec.rb
+- spec/model_rbi_formatter_spec.rb
+- spec/pluck_to_tstruct_spec.rb
+- spec/rails_helper.rb
+- spec/rake_helper.rb
+- spec/rake_rails_rbi_active_record_spec.rb
+- spec/rake_rails_rbi_helpers_spec.rb
+- spec/rake_rails_rbi_jobs_spec.rb
+- spec/rake_rails_rbi_mailers_spec.rb
+- spec/rake_rails_rbi_models_spec.rb
+- spec/rake_rails_rbi_routes_spec.rb
+- spec/routes_rbi_formatter_spec.rb
+- spec/sorbet_spec.rb
+- spec/sorbet_utils_spec.rb
+- spec/spec_helper.rb
+- spec/support/v5.2/.gitignore
+- spec/support/v5.2/Gemfile
+- spec/support/v5.2/Gemfile.lock
+- spec/support/v5.2/README.md
+- spec/support/v5.2/Rakefile
+- spec/support/v5.2/app/assets/config/manifest.js
+- spec/support/v5.2/app/assets/images/.keep
+- spec/support/v5.2/app/assets/stylesheets/application.css
+- spec/support/v5.2/app/controllers/application_controller.rb
+- spec/support/v5.2/app/controllers/concerns/.keep
+- spec/support/v5.2/app/helpers/application_helper.rb
+- spec/support/v5.2/app/helpers/bar_helper.rb
+- spec/support/v5.2/app/helpers/baz_helper.rb
+- spec/support/v5.2/app/helpers/foo_helper.rb
+- spec/support/v5.2/app/jobs/application_job.rb
+- spec/support/v5.2/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v5.2/app/mailers/application_mailer.rb
+- spec/support/v5.2/app/mailers/daily_prophet_mailer.rb
+- spec/support/v5.2/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v5.2/app/models/application_record.rb
+- spec/support/v5.2/app/models/concerns/.keep
+- spec/support/v5.2/app/models/concerns/mythical.rb
+- spec/support/v5.2/app/models/headmaster.rb
+- spec/support/v5.2/app/models/potion.rb
+- spec/support/v5.2/app/models/robe.rb
+- spec/support/v5.2/app/models/school.rb
+- spec/support/v5.2/app/models/spell.rb
+- spec/support/v5.2/app/models/spell_book.rb
+- spec/support/v5.2/app/models/squib.rb
+- spec/support/v5.2/app/models/subject.rb
+- spec/support/v5.2/app/models/wand.rb
+- spec/support/v5.2/app/models/wizard.rb
+- spec/support/v5.2/app/views/layouts/application.html.erb
+- spec/support/v5.2/app/views/layouts/mailer.html.erb
+- spec/support/v5.2/app/views/layouts/mailer.text.erb
+- spec/support/v5.2/bin/bundle
+- spec/support/v5.2/bin/rails
+- spec/support/v5.2/bin/rake
+- spec/support/v5.2/bin/setup
+- spec/support/v5.2/bin/update
+- spec/support/v5.2/bin/yarn
+- spec/support/v5.2/config.ru
+- spec/support/v5.2/config/application.rb
+- spec/support/v5.2/config/boot.rb
+- spec/support/v5.2/config/database.yml
+- spec/support/v5.2/config/environment.rb
+- spec/support/v5.2/config/environments/development.rb
+- spec/support/v5.2/config/environments/production.rb
+- spec/support/v5.2/config/environments/test.rb
+- spec/support/v5.2/config/initializers/application_controller_renderer.rb
+- spec/support/v5.2/config/initializers/backtrace_silencers.rb
+- spec/support/v5.2/config/initializers/content_security_policy.rb
+- spec/support/v5.2/config/initializers/cookies_serializer.rb
+- spec/support/v5.2/config/initializers/filter_parameter_logging.rb
+- spec/support/v5.2/config/initializers/inflections.rb
+- spec/support/v5.2/config/initializers/mime_types.rb
+- spec/support/v5.2/config/initializers/sorbet_rails.rb
+- spec/support/v5.2/config/initializers/wrap_parameters.rb
+- spec/support/v5.2/config/locales/en.yml
+- spec/support/v5.2/config/puma.rb
+- spec/support/v5.2/config/routes.rb
+- spec/support/v5.2/config/storage.yml
+- spec/support/v5.2/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v5.2/db/migrate/20190620000002_create_wands.rb
+- spec/support/v5.2/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v5.2/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v5.2/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000009_add_school.rb
+- spec/support/v5.2/db/migrate/20190620000010_add_subject.rb
+- spec/support/v5.2/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v5.2/db/migrate/20190620000012_add_spell.rb
+- spec/support/v5.2/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v5.2/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v5.2/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v5.2/db/schema.rb
+- spec/support/v5.2/db/seeds.rb
+- spec/support/v5.2/lib/assets/.keep
+- spec/support/v5.2/lib/mythical_rbi_plugin.rb
+- spec/support/v5.2/lib/tasks/.keep
+- spec/support/v5.2/log/.keep
+- spec/support/v5.2/package.json
+- spec/support/v5.2/public/robots.txt
+- spec/support/v5.2/sorbet_test_cases.rb
+- spec/support/v5.2/storage/.keep
+- spec/support/v5.2/tmp/.keep
+- spec/support/v5.2/vendor/.keep
+- spec/support/v6.0/.gitignore
+- spec/support/v6.0/Gemfile
+- spec/support/v6.0/Gemfile.lock
+- spec/support/v6.0/README.md
+- spec/support/v6.0/Rakefile
+- spec/support/v6.0/app/assets/config/manifest.js
+- spec/support/v6.0/app/assets/images/.keep
+- spec/support/v6.0/app/assets/stylesheets/application.css
+- spec/support/v6.0/app/controllers/application_controller.rb
+- spec/support/v6.0/app/controllers/concerns/.keep
+- spec/support/v6.0/app/helpers/application_helper.rb
+- spec/support/v6.0/app/helpers/bar_helper.rb
+- spec/support/v6.0/app/helpers/baz_helper.rb
+- spec/support/v6.0/app/helpers/foo_helper.rb
+- spec/support/v6.0/app/jobs/application_job.rb
+- spec/support/v6.0/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v6.0/app/mailers/application_mailer.rb
+- spec/support/v6.0/app/mailers/daily_prophet_mailer.rb
+- spec/support/v6.0/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v6.0/app/models/application_record.rb
+- spec/support/v6.0/app/models/concerns/.keep
+- spec/support/v6.0/app/models/concerns/mythical.rb
+- spec/support/v6.0/app/models/headmaster.rb
+- spec/support/v6.0/app/models/potion.rb
+- spec/support/v6.0/app/models/robe.rb
+- spec/support/v6.0/app/models/school.rb
+- spec/support/v6.0/app/models/spell.rb
+- spec/support/v6.0/app/models/spell_book.rb
+- spec/support/v6.0/app/models/squib.rb
+- spec/support/v6.0/app/models/subject.rb
+- spec/support/v6.0/app/models/wand.rb
+- spec/support/v6.0/app/models/wizard.rb
+- spec/support/v6.0/app/views/layouts/application.html.erb
+- spec/support/v6.0/app/views/layouts/mailer.html.erb
+- spec/support/v6.0/app/views/layouts/mailer.text.erb
+- spec/support/v6.0/bin/bundle
+- spec/support/v6.0/bin/rails
+- spec/support/v6.0/bin/rake
+- spec/support/v6.0/bin/setup
+- spec/support/v6.0/config.ru
+- spec/support/v6.0/config/application.rb
+- spec/support/v6.0/config/boot.rb
+- spec/support/v6.0/config/database.yml
+- spec/support/v6.0/config/environment.rb
+- spec/support/v6.0/config/environments/development.rb
+- spec/support/v6.0/config/environments/production.rb
+- spec/support/v6.0/config/environments/test.rb
+- spec/support/v6.0/config/initializers/application_controller_renderer.rb
+- spec/support/v6.0/config/initializers/backtrace_silencers.rb
+- spec/support/v6.0/config/initializers/content_security_policy.rb
+- spec/support/v6.0/config/initializers/cookies_serializer.rb
+- spec/support/v6.0/config/initializers/filter_parameter_logging.rb
+- spec/support/v6.0/config/initializers/inflections.rb
+- spec/support/v6.0/config/initializers/mime_types.rb
+- spec/support/v6.0/config/initializers/sorbet_rails.rb
+- spec/support/v6.0/config/initializers/wrap_parameters.rb
+- spec/support/v6.0/config/locales/en.yml
+- spec/support/v6.0/config/puma.rb
+- spec/support/v6.0/config/routes.rb
+- spec/support/v6.0/config/storage.yml
+- spec/support/v6.0/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v6.0/db/migrate/20190620000002_create_wands.rb
+- spec/support/v6.0/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v6.0/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v6.0/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000009_add_school.rb
+- spec/support/v6.0/db/migrate/20190620000010_add_subject.rb
+- spec/support/v6.0/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v6.0/db/migrate/20190620000012_add_spell.rb
+- spec/support/v6.0/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v6.0/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v6.0/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v6.0/db/schema.rb
+- spec/support/v6.0/db/seeds.rb
+- spec/support/v6.0/lib/assets/.keep
+- spec/support/v6.0/lib/mythical_rbi_plugin.rb
+- spec/support/v6.0/lib/tasks/.keep
+- spec/support/v6.0/log/.keep
+- spec/support/v6.0/public/robots.txt
+- spec/support/v6.0/sorbet_test_cases.rb
+- spec/support/v6.0/storage/.keep
+- spec/support/v6.0/tmp/.keep
+- spec/support/v6.0/tmp/pids/.keep
+- spec/support/v6.0/vendor/.keep
+- spec/support/v6.1/.gitignore
+- spec/support/v6.1/Gemfile
+- spec/support/v6.1/Gemfile.lock
+- spec/support/v6.1/README.md
+- spec/support/v6.1/Rakefile
+- spec/support/v6.1/app/assets/config/manifest.js
+- spec/support/v6.1/app/assets/images/.keep
+- spec/support/v6.1/app/assets/stylesheets/application.css
+- spec/support/v6.1/app/controllers/application_controller.rb
+- spec/support/v6.1/app/controllers/concerns/.keep
+- spec/support/v6.1/app/helpers/application_helper.rb
+- spec/support/v6.1/app/helpers/bar_helper.rb
+- spec/support/v6.1/app/helpers/baz_helper.rb
+- spec/support/v6.1/app/helpers/foo_helper.rb
+- spec/support/v6.1/app/jobs/application_job.rb
+- spec/support/v6.1/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v6.1/app/mailers/application_mailer.rb
+- spec/support/v6.1/app/mailers/daily_prophet_mailer.rb
+- spec/support/v6.1/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v6.1/app/models/application_record.rb
+- spec/support/v6.1/app/models/concerns/.keep
+- spec/support/v6.1/app/models/concerns/mythical.rb
+- spec/support/v6.1/app/models/headmaster.rb
+- spec/support/v6.1/app/models/potion.rb
+- spec/support/v6.1/app/models/robe.rb
+- spec/support/v6.1/app/models/school.rb
+- spec/support/v6.1/app/models/spell.rb
+- spec/support/v6.1/app/models/spell_book.rb
+- spec/support/v6.1/app/models/squib.rb
+- spec/support/v6.1/app/models/subject.rb
+- spec/support/v6.1/app/models/wand.rb
+- spec/support/v6.1/app/models/wizard.rb
+- spec/support/v6.1/app/views/layouts/application.html.erb
+- spec/support/v6.1/app/views/layouts/mailer.html.erb
+- spec/support/v6.1/app/views/layouts/mailer.text.erb
+- spec/support/v6.1/bin/bundle
+- spec/support/v6.1/bin/rails
+- spec/support/v6.1/bin/rake
+- spec/support/v6.1/bin/setup
+- spec/support/v6.1/config.ru
+- spec/support/v6.1/config/application.rb
+- spec/support/v6.1/config/boot.rb
+- spec/support/v6.1/config/database.yml
+- spec/support/v6.1/config/environment.rb
+- spec/support/v6.1/config/environments/development.rb
+- spec/support/v6.1/config/environments/production.rb
+- spec/support/v6.1/config/environments/test.rb
+- spec/support/v6.1/config/initializers/application_controller_renderer.rb
+- spec/support/v6.1/config/initializers/backtrace_silencers.rb
+- spec/support/v6.1/config/initializers/content_security_policy.rb
+- spec/support/v6.1/config/initializers/cookies_serializer.rb
+- spec/support/v6.1/config/initializers/filter_parameter_logging.rb
+- spec/support/v6.1/config/initializers/inflections.rb
+- spec/support/v6.1/config/initializers/mime_types.rb
+- spec/support/v6.1/config/initializers/sorbet_rails.rb
+- spec/support/v6.1/config/initializers/wrap_parameters.rb
+- spec/support/v6.1/config/locales/en.yml
+- spec/support/v6.1/config/puma.rb
+- spec/support/v6.1/config/routes.rb
+- spec/support/v6.1/config/storage.yml
+- spec/support/v6.1/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v6.1/db/migrate/20190620000002_create_wands.rb
+- spec/support/v6.1/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v6.1/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v6.1/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000009_add_school.rb
+- spec/support/v6.1/db/migrate/20190620000010_add_subject.rb
+- spec/support/v6.1/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v6.1/db/migrate/20190620000012_add_spell.rb
+- spec/support/v6.1/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v6.1/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v6.1/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v6.1/db/schema.rb
+- spec/support/v6.1/db/seeds.rb
+- spec/support/v6.1/lib/assets/.keep
+- spec/support/v6.1/lib/mythical_rbi_plugin.rb
+- spec/support/v6.1/lib/tasks/.keep
+- spec/support/v6.1/log/.keep
+- spec/support/v6.1/sorbet_test_cases.rb
+- spec/support/v6.1/storage/.keep
+- spec/support/v6.1/tmp/.keep
+- spec/support/v6.1/tmp/pids/.keep
+- spec/support/v6.1/vendor/.keep
+- spec/support/v7.0/.gitattributes
+- spec/support/v7.0/.gitignore
+- spec/support/v7.0/Gemfile
+- spec/support/v7.0/Gemfile.lock
+- spec/support/v7.0/README.md
+- spec/support/v7.0/Rakefile
+- spec/support/v7.0/app/assets/images/.keep
+- spec/support/v7.0/app/assets/stylesheets/application.css
+- spec/support/v7.0/app/controllers/application_controller.rb
+- spec/support/v7.0/app/controllers/concerns/.keep
+- spec/support/v7.0/app/helpers/application_helper.rb
+- spec/support/v7.0/app/helpers/bar_helper.rb
+- spec/support/v7.0/app/helpers/baz_helper.rb
+- spec/support/v7.0/app/helpers/foo_helper.rb
+- spec/support/v7.0/app/jobs/application_job.rb
+- spec/support/v7.0/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v7.0/app/mailers/application_mailer.rb
+- spec/support/v7.0/app/mailers/daily_prophet_mailer.rb
+- spec/support/v7.0/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v7.0/app/models/application_record.rb
+- spec/support/v7.0/app/models/concerns/.keep
+- spec/support/v7.0/app/models/concerns/mythical.rb
+- spec/support/v7.0/app/models/headmaster.rb
+- spec/support/v7.0/app/models/potion.rb
+- spec/support/v7.0/app/models/robe.rb
+- spec/support/v7.0/app/models/school.rb
+- spec/support/v7.0/app/models/spell.rb
+- spec/support/v7.0/app/models/spell_book.rb
+- spec/support/v7.0/app/models/squib.rb
+- spec/support/v7.0/app/models/subject.rb
+- spec/support/v7.0/app/models/wand.rb
+- spec/support/v7.0/app/models/wizard.rb
+- spec/support/v7.0/app/views/layouts/application.html.erb
+- spec/support/v7.0/app/views/layouts/mailer.html.erb
+- spec/support/v7.0/app/views/layouts/mailer.text.erb
+- spec/support/v7.0/bin/bundle
+- spec/support/v7.0/bin/rails
+- spec/support/v7.0/bin/rake
+- spec/support/v7.0/bin/setup
+- spec/support/v7.0/config.ru
+- spec/support/v7.0/config/application.rb
+- spec/support/v7.0/config/boot.rb
+- spec/support/v7.0/config/database.yml
+- spec/support/v7.0/config/environment.rb
+- spec/support/v7.0/config/environments/development.rb
+- spec/support/v7.0/config/environments/production.rb
+- spec/support/v7.0/config/environments/test.rb
+- spec/support/v7.0/config/initializers/content_security_policy.rb
+- spec/support/v7.0/config/initializers/filter_parameter_logging.rb
+- spec/support/v7.0/config/initializers/inflections.rb
+- spec/support/v7.0/config/initializers/permissions_policy.rb
+- spec/support/v7.0/config/initializers/sorbet_rails.rb
+- spec/support/v7.0/config/locales/en.yml
+- spec/support/v7.0/config/puma.rb
+- spec/support/v7.0/config/routes.rb
+- spec/support/v7.0/config/storage.yml
+- spec/support/v7.0/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v7.0/db/migrate/20190620000002_create_wands.rb
+- spec/support/v7.0/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v7.0/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v7.0/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000009_add_school.rb
+- spec/support/v7.0/db/migrate/20190620000010_add_subject.rb
+- spec/support/v7.0/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v7.0/db/migrate/20190620000012_add_spell.rb
+- spec/support/v7.0/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v7.0/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v7.0/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v7.0/db/schema.rb
+- spec/support/v7.0/db/seeds.rb
+- spec/support/v7.0/lib/assets/.keep
+- spec/support/v7.0/lib/mythical_rbi_plugin.rb
+- spec/support/v7.0/lib/tasks/.keep
+- spec/support/v7.0/log/.keep
+- spec/support/v7.0/sorbet_test_cases.rb
+- spec/support/v7.0/storage/.keep
+- spec/support/v7.0/tmp/.keep
+- spec/support/v7.0/tmp/pids/.keep
+- spec/support/v7.0/tmp/storage/.keep
+- spec/support/v7.0/vendor/.keep
+- spec/test_data/v5.2/expected_active_record_base.rbi
+- spec/test_data/v5.2/expected_active_record_relation.rbi
+- spec/test_data/v5.2/expected_application_job.rbi
+- spec/test_data/v5.2/expected_application_mailer.rbi
+- spec/test_data/v5.2/expected_attachment.rbi
+- spec/test_data/v5.2/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v5.2/expected_blob.rbi
+- spec/test_data/v5.2/expected_custom_application_job.rbi
+- spec/test_data/v5.2/expected_custom_application_mailer.rbi
+- spec/test_data/v5.2/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v5.2/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v5.2/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v5.2/expected_daily_prophet_mailer.rbi
+- spec/test_data/v5.2/expected_habtm_subjects.rbi
+- spec/test_data/v5.2/expected_habtm_wizards.rbi
+- spec/test_data/v5.2/expected_headmaster.rbi
+- spec/test_data/v5.2/expected_helpers.rbi
+- spec/test_data/v5.2/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v5.2/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v5.2/expected_internal_metadata.rbi
+- spec/test_data/v5.2/expected_no_routes.rbi
+- spec/test_data/v5.2/expected_potion.rbi
+- spec/test_data/v5.2/expected_robe.rbi
+- spec/test_data/v5.2/expected_routes.rbi
+- spec/test_data/v5.2/expected_schema_migration.rbi
+- spec/test_data/v5.2/expected_school.rbi
+- spec/test_data/v5.2/expected_spell.rbi
+- spec/test_data/v5.2/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v5.2/expected_spell_book.rbi
+- spec/test_data/v5.2/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v5.2/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v5.2/expected_squib.rbi
+- spec/test_data/v5.2/expected_srb_tc_output.txt
+- spec/test_data/v5.2/expected_subject.rbi
+- spec/test_data/v5.2/expected_subject/habtm_wizards.rbi
+- spec/test_data/v5.2/expected_wand.rbi
+- spec/test_data/v5.2/expected_wizard.rbi
+- spec/test_data/v5.2/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v5.2/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v6.0/expected_active_record_base.rbi
+- spec/test_data/v6.0/expected_active_record_relation.rbi
+- spec/test_data/v6.0/expected_application_job.rbi
+- spec/test_data/v6.0/expected_application_mailer.rbi
+- spec/test_data/v6.0/expected_attachment.rbi
+- spec/test_data/v6.0/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v6.0/expected_blob.rbi
+- spec/test_data/v6.0/expected_custom_application_job.rbi
+- spec/test_data/v6.0/expected_custom_application_mailer.rbi
+- spec/test_data/v6.0/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v6.0/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v6.0/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.0/expected_daily_prophet_mailer.rbi
+- spec/test_data/v6.0/expected_habtm_subjects.rbi
+- spec/test_data/v6.0/expected_habtm_wizards.rbi
+- spec/test_data/v6.0/expected_headmaster.rbi
+- spec/test_data/v6.0/expected_helpers.rbi
+- spec/test_data/v6.0/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v6.0/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.0/expected_internal_metadata.rbi
+- spec/test_data/v6.0/expected_no_routes.rbi
+- spec/test_data/v6.0/expected_potion.rbi
+- spec/test_data/v6.0/expected_robe.rbi
+- spec/test_data/v6.0/expected_routes.rbi
+- spec/test_data/v6.0/expected_schema_migration.rbi
+- spec/test_data/v6.0/expected_school.rbi
+- spec/test_data/v6.0/expected_spell.rbi
+- spec/test_data/v6.0/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v6.0/expected_spell_book.rbi
+- spec/test_data/v6.0/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v6.0/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v6.0/expected_squib.rbi
+- spec/test_data/v6.0/expected_srb_tc_output.txt
+- spec/test_data/v6.0/expected_subject.rbi
+- spec/test_data/v6.0/expected_subject/habtm_wizards.rbi
+- spec/test_data/v6.0/expected_wand.rbi
+- spec/test_data/v6.0/expected_wizard.rbi
+- spec/test_data/v6.0/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v6.0/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v6.1/expected_active_record_base.rbi
+- spec/test_data/v6.1/expected_active_record_relation.rbi
+- spec/test_data/v6.1/expected_application_job.rbi
+- spec/test_data/v6.1/expected_application_mailer.rbi
+- spec/test_data/v6.1/expected_attachment.rbi
+- spec/test_data/v6.1/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v6.1/expected_blob.rbi
+- spec/test_data/v6.1/expected_custom_application_job.rbi
+- spec/test_data/v6.1/expected_custom_application_mailer.rbi
+- spec/test_data/v6.1/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v6.1/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v6.1/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.1/expected_daily_prophet_mailer.rbi
+- spec/test_data/v6.1/expected_habtm_subjects.rbi
+- spec/test_data/v6.1/expected_habtm_wizards.rbi
+- spec/test_data/v6.1/expected_headmaster.rbi
+- spec/test_data/v6.1/expected_helpers.rbi
+- spec/test_data/v6.1/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v6.1/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.1/expected_internal_metadata.rbi
+- spec/test_data/v6.1/expected_no_routes.rbi
+- spec/test_data/v6.1/expected_potion.rbi
+- spec/test_data/v6.1/expected_record.rbi
+- spec/test_data/v6.1/expected_robe.rbi
+- spec/test_data/v6.1/expected_routes.rbi
+- spec/test_data/v6.1/expected_schema_migration.rbi
+- spec/test_data/v6.1/expected_school.rbi
+- spec/test_data/v6.1/expected_spell.rbi
+- spec/test_data/v6.1/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v6.1/expected_spell_book.rbi
+- spec/test_data/v6.1/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v6.1/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v6.1/expected_squib.rbi
+- spec/test_data/v6.1/expected_srb_tc_output.txt
+- spec/test_data/v6.1/expected_subject.rbi
+- spec/test_data/v6.1/expected_subject/habtm_wizards.rbi
+- spec/test_data/v6.1/expected_variant_record.rbi
+- spec/test_data/v6.1/expected_wand.rbi
+- spec/test_data/v6.1/expected_wizard.rbi
+- spec/test_data/v6.1/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v6.1/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v7.0/expected_active_record_base.rbi
+- spec/test_data/v7.0/expected_active_record_relation.rbi
+- spec/test_data/v7.0/expected_application_job.rbi
+- spec/test_data/v7.0/expected_application_mailer.rbi
+- spec/test_data/v7.0/expected_attachment.rbi
+- spec/test_data/v7.0/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v7.0/expected_blob.rbi
+- spec/test_data/v7.0/expected_custom_application_job.rbi
+- spec/test_data/v7.0/expected_custom_application_mailer.rbi
+- spec/test_data/v7.0/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v7.0/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v7.0/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v7.0/expected_daily_prophet_mailer.rbi
+- spec/test_data/v7.0/expected_headmaster.rbi
+- spec/test_data/v7.0/expected_helpers.rbi
+- spec/test_data/v7.0/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v7.0/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v7.0/expected_internal_metadata.rbi
+- spec/test_data/v7.0/expected_no_routes.rbi
+- spec/test_data/v7.0/expected_potion.rbi
+- spec/test_data/v7.0/expected_record.rbi
+- spec/test_data/v7.0/expected_robe.rbi
+- spec/test_data/v7.0/expected_routes.rbi
+- spec/test_data/v7.0/expected_schema_migration.rbi
+- spec/test_data/v7.0/expected_school.rbi
+- spec/test_data/v7.0/expected_spell.rbi
+- spec/test_data/v7.0/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v7.0/expected_spell_book.rbi
+- spec/test_data/v7.0/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v7.0/expected_squib.rbi
+- spec/test_data/v7.0/expected_srb_tc_output.txt
+- spec/test_data/v7.0/expected_subject.rbi
+- spec/test_data/v7.0/expected_subject/habtm_wizards.rbi
+- spec/test_data/v7.0/expected_variant_record.rbi
+- spec/test_data/v7.0/expected_wand.rbi
+- spec/test_data/v7.0/expected_wizard.rbi
+- spec/test_data/v7.0/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v7.0/expected_wizard_wo_spellbook.rbi
+- spec/tstruct_comparable.rb
+- spec/typed_enum_spec.rb
+- spec/typed_params_spec.rb
+- spec/utils_spec.rb
+homepage: https://github.com/chanzuckerberg/sorbet-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Set of tools to make Sorbet work with Rails seamlessly.
+test_files:
+- spec/active_record_rbi_formatter_spec.rb
+- spec/bin/run_all_specs.sh
+- spec/bin/run_spec.sh
+- spec/bin/update_test_data.sh
+- spec/custom_finder_methods_spec.rb
+- spec/generators/rails-template.rb
+- spec/generators/sorbet_test_cases.rb
+- spec/helper_rbi_formatter_spec.rb
+- spec/job_rbi_formatter_spec.rb
+- spec/mailer_rbi_formatter_spec.rb
+- spec/model_plugins_spec.rb
+- spec/model_rbi_formatter_spec.rb
+- spec/pluck_to_tstruct_spec.rb
+- spec/rails_helper.rb
+- spec/rake_helper.rb
+- spec/rake_rails_rbi_active_record_spec.rb
+- spec/rake_rails_rbi_helpers_spec.rb
+- spec/rake_rails_rbi_jobs_spec.rb
+- spec/rake_rails_rbi_mailers_spec.rb
+- spec/rake_rails_rbi_models_spec.rb
+- spec/rake_rails_rbi_routes_spec.rb
+- spec/routes_rbi_formatter_spec.rb
+- spec/sorbet_spec.rb
+- spec/sorbet_utils_spec.rb
+- spec/spec_helper.rb
+- spec/support/v5.2/.gitignore
+- spec/support/v5.2/Gemfile
+- spec/support/v5.2/Gemfile.lock
+- spec/support/v5.2/README.md
+- spec/support/v5.2/Rakefile
+- spec/support/v5.2/app/assets/config/manifest.js
+- spec/support/v5.2/app/assets/images/.keep
+- spec/support/v5.2/app/assets/stylesheets/application.css
+- spec/support/v5.2/app/controllers/application_controller.rb
+- spec/support/v5.2/app/controllers/concerns/.keep
+- spec/support/v5.2/app/helpers/application_helper.rb
+- spec/support/v5.2/app/helpers/bar_helper.rb
+- spec/support/v5.2/app/helpers/baz_helper.rb
+- spec/support/v5.2/app/helpers/foo_helper.rb
+- spec/support/v5.2/app/jobs/application_job.rb
+- spec/support/v5.2/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v5.2/app/mailers/application_mailer.rb
+- spec/support/v5.2/app/mailers/daily_prophet_mailer.rb
+- spec/support/v5.2/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v5.2/app/models/application_record.rb
+- spec/support/v5.2/app/models/concerns/.keep
+- spec/support/v5.2/app/models/concerns/mythical.rb
+- spec/support/v5.2/app/models/headmaster.rb
+- spec/support/v5.2/app/models/potion.rb
+- spec/support/v5.2/app/models/robe.rb
+- spec/support/v5.2/app/models/school.rb
+- spec/support/v5.2/app/models/spell.rb
+- spec/support/v5.2/app/models/spell_book.rb
+- spec/support/v5.2/app/models/squib.rb
+- spec/support/v5.2/app/models/subject.rb
+- spec/support/v5.2/app/models/wand.rb
+- spec/support/v5.2/app/models/wizard.rb
+- spec/support/v5.2/app/views/layouts/application.html.erb
+- spec/support/v5.2/app/views/layouts/mailer.html.erb
+- spec/support/v5.2/app/views/layouts/mailer.text.erb
+- spec/support/v5.2/bin/bundle
+- spec/support/v5.2/bin/rails
+- spec/support/v5.2/bin/rake
+- spec/support/v5.2/bin/setup
+- spec/support/v5.2/bin/update
+- spec/support/v5.2/bin/yarn
+- spec/support/v5.2/config.ru
+- spec/support/v5.2/config/application.rb
+- spec/support/v5.2/config/boot.rb
+- spec/support/v5.2/config/database.yml
+- spec/support/v5.2/config/environment.rb
+- spec/support/v5.2/config/environments/development.rb
+- spec/support/v5.2/config/environments/production.rb
+- spec/support/v5.2/config/environments/test.rb
+- spec/support/v5.2/config/initializers/application_controller_renderer.rb
+- spec/support/v5.2/config/initializers/backtrace_silencers.rb
+- spec/support/v5.2/config/initializers/content_security_policy.rb
+- spec/support/v5.2/config/initializers/cookies_serializer.rb
+- spec/support/v5.2/config/initializers/filter_parameter_logging.rb
+- spec/support/v5.2/config/initializers/inflections.rb
+- spec/support/v5.2/config/initializers/mime_types.rb
+- spec/support/v5.2/config/initializers/sorbet_rails.rb
+- spec/support/v5.2/config/initializers/wrap_parameters.rb
+- spec/support/v5.2/config/locales/en.yml
+- spec/support/v5.2/config/puma.rb
+- spec/support/v5.2/config/routes.rb
+- spec/support/v5.2/config/storage.yml
+- spec/support/v5.2/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v5.2/db/migrate/20190620000002_create_wands.rb
+- spec/support/v5.2/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v5.2/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v5.2/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v5.2/db/migrate/20190620000009_add_school.rb
+- spec/support/v5.2/db/migrate/20190620000010_add_subject.rb
+- spec/support/v5.2/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v5.2/db/migrate/20190620000012_add_spell.rb
+- spec/support/v5.2/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v5.2/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v5.2/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v5.2/db/schema.rb
+- spec/support/v5.2/db/seeds.rb
+- spec/support/v5.2/lib/assets/.keep
+- spec/support/v5.2/lib/mythical_rbi_plugin.rb
+- spec/support/v5.2/lib/tasks/.keep
+- spec/support/v5.2/log/.keep
+- spec/support/v5.2/package.json
+- spec/support/v5.2/public/robots.txt
+- spec/support/v5.2/sorbet_test_cases.rb
+- spec/support/v5.2/storage/.keep
+- spec/support/v5.2/tmp/.keep
+- spec/support/v5.2/vendor/.keep
+- spec/support/v6.0/.gitignore
+- spec/support/v6.0/Gemfile
+- spec/support/v6.0/Gemfile.lock
+- spec/support/v6.0/README.md
+- spec/support/v6.0/Rakefile
+- spec/support/v6.0/app/assets/config/manifest.js
+- spec/support/v6.0/app/assets/images/.keep
+- spec/support/v6.0/app/assets/stylesheets/application.css
+- spec/support/v6.0/app/controllers/application_controller.rb
+- spec/support/v6.0/app/controllers/concerns/.keep
+- spec/support/v6.0/app/helpers/application_helper.rb
+- spec/support/v6.0/app/helpers/bar_helper.rb
+- spec/support/v6.0/app/helpers/baz_helper.rb
+- spec/support/v6.0/app/helpers/foo_helper.rb
+- spec/support/v6.0/app/jobs/application_job.rb
+- spec/support/v6.0/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v6.0/app/mailers/application_mailer.rb
+- spec/support/v6.0/app/mailers/daily_prophet_mailer.rb
+- spec/support/v6.0/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v6.0/app/models/application_record.rb
+- spec/support/v6.0/app/models/concerns/.keep
+- spec/support/v6.0/app/models/concerns/mythical.rb
+- spec/support/v6.0/app/models/headmaster.rb
+- spec/support/v6.0/app/models/potion.rb
+- spec/support/v6.0/app/models/robe.rb
+- spec/support/v6.0/app/models/school.rb
+- spec/support/v6.0/app/models/spell.rb
+- spec/support/v6.0/app/models/spell_book.rb
+- spec/support/v6.0/app/models/squib.rb
+- spec/support/v6.0/app/models/subject.rb
+- spec/support/v6.0/app/models/wand.rb
+- spec/support/v6.0/app/models/wizard.rb
+- spec/support/v6.0/app/views/layouts/application.html.erb
+- spec/support/v6.0/app/views/layouts/mailer.html.erb
+- spec/support/v6.0/app/views/layouts/mailer.text.erb
+- spec/support/v6.0/bin/bundle
+- spec/support/v6.0/bin/rails
+- spec/support/v6.0/bin/rake
+- spec/support/v6.0/bin/setup
+- spec/support/v6.0/config.ru
+- spec/support/v6.0/config/application.rb
+- spec/support/v6.0/config/boot.rb
+- spec/support/v6.0/config/database.yml
+- spec/support/v6.0/config/environment.rb
+- spec/support/v6.0/config/environments/development.rb
+- spec/support/v6.0/config/environments/production.rb
+- spec/support/v6.0/config/environments/test.rb
+- spec/support/v6.0/config/initializers/application_controller_renderer.rb
+- spec/support/v6.0/config/initializers/backtrace_silencers.rb
+- spec/support/v6.0/config/initializers/content_security_policy.rb
+- spec/support/v6.0/config/initializers/cookies_serializer.rb
+- spec/support/v6.0/config/initializers/filter_parameter_logging.rb
+- spec/support/v6.0/config/initializers/inflections.rb
+- spec/support/v6.0/config/initializers/mime_types.rb
+- spec/support/v6.0/config/initializers/sorbet_rails.rb
+- spec/support/v6.0/config/initializers/wrap_parameters.rb
+- spec/support/v6.0/config/locales/en.yml
+- spec/support/v6.0/config/puma.rb
+- spec/support/v6.0/config/routes.rb
+- spec/support/v6.0/config/storage.yml
+- spec/support/v6.0/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v6.0/db/migrate/20190620000002_create_wands.rb
+- spec/support/v6.0/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v6.0/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v6.0/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v6.0/db/migrate/20190620000009_add_school.rb
+- spec/support/v6.0/db/migrate/20190620000010_add_subject.rb
+- spec/support/v6.0/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v6.0/db/migrate/20190620000012_add_spell.rb
+- spec/support/v6.0/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v6.0/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v6.0/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v6.0/db/schema.rb
+- spec/support/v6.0/db/seeds.rb
+- spec/support/v6.0/lib/assets/.keep
+- spec/support/v6.0/lib/mythical_rbi_plugin.rb
+- spec/support/v6.0/lib/tasks/.keep
+- spec/support/v6.0/log/.keep
+- spec/support/v6.0/public/robots.txt
+- spec/support/v6.0/sorbet_test_cases.rb
+- spec/support/v6.0/storage/.keep
+- spec/support/v6.0/tmp/.keep
+- spec/support/v6.0/tmp/pids/.keep
+- spec/support/v6.0/vendor/.keep
+- spec/support/v6.1/.gitignore
+- spec/support/v6.1/Gemfile
+- spec/support/v6.1/Gemfile.lock
+- spec/support/v6.1/README.md
+- spec/support/v6.1/Rakefile
+- spec/support/v6.1/app/assets/config/manifest.js
+- spec/support/v6.1/app/assets/images/.keep
+- spec/support/v6.1/app/assets/stylesheets/application.css
+- spec/support/v6.1/app/controllers/application_controller.rb
+- spec/support/v6.1/app/controllers/concerns/.keep
+- spec/support/v6.1/app/helpers/application_helper.rb
+- spec/support/v6.1/app/helpers/bar_helper.rb
+- spec/support/v6.1/app/helpers/baz_helper.rb
+- spec/support/v6.1/app/helpers/foo_helper.rb
+- spec/support/v6.1/app/jobs/application_job.rb
+- spec/support/v6.1/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v6.1/app/mailers/application_mailer.rb
+- spec/support/v6.1/app/mailers/daily_prophet_mailer.rb
+- spec/support/v6.1/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v6.1/app/models/application_record.rb
+- spec/support/v6.1/app/models/concerns/.keep
+- spec/support/v6.1/app/models/concerns/mythical.rb
+- spec/support/v6.1/app/models/headmaster.rb
+- spec/support/v6.1/app/models/potion.rb
+- spec/support/v6.1/app/models/robe.rb
+- spec/support/v6.1/app/models/school.rb
+- spec/support/v6.1/app/models/spell.rb
+- spec/support/v6.1/app/models/spell_book.rb
+- spec/support/v6.1/app/models/squib.rb
+- spec/support/v6.1/app/models/subject.rb
+- spec/support/v6.1/app/models/wand.rb
+- spec/support/v6.1/app/models/wizard.rb
+- spec/support/v6.1/app/views/layouts/application.html.erb
+- spec/support/v6.1/app/views/layouts/mailer.html.erb
+- spec/support/v6.1/app/views/layouts/mailer.text.erb
+- spec/support/v6.1/bin/bundle
+- spec/support/v6.1/bin/rails
+- spec/support/v6.1/bin/rake
+- spec/support/v6.1/bin/setup
+- spec/support/v6.1/config.ru
+- spec/support/v6.1/config/application.rb
+- spec/support/v6.1/config/boot.rb
+- spec/support/v6.1/config/database.yml
+- spec/support/v6.1/config/environment.rb
+- spec/support/v6.1/config/environments/development.rb
+- spec/support/v6.1/config/environments/production.rb
+- spec/support/v6.1/config/environments/test.rb
+- spec/support/v6.1/config/initializers/application_controller_renderer.rb
+- spec/support/v6.1/config/initializers/backtrace_silencers.rb
+- spec/support/v6.1/config/initializers/content_security_policy.rb
+- spec/support/v6.1/config/initializers/cookies_serializer.rb
+- spec/support/v6.1/config/initializers/filter_parameter_logging.rb
+- spec/support/v6.1/config/initializers/inflections.rb
+- spec/support/v6.1/config/initializers/mime_types.rb
+- spec/support/v6.1/config/initializers/sorbet_rails.rb
+- spec/support/v6.1/config/initializers/wrap_parameters.rb
+- spec/support/v6.1/config/locales/en.yml
+- spec/support/v6.1/config/puma.rb
+- spec/support/v6.1/config/routes.rb
+- spec/support/v6.1/config/storage.yml
+- spec/support/v6.1/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v6.1/db/migrate/20190620000002_create_wands.rb
+- spec/support/v6.1/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v6.1/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v6.1/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v6.1/db/migrate/20190620000009_add_school.rb
+- spec/support/v6.1/db/migrate/20190620000010_add_subject.rb
+- spec/support/v6.1/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v6.1/db/migrate/20190620000012_add_spell.rb
+- spec/support/v6.1/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v6.1/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v6.1/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v6.1/db/schema.rb
+- spec/support/v6.1/db/seeds.rb
+- spec/support/v6.1/lib/assets/.keep
+- spec/support/v6.1/lib/mythical_rbi_plugin.rb
+- spec/support/v6.1/lib/tasks/.keep
+- spec/support/v6.1/log/.keep
+- spec/support/v6.1/sorbet_test_cases.rb
+- spec/support/v6.1/storage/.keep
+- spec/support/v6.1/tmp/.keep
+- spec/support/v6.1/tmp/pids/.keep
+- spec/support/v6.1/vendor/.keep
+- spec/support/v7.0/.gitattributes
+- spec/support/v7.0/.gitignore
+- spec/support/v7.0/Gemfile
+- spec/support/v7.0/Gemfile.lock
+- spec/support/v7.0/README.md
+- spec/support/v7.0/Rakefile
+- spec/support/v7.0/app/assets/images/.keep
+- spec/support/v7.0/app/assets/stylesheets/application.css
+- spec/support/v7.0/app/controllers/application_controller.rb
+- spec/support/v7.0/app/controllers/concerns/.keep
+- spec/support/v7.0/app/helpers/application_helper.rb
+- spec/support/v7.0/app/helpers/bar_helper.rb
+- spec/support/v7.0/app/helpers/baz_helper.rb
+- spec/support/v7.0/app/helpers/foo_helper.rb
+- spec/support/v7.0/app/jobs/application_job.rb
+- spec/support/v7.0/app/jobs/award_house_point_hourglasses.rb
+- spec/support/v7.0/app/mailers/application_mailer.rb
+- spec/support/v7.0/app/mailers/daily_prophet_mailer.rb
+- spec/support/v7.0/app/mailers/hogwarts_acceptance_mailer.rb
+- spec/support/v7.0/app/models/application_record.rb
+- spec/support/v7.0/app/models/concerns/.keep
+- spec/support/v7.0/app/models/concerns/mythical.rb
+- spec/support/v7.0/app/models/headmaster.rb
+- spec/support/v7.0/app/models/potion.rb
+- spec/support/v7.0/app/models/robe.rb
+- spec/support/v7.0/app/models/school.rb
+- spec/support/v7.0/app/models/spell.rb
+- spec/support/v7.0/app/models/spell_book.rb
+- spec/support/v7.0/app/models/squib.rb
+- spec/support/v7.0/app/models/subject.rb
+- spec/support/v7.0/app/models/wand.rb
+- spec/support/v7.0/app/models/wizard.rb
+- spec/support/v7.0/app/views/layouts/application.html.erb
+- spec/support/v7.0/app/views/layouts/mailer.html.erb
+- spec/support/v7.0/app/views/layouts/mailer.text.erb
+- spec/support/v7.0/bin/bundle
+- spec/support/v7.0/bin/rails
+- spec/support/v7.0/bin/rake
+- spec/support/v7.0/bin/setup
+- spec/support/v7.0/config.ru
+- spec/support/v7.0/config/application.rb
+- spec/support/v7.0/config/boot.rb
+- spec/support/v7.0/config/database.yml
+- spec/support/v7.0/config/environment.rb
+- spec/support/v7.0/config/environments/development.rb
+- spec/support/v7.0/config/environments/production.rb
+- spec/support/v7.0/config/environments/test.rb
+- spec/support/v7.0/config/initializers/content_security_policy.rb
+- spec/support/v7.0/config/initializers/filter_parameter_logging.rb
+- spec/support/v7.0/config/initializers/inflections.rb
+- spec/support/v7.0/config/initializers/permissions_policy.rb
+- spec/support/v7.0/config/initializers/sorbet_rails.rb
+- spec/support/v7.0/config/locales/en.yml
+- spec/support/v7.0/config/puma.rb
+- spec/support/v7.0/config/routes.rb
+- spec/support/v7.0/config/storage.yml
+- spec/support/v7.0/db/migrate/20190620000001_create_wizards.rb
+- spec/support/v7.0/db/migrate/20190620000002_create_wands.rb
+- spec/support/v7.0/db/migrate/20190620000003_create_spell_books.rb
+- spec/support/v7.0/db/migrate/20190620000004_add_more_column_types_to_wands.rb
+- spec/support/v7.0/db/migrate/20190620000005_add_broom_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000006_add_more_enums_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000007_add_type_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000008_add_robe_to_wizard.rb
+- spec/support/v7.0/db/migrate/20190620000009_add_school.rb
+- spec/support/v7.0/db/migrate/20190620000010_add_subject.rb
+- spec/support/v7.0/db/migrate/20190620000011_add_subjects_wizards.rb
+- spec/support/v7.0/db/migrate/20190620000012_add_spell.rb
+- spec/support/v7.0/db/migrate/20190620000013_add_spells_spell_books.rb
+- spec/support/v7.0/db/migrate/20190620000014_create_headmasters.rb
+- spec/support/v7.0/db/migrate/20190620000015_add_serialized_to_wizards.rb
+- spec/support/v7.0/db/schema.rb
+- spec/support/v7.0/db/seeds.rb
+- spec/support/v7.0/lib/assets/.keep
+- spec/support/v7.0/lib/mythical_rbi_plugin.rb
+- spec/support/v7.0/lib/tasks/.keep
+- spec/support/v7.0/log/.keep
+- spec/support/v7.0/sorbet_test_cases.rb
+- spec/support/v7.0/storage/.keep
+- spec/support/v7.0/tmp/.keep
+- spec/support/v7.0/tmp/pids/.keep
+- spec/support/v7.0/tmp/storage/.keep
+- spec/support/v7.0/vendor/.keep
+- spec/test_data/v5.2/expected_active_record_base.rbi
+- spec/test_data/v5.2/expected_active_record_relation.rbi
+- spec/test_data/v5.2/expected_application_job.rbi
+- spec/test_data/v5.2/expected_application_mailer.rbi
+- spec/test_data/v5.2/expected_attachment.rbi
+- spec/test_data/v5.2/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v5.2/expected_blob.rbi
+- spec/test_data/v5.2/expected_custom_application_job.rbi
+- spec/test_data/v5.2/expected_custom_application_mailer.rbi
+- spec/test_data/v5.2/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v5.2/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v5.2/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v5.2/expected_daily_prophet_mailer.rbi
+- spec/test_data/v5.2/expected_habtm_subjects.rbi
+- spec/test_data/v5.2/expected_habtm_wizards.rbi
+- spec/test_data/v5.2/expected_headmaster.rbi
+- spec/test_data/v5.2/expected_helpers.rbi
+- spec/test_data/v5.2/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v5.2/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v5.2/expected_internal_metadata.rbi
+- spec/test_data/v5.2/expected_no_routes.rbi
+- spec/test_data/v5.2/expected_potion.rbi
+- spec/test_data/v5.2/expected_robe.rbi
+- spec/test_data/v5.2/expected_routes.rbi
+- spec/test_data/v5.2/expected_schema_migration.rbi
+- spec/test_data/v5.2/expected_school.rbi
+- spec/test_data/v5.2/expected_spell.rbi
+- spec/test_data/v5.2/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v5.2/expected_spell_book.rbi
+- spec/test_data/v5.2/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v5.2/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v5.2/expected_squib.rbi
+- spec/test_data/v5.2/expected_srb_tc_output.txt
+- spec/test_data/v5.2/expected_subject.rbi
+- spec/test_data/v5.2/expected_subject/habtm_wizards.rbi
+- spec/test_data/v5.2/expected_wand.rbi
+- spec/test_data/v5.2/expected_wizard.rbi
+- spec/test_data/v5.2/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v5.2/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v6.0/expected_active_record_base.rbi
+- spec/test_data/v6.0/expected_active_record_relation.rbi
+- spec/test_data/v6.0/expected_application_job.rbi
+- spec/test_data/v6.0/expected_application_mailer.rbi
+- spec/test_data/v6.0/expected_attachment.rbi
+- spec/test_data/v6.0/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v6.0/expected_blob.rbi
+- spec/test_data/v6.0/expected_custom_application_job.rbi
+- spec/test_data/v6.0/expected_custom_application_mailer.rbi
+- spec/test_data/v6.0/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v6.0/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v6.0/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.0/expected_daily_prophet_mailer.rbi
+- spec/test_data/v6.0/expected_habtm_subjects.rbi
+- spec/test_data/v6.0/expected_habtm_wizards.rbi
+- spec/test_data/v6.0/expected_headmaster.rbi
+- spec/test_data/v6.0/expected_helpers.rbi
+- spec/test_data/v6.0/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v6.0/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.0/expected_internal_metadata.rbi
+- spec/test_data/v6.0/expected_no_routes.rbi
+- spec/test_data/v6.0/expected_potion.rbi
+- spec/test_data/v6.0/expected_robe.rbi
+- spec/test_data/v6.0/expected_routes.rbi
+- spec/test_data/v6.0/expected_schema_migration.rbi
+- spec/test_data/v6.0/expected_school.rbi
+- spec/test_data/v6.0/expected_spell.rbi
+- spec/test_data/v6.0/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v6.0/expected_spell_book.rbi
+- spec/test_data/v6.0/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v6.0/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v6.0/expected_squib.rbi
+- spec/test_data/v6.0/expected_srb_tc_output.txt
+- spec/test_data/v6.0/expected_subject.rbi
+- spec/test_data/v6.0/expected_subject/habtm_wizards.rbi
+- spec/test_data/v6.0/expected_wand.rbi
+- spec/test_data/v6.0/expected_wizard.rbi
+- spec/test_data/v6.0/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v6.0/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v6.1/expected_active_record_base.rbi
+- spec/test_data/v6.1/expected_active_record_relation.rbi
+- spec/test_data/v6.1/expected_application_job.rbi
+- spec/test_data/v6.1/expected_application_mailer.rbi
+- spec/test_data/v6.1/expected_attachment.rbi
+- spec/test_data/v6.1/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v6.1/expected_blob.rbi
+- spec/test_data/v6.1/expected_custom_application_job.rbi
+- spec/test_data/v6.1/expected_custom_application_mailer.rbi
+- spec/test_data/v6.1/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v6.1/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v6.1/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.1/expected_daily_prophet_mailer.rbi
+- spec/test_data/v6.1/expected_habtm_subjects.rbi
+- spec/test_data/v6.1/expected_habtm_wizards.rbi
+- spec/test_data/v6.1/expected_headmaster.rbi
+- spec/test_data/v6.1/expected_helpers.rbi
+- spec/test_data/v6.1/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v6.1/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v6.1/expected_internal_metadata.rbi
+- spec/test_data/v6.1/expected_no_routes.rbi
+- spec/test_data/v6.1/expected_potion.rbi
+- spec/test_data/v6.1/expected_record.rbi
+- spec/test_data/v6.1/expected_robe.rbi
+- spec/test_data/v6.1/expected_routes.rbi
+- spec/test_data/v6.1/expected_schema_migration.rbi
+- spec/test_data/v6.1/expected_school.rbi
+- spec/test_data/v6.1/expected_spell.rbi
+- spec/test_data/v6.1/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v6.1/expected_spell_book.rbi
+- spec/test_data/v6.1/expected_spell_book/habtm_spell_books.rbi
+- spec/test_data/v6.1/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v6.1/expected_squib.rbi
+- spec/test_data/v6.1/expected_srb_tc_output.txt
+- spec/test_data/v6.1/expected_subject.rbi
+- spec/test_data/v6.1/expected_subject/habtm_wizards.rbi
+- spec/test_data/v6.1/expected_variant_record.rbi
+- spec/test_data/v6.1/expected_wand.rbi
+- spec/test_data/v6.1/expected_wizard.rbi
+- spec/test_data/v6.1/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v6.1/expected_wizard_wo_spellbook.rbi
+- spec/test_data/v7.0/expected_active_record_base.rbi
+- spec/test_data/v7.0/expected_active_record_relation.rbi
+- spec/test_data/v7.0/expected_application_job.rbi
+- spec/test_data/v7.0/expected_application_mailer.rbi
+- spec/test_data/v7.0/expected_attachment.rbi
+- spec/test_data/v7.0/expected_award_house_point_hourglasses.rbi
+- spec/test_data/v7.0/expected_blob.rbi
+- spec/test_data/v7.0/expected_custom_application_job.rbi
+- spec/test_data/v7.0/expected_custom_application_mailer.rbi
+- spec/test_data/v7.0/expected_custom_award_house_point_hourglasses.rbi
+- spec/test_data/v7.0/expected_custom_daily_prophet_mailer.rbi
+- spec/test_data/v7.0/expected_custom_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v7.0/expected_daily_prophet_mailer.rbi
+- spec/test_data/v7.0/expected_headmaster.rbi
+- spec/test_data/v7.0/expected_helpers.rbi
+- spec/test_data/v7.0/expected_helpers_with_application_and_devise_helpers.rbi
+- spec/test_data/v7.0/expected_hogwarts_acceptance_mailer.rbi
+- spec/test_data/v7.0/expected_internal_metadata.rbi
+- spec/test_data/v7.0/expected_no_routes.rbi
+- spec/test_data/v7.0/expected_potion.rbi
+- spec/test_data/v7.0/expected_record.rbi
+- spec/test_data/v7.0/expected_robe.rbi
+- spec/test_data/v7.0/expected_routes.rbi
+- spec/test_data/v7.0/expected_schema_migration.rbi
+- spec/test_data/v7.0/expected_school.rbi
+- spec/test_data/v7.0/expected_spell.rbi
+- spec/test_data/v7.0/expected_spell/habtm_spell_books.rbi
+- spec/test_data/v7.0/expected_spell_book.rbi
+- spec/test_data/v7.0/expected_spell_book/habtm_spells.rbi
+- spec/test_data/v7.0/expected_squib.rbi
+- spec/test_data/v7.0/expected_srb_tc_output.txt
+- spec/test_data/v7.0/expected_subject.rbi
+- spec/test_data/v7.0/expected_subject/habtm_wizards.rbi
+- spec/test_data/v7.0/expected_variant_record.rbi
+- spec/test_data/v7.0/expected_wand.rbi
+- spec/test_data/v7.0/expected_wizard.rbi
+- spec/test_data/v7.0/expected_wizard/habtm_subjects.rbi
+- spec/test_data/v7.0/expected_wizard_wo_spellbook.rbi
+- spec/tstruct_comparable.rb
+- spec/typed_enum_spec.rb
+- spec/typed_params_spec.rb
+- spec/utils_spec.rb

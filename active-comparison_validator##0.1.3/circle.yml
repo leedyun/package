@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    Asia/Tokyo
+
+  # Version of ruby to use
+  ruby:
+    version:
+      2.2.3
+
+dependencies:
+  pre:
+    - gem install bundler
+
+  override:
+    - bundle install:
+        timeout: 180

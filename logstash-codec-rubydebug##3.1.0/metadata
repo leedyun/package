@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification
+name: logstash-codec-rubydebug
+version: !ruby/object:Gem::Version
+  version: 3.1.0
+platform: ruby
+authors:
+- Elastic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-07-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  name: amazing_print
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- LICENSE
+- NOTICE.TXT
+- README.md
+- docs/index.asciidoc
+- lib/logstash/codecs/rubydebug.rb
+- logstash-codec-rubydebug.gemspec
+- spec/codecs/rubydebug_spec.rb
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: codec
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project:
+rubygems_version: 2.6.13
+signing_key:
+specification_version: 4
+summary: Applies the Ruby Amazing Print library to Logstash events
+test_files:
+- spec/codecs/rubydebug_spec.rb

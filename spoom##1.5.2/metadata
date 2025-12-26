@@ -1,0 +1,252 @@
+--- !ruby/object:Gem::Specification
+name: spoom
+version: !ruby/object:Gem::Version
+  version: 1.5.2
+platform: ruby
+authors:
+- Alexandre Terrasa
+bindir: exe
+cert_chain: []
+date: 2025-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.10
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.10
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.2.1
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.0
+- !ruby/object:Gem::Dependency
+  name: prism
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.28.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.28.0
+- !ruby/object:Gem::Dependency
+  name: rbi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.3
+- !ruby/object:Gem::Dependency
+  name: sorbet-static-and-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.10187
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.10187
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.19.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.19.2
+email:
+- ruby@shopify.com
+executables:
+- spoom
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- exe/spoom
+- lib/spoom.rb
+- lib/spoom/backtrace_filter/minitest.rb
+- lib/spoom/cli.rb
+- lib/spoom/cli/config.rb
+- lib/spoom/cli/deadcode.rb
+- lib/spoom/cli/helper.rb
+- lib/spoom/cli/srb.rb
+- lib/spoom/cli/srb/bump.rb
+- lib/spoom/cli/srb/coverage.rb
+- lib/spoom/cli/srb/lsp.rb
+- lib/spoom/cli/srb/sigs.rb
+- lib/spoom/cli/srb/tc.rb
+- lib/spoom/colors.rb
+- lib/spoom/context.rb
+- lib/spoom/context/bundle.rb
+- lib/spoom/context/exec.rb
+- lib/spoom/context/file_system.rb
+- lib/spoom/context/git.rb
+- lib/spoom/context/sorbet.rb
+- lib/spoom/coverage.rb
+- lib/spoom/coverage/d3.rb
+- lib/spoom/coverage/d3/base.rb
+- lib/spoom/coverage/d3/circle_map.rb
+- lib/spoom/coverage/d3/pie.rb
+- lib/spoom/coverage/d3/timeline.rb
+- lib/spoom/coverage/report.rb
+- lib/spoom/coverage/snapshot.rb
+- lib/spoom/deadcode.rb
+- lib/spoom/deadcode/definition.rb
+- lib/spoom/deadcode/erb.rb
+- lib/spoom/deadcode/index.rb
+- lib/spoom/deadcode/indexer.rb
+- lib/spoom/deadcode/plugins.rb
+- lib/spoom/deadcode/plugins/action_mailer.rb
+- lib/spoom/deadcode/plugins/action_mailer_preview.rb
+- lib/spoom/deadcode/plugins/actionpack.rb
+- lib/spoom/deadcode/plugins/active_job.rb
+- lib/spoom/deadcode/plugins/active_model.rb
+- lib/spoom/deadcode/plugins/active_record.rb
+- lib/spoom/deadcode/plugins/active_support.rb
+- lib/spoom/deadcode/plugins/base.rb
+- lib/spoom/deadcode/plugins/graphql.rb
+- lib/spoom/deadcode/plugins/minitest.rb
+- lib/spoom/deadcode/plugins/namespaces.rb
+- lib/spoom/deadcode/plugins/rails.rb
+- lib/spoom/deadcode/plugins/rake.rb
+- lib/spoom/deadcode/plugins/rspec.rb
+- lib/spoom/deadcode/plugins/rubocop.rb
+- lib/spoom/deadcode/plugins/ruby.rb
+- lib/spoom/deadcode/plugins/sorbet.rb
+- lib/spoom/deadcode/plugins/thor.rb
+- lib/spoom/deadcode/remover.rb
+- lib/spoom/deadcode/send.rb
+- lib/spoom/file_collector.rb
+- lib/spoom/file_tree.rb
+- lib/spoom/location.rb
+- lib/spoom/model.rb
+- lib/spoom/model/builder.rb
+- lib/spoom/model/model.rb
+- lib/spoom/model/namespace_visitor.rb
+- lib/spoom/model/reference.rb
+- lib/spoom/model/references_visitor.rb
+- lib/spoom/parse.rb
+- lib/spoom/poset.rb
+- lib/spoom/printer.rb
+- lib/spoom/sorbet.rb
+- lib/spoom/sorbet/config.rb
+- lib/spoom/sorbet/errors.rb
+- lib/spoom/sorbet/lsp.rb
+- lib/spoom/sorbet/lsp/base.rb
+- lib/spoom/sorbet/lsp/errors.rb
+- lib/spoom/sorbet/lsp/structures.rb
+- lib/spoom/sorbet/metrics.rb
+- lib/spoom/sorbet/sigils.rb
+- lib/spoom/sorbet/sigs.rb
+- lib/spoom/timeline.rb
+- lib/spoom/version.rb
+- lib/spoom/visitor.rb
+- templates/card.erb
+- templates/card_snapshot.erb
+- templates/page.erb
+homepage: https://github.com/Shopify/spoom
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Useful tools for Sorbet enthusiasts.
+test_files: []

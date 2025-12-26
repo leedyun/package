@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: groupdate
+version: !ruby/object:Gem::Version
+  version: 6.5.1
+platform: ruby
+authors:
+- Andrew Kane
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+description:
+email: andrew@ankane.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE.txt
+- README.md
+- lib/groupdate.rb
+- lib/groupdate/active_record.rb
+- lib/groupdate/adapters/base_adapter.rb
+- lib/groupdate/adapters/mysql_adapter.rb
+- lib/groupdate/adapters/postgresql_adapter.rb
+- lib/groupdate/adapters/sqlite_adapter.rb
+- lib/groupdate/enumerable.rb
+- lib/groupdate/magic.rb
+- lib/groupdate/query_methods.rb
+- lib/groupdate/relation.rb
+- lib/groupdate/series_builder.rb
+- lib/groupdate/version.rb
+homepage: https://github.com/ankane/groupdate
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: The simplest way to group temporal data
+test_files: []

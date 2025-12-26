@@ -1,0 +1,254 @@
+--- !ruby/object:Gem::Specification
+name: jsonapi-resources
+version: !ruby/object:Gem::Version
+  version: 0.10.7
+platform: ruby
+authors:
+- Dan Gebhardt
+- Larry Gebhardt
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-03-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 5.10.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 5.10.2
+- !ruby/object:Gem::Dependency
+  name: minitest-spec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby-ext
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A resource-centric approach to implementing the controllers, routes,
+  and serializers needed to support the JSON API spec.
+email:
+- dan@cerebris.com
+- larry@cerebris.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/bug_report_templates/rails_5_latest.rb
+- lib/bug_report_templates/rails_5_master.rb
+- lib/generators/jsonapi/USAGE
+- lib/generators/jsonapi/controller_generator.rb
+- lib/generators/jsonapi/resource_generator.rb
+- lib/generators/jsonapi/templates/jsonapi_controller.rb
+- lib/generators/jsonapi/templates/jsonapi_resource.rb
+- lib/jsonapi-resources.rb
+- lib/jsonapi/active_relation/adapters/join_left_active_record_adapter.rb
+- lib/jsonapi/active_relation/join_manager.rb
+- lib/jsonapi/active_relation_resource.rb
+- lib/jsonapi/acts_as_resource_controller.rb
+- lib/jsonapi/basic_resource.rb
+- lib/jsonapi/cached_response_fragment.rb
+- lib/jsonapi/callbacks.rb
+- lib/jsonapi/compiled_json.rb
+- lib/jsonapi/configuration.rb
+- lib/jsonapi/error.rb
+- lib/jsonapi/error_codes.rb
+- lib/jsonapi/exceptions.rb
+- lib/jsonapi/formatter.rb
+- lib/jsonapi/include_directives.rb
+- lib/jsonapi/link_builder.rb
+- lib/jsonapi/mime_types.rb
+- lib/jsonapi/naive_cache.rb
+- lib/jsonapi/operation.rb
+- lib/jsonapi/operation_result.rb
+- lib/jsonapi/paginator.rb
+- lib/jsonapi/path.rb
+- lib/jsonapi/path_segment.rb
+- lib/jsonapi/processor.rb
+- lib/jsonapi/relationship.rb
+- lib/jsonapi/request_parser.rb
+- lib/jsonapi/resource.rb
+- lib/jsonapi/resource_controller.rb
+- lib/jsonapi/resource_controller_metal.rb
+- lib/jsonapi/resource_fragment.rb
+- lib/jsonapi/resource_id_tree.rb
+- lib/jsonapi/resource_identity.rb
+- lib/jsonapi/resource_serializer.rb
+- lib/jsonapi/resource_set.rb
+- lib/jsonapi/resources/railtie.rb
+- lib/jsonapi/resources/version.rb
+- lib/jsonapi/response_document.rb
+- lib/jsonapi/routing_ext.rb
+- lib/tasks/check_upgrade.rake
+homepage: https://github.com/cerebris/jsonapi-resources
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Easily support JSON API in Rails.
+test_files: []

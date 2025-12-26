@@ -1,0 +1,217 @@
+--- !ruby/object:Gem::Specification
+name: xcodeproj
+version: !ruby/object:Gem::Version
+  version: 1.27.0
+platform: ruby
+authors:
+- Eloy Duran
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: atomos
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.3
+- !ruby/object:Gem::Dependency
+  name: CFPropertyList
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: claide
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: colored2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: nanaimo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+description: Xcodeproj lets you create and modify Xcode projects from Ruby. Script
+  boring management tasks or build Xcode-friendly libraries. Also includes support
+  for Xcode workspaces (.xcworkspace) and configuration files (.xcconfig).
+email: eloy.de.enige@gmail.com
+executables:
+- xcodeproj
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- bin/xcodeproj
+- lib/xcodeproj.rb
+- lib/xcodeproj/command.rb
+- lib/xcodeproj/command/config_dump.rb
+- lib/xcodeproj/command/project_diff.rb
+- lib/xcodeproj/command/show.rb
+- lib/xcodeproj/command/sort.rb
+- lib/xcodeproj/command/target_diff.rb
+- lib/xcodeproj/config.rb
+- lib/xcodeproj/config/other_linker_flags_parser.rb
+- lib/xcodeproj/constants.rb
+- lib/xcodeproj/differ.rb
+- lib/xcodeproj/gem_version.rb
+- lib/xcodeproj/helper.rb
+- lib/xcodeproj/plist.rb
+- lib/xcodeproj/project.rb
+- lib/xcodeproj/project/case_converter.rb
+- lib/xcodeproj/project/object.rb
+- lib/xcodeproj/project/object/build_configuration.rb
+- lib/xcodeproj/project/object/build_file.rb
+- lib/xcodeproj/project/object/build_phase.rb
+- lib/xcodeproj/project/object/build_rule.rb
+- lib/xcodeproj/project/object/configuration_list.rb
+- lib/xcodeproj/project/object/container_item_proxy.rb
+- lib/xcodeproj/project/object/file_reference.rb
+- lib/xcodeproj/project/object/file_system_synchronized_exception_set.rb
+- lib/xcodeproj/project/object/file_system_synchronized_root_group.rb
+- lib/xcodeproj/project/object/group.rb
+- lib/xcodeproj/project/object/helpers/build_settings_array_settings_by_object_version.rb
+- lib/xcodeproj/project/object/helpers/file_references_factory.rb
+- lib/xcodeproj/project/object/helpers/groupable_helper.rb
+- lib/xcodeproj/project/object/native_target.rb
+- lib/xcodeproj/project/object/reference_proxy.rb
+- lib/xcodeproj/project/object/root_object.rb
+- lib/xcodeproj/project/object/swift_package_local_reference.rb
+- lib/xcodeproj/project/object/swift_package_product_dependency.rb
+- lib/xcodeproj/project/object/swift_package_remote_reference.rb
+- lib/xcodeproj/project/object/target_dependency.rb
+- lib/xcodeproj/project/object_attributes.rb
+- lib/xcodeproj/project/object_dictionary.rb
+- lib/xcodeproj/project/object_list.rb
+- lib/xcodeproj/project/project_helper.rb
+- lib/xcodeproj/project/uuid_generator.rb
+- lib/xcodeproj/scheme.rb
+- lib/xcodeproj/scheme/abstract_scheme_action.rb
+- lib/xcodeproj/scheme/analyze_action.rb
+- lib/xcodeproj/scheme/archive_action.rb
+- lib/xcodeproj/scheme/build_action.rb
+- lib/xcodeproj/scheme/buildable_product_runnable.rb
+- lib/xcodeproj/scheme/buildable_reference.rb
+- lib/xcodeproj/scheme/command_line_arguments.rb
+- lib/xcodeproj/scheme/environment_variables.rb
+- lib/xcodeproj/scheme/execution_action.rb
+- lib/xcodeproj/scheme/launch_action.rb
+- lib/xcodeproj/scheme/location_scenario_reference.rb
+- lib/xcodeproj/scheme/macro_expansion.rb
+- lib/xcodeproj/scheme/profile_action.rb
+- lib/xcodeproj/scheme/remote_runnable.rb
+- lib/xcodeproj/scheme/send_email_action_content.rb
+- lib/xcodeproj/scheme/shell_script_action_content.rb
+- lib/xcodeproj/scheme/test_action.rb
+- lib/xcodeproj/scheme/xml_element_wrapper.rb
+- lib/xcodeproj/user_interface.rb
+- lib/xcodeproj/workspace.rb
+- lib/xcodeproj/workspace/file_reference.rb
+- lib/xcodeproj/workspace/group_reference.rb
+- lib/xcodeproj/workspace/reference.rb
+- lib/xcodeproj/xcodebuild_helper.rb
+homepage: https://github.com/cocoapods/xcodeproj
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 3
+summary: Create and modify Xcode projects from Ruby.
+test_files: []

@@ -1,0 +1,67 @@
+--- !ruby/object:Gem::Specification
+name: rqrcode-rails3
+version: !ruby/object:Gem::Version
+  version: 0.1.7
+  prerelease: 
+platform: ruby
+authors:
+- Sam Vincent
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-11-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rqrcode
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 0.4.2
+description: Render QR codes with Rails 3
+email: sam.vincent@mac.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/rqrcode-rails3/renderers/svg.rb
+- lib/rqrcode-rails3/size_calculator.rb
+- lib/rqrcode-rails3.rb
+- MIT-LICENSE
+- Rakefile
+- Gemfile
+- README.md
+homepage: http://github.com/samvincent/rqrcode-rails3
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.25
+signing_key: 
+specification_version: 3
+summary: Render QR codes with Rails 3
+test_files: []

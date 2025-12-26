@@ -1,0 +1,126 @@
+--- !ruby/object:Gem::Specification
+name: logstash-input-dead_letter_queue
+version: !ruby/object:Gem::Version
+  version: 2.0.1
+platform: ruby
+authors:
+- Elastic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.4.0
+  name: logstash-core
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.4.0
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-codec-plain
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- DEVELOPER.md
+- Gemfile
+- LICENSE
+- NOTICE.TXT
+- README.md
+- VERSION
+- docs/index.asciidoc
+- lib/logstash-input-dead_letter_queue_jars.rb
+- lib/logstash/inputs/dead_letter_queue.rb
+- logstash-input-dead_letter_queue.gemspec
+- spec/unit/inputs/dead_letter_queue_spec.rb
+- spec/unit/inputs/fixtures/main/1.log
+- vendor/jar-dependencies/co/elastic/logstash/input/logstash-input-dead_letter_queue/2.0.1/logstash-input-dead_letter_queue-2.0.1.jar
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+  group: input
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- vendor/jar-dependencies
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: read events from Logstash's dead letter queue
+test_files:
+- spec/unit/inputs/dead_letter_queue_spec.rb
+- spec/unit/inputs/fixtures/main/1.log

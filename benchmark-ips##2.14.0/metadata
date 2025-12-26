@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: benchmark-ips
+version: !ruby/object:Gem::Version
+  version: 2.14.0
+platform: ruby
+authors:
+- Evan Phoenix
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.4'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+description: A iterations per second enhancement to Benchmark.
+email:
+- evan@phx.io
+executables: []
+extensions: []
+extra_rdoc_files:
+- History.md
+- LICENSE
+- README.md
+files:
+- History.md
+- LICENSE
+- README.md
+- examples/advanced.rb
+- examples/hold.rb
+- examples/quick.rb
+- examples/save.rb
+- examples/simple.rb
+- lib/benchmark/compare.rb
+- lib/benchmark/ips.rb
+- lib/benchmark/ips/job.rb
+- lib/benchmark/ips/job/entry.rb
+- lib/benchmark/ips/job/multi_report.rb
+- lib/benchmark/ips/job/stream_report.rb
+- lib/benchmark/ips/report.rb
+- lib/benchmark/ips/share.rb
+- lib/benchmark/ips/stats/bootstrap.rb
+- lib/benchmark/ips/stats/sd.rb
+- lib/benchmark/ips/stats/stats_metric.rb
+- lib/benchmark/timing.rb
+homepage: https://github.com/evanphx/benchmark-ips
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: A iterations per second enhancement to Benchmark.
+test_files: []

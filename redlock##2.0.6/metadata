@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: redlock
+version: !ruby/object:Gem::Version
+  version: 2.0.6
+platform: ruby
+authors:
+- Leandro Moreira
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: redis-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: connection_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.3.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.2
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.1.2
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+description: Distributed lock using Redis written in Ruby. Highly inspired by https://github.com/antirez/redlock-rb.
+email:
+- leandro.ribeiro.moreira@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- LICENSE
+- Makefile
+- README.md
+- Rakefile
+- clean_docker.sh
+- docker-compose.yml
+- lib/redlock.rb
+- lib/redlock/client.rb
+- lib/redlock/scripts.rb
+- lib/redlock/testing.rb
+- lib/redlock/version.rb
+- redlock.gemspec
+- spec/client_spec.rb
+- spec/spec_helper.rb
+- spec/testing_spec.rb
+homepage: https://github.com/leandromoreira/redlock-rb
+licenses:
+- BSD-2-Clause
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Distributed lock using Redis written in Ruby.
+test_files:
+- spec/client_spec.rb
+- spec/spec_helper.rb
+- spec/testing_spec.rb

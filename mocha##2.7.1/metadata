@@ -1,0 +1,161 @@
+--- !ruby/object:Gem::Specification
+name: mocha
+version: !ruby/object:Gem::Version
+  version: 2.7.1
+platform: ruby
+authors:
+- James Mead
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby2_keywords
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.5
+description: Mocking and stubbing library with JMock/SchMock syntax, which allows
+  mocking and stubbing of methods on real (non-mock) classes.
+email: mocha-developer@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gemtest"
+- ".github/FUNDING.yml"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- CONTRIBUTING.md
+- COPYING.md
+- Gemfile
+- MIT-LICENSE.md
+- README.md
+- RELEASE.md
+- Rakefile
+- gemfiles/Gemfile.minitest.latest
+- gemfiles/Gemfile.test-unit.latest
+- lib/mocha.rb
+- lib/mocha/any_instance_method.rb
+- lib/mocha/api.rb
+- lib/mocha/argument_iterator.rb
+- lib/mocha/backtrace_filter.rb
+- lib/mocha/block_matcher.rb
+- lib/mocha/cardinality.rb
+- lib/mocha/central.rb
+- lib/mocha/change_state_side_effect.rb
+- lib/mocha/class_methods.rb
+- lib/mocha/configuration.rb
+- lib/mocha/debug.rb
+- lib/mocha/deprecation.rb
+- lib/mocha/detection/minitest.rb
+- lib/mocha/detection/test_unit.rb
+- lib/mocha/error_with_filtered_backtrace.rb
+- lib/mocha/exception_raiser.rb
+- lib/mocha/expectation.rb
+- lib/mocha/expectation_error.rb
+- lib/mocha/expectation_error_factory.rb
+- lib/mocha/expectation_list.rb
+- lib/mocha/hooks.rb
+- lib/mocha/in_state_ordering_constraint.rb
+- lib/mocha/inspect.rb
+- lib/mocha/instance_method.rb
+- lib/mocha/integration/assertion_counter.rb
+- lib/mocha/integration/minitest.rb
+- lib/mocha/integration/minitest/adapter.rb
+- lib/mocha/integration/minitest/exception_translation.rb
+- lib/mocha/integration/monkey_patcher.rb
+- lib/mocha/integration/test_unit.rb
+- lib/mocha/integration/test_unit/adapter.rb
+- lib/mocha/invocation.rb
+- lib/mocha/is_a.rb
+- lib/mocha/logger.rb
+- lib/mocha/macos_version.rb
+- lib/mocha/method_matcher.rb
+- lib/mocha/minitest.rb
+- lib/mocha/mock.rb
+- lib/mocha/mockery.rb
+- lib/mocha/names.rb
+- lib/mocha/not_initialized_error.rb
+- lib/mocha/object_methods.rb
+- lib/mocha/parameter_matchers.rb
+- lib/mocha/parameter_matchers/all_of.rb
+- lib/mocha/parameter_matchers/any_of.rb
+- lib/mocha/parameter_matchers/any_parameters.rb
+- lib/mocha/parameter_matchers/anything.rb
+- lib/mocha/parameter_matchers/base.rb
+- lib/mocha/parameter_matchers/equals.rb
+- lib/mocha/parameter_matchers/equivalent_uri.rb
+- lib/mocha/parameter_matchers/has_entries.rb
+- lib/mocha/parameter_matchers/has_entry.rb
+- lib/mocha/parameter_matchers/has_key.rb
+- lib/mocha/parameter_matchers/has_keys.rb
+- lib/mocha/parameter_matchers/has_value.rb
+- lib/mocha/parameter_matchers/includes.rb
+- lib/mocha/parameter_matchers/instance_methods.rb
+- lib/mocha/parameter_matchers/instance_of.rb
+- lib/mocha/parameter_matchers/is_a.rb
+- lib/mocha/parameter_matchers/kind_of.rb
+- lib/mocha/parameter_matchers/not.rb
+- lib/mocha/parameter_matchers/optionally.rb
+- lib/mocha/parameter_matchers/positional_or_keyword_hash.rb
+- lib/mocha/parameter_matchers/regexp_matches.rb
+- lib/mocha/parameter_matchers/responds_with.rb
+- lib/mocha/parameter_matchers/yaml_equivalent.rb
+- lib/mocha/parameters_matcher.rb
+- lib/mocha/raised_exception.rb
+- lib/mocha/receivers.rb
+- lib/mocha/return_values.rb
+- lib/mocha/ruby_version.rb
+- lib/mocha/sequence.rb
+- lib/mocha/single_return_value.rb
+- lib/mocha/state_machine.rb
+- lib/mocha/stubbed_method.rb
+- lib/mocha/stubbing_error.rb
+- lib/mocha/test_unit.rb
+- lib/mocha/thrower.rb
+- lib/mocha/thrown_object.rb
+- lib/mocha/version.rb
+- lib/mocha/yield_parameters.rb
+- mocha.gemspec
+homepage: https://mocha.jamesmead.org
+licenses:
+- MIT
+- BSD-2-Clause
+metadata:
+  bug_tracker_uri: https://github.com/freerange/mocha/issues
+  changelog_uri: https://github.com/freerange/mocha/blob/main/RELEASE.md
+  documentation_uri: https://mocha.jamesmead.org/
+  funding_uri: https://github.com/sponsors/floehopper
+  homepage_uri: https://mocha.jamesmead.org
+  source_code_uri: https://github.com/freerange/mocha
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Mocking and stubbing library
+test_files: []

@@ -1,0 +1,270 @@
+--- !ruby/object:Gem::Specification
+name: guard
+version: !ruby/object:Gem::Version
+  version: 2.19.1
+platform: ruby
+authors:
+- Thibaud Guillaume-Gentil
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: formatador
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.4
+- !ruby/object:Gem::Dependency
+  name: listen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: lumberjack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.12
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.12
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: nenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: notiffany
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+- !ruby/object:Gem::Dependency
+  name: shellany
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+description: Guard is a command line tool to easily handle events on file system modifications.
+email:
+- thibaud@thibaud.gg
+executables:
+- guard
+- _guard-core
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- bin/_guard-core
+- bin/guard
+- images/failed.png
+- images/pending.png
+- images/success.png
+- lib/guard.rb
+- lib/guard/aruba_adapter.rb
+- lib/guard/cli.rb
+- lib/guard/cli/environments/bundler.rb
+- lib/guard/cli/environments/evaluate_only.rb
+- lib/guard/cli/environments/valid.rb
+- lib/guard/commander.rb
+- lib/guard/commands/all.rb
+- lib/guard/commands/change.rb
+- lib/guard/commands/notification.rb
+- lib/guard/commands/pause.rb
+- lib/guard/commands/reload.rb
+- lib/guard/commands/scope.rb
+- lib/guard/commands/show.rb
+- lib/guard/config.rb
+- lib/guard/deprecated/dsl.rb
+- lib/guard/deprecated/evaluator.rb
+- lib/guard/deprecated/guard.rb
+- lib/guard/deprecated/guardfile.rb
+- lib/guard/deprecated/watcher.rb
+- lib/guard/dsl.rb
+- lib/guard/dsl_describer.rb
+- lib/guard/dsl_reader.rb
+- lib/guard/group.rb
+- lib/guard/guardfile.rb
+- lib/guard/guardfile/evaluator.rb
+- lib/guard/guardfile/generator.rb
+- lib/guard/interactor.rb
+- lib/guard/internals/debugging.rb
+- lib/guard/internals/groups.rb
+- lib/guard/internals/helpers.rb
+- lib/guard/internals/plugins.rb
+- lib/guard/internals/queue.rb
+- lib/guard/internals/scope.rb
+- lib/guard/internals/session.rb
+- lib/guard/internals/state.rb
+- lib/guard/internals/tracing.rb
+- lib/guard/internals/traps.rb
+- lib/guard/jobs/base.rb
+- lib/guard/jobs/pry_wrapper.rb
+- lib/guard/jobs/sleep.rb
+- lib/guard/notifier.rb
+- lib/guard/options.rb
+- lib/guard/plugin.rb
+- lib/guard/plugin_util.rb
+- lib/guard/rake_task.rb
+- lib/guard/runner.rb
+- lib/guard/templates/Guardfile
+- lib/guard/terminal.rb
+- lib/guard/ui.rb
+- lib/guard/ui/colors.rb
+- lib/guard/ui/config.rb
+- lib/guard/ui/logger.rb
+- lib/guard/version.rb
+- lib/guard/watcher.rb
+- lib/guard/watcher/pattern.rb
+- lib/guard/watcher/pattern/deprecated_regexp.rb
+- lib/guard/watcher/pattern/match_result.rb
+- lib/guard/watcher/pattern/matcher.rb
+- lib/guard/watcher/pattern/pathname_path.rb
+- lib/guard/watcher/pattern/simple_path.rb
+- lib/tasks/releaser.rb
+- man/guard.1
+- man/guard.1.html
+homepage: https://guard.github.io/guard/
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/guard/guard/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Guard keeps an eye on your file modifications
+test_files: []

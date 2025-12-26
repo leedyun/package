@@ -1,0 +1,131 @@
+--- !ruby/object:Gem::Specification
+name: promise.rb
+version: !ruby/object:Gem::Version
+  version: 0.7.4
+platform: ruby
+authors:
+- Lars Gierth
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-08-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-memory
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: memory_profiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Promises/A+ for Ruby
+email:
+- lars.gierth@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- README.md
+- Rakefile
+- UNLICENSE
+- benchmark/run.rb
+- benchmark/setup.rb
+- config/devtools.yml
+- config/flay.yml
+- config/flog.yml
+- config/mutant.yml
+- config/reek.yml
+- config/rubocop.yml
+- config/yardstick.yml
+- lib/promise.rb
+- lib/promise/group.rb
+- lib/promise/observer.rb
+- lib/promise/progress.rb
+- lib/promise/version.rb
+- promise.rb.gemspec
+- spec/spec_helper.rb
+- spec/support/delayed_promise.rb
+- spec/support/promise_loader.rb
+- spec/unit/promise_spec.rb
+homepage: https://github.com/lgierth/promise
+licenses:
+- Public Domain
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.10
+signing_key: 
+specification_version: 4
+summary: Ruby implementation of the Promises/A+ spec
+test_files:
+- spec/spec_helper.rb
+- spec/support/delayed_promise.rb
+- spec/support/promise_loader.rb
+- spec/unit/promise_spec.rb

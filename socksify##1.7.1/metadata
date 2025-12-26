@@ -1,0 +1,60 @@
+--- !ruby/object:Gem::Specification
+name: socksify
+version: !ruby/object:Gem::Version
+  version: 1.7.1
+platform: ruby
+authors:
+- Stephan Maka
+- Andrey Kouznetsov
+- Christopher Thorpe
+- Musy Bite
+- Yuichi Tateno
+- David Dollar
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-02-24 00:00:00.000000000 Z
+dependencies: []
+description: 
+email: stephan@spaceboyz.net
+executables:
+- socksify_ruby
+extensions: []
+extra_rdoc_files:
+- doc/index.css
+- doc/index.html
+- COPYING
+files:
+- COPYING
+- bin/socksify_ruby
+- doc/index.css
+- doc/index.html
+- lib/socksify.rb
+- lib/socksify/debug.rb
+- lib/socksify/http.rb
+homepage: http://socksify.rubyforge.org/
+licenses:
+- Ruby
+- GPL-3.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: socksify
+rubygems_version: 2.5.2
+signing_key: 
+specification_version: 4
+summary: Redirect all TCPSockets through a SOCKS5 proxy
+test_files: []

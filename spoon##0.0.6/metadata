@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: spoon
+version: !ruby/object:Gem::Version
+  version: 0.0.6
+platform: ruby
+authors:
+- Charles Oliver Nutter
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-09-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Spoon is an FFI binding of the posix_spawn function (and Windows equivalent),
+  providing fork+exec functionality in a single shot.
+email: 
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- examples/ls.rb
+- examples/vi.rb
+- lib/spoon.rb
+- lib/spoon/unix.rb
+- lib/spoon/windows.rb
+- spoon.gemspec
+homepage: 
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.4
+signing_key: 
+specification_version: 4
+summary: Spoon is an FFI binding of the posix_spawn function (and Windows equivalent),
+  providing fork+exec functionality in a single shot.
+test_files: []

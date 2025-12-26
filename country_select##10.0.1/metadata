@@ -1,0 +1,167 @@
+--- !ruby/object:Gem::Specification
+name: country_select
+version: !ruby/object:Gem::Version
+  version: 10.0.1
+platform: ruby
+authors:
+- Stefan Penner
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.22'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.22'
+- !ruby/object:Gem::Dependency
+  name: countries
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.0'
+description: |-
+  Provides a simple helper to get an HTML select list of countries. \
+                     The list of countries comes from the ISO 3166 standard. \
+                     While it is a relatively neutral source of country names, it will still offend some users.
+email:
+- stefan.penner@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".github/workflows/codeql-analysis.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- MIT-LICENSE
+- README.md
+- Rakefile
+- UPGRADING.md
+- country_select.gemspec
+- gemfiles/actionpack-7.0.gemfile
+- gemfiles/actionpack-7.0.gemfile.lock
+- gemfiles/actionpack-7.1.gemfile
+- gemfiles/actionpack-7.1.gemfile.lock
+- gemfiles/actionpack-7.2.gemfile
+- gemfiles/actionpack-7.2.gemfile.lock
+- gemfiles/actionpack-8.0.gemfile
+- gemfiles/actionpack-8.0.gemfile.lock
+- lib/country_select.rb
+- lib/country_select/country_select_helper.rb
+- lib/country_select/defaults.rb
+- lib/country_select/formats.rb
+- lib/country_select/tag_helper.rb
+- lib/country_select/version.rb
+- spec/country_select_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/countries/country_select
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: http://github.com/countries/country_select/issues
+  changelog_uri: https://github.com/countries/country_select/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/countries/country_select
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Country Select Plugin
+test_files: []

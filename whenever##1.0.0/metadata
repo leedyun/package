@@ -1,0 +1,188 @@
+--- !ruby/object:Gem::Specification
+name: whenever
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Javan Makhmali
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-06-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: chronic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.3
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Clean ruby syntax for writing and deploying cron jobs.
+email:
+- javan@javan.us
+executables:
+- whenever
+- wheneverize
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/whenever
+- bin/wheneverize
+- gemfiles/activesupport4.1.gemfile
+- gemfiles/activesupport4.2.gemfile
+- gemfiles/activesupport5.0.gemfile
+- gemfiles/activesupport5.1.gemfile
+- gemfiles/activesupport5.2.gemfile
+- lib/whenever.rb
+- lib/whenever/capistrano.rb
+- lib/whenever/capistrano/v2/hooks.rb
+- lib/whenever/capistrano/v2/recipes.rb
+- lib/whenever/capistrano/v2/support.rb
+- lib/whenever/capistrano/v3/tasks/whenever.rake
+- lib/whenever/command_line.rb
+- lib/whenever/cron.rb
+- lib/whenever/job.rb
+- lib/whenever/job_list.rb
+- lib/whenever/numeric.rb
+- lib/whenever/numeric_seconds.rb
+- lib/whenever/os.rb
+- lib/whenever/output_redirection.rb
+- lib/whenever/setup.rb
+- lib/whenever/version.rb
+- test/functional/command_line_test.rb
+- test/functional/output_at_test.rb
+- test/functional/output_default_defined_jobs_test.rb
+- test/functional/output_defined_job_test.rb
+- test/functional/output_env_test.rb
+- test/functional/output_jobs_for_roles_test.rb
+- test/functional/output_jobs_with_mailto_test.rb
+- test/functional/output_redirection_test.rb
+- test/test_case.rb
+- test/test_helper.rb
+- test/unit/capistrano_support_test.rb
+- test/unit/cron_test.rb
+- test/unit/executable_test.rb
+- test/unit/job_test.rb
+- whenever.gemspec
+homepage: https://github.com/javan/whenever
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: Cron jobs in ruby.
+test_files:
+- test/functional/command_line_test.rb
+- test/functional/output_at_test.rb
+- test/functional/output_default_defined_jobs_test.rb
+- test/functional/output_defined_job_test.rb
+- test/functional/output_env_test.rb
+- test/functional/output_jobs_for_roles_test.rb
+- test/functional/output_jobs_with_mailto_test.rb
+- test/functional/output_redirection_test.rb
+- test/unit/capistrano_support_test.rb
+- test/unit/cron_test.rb
+- test/unit/executable_test.rb
+- test/unit/job_test.rb

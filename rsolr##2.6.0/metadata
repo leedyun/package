@@ -1,0 +1,244 @@
+--- !ruby/object:Gem::Specification
+name: rsolr
+version: !ruby/object:Gem::Version
+  version: 2.6.0
+platform: ruby
+authors:
+- Antoine Latter
+- Dmitry Lihachev
+- Lucas Souza
+- Peter Kieltyka
+- Rob Di Marco
+- Magnus Bergmark
+- Jonathan Rochkind
+- Chris Beer
+- Craig Smith
+- Randy Souza
+- Colin Steele
+- Peter Kieltyka
+- Lorenzo Riccucci
+- Mike Perham
+- Mat Brown
+- Shairon Toledo
+- Matthew Rudy
+- Fouad Mardini
+- Jeremy Hinegardner
+- Nathan Witmer
+- Naomi Dushay
+- '"shima"'
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-03-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: solr_wrapper
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: RSolr aims to provide a simple and extensible library for working with
+  Solr
+email:
+- goodieboy@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGES.txt
+- Gemfile
+- LICENSE
+- README.rdoc
+- Rakefile
+- lib/rsolr.rb
+- lib/rsolr/char.rb
+- lib/rsolr/client.rb
+- lib/rsolr/document.rb
+- lib/rsolr/error.rb
+- lib/rsolr/field.rb
+- lib/rsolr/generator.rb
+- lib/rsolr/json.rb
+- lib/rsolr/response.rb
+- lib/rsolr/uri.rb
+- lib/rsolr/version.rb
+- lib/rsolr/xml.rb
+- rsolr.gemspec
+- spec/api/client_spec.rb
+- spec/api/document_spec.rb
+- spec/api/error_spec.rb
+- spec/api/json_spec.rb
+- spec/api/pagination_spec.rb
+- spec/api/rsolr_spec.rb
+- spec/api/uri_spec.rb
+- spec/api/xml_spec.rb
+- spec/fixtures/basic_configs/_rest_managed.json
+- spec/fixtures/basic_configs/currency.xml
+- spec/fixtures/basic_configs/lang/stopwords_en.txt
+- spec/fixtures/basic_configs/protwords.txt
+- spec/fixtures/basic_configs/schema.xml
+- spec/fixtures/basic_configs/solrconfig.xml
+- spec/fixtures/basic_configs/stopwords.txt
+- spec/fixtures/basic_configs/synonyms.txt
+- spec/integration/solr5_spec.rb
+- spec/lib/rsolr/client_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/rsolr/rsolr
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements:
+- Apache Solr
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: A Ruby client for Apache Solr
+test_files: []

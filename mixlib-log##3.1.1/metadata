@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: mixlib-log
+version: !ruby/object:Gem::Version
+  version: 3.1.1
+platform: ruby
+authors:
+- Chef Software, Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-07-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.17.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.17.0
+description: 
+email: info@chef.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/mixlib/log.rb
+- lib/mixlib/log/child.rb
+- lib/mixlib/log/formatter.rb
+- lib/mixlib/log/logger.rb
+- lib/mixlib/log/logging.rb
+- lib/mixlib/log/version.rb
+homepage: https://github.com/chef/mixlib-log
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key: 
+specification_version: 4
+summary: A gem that provides a simple mixin for log functionality
+test_files: []

@@ -1,0 +1,58 @@
+.blurred {
+  filter: blur(4px)
+}
+
+main {
+  flex: 1;
+}
+
+.chartjs-wrapper {
+  height: 225px;
+}
+
+.graph-tab-content {
+  min-height: 225px;
+}
+
+.wrap-text {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.head-icon {
+  white-space: nowrap;
+}
+
+table td.commands {
+  width: 150px;
+}
+
+table td.commands-inline-3 {
+  width: 180px
+}
+
+.drawer-side .btn-toggle-nav-collapsed svg {
+  transform: scale(1, 1);
+  transition: transform 0.2s;
+}
+
+.drawer-side.collapsed .btn-toggle-nav-collapsed svg {
+  transform: scale(-1, -1);
+}
+
+.drawer-side .btn-toggle-nav-collapsed::after {
+  content: 'Collapse';
+}
+
+.drawer-side.collapsed .btn-toggle-nav-collapsed::after {
+  content: none;
+}
+
+.drawer-side.collapsed:hover .btn-toggle-nav-collapsed::after {
+  content: 'Expand';
+}

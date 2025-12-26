@@ -1,0 +1,84 @@
+--- !ruby/object:Gem::Specification
+name: dalli
+version: !ruby/object:Gem::Version
+  version: 3.2.8
+platform: ruby
+authors:
+- Peter M. Goldstein
+- Mike Perham
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-12 00:00:00.000000000 Z
+dependencies: []
+description: High performance memcached client for Ruby
+email:
+- peter.m.goldstein@gmail.com
+- mperham@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- lib/dalli.rb
+- lib/dalli/cas/client.rb
+- lib/dalli/client.rb
+- lib/dalli/compressor.rb
+- lib/dalli/key_manager.rb
+- lib/dalli/options.rb
+- lib/dalli/pid_cache.rb
+- lib/dalli/pipelined_getter.rb
+- lib/dalli/protocol.rb
+- lib/dalli/protocol/base.rb
+- lib/dalli/protocol/binary.rb
+- lib/dalli/protocol/binary/request_formatter.rb
+- lib/dalli/protocol/binary/response_header.rb
+- lib/dalli/protocol/binary/response_processor.rb
+- lib/dalli/protocol/binary/sasl_authentication.rb
+- lib/dalli/protocol/connection_manager.rb
+- lib/dalli/protocol/meta.rb
+- lib/dalli/protocol/meta/key_regularizer.rb
+- lib/dalli/protocol/meta/request_formatter.rb
+- lib/dalli/protocol/meta/response_processor.rb
+- lib/dalli/protocol/response_buffer.rb
+- lib/dalli/protocol/server_config_parser.rb
+- lib/dalli/protocol/ttl_sanitizer.rb
+- lib/dalli/protocol/value_compressor.rb
+- lib/dalli/protocol/value_marshaller.rb
+- lib/dalli/protocol/value_serializer.rb
+- lib/dalli/ring.rb
+- lib/dalli/server.rb
+- lib/dalli/servers_arg_normalizer.rb
+- lib/dalli/socket.rb
+- lib/dalli/version.rb
+- lib/rack/session/dalli.rb
+homepage: https://github.com/petergoldstein/dalli
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/petergoldstein/dalli/issues
+  changelog_uri: https://github.com/petergoldstein/dalli/blob/main/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key:
+specification_version: 4
+summary: High performance memcached client for Ruby
+test_files: []

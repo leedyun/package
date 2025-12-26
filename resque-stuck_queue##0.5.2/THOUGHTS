@@ -1,0 +1,9 @@
+## TODOS
+
+rm redis locking (since it works by keys now, no need for it, recover/trigger ping pong).
+rm require resque?
+
+refactor tests to have an around(:suite) to run with resque beforehand (no startup time) and just run test_integration.rb 
+  (& compact dup tests etc)
+
+don't continue to send heartbeat job if its alerting/stuck, it can just back the queue up (even if just marginally) more.

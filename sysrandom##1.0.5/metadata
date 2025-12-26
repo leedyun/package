@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: sysrandom
+version: !ruby/object:Gem::Version
+  version: 1.0.5
+platform: ruby
+authors:
+- Tony Arcieri
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2017-02-25 00:00:00.000000000 Z
+dependencies: []
+description: Sysrandom generates secure random numbers using /dev/urandom, getrandom(),
+  etc
+email:
+- bascule@gmail.com
+executables: []
+extensions:
+- ext/sysrandom/extconf.rb
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGES.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- ext/sysrandom/extconf.rb
+- ext/sysrandom/randombytes_sysrandom.c
+- ext/sysrandom/sysrandom_ext.c
+- lib/sysrandom.rb
+- lib/sysrandom/securerandom.rb
+- lib/sysrandom/version.rb
+- sysrandom.gemspec
+homepage: https://github.com/cryptosphere/sysrandom
+licenses:
+- ISC
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.10
+signing_key: 
+specification_version: 4
+summary: Secure random number generation using system RNG facilities
+test_files: []

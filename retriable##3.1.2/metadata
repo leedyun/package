@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: retriable
+version: !ruby/object:Gem::Version
+  version: 3.1.2
+platform: ruby
+authors:
+- Jack Chu
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-06-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: listen
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+description: Retriable is a simple DSL to retry failed code blocks with randomized
+  exponential backoff. This is especially useful when interacting external api/services
+  or file system calls.
+email:
+- jack@jackchu.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".hound.yml"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- lib/retriable.rb
+- lib/retriable/config.rb
+- lib/retriable/core_ext/kernel.rb
+- lib/retriable/exponential_backoff.rb
+- lib/retriable/version.rb
+- retriable.gemspec
+- spec/config_spec.rb
+- spec/exponential_backoff_spec.rb
+- spec/retriable_spec.rb
+- spec/spec_helper.rb
+- spec/support/exceptions.rb
+homepage: http://github.com/kamui/retriable
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: Retriable is a simple DSL to retry failed code blocks with randomized exponential
+  backoff
+test_files:
+- spec/config_spec.rb
+- spec/exponential_backoff_spec.rb
+- spec/retriable_spec.rb
+- spec/spec_helper.rb
+- spec/support/exceptions.rb

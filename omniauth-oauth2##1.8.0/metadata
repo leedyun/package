@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: omniauth-oauth2
+version: !ruby/object:Gem::Version
+  version: 1.8.0
+platform: ruby
+authors:
+- Michael Bleigh
+- Erik Michaels-Ober
+- Tom Milewski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-06-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: oauth2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: omniauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: An abstract OAuth2 strategy for OmniAuth.
+email:
+- michael@intridea.com
+- sferik@gmail.com
+- tmilewski@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- SECURITY.md
+- lib/omniauth-oauth2.rb
+- lib/omniauth-oauth2/version.rb
+- lib/omniauth/strategies/oauth2.rb
+- omniauth-oauth2.gemspec
+- spec/helper.rb
+- spec/omniauth/strategies/oauth2_spec.rb
+homepage: https://github.com/omniauth/omniauth-oauth2
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: An abstract OAuth2 strategy for OmniAuth.
+test_files:
+- spec/helper.rb
+- spec/omniauth/strategies/oauth2_spec.rb

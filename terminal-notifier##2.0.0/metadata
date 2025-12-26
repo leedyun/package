@@ -1,0 +1,132 @@
+--- !ruby/object:Gem::Specification
+name: terminal-notifier
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Eloy Duran
+- Julien Blanchard
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-11-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bacon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha-on-bacon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- eloy.de.enige@gmail.com
+- julien@sideburns.eu
+executables:
+- terminal-notifier
+extensions: []
+extra_rdoc_files:
+- README.markdown
+files:
+- README.markdown
+- bin/terminal-notifier
+- lib/terminal-notifier.rb
+- vendor/terminal-notifier/LICENSE.md
+- vendor/terminal-notifier/README.markdown
+- vendor/terminal-notifier/Ruby/Gemfile
+- vendor/terminal-notifier/Ruby/Gemfile.lock
+- vendor/terminal-notifier/Ruby/LICENSE
+- vendor/terminal-notifier/Ruby/README.markdown
+- vendor/terminal-notifier/Ruby/Rakefile
+- vendor/terminal-notifier/Ruby/bin/terminal-notifier
+- vendor/terminal-notifier/Ruby/lib/terminal-notifier.rb
+- vendor/terminal-notifier/Ruby/spec/terminal-notifier_spec.rb
+- vendor/terminal-notifier/Ruby/terminal-notifier.gemspec
+- vendor/terminal-notifier/Terminal Notifier.xcodeproj/project.pbxproj
+- vendor/terminal-notifier/Terminal Notifier.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+- vendor/terminal-notifier/Terminal Notifier.xcodeproj/project.xcworkspace/xcshareddata/Terminal
+  Notifier.xccheckout
+- vendor/terminal-notifier/Terminal Notifier.xcodeproj/xcshareddata/xcschemes/Terminal
+  Notifier.xcscheme
+- vendor/terminal-notifier/Terminal Notifier/AppDelegate.h
+- vendor/terminal-notifier/Terminal Notifier/AppDelegate.m
+- vendor/terminal-notifier/Terminal Notifier/Terminal Notifier-Info.plist
+- vendor/terminal-notifier/Terminal Notifier/Terminal Notifier-Prefix.pch
+- vendor/terminal-notifier/Terminal Notifier/en.lproj/Credits.rtf
+- vendor/terminal-notifier/Terminal Notifier/en.lproj/InfoPlist.strings
+- vendor/terminal-notifier/Terminal Notifier/en.lproj/MainMenu.xib
+- vendor/terminal-notifier/Terminal Notifier/main.m
+- vendor/terminal-notifier/Terminal.icns
+- vendor/terminal-notifier/assets/Example_1.png
+- vendor/terminal-notifier/assets/Example_2.png
+- vendor/terminal-notifier/assets/Example_3.png
+- vendor/terminal-notifier/assets/Example_4.png
+- vendor/terminal-notifier/assets/Example_5.png
+- vendor/terminal-notifier/assets/System_prefs.png
+- vendor/terminal-notifier/terminal-notifier.app/Contents/Info.plist
+- vendor/terminal-notifier/terminal-notifier.app/Contents/MacOS/terminal-notifier
+- vendor/terminal-notifier/terminal-notifier.app/Contents/PkgInfo
+- vendor/terminal-notifier/terminal-notifier.app/Contents/Resources/Terminal.icns
+- vendor/terminal-notifier/terminal-notifier.app/Contents/Resources/en.lproj/Credits.rtf
+- vendor/terminal-notifier/terminal-notifier.app/Contents/Resources/en.lproj/InfoPlist.strings
+- vendor/terminal-notifier/terminal-notifier.app/Contents/Resources/en.lproj/MainMenu.nib
+homepage: https://github.com/julienXX/terminal-notifier
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: Send User Notifications on macOS 10.10 or higher.
+test_files: []

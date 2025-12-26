@@ -1,0 +1,359 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-rails
+version: !ruby/object:Gem::Version
+  version: 3.1.0
+platform: ruby
+authors:
+- Aslak Hellesøy
+- Dennis Blöte
+- Rob Holland
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.11'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.11'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '10'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+- !ruby/object:Gem::Dependency
+  name: ammeter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.5
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.45.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.45.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-packaging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.17.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.17.1
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.18.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.18.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.17.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.17.0
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.10
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.10
+description: Cucumber Generator and Runtime for Rails
+email: cukes@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- lib/cucumber/rails.rb
+- lib/cucumber/rails/action_dispatch.rb
+- lib/cucumber/rails/application.rb
+- lib/cucumber/rails/capybara.rb
+- lib/cucumber/rails/capybara/javascript_emulation.rb
+- lib/cucumber/rails/capybara/select_dates_and_times.rb
+- lib/cucumber/rails/database.rb
+- lib/cucumber/rails/database/deletion_strategy.rb
+- lib/cucumber/rails/database/null_strategy.rb
+- lib/cucumber/rails/database/shared_connection_strategy.rb
+- lib/cucumber/rails/database/strategy.rb
+- lib/cucumber/rails/database/truncation_strategy.rb
+- lib/cucumber/rails/hooks.rb
+- lib/cucumber/rails/hooks/active_record.rb
+- lib/cucumber/rails/hooks/allow_rescue.rb
+- lib/cucumber/rails/hooks/database_cleaner.rb
+- lib/cucumber/rails/hooks/mail.rb
+- lib/cucumber/rails/rspec.rb
+- lib/cucumber/rails/world.rb
+- lib/generators/cucumber/USAGE
+- lib/generators/cucumber/install_generator.rb
+- lib/generators/cucumber/templates/bin/cucumber
+- lib/generators/cucumber/templates/config/cucumber.yml.erb
+- lib/generators/cucumber/templates/support/edit_warning.txt
+- lib/generators/cucumber/templates/support/env.rb.erb
+- lib/generators/cucumber/templates/tasks/cucumber.rake.erb
+homepage: https://cucumber.io
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/cucumber-rails/issues
+  changelog_uri: https://github.com/cucumber/cucumber-rails/blob/v3.1.0/CHANGELOG.md
+  documentation_uri: https://cucumber.io/docs
+  mailing_list_uri: https://groups.google.com/forum/#!forum/cukes
+  source_code_uri: https://github.com/cucumber/cucumber-rails/tree/v3.1.0
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.3
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: cucumber-rails-3.1.0
+test_files: []

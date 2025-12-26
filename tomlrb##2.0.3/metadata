@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification
+name: tomlrb
+version: !ruby/object:Gem::Version
+  version: 2.0.3
+platform: ruby
+authors:
+- Francois Bernier
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-05-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: psych
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4'
+description: A racc based toml parser
+email:
+- frankbernier@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- lib/tomlrb.rb
+- lib/tomlrb/generated_parser.rb
+- lib/tomlrb/handler.rb
+- lib/tomlrb/local_date.rb
+- lib/tomlrb/local_date_time.rb
+- lib/tomlrb/local_time.rb
+- lib/tomlrb/parser.rb
+- lib/tomlrb/parser.y
+- lib/tomlrb/scanner.rb
+- lib/tomlrb/string_utils.rb
+- lib/tomlrb/version.rb
+homepage: https://github.com/fbernier/tomlrb
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: A racc based toml parser
+test_files: []

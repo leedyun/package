@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: nhtsa-vin
+version: !ruby/object:Gem::Version
+  version: 0.0.8
+platform: ruby
+authors:
+- Barclay Loftus
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A ruby gem for fetching and parsing vehicle identificationivia the vehicle
+  identification number (VIN) from the NHTSAwebservice. Note, this gem is not officially
+  affiliated withthe NHTSA.
+email:
+- barclay@deliv.co
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/nhtsa_vin.rb
+- lib/nhtsa_vin/query.rb
+- lib/nhtsa_vin/validation.rb
+- lib/nhtsa_vin/version.rb
+- nhtsa-vin.gemspec
+- spec/fixtures/not_found.json
+- spec/fixtures/success.json
+- spec/lib/nhtsa_vin/query_spec.rb
+- spec/lib/nhtsa_vin/validation_spec.rb
+- spec/lib/nhtsa_vin_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/deliv/nhtsa_vin
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A ruby library for accessing vin records from the NHTSA
+test_files:
+- spec/fixtures/not_found.json
+- spec/fixtures/success.json
+- spec/lib/nhtsa_vin/query_spec.rb
+- spec/lib/nhtsa_vin/validation_spec.rb
+- spec/lib/nhtsa_vin_spec.rb
+- spec/spec_helper.rb

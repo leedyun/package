@@ -1,0 +1,153 @@
+--- !ruby/object:Gem::Specification
+name: net-sftp
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Jamis Buck
+- Delano Mandelbaum
+- Miklós Fazekas
+autorequire: 
+bindir: exe
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDQDCCAiigAwIBAgIBATANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDDBpuZXRz
+  c2gvREM9c29sdXRpb3VzL0RDPWNvbTAeFw0yMjA5MjIxMTUwMDJaFw0yMzA5MjIx
+  MTUwMDJaMCUxIzAhBgNVBAMMGm5ldHNzaC9EQz1zb2x1dGlvdXMvREM9Y29tMIIB
+  IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxieE22fR/qmdPKUHyYTyUx2g
+  wskLwrCkxay+Tvc97ZZUOwf85LDDDPqhQaTWLvRwnIOMgQE2nBPzwalVclK6a+pW
+  x/18KDeZY15vm3Qn5p42b0wi9hUxOqPm3J2hdCLCcgtENgdX21nVzejn39WVqFJO
+  lntgSDNW5+kCS8QaRsmIbzj17GKKkrsw39kiQw7FhWfJFeTjddzoZiWwc59KA/Bx
+  fBbmDnsMLAtAtauMOxORrbx3EOY7sHku/kSrMg3FXFay7jc6BkbbUij+MjJ/k82l
+  4o8o0YO4BAnya90xgEmgOG0LCCxRhuXQFnMDuDjK2XnUe0h4/6NCn94C+z9GsQID
+  AQABo3sweTAJBgNVHRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNVHQ4EFgQUBfKiwO2e
+  M4NEiRrVG793qEPLYyMwHwYDVR0RBBgwFoEUbmV0c3NoQHNvbHV0aW91cy5jb20w
+  HwYDVR0SBBgwFoEUbmV0c3NoQHNvbHV0aW91cy5jb20wDQYJKoZIhvcNAQELBQAD
+  ggEBABI2ORK5kzUL7uOF0EHI4ECMWxQMiN+pURyGp9u7DU0H8eSdZN52jbUGHzSB
+  j7bB6GpqElEWjOe0IbH3vR52IVXq2bOF4P4vFchGAb4OuzJD8aJmrC/SPLHbWBuV
+  2GpbRQRJyYPWN6Rt/4EHOxoFnhXOBEB6CGIy0dt7YezycVbzqtHoiI2Qf/bIFJQZ
+  mpJAAUBkRiWksE7zrsE5DGK8kL2GVos7f8kdM71zT8p7VBwkMdY277T29TG2xD0D
+  66Oev0C3/x89NXqCHkl1JElSzEFbOoxan16z7xNEf2MKcBKGhsYfzWVNyEtJm785
+  g+97rn/AuO6dcxJnW2qBGYQa7pQ=
+  -----END CERTIFICATE-----
+date: 2022-11-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: net-ssh
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A pure Ruby implementation of the SFTP client protocol
+email:
+- net-ssh@solutious.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.rdoc
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGES.txt
+- Gemfile
+- LICENSE.txt
+- Manifest
+- README.rdoc
+- Rakefile
+- lib/net/sftp.rb
+- lib/net/sftp/constants.rb
+- lib/net/sftp/errors.rb
+- lib/net/sftp/operations/dir.rb
+- lib/net/sftp/operations/download.rb
+- lib/net/sftp/operations/file.rb
+- lib/net/sftp/operations/file_factory.rb
+- lib/net/sftp/operations/upload.rb
+- lib/net/sftp/packet.rb
+- lib/net/sftp/protocol.rb
+- lib/net/sftp/protocol/01/attributes.rb
+- lib/net/sftp/protocol/01/base.rb
+- lib/net/sftp/protocol/01/name.rb
+- lib/net/sftp/protocol/02/base.rb
+- lib/net/sftp/protocol/03/base.rb
+- lib/net/sftp/protocol/04/attributes.rb
+- lib/net/sftp/protocol/04/base.rb
+- lib/net/sftp/protocol/04/name.rb
+- lib/net/sftp/protocol/05/base.rb
+- lib/net/sftp/protocol/06/attributes.rb
+- lib/net/sftp/protocol/06/base.rb
+- lib/net/sftp/protocol/base.rb
+- lib/net/sftp/request.rb
+- lib/net/sftp/response.rb
+- lib/net/sftp/session.rb
+- lib/net/sftp/version.rb
+- net-sftp-public_cert.pem
+- net-sftp.gemspec
+- setup.rb
+homepage: https://github.com/net-ssh/net-sftp
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 3
+summary: A pure Ruby implementation of the SFTP client protocol.
+test_files: []

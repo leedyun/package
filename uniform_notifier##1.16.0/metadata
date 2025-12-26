@@ -1,0 +1,148 @@
+--- !ruby/object:Gem::Specification
+name: uniform_notifier
+version: !ruby/object:Gem::Version
+  version: 1.16.0
+platform: ruby
+authors:
+- Richard Huang
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-03-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slack-notifier
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: xmpp4r
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: '0.5'
+description: uniform notifier for rails logger, customized logger, javascript alert,
+  javascript console and xmpp
+email:
+- flyerhzm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/uniform_notifier.rb
+- lib/uniform_notifier/airbrake.rb
+- lib/uniform_notifier/appsignal.rb
+- lib/uniform_notifier/base.rb
+- lib/uniform_notifier/bugsnag.rb
+- lib/uniform_notifier/customized_logger.rb
+- lib/uniform_notifier/errors.rb
+- lib/uniform_notifier/honeybadger.rb
+- lib/uniform_notifier/javascript_alert.rb
+- lib/uniform_notifier/javascript_console.rb
+- lib/uniform_notifier/rails_logger.rb
+- lib/uniform_notifier/raise.rb
+- lib/uniform_notifier/rollbar.rb
+- lib/uniform_notifier/sentry.rb
+- lib/uniform_notifier/slack.rb
+- lib/uniform_notifier/terminal_notifier.rb
+- lib/uniform_notifier/version.rb
+- lib/uniform_notifier/xmpp.rb
+- spec/spec_helper.rb
+- spec/uniform_notifier/airbrake_spec.rb
+- spec/uniform_notifier/appsignal_spec.rb
+- spec/uniform_notifier/base_spec.rb
+- spec/uniform_notifier/bugsnag_spec.rb
+- spec/uniform_notifier/customized_logger_spec.rb
+- spec/uniform_notifier/honeybadger_spec.rb
+- spec/uniform_notifier/javascript_alert_spec.rb
+- spec/uniform_notifier/javascript_console_spec.rb
+- spec/uniform_notifier/rails_logger_spec.rb
+- spec/uniform_notifier/raise_spec.rb
+- spec/uniform_notifier/rollbar_spec.rb
+- spec/uniform_notifier/sentry_spec.rb
+- spec/uniform_notifier/slack_spec.rb
+- spec/uniform_notifier/terminal_notifier_spec.rb
+- spec/uniform_notifier/xmpp_spec.rb
+- uniform_notifier.gemspec
+homepage: http://rubygems.org/gems/uniform_notifier
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/flyerhzm/uniform_notifier/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/flyerhzm/uniform_notifier
+  bug_tracker_uri: https://github.com/flyerhzm/uniform_notifier/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: uniform notifier for rails logger, customized logger, javascript alert, javascript
+  console and xmpp
+test_files:
+- spec/spec_helper.rb
+- spec/uniform_notifier/airbrake_spec.rb
+- spec/uniform_notifier/appsignal_spec.rb
+- spec/uniform_notifier/base_spec.rb
+- spec/uniform_notifier/bugsnag_spec.rb
+- spec/uniform_notifier/customized_logger_spec.rb
+- spec/uniform_notifier/honeybadger_spec.rb
+- spec/uniform_notifier/javascript_alert_spec.rb
+- spec/uniform_notifier/javascript_console_spec.rb
+- spec/uniform_notifier/rails_logger_spec.rb
+- spec/uniform_notifier/raise_spec.rb
+- spec/uniform_notifier/rollbar_spec.rb
+- spec/uniform_notifier/sentry_spec.rb
+- spec/uniform_notifier/slack_spec.rb
+- spec/uniform_notifier/terminal_notifier_spec.rb
+- spec/uniform_notifier/xmpp_spec.rb

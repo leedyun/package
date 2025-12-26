@@ -1,0 +1,164 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-wire
+version: !ruby/object:Gem::Version
+  version: 7.0.0
+platform: ruby
+authors:
+- Matt Wynne
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cucumber-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+- !ruby/object:Gem::Dependency
+  name: cucumber-cucumber-expressions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '18'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '18'
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+description: Wire protocol for Cucumber
+email: cukes@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CHANGELOG.old.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- lib/cucumber/wire.rb
+- lib/cucumber/wire/add_hooks_filter.rb
+- lib/cucumber/wire/configuration.rb
+- lib/cucumber/wire/connection.rb
+- lib/cucumber/wire/connections.rb
+- lib/cucumber/wire/data_packet.rb
+- lib/cucumber/wire/exception.rb
+- lib/cucumber/wire/plugin.rb
+- lib/cucumber/wire/protocol.rb
+- lib/cucumber/wire/protocol/requests.rb
+- lib/cucumber/wire/request_handler.rb
+- lib/cucumber/wire/snippet.rb
+- lib/cucumber/wire/step_argument.rb
+- lib/cucumber/wire/step_definition.rb
+homepage: http://cucumber.io
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: cucumber-wire-7.0.0
+test_files: []

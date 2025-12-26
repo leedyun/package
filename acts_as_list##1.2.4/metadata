@@ -1,0 +1,184 @@
+--- !ruby/object:Gem::Specification
+name: acts_as_list
+version: !ruby/object:Gem::Version
+  version: 1.2.4
+platform: ruby
+authors:
+- Swanand Pagnis
+- Brendon Muir
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+- !ruby/object:Gem::Dependency
+  name: minitest-hooks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.8
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.8
+- !ruby/object:Gem::Dependency
+  name: mysql2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.6
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.5
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.2
+description: This "acts_as" extension provides the capabilities for sorting and reordering
+  a number of objects in a list. The class that has this specified needs to have a
+  "position" column defined as an integer on the mapped database table.
+email:
+- swanand.pagnis@gmail.com
+- brendon@spikeatschool.co.nz
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gemtest"
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- Rakefile
+- init.rb
+- lib/acts_as_list.rb
+- lib/acts_as_list/active_record/acts/active_record.rb
+- lib/acts_as_list/active_record/acts/add_new_at_method_definer.rb
+- lib/acts_as_list/active_record/acts/aux_method_definer.rb
+- lib/acts_as_list/active_record/acts/callback_definer.rb
+- lib/acts_as_list/active_record/acts/list.rb
+- lib/acts_as_list/active_record/acts/no_update.rb
+- lib/acts_as_list/active_record/acts/position_column_method_definer.rb
+- lib/acts_as_list/active_record/acts/scope_method_definer.rb
+- lib/acts_as_list/active_record/acts/sequential_updates_method_definer.rb
+- lib/acts_as_list/active_record/acts/top_of_list_method_definer.rb
+- lib/acts_as_list/active_record/acts/with_connection.rb
+- lib/acts_as_list/version.rb
+homepage: https://github.com/brendon/acts_as_list
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/brendon/acts_as_list/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/brendon/acts_as_list
+  bug_tracker_uri: https://github.com/brendon/acts_as_list/issues
+  funding_uri: https://github.com/sponsors/brendon
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: A gem adding sorting, reordering capabilities to an active_record model,
+  allowing it to act as a list
+test_files: []

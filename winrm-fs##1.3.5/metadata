@@ -1,0 +1,192 @@
+--- !ruby/object:Gem::Specification
+name: winrm-fs
+version: !ruby/object:Gem::Version
+  version: 1.3.5
+platform: ruby
+authors:
+- Shawn Neal
+- Matt Wrock
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-09-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: logging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: winrm
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.68.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.68.0
+description: "    Ruby library for file system operations via Windows Remote Management\n"
+email:
+- sneal@sneal.net
+- matt@mattwrock.com
+executables:
+- rwinrmcp
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- LICENSE
+- README.md
+- bin/rwinrmcp
+- lib/winrm-fs.rb
+- lib/winrm-fs/core/file_transporter.rb
+- lib/winrm-fs/core/tmp_zip.rb
+- lib/winrm-fs/exceptions.rb
+- lib/winrm-fs/file_manager.rb
+- lib/winrm-fs/scripts/check_files.ps1.erb
+- lib/winrm-fs/scripts/checksum.ps1.erb
+- lib/winrm-fs/scripts/create_dir.ps1.erb
+- lib/winrm-fs/scripts/delete.ps1.erb
+- lib/winrm-fs/scripts/download.ps1.erb
+- lib/winrm-fs/scripts/exists.ps1.erb
+- lib/winrm-fs/scripts/extract_files.ps1.erb
+- lib/winrm-fs/scripts/scripts.rb
+homepage: http://github.com/WinRb/winrm-fs
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "-x"
+- test/
+- "-x"
+- examples/
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: WinRM File System
+test_files: []

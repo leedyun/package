@@ -1,0 +1,232 @@
+--- !ruby/object:Gem::Specification
+name: gapic-common
+version: !ruby/object:Gem::Version
+  version: 0.24.0
+platform: ruby
+authors:
+- Google API Authors
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+- !ruby/object:Gem::Dependency
+  name: faraday-retry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.a
+- !ruby/object:Gem::Dependency
+  name: googleapis-common-protos
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: googleapis-common-protos-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.15'
+- !ruby/object:Gem::Dependency
+  name: googleauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-env
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: google-logging-utils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: google-protobuf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.a
+- !ruby/object:Gem::Dependency
+  name: grpc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.66'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.66'
+description: 
+email:
+- googleapis-packages@google.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- RELEASING.md
+- lib/gapic-common.rb
+- lib/gapic/call_options.rb
+- lib/gapic/call_options/error_codes.rb
+- lib/gapic/call_options/retry_policy.rb
+- lib/gapic/common.rb
+- lib/gapic/common/error.rb
+- lib/gapic/common/version.rb
+- lib/gapic/config.rb
+- lib/gapic/config/method.rb
+- lib/gapic/generic_lro/base_operation.rb
+- lib/gapic/generic_lro/operation.rb
+- lib/gapic/grpc.rb
+- lib/gapic/grpc/errors.rb
+- lib/gapic/grpc/service_stub.rb
+- lib/gapic/grpc/service_stub/channel.rb
+- lib/gapic/grpc/service_stub/channel_pool.rb
+- lib/gapic/grpc/service_stub/rpc_call.rb
+- lib/gapic/grpc/status_details.rb
+- lib/gapic/headers.rb
+- lib/gapic/logging_concerns.rb
+- lib/gapic/lru_hash.rb
+- lib/gapic/operation.rb
+- lib/gapic/operation/retry_policy.rb
+- lib/gapic/paged_enumerable.rb
+- lib/gapic/protobuf.rb
+- lib/gapic/rest.rb
+- lib/gapic/rest/client_stub.rb
+- lib/gapic/rest/error.rb
+- lib/gapic/rest/faraday_middleware.rb
+- lib/gapic/rest/grpc_transcoder.rb
+- lib/gapic/rest/grpc_transcoder/http_binding.rb
+- lib/gapic/rest/operation.rb
+- lib/gapic/rest/paged_enumerable.rb
+- lib/gapic/rest/server_stream.rb
+- lib/gapic/rest/threaded_enumerator.rb
+- lib/gapic/rest/transport_operation.rb
+- lib/gapic/stream_input.rb
+- lib/gapic/universe_domain_concerns.rb
+homepage: https://github.com/googleapis/gapic-generator-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key: 
+specification_version: 4
+summary: Common code for GAPIC-generated API clients
+test_files: []

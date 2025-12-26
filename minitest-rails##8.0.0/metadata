@@ -1,0 +1,232 @@
+--- !ruby/object:Gem::Specification
+name: minitest-rails
+version: !ruby/object:Gem::Version
+  version: 8.0.0
+platform: ruby
+authors:
+- Mike Moore
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDPjCCAiagAwIBAgIBCDANBgkqhkiG9w0BAQsFADBFMRMwEQYDVQQDDApyeWFu
+  ZC1ydWJ5MRkwFwYKCZImiZPyLGQBGRYJemVuc3BpZGVyMRMwEQYKCZImiZPyLGQB
+  GRYDY29tMB4XDTI0MDEwMjIxMjEyM1oXDTI1MDEwMTIxMjEyM1owRTETMBEGA1UE
+  AwwKcnlhbmQtcnVieTEZMBcGCgmSJomT8ixkARkWCXplbnNwaWRlcjETMBEGCgmS
+  JomT8ixkARkWA2NvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALda
+  b9DCgK+627gPJkB6XfjZ1itoOQvpqH1EXScSaba9/S2VF22VYQbXU1xQXL/WzCkx
+  taCPaLmfYIaFcHHCSY4hYDJijRQkLxPeB3xbOfzfLoBDbjvx5JxgJxUjmGa7xhcT
+  oOvjtt5P8+GSK9zLzxQP0gVLS/D0FmoE44XuDr3iQkVS2ujU5zZL84mMNqNB1znh
+  GiadM9GHRaDiaxuX0cIUBj19T01mVE2iymf9I6bEsiayK/n6QujtyCbTWsAS9Rqt
+  qhtV7HJxNKuPj/JFH0D2cswvzznE/a5FOYO68g+YCuFi5L8wZuuM8zzdwjrWHqSV
+  gBEfoTEGr7Zii72cx+sCAwEAAaM5MDcwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAw
+  HQYDVR0OBBYEFEfFe9md/r/tj/Wmwpy+MI8d9k/hMA0GCSqGSIb3DQEBCwUAA4IB
+  AQCygvpmncmkiSs9r/Kceo4bBPDszhTv6iBi4LwMReqnFrpNLMOWJw7xi8x+3eL2
+  XS09ZPNOt2zm70KmFouBMgOysnDY4k2dE8uF6B8JbZOO8QfalW+CoNBliefOTcn2
+  bg5IOP7UoGM5lC174/cbDJrJnRG9bzig5FAP0mvsgA8zgTRXQzIUAZEo92D5K7p4
+  B4/O998ho6BSOgYBI9Yk1ttdCtti6Y+8N9+fZESsjtWMykA+WXWeGUScHqiU+gH8
+  S7043fq9EbQdBr2AXdj92+CDwuTfHI6/Hj5FVBDULufrJaan4xUgL70Hvc6pTTeW
+  deKfBjgVAq7EYHu1AczzlUly
+  -----END CERTIFICATE-----
+date: 2024-12-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.20'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.20'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 8.1.0
+- !ruby/object:Gem::Dependency
+  name: minitest-autotest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: minitest-focus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: minitest-rg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.5'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.57.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.57.0
+description: Adds Minitest as the default testing library in Rails
+email:
+- mike@blowmage.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- UPDATING.md
+- lib/generators/minitest.rb
+- lib/generators/minitest/controller/controller_generator.rb
+- lib/generators/minitest/controller/templates/functional_spec.rb.tt
+- lib/generators/minitest/controller/templates/functional_test.rb.tt
+- lib/generators/minitest/generator/generator_generator.rb
+- lib/generators/minitest/generator/templates/generator_spec.rb.tt
+- lib/generators/minitest/generator/templates/generator_test.rb.tt
+- lib/generators/minitest/helper/helper_generator.rb
+- lib/generators/minitest/install/install_generator.rb
+- lib/generators/minitest/install/templates/test/application_system_test_case.rb.tt
+- lib/generators/minitest/install/templates/test/channels/application_cable/connection_test.rb.tt
+- lib/generators/minitest/install/templates/test/test_helper.rb.tt
+- lib/generators/minitest/integration/integration_generator.rb
+- lib/generators/minitest/integration/templates/integration_spec.rb.tt
+- lib/generators/minitest/integration/templates/integration_test.rb.tt
+- lib/generators/minitest/job/job_generator.rb
+- lib/generators/minitest/job/templates/unit_spec.rb.tt
+- lib/generators/minitest/job/templates/unit_test.rb.tt
+- lib/generators/minitest/mailer/mailer_generator.rb
+- lib/generators/minitest/mailer/templates/functional_spec.rb.tt
+- lib/generators/minitest/mailer/templates/functional_test.rb.tt
+- lib/generators/minitest/mailer/templates/preview.rb.tt
+- lib/generators/minitest/model/model_generator.rb
+- lib/generators/minitest/model/templates/fixtures.yml.tt
+- lib/generators/minitest/model/templates/unit_spec.rb.tt
+- lib/generators/minitest/model/templates/unit_test.rb.tt
+- lib/generators/minitest/plugin/plugin_generator.rb
+- lib/generators/minitest/plugin/templates/%file_name%_test.rb.tt
+- lib/generators/minitest/plugin/templates/test_helper.rb
+- lib/generators/minitest/scaffold/scaffold_generator.rb
+- lib/generators/minitest/scaffold/templates/api_functional_spec.rb.tt
+- lib/generators/minitest/scaffold/templates/api_functional_test.rb.tt
+- lib/generators/minitest/scaffold/templates/functional_spec.rb.tt
+- lib/generators/minitest/scaffold/templates/functional_test.rb.tt
+- lib/generators/minitest/scaffold/templates/system_spec.rb.tt
+- lib/generators/minitest/scaffold/templates/system_test.rb.tt
+- lib/generators/minitest/system/system_generator.rb
+- lib/generators/minitest/system/templates/application_system_test_case.rb.tt
+- lib/generators/minitest/system/templates/system_spec.rb.tt
+- lib/generators/minitest/system/templates/system_test.rb.tt
+- lib/minitest-rails.rb
+- lib/minitest/rails.rb
+- lib/minitest/rails/assertions.rb
+- lib/minitest/rails/assertions/action_cable.rb
+- lib/minitest/rails/assertions/action_dispatch.rb
+- lib/minitest/rails/assertions/action_mailer.rb
+- lib/minitest/rails/assertions/action_view.rb
+- lib/minitest/rails/assertions/active_job.rb
+- lib/minitest/rails/assertions/active_support.rb
+- lib/minitest/rails/capybara.rb
+- lib/minitest/rails/expectations.rb
+- lib/minitest/rails/expectations/action_cable.rb
+- lib/minitest/rails/expectations/action_dispatch.rb
+- lib/minitest/rails/expectations/action_mailer.rb
+- lib/minitest/rails/expectations/active_job.rb
+- lib/minitest/rails/expectations/active_support.rb
+- lib/minitest/rails/parallelize.rb
+- lib/minitest/rails/railtie.rb
+- lib/minitest/rails/version.rb
+homepage: http://minitest.github.io/minitest-rails/
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: Minitest integration for Rails
+test_files: []

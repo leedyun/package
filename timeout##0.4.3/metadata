@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification
+name: timeout
+version: !ruby/object:Gem::Version
+  version: 0.4.3
+platform: ruby
+authors:
+- Yukihiro Matsumoto
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-16 00:00:00.000000000 Z
+dependencies: []
+description: Auto-terminate potentially long-running operations in Ruby.
+email:
+- matz@ruby-lang.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- BSDL
+- COPYING
+- Gemfile
+- README.md
+- lib/timeout.rb
+- timeout.gemspec
+homepage: https://github.com/ruby/timeout
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata:
+  homepage_uri: https://github.com/ruby/timeout
+  source_code_uri: https://github.com/ruby/timeout
+  changelog_uri: https://github.com/ruby/timeout/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Auto-terminate potentially long-running operations in Ruby.
+test_files: []

@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: underscore-rails
+version: !ruby/object:Gem::Version
+  version: 1.8.3
+platform: ruby
+authors:
+- Robin Wenglewski
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-06-09 00:00:00.000000000 Z
+dependencies: []
+description: 
+email:
+- robin@wenglewski.de
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- Gemfile
+- LICENSE.md
+- Rakefile
+- Readme.md
+- lib/underscore-rails.rb
+- lib/underscore-rails/version.rb
+- underscore-rails.gemspec
+- vendor/assets/javascripts/underscore.js
+homepage: https://github.com/rweng/underscore-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: underscore-rails
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: underscore.js asset pipeline provider/wrapper
+test_files: []

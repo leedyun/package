@@ -1,0 +1,77 @@
+--- !ruby/object:Gem::Specification
+name: rubypants
+version: !ruby/object:Gem::Version
+  version: 0.7.1
+platform: ruby
+authors:
+- John Gruber
+- Chad Miller
+- Christian Neukirchen
+- Jeremy McNevin
+- Aron Griffis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  The original "SmartyPants" is a free web publishing plug-in for
+  Movable Type, Blosxom, and BBEdit that easily translates plain ASCII
+  punctuation characters into "smart" typographic punctuation HTML
+  entities.
+email: jeremy@spokoino.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- LICENSE.rdoc
+- README.rdoc
+- Rakefile
+- lib/rubypants.rb
+- lib/version.rb
+- rubypants.gemspec
+- test/helper.rb
+- test/rubypants_test.rb
+homepage: https://github.com/jmcnevin/rubypants
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: RubyPants is a Ruby port of the smart-quotes library SmartyPants.
+test_files:
+- test/helper.rb
+- test/rubypants_test.rb

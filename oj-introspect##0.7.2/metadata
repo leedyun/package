@@ -1,0 +1,77 @@
+--- !ruby/object:Gem::Specification
+name: oj-introspect
+version: !ruby/object:Gem::Version
+  version: 0.7.2
+platform: ruby
+authors:
+- Mehmet Emin INAC
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2023-01-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: oj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.13.23
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.13.23
+description: Embeds start and end byte offsets of JSON objects into generated Ruby
+  hashes.
+email:
+- mehmetemininac@gmail.com
+executables: []
+extensions:
+- ext/oj-introspect/extconf.rb
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/benchmark
+- bin/console
+- bin/setup
+- bin/test_run
+- ext/oj-introspect/extconf.rb
+- ext/oj-introspect/introspect.c
+- ext/oj-introspect/oj.sym
+- lib/oj/introspect.rb
+- lib/oj/introspect/version.rb
+- oj-introspect.gemspec
+homepage: https://github.com/meinac/oj-introspect
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: Oj introspect parser.
+test_files: []

@@ -1,0 +1,302 @@
+--- !ruby/object:Gem::Specification
+name: restforce
+version: !ruby/object:Gem::Version
+  version: 8.0.0
+platform: ruby
+authors:
+- Tim Rogers
+- Eric J. Holmes
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+- !ruby/object:Gem::Dependency
+  name: faraday-follow_redirects
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: faraday-multipart
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: faraday-net_http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.5.6
+description: A lightweight Ruby client for the Salesforce REST API
+email:
+- me@timrogers.co.uk
+- eric@ejholmes.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/ISSUE_TEMPLATE/unhandled-salesforce-error.md"
+- ".github/dependabot.yml"
+- ".github/funding.yml"
+- ".github/workflows/build.yml"
+- ".github/workflows/faraday.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dockerfile
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- UPGRADING.md
+- docker-compose.yml
+- lib/restforce.rb
+- lib/restforce/abstract_client.rb
+- lib/restforce/attachment.rb
+- lib/restforce/client.rb
+- lib/restforce/collection.rb
+- lib/restforce/concerns/api.rb
+- lib/restforce/concerns/authentication.rb
+- lib/restforce/concerns/base.rb
+- lib/restforce/concerns/batch_api.rb
+- lib/restforce/concerns/caching.rb
+- lib/restforce/concerns/canvas.rb
+- lib/restforce/concerns/composite_api.rb
+- lib/restforce/concerns/connection.rb
+- lib/restforce/concerns/picklists.rb
+- lib/restforce/concerns/streaming.rb
+- lib/restforce/concerns/verbs.rb
+- lib/restforce/config.rb
+- lib/restforce/data/client.rb
+- lib/restforce/document.rb
+- lib/restforce/error_code.rb
+- lib/restforce/file_part.rb
+- lib/restforce/mash.rb
+- lib/restforce/middleware.rb
+- lib/restforce/middleware/authentication.rb
+- lib/restforce/middleware/authentication/client_credential.rb
+- lib/restforce/middleware/authentication/jwt_bearer.rb
+- lib/restforce/middleware/authentication/password.rb
+- lib/restforce/middleware/authentication/token.rb
+- lib/restforce/middleware/authorization.rb
+- lib/restforce/middleware/caching.rb
+- lib/restforce/middleware/custom_headers.rb
+- lib/restforce/middleware/gzip.rb
+- lib/restforce/middleware/instance_url.rb
+- lib/restforce/middleware/json_request.rb
+- lib/restforce/middleware/json_response.rb
+- lib/restforce/middleware/logger.rb
+- lib/restforce/middleware/mashify.rb
+- lib/restforce/middleware/multipart.rb
+- lib/restforce/middleware/raise_error.rb
+- lib/restforce/patches/parts.rb
+- lib/restforce/signed_request.rb
+- lib/restforce/sobject.rb
+- lib/restforce/tooling/client.rb
+- lib/restforce/version.rb
+- restforce.gemspec
+- script/bootstrap
+- script/console
+- script/guard
+- script/test
+- spec/fixtures/auth_error_response.json
+- spec/fixtures/auth_success_response.json
+- spec/fixtures/blob.jpg
+- spec/fixtures/expired_session_response.json
+- spec/fixtures/reauth_success_response.json
+- spec/fixtures/refresh_error_response.json
+- spec/fixtures/refresh_success_response.json
+- spec/fixtures/services_data_success_response.json
+- spec/fixtures/sobject/create_success_response.json
+- spec/fixtures/sobject/delete_error_response.json
+- spec/fixtures/sobject/describe_sobjects_success_response.json
+- spec/fixtures/sobject/get_deleted_success_response.json
+- spec/fixtures/sobject/get_updated_success_response.json
+- spec/fixtures/sobject/list_sobjects_success_response.json
+- spec/fixtures/sobject/list_view_results_success_response.json
+- spec/fixtures/sobject/org_query_response.json
+- spec/fixtures/sobject/query_aggregate_success_response.json
+- spec/fixtures/sobject/query_empty_response.json
+- spec/fixtures/sobject/query_error_response.json
+- spec/fixtures/sobject/query_paginated_first_page_response.json
+- spec/fixtures/sobject/query_paginated_last_page_response.json
+- spec/fixtures/sobject/query_success_response.json
+- spec/fixtures/sobject/recent_success_response.json
+- spec/fixtures/sobject/search_error_response.json
+- spec/fixtures/sobject/search_success_response.json
+- spec/fixtures/sobject/sobject_describe_error_response.json
+- spec/fixtures/sobject/sobject_describe_success_response.json
+- spec/fixtures/sobject/sobject_find_error_response.json
+- spec/fixtures/sobject/sobject_find_success_response.json
+- spec/fixtures/sobject/sobject_select_success_response.json
+- spec/fixtures/sobject/upsert_created_success_response.json
+- spec/fixtures/sobject/upsert_error_response.json
+- spec/fixtures/sobject/upsert_multiple_error_response.json
+- spec/fixtures/sobject/upsert_updated_success_response.json
+- spec/fixtures/sobject/write_error_response.json
+- spec/fixtures/test_private.key
+- spec/integration/abstract_client_spec.rb
+- spec/integration/data/client_spec.rb
+- spec/spec_helper.rb
+- spec/support/client_integration.rb
+- spec/support/concerns.rb
+- spec/support/event_machine.rb
+- spec/support/fixture_helpers.rb
+- spec/support/matchers.rb
+- spec/support/middleware.rb
+- spec/support/mock_cache.rb
+- spec/unit/abstract_client_spec.rb
+- spec/unit/attachment_spec.rb
+- spec/unit/collection_spec.rb
+- spec/unit/concerns/api_spec.rb
+- spec/unit/concerns/authentication_spec.rb
+- spec/unit/concerns/base_spec.rb
+- spec/unit/concerns/batch_api_spec.rb
+- spec/unit/concerns/caching_spec.rb
+- spec/unit/concerns/canvas_spec.rb
+- spec/unit/concerns/composite_api_spec.rb
+- spec/unit/concerns/connection_spec.rb
+- spec/unit/concerns/streaming_spec.rb
+- spec/unit/config_spec.rb
+- spec/unit/data/client_spec.rb
+- spec/unit/document_spec.rb
+- spec/unit/error_code_spec.rb
+- spec/unit/mash_spec.rb
+- spec/unit/middleware/authentication/client_credential_spec.rb
+- spec/unit/middleware/authentication/jwt_bearer_spec.rb
+- spec/unit/middleware/authentication/password_spec.rb
+- spec/unit/middleware/authentication/token_spec.rb
+- spec/unit/middleware/authentication_spec.rb
+- spec/unit/middleware/authorization_spec.rb
+- spec/unit/middleware/custom_headers_spec.rb
+- spec/unit/middleware/gzip_spec.rb
+- spec/unit/middleware/instance_url_spec.rb
+- spec/unit/middleware/logger_spec.rb
+- spec/unit/middleware/mashify_spec.rb
+- spec/unit/middleware/raise_error_spec.rb
+- spec/unit/signed_request_spec.rb
+- spec/unit/sobject_spec.rb
+- spec/unit/tooling/client_spec.rb
+homepage: https://restforce.github.io/
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/restforce/restforce
+  changelog_uri: https://github.com/restforce/restforce/blob/master/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: A lightweight Ruby client for the Salesforce REST API
+test_files: []

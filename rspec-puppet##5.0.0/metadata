@@ -1,0 +1,104 @@
+--- !ruby/object:Gem::Specification
+name: rspec-puppet
+version: !ruby/object:Gem::Version
+  version: 5.0.0
+platform: ruby
+authors:
+- Tim Sharpe
+- Puppet, Inc.
+- Community Contributors
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-09-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: "    RSpec tests for your Puppet manifests.\n"
+email:
+- tim@sharpe.id.au
+- modules-team@puppet.com
+executables:
+- rspec-puppet-init
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- bin/rspec-puppet-init
+- lib/rspec-puppet.rb
+- lib/rspec-puppet/adapters.rb
+- lib/rspec-puppet/cache.rb
+- lib/rspec-puppet/consts.rb
+- lib/rspec-puppet/coverage.rb
+- lib/rspec-puppet/errors.rb
+- lib/rspec-puppet/example.rb
+- lib/rspec-puppet/example/class_example_group.rb
+- lib/rspec-puppet/example/define_example_group.rb
+- lib/rspec-puppet/example/function_example_group.rb
+- lib/rspec-puppet/example/host_example_group.rb
+- lib/rspec-puppet/example/provider_example_group.rb
+- lib/rspec-puppet/example/type_alias_example_group.rb
+- lib/rspec-puppet/example/type_example_group.rb
+- lib/rspec-puppet/facter_impl.rb
+- lib/rspec-puppet/matchers.rb
+- lib/rspec-puppet/matchers/allow_value.rb
+- lib/rspec-puppet/matchers/compile.rb
+- lib/rspec-puppet/matchers/count_generic.rb
+- lib/rspec-puppet/matchers/create_generic.rb
+- lib/rspec-puppet/matchers/dynamic_matchers.rb
+- lib/rspec-puppet/matchers/include_class.rb
+- lib/rspec-puppet/matchers/parameter_matcher.rb
+- lib/rspec-puppet/matchers/raise_error.rb
+- lib/rspec-puppet/matchers/run.rb
+- lib/rspec-puppet/matchers/type_matchers.rb
+- lib/rspec-puppet/matchers/unique_values.rb
+- lib/rspec-puppet/monkey_patches.rb
+- lib/rspec-puppet/monkey_patches/win32/registry.rb
+- lib/rspec-puppet/monkey_patches/win32/taskscheduler.rb
+- lib/rspec-puppet/monkey_patches/windows/taskschedulerconstants.rb
+- lib/rspec-puppet/rake_task.rb
+- lib/rspec-puppet/raw_string.rb
+- lib/rspec-puppet/sensitive.rb
+- lib/rspec-puppet/setup.rb
+- lib/rspec-puppet/spec_helper.rb
+- lib/rspec-puppet/support.rb
+- lib/rspec-puppet/tasks/release_test.rb
+- lib/rspec-puppet/version.rb
+homepage: https://github.com/puppetlabs/rspec-puppet/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: RSpec tests for your Puppet manifests
+test_files: []

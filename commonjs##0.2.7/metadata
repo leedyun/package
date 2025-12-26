@@ -1,0 +1,124 @@
+--- !ruby/object:Gem::Specification
+name: commonjs
+version: !ruby/object:Gem::Version
+  version: 0.2.7
+platform: ruby
+authors:
+- Charles Lowell
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDPjCCAiagAwIBAgIBADANBgkqhkiG9w0BAQUFADBFMRAwDgYDVQQDDAdjb3di
+  b3lkMRwwGgYKCZImiZPyLGQBGRYMdGhlZnJvbnRzaWRlMRMwEQYKCZImiZPyLGQB
+  GRYDbmV0MB4XDTEzMDEzMDIxMDYwNFoXDTE0MDEzMDIxMDYwNFowRTEQMA4GA1UE
+  AwwHY293Ym95ZDEcMBoGCgmSJomT8ixkARkWDHRoZWZyb250c2lkZTETMBEGCgmS
+  JomT8ixkARkWA25ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO45
+  CUxpETDGYXjCCy2dMg/aIrdrTqBqQW5ZrzhHxF9EkcdmWFr0z/qMz0JSpZ3pF11Z
+  KYaj5PaQQpjZfLPwbuiGGkuSWi+UAac//V18xo6S4lzRBjO+gpzG9f2AOzt9b+SR
+  Uc8UhO7QBZ5edUDxMxw9QstD+U0YBAlzsPJbHuUOqdtxXmNQCds3ZnqTgZaIpdUy
+  CSejtrukSmlthxFzwgMezYQhcYxmkl+Q475JUodnI6Pjc6nja/Or8Y6cEWiLgeUa
+  a+efcPGLDEbwJC7TGRrvk8yassMByBEJ3XueTMzeqWFd+665ptciojYo6BvIAR0N
+  iLwks0x567FZyS8SqTcCAwEAAaM5MDcwCQYDVR0TBAIwADAdBgNVHQ4EFgQUxVgR
+  5TUqf7Hd24ICb3g4FNbM7oYwCwYDVR0PBAQDAgSwMA0GCSqGSIb3DQEBBQUAA4IB
+  AQDdJj+NzZhiYXA56z0wzRUA/Fcf6CYqKB+RFRlPssDEcHTor5SnwdWgQof/gNLi
+  Qel1Om4zO0Shcp89jxaUqtvEdYVhmyfc0vycHmemKttNBT734yMrEJtF8Hhy+Dnz
+  9CzixXLvgGaRH+mf3M0+l+zIDJJr2L+39L8cyTSSRnp/srfI8aSmJKhGshudBKoC
+  Ty6Gi071pwoJXvdMaE/6iPy7bUzlndYdHyYuWSKaO9N47HqQ62oEnBraglw6ghoi
+  UgImJlChAzCoDP9zi9tdm6jAr7ttF25R9PPYr11ILb7dYe3qUzlNlM6zJx/nb31b
+  IhdyRVup4qLcqYSTPsm6u7VA
+  -----END CERTIFICATE-----
+date: 2013-09-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Host CommonJS JavaScript environments in Ruby
+email:
+- cowboyd@thefrontside.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .gitmodules
+- .travis.yml
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- commonjs.gemspec
+- lib/commonjs.rb
+- lib/commonjs/environment.rb
+- lib/commonjs/module.rb
+- lib/commonjs/version.rb
+- spec/commonjs/libjs/assign_module_exports.js
+- spec/commonjs/libjs/one.js
+- spec/commonjs/libjs/three.js
+- spec/commonjs/libjs2/one.js
+- spec/commonjs/libjs2/two.js
+- spec/commonjs/modules_extensions_spec.rb
+- spec/commonjs/modules_spec.rb
+- spec/commonjs/path_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/cowboyd/commonjs.rb
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.0
+signing_key: 
+specification_version: 4
+summary: Provide access to your Ruby and Operating System runtime via the commonjs
+  API
+test_files:
+- spec/commonjs/libjs/assign_module_exports.js
+- spec/commonjs/libjs/one.js
+- spec/commonjs/libjs/three.js
+- spec/commonjs/libjs2/one.js
+- spec/commonjs/libjs2/two.js
+- spec/commonjs/modules_extensions_spec.rb
+- spec/commonjs/modules_spec.rb
+- spec/commonjs/path_spec.rb
+- spec/spec_helper.rb
+has_rdoc: 

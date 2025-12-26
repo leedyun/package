@@ -1,0 +1,100 @@
+--- !ruby/object:Gem::Specification
+name: redis
+version: !ruby/object:Gem::Version
+  version: 5.3.0
+platform: ruby
+authors:
+- Ezra Zygmuntowicz
+- Taylor Weibley
+- Matthew Clark
+- Brian McKinney
+- Salvatore Sanfilippo
+- Luca Guidi
+- Michel Martens
+- Damian Janowski
+- Pieter Noordhuis
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: redis-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+description: |2
+      A Ruby client that tries to match Redis' API one-to-one, while still
+      providing an idiomatic interface.
+email:
+- redis-db@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/redis.rb
+- lib/redis/client.rb
+- lib/redis/commands.rb
+- lib/redis/commands/bitmaps.rb
+- lib/redis/commands/cluster.rb
+- lib/redis/commands/connection.rb
+- lib/redis/commands/geo.rb
+- lib/redis/commands/hashes.rb
+- lib/redis/commands/hyper_log_log.rb
+- lib/redis/commands/keys.rb
+- lib/redis/commands/lists.rb
+- lib/redis/commands/pubsub.rb
+- lib/redis/commands/scripting.rb
+- lib/redis/commands/server.rb
+- lib/redis/commands/sets.rb
+- lib/redis/commands/sorted_sets.rb
+- lib/redis/commands/streams.rb
+- lib/redis/commands/strings.rb
+- lib/redis/commands/transactions.rb
+- lib/redis/distributed.rb
+- lib/redis/errors.rb
+- lib/redis/hash_ring.rb
+- lib/redis/pipeline.rb
+- lib/redis/subscribe.rb
+- lib/redis/version.rb
+homepage: https://github.com/redis/redis-rb
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/redis/redis-rb/issues
+  changelog_uri: https://github.com/redis/redis-rb/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/redis/5.3.0
+  homepage_uri: https://github.com/redis/redis-rb
+  source_code_uri: https://github.com/redis/redis-rb/tree/v5.3.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: A Ruby client library for Redis
+test_files: []

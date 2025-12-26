@@ -1,0 +1,58 @@
+--- !ruby/object:Gem::Specification
+name: pagerduty
+version: !ruby/object:Gem::Version
+  version: 4.0.1
+platform: ruby
+authors:
+- Hailey Somerville
+- Orien Madgwick
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-17 00:00:00.000000000 Z
+dependencies: []
+description: Provides a lightweight interface for calling the PagerDuty Events API
+email:
+- hailey@hailey.lol
+- _@orien.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/pagerduty.rb
+- lib/pagerduty/events_api_v1.rb
+- lib/pagerduty/events_api_v2.rb
+- lib/pagerduty/http_transport.rb
+- lib/pagerduty/version.rb
+homepage: https://github.com/envato/pagerduty
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/envato/pagerduty/issues
+  changelog_uri: https://github.com/envato/pagerduty/blob/v4.0.1/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/pagerduty/4.0.1
+  homepage_uri: https://github.com/envato/pagerduty
+  source_code_uri: https://github.com/envato/pagerduty/tree/v4.0.1
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key:
+specification_version: 4
+summary: PagerDuty Events API client library
+test_files: []

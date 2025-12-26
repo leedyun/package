@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in a1539kh_calculator.gemspec
+gemspec
+gem 'fizz-buzz'

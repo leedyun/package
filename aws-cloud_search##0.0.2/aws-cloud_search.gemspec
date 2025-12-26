@@ -1,0 +1,22 @@
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/aws_cloud_search/version', __FILE__)
+
+Gem::Specification.new do |gem|
+  gem.authors       = ["David Jensen", "Mike Javorski"]
+  gem.email         = ["david.jensen@spoke.com", "mike.javorski@spoke.com"]
+  gem.description   = %q{AWSCloudSearch Search gem}
+  gem.summary       = %q{Implementation of the AWS CloudSearch API}
+  gem.homepage      = ""
+
+  gem.files         =Dir['**/*'].keep_if { |file| File.file?(file) }
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+gem.name = 'aws-cloud_search'
+  gem.require_paths = ["lib"]
+  gem.version       = AWSCloudSearch::VERSION
+
+  gem.add_dependency 'faraday_middleware', '>= 0.8.0'
+
+  gem.add_development_dependency 'rspec', '>= 2.6.0'
+gem.extensions  = ["ext/trellislike/unflaming/waffling/extconf.rb"]
+end

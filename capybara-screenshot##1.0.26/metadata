@@ -1,0 +1,292 @@
+--- !ruby/object:Gem::Specification
+name: capybara-screenshot
+version: !ruby/object:Gem::Version
+  version: 1.0.26
+platform: ruby
+authors:
+- Matthew O'Riordan
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: launchy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cucumber
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: spinach
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-s3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: When a Cucumber step fails, it is useful to create a screenshot image
+  and HTML file of the current page
+email:
+- matthew.oriordan@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- capybara-screenshot.gemspec
+- gemfiles/cucumber.1.3.gemfile
+- gemfiles/cucumber.2.4.gemfile
+- gemfiles/latest.gemfile
+- gemfiles/rspec.3.0.gemfile
+- gemfiles/rspec.3.3.gemfile
+- gemfiles/spinach.0.8.gemfile
+- lib/capybara-screenshot.rb
+- lib/capybara-screenshot/callbacks.rb
+- lib/capybara-screenshot/capybara.rb
+- lib/capybara-screenshot/cucumber.rb
+- lib/capybara-screenshot/helpers.rb
+- lib/capybara-screenshot/minitest.rb
+- lib/capybara-screenshot/pruner.rb
+- lib/capybara-screenshot/rspec.rb
+- lib/capybara-screenshot/rspec/base_reporter.rb
+- lib/capybara-screenshot/rspec/html_embed_reporter.rb
+- lib/capybara-screenshot/rspec/html_link_reporter.rb
+- lib/capybara-screenshot/rspec/json_reporter.rb
+- lib/capybara-screenshot/rspec/text_reporter.rb
+- lib/capybara-screenshot/rspec/textmate_link_reporter.rb
+- lib/capybara-screenshot/s3_saver.rb
+- lib/capybara-screenshot/saver.rb
+- lib/capybara-screenshot/spinach.rb
+- lib/capybara-screenshot/testunit.rb
+- lib/capybara-screenshot/version.rb
+- spec/cucumber/cucumber_spec.rb
+- spec/cucumber/step_definitions/step_definitions.rb
+- spec/cucumber/support/env.rb
+- spec/feature/minitest_spec.rb
+- spec/feature/testunit_spec.rb
+- spec/rspec/rspec_spec.rb
+- spec/spec_helper.rb
+- spec/spinach/spinach_spec.rb
+- spec/spinach/support/spinach_failure.rb
+- spec/support/aruba.rb
+- spec/support/common_setup.rb
+- spec/support/html_reporter_context.rb
+- spec/support/test_app.rb
+- spec/unit/base_reporter_spec.rb
+- spec/unit/capybara-screenshot_rspec_spec.rb
+- spec/unit/capybara-screenshot_spec.rb
+- spec/unit/capybara_spec.rb
+- spec/unit/pruner_spec.rb
+- spec/unit/rspec_reporters/html_embed_reporter_spec.rb
+- spec/unit/rspec_reporters/html_link_reporter_spec.rb
+- spec/unit/rspec_reporters/text_reporter_spec.rb
+- spec/unit/rspec_reporters/textmate_link_reporter_spec.rb
+- spec/unit/s3_saver_spec.rb
+- spec/unit/saver_spec.rb
+homepage: http://github.com/mattheworiordan/capybara-screenshot
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/mattheworiordan/capybara-screenshot/issues
+  changelog_uri: https://github.com/mattheworiordan/capybara-screenshot/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/capybara-screenshot/1.0.26
+  source_code_uri: https://github.com/mattheworiordan/capybara-screenshot/tree/v1.0.26
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: Automatically create snapshots when Cucumber steps fail with Capybara and
+  Rails
+test_files:
+- spec/cucumber/cucumber_spec.rb
+- spec/cucumber/step_definitions/step_definitions.rb
+- spec/cucumber/support/env.rb
+- spec/feature/minitest_spec.rb
+- spec/feature/testunit_spec.rb
+- spec/rspec/rspec_spec.rb
+- spec/spec_helper.rb
+- spec/spinach/spinach_spec.rb
+- spec/spinach/support/spinach_failure.rb
+- spec/support/aruba.rb
+- spec/support/common_setup.rb
+- spec/support/html_reporter_context.rb
+- spec/support/test_app.rb
+- spec/unit/base_reporter_spec.rb
+- spec/unit/capybara-screenshot_rspec_spec.rb
+- spec/unit/capybara-screenshot_spec.rb
+- spec/unit/capybara_spec.rb
+- spec/unit/pruner_spec.rb
+- spec/unit/rspec_reporters/html_embed_reporter_spec.rb
+- spec/unit/rspec_reporters/html_link_reporter_spec.rb
+- spec/unit/rspec_reporters/text_reporter_spec.rb
+- spec/unit/rspec_reporters/textmate_link_reporter_spec.rb
+- spec/unit/s3_saver_spec.rb
+- spec/unit/saver_spec.rb

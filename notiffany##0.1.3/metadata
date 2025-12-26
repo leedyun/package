@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: notiffany
+version: !ruby/object:Gem::Version
+  version: 0.1.3
+platform: ruby
+authors:
+- Cezary Baginski
+- Rémy Coutable
+- Thibaud Guillaume-Gentil
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-08-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: shellany
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+description: |2
+      Wrapper libray for most popular notification
+      libraries such as Growl, Libnotify, Notifu
+email:
+- cezary@chronomantic.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- images/failed.png
+- images/pending.png
+- images/success.png
+- lib/notiffany.rb
+- lib/notiffany/notifier.rb
+- lib/notiffany/notifier/base.rb
+- lib/notiffany/notifier/config.rb
+- lib/notiffany/notifier/detected.rb
+- lib/notiffany/notifier/emacs.rb
+- lib/notiffany/notifier/emacs/client.rb
+- lib/notiffany/notifier/file.rb
+- lib/notiffany/notifier/gntp.rb
+- lib/notiffany/notifier/growl.rb
+- lib/notiffany/notifier/libnotify.rb
+- lib/notiffany/notifier/notifysend.rb
+- lib/notiffany/notifier/rb_notifu.rb
+- lib/notiffany/notifier/terminal_notifier.rb
+- lib/notiffany/notifier/terminal_title.rb
+- lib/notiffany/notifier/tmux.rb
+- lib/notiffany/notifier/tmux/client.rb
+- lib/notiffany/notifier/tmux/notification.rb
+- lib/notiffany/notifier/tmux/session.rb
+- lib/notiffany/version.rb
+homepage: https://github.com/guard/notiffany
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Notifier library (extracted from Guard project)
+test_files: []

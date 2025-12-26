@@ -1,0 +1,275 @@
+--- !ruby/object:Gem::Specification
+name: unparser
+version: !ruby/object:Gem::Version
+  version: 0.6.15
+platform: ruby
+authors:
+- Markus Schirp
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: diff-lcs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+- !ruby/object:Gem::Dependency
+  name: mutant
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+- !ruby/object:Gem::Dependency
+  name: mutant-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.12.2
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+- !ruby/object:Gem::Dependency
+  name: rspec-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rubocop-packaging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+description: Generate equivalent source for parser gem AST nodes
+email: mbj@schirp-dso.com
+executables:
+- unparser
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- README.md
+- bin/unparser
+- lib/unparser.rb
+- lib/unparser/abstract_type.rb
+- lib/unparser/adamantium.rb
+- lib/unparser/adamantium/method_builder.rb
+- lib/unparser/anima.rb
+- lib/unparser/anima/attribute.rb
+- lib/unparser/anima/error.rb
+- lib/unparser/ast.rb
+- lib/unparser/ast/local_variable_scope.rb
+- lib/unparser/buffer.rb
+- lib/unparser/cli.rb
+- lib/unparser/color.rb
+- lib/unparser/comments.rb
+- lib/unparser/concord.rb
+- lib/unparser/constants.rb
+- lib/unparser/diff.rb
+- lib/unparser/dsl.rb
+- lib/unparser/either.rb
+- lib/unparser/emitter.rb
+- lib/unparser/emitter/alias.rb
+- lib/unparser/emitter/args.rb
+- lib/unparser/emitter/argument.rb
+- lib/unparser/emitter/array.rb
+- lib/unparser/emitter/array_pattern.rb
+- lib/unparser/emitter/assignment.rb
+- lib/unparser/emitter/begin.rb
+- lib/unparser/emitter/binary.rb
+- lib/unparser/emitter/block.rb
+- lib/unparser/emitter/case.rb
+- lib/unparser/emitter/case_guard.rb
+- lib/unparser/emitter/case_match.rb
+- lib/unparser/emitter/cbase.rb
+- lib/unparser/emitter/class.rb
+- lib/unparser/emitter/const_pattern.rb
+- lib/unparser/emitter/def.rb
+- lib/unparser/emitter/defined.rb
+- lib/unparser/emitter/dstr.rb
+- lib/unparser/emitter/dsym.rb
+- lib/unparser/emitter/find_pattern.rb
+- lib/unparser/emitter/flipflop.rb
+- lib/unparser/emitter/float.rb
+- lib/unparser/emitter/flow_modifier.rb
+- lib/unparser/emitter/for.rb
+- lib/unparser/emitter/hash.rb
+- lib/unparser/emitter/hash_pattern.rb
+- lib/unparser/emitter/hookexe.rb
+- lib/unparser/emitter/if.rb
+- lib/unparser/emitter/in_match.rb
+- lib/unparser/emitter/in_pattern.rb
+- lib/unparser/emitter/index.rb
+- lib/unparser/emitter/kwargs.rb
+- lib/unparser/emitter/kwbegin.rb
+- lib/unparser/emitter/lambda.rb
+- lib/unparser/emitter/masgn.rb
+- lib/unparser/emitter/match.rb
+- lib/unparser/emitter/match_alt.rb
+- lib/unparser/emitter/match_as.rb
+- lib/unparser/emitter/match_pattern.rb
+- lib/unparser/emitter/match_pattern_p.rb
+- lib/unparser/emitter/match_rest.rb
+- lib/unparser/emitter/match_var.rb
+- lib/unparser/emitter/mlhs.rb
+- lib/unparser/emitter/module.rb
+- lib/unparser/emitter/op_assign.rb
+- lib/unparser/emitter/pair.rb
+- lib/unparser/emitter/pin.rb
+- lib/unparser/emitter/primitive.rb
+- lib/unparser/emitter/range.rb
+- lib/unparser/emitter/regexp.rb
+- lib/unparser/emitter/repetition.rb
+- lib/unparser/emitter/rescue.rb
+- lib/unparser/emitter/root.rb
+- lib/unparser/emitter/send.rb
+- lib/unparser/emitter/simple.rb
+- lib/unparser/emitter/splat.rb
+- lib/unparser/emitter/super.rb
+- lib/unparser/emitter/undef.rb
+- lib/unparser/emitter/variable.rb
+- lib/unparser/emitter/xstr.rb
+- lib/unparser/emitter/yield.rb
+- lib/unparser/equalizer.rb
+- lib/unparser/finalize.rb
+- lib/unparser/generation.rb
+- lib/unparser/node_details.rb
+- lib/unparser/node_details/send.rb
+- lib/unparser/node_helpers.rb
+- lib/unparser/validation.rb
+- lib/unparser/writer.rb
+- lib/unparser/writer/binary.rb
+- lib/unparser/writer/dynamic_string.rb
+- lib/unparser/writer/resbody.rb
+- lib/unparser/writer/rescue.rb
+- lib/unparser/writer/send.rb
+- lib/unparser/writer/send/attribute_assignment.rb
+- lib/unparser/writer/send/binary.rb
+- lib/unparser/writer/send/conditional.rb
+- lib/unparser/writer/send/regular.rb
+- lib/unparser/writer/send/unary.rb
+homepage: http://github.com/mbj/unparser
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/mbj/unparser/issues
+  changelog_uri: https://github.com/mbj/unparser/blob/master/Changelog.md
+  funding_uri: https://github.com/sponsors/mbj
+  source_code_uri: https://github.com/mbj/unparser
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Generate equivalent source for parser gem AST nodes
+test_files: []

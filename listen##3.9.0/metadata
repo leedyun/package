@@ -1,0 +1,128 @@
+--- !ruby/object:Gem::Specification
+name: listen
+version: !ruby/object:Gem::Version
+  version: 3.9.0
+platform: ruby
+authors:
+- Thibaud Guillaume-Gentil
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rb-fsevent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+- !ruby/object:Gem::Dependency
+  name: rb-inotify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.10
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.10
+description: The Listen gem listens to file modifications and notifies you about the
+  changes. Works everywhere!
+email: thibaud@thibaud.gg
+executables:
+- listen
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE.txt
+- README.md
+- bin/listen
+- lib/listen.rb
+- lib/listen/adapter.rb
+- lib/listen/adapter/base.rb
+- lib/listen/adapter/bsd.rb
+- lib/listen/adapter/config.rb
+- lib/listen/adapter/darwin.rb
+- lib/listen/adapter/linux.rb
+- lib/listen/adapter/polling.rb
+- lib/listen/adapter/windows.rb
+- lib/listen/backend.rb
+- lib/listen/change.rb
+- lib/listen/cli.rb
+- lib/listen/directory.rb
+- lib/listen/error.rb
+- lib/listen/event/config.rb
+- lib/listen/event/loop.rb
+- lib/listen/event/processor.rb
+- lib/listen/event/queue.rb
+- lib/listen/file.rb
+- lib/listen/fsm.rb
+- lib/listen/listener.rb
+- lib/listen/listener/config.rb
+- lib/listen/logger.rb
+- lib/listen/monotonic_time.rb
+- lib/listen/options.rb
+- lib/listen/queue_optimizer.rb
+- lib/listen/record.rb
+- lib/listen/record/entry.rb
+- lib/listen/record/symlink_detector.rb
+- lib/listen/silencer.rb
+- lib/listen/silencer/controller.rb
+- lib/listen/thread.rb
+- lib/listen/version.rb
+homepage: https://github.com/guard/listen
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/guard/listen/issues
+  changelog_uri: https://github.com/guard/listen/releases
+  documentation_uri: https://www.rubydoc.info/gems/listen/3.9.0
+  homepage_uri: https://github.com/guard/listen
+  source_code_uri: https://github.com/guard/listen/tree/v3.9.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.6
+signing_key:
+specification_version: 4
+summary: Listen to file modifications
+test_files: []

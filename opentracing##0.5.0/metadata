@@ -1,0 +1,137 @@
+--- !ruby/object:Gem::Specification
+name: opentracing
+version: !ruby/object:Gem::Version
+  version: 0.5.0
+platform: ruby
+authors:
+- ngauthier
+- bcronin
+- bensigelman
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2019-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.54.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.54.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.0
+- !ruby/object:Gem::Dependency
+  name: simplecov-console
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+description: 
+email:
+- info@opentracing.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/opentracing.rb
+- lib/opentracing/carrier.rb
+- lib/opentracing/reference.rb
+- lib/opentracing/scope.rb
+- lib/opentracing/scope_manager.rb
+- lib/opentracing/span.rb
+- lib/opentracing/span_context.rb
+- lib/opentracing/tracer.rb
+- lib/opentracing/version.rb
+- opentracing.gemspec
+homepage: https://github.com/opentracing/opentracing-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: OpenTracing Ruby Platform API
+test_files: []

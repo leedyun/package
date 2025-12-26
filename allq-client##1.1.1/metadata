@@ -1,0 +1,298 @@
+--- !ruby/object:Gem::Specification
+name: allq-client
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- support@blitline.com
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.1
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.24'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.24.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.24'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.24.3
+- !ruby/object:Gem::Dependency
+  name: autotest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.4'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.4.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.4'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.4.6
+- !ruby/object:Gem::Dependency
+  name: autotest-rails-pure
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.1.2
+- !ruby/object:Gem::Dependency
+  name: autotest-growl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.16
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.16
+- !ruby/object:Gem::Dependency
+  name: autotest-fsevent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.12
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.12
+description: Allq API Client
+email:
+- support@blitline.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.md
+- Rakefile
+- allq-client.gemspec
+- allq_client-1.1.0.gem
+- deploy.sh
+- docs/ActionsApi.md
+- docs/AdminApi.md
+- docs/BasicPayload.md
+- docs/BasicResponse.md
+- docs/JobRef.md
+- docs/JobResponse.md
+- docs/NewJob.md
+- docs/NewParentJob.md
+- docs/StatsInfo.md
+- docs/StatsResults.md
+- docs/StatsTube.md
+- docs/Throttle.md
+- docs/TubeRef.md
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- git_push.sh
+- lib/allq_client.rb
+- lib/allq_client/api/actions_api.rb
+- lib/allq_client/api/admin_api.rb
+- lib/allq_client/api_client.rb
+- lib/allq_client/api_error.rb
+- lib/allq_client/configuration.rb
+- lib/allq_client/models/basic_payload.rb
+- lib/allq_client/models/basic_response.rb
+- lib/allq_client/models/job_ref.rb
+- lib/allq_client/models/job_response.rb
+- lib/allq_client/models/multiple_job_response.rb
+- lib/allq_client/models/new_job.rb
+- lib/allq_client/models/new_parent_job.rb
+- lib/allq_client/models/stats_info.rb
+- lib/allq_client/models/stats_results.rb
+- lib/allq_client/models/stats_tube.rb
+- lib/allq_client/models/throttle.rb
+- lib/allq_client/models/tube_ref.rb
+- lib/allq_client/version.rb
+- spec/api/actions_api_spec.rb
+- spec/api/admin_api_spec.rb
+- spec/api_client_spec.rb
+- spec/configuration_spec.rb
+- spec/models/basic_payload_spec.rb
+- spec/models/basic_response_spec.rb
+- spec/models/job_ref_spec.rb
+- spec/models/job_response_spec.rb
+- spec/models/new_job_spec.rb
+- spec/models/new_parent_job_spec.rb
+- spec/models/stats_info_spec.rb
+- spec/models/stats_results_spec.rb
+- spec/models/stats_tube_spec.rb
+- spec/models/throttle_spec.rb
+- spec/models/tube_ref_spec.rb
+- spec/spec_helper.rb
+homepage: http://www.blitline.com
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">"
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby client for Allq platform
+test_files:
+- spec/api/actions_api_spec.rb
+- spec/api/admin_api_spec.rb
+- spec/api_client_spec.rb
+- spec/configuration_spec.rb
+- spec/models/basic_payload_spec.rb
+- spec/models/basic_response_spec.rb
+- spec/models/job_ref_spec.rb
+- spec/models/job_response_spec.rb
+- spec/models/new_job_spec.rb
+- spec/models/new_parent_job_spec.rb
+- spec/models/stats_info_spec.rb
+- spec/models/stats_results_spec.rb
+- spec/models/stats_tube_spec.rb
+- spec/models/throttle_spec.rb
+- spec/models/tube_ref_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,1 @@
+require_relative 'rails6_1/uniqueness_validator'

@@ -1,0 +1,151 @@
+--- !ruby/object:Gem::Specification
+name: aws-sdk-ec2
+version: !ruby/object:Gem::Version
+  version: 1.501.0
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+- !ruby/object:Gem::Dependency
+  name: aws-sigv4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+description: Official AWS Ruby gem for Amazon Elastic Compute Cloud (Amazon EC2).
+  This gem is part of the AWS SDK for Ruby.
+email:
+- aws-dr-rubygems@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- VERSION
+- lib/aws-sdk-ec2.rb
+- lib/aws-sdk-ec2/classic_address.rb
+- lib/aws-sdk-ec2/client.rb
+- lib/aws-sdk-ec2/client_api.rb
+- lib/aws-sdk-ec2/customizations.rb
+- lib/aws-sdk-ec2/customizations/instance.rb
+- lib/aws-sdk-ec2/customizations/resource.rb
+- lib/aws-sdk-ec2/customizations/tag.rb
+- lib/aws-sdk-ec2/dhcp_options.rb
+- lib/aws-sdk-ec2/endpoint_parameters.rb
+- lib/aws-sdk-ec2/endpoint_provider.rb
+- lib/aws-sdk-ec2/endpoints.rb
+- lib/aws-sdk-ec2/errors.rb
+- lib/aws-sdk-ec2/image.rb
+- lib/aws-sdk-ec2/instance.rb
+- lib/aws-sdk-ec2/internet_gateway.rb
+- lib/aws-sdk-ec2/key_pair.rb
+- lib/aws-sdk-ec2/key_pair_info.rb
+- lib/aws-sdk-ec2/nat_gateway.rb
+- lib/aws-sdk-ec2/network_acl.rb
+- lib/aws-sdk-ec2/network_interface.rb
+- lib/aws-sdk-ec2/network_interface_association.rb
+- lib/aws-sdk-ec2/placement_group.rb
+- lib/aws-sdk-ec2/plugins/copy_encrypted_snapshot.rb
+- lib/aws-sdk-ec2/plugins/endpoints.rb
+- lib/aws-sdk-ec2/plugins/region_validation.rb
+- lib/aws-sdk-ec2/resource.rb
+- lib/aws-sdk-ec2/route.rb
+- lib/aws-sdk-ec2/route_table.rb
+- lib/aws-sdk-ec2/route_table_association.rb
+- lib/aws-sdk-ec2/security_group.rb
+- lib/aws-sdk-ec2/snapshot.rb
+- lib/aws-sdk-ec2/subnet.rb
+- lib/aws-sdk-ec2/tag.rb
+- lib/aws-sdk-ec2/types.rb
+- lib/aws-sdk-ec2/volume.rb
+- lib/aws-sdk-ec2/vpc.rb
+- lib/aws-sdk-ec2/vpc_address.rb
+- lib/aws-sdk-ec2/vpc_peering_connection.rb
+- lib/aws-sdk-ec2/waiters.rb
+- sig/classic_address.rbs
+- sig/client.rbs
+- sig/dhcp_options.rbs
+- sig/errors.rbs
+- sig/image.rbs
+- sig/instance.rbs
+- sig/internet_gateway.rbs
+- sig/key_pair.rbs
+- sig/key_pair_info.rbs
+- sig/nat_gateway.rbs
+- sig/network_acl.rbs
+- sig/network_interface.rbs
+- sig/network_interface_association.rbs
+- sig/placement_group.rbs
+- sig/resource.rbs
+- sig/route.rbs
+- sig/route_table.rbs
+- sig/route_table_association.rbs
+- sig/security_group.rbs
+- sig/snapshot.rbs
+- sig/subnet.rbs
+- sig/tag.rbs
+- sig/types.rbs
+- sig/volume.rbs
+- sig/vpc.rbs
+- sig/vpc_address.rbs
+- sig/vpc_peering_connection.rbs
+- sig/waiters.rbs
+homepage: https://github.com/aws/aws-sdk-ruby
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-ec2
+  changelog_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-ec2/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: AWS SDK for Ruby - Amazon EC2
+test_files: []

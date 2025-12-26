@@ -1,0 +1,48 @@
+--- !ruby/object:Gem::Specification
+name: babel-source
+version: !ruby/object:Gem::Version
+  version: 5.8.35
+platform: ruby
+authors:
+- Sebastian McKenzie
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-01-20 00:00:00.000000000 Z
+dependencies: []
+description: 
+email: sebmck@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/babel.js
+- lib/babel/external-helpers.js
+- lib/babel/polyfill.js
+- lib/babel/source.rb
+homepage: https://github.com/babel/ruby-babel-transpiler
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5
+signing_key: 
+specification_version: 4
+summary: Babel JS source
+test_files: []

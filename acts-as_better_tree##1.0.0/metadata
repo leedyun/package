@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: acts-as_better_tree
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Isaac Sloan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies: []
+description: acts_as_better_tree is great for anyone who needs a fast tree capable
+  of handling millions of nodes without slowing down on writes like nestedset or on
+  reads like a standard tree.
+email:
+- isaac@isaacsloan.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- acts-as_better_tree.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acts_as_better_tree.rb
+- lib/acts_as_better_tree/version.rb
+- spec/acts_as_better_tree_spec.rb
+- spec/factories/categories.rb
+- spec/spec_helper.rb
+homepage: https://github.com/isaacsloan/acts_as_better_tree
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: acts_as_better_tree is backwards compatible with acts_as_tree and remains
+  fast with large datasets by storing the ancestry of every node in the field csv_ids.
+test_files:
+- spec/acts_as_better_tree_spec.rb
+- spec/factories/categories.rb
+- spec/spec_helper.rb

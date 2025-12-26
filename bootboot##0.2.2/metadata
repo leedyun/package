@@ -1,0 +1,89 @@
+--- !ruby/object:Gem::Specification
+name: bootboot
+version: !ruby/object:Gem::Version
+  version: 0.2.2
+platform: ruby
+authors:
+- Shopify
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-01-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: " This gem remove the overhead of monkeypatching your Gemfile in order
+  to dualboot your app using the Gemfile_next lock strategy It also ensure that dependencies
+  in the Gemfile lock and Gemfile_next lock are in sync whenever someone updates a
+  gem "
+email:
+- rails@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- LICENSE.txt
+- README.md
+- lib/bootboot.rb
+- lib/bootboot/bundler_patch.rb
+- lib/bootboot/command.rb
+- lib/bootboot/gemfile_next_auto_sync.rb
+- lib/bootboot/ruby_source.rb
+- lib/bootboot/version.rb
+- plugins.rb
+homepage: https://github.com/shopify/bootboot
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/shopify/bootboot
+  source_code_uri: https://github.com/shopify/bootboot
+  changelog_uri: https://github.com/Shopify/bootboot/blob/master/CHANGELOG.md
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key: 
+specification_version: 4
+summary: Dualbooting your ruby app made easy.
+test_files: []

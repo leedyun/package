@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: lint_roller
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Justin Searls
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-07-07 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+- searls@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".standard.yml"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/lint_roller.rb
+- lib/lint_roller/about.rb
+- lib/lint_roller/context.rb
+- lib/lint_roller/error.rb
+- lib/lint_roller/plugin.rb
+- lib/lint_roller/rules.rb
+- lib/lint_roller/support/merges_upstream_metadata.rb
+- lib/lint_roller/version.rb
+homepage: https://github.com/standardrb/lint_roller
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/standardrb/lint_roller
+  source_code_uri: https://github.com/standardrb/lint_roller
+  changelog_uri: https://github.com/standardrb/lint_roller/blob/main/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.14
+signing_key:
+specification_version: 4
+summary: A plugin specification for linter and formatter rulesets
+test_files: []

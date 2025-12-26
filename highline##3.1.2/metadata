@@ -1,0 +1,178 @@
+--- !ruby/object:Gem::Specification
+name: highline
+version: !ruby/object:Gem::Version
+  version: 3.1.2
+platform: ruby
+authors:
+- James Edward Gray II
+bindir: bin
+cert_chain: []
+date: 2025-01-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dry-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: reline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  A high-level IO library that provides validation, type conversion, and more for
+  command-line interfaces. HighLine also includes a complete menu system that can
+  crank out anything from simple list selection to complete shells with just
+  minutes of work.
+email: james@graysoftinc.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- TODO
+- Changelog.md
+- LICENSE
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".simplecov"
+- AUTHORS
+- COPYING
+- Changelog.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO
+- bin/test
+- doc/.cvsignore
+- examples/ansi_colors.rb
+- examples/asking_for_arrays.rb
+- examples/basic_usage.rb
+- examples/color_scheme.rb
+- examples/custom_parser_custom_validator.rb
+- examples/get_character.rb
+- examples/limit.rb
+- examples/menus.rb
+- examples/overwrite.rb
+- examples/page_and_wrap.rb
+- examples/password.rb
+- examples/repeat_entry.rb
+- examples/trapping_eof.rb
+- examples/using_readline.rb
+- highline.gemspec
+- lib/highline.rb
+- lib/highline/builtin_styles.rb
+- lib/highline/color_scheme.rb
+- lib/highline/compatibility.rb
+- lib/highline/custom_errors.rb
+- lib/highline/import.rb
+- lib/highline/io_console_compatible.rb
+- lib/highline/list.rb
+- lib/highline/list_renderer.rb
+- lib/highline/menu.rb
+- lib/highline/menu/item.rb
+- lib/highline/paginator.rb
+- lib/highline/question.rb
+- lib/highline/question/answer_converter.rb
+- lib/highline/question_asker.rb
+- lib/highline/simulate.rb
+- lib/highline/statement.rb
+- lib/highline/string.rb
+- lib/highline/string_extensions.rb
+- lib/highline/style.rb
+- lib/highline/template_renderer.rb
+- lib/highline/terminal.rb
+- lib/highline/terminal/io_console.rb
+- lib/highline/terminal/ncurses.rb
+- lib/highline/terminal/unix_stty.rb
+- lib/highline/version.rb
+- lib/highline/wrapper.rb
+- site/.cvsignore
+- site/highline.css
+- site/images/logo.png
+- site/index.html
+homepage: https://github.com/JEG2/highline
+licenses:
+- Ruby
+metadata:
+  changelog_uri: https://github.com/JEG2/highline/blob/master/Changelog.md
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: HighLine is a high-level command-line IO library.
+test_files: []

@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'optparse'
+require 'applogger'
+
+# Defines the commandline arguments the applogger binary supports. Currently this binary is build in a way that
+# gets the data for steaming from stdin.
+options = {}
+OptionParser.new do |opts|
+  opts.on("--service S", "Path to a service.json file which defines the endpoints used from the logger client") do |s|
+    options[:service] = s
+  end
+
+  opts.on("--app A", "Application identifier this logs are for") do |a|
+    options[:app] = a
+  end
+
+  opts.on("--secret S", "Application secret used for authorization") do |s|
+    options[:secret] = s
+  end
+end.parse!
+
+# Now we establish a connection object for the service
+connection = AppLogger::LogService.connect(:configuration => options[:service])
+
+# Every device should be registered to a specific user, this can be done with the following link
+puts "Visit #{connection.registration_link(options[:app])} to register this device"
+
+# Waiting for the setup and the handshake
+unless connection.open(:app_identifier => options[:app], :app_secret => options[:secret])
+  puts "Failed to establish a connection to the log service, aborting"
+  exit(-1)
+end
+
+# Starting sending data from the stdin
+puts "Waiting for data on standard input"
+ARGF.each_with_index do |line, idx|
+
+  # We add a couple information about the log context...
+  logMessage = "#{ARGF.filename} : #{idx} ; #{line}"
+
+  # ...and put the message in the tunnel
+  connection.write(logMessage)
+
+end
+
+# Ok if we are done just close the channel to release resources as early as possible
+connection.close
+
+# bye
+exit(0)

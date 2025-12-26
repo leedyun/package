@@ -1,0 +1,171 @@
+--- !ruby/object:Gem::Specification
+name: ci_reporter_rspec
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Nick Sieger
+- Jake Goulding
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-07-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.14'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: ci_reporter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ci_reporter_test_utils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-collection_matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- nick@nicksieger.com
+- jake.goulding@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- acceptance/.gitignore
+- acceptance/rspec_example_spec.rb
+- acceptance/verification_spec.rb
+- ci_reporter_rspec.gemspec
+- gemfiles/.gitignore
+- gemfiles/Gemfile.2.14
+- gemfiles/Gemfile.2.99
+- lib/ci/reporter/rake/rspec.rb
+- lib/ci/reporter/rake/rspec_loader.rb
+- lib/ci/reporter/rspec.rb
+- lib/ci/reporter/rspec/version.rb
+- lib/ci/reporter/rspec2/failure.rb
+- lib/ci/reporter/rspec2/formatter.rb
+- lib/ci/reporter/rspec3/failure.rb
+- lib/ci/reporter/rspec3/formatter.rb
+- spec/ci/reporter/rake/rake_tasks_spec.rb
+- spec/ci/reporter/rspec2/failure_spec.rb
+- spec/ci/reporter/rspec2/formatter_spec.rb
+- spec/spec_helper.rb
+- spec/support/rspec2.rb
+homepage: https://github.com/ci-reporter/ci_reporter_rspec
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Connects CI::Reporter to RSpec
+test_files:
+- acceptance/.gitignore
+- acceptance/rspec_example_spec.rb
+- acceptance/verification_spec.rb
+- spec/ci/reporter/rake/rake_tasks_spec.rb
+- spec/ci/reporter/rspec2/failure_spec.rb
+- spec/ci/reporter/rspec2/formatter_spec.rb
+- spec/spec_helper.rb
+- spec/support/rspec2.rb

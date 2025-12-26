@@ -1,0 +1,89 @@
+--- !ruby/object:Gem::Specification
+name: minitest-stub_any_instance
+version: !ruby/object:Gem::Version
+  version: 1.0.3
+platform: ruby
+authors:
+- Sammy Larbi
+- Vasiliy Ermolovich
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-12-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Adds a method to MiniTest that stubs any instance of a class.
+email:
+- sam@codeodor.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/minitest/stub_any_instance.rb
+- test/stub_any_instance_test.rb
+homepage: https://github.com/codeodor/minitest-stub_any_instance
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: ''
+test_files:
+- test/stub_any_instance_test.rb

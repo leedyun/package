@@ -1,0 +1,75 @@
+--- !ruby/object:Gem::Specification
+name: pmap
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Bruce Adams
+- Jake Goulding
+- David Biehl
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-11-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 'Add parallel methods into Enumerable: pmap and peach'
+email:
+- bruce.adams@acm.org
+- jake.goulding@gmail.com
+- me@davidbiehl.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/pmap.rb
+- lib/pmap/thread_pool.rb
+- lib/pmap/version.rb
+- pmap.gemspec
+- test/pmap_test.rb
+homepage: https://github.com/bruceadams/pmap
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.1
+signing_key: 
+specification_version: 4
+summary: 'Add parallel methods into Enumerable: pmap and peach'
+test_files:
+- test/pmap_test.rb

@@ -1,0 +1,415 @@
+--- !ruby/object:Gem::Specification
+name: slather
+version: !ruby/object:Gem::Version
+  version: 2.8.5
+platform: ruby
+authors:
+- Mark Larsen
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+- !ruby/object:Gem::Dependency
+  name: cocoapods
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.10.beta.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.10.beta.1
+- !ruby/object:Gem::Dependency
+  name: json_spec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: equivalent-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: clamp
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: xcodeproj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.27'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.27'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.14.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.14.3
+- !ruby/object:Gem::Dependency
+  name: CFPropertyList
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email:
+- mark@venmo.com
+executables:
+- slather
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coveralls.yml"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- README_Images/test_scheme.png
+- Rakefile
+- assets/highlight.pack.js
+- assets/list.min.js
+- assets/slather.css
+- bin/slather
+- docs/logo.jpg
+- lib/cocoapods_plugin.rb
+- lib/slather.rb
+- lib/slather/command/coverage_command.rb
+- lib/slather/command/setup_command.rb
+- lib/slather/command/version_command.rb
+- lib/slather/coverage_file.rb
+- lib/slather/coverage_info.rb
+- lib/slather/coverage_service/cobertura_xml_output.rb
+- lib/slather/coverage_service/coveralls.rb
+- lib/slather/coverage_service/gutter_json_output.rb
+- lib/slather/coverage_service/hardcover.rb
+- lib/slather/coverage_service/html_output.rb
+- lib/slather/coverage_service/json_output.rb
+- lib/slather/coverage_service/llvm_cov_output.rb
+- lib/slather/coverage_service/simple_output.rb
+- lib/slather/coverage_service/sonarqube_xml_output.rb
+- lib/slather/coveralls_coverage.rb
+- lib/slather/profdata_coverage_file.rb
+- lib/slather/project.rb
+- lib/slather/version.rb
+- slather.gemspec
+- spec/fixtures/FixtureFramework/FixtureFramework.h
+- spec/fixtures/FixtureFramework/FlashExperiment.swift
+- spec/fixtures/FixtureFramework/Info.plist
+- spec/fixtures/FixtureFrameworkTests/FixtureFrameworkTests.swift
+- spec/fixtures/FixtureFrameworkTests/FlashExperimentTests.swift
+- spec/fixtures/FixtureFrameworkTests/Info.plist
+- spec/fixtures/cobertura.xml
+- spec/fixtures/fixtures.xcodeproj/project.pbxproj
+- spec/fixtures/fixtures.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/aggregateFixturesTests.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixtures.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTests.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTestsSecond.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTwo.xcscheme
+- spec/fixtures/fixtures.xcworkspace/contents.xcworkspacedata
+- spec/fixtures/fixtures.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+- spec/fixtures/fixtures.xcworkspace/xcshareddata/xcschemes/fixturesTestsWorkspace.xcscheme
+- spec/fixtures/fixtures/Fixtures.swift
+- spec/fixtures/fixtures/Supporting Files/fixtures-Prefix.pch
+- spec/fixtures/fixtures/fixtures.h
+- spec/fixtures/fixtures/fixtures.m
+- spec/fixtures/fixtures/fixtures_cpp.cpp
+- spec/fixtures/fixtures/fixtures_cpp.h
+- spec/fixtures/fixtures/fixtures_m.h
+- spec/fixtures/fixtures/fixtures_m.m
+- spec/fixtures/fixtures/fixtures_mm.h
+- spec/fixtures/fixtures/fixtures_mm.mm
+- spec/fixtures/fixtures/more_files/Branches.h
+- spec/fixtures/fixtures/more_files/Branches.m
+- spec/fixtures/fixtures/more_files/Empty.h
+- spec/fixtures/fixtures/more_files/Empty.m
+- spec/fixtures/fixtures/more_files/peekaview.h
+- spec/fixtures/fixtures/more_files/peekaview.m
+- spec/fixtures/fixtures/other_fixtures.m
+- spec/fixtures/fixturesTests/BranchesTests.m
+- spec/fixtures/fixturesTests/Supporting Files/en.lproj/InfoPlist.strings
+- spec/fixtures/fixturesTests/Supporting Files/fixturesTests-Info.plist
+- spec/fixtures/fixturesTests/fixturesTests.m
+- spec/fixtures/fixturesTests/fixturesTestsSecond.m
+- "spec/fixtures/fixturesTests/peekaviewTests\U0001F4A3.m"
+- spec/fixtures/fixturesTwo/fixturesTwo.h
+- spec/fixtures/fixturesTwo/fixturesTwo.m
+- spec/fixtures/fixtures_html/Branches.m.html
+- spec/fixtures/fixtures_html/BranchesTests.m.html
+- spec/fixtures/fixtures_html/fixtures.m.html
+- spec/fixtures/fixtures_html/fixturesTests.m.html
+- spec/fixtures/fixtures_html/index.html
+- "spec/fixtures/fixtures_html/peekaviewTests\U0001F4A3.m.html"
+- spec/fixtures/gutter.json
+- spec/fixtures/report.json
+- spec/fixtures/report.llcov
+- spec/fixtures/sonarqube-generic-coverage.xml
+- spec/slather/cocoapods_plugin_spec.rb
+- spec/slather/coverage_file_spec.rb
+- spec/slather/coverage_service/cobertura_xml_spec.rb
+- spec/slather/coverage_service/coveralls_spec.rb
+- spec/slather/coverage_service/gutter_json_spec.rb
+- spec/slather/coverage_service/hardcover_spec.rb
+- spec/slather/coverage_service/html_output_spec.rb
+- spec/slather/coverage_service/json_spec.rb
+- spec/slather/coverage_service/llvm_cov_spec.rb
+- spec/slather/coverage_service/simple_output_spec.rb
+- spec/slather/coverage_service/sonarqube_xml_spec.rb
+- spec/slather/fixtures.gcno
+- spec/slather/profdata_coverage_spec.rb
+- spec/slather/project_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/SlatherOrg/slather
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: Test coverage reports for Xcode projects
+test_files:
+- spec/fixtures/FixtureFramework/FixtureFramework.h
+- spec/fixtures/FixtureFramework/FlashExperiment.swift
+- spec/fixtures/FixtureFramework/Info.plist
+- spec/fixtures/FixtureFrameworkTests/FixtureFrameworkTests.swift
+- spec/fixtures/FixtureFrameworkTests/FlashExperimentTests.swift
+- spec/fixtures/FixtureFrameworkTests/Info.plist
+- spec/fixtures/cobertura.xml
+- spec/fixtures/fixtures.xcodeproj/project.pbxproj
+- spec/fixtures/fixtures.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/aggregateFixturesTests.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixtures.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTests.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTestsSecond.xcscheme
+- spec/fixtures/fixtures.xcodeproj/xcshareddata/xcschemes/fixturesTwo.xcscheme
+- spec/fixtures/fixtures.xcworkspace/contents.xcworkspacedata
+- spec/fixtures/fixtures.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+- spec/fixtures/fixtures.xcworkspace/xcshareddata/xcschemes/fixturesTestsWorkspace.xcscheme
+- spec/fixtures/fixtures/Fixtures.swift
+- spec/fixtures/fixtures/Supporting Files/fixtures-Prefix.pch
+- spec/fixtures/fixtures/fixtures.h
+- spec/fixtures/fixtures/fixtures.m
+- spec/fixtures/fixtures/fixtures_cpp.cpp
+- spec/fixtures/fixtures/fixtures_cpp.h
+- spec/fixtures/fixtures/fixtures_m.h
+- spec/fixtures/fixtures/fixtures_m.m
+- spec/fixtures/fixtures/fixtures_mm.h
+- spec/fixtures/fixtures/fixtures_mm.mm
+- spec/fixtures/fixtures/more_files/Branches.h
+- spec/fixtures/fixtures/more_files/Branches.m
+- spec/fixtures/fixtures/more_files/Empty.h
+- spec/fixtures/fixtures/more_files/Empty.m
+- spec/fixtures/fixtures/more_files/peekaview.h
+- spec/fixtures/fixtures/more_files/peekaview.m
+- spec/fixtures/fixtures/other_fixtures.m
+- spec/fixtures/fixturesTests/BranchesTests.m
+- spec/fixtures/fixturesTests/Supporting Files/en.lproj/InfoPlist.strings
+- spec/fixtures/fixturesTests/Supporting Files/fixturesTests-Info.plist
+- spec/fixtures/fixturesTests/fixturesTests.m
+- spec/fixtures/fixturesTests/fixturesTestsSecond.m
+- "spec/fixtures/fixturesTests/peekaviewTests\U0001F4A3.m"
+- spec/fixtures/fixturesTwo/fixturesTwo.h
+- spec/fixtures/fixturesTwo/fixturesTwo.m
+- spec/fixtures/fixtures_html/Branches.m.html
+- spec/fixtures/fixtures_html/BranchesTests.m.html
+- spec/fixtures/fixtures_html/fixtures.m.html
+- spec/fixtures/fixtures_html/fixturesTests.m.html
+- spec/fixtures/fixtures_html/index.html
+- "spec/fixtures/fixtures_html/peekaviewTests\U0001F4A3.m.html"
+- spec/fixtures/gutter.json
+- spec/fixtures/report.json
+- spec/fixtures/report.llcov
+- spec/fixtures/sonarqube-generic-coverage.xml
+- spec/slather/cocoapods_plugin_spec.rb
+- spec/slather/coverage_file_spec.rb
+- spec/slather/coverage_service/cobertura_xml_spec.rb
+- spec/slather/coverage_service/coveralls_spec.rb
+- spec/slather/coverage_service/gutter_json_spec.rb
+- spec/slather/coverage_service/hardcover_spec.rb
+- spec/slather/coverage_service/html_output_spec.rb
+- spec/slather/coverage_service/json_spec.rb
+- spec/slather/coverage_service/llvm_cov_spec.rb
+- spec/slather/coverage_service/simple_output_spec.rb
+- spec/slather/coverage_service/sonarqube_xml_spec.rb
+- spec/slather/fixtures.gcno
+- spec/slather/profdata_coverage_spec.rb
+- spec/slather/project_spec.rb
+- spec/spec_helper.rb

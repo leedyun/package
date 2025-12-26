@@ -1,0 +1,325 @@
+--- !ruby/object:Gem::Specification
+name: active_model_serializers
+version: !ruby/object:Gem::Version
+  version: 0.10.15
+platform: ruby
+authors:
+- Steve Klabnik
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+- !ruby/object:Gem::Dependency
+  name: jsonapi-renderer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.1.beta1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.1.beta1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+- !ruby/object:Gem::Dependency
+  name: case_transform
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: kaminari
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.16.3
+- !ruby/object:Gem::Dependency
+  name: will_paginate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.7
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: grape
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: json_schema
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '10.0'
+description: ActiveModel::Serializers allows you to generate your JSON in an object-oriented
+  and convention-driven manner.
+email:
+- steve@steveklabnik.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- lib/action_controller/serialization.rb
+- lib/active_model/serializable_resource.rb
+- lib/active_model/serializer.rb
+- lib/active_model/serializer/adapter.rb
+- lib/active_model/serializer/adapter/attributes.rb
+- lib/active_model/serializer/adapter/base.rb
+- lib/active_model/serializer/adapter/json.rb
+- lib/active_model/serializer/adapter/json_api.rb
+- lib/active_model/serializer/adapter/null.rb
+- lib/active_model/serializer/array_serializer.rb
+- lib/active_model/serializer/association.rb
+- lib/active_model/serializer/attribute.rb
+- lib/active_model/serializer/belongs_to_reflection.rb
+- lib/active_model/serializer/collection_serializer.rb
+- lib/active_model/serializer/concerns/caching.rb
+- lib/active_model/serializer/error_serializer.rb
+- lib/active_model/serializer/errors_serializer.rb
+- lib/active_model/serializer/field.rb
+- lib/active_model/serializer/fieldset.rb
+- lib/active_model/serializer/has_many_reflection.rb
+- lib/active_model/serializer/has_one_reflection.rb
+- lib/active_model/serializer/lazy_association.rb
+- lib/active_model/serializer/link.rb
+- lib/active_model/serializer/lint.rb
+- lib/active_model/serializer/null.rb
+- lib/active_model/serializer/reflection.rb
+- lib/active_model/serializer/version.rb
+- lib/active_model_serializers.rb
+- lib/active_model_serializers/adapter.rb
+- lib/active_model_serializers/adapter/attributes.rb
+- lib/active_model_serializers/adapter/base.rb
+- lib/active_model_serializers/adapter/json.rb
+- lib/active_model_serializers/adapter/json_api.rb
+- lib/active_model_serializers/adapter/json_api/deserialization.rb
+- lib/active_model_serializers/adapter/json_api/error.rb
+- lib/active_model_serializers/adapter/json_api/jsonapi.rb
+- lib/active_model_serializers/adapter/json_api/link.rb
+- lib/active_model_serializers/adapter/json_api/meta.rb
+- lib/active_model_serializers/adapter/json_api/pagination_links.rb
+- lib/active_model_serializers/adapter/json_api/relationship.rb
+- lib/active_model_serializers/adapter/json_api/resource_identifier.rb
+- lib/active_model_serializers/adapter/null.rb
+- lib/active_model_serializers/callbacks.rb
+- lib/active_model_serializers/deprecate.rb
+- lib/active_model_serializers/deserialization.rb
+- lib/active_model_serializers/json_pointer.rb
+- lib/active_model_serializers/logging.rb
+- lib/active_model_serializers/lookup_chain.rb
+- lib/active_model_serializers/model.rb
+- lib/active_model_serializers/railtie.rb
+- lib/active_model_serializers/register_jsonapi_renderer.rb
+- lib/active_model_serializers/serializable_resource.rb
+- lib/active_model_serializers/serialization_context.rb
+- lib/active_model_serializers/test.rb
+- lib/active_model_serializers/test/schema.rb
+- lib/active_model_serializers/test/serializer.rb
+- lib/generators/rails/USAGE
+- lib/generators/rails/resource_override.rb
+- lib/generators/rails/serializer_generator.rb
+- lib/generators/rails/templates/serializer.rb.erb
+- lib/grape/active_model_serializers.rb
+- lib/grape/formatters/active_model_serializers.rb
+- lib/grape/helpers/active_model_serializers.rb
+- lib/tasks/rubocop.rake
+homepage: https://github.com/rails-api/active_model_serializers
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Conventions-based JSON generation for Rails.
+test_files: []

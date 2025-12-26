@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification
+name: aggregate_root
+version: !ruby/object:Gem::Version
+  version: 2.15.0
+platform: ruby
+authors:
+- Arkency
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby_event_store
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.15.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.15.0
+description:
+email: dev@arkency.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- README.md
+- lib/aggregate_root.rb
+- lib/aggregate_root/configuration.rb
+- lib/aggregate_root/default_apply_strategy.rb
+- lib/aggregate_root/instrumented_apply_strategy.rb
+- lib/aggregate_root/instrumented_repository.rb
+- lib/aggregate_root/repository.rb
+- lib/aggregate_root/snapshot_repository.rb
+- lib/aggregate_root/transform.rb
+- lib/aggregate_root/version.rb
+homepage: https://railseventstore.org
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://railseventstore.org
+  changelog_uri: https://github.com/RailsEventStore/rails_event_store/releases
+  source_code_uri: https://github.com/RailsEventStore/rails_event_store
+  bug_tracker_uri: https://github.com/RailsEventStore/rails_event_store/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.17
+signing_key:
+specification_version: 4
+summary: Event sourced aggregate root implementation for RubyEventStore
+test_files: []

@@ -1,0 +1,4 @@
+ja:
+  errors:
+    messages:
+      immutable: を変更することはできません。

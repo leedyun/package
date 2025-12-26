@@ -1,0 +1,118 @@
+--- !ruby/object:Gem::Specification
+name: state_machines
+version: !ruby/object:Gem::Version
+  version: 0.6.0
+platform: ruby
+authors:
+- Abdelkader Boudih
+- Aaron Pfeifer
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-06-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.6
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.4'
+description: Adds support for creating state machines for attributes on any Ruby class
+email:
+- terminale@gmail.com
+- aaron@pluginaweek.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/state_machines.rb
+- lib/state_machines/assertions.rb
+- lib/state_machines/branch.rb
+- lib/state_machines/callback.rb
+- lib/state_machines/core.rb
+- lib/state_machines/core_ext.rb
+- lib/state_machines/core_ext/class/state_machine.rb
+- lib/state_machines/error.rb
+- lib/state_machines/eval_helpers.rb
+- lib/state_machines/event.rb
+- lib/state_machines/event_collection.rb
+- lib/state_machines/extensions.rb
+- lib/state_machines/helper_module.rb
+- lib/state_machines/integrations.rb
+- lib/state_machines/integrations/base.rb
+- lib/state_machines/machine.rb
+- lib/state_machines/machine_collection.rb
+- lib/state_machines/macro_methods.rb
+- lib/state_machines/matcher.rb
+- lib/state_machines/matcher_helpers.rb
+- lib/state_machines/node_collection.rb
+- lib/state_machines/path.rb
+- lib/state_machines/path_collection.rb
+- lib/state_machines/state.rb
+- lib/state_machines/state_collection.rb
+- lib/state_machines/state_context.rb
+- lib/state_machines/transition.rb
+- lib/state_machines/transition_collection.rb
+- lib/state_machines/version.rb
+homepage: https://github.com/state-machines/state_machines
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: State machines for attributes
+test_files: []

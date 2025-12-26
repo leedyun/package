@@ -1,0 +1,158 @@
+--- !ruby/object:Gem::Specification
+name: google-apis-generator
+version: !ruby/object:Gem::Version
+  version: 0.16.0
+platform: ruby
+authors:
+- Google LLC
+bindir: bin
+cert_chain: []
+date: 2025-01-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: gems
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: google-apis-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.15.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.15.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+- !ruby/object:Gem::Dependency
+  name: google-apis-discovery_v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.20'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.20'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+email: googleapis-packages@google.com
+executables:
+- generate-api
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGELOG.md
+- LICENSE.md
+- OVERVIEW.md
+- bin/generate-api
+- lib/google/apis/generator.rb
+- lib/google/apis/generator/annotator.rb
+- lib/google/apis/generator/helpers.rb
+- lib/google/apis/generator/model.rb
+- lib/google/apis/generator/template.rb
+- lib/google/apis/generator/templates/_class.tmpl
+- lib/google/apis/generator/templates/_method.tmpl
+- lib/google/apis/generator/templates/_representation.tmpl
+- lib/google/apis/generator/templates/_representation_stub.tmpl
+- lib/google/apis/generator/templates/_representation_type.tmpl
+- lib/google/apis/generator/templates/classes.rb.tmpl
+- lib/google/apis/generator/templates/dot-rspec.tmpl
+- lib/google/apis/generator/templates/dot-yardopts.tmpl
+- lib/google/apis/generator/templates/entry-point.rb.tmpl
+- lib/google/apis/generator/templates/gemfile.tmpl
+- lib/google/apis/generator/templates/gemspec.tmpl
+- lib/google/apis/generator/templates/generated_spec.rb.tmpl
+- lib/google/apis/generator/templates/initial-changelog.md.tmpl
+- lib/google/apis/generator/templates/initial-gem_version.rb.tmpl
+- lib/google/apis/generator/templates/license.md.tmpl
+- lib/google/apis/generator/templates/module.rb.tmpl
+- lib/google/apis/generator/templates/overview.md.tmpl
+- lib/google/apis/generator/templates/rakefile.tmpl
+- lib/google/apis/generator/templates/repo-metadata.json.tmpl
+- lib/google/apis/generator/templates/representations.rb.tmpl
+- lib/google/apis/generator/templates/service.rb.tmpl
+- lib/google/apis/generator/updater.rb
+- lib/google/apis/generator/version.rb
+homepage: https://github.com/google/google-api-ruby-client
+licenses:
+- Apache-2.0
+metadata:
+  bug_tracker_uri: https://github.com/googleapis/google-api-ruby-client/issues
+  changelog_uri: https://github.com/googleapis/google-api-ruby-client/tree/main/google-apis-generator/CHANGELOG.md
+  documentation_uri: https://googleapis.dev/ruby/google-apis-generator/v0.16.0
+  source_code_uri: https://github.com/googleapis/google-api-ruby-client/tree/main/google-apis-generator
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Code generator for legacy Google REST clients
+test_files: []

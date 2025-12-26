@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: xpath
+version: !ruby/object:Gem::Version
+  version: 3.2.0
+platform: ruby
+authors:
+- Jonas Nicklas
+autorequire: 
+bindir: bin
+cert_chain:
+- gem-public_cert.pem
+date: 2018-10-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.8
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.8
+description: XPath is a Ruby DSL for generating XPath expressions
+email:
+- jonas.nicklas@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/xpath.rb
+- lib/xpath/dsl.rb
+- lib/xpath/expression.rb
+- lib/xpath/literal.rb
+- lib/xpath/renderer.rb
+- lib/xpath/union.rb
+- lib/xpath/version.rb
+- spec/fixtures/form.html
+- spec/fixtures/simple.html
+- spec/fixtures/stuff.html
+- spec/spec_helper.rb
+- spec/union_spec.rb
+- spec/xpath_spec.rb
+homepage: https://github.com/teamcapybara/xpath
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.7
+signing_key: 
+specification_version: 4
+summary: Generate XPath expressions from Ruby
+test_files: []

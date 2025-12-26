@@ -1,0 +1,132 @@
+--- !ruby/object:Gem::Specification
+name: functions_framework
+version: !ruby/object:Gem::Version
+  version: 1.5.0
+platform: ruby
+authors:
+- Daniel Azuma
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cloud_events
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 7.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 7.a
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.a
+description: The Functions Framework is an open source framework for writing lightweight,
+  portable Ruby functions that run in a serverless environment. Functions written
+  to this Framework will run on Google Cloud Functions, Google Cloud Run, or any other
+  Knative-based environment.
+email:
+- dazuma@google.com
+executables:
+- functions-framework
+- functions-framework-ruby
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- CHANGELOG.md
+- LICENSE
+- README.md
+- RELEASING.md
+- bin/functions-framework
+- bin/functions-framework-ruby
+- docs/deploying-functions.md
+- docs/overview.md
+- docs/running-a-functions-server.md
+- docs/testing-functions.md
+- docs/writing-functions.md
+- lib/functions_framework.rb
+- lib/functions_framework/cli.rb
+- lib/functions_framework/function.rb
+- lib/functions_framework/legacy_event_converter.rb
+- lib/functions_framework/registry.rb
+- lib/functions_framework/server.rb
+- lib/functions_framework/testing.rb
+- lib/functions_framework/version.rb
+homepage: https://github.com/GoogleCloudPlatform/functions-framework-ruby
+licenses:
+- Apache-2.0
+metadata:
+  changelog_uri: https://googlecloudplatform.github.io/functions-framework-ruby/v1.5.0/file.CHANGELOG.html
+  source_code_uri: https://github.com/GoogleCloudPlatform/functions-framework-ruby
+  bug_tracker_uri: https://github.com/GoogleCloudPlatform/functions-framework-ruby/issues
+  documentation_uri: https://googlecloudplatform.github.io/functions-framework-ruby/v1.5.0
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key: 
+specification_version: 4
+summary: Functions Framework for Ruby
+test_files: []

@@ -1,0 +1,59 @@
+--- !ruby/object:Gem::Specification
+name: chartkick
+version: !ruby/object:Gem::Version
+  version: 5.1.2
+platform: ruby
+authors:
+- Andrew Kane
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-30 00:00:00.000000000 Z
+dependencies: []
+description:
+email: andrew@ankane.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/chartkick.rb
+- lib/chartkick/core_ext.rb
+- lib/chartkick/engine.rb
+- lib/chartkick/helper.rb
+- lib/chartkick/sinatra.rb
+- lib/chartkick/utils.rb
+- lib/chartkick/version.rb
+- licenses/LICENSE-chart.js.txt
+- licenses/LICENSE-chartjs-adapter-date-fns.txt
+- licenses/LICENSE-chartkick.js.txt
+- licenses/LICENSE-date-fns.txt
+- licenses/LICENSE-kurkle-color.txt
+- vendor/assets/javascripts/Chart.bundle.js
+- vendor/assets/javascripts/chartkick.js
+homepage: https://chartkick.com
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Create beautiful JavaScript charts with one line of Ruby
+test_files: []

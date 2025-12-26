@@ -1,0 +1,274 @@
+--- !ruby/object:Gem::Specification 
+name: kwalify
+version: !ruby/object:Gem::Version 
+  hash: 7
+  prerelease: false
+  segments: 
+  - 0
+  - 7
+  - 2
+  version: 0.7.2
+platform: ruby
+authors: 
+- makoto kuwata
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-07-18 00:00:00 +09:00
+default_executable: 
+dependencies: []
+
+description: "   Kwalify is a parser, schema validator, and data binding tool for YAML and JSON.\n"
+email: 
+executables: 
+- kwalify
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/kwalify/errors.rb
+- lib/kwalify/kwalify.schema.yaml
+- lib/kwalify/main.rb
+- lib/kwalify/messages.rb
+- lib/kwalify/meta-validator.rb
+- lib/kwalify/parser/base.rb
+- lib/kwalify/parser/yaml.rb
+- lib/kwalify/rule.rb
+- lib/kwalify/templates/genclass-java.eruby
+- lib/kwalify/templates/genclass-php.eruby
+- lib/kwalify/templates/genclass-ruby.eruby
+- lib/kwalify/types.rb
+- lib/kwalify/util/assert-text-equal.rb
+- lib/kwalify/util/hash-interface.rb
+- lib/kwalify/util/hashlike.rb
+- lib/kwalify/util/option-parser.rb
+- lib/kwalify/util/ordered-hash.rb
+- lib/kwalify/util/testcase-helper.rb
+- lib/kwalify/util.rb
+- lib/kwalify/validator.rb
+- lib/kwalify/yaml-parser.rb
+- lib/kwalify.rb
+- bin/kwalify
+- examples/address-book/address-book.schema.yaml
+- examples/address-book/address-book.yaml
+- examples/address-book/Makefile
+- examples/data-binding/BABEL.data.yaml
+- examples/data-binding/BABEL.schema.yaml
+- examples/data-binding/main.rb
+- examples/data-binding/Makefile
+- examples/data-binding/Rakefile
+- examples/invoice/invoice.schema.yaml
+- examples/invoice/invoice.yaml
+- examples/invoice/Makefile
+- examples/tapkit/main.rb
+- examples/tapkit/Makefile
+- examples/tapkit/tapkit.schema.yaml
+- examples/tapkit/tapkit.yaml
+- test/data/users-guide/address_book.rb
+- test/data/users-guide/address_book.schema.yaml
+- test/data/users-guide/address_book.yaml
+- test/data/users-guide/AddressBook.java.expected
+- test/data/users-guide/answers-schema.yaml
+- test/data/users-guide/answers-validator.rb
+- test/data/users-guide/BABEL.data.yaml
+- test/data/users-guide/BABEL.schema.yaml
+- test/data/users-guide/babel_genclass.result
+- test/data/users-guide/config.schema.yaml
+- test/data/users-guide/config.yaml
+- test/data/users-guide/document01a.yaml
+- test/data/users-guide/document01b.yaml
+- test/data/users-guide/document02a.yaml
+- test/data/users-guide/document02b.yaml
+- test/data/users-guide/document03a.yaml
+- test/data/users-guide/document03b.yaml
+- test/data/users-guide/document04a.yaml
+- test/data/users-guide/document04b.yaml
+- test/data/users-guide/document05a.yaml
+- test/data/users-guide/document05b.yaml
+- test/data/users-guide/document06a.yaml
+- test/data/users-guide/document06b.yaml
+- test/data/users-guide/document07a.yaml
+- test/data/users-guide/document07b.yaml
+- test/data/users-guide/document12a.json
+- test/data/users-guide/document12b.json
+- test/data/users-guide/document13a.yaml
+- test/data/users-guide/document14a.yaml
+- test/data/users-guide/document14b.yaml
+- test/data/users-guide/document15a.yaml
+- test/data/users-guide/document15b.yaml
+- test/data/users-guide/example_address_book.rb
+- test/data/users-guide/example_address_book_java.result
+- test/data/users-guide/example_address_book_ruby.result
+- test/data/users-guide/ExampleAddressBook.java
+- test/data/users-guide/genclass_java.result
+- test/data/users-guide/Group.java.expected
+- test/data/users-guide/howto-validation-with-parsing.rb
+- test/data/users-guide/howto-validation.rb
+- test/data/users-guide/howto3.rb
+- test/data/users-guide/howto3.result
+- test/data/users-guide/howto3.yaml
+- test/data/users-guide/howto5_databinding.result
+- test/data/users-guide/invalid01.result
+- test/data/users-guide/invalid02.result
+- test/data/users-guide/invalid03.result
+- test/data/users-guide/invalid04.result
+- test/data/users-guide/invalid05.result
+- test/data/users-guide/invalid06.result
+- test/data/users-guide/invalid07.result
+- test/data/users-guide/invalid08.result
+- test/data/users-guide/invalid12.json
+- test/data/users-guide/invalid14.result
+- test/data/users-guide/invalid15.result
+- test/data/users-guide/loadbabel.rb
+- test/data/users-guide/loadconfig.rb
+- test/data/users-guide/loadconfig.result
+- test/data/users-guide/models.rb
+- test/data/users-guide/option_ha.result
+- test/data/users-guide/option_ha_genclass_java.result
+- test/data/users-guide/Person.java.expected
+- test/data/users-guide/schema01.yaml
+- test/data/users-guide/schema02.yaml
+- test/data/users-guide/schema03.yaml
+- test/data/users-guide/schema04.yaml
+- test/data/users-guide/schema05.yaml
+- test/data/users-guide/schema06.yaml
+- test/data/users-guide/schema12.json
+- test/data/users-guide/schema13.yaml
+- test/data/users-guide/schema14.yaml
+- test/data/users-guide/schema15.yaml
+- test/data/users-guide/valid01.result
+- test/data/users-guide/valid02.result
+- test/data/users-guide/valid03.result
+- test/data/users-guide/valid04.result
+- test/data/users-guide/valid05.result
+- test/data/users-guide/valid06.result
+- test/data/users-guide/valid07.result
+- test/data/users-guide/valid08.result
+- test/data/users-guide/valid12.result
+- test/data/users-guide/valid13.result
+- test/data/users-guide/valid14.result
+- test/data/users-guide/valid15.result
+- test/data/users-guide/validate08.rb
+- test/Rookbook.yaml
+- test/test-action.rb
+- test/test-action.yaml
+- test/test-databinding.rb
+- test/test-databinding.yaml
+- test/test-main.rb
+- test/test-main.yaml
+- test/test-metavalidator.rb
+- test/test-metavalidator.yaml
+- test/test-parser-yaml.rb
+- test/test-parser-yaml.yaml
+- test/test-rule.rb
+- test/test-rule.yaml
+- test/test-users-guide.rb
+- test/test-util.rb
+- test/test-validator.rb
+- test/test-validator.yaml
+- test/test-yaml-parser.rb
+- test/test-yaml-parser.yaml
+- test/test.rb
+- contrib/inline-require
+- contrib/kwalify
+- doc-api/classes/CommandOptionError.html
+- doc-api/classes/CommandOptionParser.html
+- doc-api/classes/Kwalify/AssertionError.html
+- doc-api/classes/Kwalify/BaseError.html
+- doc-api/classes/Kwalify/BaseParser.html
+- doc-api/classes/Kwalify/CommandOptionError.html
+- doc-api/classes/Kwalify/ErrorHelper.html
+- doc-api/classes/Kwalify/HashInterface.html
+- doc-api/classes/Kwalify/Json.html
+- doc-api/classes/Kwalify/KwalifyError.html
+- doc-api/classes/Kwalify/Main.html
+- doc-api/classes/Kwalify/MetaValidator.html
+- doc-api/classes/Kwalify/Parser.html
+- doc-api/classes/Kwalify/PlainYamlParser/Alias.html
+- doc-api/classes/Kwalify/PlainYamlParser.html
+- doc-api/classes/Kwalify/Rule.html
+- doc-api/classes/Kwalify/SchemaError.html
+- doc-api/classes/Kwalify/SyntaxError.html
+- doc-api/classes/Kwalify/Types.html
+- doc-api/classes/Kwalify/Util/HashLike.html
+- doc-api/classes/Kwalify/Util/OrderedHash.html
+- doc-api/classes/Kwalify/Util.html
+- doc-api/classes/Kwalify/ValidationError.html
+- doc-api/classes/Kwalify/Validator.html
+- doc-api/classes/Kwalify/Yaml/Parser.html
+- doc-api/classes/Kwalify/Yaml.html
+- doc-api/classes/Kwalify/YamlParser.html
+- doc-api/classes/Kwalify/YamlSyntaxError.html
+- doc-api/classes/Kwalify.html
+- doc-api/classes/Test/Unit.html
+- doc-api/classes/Test.html
+- doc-api/created.rid
+- doc-api/files/__/README_txt.html
+- doc-api/files/kwalify/errors_rb.html
+- doc-api/files/kwalify/main_rb.html
+- doc-api/files/kwalify/messages_rb.html
+- doc-api/files/kwalify/meta-validator_rb.html
+- doc-api/files/kwalify/parser/base_rb.html
+- doc-api/files/kwalify/parser/yaml_rb.html
+- doc-api/files/kwalify/rule_rb.html
+- doc-api/files/kwalify/types_rb.html
+- doc-api/files/kwalify/util/assert-text-equal_rb.html
+- doc-api/files/kwalify/util/hash-interface_rb.html
+- doc-api/files/kwalify/util/hashlike_rb.html
+- doc-api/files/kwalify/util/option-parser_rb.html
+- doc-api/files/kwalify/util/ordered-hash_rb.html
+- doc-api/files/kwalify/util/testcase-helper_rb.html
+- doc-api/files/kwalify/util_rb.html
+- doc-api/files/kwalify/validator_rb.html
+- doc-api/files/kwalify/yaml-parser_rb.html
+- doc-api/files/kwalify_rb.html
+- doc-api/fr_class_index.html
+- doc-api/fr_file_index.html
+- doc-api/fr_method_index.html
+- doc-api/index.html
+- doc-api/rdoc-style.css
+- doc/users-guide.html
+- doc/docstyle.css
+- doc/img/fig01.png
+- README.txt
+- CHANGES.txt
+- MIT-LICENSE
+- setup.rb
+has_rdoc: true
+homepage: http://www.kuwata-lab.com/kwalify/
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: a parser, schema validator, and data-binding tool for YAML and JSON.
+test_files: 
+- test/test.rb

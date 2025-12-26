@@ -1,0 +1,108 @@
+--- !ruby/object:Gem::Specification
+name: amq-protocol
+version: !ruby/object:Gem::Version
+  version: 2.3.2
+platform: ruby
+authors:
+- Jakub Stastny
+- Michael S. Klishin
+- Theo Hultberg
+- Mark Abramov
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-07-10 00:00:00.000000000 Z
+dependencies: []
+description: |2
+    amq-protocol is an AMQP 0.9.1 serialization library for Ruby. It is not a
+    client: the library only handles serialization and deserialization.
+email:
+- michael.s.klishin@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- ".gitignore"
+- ".gitmodules"
+- ".rspec"
+- ".travis.yml"
+- ChangeLog.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- amq-protocol.gemspec
+- benchmarks/int_allocator.rb
+- benchmarks/pure/body_framing_with_256k_payload.rb
+- benchmarks/pure/body_framing_with_2k_payload.rb
+- codegen/__init__.py
+- codegen/amqp_0.9.1_changes.json
+- codegen/codegen.py
+- codegen/codegen_helpers.py
+- codegen/protocol.rb.pytemplate
+- generate.rb
+- lib/amq/bit_set.rb
+- lib/amq/endianness.rb
+- lib/amq/int_allocator.rb
+- lib/amq/pack.rb
+- lib/amq/protocol.rb
+- lib/amq/protocol/client.rb
+- lib/amq/protocol/constants.rb
+- lib/amq/protocol/exceptions.rb
+- lib/amq/protocol/float_32bit.rb
+- lib/amq/protocol/frame.rb
+- lib/amq/protocol/table.rb
+- lib/amq/protocol/table_value_decoder.rb
+- lib/amq/protocol/table_value_encoder.rb
+- lib/amq/protocol/type_constants.rb
+- lib/amq/protocol/version.rb
+- lib/amq/settings.rb
+- lib/amq/uri.rb
+- profiling/README.md
+- profiling/stackprof/body_framing_with_2k_payload.rb
+- spec/amq/bit_set_spec.rb
+- spec/amq/int_allocator_spec.rb
+- spec/amq/pack_spec.rb
+- spec/amq/protocol/basic_spec.rb
+- spec/amq/protocol/blank_body_encoding_spec.rb
+- spec/amq/protocol/channel_spec.rb
+- spec/amq/protocol/confirm_spec.rb
+- spec/amq/protocol/connection_spec.rb
+- spec/amq/protocol/constants_spec.rb
+- spec/amq/protocol/exchange_spec.rb
+- spec/amq/protocol/frame_spec.rb
+- spec/amq/protocol/method_spec.rb
+- spec/amq/protocol/queue_spec.rb
+- spec/amq/protocol/table_spec.rb
+- spec/amq/protocol/tx_spec.rb
+- spec/amq/protocol/value_decoder_spec.rb
+- spec/amq/protocol/value_encoder_spec.rb
+- spec/amq/protocol_spec.rb
+- spec/amq/settings_spec.rb
+- spec/amq/uri_parsing_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/ruby-amqp/amq-protocol
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: AMQP 0.9.1 encoding & decoding library.
+test_files: []

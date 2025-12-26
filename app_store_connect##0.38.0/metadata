@@ -1,0 +1,368 @@
+--- !ruby/object:Gem::Specification
+name: app_store_connect
+version: !ruby/object:Gem::Version
+  version: 0.38.0
+platform: ruby
+authors:
+- Kyle Decot
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-05-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.6.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.6.7
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: erb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.0.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.0.2
+- !ruby/object:Gem::Dependency
+  name: factory_bot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 6.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 6.2.1
+- !ruby/object:Gem::Dependency
+  name: github_changelog_generator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.4
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.7.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.7.3
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.6
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.6
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.12.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.50.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.50.1
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: semantic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.5
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+description: 
+email:
+- kyle.decot@icloud.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/dependabot.yml"
+- ".github/workflows/default.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".ruby-version"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- app_store_connect.gemspec
+- assets/banner.png
+- bin/console
+- lib/app_store_connect.rb
+- lib/app_store_connect/app_store_version_build_linkage_request.rb
+- lib/app_store_connect/app_store_version_create_request.rb
+- lib/app_store_connect/app_store_version_phased_release_create_request.rb
+- lib/app_store_connect/app_store_version_phased_release_update_request.rb
+- lib/app_store_connect/app_store_version_release_request_create_request.rb
+- lib/app_store_connect/app_store_version_update_request.rb
+- lib/app_store_connect/base.rb
+- lib/app_store_connect/beta_build_localization_create_request.rb
+- lib/app_store_connect/beta_build_localization_modify_request.rb
+- lib/app_store_connect/build_update_request.rb
+- lib/app_store_connect/bundle_id_capability_create_request.rb
+- lib/app_store_connect/bundle_id_create_request.rb
+- lib/app_store_connect/certificate_create_request.rb
+- lib/app_store_connect/client.rb
+- lib/app_store_connect/client/authorization.rb
+- lib/app_store_connect/client/builder.rb
+- lib/app_store_connect/client/options.rb
+- lib/app_store_connect/client/registry.rb
+- lib/app_store_connect/client/utils.rb
+- lib/app_store_connect/device_create_request.rb
+- lib/app_store_connect/object/attributes.rb
+- lib/app_store_connect/object/data.rb
+- lib/app_store_connect/object/data_type.rb
+- lib/app_store_connect/object/id.rb
+- lib/app_store_connect/object/included.rb
+- lib/app_store_connect/object/properties.rb
+- lib/app_store_connect/object/type.rb
+- lib/app_store_connect/profile_create_request.rb
+- lib/app_store_connect/request.rb
+- lib/app_store_connect/request/body.rb
+- lib/app_store_connect/request/builder/create.rb
+- lib/app_store_connect/requests/delete_with_body.rb
+- lib/app_store_connect/requests/v1/app_store_version_localization/create.rb
+- lib/app_store_connect/requests/v1/app_store_version_localization/update.rb
+- lib/app_store_connect/requests/v1/beta_app_review_submission/create.rb
+- lib/app_store_connect/requests/v1/build_beta_detail/update.rb
+- lib/app_store_connect/requests/v1/build_beta_groups/create.rb
+- lib/app_store_connect/requests/v1/build_beta_groups/delete.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_localization/create.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_localization/update.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_price_schedule/create.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_review_screenshot/create.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_review_screenshot/update.rb
+- lib/app_store_connect/requests/v1/in_app_purchase_submission/create.rb
+- lib/app_store_connect/requests/v2/in_app_purchase/create.rb
+- lib/app_store_connect/requests/v2/in_app_purchase/update.rb
+- lib/app_store_connect/review_submission_create_request.rb
+- lib/app_store_connect/review_submission_item_create_request.rb
+- lib/app_store_connect/review_submission_update_request.rb
+- lib/app_store_connect/schema.rb
+- lib/app_store_connect/schema/object.rb
+- lib/app_store_connect/schema/type.rb
+- lib/app_store_connect/schema/web_service_endpoint.rb
+- lib/app_store_connect/specification.rb
+- lib/app_store_connect/specification/component/schema.rb
+- lib/app_store_connect/user_invitation_create_request.rb
+- lib/app_store_connect/version.rb
+- lib/config/schema.json
+- lib/tasks/build.rake
+- lib/tasks/bundle.rake
+- lib/tasks/changelog.rake
+- lib/tasks/console.rake
+- lib/tasks/git.rake
+- lib/tasks/push.rake
+- lib/tasks/release.rake
+- lib/tasks/version.rake
+homepage: https://github.com/kyledecot/app_store_connect
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: A Ruby interface to the App Store Connect API
+test_files: []

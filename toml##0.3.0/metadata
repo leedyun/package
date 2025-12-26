@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: toml
+version: !ruby/object:Gem::Version
+  version: 0.3.0
+platform: ruby
+authors:
+- Jeremy McAnally
+- Dirk Gadsden
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-06-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: parslet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Parse your TOML, seriously.
+email: jeremy@github.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+- CHANGELOG.md
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/toml.rb
+- lib/toml/generator.rb
+- lib/toml/key.rb
+- lib/toml/monkey_patch.rb
+- lib/toml/parser.rb
+- lib/toml/parslet.rb
+- lib/toml/table.rb
+- lib/toml/transformer.rb
+- lib/toml/version.rb
+homepage: http://github.com/jm/toml
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key:
+specification_version: 2
+summary: Parse your TOML.
+test_files: []

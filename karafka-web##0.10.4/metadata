@@ -1,0 +1,747 @@
+--- !ruby/object:Gem::Specification
+name: karafka-web
+version: !ruby/object:Gem::Version
+  version: 0.10.4
+platform: ruby
+authors:
+- Maciej Mensfeld
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEcDCCAtigAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MRAwDgYDVQQDDAdjb250
+  YWN0MRcwFQYKCZImiZPyLGQBGRYHa2FyYWZrYTESMBAGCgmSJomT8ixkARkWAmlv
+  MB4XDTI0MDgyMzEwMTkyMFoXDTQ5MDgxNzEwMTkyMFowPzEQMA4GA1UEAwwHY29u
+  dGFjdDEXMBUGCgmSJomT8ixkARkWB2thcmFma2ExEjAQBgoJkiaJk/IsZAEZFgJp
+  bzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKjLhLjQqUlNayxkXnO+
+  PsmCDs/KFIzhrsYMfLZRZNaWmzV3ujljMOdDjd4snM2X06C41iVdQPWjpe3j8vVe
+  ZXEWR/twSbOP6Eeg8WVH2wCOo0x5i7yhVn4UBLH4JpfEMCbemVcWQ9ry9OMg4WpH
+  Uu4dRwxFV7hzCz3p0QfNLRI4miAxnGWcnlD98IJRjBAksTuR1Llj0vbOrDGsL9ZT
+  JeXP2gdRLd8SqzAFJEWrbeTBCBU7gfSh3oMg5SVDLjaqf7Kz5wC/8bDZydzanOxB
+  T6CDXPsCnllmvTNx2ei2T5rGYJOzJeNTmJLLK6hJWUlAvaQSvCwZRvFJ0tVGLEoS
+  flqSr6uGyyl1eMUsNmsH4BqPEYcAV6P2PKTv2vUR8AP0raDvZ3xL1TKvfRb8xRpo
+  vPopCGlY5XBWEc6QERHfVLTIVsjnls2/Ujj4h8/TSfqqYnaHKefIMLbuD/tquMjD
+  iWQsW2qStBV0T+U7FijKxVfrfqZP7GxQmDAc9o1iiyAa3QIDAQABo3cwdTAJBgNV
+  HRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNVHQ4EFgQU3O4dTXmvE7YpAkszGzR9DdL9
+  sbEwHQYDVR0RBBYwFIESY29udGFjdEBrYXJhZmthLmlvMB0GA1UdEgQWMBSBEmNv
+  bnRhY3RAa2FyYWZrYS5pbzANBgkqhkiG9w0BAQsFAAOCAYEAVKTfoLXn7mqdSxIR
+  eqxcR6Huudg1jes81s1+X0uiRTR3hxxKZ3Y82cPsee9zYWyBrN8TA4KA0WILTru7
+  Ygxvzha0SRPsSiaKLmgOJ+61ebI4+bOORzIJLpD6GxCxu1r7MI4+0r1u1xe0EWi8
+  agkVo1k4Vi8cKMLm6Gl9b3wG9zQBw6fcgKwmpjKiNnOLP+OytzUANrIUJjoq6oal
+  TC+f/Uc0TLaRqUaW/bejxzDWWHoM3SU6aoLPuerglzp9zZVzihXwx3jPLUVKDFpF
+  Rl2lcBDxlpYGueGo0/oNzGJAAy6js8jhtHC9+19PD53vk7wHtFTZ/0ugDQYnwQ+x
+  oml2fAAuVWpTBCgOVFe6XCQpMKopzoxQ1PjKztW2KYxgJdIBX87SnL3aWuBQmhRd
+  i9zWxov0mr44TWegTVeypcWGd/0nxu1+QHVNHJrpqlPBRvwQsUm7fwmRInGpcaB8
+  ap8wNYvryYzrzvzUxIVFBVM5PacgkFqRmolCa8I7tdKQN+R1
+  -----END CERTIFICATE-----
+date: 2024-11-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: karafka
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.10
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.10
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: karafka-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: roda
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.68'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.69'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.68'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.69'
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rackup
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+description: Karafka ecosystem plug-and-play Web UI
+email:
+- contact@karafka.io
+executables:
+- karafka-web
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- bin/build_assets
+- bin/karafka-web
+- bin/release
+- bin/rspecs
+- bin/wait_for_kafka
+- certs/cert.pem
+- config/locales/errors.yml
+- config/locales/pro_errors.yml
+- config/locales/slogans.yml
+- docker-compose.yml
+- gulpfile.js
+- karafka-web.gemspec
+- lib/karafka/web.rb
+- lib/karafka/web/app.rb
+- lib/karafka/web/cli.rb
+- lib/karafka/web/cli/base.rb
+- lib/karafka/web/cli/help.rb
+- lib/karafka/web/cli/install.rb
+- lib/karafka/web/cli/migrate.rb
+- lib/karafka/web/cli/reset.rb
+- lib/karafka/web/cli/uninstall.rb
+- lib/karafka/web/config.rb
+- lib/karafka/web/contracts/base.rb
+- lib/karafka/web/contracts/config.rb
+- lib/karafka/web/deserializer.rb
+- lib/karafka/web/errors.rb
+- lib/karafka/web/inflector.rb
+- lib/karafka/web/installer.rb
+- lib/karafka/web/management/actions/base.rb
+- lib/karafka/web/management/actions/clean_boot_file.rb
+- lib/karafka/web/management/actions/create_initial_states.rb
+- lib/karafka/web/management/actions/create_topics.rb
+- lib/karafka/web/management/actions/delete_topics.rb
+- lib/karafka/web/management/actions/enable.rb
+- lib/karafka/web/management/actions/extend_boot_file.rb
+- lib/karafka/web/management/actions/migrate_states_data.rb
+- lib/karafka/web/management/migrations/base.rb
+- lib/karafka/web/management/migrations/consumers_metrics/0_set_initial.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1699543515_fill_missing_received_and_sent_bytes.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1700234522_introduce_waiting.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1700234522_remove_processing.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1704722380_split_listeners_into_active_and_paused.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1706607960_introduce_lag_total.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1706611396_rename_lag_total_to_lag_hybrid.rb
+- lib/karafka/web/management/migrations/consumers_metrics/1716218393_populate_jobs_metrics.rb
+- lib/karafka/web/management/migrations/consumers_states/0_set_initial.rb
+- lib/karafka/web/management/migrations/consumers_states/1699543515_fill_missing_received_and_sent_bytes.rb
+- lib/karafka/web/management/migrations/consumers_states/1700234522_introduce_waiting.rb
+- lib/karafka/web/management/migrations/consumers_states/1700234522_remove_processing.rb
+- lib/karafka/web/management/migrations/consumers_states/1704722380_split_listeners_into_active_and_paused.rb
+- lib/karafka/web/management/migrations/consumers_states/1706607960_introduce_lag_total.rb
+- lib/karafka/web/management/migrations/consumers_states/1706611396_rename_lag_total_to_lag_hybrid.rb
+- lib/karafka/web/management/migrations/consumers_states/1716218393_add_jobs_counter.rb
+- lib/karafka/web/management/migrator.rb
+- lib/karafka/web/pro/commanding.rb
+- lib/karafka/web/pro/commanding/commands/base.rb
+- lib/karafka/web/pro/commanding/commands/quiet.rb
+- lib/karafka/web/pro/commanding/commands/stop.rb
+- lib/karafka/web/pro/commanding/commands/trace.rb
+- lib/karafka/web/pro/commanding/config.rb
+- lib/karafka/web/pro/commanding/contracts/config.rb
+- lib/karafka/web/pro/commanding/dispatcher.rb
+- lib/karafka/web/pro/commanding/listener.rb
+- lib/karafka/web/pro/commanding/manager.rb
+- lib/karafka/web/pro/commanding/matcher.rb
+- lib/karafka/web/pro/loader.rb
+- lib/karafka/web/pro/ui/app.rb
+- lib/karafka/web/pro/ui/controllers/base_controller.rb
+- lib/karafka/web/pro/ui/controllers/cluster_controller.rb
+- lib/karafka/web/pro/ui/controllers/commanding_controller.rb
+- lib/karafka/web/pro/ui/controllers/commands_controller.rb
+- lib/karafka/web/pro/ui/controllers/consumers_controller.rb
+- lib/karafka/web/pro/ui/controllers/dashboard_controller.rb
+- lib/karafka/web/pro/ui/controllers/dlq_controller.rb
+- lib/karafka/web/pro/ui/controllers/errors_controller.rb
+- lib/karafka/web/pro/ui/controllers/explorer_controller.rb
+- lib/karafka/web/pro/ui/controllers/health_controller.rb
+- lib/karafka/web/pro/ui/controllers/jobs_controller.rb
+- lib/karafka/web/pro/ui/controllers/messages_controller.rb
+- lib/karafka/web/pro/ui/controllers/recurring_tasks_controller.rb
+- lib/karafka/web/pro/ui/controllers/routing_controller.rb
+- lib/karafka/web/pro/ui/controllers/scheduled_messages/base_controller.rb
+- lib/karafka/web/pro/ui/controllers/scheduled_messages/explorer_controller.rb
+- lib/karafka/web/pro/ui/controllers/scheduled_messages/messages_controller.rb
+- lib/karafka/web/pro/ui/controllers/scheduled_messages/schedules_controller.rb
+- lib/karafka/web/pro/ui/controllers/search_controller.rb
+- lib/karafka/web/pro/ui/controllers/status_controller.rb
+- lib/karafka/web/pro/ui/controllers/support_controller.rb
+- lib/karafka/web/pro/ui/controllers/topics_controller.rb
+- lib/karafka/web/pro/ui/controllers/ux_controller.rb
+- lib/karafka/web/pro/ui/lib/branding.rb
+- lib/karafka/web/pro/ui/lib/branding/config.rb
+- lib/karafka/web/pro/ui/lib/branding/contracts/config.rb
+- lib/karafka/web/pro/ui/lib/patterns_detector.rb
+- lib/karafka/web/pro/ui/lib/policies.rb
+- lib/karafka/web/pro/ui/lib/policies/config.rb
+- lib/karafka/web/pro/ui/lib/policies/contracts/config.rb
+- lib/karafka/web/pro/ui/lib/policies/messages.rb
+- lib/karafka/web/pro/ui/lib/policies/requests.rb
+- lib/karafka/web/pro/ui/lib/safe_runner.rb
+- lib/karafka/web/pro/ui/lib/search.rb
+- lib/karafka/web/pro/ui/lib/search/config.rb
+- lib/karafka/web/pro/ui/lib/search/contracts/config.rb
+- lib/karafka/web/pro/ui/lib/search/contracts/form.rb
+- lib/karafka/web/pro/ui/lib/search/matchers/base.rb
+- lib/karafka/web/pro/ui/lib/search/matchers/raw_header_includes.rb
+- lib/karafka/web/pro/ui/lib/search/matchers/raw_key_includes.rb
+- lib/karafka/web/pro/ui/lib/search/matchers/raw_payload_includes.rb
+- lib/karafka/web/pro/ui/lib/search/normalizer.rb
+- lib/karafka/web/pro/ui/lib/search/runner.rb
+- lib/karafka/web/pro/ui/views/cluster/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/cluster/_broker.erb
+- lib/karafka/web/pro/ui/views/cluster/_config.erb
+- lib/karafka/web/pro/ui/views/cluster/_tabs.erb
+- lib/karafka/web/pro/ui/views/cluster/index.erb
+- lib/karafka/web/pro/ui/views/cluster/show.erb
+- lib/karafka/web/pro/ui/views/commands/_backtrace.erb
+- lib/karafka/web/pro/ui/views/commands/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/commands/_command.erb
+- lib/karafka/web/pro/ui/views/commands/_command_details.erb
+- lib/karafka/web/pro/ui/views/commands/_empty.erb
+- lib/karafka/web/pro/ui/views/commands/_incompatible_schema.erb
+- lib/karafka/web/pro/ui/views/commands/_metadata.erb
+- lib/karafka/web/pro/ui/views/commands/_table.erb
+- lib/karafka/web/pro/ui/views/commands/index.erb
+- lib/karafka/web/pro/ui/views/commands/show.erb
+- lib/karafka/web/pro/ui/views/consumers/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/consumers/_consumer.erb
+- lib/karafka/web/pro/ui/views/consumers/_consumer_controls.erb
+- lib/karafka/web/pro/ui/views/consumers/_consumer_performance.erb
+- lib/karafka/web/pro/ui/views/consumers/_tabs.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_commands.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_consumer_group.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_job.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_metrics.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_no_jobs.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_no_subscriptions.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_partition.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_stopped.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_subscription_group.erb
+- lib/karafka/web/pro/ui/views/consumers/consumer/_tabs.erb
+- lib/karafka/web/pro/ui/views/consumers/controls.erb
+- lib/karafka/web/pro/ui/views/consumers/details.erb
+- lib/karafka/web/pro/ui/views/consumers/index.erb
+- lib/karafka/web/pro/ui/views/consumers/pending_jobs.erb
+- lib/karafka/web/pro/ui/views/consumers/performance.erb
+- lib/karafka/web/pro/ui/views/consumers/running_jobs.erb
+- lib/karafka/web/pro/ui/views/consumers/subscriptions.erb
+- lib/karafka/web/pro/ui/views/dashboard/index.erb
+- lib/karafka/web/pro/ui/views/dlq/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/dlq/_no_topics.erb
+- lib/karafka/web/pro/ui/views/dlq/_topic.erb
+- lib/karafka/web/pro/ui/views/dlq/index.erb
+- lib/karafka/web/pro/ui/views/errors/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/errors/_error.erb
+- lib/karafka/web/pro/ui/views/errors/_partition_option.erb
+- lib/karafka/web/pro/ui/views/errors/_selector.erb
+- lib/karafka/web/pro/ui/views/errors/_table.erb
+- lib/karafka/web/pro/ui/views/errors/index.erb
+- lib/karafka/web/pro/ui/views/errors/partition.erb
+- lib/karafka/web/pro/ui/views/errors/show.erb
+- lib/karafka/web/pro/ui/views/explorer/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/explorer/_failed_deserialization.erb
+- lib/karafka/web/pro/ui/views/explorer/_filtered.erb
+- lib/karafka/web/pro/ui/views/explorer/_message.erb
+- lib/karafka/web/pro/ui/views/explorer/_no_topics.erb
+- lib/karafka/web/pro/ui/views/explorer/_partition_option.erb
+- lib/karafka/web/pro/ui/views/explorer/_selector.erb
+- lib/karafka/web/pro/ui/views/explorer/_topic.erb
+- lib/karafka/web/pro/ui/views/explorer/index.erb
+- lib/karafka/web/pro/ui/views/explorer/message/_metadata.erb
+- lib/karafka/web/pro/ui/views/explorer/message/_payload.erb
+- lib/karafka/web/pro/ui/views/explorer/message/_resources_utilization.erb
+- lib/karafka/web/pro/ui/views/explorer/message/_too_big_to_be_displayed.erb
+- lib/karafka/web/pro/ui/views/explorer/messages/_detail.erb
+- lib/karafka/web/pro/ui/views/explorer/messages/_headers.erb
+- lib/karafka/web/pro/ui/views/explorer/messages/_key.erb
+- lib/karafka/web/pro/ui/views/explorer/partition.erb
+- lib/karafka/web/pro/ui/views/explorer/partition/_cleaned.erb
+- lib/karafka/web/pro/ui/views/explorer/partition/_empty.erb
+- lib/karafka/web/pro/ui/views/explorer/partition/_messages.erb
+- lib/karafka/web/pro/ui/views/explorer/show.erb
+- lib/karafka/web/pro/ui/views/explorer/topic.erb
+- lib/karafka/web/pro/ui/views/explorer/topic/_actions.erb
+- lib/karafka/web/pro/ui/views/explorer/topic/_empty.erb
+- lib/karafka/web/pro/ui/views/explorer/topic/_limited.erb
+- lib/karafka/web/pro/ui/views/health/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/health/_no_data.erb
+- lib/karafka/web/pro/ui/views/health/_partition.erb
+- lib/karafka/web/pro/ui/views/health/_partition_lags.erb
+- lib/karafka/web/pro/ui/views/health/_partition_offset.erb
+- lib/karafka/web/pro/ui/views/health/_partition_times.erb
+- lib/karafka/web/pro/ui/views/health/_table_metadata.erb
+- lib/karafka/web/pro/ui/views/health/_tabs.erb
+- lib/karafka/web/pro/ui/views/health/changes.erb
+- lib/karafka/web/pro/ui/views/health/cluster_lags.erb
+- lib/karafka/web/pro/ui/views/health/lags.erb
+- lib/karafka/web/pro/ui/views/health/offsets.erb
+- lib/karafka/web/pro/ui/views/health/overview.erb
+- lib/karafka/web/pro/ui/views/jobs/_job.erb
+- lib/karafka/web/pro/ui/views/jobs/_no_jobs.erb
+- lib/karafka/web/pro/ui/views/jobs/pending.erb
+- lib/karafka/web/pro/ui/views/jobs/running.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_actions.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_batch_actions.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_log.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_not_active.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_tabs.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/_task.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/logs.erb
+- lib/karafka/web/pro/ui/views/recurring_tasks/schedule.erb
+- lib/karafka/web/pro/ui/views/routing/_consumer_group.erb
+- lib/karafka/web/pro/ui/views/routing/_detail.erb
+- lib/karafka/web/pro/ui/views/routing/_topic.erb
+- lib/karafka/web/pro/ui/views/routing/index.erb
+- lib/karafka/web/pro/ui/views/routing/show.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/_key.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/_message.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/_messages.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/partition.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/explorer/topic.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/schedules/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/schedules/_no_groups.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/schedules/index.erb
+- lib/karafka/web/pro/ui/views/scheduled_messages/schedules/show.erb
+- lib/karafka/web/pro/ui/views/search/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/search/_fix_errors.erb
+- lib/karafka/web/pro/ui/views/search/_metadata.erb
+- lib/karafka/web/pro/ui/views/search/_no_results.erb
+- lib/karafka/web/pro/ui/views/search/_no_search_criteria.erb
+- lib/karafka/web/pro/ui/views/search/_search_criteria.erb
+- lib/karafka/web/pro/ui/views/search/_search_modal.erb
+- lib/karafka/web/pro/ui/views/search/_timeout.erb
+- lib/karafka/web/pro/ui/views/search/index.erb
+- lib/karafka/web/pro/ui/views/shared/_navigation.erb
+- lib/karafka/web/pro/ui/views/shared/branding/_label.erb
+- lib/karafka/web/pro/ui/views/shared/branding/_notice.erb
+- lib/karafka/web/pro/ui/views/topics/_breadcrumbs.erb
+- lib/karafka/web/pro/ui/views/topics/_partition.erb
+- lib/karafka/web/pro/ui/views/topics/_partition_offsets.erb
+- lib/karafka/web/pro/ui/views/topics/_tabs.erb
+- lib/karafka/web/pro/ui/views/topics/_topic.erb
+- lib/karafka/web/pro/ui/views/topics/config.erb
+- lib/karafka/web/pro/ui/views/topics/distribution.erb
+- lib/karafka/web/pro/ui/views/topics/distribution/_badges.erb
+- lib/karafka/web/pro/ui/views/topics/distribution/_chart.erb
+- lib/karafka/web/pro/ui/views/topics/distribution/_empty_partitions.erb
+- lib/karafka/web/pro/ui/views/topics/distribution/_limited.erb
+- lib/karafka/web/pro/ui/views/topics/distribution/_partition.erb
+- lib/karafka/web/pro/ui/views/topics/index.erb
+- lib/karafka/web/pro/ui/views/topics/offsets.erb
+- lib/karafka/web/pro/ui/views/topics/replication.erb
+- lib/karafka/web/processing/consumer.rb
+- lib/karafka/web/processing/consumers/aggregators/base.rb
+- lib/karafka/web/processing/consumers/aggregators/metrics.rb
+- lib/karafka/web/processing/consumers/aggregators/state.rb
+- lib/karafka/web/processing/consumers/contracts/aggregated_stats.rb
+- lib/karafka/web/processing/consumers/contracts/metrics.rb
+- lib/karafka/web/processing/consumers/contracts/process.rb
+- lib/karafka/web/processing/consumers/contracts/state.rb
+- lib/karafka/web/processing/consumers/contracts/topic_stats.rb
+- lib/karafka/web/processing/consumers/metrics.rb
+- lib/karafka/web/processing/consumers/schema_manager.rb
+- lib/karafka/web/processing/consumers/state.rb
+- lib/karafka/web/processing/publisher.rb
+- lib/karafka/web/processing/time_series_tracker.rb
+- lib/karafka/web/tracking/consumers/contracts/consumer_group.rb
+- lib/karafka/web/tracking/consumers/contracts/job.rb
+- lib/karafka/web/tracking/consumers/contracts/partition.rb
+- lib/karafka/web/tracking/consumers/contracts/report.rb
+- lib/karafka/web/tracking/consumers/contracts/subscription_group.rb
+- lib/karafka/web/tracking/consumers/contracts/topic.rb
+- lib/karafka/web/tracking/consumers/listeners/base.rb
+- lib/karafka/web/tracking/consumers/listeners/booting.rb
+- lib/karafka/web/tracking/consumers/listeners/connections.rb
+- lib/karafka/web/tracking/consumers/listeners/errors.rb
+- lib/karafka/web/tracking/consumers/listeners/pausing.rb
+- lib/karafka/web/tracking/consumers/listeners/processing.rb
+- lib/karafka/web/tracking/consumers/listeners/statistics.rb
+- lib/karafka/web/tracking/consumers/listeners/status.rb
+- lib/karafka/web/tracking/consumers/listeners/tags.rb
+- lib/karafka/web/tracking/consumers/reporter.rb
+- lib/karafka/web/tracking/consumers/sampler.rb
+- lib/karafka/web/tracking/contracts/error.rb
+- lib/karafka/web/tracking/helpers/error_info.rb
+- lib/karafka/web/tracking/helpers/ttls/array.rb
+- lib/karafka/web/tracking/helpers/ttls/hash.rb
+- lib/karafka/web/tracking/helpers/ttls/stats.rb
+- lib/karafka/web/tracking/helpers/ttls/windows.rb
+- lib/karafka/web/tracking/memoized_shell.rb
+- lib/karafka/web/tracking/producers/listeners/base.rb
+- lib/karafka/web/tracking/producers/listeners/booting.rb
+- lib/karafka/web/tracking/producers/listeners/errors.rb
+- lib/karafka/web/tracking/producers/reporter.rb
+- lib/karafka/web/tracking/producers/sampler.rb
+- lib/karafka/web/tracking/reporter.rb
+- lib/karafka/web/tracking/sampler.rb
+- lib/karafka/web/tracking/scheduler.rb
+- lib/karafka/web/ui/app.rb
+- lib/karafka/web/ui/base.rb
+- lib/karafka/web/ui/controllers/base_controller.rb
+- lib/karafka/web/ui/controllers/become_pro_controller.rb
+- lib/karafka/web/ui/controllers/cluster_controller.rb
+- lib/karafka/web/ui/controllers/consumers_controller.rb
+- lib/karafka/web/ui/controllers/dashboard_controller.rb
+- lib/karafka/web/ui/controllers/errors_controller.rb
+- lib/karafka/web/ui/controllers/jobs_controller.rb
+- lib/karafka/web/ui/controllers/requests/params.rb
+- lib/karafka/web/ui/controllers/responses/file.rb
+- lib/karafka/web/ui/controllers/responses/redirect.rb
+- lib/karafka/web/ui/controllers/responses/render.rb
+- lib/karafka/web/ui/controllers/routing_controller.rb
+- lib/karafka/web/ui/controllers/status_controller.rb
+- lib/karafka/web/ui/controllers/support_controller.rb
+- lib/karafka/web/ui/controllers/ux_controller.rb
+- lib/karafka/web/ui/helpers/application_helper.rb
+- lib/karafka/web/ui/helpers/paths_helper.rb
+- lib/karafka/web/ui/helpers/tailwind_helper.rb
+- lib/karafka/web/ui/lib/admin.rb
+- lib/karafka/web/ui/lib/hash_proxy.rb
+- lib/karafka/web/ui/lib/paginations/base.rb
+- lib/karafka/web/ui/lib/paginations/offset_based.rb
+- lib/karafka/web/ui/lib/paginations/page_based.rb
+- lib/karafka/web/ui/lib/paginations/paginators/arrays.rb
+- lib/karafka/web/ui/lib/paginations/paginators/base.rb
+- lib/karafka/web/ui/lib/paginations/paginators/partitions.rb
+- lib/karafka/web/ui/lib/paginations/paginators/sets.rb
+- lib/karafka/web/ui/lib/paginations/watermark_offsets_based.rb
+- lib/karafka/web/ui/lib/sorter.rb
+- lib/karafka/web/ui/lib/ttl_cache.rb
+- lib/karafka/web/ui/models/broker.rb
+- lib/karafka/web/ui/models/cluster_info.rb
+- lib/karafka/web/ui/models/consumer_group.rb
+- lib/karafka/web/ui/models/consumers_metrics.rb
+- lib/karafka/web/ui/models/consumers_state.rb
+- lib/karafka/web/ui/models/counters.rb
+- lib/karafka/web/ui/models/health.rb
+- lib/karafka/web/ui/models/job.rb
+- lib/karafka/web/ui/models/jobs.rb
+- lib/karafka/web/ui/models/message.rb
+- lib/karafka/web/ui/models/metrics/aggregated.rb
+- lib/karafka/web/ui/models/metrics/charts/aggregated.rb
+- lib/karafka/web/ui/models/metrics/charts/topics.rb
+- lib/karafka/web/ui/models/metrics/topics.rb
+- lib/karafka/web/ui/models/partition.rb
+- lib/karafka/web/ui/models/process.rb
+- lib/karafka/web/ui/models/processes.rb
+- lib/karafka/web/ui/models/recurring_tasks/log.rb
+- lib/karafka/web/ui/models/recurring_tasks/schedule.rb
+- lib/karafka/web/ui/models/recurring_tasks/task.rb
+- lib/karafka/web/ui/models/status.rb
+- lib/karafka/web/ui/models/subscription_group.rb
+- lib/karafka/web/ui/models/topic.rb
+- lib/karafka/web/ui/models/watermark_offsets.rb
+- lib/karafka/web/ui/public/images/calendar.svg
+- lib/karafka/web/ui/public/images/favicon.ico
+- lib/karafka/web/ui/public/images/logo-gray.svg
+- lib/karafka/web/ui/public/images/logo.svg
+- lib/karafka/web/ui/public/javascripts/application.js
+- lib/karafka/web/ui/public/javascripts/application.min.js
+- lib/karafka/web/ui/public/javascripts/application.min.js.br
+- lib/karafka/web/ui/public/javascripts/application.min.js.gz
+- lib/karafka/web/ui/public/javascripts/charts/data_formatting_utility.js
+- lib/karafka/web/ui/public/javascripts/charts/dataset_state_manager.js
+- lib/karafka/web/ui/public/javascripts/charts/types/bar.js
+- lib/karafka/web/ui/public/javascripts/charts/types/line.js
+- lib/karafka/web/ui/public/javascripts/components/btn_toggle_manager.js
+- lib/karafka/web/ui/public/javascripts/components/charts.js
+- lib/karafka/web/ui/public/javascripts/components/live_poll.js
+- lib/karafka/web/ui/public/javascripts/components/offset_datetime.js
+- lib/karafka/web/ui/public/javascripts/components/search.js
+- lib/karafka/web/ui/public/javascripts/components/tabs_manager.js
+- lib/karafka/web/ui/public/javascripts/components/theme_manager.js
+- lib/karafka/web/ui/public/javascripts/components/turbo_tracker.js
+- lib/karafka/web/ui/public/javascripts/libs/chart.min.js
+- lib/karafka/web/ui/public/javascripts/libs/datepicker.js
+- lib/karafka/web/ui/public/javascripts/libs/highlight.min.js
+- lib/karafka/web/ui/public/javascripts/libs/timeago.min.js
+- lib/karafka/web/ui/public/javascripts/libs/turbo.js
+- lib/karafka/web/ui/public/stylesheets/application.css
+- lib/karafka/web/ui/public/stylesheets/application.min.css
+- lib/karafka/web/ui/public/stylesheets/application.min.css.br
+- lib/karafka/web/ui/public/stylesheets/application.min.css.gz
+- lib/karafka/web/ui/public/stylesheets/libs/datepicker.min.css
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_dark.min.css
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_dark.min.css.br
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_dark.min.css.gz
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_light.min.css
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_light.min.css.br
+- lib/karafka/web/ui/public/stylesheets/libs/highlight_light.min.css.gz
+- lib/karafka/web/ui/public/stylesheets/libs/tailwind.css
+- lib/karafka/web/ui/views/cluster/_breadcrumbs.erb
+- lib/karafka/web/ui/views/cluster/_broker.erb
+- lib/karafka/web/ui/views/cluster/_no_partitions.erb
+- lib/karafka/web/ui/views/cluster/_partition.erb
+- lib/karafka/web/ui/views/cluster/_tabs.erb
+- lib/karafka/web/ui/views/cluster/brokers.erb
+- lib/karafka/web/ui/views/cluster/replication.erb
+- lib/karafka/web/ui/views/consumers/_assignments_badges.erb
+- lib/karafka/web/ui/views/consumers/_breadcrumbs.erb
+- lib/karafka/web/ui/views/consumers/_consumer.erb
+- lib/karafka/web/ui/views/consumers/_no_consumers.erb
+- lib/karafka/web/ui/views/consumers/_summary.erb
+- lib/karafka/web/ui/views/consumers/_tabs.erb
+- lib/karafka/web/ui/views/consumers/index.erb
+- lib/karafka/web/ui/views/dashboard/_counters.erb
+- lib/karafka/web/ui/views/dashboard/_feature_pro.erb
+- lib/karafka/web/ui/views/dashboard/_not_enough_data.erb
+- lib/karafka/web/ui/views/dashboard/_ranges_selector.erb
+- lib/karafka/web/ui/views/dashboard/index.erb
+- lib/karafka/web/ui/views/errors/_breadcrumbs.erb
+- lib/karafka/web/ui/views/errors/_cleaned.erb
+- lib/karafka/web/ui/views/errors/_detail.erb
+- lib/karafka/web/ui/views/errors/_error.erb
+- lib/karafka/web/ui/views/errors/_no_errors.erb
+- lib/karafka/web/ui/views/errors/index.erb
+- lib/karafka/web/ui/views/errors/show.erb
+- lib/karafka/web/ui/views/jobs/_breadcrumbs.erb
+- lib/karafka/web/ui/views/jobs/_job.erb
+- lib/karafka/web/ui/views/jobs/_no_jobs.erb
+- lib/karafka/web/ui/views/jobs/_tabs.erb
+- lib/karafka/web/ui/views/jobs/pending.erb
+- lib/karafka/web/ui/views/jobs/running.erb
+- lib/karafka/web/ui/views/layout.erb
+- lib/karafka/web/ui/views/routing/_breadcrumbs.erb
+- lib/karafka/web/ui/views/routing/_consumer_group.erb
+- lib/karafka/web/ui/views/routing/_detail.erb
+- lib/karafka/web/ui/views/routing/_topic.erb
+- lib/karafka/web/ui/views/routing/index.erb
+- lib/karafka/web/ui/views/routing/show.erb
+- lib/karafka/web/ui/views/shared/_become_pro.erb
+- lib/karafka/web/ui/views/shared/_brand.erb
+- lib/karafka/web/ui/views/shared/_breadcrumbs.erb
+- lib/karafka/web/ui/views/shared/_content.erb
+- lib/karafka/web/ui/views/shared/_controls.erb
+- lib/karafka/web/ui/views/shared/_flashes.erb
+- lib/karafka/web/ui/views/shared/_header.erb
+- lib/karafka/web/ui/views/shared/_navigation.erb
+- lib/karafka/web/ui/views/shared/_no_paginated_data.erb
+- lib/karafka/web/ui/views/shared/_not_a_message.erb
+- lib/karafka/web/ui/views/shared/_pagination.erb
+- lib/karafka/web/ui/views/shared/_tab_nav.erb
+- lib/karafka/web/ui/views/shared/_title.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_error.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_info.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_primary.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_secondary.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_success.erb
+- lib/karafka/web/ui/views/shared/alerts/_box_warning.erb
+- lib/karafka/web/ui/views/shared/alerts/_error.erb
+- lib/karafka/web/ui/views/shared/alerts/_info.erb
+- lib/karafka/web/ui/views/shared/alerts/_primary.erb
+- lib/karafka/web/ui/views/shared/alerts/_secondary.erb
+- lib/karafka/web/ui/views/shared/alerts/_success.erb
+- lib/karafka/web/ui/views/shared/alerts/_warning.erb
+- lib/karafka/web/ui/views/shared/charts/_bar.erb
+- lib/karafka/web/ui/views/shared/charts/_line.erb
+- lib/karafka/web/ui/views/shared/exceptions/not_allowed.erb
+- lib/karafka/web/ui/views/shared/exceptions/not_found.erb
+- lib/karafka/web/ui/views/shared/exceptions/pro_only.erb
+- lib/karafka/web/ui/views/shared/icons/_arrow_down_on_square.erb
+- lib/karafka/web/ui/views/shared/icons/_arrow_down_tray.erb
+- lib/karafka/web/ui/views/shared/icons/_arrow_on_squares.erb
+- lib/karafka/web/ui/views/shared/icons/_arrow_path_rounded.erb
+- lib/karafka/web/ui/views/shared/icons/_arrow_uturn_right.erb
+- lib/karafka/web/ui/views/shared/icons/_arrows_right_left.erb
+- lib/karafka/web/ui/views/shared/icons/_blocks.erb
+- lib/karafka/web/ui/views/shared/icons/_book_open.erb
+- lib/karafka/web/ui/views/shared/icons/_bug.erb
+- lib/karafka/web/ui/views/shared/icons/_burger.erb
+- lib/karafka/web/ui/views/shared/icons/_calendar.erb
+- lib/karafka/web/ui/views/shared/icons/_calendar_days.erb
+- lib/karafka/web/ui/views/shared/icons/_chart_bar.erb
+- lib/karafka/web/ui/views/shared/icons/_check.erb
+- lib/karafka/web/ui/views/shared/icons/_check_badge.erb
+- lib/karafka/web/ui/views/shared/icons/_check_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_chevron.erb
+- lib/karafka/web/ui/views/shared/icons/_circle_stack.erb
+- lib/karafka/web/ui/views/shared/icons/_cpu.erb
+- lib/karafka/web/ui/views/shared/icons/_document_glass.erb
+- lib/karafka/web/ui/views/shared/icons/_exclamation_triangle.erb
+- lib/karafka/web/ui/views/shared/icons/_eye.erb
+- lib/karafka/web/ui/views/shared/icons/_gear.erb
+- lib/karafka/web/ui/views/shared/icons/_github.erb
+- lib/karafka/web/ui/views/shared/icons/_globe.erb
+- lib/karafka/web/ui/views/shared/icons/_heart.erb
+- lib/karafka/web/ui/views/shared/icons/_home.erb
+- lib/karafka/web/ui/views/shared/icons/_info_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_lifebuoy.erb
+- lib/karafka/web/ui/views/shared/icons/_light_bulb.erb
+- lib/karafka/web/ui/views/shared/icons/_list_bullets.erb
+- lib/karafka/web/ui/views/shared/icons/_magnifying_glass.erb
+- lib/karafka/web/ui/views/shared/icons/_moon.erb
+- lib/karafka/web/ui/views/shared/icons/_offices.erb
+- lib/karafka/web/ui/views/shared/icons/_pause.erb
+- lib/karafka/web/ui/views/shared/icons/_pause_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_play.erb
+- lib/karafka/web/ui/views/shared/icons/_play_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_question_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_queue_list.erb
+- lib/karafka/web/ui/views/shared/icons/_refresh.erb
+- lib/karafka/web/ui/views/shared/icons/_slack.erb
+- lib/karafka/web/ui/views/shared/icons/_stop.erb
+- lib/karafka/web/ui/views/shared/icons/_sun.erb
+- lib/karafka/web/ui/views/shared/icons/_x_circle.erb
+- lib/karafka/web/ui/views/shared/icons/_x_mark.erb
+- lib/karafka/web/ui/views/status/_breadcrumbs.erb
+- lib/karafka/web/ui/views/status/_failure.erb
+- lib/karafka/web/ui/views/status/_halted.erb
+- lib/karafka/web/ui/views/status/_info.erb
+- lib/karafka/web/ui/views/status/_success.erb
+- lib/karafka/web/ui/views/status/_warning.erb
+- lib/karafka/web/ui/views/status/failures/_connection.erb
+- lib/karafka/web/ui/views/status/failures/_consumers_reports.erb
+- lib/karafka/web/ui/views/status/failures/_consumers_reports_schema_state.erb
+- lib/karafka/web/ui/views/status/failures/_enabled.erb
+- lib/karafka/web/ui/views/status/failures/_initial_consumers_metrics.erb
+- lib/karafka/web/ui/views/status/failures/_initial_consumers_state.erb
+- lib/karafka/web/ui/views/status/failures/_live_reporting.erb
+- lib/karafka/web/ui/views/status/failures/_materializing_lag.erb
+- lib/karafka/web/ui/views/status/failures/_partitions.erb
+- lib/karafka/web/ui/views/status/failures/_state_calculation.erb
+- lib/karafka/web/ui/views/status/failures/_topics.erb
+- lib/karafka/web/ui/views/status/info/_components.erb
+- lib/karafka/web/ui/views/status/show.erb
+- lib/karafka/web/ui/views/status/successes/_connection.erb
+- lib/karafka/web/ui/views/status/successes/_enabled.erb
+- lib/karafka/web/ui/views/status/warnings/_connection.erb
+- lib/karafka/web/ui/views/status/warnings/_pro_subscription.erb
+- lib/karafka/web/ui/views/status/warnings/_replication.erb
+- lib/karafka/web/ui/views/status/warnings/_routing_topics_presence.erb
+- lib/karafka/web/ui/views/support/_breadcrumbs.erb
+- lib/karafka/web/ui/views/support/show.erb
+- lib/karafka/web/ui/views/ux/_alerts.erb
+- lib/karafka/web/ui/views/ux/_badges.erb
+- lib/karafka/web/ui/views/ux/_breadcrumbs.erb
+- lib/karafka/web/ui/views/ux/_buttons.erb
+- lib/karafka/web/ui/views/ux/_card_detail.erb
+- lib/karafka/web/ui/views/ux/_card_metric.erb
+- lib/karafka/web/ui/views/ux/_card_summary.erb
+- lib/karafka/web/ui/views/ux/_card_support.erb
+- lib/karafka/web/ui/views/ux/_code.erb
+- lib/karafka/web/ui/views/ux/_data_table.erb
+- lib/karafka/web/ui/views/ux/_headers.erb
+- lib/karafka/web/ui/views/ux/_icons.erb
+- lib/karafka/web/ui/views/ux/_pagination.erb
+- lib/karafka/web/ui/views/ux/_row_table.erb
+- lib/karafka/web/ui/views/ux/_status_rows.erb
+- lib/karafka/web/ui/views/ux/_tabs.erb
+- lib/karafka/web/ui/views/ux/_text.erb
+- lib/karafka/web/ui/views/ux/_topic_tiles.erb
+- lib/karafka/web/ui/views/ux/show.erb
+- lib/karafka/web/version.rb
+- package-lock.json
+- package.json
+- postcss.config.js
+- renovate.json
+- tailwind.config.js
+homepage: https://karafka.io
+licenses:
+- LGPL-3.0-only
+- Commercial
+metadata:
+  funding_uri: https://karafka.io/#become-pro
+  homepage_uri: https://karafka.io
+  changelog_uri: https://karafka.io/docs/Changelog-Karafka-Web-UI
+  bug_tracker_uri: https://github.com/karafka/karafka-web/issues
+  source_code_uri: https://github.com/karafka/karafka-web
+  documentation_uri: https://karafka.io/docs
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Karafka ecosystem Web UI interface
+test_files: []

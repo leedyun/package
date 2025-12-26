@@ -1,0 +1,251 @@
+--- !ruby/object:Gem::Specification
+name: i18n-js
+version: !ruby/object:Gem::Version
+  version: 4.2.3
+platform: ruby
+authors:
+- Nando Vieira
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-03-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: glob
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-utils
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-meta
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-fnando
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Export i18n translations and use them on JavaScript.
+email:
+- me@fnando.com
+executables:
+- i18n
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/CODEOWNERS"
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/config.yml"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/PULL_REQUEST_TEMPLATE.md"
+- ".github/dependabot.yml"
+- ".github/workflows/ruby-tests.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.md
+- MIGRATING_FROM_V3_TO_V4.md
+- README.md
+- Rakefile
+- bin/release
+- exe/i18n
+- i18n-js.gemspec
+- lib/guard/i18n-js.rb
+- lib/guard/i18n-js/templates/Guardfile
+- lib/guard/i18n-js/version.rb
+- lib/i18n-js.rb
+- lib/i18n-js/clean_hash.rb
+- lib/i18n-js/cli.rb
+- lib/i18n-js/cli/check_command.rb
+- lib/i18n-js/cli/command.rb
+- lib/i18n-js/cli/export_command.rb
+- lib/i18n-js/cli/init_command.rb
+- lib/i18n-js/cli/lint_scripts_command.rb
+- lib/i18n-js/cli/lint_translations_command.rb
+- lib/i18n-js/cli/plugins_command.rb
+- lib/i18n-js/cli/ui.rb
+- lib/i18n-js/cli/version_command.rb
+- lib/i18n-js/embed_fallback_translations_plugin.rb
+- lib/i18n-js/export_files_plugin.rb
+- lib/i18n-js/lint.js
+- lib/i18n-js/lint.ts
+- lib/i18n-js/listen.rb
+- lib/i18n-js/plugin.rb
+- lib/i18n-js/schema.rb
+- lib/i18n-js/sort_hash.rb
+- lib/i18n-js/version.rb
+- package.json
+homepage: https://github.com/fnando/i18n-js
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+  homepage_uri: https://github.com/fnando/i18n-js
+  bug_tracker_uri: https://github.com/fnando/i18n-js/issues
+  source_code_uri: https://github.com/fnando/i18n-js/tree/v4.2.3
+  changelog_uri: https://github.com/fnando/i18n-js/tree/v4.2.3/CHANGELOG.md
+  documentation_uri: https://github.com/fnando/i18n-js/tree/v4.2.3/README.md
+  license_uri: https://github.com/fnando/i18n-js/tree/v4.2.3/LICENSE.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.6
+signing_key:
+specification_version: 4
+summary: Export i18n translations and use them on JavaScript.
+test_files: []

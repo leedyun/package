@@ -1,0 +1,97 @@
+--- !ruby/object:Gem::Specification
+name: connection_pool
+version: !ruby/object:Gem::Version
+  version: 2.5.0
+platform: ruby
+authors:
+- Mike Perham
+- Damian Janowski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Generic connection pool for Ruby
+email:
+- mperham@gmail.com
+- damian@educabilia.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Changes.md
+- LICENSE
+- README.md
+- connection_pool.gemspec
+- lib/connection_pool.rb
+- lib/connection_pool/timed_stack.rb
+- lib/connection_pool/version.rb
+- lib/connection_pool/wrapper.rb
+homepage: https://github.com/mperham/connection_pool
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/mperham/connection_pool/blob/main/Changes.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Generic connection pool for Ruby
+test_files: []

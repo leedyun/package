@@ -1,0 +1,261 @@
+--- !ruby/object:Gem::Specification
+name: acpc-poker_types
+version: !ruby/object:Gem::Version
+  version: 7.8.6
+platform: ruby
+authors:
+- Dustin Morrill
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: process_runner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: acpc_dealer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: celluloid
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: contextual_exceptions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: inflections
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+description: Poker classes and constants that conform to the standards of the Annual
+  Computer Poker Competition.
+email:
+- morrill@ualberta.ca
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- README.md
+- Rakefile
+- acpc-poker_types.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acpc_poker_types.rb
+- lib/acpc_poker_types/board_cards.rb
+- lib/acpc_poker_types/card.rb
+- lib/acpc_poker_types/chip_stack.rb
+- lib/acpc_poker_types/dealer_data.rb
+- lib/acpc_poker_types/dealer_data/action_messages.rb
+- lib/acpc_poker_types/dealer_data/hand_data.rb
+- lib/acpc_poker_types/dealer_data/hand_results.rb
+- lib/acpc_poker_types/dealer_data/log_file.rb
+- lib/acpc_poker_types/dealer_data/match_definition.rb
+- lib/acpc_poker_types/dealer_data/poker_match_data.rb
+- lib/acpc_poker_types/game_definition.rb
+- lib/acpc_poker_types/hand.rb
+- lib/acpc_poker_types/hand_player.rb
+- lib/acpc_poker_types/hand_player_group.rb
+- lib/acpc_poker_types/match_state.rb
+- lib/acpc_poker_types/pile_of_cards.rb
+- lib/acpc_poker_types/player.rb
+- lib/acpc_poker_types/players_at_the_table.rb
+- lib/acpc_poker_types/poker_action.rb
+- lib/acpc_poker_types/rank.rb
+- lib/acpc_poker_types/seat.rb
+- lib/acpc_poker_types/suit.rb
+- lib/acpc_poker_types/version.rb
+- spec/acpc_poker_types_spec.rb
+- spec/board_cards_spec.rb
+- spec/card_spec.rb
+- spec/chip_stack_spec.rb
+- spec/dealer_data/action_messages_spec.rb
+- spec/dealer_data/hand_data_spec.rb
+- spec/dealer_data/hand_results_spec.rb
+- spec/dealer_data/match_definition_spec.rb
+- spec/dealer_data/poker_match_data_spec.rb
+- spec/game_definition_spec.rb
+- spec/hand_player_group_spec.rb
+- spec/hand_player_spec.rb
+- spec/hand_spec.rb
+- spec/match_state_spec.rb
+- spec/pile_of_cards_spec.rb
+- spec/player_spec.rb
+- spec/players_at_the_table_spec.rb
+- spec/poker_action_spec.rb
+- spec/rank_spec.rb
+- spec/seat_spec.rb
+- spec/suit_spec.rb
+- spec/support/dealer_logs/2p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.limit.h1000.r0.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.log
+- spec/support/spec_helper.rb
+homepage: https://github.com/dmorrill10/acpc_poker_types
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: ACPC Poker Types
+test_files:
+- spec/acpc_poker_types_spec.rb
+- spec/board_cards_spec.rb
+- spec/card_spec.rb
+- spec/chip_stack_spec.rb
+- spec/dealer_data/action_messages_spec.rb
+- spec/dealer_data/hand_data_spec.rb
+- spec/dealer_data/hand_results_spec.rb
+- spec/dealer_data/match_definition_spec.rb
+- spec/dealer_data/poker_match_data_spec.rb
+- spec/game_definition_spec.rb
+- spec/hand_player_group_spec.rb
+- spec/hand_player_spec.rb
+- spec/hand_spec.rb
+- spec/match_state_spec.rb
+- spec/pile_of_cards_spec.rb
+- spec/players_at_the_table_spec.rb
+- spec/player_spec.rb
+- spec/poker_action_spec.rb
+- spec/rank_spec.rb
+- spec/seat_spec.rb
+- spec/suit_spec.rb
+- spec/support/dealer_logs/2p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.limit.h1000.r0.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/2p.nolimit.h1000.r0.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.limit.h1000.r0.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.actions.log
+- spec/support/dealer_logs/3p.nolimit.h1000.r0.log
+- spec/support/spec_helper.rb

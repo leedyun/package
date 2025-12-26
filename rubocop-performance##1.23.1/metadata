@@ -1,0 +1,153 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-performance
+version: !ruby/object:Gem::Version
+  version: 1.23.1
+platform: ruby
+authors:
+- Bozhidar Batsov
+- Jonas Arvidsson
+- Yuji Nakayama
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.48.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.48.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-ast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: |
+  A collection of RuboCop cops to check for performance optimizations
+  in Ruby code.
+email: rubocop@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- LICENSE.txt
+- README.md
+- config/default.yml
+- config/obsoletion.yml
+- lib/rubocop-performance.rb
+- lib/rubocop/cop/mixin/regexp_metacharacter.rb
+- lib/rubocop/cop/mixin/sort_block.rb
+- lib/rubocop/cop/performance/ancestors_include.rb
+- lib/rubocop/cop/performance/array_semi_infinite_range_slice.rb
+- lib/rubocop/cop/performance/big_decimal_with_numeric_argument.rb
+- lib/rubocop/cop/performance/bind_call.rb
+- lib/rubocop/cop/performance/block_given_with_explicit_block.rb
+- lib/rubocop/cop/performance/caller.rb
+- lib/rubocop/cop/performance/case_when_splat.rb
+- lib/rubocop/cop/performance/casecmp.rb
+- lib/rubocop/cop/performance/chain_array_allocation.rb
+- lib/rubocop/cop/performance/collection_literal_in_loop.rb
+- lib/rubocop/cop/performance/compare_with_block.rb
+- lib/rubocop/cop/performance/concurrent_monotonic_time.rb
+- lib/rubocop/cop/performance/constant_regexp.rb
+- lib/rubocop/cop/performance/count.rb
+- lib/rubocop/cop/performance/delete_prefix.rb
+- lib/rubocop/cop/performance/delete_suffix.rb
+- lib/rubocop/cop/performance/detect.rb
+- lib/rubocop/cop/performance/double_start_end_with.rb
+- lib/rubocop/cop/performance/end_with.rb
+- lib/rubocop/cop/performance/fixed_size.rb
+- lib/rubocop/cop/performance/flat_map.rb
+- lib/rubocop/cop/performance/inefficient_hash_search.rb
+- lib/rubocop/cop/performance/io_readlines.rb
+- lib/rubocop/cop/performance/map_compact.rb
+- lib/rubocop/cop/performance/map_method_chain.rb
+- lib/rubocop/cop/performance/method_object_as_block.rb
+- lib/rubocop/cop/performance/open_struct.rb
+- lib/rubocop/cop/performance/range_include.rb
+- lib/rubocop/cop/performance/redundant_block_call.rb
+- lib/rubocop/cop/performance/redundant_equality_comparison_block.rb
+- lib/rubocop/cop/performance/redundant_match.rb
+- lib/rubocop/cop/performance/redundant_merge.rb
+- lib/rubocop/cop/performance/redundant_sort_block.rb
+- lib/rubocop/cop/performance/redundant_split_regexp_argument.rb
+- lib/rubocop/cop/performance/redundant_string_chars.rb
+- lib/rubocop/cop/performance/regexp_match.rb
+- lib/rubocop/cop/performance/reverse_each.rb
+- lib/rubocop/cop/performance/reverse_first.rb
+- lib/rubocop/cop/performance/select_map.rb
+- lib/rubocop/cop/performance/size.rb
+- lib/rubocop/cop/performance/sort_reverse.rb
+- lib/rubocop/cop/performance/squeeze.rb
+- lib/rubocop/cop/performance/start_with.rb
+- lib/rubocop/cop/performance/string_bytesize.rb
+- lib/rubocop/cop/performance/string_identifier_argument.rb
+- lib/rubocop/cop/performance/string_include.rb
+- lib/rubocop/cop/performance/string_replacement.rb
+- lib/rubocop/cop/performance/sum.rb
+- lib/rubocop/cop/performance/times_map.rb
+- lib/rubocop/cop/performance/unfreeze_string.rb
+- lib/rubocop/cop/performance/uri_default_parser.rb
+- lib/rubocop/cop/performance_cops.rb
+- lib/rubocop/performance.rb
+- lib/rubocop/performance/inject.rb
+- lib/rubocop/performance/version.rb
+homepage: https://github.com/rubocop/rubocop-performance
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://docs.rubocop.org/rubocop-performance/
+  changelog_uri: https://github.com/rubocop/rubocop-performance/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/rubocop/rubocop-performance/
+  documentation_uri: https://docs.rubocop.org/rubocop-performance/1.23/
+  bug_tracker_uri: https://github.com/rubocop/rubocop-performance/issues
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.1
+specification_version: 4
+summary: Automatic performance checking tool for Ruby code.
+test_files: []

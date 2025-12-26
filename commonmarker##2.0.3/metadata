@@ -1,0 +1,109 @@
+--- !ruby/object:Gem::Specification
+name: commonmarker
+version: !ruby/object:Gem::Version
+  version: 2.0.3
+platform: ruby
+authors:
+- Garen Torikian
+- Ashe Connor
+bindir: exe
+cert_chain: []
+date: 2025-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rb_sys
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+description: A fast, safe, extensible parser for CommonMark. This wraps the comrak
+  Rust crate.
+executables: []
+extensions:
+- ext/commonmarker/extconf.rb
+extra_rdoc_files: []
+files:
+- Cargo.lock
+- Cargo.toml
+- LICENSE.txt
+- README.md
+- ext/commonmarker/Cargo.toml
+- ext/commonmarker/extconf.rb
+- ext/commonmarker/src/lib.rs
+- ext/commonmarker/src/node.rs
+- ext/commonmarker/src/options.rs
+- ext/commonmarker/src/plugins.rs
+- ext/commonmarker/src/plugins/syntax_highlighting.rs
+- ext/commonmarker/src/utils.rs
+- lib/commonmarker.rb
+- lib/commonmarker/config.rb
+- lib/commonmarker/constants.rb
+- lib/commonmarker/extension.rb
+- lib/commonmarker/node.rb
+- lib/commonmarker/node/ast.rb
+- lib/commonmarker/node/inspect.rb
+- lib/commonmarker/renderer.rb
+- lib/commonmarker/utils.rb
+- lib/commonmarker/version.rb
+homepage: https://github.com/gjtorikian/commonmarker
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  funding_uri: https://github.com/sponsors/gjtorikian/
+  source_code_uri: https://github.com/gjtorikian/commonmarker
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '3.2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '3.4'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: CommonMark parser and renderer. Written in Rust, wrapped in Ruby.
+test_files: []

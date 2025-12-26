@@ -1,0 +1,177 @@
+--- !ruby/object:Gem::Specification
+name: foreman
+version: !ruby/object:Gem::Version
+  version: 0.88.1
+platform: ruby
+authors:
+- David Dollar
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-12 00:00:00.000000000 Z
+dependencies: []
+description: Process manager for applications with multiple components
+email: ddollar@gmail.com
+executables:
+- foreman
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- bin/foreman
+- bin/foreman-runner
+- data/example/Procfile
+- data/example/Procfile.without_colon
+- data/example/error
+- data/example/log/neverdie.log
+- data/example/spawnee
+- data/example/spawner
+- data/example/ticker
+- data/example/utf8
+- data/export/bluepill/master.pill.erb
+- data/export/daemon/master.conf.erb
+- data/export/daemon/process.conf.erb
+- data/export/daemon/process_master.conf.erb
+- data/export/launchd/launchd.plist.erb
+- data/export/runit/log/run.erb
+- data/export/runit/run.erb
+- data/export/supervisord/app.conf.erb
+- data/export/systemd/master.target.erb
+- data/export/systemd/process.service.erb
+- data/export/upstart/master.conf.erb
+- data/export/upstart/process.conf.erb
+- data/export/upstart/process_master.conf.erb
+- lib/foreman.rb
+- lib/foreman/cli.rb
+- lib/foreman/distribution.rb
+- lib/foreman/engine.rb
+- lib/foreman/engine/cli.rb
+- lib/foreman/env.rb
+- lib/foreman/export.rb
+- lib/foreman/export/base.rb
+- lib/foreman/export/bluepill.rb
+- lib/foreman/export/daemon.rb
+- lib/foreman/export/inittab.rb
+- lib/foreman/export/launchd.rb
+- lib/foreman/export/runit.rb
+- lib/foreman/export/supervisord.rb
+- lib/foreman/export/systemd.rb
+- lib/foreman/export/upstart.rb
+- lib/foreman/helpers.rb
+- lib/foreman/process.rb
+- lib/foreman/procfile.rb
+- lib/foreman/vendor/thor/lib/thor.rb
+- lib/foreman/vendor/thor/lib/thor/actions.rb
+- lib/foreman/vendor/thor/lib/thor/actions/create_file.rb
+- lib/foreman/vendor/thor/lib/thor/actions/create_link.rb
+- lib/foreman/vendor/thor/lib/thor/actions/directory.rb
+- lib/foreman/vendor/thor/lib/thor/actions/empty_directory.rb
+- lib/foreman/vendor/thor/lib/thor/actions/file_manipulation.rb
+- lib/foreman/vendor/thor/lib/thor/actions/inject_into_file.rb
+- lib/foreman/vendor/thor/lib/thor/base.rb
+- lib/foreman/vendor/thor/lib/thor/command.rb
+- lib/foreman/vendor/thor/lib/thor/core_ext/hash_with_indifferent_access.rb
+- lib/foreman/vendor/thor/lib/thor/core_ext/io_binary_read.rb
+- lib/foreman/vendor/thor/lib/thor/core_ext/ordered_hash.rb
+- lib/foreman/vendor/thor/lib/thor/error.rb
+- lib/foreman/vendor/thor/lib/thor/group.rb
+- lib/foreman/vendor/thor/lib/thor/invocation.rb
+- lib/foreman/vendor/thor/lib/thor/line_editor.rb
+- lib/foreman/vendor/thor/lib/thor/line_editor/basic.rb
+- lib/foreman/vendor/thor/lib/thor/line_editor/readline.rb
+- lib/foreman/vendor/thor/lib/thor/parser.rb
+- lib/foreman/vendor/thor/lib/thor/parser/argument.rb
+- lib/foreman/vendor/thor/lib/thor/parser/arguments.rb
+- lib/foreman/vendor/thor/lib/thor/parser/option.rb
+- lib/foreman/vendor/thor/lib/thor/parser/options.rb
+- lib/foreman/vendor/thor/lib/thor/rake_compat.rb
+- lib/foreman/vendor/thor/lib/thor/runner.rb
+- lib/foreman/vendor/thor/lib/thor/shell.rb
+- lib/foreman/vendor/thor/lib/thor/shell/basic.rb
+- lib/foreman/vendor/thor/lib/thor/shell/color.rb
+- lib/foreman/vendor/thor/lib/thor/shell/html.rb
+- lib/foreman/vendor/thor/lib/thor/util.rb
+- lib/foreman/vendor/thor/lib/thor/version.rb
+- lib/foreman/version.rb
+- man/foreman.1
+- spec/foreman/cli_spec.rb
+- spec/foreman/engine_spec.rb
+- spec/foreman/export/base_spec.rb
+- spec/foreman/export/bluepill_spec.rb
+- spec/foreman/export/daemon_spec.rb
+- spec/foreman/export/inittab_spec.rb
+- spec/foreman/export/launchd_spec.rb
+- spec/foreman/export/runit_spec.rb
+- spec/foreman/export/supervisord_spec.rb
+- spec/foreman/export/systemd_spec.rb
+- spec/foreman/export/upstart_spec.rb
+- spec/foreman/export_spec.rb
+- spec/foreman/helpers_spec.rb
+- spec/foreman/process_spec.rb
+- spec/foreman/procfile_spec.rb
+- spec/foreman_spec.rb
+- spec/helper_spec.rb
+- spec/resources/Procfile
+- spec/resources/Procfile.bad
+- spec/resources/bin/echo
+- spec/resources/bin/env
+- spec/resources/bin/test
+- spec/resources/bin/utf8
+- spec/resources/export/bluepill/app-concurrency.pill
+- spec/resources/export/bluepill/app.pill
+- spec/resources/export/daemon/app-alpha-1.conf
+- spec/resources/export/daemon/app-alpha-2.conf
+- spec/resources/export/daemon/app-alpha.conf
+- spec/resources/export/daemon/app-bravo-1.conf
+- spec/resources/export/daemon/app-bravo.conf
+- spec/resources/export/daemon/app.conf
+- spec/resources/export/inittab/inittab.concurrency
+- spec/resources/export/inittab/inittab.default
+- spec/resources/export/launchd/launchd-a.default
+- spec/resources/export/launchd/launchd-b.default
+- spec/resources/export/launchd/launchd-c.default
+- spec/resources/export/runit/app-alpha-1/log/run
+- spec/resources/export/runit/app-alpha-1/run
+- spec/resources/export/runit/app-alpha-2/log/run
+- spec/resources/export/runit/app-alpha-2/run
+- spec/resources/export/runit/app-bravo-1/log/run
+- spec/resources/export/runit/app-bravo-1/run
+- spec/resources/export/supervisord/app-alpha-1.conf
+- spec/resources/export/supervisord/app-alpha-2.conf
+- spec/resources/export/systemd/app-alpha.1.service
+- spec/resources/export/systemd/app-alpha.2.service
+- spec/resources/export/systemd/app-alpha.target
+- spec/resources/export/systemd/app-bravo.1.service
+- spec/resources/export/systemd/app-bravo.target
+- spec/resources/export/systemd/app.target
+- spec/resources/export/upstart/app-alpha-1.conf
+- spec/resources/export/upstart/app-alpha-2.conf
+- spec/resources/export/upstart/app-alpha.conf
+- spec/resources/export/upstart/app-bravo-1.conf
+- spec/resources/export/upstart/app-bravo.conf
+- spec/resources/export/upstart/app.conf
+- spec/spec_helper.rb
+homepage: https://github.com/ddollar/foreman
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Process manager for applications with multiple components
+test_files: []

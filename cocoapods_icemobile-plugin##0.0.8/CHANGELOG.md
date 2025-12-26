@@ -1,0 +1,3 @@
+## Cocoapods::IceMobilePlugin Changelog
+
+## Master

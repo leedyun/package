@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: persistent_http
+version: !ruby/object:Gem::Version
+  version: 2.0.3
+platform: ruby
+authors:
+- Brad Pardee
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-12-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: gene_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+description: Persistent HTTP connections using a connection pool
+email:
+- bradpardee@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- History.md
+- LICENSE
+- README.rdoc
+- Rakefile
+- lib/persistent_http.rb
+- lib/persistent_http/connection.rb
+- lib/persistent_http/version.rb
+homepage: http://github.com/bpardee/persistent_http
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.2.1
+signing_key: 
+specification_version: 4
+summary: Persistent HTTP connections using a connection pool
+test_files: []

@@ -1,0 +1,110 @@
+--- !ruby/object:Gem::Specification 
+name: eco
+version: !ruby/object:Gem::Version 
+  hash: 23
+  prerelease: 
+  segments: 
+  - 1
+  - 0
+  - 0
+  version: 1.0.0
+platform: ruby
+authors: 
+- Sam Stephenson
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-06-04 00:00:00 -05:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: coffee-script
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: eco-source
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: execjs
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id003
+description: "    Ruby Eco is a bridge to the official JavaScript Eco compiler.\n"
+email: sstephenson@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/eco.rb
+- LICENSE
+- README.md
+has_rdoc: true
+homepage: https://github.com/sstephenson/ruby-eco
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.5.0
+signing_key: 
+specification_version: 3
+summary: Ruby Eco Compiler (Embedded CoffeeScript templates)
+test_files: []
+

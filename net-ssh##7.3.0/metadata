@@ -1,0 +1,337 @@
+--- !ruby/object:Gem::Specification
+name: net-ssh
+version: !ruby/object:Gem::Version
+  version: 7.3.0
+platform: ruby
+authors:
+- Jamis Buck
+- Delano Mandelbaum
+- Miklós Fazekas
+autorequire: 
+bindir: exe
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDeDCCAmCgAwIBAgIBATANBgkqhkiG9w0BAQsFADBBMQ8wDQYDVQQDDAZuZXRz
+  c2gxGTAXBgoJkiaJk/IsZAEZFglzb2x1dGlvdXMxEzARBgoJkiaJk/IsZAEZFgNj
+  b20wHhcNMjQwNDAxMDk1NjIxWhcNMjUwNDAxMDk1NjIxWjBBMQ8wDQYDVQQDDAZu
+  ZXRzc2gxGTAXBgoJkiaJk/IsZAEZFglzb2x1dGlvdXMxEzARBgoJkiaJk/IsZAEZ
+  FgNjb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGJ4TbZ9H+qZ08
+  pQfJhPJTHaDCyQvCsKTFrL5O9z3tllQ7B/zksMMM+qFBpNYu9HCcg4yBATacE/PB
+  qVVyUrpr6lbH/XwoN5ljXm+bdCfmnjZvTCL2FTE6o+bcnaF0IsJyC0Q2B1fbWdXN
+  6Off1ZWoUk6We2BIM1bn6QJLxBpGyYhvOPXsYoqSuzDf2SJDDsWFZ8kV5ON13Ohm
+  JbBzn0oD8HF8FuYOewwsC0C1q4w7E5GtvHcQ5juweS7+RKsyDcVcVrLuNzoGRttS
+  KP4yMn+TzaXijyjRg7gECfJr3TGASaA4bQsILFGG5dAWcwO4OMrZedR7SHj/o0Kf
+  3gL7P0axAgMBAAGjezB5MAkGA1UdEwQCMAAwCwYDVR0PBAQDAgSwMB0GA1UdDgQW
+  BBQF8qLA7Z4zg0SJGtUbv3eoQ8tjIzAfBgNVHREEGDAWgRRuZXRzc2hAc29sdXRp
+  b3VzLmNvbTAfBgNVHRIEGDAWgRRuZXRzc2hAc29sdXRpb3VzLmNvbTANBgkqhkiG
+  9w0BAQsFAAOCAQEAfY2WbsBKwRtBep4l+Y2/84H1BKH9UVOsFxqQzYkvM2LFDyup
+  UkjYf8nPSjg3mquhaiA5KSoSVUPpNDfQo+UvY3+mlxRs96ttWiUGwz27fy82rx1B
+  ZnfKjsWOntemNON6asOD0mtv0xsNBfOB2VNIKW/uqHsiPpa0OaVy5uENhX+5OFan
+  2P1Uy+WcMiv38RlRkn4cdEIZUFupDgKFsguYlaJy473/wsae4exUgc5bvi3Splob
+  1uE/LmB/qWBVSNW8e9KDtJynhDDZBlpESyQHFQCZj6UapzxlnC46LaDncPoAtJPc
+  MlWxJ8mKghIcyXc5y4cSyGypNG5BralqnvQUyg==
+  -----END CERTIFICATE-----
+date: 2024-10-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bcrypt_pbkdf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: ed25519
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: x25519
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rbnacl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.17'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.19'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.19'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.28.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.28.0
+description: 'Net::SSH: a pure-Ruby implementation of the SSH2 client protocol. It
+  allows you to write programs that invoke and interact with processes on remote servers,
+  via SSH2.'
+email:
+- net-ssh@solutious.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- ".dockerignore"
+- ".github/FUNDING.yml"
+- ".github/config/rubocop_linter_action.yml"
+- ".github/workflows/ci-with-docker.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/rubocop.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGES.txt
+- DEVELOPMENT.md
+- Dockerfile
+- Dockerfile.openssl3
+- Gemfile
+- Gemfile.noed25519
+- Gemfile.norbnacl
+- ISSUE_TEMPLATE.md
+- LICENSE.txt
+- Manifest
+- README.md
+- Rakefile
+- SECURITY.md
+- THANKS.txt
+- appveyor.yml
+- docker-compose.yml
+- lib/net/ssh.rb
+- lib/net/ssh/authentication/agent.rb
+- lib/net/ssh/authentication/certificate.rb
+- lib/net/ssh/authentication/constants.rb
+- lib/net/ssh/authentication/ed25519.rb
+- lib/net/ssh/authentication/ed25519_loader.rb
+- lib/net/ssh/authentication/key_manager.rb
+- lib/net/ssh/authentication/methods/abstract.rb
+- lib/net/ssh/authentication/methods/hostbased.rb
+- lib/net/ssh/authentication/methods/keyboard_interactive.rb
+- lib/net/ssh/authentication/methods/none.rb
+- lib/net/ssh/authentication/methods/password.rb
+- lib/net/ssh/authentication/methods/publickey.rb
+- lib/net/ssh/authentication/pageant.rb
+- lib/net/ssh/authentication/pub_key_fingerprint.rb
+- lib/net/ssh/authentication/session.rb
+- lib/net/ssh/buffer.rb
+- lib/net/ssh/buffered_io.rb
+- lib/net/ssh/config.rb
+- lib/net/ssh/connection/channel.rb
+- lib/net/ssh/connection/constants.rb
+- lib/net/ssh/connection/event_loop.rb
+- lib/net/ssh/connection/keepalive.rb
+- lib/net/ssh/connection/session.rb
+- lib/net/ssh/connection/term.rb
+- lib/net/ssh/errors.rb
+- lib/net/ssh/key_factory.rb
+- lib/net/ssh/known_hosts.rb
+- lib/net/ssh/loggable.rb
+- lib/net/ssh/packet.rb
+- lib/net/ssh/prompt.rb
+- lib/net/ssh/proxy/command.rb
+- lib/net/ssh/proxy/errors.rb
+- lib/net/ssh/proxy/http.rb
+- lib/net/ssh/proxy/https.rb
+- lib/net/ssh/proxy/jump.rb
+- lib/net/ssh/proxy/socks4.rb
+- lib/net/ssh/proxy/socks5.rb
+- lib/net/ssh/service/forward.rb
+- lib/net/ssh/test.rb
+- lib/net/ssh/test/channel.rb
+- lib/net/ssh/test/extensions.rb
+- lib/net/ssh/test/kex.rb
+- lib/net/ssh/test/local_packet.rb
+- lib/net/ssh/test/packet.rb
+- lib/net/ssh/test/remote_packet.rb
+- lib/net/ssh/test/script.rb
+- lib/net/ssh/test/socket.rb
+- lib/net/ssh/transport/aes128_gcm.rb
+- lib/net/ssh/transport/aes256_gcm.rb
+- lib/net/ssh/transport/algorithms.rb
+- lib/net/ssh/transport/chacha20_poly1305_cipher.rb
+- lib/net/ssh/transport/chacha20_poly1305_cipher_loader.rb
+- lib/net/ssh/transport/cipher_factory.rb
+- lib/net/ssh/transport/constants.rb
+- lib/net/ssh/transport/ctr.rb
+- lib/net/ssh/transport/gcm_cipher.rb
+- lib/net/ssh/transport/hmac.rb
+- lib/net/ssh/transport/hmac/abstract.rb
+- lib/net/ssh/transport/hmac/md5.rb
+- lib/net/ssh/transport/hmac/md5_96.rb
+- lib/net/ssh/transport/hmac/none.rb
+- lib/net/ssh/transport/hmac/ripemd160.rb
+- lib/net/ssh/transport/hmac/sha1.rb
+- lib/net/ssh/transport/hmac/sha1_96.rb
+- lib/net/ssh/transport/hmac/sha2_256.rb
+- lib/net/ssh/transport/hmac/sha2_256_96.rb
+- lib/net/ssh/transport/hmac/sha2_256_etm.rb
+- lib/net/ssh/transport/hmac/sha2_512.rb
+- lib/net/ssh/transport/hmac/sha2_512_96.rb
+- lib/net/ssh/transport/hmac/sha2_512_etm.rb
+- lib/net/ssh/transport/identity_cipher.rb
+- lib/net/ssh/transport/kex.rb
+- lib/net/ssh/transport/kex/abstract.rb
+- lib/net/ssh/transport/kex/abstract5656.rb
+- lib/net/ssh/transport/kex/curve25519_sha256.rb
+- lib/net/ssh/transport/kex/curve25519_sha256_loader.rb
+- lib/net/ssh/transport/kex/diffie_hellman_group14_sha1.rb
+- lib/net/ssh/transport/kex/diffie_hellman_group14_sha256.rb
+- lib/net/ssh/transport/kex/diffie_hellman_group1_sha1.rb
+- lib/net/ssh/transport/kex/diffie_hellman_group_exchange_sha1.rb
+- lib/net/ssh/transport/kex/diffie_hellman_group_exchange_sha256.rb
+- lib/net/ssh/transport/kex/ecdh_sha2_nistp256.rb
+- lib/net/ssh/transport/kex/ecdh_sha2_nistp384.rb
+- lib/net/ssh/transport/kex/ecdh_sha2_nistp521.rb
+- lib/net/ssh/transport/key_expander.rb
+- lib/net/ssh/transport/openssl.rb
+- lib/net/ssh/transport/openssl_cipher_extensions.rb
+- lib/net/ssh/transport/packet_stream.rb
+- lib/net/ssh/transport/server_version.rb
+- lib/net/ssh/transport/session.rb
+- lib/net/ssh/transport/state.rb
+- lib/net/ssh/verifiers/accept_new.rb
+- lib/net/ssh/verifiers/accept_new_or_local_tunnel.rb
+- lib/net/ssh/verifiers/always.rb
+- lib/net/ssh/verifiers/never.rb
+- lib/net/ssh/version.rb
+- net-ssh-public_cert.pem
+- net-ssh.gemspec
+- support/ssh_tunnel_bug.rb
+homepage: https://github.com/net-ssh/net-ssh
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/net-ssh/net-ssh/blob/master/CHANGES.txt
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key: 
+specification_version: 4
+summary: 'Net::SSH: a pure-Ruby implementation of the SSH2 client protocol.'
+test_files: []

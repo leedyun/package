@@ -1,0 +1,126 @@
+--- !ruby/object:Gem::Specification
+name: optparse
+version: !ruby/object:Gem::Version
+  version: 0.6.0
+platform: ruby
+authors:
+- Nobu Nakada
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2024-11-08 00:00:00.000000000 Z
+dependencies: []
+description: OptionParser is a class for command-line option analysis.
+email:
+- nobu@ruby-lang.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- ".rdoc_options"
+- COPYING
+- ChangeLog
+- README.md
+- doc/optparse/.document
+- doc/optparse/argument_converters.rdoc
+- doc/optparse/creates_option.rdoc
+- doc/optparse/option_params.rdoc
+- doc/optparse/ruby/argument_abbreviation.rb
+- doc/optparse/ruby/argument_keywords.rb
+- doc/optparse/ruby/argument_strings.rb
+- doc/optparse/ruby/argv.rb
+- doc/optparse/ruby/array.rb
+- doc/optparse/ruby/basic.rb
+- doc/optparse/ruby/block.rb
+- doc/optparse/ruby/collected_options.rb
+- doc/optparse/ruby/custom_converter.rb
+- doc/optparse/ruby/date.rb
+- doc/optparse/ruby/datetime.rb
+- doc/optparse/ruby/decimal_integer.rb
+- doc/optparse/ruby/decimal_numeric.rb
+- doc/optparse/ruby/default_values.rb
+- doc/optparse/ruby/descriptions.rb
+- doc/optparse/ruby/explicit_array_values.rb
+- doc/optparse/ruby/explicit_hash_values.rb
+- doc/optparse/ruby/false_class.rb
+- doc/optparse/ruby/float.rb
+- doc/optparse/ruby/help.rb
+- doc/optparse/ruby/help_banner.rb
+- doc/optparse/ruby/help_format.rb
+- doc/optparse/ruby/help_program_name.rb
+- doc/optparse/ruby/integer.rb
+- doc/optparse/ruby/long_names.rb
+- doc/optparse/ruby/long_optional.rb
+- doc/optparse/ruby/long_required.rb
+- doc/optparse/ruby/long_simple.rb
+- doc/optparse/ruby/long_with_negation.rb
+- doc/optparse/ruby/match_converter.rb
+- doc/optparse/ruby/matched_values.rb
+- doc/optparse/ruby/method.rb
+- doc/optparse/ruby/missing_options.rb
+- doc/optparse/ruby/mixed_names.rb
+- doc/optparse/ruby/name_abbrev.rb
+- doc/optparse/ruby/no_abbreviation.rb
+- doc/optparse/ruby/numeric.rb
+- doc/optparse/ruby/object.rb
+- doc/optparse/ruby/octal_integer.rb
+- doc/optparse/ruby/optional_argument.rb
+- doc/optparse/ruby/parse.rb
+- doc/optparse/ruby/parse_bang.rb
+- doc/optparse/ruby/proc.rb
+- doc/optparse/ruby/regexp.rb
+- doc/optparse/ruby/required_argument.rb
+- doc/optparse/ruby/shellwords.rb
+- doc/optparse/ruby/short_names.rb
+- doc/optparse/ruby/short_optional.rb
+- doc/optparse/ruby/short_range.rb
+- doc/optparse/ruby/short_required.rb
+- doc/optparse/ruby/short_simple.rb
+- doc/optparse/ruby/string.rb
+- doc/optparse/ruby/terminator.rb
+- doc/optparse/ruby/time.rb
+- doc/optparse/ruby/true_class.rb
+- doc/optparse/ruby/uri.rb
+- doc/optparse/tutorial.rdoc
+- lib/optionparser.rb
+- lib/optparse.rb
+- lib/optparse/ac.rb
+- lib/optparse/date.rb
+- lib/optparse/kwargs.rb
+- lib/optparse/shellwords.rb
+- lib/optparse/time.rb
+- lib/optparse/uri.rb
+- lib/optparse/version.rb
+- misc/rb_optparse.bash
+- misc/rb_optparse.zsh
+homepage: https://github.com/ruby/optparse
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata:
+  homepage_uri: https://github.com/ruby/optparse
+  source_code_uri: https://github.com/ruby/optparse
+post_install_message: 
+rdoc_options:
+- "--main=README.md"
+- "--op=rdoc"
+- "--page-dir=doc"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key: 
+specification_version: 4
+summary: OptionParser is a class for command-line option analysis.
+test_files: []

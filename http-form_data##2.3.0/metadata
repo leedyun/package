@@ -1,0 +1,88 @@
+--- !ruby/object:Gem::Specification
+name: http-form_data
+version: !ruby/object:Gem::Version
+  version: 2.3.0
+platform: ruby
+authors:
+- Aleksey V Zapparov
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-03-09 00:00:00.000000000 Z
+dependencies: []
+description: Utility-belt to build form data request bodies. Provides support for
+  `application/x-www-form-urlencoded` and `multipart/form-data` types.
+email:
+- ixti@member.fsf.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".editorconfig"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- ".yardopts"
+- CHANGES.md
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- appveyor.yml
+- http-form_data.gemspec
+- lib/http/form_data.rb
+- lib/http/form_data/composite_io.rb
+- lib/http/form_data/file.rb
+- lib/http/form_data/multipart.rb
+- lib/http/form_data/multipart/param.rb
+- lib/http/form_data/part.rb
+- lib/http/form_data/readable.rb
+- lib/http/form_data/urlencoded.rb
+- lib/http/form_data/version.rb
+- spec/fixtures/expected-multipart-body.tpl
+- spec/fixtures/the-http-gem.info
+- spec/lib/http/form_data/composite_io_spec.rb
+- spec/lib/http/form_data/file_spec.rb
+- spec/lib/http/form_data/multipart_spec.rb
+- spec/lib/http/form_data/part_spec.rb
+- spec/lib/http/form_data/urlencoded_spec.rb
+- spec/lib/http/form_data_spec.rb
+- spec/spec_helper.rb
+- spec/support/fixtures_helper.rb
+homepage: https://github.com/httprb/form_data.rb
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6.2
+signing_key: 
+specification_version: 4
+summary: http-form_data-2.3.0
+test_files:
+- spec/fixtures/expected-multipart-body.tpl
+- spec/fixtures/the-http-gem.info
+- spec/lib/http/form_data/composite_io_spec.rb
+- spec/lib/http/form_data/file_spec.rb
+- spec/lib/http/form_data/multipart_spec.rb
+- spec/lib/http/form_data/part_spec.rb
+- spec/lib/http/form_data/urlencoded_spec.rb
+- spec/lib/http/form_data_spec.rb
+- spec/spec_helper.rb
+- spec/support/fixtures_helper.rb

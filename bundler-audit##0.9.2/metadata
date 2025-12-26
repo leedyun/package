@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: bundler-audit
+version: !ruby/object:Gem::Version
+  version: 0.9.2
+platform: ruby
+authors:
+- Postmodern
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description: bundler-audit provides patch-level verification for Bundled apps.
+email: postmodern.mod3@gmail.com
+executables:
+- bundle-audit
+- bundler-audit
+extensions: []
+extra_rdoc_files:
+- COPYING.txt
+- ChangeLog.md
+- README.md
+files:
+- ".document"
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug-report.md"
+- ".github/ISSUE_TEMPLATE/feature-request.md"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".yardopts"
+- COPYING.txt
+- ChangeLog.md
+- Gemfile
+- README.md
+- Rakefile
+- bin/bundle-audit
+- bin/bundler-audit
+- bundler-audit.gemspec
+- gemspec.yml
+- lib/bundler/audit.rb
+- lib/bundler/audit/advisory.rb
+- lib/bundler/audit/cli.rb
+- lib/bundler/audit/cli/formats.rb
+- lib/bundler/audit/cli/formats/json.rb
+- lib/bundler/audit/cli/formats/junit.rb
+- lib/bundler/audit/cli/formats/text.rb
+- lib/bundler/audit/cli/thor_ext/shell/basic/say_error.rb
+- lib/bundler/audit/configuration.rb
+- lib/bundler/audit/database.rb
+- lib/bundler/audit/report.rb
+- lib/bundler/audit/results.rb
+- lib/bundler/audit/results/insecure_source.rb
+- lib/bundler/audit/results/result.rb
+- lib/bundler/audit/results/unpatched_gem.rb
+- lib/bundler/audit/scanner.rb
+- lib/bundler/audit/task.rb
+- lib/bundler/audit/version.rb
+- spec/advisory_spec.rb
+- spec/audit_spec.rb
+- spec/bundle/insecure_sources/Gemfile
+- spec/bundle/insecure_sources/Gemfile.lock
+- spec/bundle/secure/Gemfile
+- spec/bundle/secure/Gemfile.lock
+- spec/bundle/unpatched_gems/Gemfile
+- spec/bundle/unpatched_gems/Gemfile.lock
+- spec/bundle/unpatched_gems_with_dot_configuration/.bundler-audit.yml
+- spec/bundle/unpatched_gems_with_dot_configuration/Gemfile
+- spec/bundle/unpatched_gems_with_dot_configuration/Gemfile.lock
+- spec/cli/formats/json_spec.rb
+- spec/cli/formats/junit_spec.rb
+- spec/cli/formats/text_spec.rb
+- spec/cli/formats_spec.rb
+- spec/cli_spec.rb
+- spec/configuration_spec.rb
+- spec/database_spec.rb
+- spec/fixtures/advisory/CVE-2020-1234.yml
+- spec/fixtures/advisory/not_a_hash.yml
+- spec/fixtures/config/bad/empty.yml
+- spec/fixtures/config/bad/ignore_contains_a_non_string.yml
+- spec/fixtures/config/bad/ignore_is_not_an_array.yml
+- spec/fixtures/config/valid.yml
+- spec/fixtures/lib/bundler/audit/cli/formats/bad.rb
+- spec/fixtures/lib/bundler/audit/cli/formats/good.rb
+- spec/integration_spec.rb
+- spec/report_spec.rb
+- spec/results/insecure_source_spec.rb
+- spec/results/result_spec.rb
+- spec/results/unpatched_gem_spec.rb
+- spec/scanner_spec.rb
+- spec/spec_helper.rb
+- spec/task_spec.rb
+homepage: https://github.com/rubysec/bundler-audit#readme
+licenses:
+- GPL-3.0-or-later
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.8.0
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Patch-level verification for Bundler
+test_files: []

@@ -1,0 +1,196 @@
+--- !ruby/object:Gem::Specification
+name: typhoeus
+version: !ruby/object:Gem::Version
+  version: 1.4.1
+platform: ruby
+authors:
+- David Balatero
+- Paul Dix
+- Hans Hasselberg
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-11-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ethon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+description: Like a modern code version of the mythical beast with 100 serpent heads,
+  Typhoeus runs HTTP requests in parallel while cleanly encapsulating handling logic.
+email:
+- hans.hasselberg@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".github/workflows/experimental.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- UPGRADE.md
+- lib/rack/typhoeus.rb
+- lib/rack/typhoeus/middleware/params_decoder.rb
+- lib/rack/typhoeus/middleware/params_decoder/helper.rb
+- lib/typhoeus.rb
+- lib/typhoeus/adapters/faraday.rb
+- lib/typhoeus/cache/dalli.rb
+- lib/typhoeus/cache/rails.rb
+- lib/typhoeus/cache/redis.rb
+- lib/typhoeus/config.rb
+- lib/typhoeus/easy_factory.rb
+- lib/typhoeus/errors.rb
+- lib/typhoeus/errors/no_stub.rb
+- lib/typhoeus/errors/typhoeus_error.rb
+- lib/typhoeus/expectation.rb
+- lib/typhoeus/hydra.rb
+- lib/typhoeus/hydra/addable.rb
+- lib/typhoeus/hydra/before.rb
+- lib/typhoeus/hydra/block_connection.rb
+- lib/typhoeus/hydra/cacheable.rb
+- lib/typhoeus/hydra/memoizable.rb
+- lib/typhoeus/hydra/queueable.rb
+- lib/typhoeus/hydra/runnable.rb
+- lib/typhoeus/hydra/stubbable.rb
+- lib/typhoeus/pool.rb
+- lib/typhoeus/railtie.rb
+- lib/typhoeus/request.rb
+- lib/typhoeus/request/actions.rb
+- lib/typhoeus/request/before.rb
+- lib/typhoeus/request/block_connection.rb
+- lib/typhoeus/request/cacheable.rb
+- lib/typhoeus/request/callbacks.rb
+- lib/typhoeus/request/marshal.rb
+- lib/typhoeus/request/memoizable.rb
+- lib/typhoeus/request/operations.rb
+- lib/typhoeus/request/responseable.rb
+- lib/typhoeus/request/streamable.rb
+- lib/typhoeus/request/stubbable.rb
+- lib/typhoeus/response.rb
+- lib/typhoeus/response/cacheable.rb
+- lib/typhoeus/response/header.rb
+- lib/typhoeus/response/informations.rb
+- lib/typhoeus/response/status.rb
+- lib/typhoeus/version.rb
+- perf/profile.rb
+- perf/vs_nethttp.rb
+- spec/rack/typhoeus/middleware/params_decoder/helper_spec.rb
+- spec/rack/typhoeus/middleware/params_decoder_spec.rb
+- spec/spec_helper.rb
+- spec/support/localhost_server.rb
+- spec/support/memory_cache.rb
+- spec/support/server.rb
+- spec/typhoeus/adapters/faraday_spec.rb
+- spec/typhoeus/cache/dalli_spec.rb
+- spec/typhoeus/cache/redis_spec.rb
+- spec/typhoeus/config_spec.rb
+- spec/typhoeus/easy_factory_spec.rb
+- spec/typhoeus/errors/no_stub_spec.rb
+- spec/typhoeus/expectation_spec.rb
+- spec/typhoeus/hydra/addable_spec.rb
+- spec/typhoeus/hydra/before_spec.rb
+- spec/typhoeus/hydra/block_connection_spec.rb
+- spec/typhoeus/hydra/cacheable_spec.rb
+- spec/typhoeus/hydra/memoizable_spec.rb
+- spec/typhoeus/hydra/queueable_spec.rb
+- spec/typhoeus/hydra/runnable_spec.rb
+- spec/typhoeus/hydra/stubbable_spec.rb
+- spec/typhoeus/hydra_spec.rb
+- spec/typhoeus/pool_spec.rb
+- spec/typhoeus/request/actions_spec.rb
+- spec/typhoeus/request/before_spec.rb
+- spec/typhoeus/request/block_connection_spec.rb
+- spec/typhoeus/request/cacheable_spec.rb
+- spec/typhoeus/request/callbacks_spec.rb
+- spec/typhoeus/request/marshal_spec.rb
+- spec/typhoeus/request/memoizable_spec.rb
+- spec/typhoeus/request/operations_spec.rb
+- spec/typhoeus/request/responseable_spec.rb
+- spec/typhoeus/request/stubbable_spec.rb
+- spec/typhoeus/request_spec.rb
+- spec/typhoeus/response/header_spec.rb
+- spec/typhoeus/response/informations_spec.rb
+- spec/typhoeus/response/status_spec.rb
+- spec/typhoeus/response_spec.rb
+- spec/typhoeus_spec.rb
+- typhoeus.gemspec
+homepage: https://github.com/typhoeus/typhoeus
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Parallel HTTP library on top of libcurl multi.
+test_files:
+- spec/rack/typhoeus/middleware/params_decoder/helper_spec.rb
+- spec/rack/typhoeus/middleware/params_decoder_spec.rb
+- spec/spec_helper.rb
+- spec/support/localhost_server.rb
+- spec/support/memory_cache.rb
+- spec/support/server.rb
+- spec/typhoeus/adapters/faraday_spec.rb
+- spec/typhoeus/cache/dalli_spec.rb
+- spec/typhoeus/cache/redis_spec.rb
+- spec/typhoeus/config_spec.rb
+- spec/typhoeus/easy_factory_spec.rb
+- spec/typhoeus/errors/no_stub_spec.rb
+- spec/typhoeus/expectation_spec.rb
+- spec/typhoeus/hydra/addable_spec.rb
+- spec/typhoeus/hydra/before_spec.rb
+- spec/typhoeus/hydra/block_connection_spec.rb
+- spec/typhoeus/hydra/cacheable_spec.rb
+- spec/typhoeus/hydra/memoizable_spec.rb
+- spec/typhoeus/hydra/queueable_spec.rb
+- spec/typhoeus/hydra/runnable_spec.rb
+- spec/typhoeus/hydra/stubbable_spec.rb
+- spec/typhoeus/hydra_spec.rb
+- spec/typhoeus/pool_spec.rb
+- spec/typhoeus/request/actions_spec.rb
+- spec/typhoeus/request/before_spec.rb
+- spec/typhoeus/request/block_connection_spec.rb
+- spec/typhoeus/request/cacheable_spec.rb
+- spec/typhoeus/request/callbacks_spec.rb
+- spec/typhoeus/request/marshal_spec.rb
+- spec/typhoeus/request/memoizable_spec.rb
+- spec/typhoeus/request/operations_spec.rb
+- spec/typhoeus/request/responseable_spec.rb
+- spec/typhoeus/request/stubbable_spec.rb
+- spec/typhoeus/request_spec.rb
+- spec/typhoeus/response/header_spec.rb
+- spec/typhoeus/response/informations_spec.rb
+- spec/typhoeus/response/status_spec.rb
+- spec/typhoeus/response_spec.rb
+- spec/typhoeus_spec.rb

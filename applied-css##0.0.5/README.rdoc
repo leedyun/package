@@ -1,0 +1,9 @@
+= applied_css
+
+applied_css extracts the css declarations that should be applied to a particular node.
+
+
+== Copyright
+
+Copyright (c) 2011 Mimtech. See LICENSE.txt for further details.
+

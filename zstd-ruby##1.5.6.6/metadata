@@ -1,0 +1,207 @@
+--- !ruby/object:Gem::Specification
+name: zstd-ruby
+version: !ruby/object:Gem::Version
+  version: 1.5.6.6
+platform: ruby
+authors:
+- SpringMT
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-05-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby binding for zstd(Zstandard - Fast real-time compression algorithm).
+  See https://github.com/facebook/zstd
+email:
+- today.is.sky.blue.sky@gmail.com
+executables: []
+extensions:
+- ext/zstdruby/extconf.rb
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitmodules"
+- ".rspec"
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- ext/zstdruby/common.h
+- ext/zstdruby/extconf.rb
+- ext/zstdruby/libzstd/common/allocations.h
+- ext/zstdruby/libzstd/common/bits.h
+- ext/zstdruby/libzstd/common/bitstream.h
+- ext/zstdruby/libzstd/common/compiler.h
+- ext/zstdruby/libzstd/common/cpu.h
+- ext/zstdruby/libzstd/common/debug.c
+- ext/zstdruby/libzstd/common/debug.h
+- ext/zstdruby/libzstd/common/entropy_common.c
+- ext/zstdruby/libzstd/common/error_private.c
+- ext/zstdruby/libzstd/common/error_private.h
+- ext/zstdruby/libzstd/common/fse.h
+- ext/zstdruby/libzstd/common/fse_decompress.c
+- ext/zstdruby/libzstd/common/huf.h
+- ext/zstdruby/libzstd/common/mem.h
+- ext/zstdruby/libzstd/common/pool.c
+- ext/zstdruby/libzstd/common/pool.h
+- ext/zstdruby/libzstd/common/portability_macros.h
+- ext/zstdruby/libzstd/common/threading.c
+- ext/zstdruby/libzstd/common/threading.h
+- ext/zstdruby/libzstd/common/xxhash.c
+- ext/zstdruby/libzstd/common/xxhash.h
+- ext/zstdruby/libzstd/common/zstd_common.c
+- ext/zstdruby/libzstd/common/zstd_deps.h
+- ext/zstdruby/libzstd/common/zstd_internal.h
+- ext/zstdruby/libzstd/common/zstd_trace.h
+- ext/zstdruby/libzstd/compress/clevels.h
+- ext/zstdruby/libzstd/compress/fse_compress.c
+- ext/zstdruby/libzstd/compress/hist.c
+- ext/zstdruby/libzstd/compress/hist.h
+- ext/zstdruby/libzstd/compress/huf_compress.c
+- ext/zstdruby/libzstd/compress/zstd_compress.c
+- ext/zstdruby/libzstd/compress/zstd_compress_internal.h
+- ext/zstdruby/libzstd/compress/zstd_compress_literals.c
+- ext/zstdruby/libzstd/compress/zstd_compress_literals.h
+- ext/zstdruby/libzstd/compress/zstd_compress_sequences.c
+- ext/zstdruby/libzstd/compress/zstd_compress_sequences.h
+- ext/zstdruby/libzstd/compress/zstd_compress_superblock.c
+- ext/zstdruby/libzstd/compress/zstd_compress_superblock.h
+- ext/zstdruby/libzstd/compress/zstd_cwksp.h
+- ext/zstdruby/libzstd/compress/zstd_double_fast.c
+- ext/zstdruby/libzstd/compress/zstd_double_fast.h
+- ext/zstdruby/libzstd/compress/zstd_fast.c
+- ext/zstdruby/libzstd/compress/zstd_fast.h
+- ext/zstdruby/libzstd/compress/zstd_lazy.c
+- ext/zstdruby/libzstd/compress/zstd_lazy.h
+- ext/zstdruby/libzstd/compress/zstd_ldm.c
+- ext/zstdruby/libzstd/compress/zstd_ldm.h
+- ext/zstdruby/libzstd/compress/zstd_ldm_geartab.h
+- ext/zstdruby/libzstd/compress/zstd_opt.c
+- ext/zstdruby/libzstd/compress/zstd_opt.h
+- ext/zstdruby/libzstd/compress/zstdmt_compress.c
+- ext/zstdruby/libzstd/compress/zstdmt_compress.h
+- ext/zstdruby/libzstd/decompress/huf_decompress.c
+- ext/zstdruby/libzstd/decompress/huf_decompress_amd64.S
+- ext/zstdruby/libzstd/decompress/zstd_ddict.c
+- ext/zstdruby/libzstd/decompress/zstd_ddict.h
+- ext/zstdruby/libzstd/decompress/zstd_decompress.c
+- ext/zstdruby/libzstd/decompress/zstd_decompress_block.c
+- ext/zstdruby/libzstd/decompress/zstd_decompress_block.h
+- ext/zstdruby/libzstd/decompress/zstd_decompress_internal.h
+- ext/zstdruby/libzstd/dictBuilder/cover.c
+- ext/zstdruby/libzstd/dictBuilder/cover.h
+- ext/zstdruby/libzstd/dictBuilder/divsufsort.c
+- ext/zstdruby/libzstd/dictBuilder/divsufsort.h
+- ext/zstdruby/libzstd/dictBuilder/fastcover.c
+- ext/zstdruby/libzstd/dictBuilder/zdict.c
+- ext/zstdruby/libzstd/zdict.h
+- ext/zstdruby/libzstd/zstd.h
+- ext/zstdruby/libzstd/zstd_errors.h
+- ext/zstdruby/main.c
+- ext/zstdruby/skippable_frame.c
+- ext/zstdruby/streaming_compress.c
+- ext/zstdruby/streaming_decompress.c
+- ext/zstdruby/zstdruby.c
+- lib/zstd-ruby.rb
+- lib/zstd-ruby/stream_reader.rb
+- lib/zstd-ruby/stream_writer.rb
+- lib/zstd-ruby/version.rb
+- renovate.json
+- zstd-ruby.gemspec
+homepage: https://github.com/SpringMT/zstd-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Ruby binding for zstd(Zstandard - Fast real-time compression algorithm)
+test_files: []

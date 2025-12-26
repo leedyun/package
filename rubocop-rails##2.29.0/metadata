@@ -1,0 +1,273 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-rails
+version: !ruby/object:Gem::Version
+  version: 2.29.0
+platform: ruby
+authors:
+- Bozhidar Batsov
+- Jonas Arvidsson
+- Yuji Nakayama
+bindir: bin
+cert_chain: []
+date: 2025-01-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.2.0
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.52.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.52.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-ast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: |
+  Automatic Rails code style checking tool.
+  A RuboCop extension focused on enforcing Rails best practices and coding conventions.
+email: rubocop@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- LICENSE.txt
+- README.md
+- config/default.yml
+- config/obsoletion.yml
+- lib/rubocop-rails.rb
+- lib/rubocop/cop/mixin/active_record_helper.rb
+- lib/rubocop/cop/mixin/active_record_migrations_helper.rb
+- lib/rubocop/cop/mixin/class_send_node_helper.rb
+- lib/rubocop/cop/mixin/database_type_resolvable.rb
+- lib/rubocop/cop/mixin/enforce_superclass.rb
+- lib/rubocop/cop/mixin/index_method.rb
+- lib/rubocop/cop/mixin/migrations_helper.rb
+- lib/rubocop/cop/mixin/routes_helper.rb
+- lib/rubocop/cop/mixin/target_rails_version.rb
+- lib/rubocop/cop/rails/action_controller_flash_before_render.rb
+- lib/rubocop/cop/rails/action_controller_test_case.rb
+- lib/rubocop/cop/rails/action_filter.rb
+- lib/rubocop/cop/rails/action_order.rb
+- lib/rubocop/cop/rails/active_record_aliases.rb
+- lib/rubocop/cop/rails/active_record_callbacks_order.rb
+- lib/rubocop/cop/rails/active_record_override.rb
+- lib/rubocop/cop/rails/active_support_aliases.rb
+- lib/rubocop/cop/rails/active_support_on_load.rb
+- lib/rubocop/cop/rails/add_column_index.rb
+- lib/rubocop/cop/rails/after_commit_override.rb
+- lib/rubocop/cop/rails/application_controller.rb
+- lib/rubocop/cop/rails/application_job.rb
+- lib/rubocop/cop/rails/application_mailer.rb
+- lib/rubocop/cop/rails/application_record.rb
+- lib/rubocop/cop/rails/arel_star.rb
+- lib/rubocop/cop/rails/assert_not.rb
+- lib/rubocop/cop/rails/attribute_default_block_value.rb
+- lib/rubocop/cop/rails/belongs_to.rb
+- lib/rubocop/cop/rails/blank.rb
+- lib/rubocop/cop/rails/bulk_change_table.rb
+- lib/rubocop/cop/rails/compact_blank.rb
+- lib/rubocop/cop/rails/content_tag.rb
+- lib/rubocop/cop/rails/create_table_with_timestamps.rb
+- lib/rubocop/cop/rails/dangerous_column_names.rb
+- lib/rubocop/cop/rails/date.rb
+- lib/rubocop/cop/rails/default_scope.rb
+- lib/rubocop/cop/rails/delegate.rb
+- lib/rubocop/cop/rails/delegate_allow_blank.rb
+- lib/rubocop/cop/rails/deprecated_active_model_errors_methods.rb
+- lib/rubocop/cop/rails/dot_separated_keys.rb
+- lib/rubocop/cop/rails/duplicate_association.rb
+- lib/rubocop/cop/rails/duplicate_scope.rb
+- lib/rubocop/cop/rails/duration_arithmetic.rb
+- lib/rubocop/cop/rails/dynamic_find_by.rb
+- lib/rubocop/cop/rails/eager_evaluation_log_message.rb
+- lib/rubocop/cop/rails/enum_hash.rb
+- lib/rubocop/cop/rails/enum_syntax.rb
+- lib/rubocop/cop/rails/enum_uniqueness.rb
+- lib/rubocop/cop/rails/env_local.rb
+- lib/rubocop/cop/rails/environment_comparison.rb
+- lib/rubocop/cop/rails/environment_variable_access.rb
+- lib/rubocop/cop/rails/exit.rb
+- lib/rubocop/cop/rails/expanded_date_range.rb
+- lib/rubocop/cop/rails/file_path.rb
+- lib/rubocop/cop/rails/find_by.rb
+- lib/rubocop/cop/rails/find_by_id.rb
+- lib/rubocop/cop/rails/find_each.rb
+- lib/rubocop/cop/rails/freeze_time.rb
+- lib/rubocop/cop/rails/has_and_belongs_to_many.rb
+- lib/rubocop/cop/rails/has_many_or_has_one_dependent.rb
+- lib/rubocop/cop/rails/helper_instance_variable.rb
+- lib/rubocop/cop/rails/http_positional_arguments.rb
+- lib/rubocop/cop/rails/http_status.rb
+- lib/rubocop/cop/rails/i18n_lazy_lookup.rb
+- lib/rubocop/cop/rails/i18n_locale_assignment.rb
+- lib/rubocop/cop/rails/i18n_locale_texts.rb
+- lib/rubocop/cop/rails/ignored_columns_assignment.rb
+- lib/rubocop/cop/rails/ignored_skip_action_filter_option.rb
+- lib/rubocop/cop/rails/index_by.rb
+- lib/rubocop/cop/rails/index_with.rb
+- lib/rubocop/cop/rails/inquiry.rb
+- lib/rubocop/cop/rails/inverse_of.rb
+- lib/rubocop/cop/rails/lexically_scoped_action_filter.rb
+- lib/rubocop/cop/rails/link_to_blank.rb
+- lib/rubocop/cop/rails/mailer_name.rb
+- lib/rubocop/cop/rails/match_route.rb
+- lib/rubocop/cop/rails/migration_class_name.rb
+- lib/rubocop/cop/rails/multiple_route_paths.rb
+- lib/rubocop/cop/rails/negate_include.rb
+- lib/rubocop/cop/rails/not_null_column.rb
+- lib/rubocop/cop/rails/order_by_id.rb
+- lib/rubocop/cop/rails/output.rb
+- lib/rubocop/cop/rails/output_safety.rb
+- lib/rubocop/cop/rails/pick.rb
+- lib/rubocop/cop/rails/pluck.rb
+- lib/rubocop/cop/rails/pluck_id.rb
+- lib/rubocop/cop/rails/pluck_in_where.rb
+- lib/rubocop/cop/rails/pluralization_grammar.rb
+- lib/rubocop/cop/rails/presence.rb
+- lib/rubocop/cop/rails/present.rb
+- lib/rubocop/cop/rails/rake_environment.rb
+- lib/rubocop/cop/rails/read_write_attribute.rb
+- lib/rubocop/cop/rails/redundant_active_record_all_method.rb
+- lib/rubocop/cop/rails/redundant_allow_nil.rb
+- lib/rubocop/cop/rails/redundant_foreign_key.rb
+- lib/rubocop/cop/rails/redundant_presence_validation_on_belongs_to.rb
+- lib/rubocop/cop/rails/redundant_receiver_in_with_options.rb
+- lib/rubocop/cop/rails/redundant_travel_back.rb
+- lib/rubocop/cop/rails/reflection_class_name.rb
+- lib/rubocop/cop/rails/refute_methods.rb
+- lib/rubocop/cop/rails/relative_date_constant.rb
+- lib/rubocop/cop/rails/render_inline.rb
+- lib/rubocop/cop/rails/render_plain_text.rb
+- lib/rubocop/cop/rails/request_referer.rb
+- lib/rubocop/cop/rails/require_dependency.rb
+- lib/rubocop/cop/rails/response_parsed_body.rb
+- lib/rubocop/cop/rails/reversible_migration.rb
+- lib/rubocop/cop/rails/reversible_migration_method_definition.rb
+- lib/rubocop/cop/rails/root_join_chain.rb
+- lib/rubocop/cop/rails/root_pathname_methods.rb
+- lib/rubocop/cop/rails/root_public_path.rb
+- lib/rubocop/cop/rails/safe_navigation.rb
+- lib/rubocop/cop/rails/safe_navigation_with_blank.rb
+- lib/rubocop/cop/rails/save_bang.rb
+- lib/rubocop/cop/rails/schema_comment.rb
+- lib/rubocop/cop/rails/scope_args.rb
+- lib/rubocop/cop/rails/select_map.rb
+- lib/rubocop/cop/rails/short_i18n.rb
+- lib/rubocop/cop/rails/skips_model_validations.rb
+- lib/rubocop/cop/rails/squished_sql_heredocs.rb
+- lib/rubocop/cop/rails/strip_heredoc.rb
+- lib/rubocop/cop/rails/strong_parameters_expect.rb
+- lib/rubocop/cop/rails/table_name_assignment.rb
+- lib/rubocop/cop/rails/three_state_boolean_column.rb
+- lib/rubocop/cop/rails/time_zone.rb
+- lib/rubocop/cop/rails/time_zone_assignment.rb
+- lib/rubocop/cop/rails/to_formatted_s.rb
+- lib/rubocop/cop/rails/to_s_with_argument.rb
+- lib/rubocop/cop/rails/top_level_hash_with_indifferent_access.rb
+- lib/rubocop/cop/rails/transaction_exit_statement.rb
+- lib/rubocop/cop/rails/uniq_before_pluck.rb
+- lib/rubocop/cop/rails/unique_validation_without_index.rb
+- lib/rubocop/cop/rails/unknown_env.rb
+- lib/rubocop/cop/rails/unused_ignored_columns.rb
+- lib/rubocop/cop/rails/unused_render_content.rb
+- lib/rubocop/cop/rails/validation.rb
+- lib/rubocop/cop/rails/where_equals.rb
+- lib/rubocop/cop/rails/where_exists.rb
+- lib/rubocop/cop/rails/where_missing.rb
+- lib/rubocop/cop/rails/where_not.rb
+- lib/rubocop/cop/rails/where_not_with_multiple_conditions.rb
+- lib/rubocop/cop/rails/where_range.rb
+- lib/rubocop/cop/rails_cops.rb
+- lib/rubocop/rails.rb
+- lib/rubocop/rails/inject.rb
+- lib/rubocop/rails/migration_file_skippable.rb
+- lib/rubocop/rails/schema_loader.rb
+- lib/rubocop/rails/schema_loader/schema.rb
+- lib/rubocop/rails/version.rb
+homepage: https://github.com/rubocop/rubocop-rails
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://docs.rubocop.org/rubocop-rails/
+  changelog_uri: https://github.com/rubocop/rubocop-rails/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/rubocop/rubocop-rails/
+  documentation_uri: https://docs.rubocop.org/rubocop-rails/2.29/
+  bug_tracker_uri: https://github.com/rubocop/rubocop-rails/issues
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Automatic Rails code style checking tool.
+test_files: []

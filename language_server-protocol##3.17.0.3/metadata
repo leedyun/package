@@ -1,0 +1,486 @@
+--- !ruby/object:Gem::Specification
+name: language_server-protocol
+version: !ruby/object:Gem::Version
+  version: 3.17.0.3
+platform: ruby
+authors:
+- Fumiaki MATSUSHIMA
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2023-01-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-power_assert
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Language Server Protocol SDK
+email:
+- mtsmfm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/language_server-protocol.rb
+- lib/language_server/protocol.rb
+- lib/language_server/protocol/constant.rb
+- lib/language_server/protocol/constant/code_action_kind.rb
+- lib/language_server/protocol/constant/code_action_trigger_kind.rb
+- lib/language_server/protocol/constant/completion_item_kind.rb
+- lib/language_server/protocol/constant/completion_item_tag.rb
+- lib/language_server/protocol/constant/completion_trigger_kind.rb
+- lib/language_server/protocol/constant/diagnostic_severity.rb
+- lib/language_server/protocol/constant/diagnostic_tag.rb
+- lib/language_server/protocol/constant/document_diagnostic_report_kind.rb
+- lib/language_server/protocol/constant/document_highlight_kind.rb
+- lib/language_server/protocol/constant/error_codes.rb
+- lib/language_server/protocol/constant/failure_handling_kind.rb
+- lib/language_server/protocol/constant/file_change_type.rb
+- lib/language_server/protocol/constant/file_operation_pattern_kind.rb
+- lib/language_server/protocol/constant/folding_range_kind.rb
+- lib/language_server/protocol/constant/initialize_error_codes.rb
+- lib/language_server/protocol/constant/inlay_hint_kind.rb
+- lib/language_server/protocol/constant/insert_text_format.rb
+- lib/language_server/protocol/constant/insert_text_mode.rb
+- lib/language_server/protocol/constant/markup_kind.rb
+- lib/language_server/protocol/constant/message_type.rb
+- lib/language_server/protocol/constant/moniker_kind.rb
+- lib/language_server/protocol/constant/notebook_cell_kind.rb
+- lib/language_server/protocol/constant/position_encoding_kind.rb
+- lib/language_server/protocol/constant/prepare_support_default_behavior.rb
+- lib/language_server/protocol/constant/resource_operation_kind.rb
+- lib/language_server/protocol/constant/semantic_token_modifiers.rb
+- lib/language_server/protocol/constant/semantic_token_types.rb
+- lib/language_server/protocol/constant/signature_help_trigger_kind.rb
+- lib/language_server/protocol/constant/symbol_kind.rb
+- lib/language_server/protocol/constant/symbol_tag.rb
+- lib/language_server/protocol/constant/text_document_save_reason.rb
+- lib/language_server/protocol/constant/text_document_sync_kind.rb
+- lib/language_server/protocol/constant/token_format.rb
+- lib/language_server/protocol/constant/uniqueness_level.rb
+- lib/language_server/protocol/constant/watch_kind.rb
+- lib/language_server/protocol/interface.rb
+- lib/language_server/protocol/interface/annotated_text_edit.rb
+- lib/language_server/protocol/interface/apply_workspace_edit_params.rb
+- lib/language_server/protocol/interface/apply_workspace_edit_result.rb
+- lib/language_server/protocol/interface/call_hierarchy_client_capabilities.rb
+- lib/language_server/protocol/interface/call_hierarchy_incoming_call.rb
+- lib/language_server/protocol/interface/call_hierarchy_incoming_calls_params.rb
+- lib/language_server/protocol/interface/call_hierarchy_item.rb
+- lib/language_server/protocol/interface/call_hierarchy_options.rb
+- lib/language_server/protocol/interface/call_hierarchy_outgoing_call.rb
+- lib/language_server/protocol/interface/call_hierarchy_outgoing_calls_params.rb
+- lib/language_server/protocol/interface/call_hierarchy_prepare_params.rb
+- lib/language_server/protocol/interface/call_hierarchy_registration_options.rb
+- lib/language_server/protocol/interface/cancel_params.rb
+- lib/language_server/protocol/interface/change_annotation.rb
+- lib/language_server/protocol/interface/client_capabilities.rb
+- lib/language_server/protocol/interface/code_action.rb
+- lib/language_server/protocol/interface/code_action_client_capabilities.rb
+- lib/language_server/protocol/interface/code_action_context.rb
+- lib/language_server/protocol/interface/code_action_options.rb
+- lib/language_server/protocol/interface/code_action_params.rb
+- lib/language_server/protocol/interface/code_action_registration_options.rb
+- lib/language_server/protocol/interface/code_description.rb
+- lib/language_server/protocol/interface/code_lens.rb
+- lib/language_server/protocol/interface/code_lens_client_capabilities.rb
+- lib/language_server/protocol/interface/code_lens_options.rb
+- lib/language_server/protocol/interface/code_lens_params.rb
+- lib/language_server/protocol/interface/code_lens_registration_options.rb
+- lib/language_server/protocol/interface/code_lens_workspace_client_capabilities.rb
+- lib/language_server/protocol/interface/color.rb
+- lib/language_server/protocol/interface/color_information.rb
+- lib/language_server/protocol/interface/color_presentation.rb
+- lib/language_server/protocol/interface/color_presentation_params.rb
+- lib/language_server/protocol/interface/command.rb
+- lib/language_server/protocol/interface/completion_client_capabilities.rb
+- lib/language_server/protocol/interface/completion_context.rb
+- lib/language_server/protocol/interface/completion_item.rb
+- lib/language_server/protocol/interface/completion_item_label_details.rb
+- lib/language_server/protocol/interface/completion_list.rb
+- lib/language_server/protocol/interface/completion_options.rb
+- lib/language_server/protocol/interface/completion_params.rb
+- lib/language_server/protocol/interface/completion_registration_options.rb
+- lib/language_server/protocol/interface/configuration_item.rb
+- lib/language_server/protocol/interface/configuration_params.rb
+- lib/language_server/protocol/interface/create_file.rb
+- lib/language_server/protocol/interface/create_file_options.rb
+- lib/language_server/protocol/interface/create_files_params.rb
+- lib/language_server/protocol/interface/declaration_client_capabilities.rb
+- lib/language_server/protocol/interface/declaration_options.rb
+- lib/language_server/protocol/interface/declaration_params.rb
+- lib/language_server/protocol/interface/declaration_registration_options.rb
+- lib/language_server/protocol/interface/definition_client_capabilities.rb
+- lib/language_server/protocol/interface/definition_options.rb
+- lib/language_server/protocol/interface/definition_params.rb
+- lib/language_server/protocol/interface/definition_registration_options.rb
+- lib/language_server/protocol/interface/delete_file.rb
+- lib/language_server/protocol/interface/delete_file_options.rb
+- lib/language_server/protocol/interface/delete_files_params.rb
+- lib/language_server/protocol/interface/diagnostic.rb
+- lib/language_server/protocol/interface/diagnostic_client_capabilities.rb
+- lib/language_server/protocol/interface/diagnostic_options.rb
+- lib/language_server/protocol/interface/diagnostic_registration_options.rb
+- lib/language_server/protocol/interface/diagnostic_related_information.rb
+- lib/language_server/protocol/interface/diagnostic_server_cancellation_data.rb
+- lib/language_server/protocol/interface/diagnostic_workspace_client_capabilities.rb
+- lib/language_server/protocol/interface/did_change_configuration_client_capabilities.rb
+- lib/language_server/protocol/interface/did_change_configuration_params.rb
+- lib/language_server/protocol/interface/did_change_notebook_document_params.rb
+- lib/language_server/protocol/interface/did_change_text_document_params.rb
+- lib/language_server/protocol/interface/did_change_watched_files_client_capabilities.rb
+- lib/language_server/protocol/interface/did_change_watched_files_params.rb
+- lib/language_server/protocol/interface/did_change_watched_files_registration_options.rb
+- lib/language_server/protocol/interface/did_change_workspace_folders_params.rb
+- lib/language_server/protocol/interface/did_close_notebook_document_params.rb
+- lib/language_server/protocol/interface/did_close_text_document_params.rb
+- lib/language_server/protocol/interface/did_open_notebook_document_params.rb
+- lib/language_server/protocol/interface/did_open_text_document_params.rb
+- lib/language_server/protocol/interface/did_save_notebook_document_params.rb
+- lib/language_server/protocol/interface/did_save_text_document_params.rb
+- lib/language_server/protocol/interface/document_color_client_capabilities.rb
+- lib/language_server/protocol/interface/document_color_options.rb
+- lib/language_server/protocol/interface/document_color_params.rb
+- lib/language_server/protocol/interface/document_color_registration_options.rb
+- lib/language_server/protocol/interface/document_diagnostic_params.rb
+- lib/language_server/protocol/interface/document_diagnostic_report_partial_result.rb
+- lib/language_server/protocol/interface/document_filter.rb
+- lib/language_server/protocol/interface/document_formatting_client_capabilities.rb
+- lib/language_server/protocol/interface/document_formatting_options.rb
+- lib/language_server/protocol/interface/document_formatting_params.rb
+- lib/language_server/protocol/interface/document_formatting_registration_options.rb
+- lib/language_server/protocol/interface/document_highlight.rb
+- lib/language_server/protocol/interface/document_highlight_client_capabilities.rb
+- lib/language_server/protocol/interface/document_highlight_options.rb
+- lib/language_server/protocol/interface/document_highlight_params.rb
+- lib/language_server/protocol/interface/document_highlight_registration_options.rb
+- lib/language_server/protocol/interface/document_link.rb
+- lib/language_server/protocol/interface/document_link_client_capabilities.rb
+- lib/language_server/protocol/interface/document_link_options.rb
+- lib/language_server/protocol/interface/document_link_params.rb
+- lib/language_server/protocol/interface/document_link_registration_options.rb
+- lib/language_server/protocol/interface/document_on_type_formatting_client_capabilities.rb
+- lib/language_server/protocol/interface/document_on_type_formatting_options.rb
+- lib/language_server/protocol/interface/document_on_type_formatting_params.rb
+- lib/language_server/protocol/interface/document_on_type_formatting_registration_options.rb
+- lib/language_server/protocol/interface/document_range_formatting_client_capabilities.rb
+- lib/language_server/protocol/interface/document_range_formatting_options.rb
+- lib/language_server/protocol/interface/document_range_formatting_params.rb
+- lib/language_server/protocol/interface/document_range_formatting_registration_options.rb
+- lib/language_server/protocol/interface/document_symbol.rb
+- lib/language_server/protocol/interface/document_symbol_client_capabilities.rb
+- lib/language_server/protocol/interface/document_symbol_options.rb
+- lib/language_server/protocol/interface/document_symbol_params.rb
+- lib/language_server/protocol/interface/document_symbol_registration_options.rb
+- lib/language_server/protocol/interface/execute_command_client_capabilities.rb
+- lib/language_server/protocol/interface/execute_command_options.rb
+- lib/language_server/protocol/interface/execute_command_params.rb
+- lib/language_server/protocol/interface/execute_command_registration_options.rb
+- lib/language_server/protocol/interface/execution_summary.rb
+- lib/language_server/protocol/interface/file_create.rb
+- lib/language_server/protocol/interface/file_delete.rb
+- lib/language_server/protocol/interface/file_event.rb
+- lib/language_server/protocol/interface/file_operation_filter.rb
+- lib/language_server/protocol/interface/file_operation_pattern.rb
+- lib/language_server/protocol/interface/file_operation_pattern_options.rb
+- lib/language_server/protocol/interface/file_operation_registration_options.rb
+- lib/language_server/protocol/interface/file_rename.rb
+- lib/language_server/protocol/interface/file_system_watcher.rb
+- lib/language_server/protocol/interface/folding_range.rb
+- lib/language_server/protocol/interface/folding_range_client_capabilities.rb
+- lib/language_server/protocol/interface/folding_range_options.rb
+- lib/language_server/protocol/interface/folding_range_params.rb
+- lib/language_server/protocol/interface/folding_range_registration_options.rb
+- lib/language_server/protocol/interface/formatting_options.rb
+- lib/language_server/protocol/interface/full_document_diagnostic_report.rb
+- lib/language_server/protocol/interface/hover.rb
+- lib/language_server/protocol/interface/hover_client_capabilities.rb
+- lib/language_server/protocol/interface/hover_options.rb
+- lib/language_server/protocol/interface/hover_params.rb
+- lib/language_server/protocol/interface/hover_registration_options.rb
+- lib/language_server/protocol/interface/hover_result.rb
+- lib/language_server/protocol/interface/implementation_client_capabilities.rb
+- lib/language_server/protocol/interface/implementation_options.rb
+- lib/language_server/protocol/interface/implementation_params.rb
+- lib/language_server/protocol/interface/implementation_registration_options.rb
+- lib/language_server/protocol/interface/initialize_error.rb
+- lib/language_server/protocol/interface/initialize_params.rb
+- lib/language_server/protocol/interface/initialize_result.rb
+- lib/language_server/protocol/interface/initialized_params.rb
+- lib/language_server/protocol/interface/inlay_hint.rb
+- lib/language_server/protocol/interface/inlay_hint_client_capabilities.rb
+- lib/language_server/protocol/interface/inlay_hint_label_part.rb
+- lib/language_server/protocol/interface/inlay_hint_options.rb
+- lib/language_server/protocol/interface/inlay_hint_params.rb
+- lib/language_server/protocol/interface/inlay_hint_registration_options.rb
+- lib/language_server/protocol/interface/inlay_hint_workspace_client_capabilities.rb
+- lib/language_server/protocol/interface/inline_value_client_capabilities.rb
+- lib/language_server/protocol/interface/inline_value_context.rb
+- lib/language_server/protocol/interface/inline_value_evaluatable_expression.rb
+- lib/language_server/protocol/interface/inline_value_options.rb
+- lib/language_server/protocol/interface/inline_value_params.rb
+- lib/language_server/protocol/interface/inline_value_registration_options.rb
+- lib/language_server/protocol/interface/inline_value_text.rb
+- lib/language_server/protocol/interface/inline_value_variable_lookup.rb
+- lib/language_server/protocol/interface/inline_value_workspace_client_capabilities.rb
+- lib/language_server/protocol/interface/insert_replace_edit.rb
+- lib/language_server/protocol/interface/linked_editing_range_client_capabilities.rb
+- lib/language_server/protocol/interface/linked_editing_range_options.rb
+- lib/language_server/protocol/interface/linked_editing_range_params.rb
+- lib/language_server/protocol/interface/linked_editing_range_registration_options.rb
+- lib/language_server/protocol/interface/linked_editing_ranges.rb
+- lib/language_server/protocol/interface/location.rb
+- lib/language_server/protocol/interface/location_link.rb
+- lib/language_server/protocol/interface/log_message_params.rb
+- lib/language_server/protocol/interface/log_trace_params.rb
+- lib/language_server/protocol/interface/markup_content.rb
+- lib/language_server/protocol/interface/message.rb
+- lib/language_server/protocol/interface/message_action_item.rb
+- lib/language_server/protocol/interface/moniker.rb
+- lib/language_server/protocol/interface/moniker_client_capabilities.rb
+- lib/language_server/protocol/interface/moniker_options.rb
+- lib/language_server/protocol/interface/moniker_params.rb
+- lib/language_server/protocol/interface/moniker_registration_options.rb
+- lib/language_server/protocol/interface/notebook_cell.rb
+- lib/language_server/protocol/interface/notebook_cell_array_change.rb
+- lib/language_server/protocol/interface/notebook_cell_text_document_filter.rb
+- lib/language_server/protocol/interface/notebook_document.rb
+- lib/language_server/protocol/interface/notebook_document_change_event.rb
+- lib/language_server/protocol/interface/notebook_document_client_capabilities.rb
+- lib/language_server/protocol/interface/notebook_document_filter.rb
+- lib/language_server/protocol/interface/notebook_document_identifier.rb
+- lib/language_server/protocol/interface/notebook_document_sync_client_capabilities.rb
+- lib/language_server/protocol/interface/notebook_document_sync_options.rb
+- lib/language_server/protocol/interface/notebook_document_sync_registration_options.rb
+- lib/language_server/protocol/interface/notification_message.rb
+- lib/language_server/protocol/interface/optional_versioned_text_document_identifier.rb
+- lib/language_server/protocol/interface/parameter_information.rb
+- lib/language_server/protocol/interface/partial_result_params.rb
+- lib/language_server/protocol/interface/position.rb
+- lib/language_server/protocol/interface/prepare_rename_params.rb
+- lib/language_server/protocol/interface/previous_result_id.rb
+- lib/language_server/protocol/interface/progress_params.rb
+- lib/language_server/protocol/interface/publish_diagnostics_client_capabilities.rb
+- lib/language_server/protocol/interface/publish_diagnostics_params.rb
+- lib/language_server/protocol/interface/range.rb
+- lib/language_server/protocol/interface/reference_client_capabilities.rb
+- lib/language_server/protocol/interface/reference_context.rb
+- lib/language_server/protocol/interface/reference_options.rb
+- lib/language_server/protocol/interface/reference_params.rb
+- lib/language_server/protocol/interface/reference_registration_options.rb
+- lib/language_server/protocol/interface/registration.rb
+- lib/language_server/protocol/interface/registration_params.rb
+- lib/language_server/protocol/interface/regular_expressions_client_capabilities.rb
+- lib/language_server/protocol/interface/related_full_document_diagnostic_report.rb
+- lib/language_server/protocol/interface/related_unchanged_document_diagnostic_report.rb
+- lib/language_server/protocol/interface/relative_pattern.rb
+- lib/language_server/protocol/interface/rename_client_capabilities.rb
+- lib/language_server/protocol/interface/rename_file.rb
+- lib/language_server/protocol/interface/rename_file_options.rb
+- lib/language_server/protocol/interface/rename_files_params.rb
+- lib/language_server/protocol/interface/rename_options.rb
+- lib/language_server/protocol/interface/rename_params.rb
+- lib/language_server/protocol/interface/rename_registration_options.rb
+- lib/language_server/protocol/interface/request_message.rb
+- lib/language_server/protocol/interface/response_error.rb
+- lib/language_server/protocol/interface/response_message.rb
+- lib/language_server/protocol/interface/save_options.rb
+- lib/language_server/protocol/interface/selection_range.rb
+- lib/language_server/protocol/interface/selection_range_client_capabilities.rb
+- lib/language_server/protocol/interface/selection_range_options.rb
+- lib/language_server/protocol/interface/selection_range_params.rb
+- lib/language_server/protocol/interface/selection_range_registration_options.rb
+- lib/language_server/protocol/interface/semantic_tokens.rb
+- lib/language_server/protocol/interface/semantic_tokens_client_capabilities.rb
+- lib/language_server/protocol/interface/semantic_tokens_delta.rb
+- lib/language_server/protocol/interface/semantic_tokens_delta_params.rb
+- lib/language_server/protocol/interface/semantic_tokens_delta_partial_result.rb
+- lib/language_server/protocol/interface/semantic_tokens_edit.rb
+- lib/language_server/protocol/interface/semantic_tokens_legend.rb
+- lib/language_server/protocol/interface/semantic_tokens_options.rb
+- lib/language_server/protocol/interface/semantic_tokens_params.rb
+- lib/language_server/protocol/interface/semantic_tokens_partial_result.rb
+- lib/language_server/protocol/interface/semantic_tokens_range_params.rb
+- lib/language_server/protocol/interface/semantic_tokens_registration_options.rb
+- lib/language_server/protocol/interface/semantic_tokens_workspace_client_capabilities.rb
+- lib/language_server/protocol/interface/server_capabilities.rb
+- lib/language_server/protocol/interface/set_trace_params.rb
+- lib/language_server/protocol/interface/show_document_client_capabilities.rb
+- lib/language_server/protocol/interface/show_document_params.rb
+- lib/language_server/protocol/interface/show_document_result.rb
+- lib/language_server/protocol/interface/show_message_params.rb
+- lib/language_server/protocol/interface/show_message_request_client_capabilities.rb
+- lib/language_server/protocol/interface/show_message_request_params.rb
+- lib/language_server/protocol/interface/signature_help.rb
+- lib/language_server/protocol/interface/signature_help_client_capabilities.rb
+- lib/language_server/protocol/interface/signature_help_context.rb
+- lib/language_server/protocol/interface/signature_help_options.rb
+- lib/language_server/protocol/interface/signature_help_params.rb
+- lib/language_server/protocol/interface/signature_help_registration_options.rb
+- lib/language_server/protocol/interface/signature_information.rb
+- lib/language_server/protocol/interface/static_registration_options.rb
+- lib/language_server/protocol/interface/symbol_information.rb
+- lib/language_server/protocol/interface/text_document_change_registration_options.rb
+- lib/language_server/protocol/interface/text_document_client_capabilities.rb
+- lib/language_server/protocol/interface/text_document_content_change_event.rb
+- lib/language_server/protocol/interface/text_document_edit.rb
+- lib/language_server/protocol/interface/text_document_identifier.rb
+- lib/language_server/protocol/interface/text_document_item.rb
+- lib/language_server/protocol/interface/text_document_position_params.rb
+- lib/language_server/protocol/interface/text_document_registration_options.rb
+- lib/language_server/protocol/interface/text_document_save_registration_options.rb
+- lib/language_server/protocol/interface/text_document_sync_client_capabilities.rb
+- lib/language_server/protocol/interface/text_document_sync_options.rb
+- lib/language_server/protocol/interface/text_edit.rb
+- lib/language_server/protocol/interface/type_definition_client_capabilities.rb
+- lib/language_server/protocol/interface/type_definition_options.rb
+- lib/language_server/protocol/interface/type_definition_params.rb
+- lib/language_server/protocol/interface/type_definition_registration_options.rb
+- lib/language_server/protocol/interface/type_hierarchy_item.rb
+- lib/language_server/protocol/interface/type_hierarchy_options.rb
+- lib/language_server/protocol/interface/type_hierarchy_prepare_params.rb
+- lib/language_server/protocol/interface/type_hierarchy_registration_options.rb
+- lib/language_server/protocol/interface/type_hierarchy_subtypes_params.rb
+- lib/language_server/protocol/interface/type_hierarchy_supertypes_params.rb
+- lib/language_server/protocol/interface/unchanged_document_diagnostic_report.rb
+- lib/language_server/protocol/interface/unregistration.rb
+- lib/language_server/protocol/interface/unregistration_params.rb
+- lib/language_server/protocol/interface/versioned_notebook_document_identifier.rb
+- lib/language_server/protocol/interface/versioned_text_document_identifier.rb
+- lib/language_server/protocol/interface/will_save_text_document_params.rb
+- lib/language_server/protocol/interface/work_done_progress_begin.rb
+- lib/language_server/protocol/interface/work_done_progress_cancel_params.rb
+- lib/language_server/protocol/interface/work_done_progress_create_params.rb
+- lib/language_server/protocol/interface/work_done_progress_end.rb
+- lib/language_server/protocol/interface/work_done_progress_options.rb
+- lib/language_server/protocol/interface/work_done_progress_params.rb
+- lib/language_server/protocol/interface/work_done_progress_report.rb
+- lib/language_server/protocol/interface/workspace_diagnostic_params.rb
+- lib/language_server/protocol/interface/workspace_diagnostic_report.rb
+- lib/language_server/protocol/interface/workspace_diagnostic_report_partial_result.rb
+- lib/language_server/protocol/interface/workspace_edit.rb
+- lib/language_server/protocol/interface/workspace_edit_client_capabilities.rb
+- lib/language_server/protocol/interface/workspace_folder.rb
+- lib/language_server/protocol/interface/workspace_folders_change_event.rb
+- lib/language_server/protocol/interface/workspace_folders_server_capabilities.rb
+- lib/language_server/protocol/interface/workspace_full_document_diagnostic_report.rb
+- lib/language_server/protocol/interface/workspace_symbol.rb
+- lib/language_server/protocol/interface/workspace_symbol_client_capabilities.rb
+- lib/language_server/protocol/interface/workspace_symbol_options.rb
+- lib/language_server/protocol/interface/workspace_symbol_params.rb
+- lib/language_server/protocol/interface/workspace_symbol_registration_options.rb
+- lib/language_server/protocol/interface/workspace_unchanged_document_diagnostic_report.rb
+- lib/language_server/protocol/transport.rb
+- lib/language_server/protocol/transport/io.rb
+- lib/language_server/protocol/transport/io/reader.rb
+- lib/language_server/protocol/transport/io/writer.rb
+- lib/language_server/protocol/transport/stdio.rb
+- lib/language_server/protocol/transport/stdio/reader.rb
+- lib/language_server/protocol/transport/stdio/writer.rb
+- lib/language_server/protocol/version.rb
+homepage: https://github.com/mtsmfm/language_server-protocol-ruby
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.5
+signing_key: 
+specification_version: 4
+summary: A Language Server Protocol SDK
+test_files: []

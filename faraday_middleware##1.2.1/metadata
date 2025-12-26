@@ -1,0 +1,83 @@
+--- !ruby/object:Gem::Specification
+name: faraday_middleware
+version: !ruby/object:Gem::Version
+  version: 1.2.1
+platform: ruby
+authors:
+- Erik Michaels-Ober
+- Wynn Netherland
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-09-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: 
+email:
+- sferik@gmail.com
+- wynn.netherland@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.md
+- README.md
+- lib/faraday_middleware.rb
+- lib/faraday_middleware/backwards_compatibility.rb
+- lib/faraday_middleware/gzip.rb
+- lib/faraday_middleware/instrumentation.rb
+- lib/faraday_middleware/rack_compatible.rb
+- lib/faraday_middleware/redirect_limit_reached.rb
+- lib/faraday_middleware/request/encode_json.rb
+- lib/faraday_middleware/request/method_override.rb
+- lib/faraday_middleware/request/oauth.rb
+- lib/faraday_middleware/request/oauth2.rb
+- lib/faraday_middleware/response/caching.rb
+- lib/faraday_middleware/response/chunked.rb
+- lib/faraday_middleware/response/follow_redirects.rb
+- lib/faraday_middleware/response/mashify.rb
+- lib/faraday_middleware/response/parse_dates.rb
+- lib/faraday_middleware/response/parse_json.rb
+- lib/faraday_middleware/response/parse_marshal.rb
+- lib/faraday_middleware/response/parse_xml.rb
+- lib/faraday_middleware/response/parse_yaml.rb
+- lib/faraday_middleware/response/rashify.rb
+- lib/faraday_middleware/response_middleware.rb
+- lib/faraday_middleware/version.rb
+homepage: https://github.com/lostisland/faraday_middleware
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Various middleware for Faraday
+test_files: []

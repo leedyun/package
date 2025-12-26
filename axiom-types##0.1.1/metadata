@@ -1,0 +1,240 @@
+--- !ruby/object:Gem::Specification
+name: axiom-types
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- Dan Kubb
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-03-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: descendants_tracker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+- !ruby/object:Gem::Dependency
+  name: ice_nine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+- !ruby/object:Gem::Dependency
+  name: thread_safe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '0.3'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '0.3'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 0.3.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.3
+description: Define types with optional constraints for use within axiom and other
+  libraries.
+email: dan.kubb@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+- CONTRIBUTING.md
+- TODO
+files:
+- .gitignore
+- .rspec
+- .rubocop.yml
+- .ruby-gemset
+- .travis.yml
+- .yardopts
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.devtools
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO
+- axiom-types.gemspec
+- config/devtools.yml
+- config/flay.yml
+- config/flog.yml
+- config/mutant.yml
+- config/reek.yml
+- config/roodi.yml
+- config/rubocop.yml
+- config/yardstick.yml
+- lib/axiom-types.rb
+- lib/axiom/types.rb
+- lib/axiom/types/array.rb
+- lib/axiom/types/boolean.rb
+- lib/axiom/types/class.rb
+- lib/axiom/types/collection.rb
+- lib/axiom/types/date.rb
+- lib/axiom/types/date_time.rb
+- lib/axiom/types/decimal.rb
+- lib/axiom/types/encodable.rb
+- lib/axiom/types/float.rb
+- lib/axiom/types/hash.rb
+- lib/axiom/types/integer.rb
+- lib/axiom/types/length_comparable.rb
+- lib/axiom/types/numeric.rb
+- lib/axiom/types/object.rb
+- lib/axiom/types/set.rb
+- lib/axiom/types/string.rb
+- lib/axiom/types/support/infinity.rb
+- lib/axiom/types/support/options.rb
+- lib/axiom/types/symbol.rb
+- lib/axiom/types/time.rb
+- lib/axiom/types/type.rb
+- lib/axiom/types/value_comparable.rb
+- lib/axiom/types/version.rb
+- spec/spec_helper.rb
+- spec/unit/axiom/types/array/class_methods/infer_spec.rb
+- spec/unit/axiom/types/boolean/class_methods/infer_spec.rb
+- spec/unit/axiom/types/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/class_methods/infer_spec.rb
+- spec/unit/axiom/types/collection/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/collection/class_methods/infer_spec.rb
+- spec/unit/axiom/types/encodable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/encodable/finalize_spec.rb
+- spec/unit/axiom/types/hash/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/hash/class_methods/infer_spec.rb
+- spec/unit/axiom/types/infinity/coerce_spec.rb
+- spec/unit/axiom/types/infinity/spaceship_operator_spec.rb
+- spec/unit/axiom/types/infinity/succ_spec.rb
+- spec/unit/axiom/types/length_comparable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/length_comparable/finalize_spec.rb
+- spec/unit/axiom/types/length_comparable/range_spec.rb
+- spec/unit/axiom/types/negative_infinity/spaceship_operator_spec.rb
+- spec/unit/axiom/types/object/class_methods/coercion_method_spec.rb
+- spec/unit/axiom/types/object/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/object/class_methods/infer_spec.rb
+- spec/unit/axiom/types/object/class_methods/inspect_spec.rb
+- spec/unit/axiom/types/object/class_methods/primitive_spec.rb
+- spec/unit/axiom/types/options/accept_options_spec.rb
+- spec/unit/axiom/types/options/inherited_spec.rb
+- spec/unit/axiom/types/set/class_methods/infer_spec.rb
+- spec/unit/axiom/types/type/class_methods/anonymous_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/base_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/base_spec.rb
+- spec/unit/axiom/types/type/class_methods/constraint_spec.rb
+- spec/unit/axiom/types/type/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/type/class_methods/include_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/includes_spec.rb
+- spec/unit/axiom/types/type/class_methods/infer_spec.rb
+- spec/unit/axiom/types/type/class_methods/new_spec.rb
+- spec/unit/axiom/types/value_comparable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/value_comparable/finalize_spec.rb
+- spec/unit/axiom/types/value_comparable/range_spec.rb
+homepage: https://github.com/dkubb/axiom-types
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Abstract types for logic programming
+test_files:
+- spec/unit/axiom/types/array/class_methods/infer_spec.rb
+- spec/unit/axiom/types/boolean/class_methods/infer_spec.rb
+- spec/unit/axiom/types/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/class_methods/infer_spec.rb
+- spec/unit/axiom/types/collection/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/collection/class_methods/infer_spec.rb
+- spec/unit/axiom/types/encodable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/encodable/finalize_spec.rb
+- spec/unit/axiom/types/hash/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/hash/class_methods/infer_spec.rb
+- spec/unit/axiom/types/infinity/coerce_spec.rb
+- spec/unit/axiom/types/infinity/spaceship_operator_spec.rb
+- spec/unit/axiom/types/infinity/succ_spec.rb
+- spec/unit/axiom/types/length_comparable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/length_comparable/finalize_spec.rb
+- spec/unit/axiom/types/length_comparable/range_spec.rb
+- spec/unit/axiom/types/negative_infinity/spaceship_operator_spec.rb
+- spec/unit/axiom/types/object/class_methods/coercion_method_spec.rb
+- spec/unit/axiom/types/object/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/object/class_methods/infer_spec.rb
+- spec/unit/axiom/types/object/class_methods/inspect_spec.rb
+- spec/unit/axiom/types/object/class_methods/primitive_spec.rb
+- spec/unit/axiom/types/options/accept_options_spec.rb
+- spec/unit/axiom/types/options/inherited_spec.rb
+- spec/unit/axiom/types/set/class_methods/infer_spec.rb
+- spec/unit/axiom/types/type/class_methods/anonymous_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/base_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/base_spec.rb
+- spec/unit/axiom/types/type/class_methods/constraint_spec.rb
+- spec/unit/axiom/types/type/class_methods/finalize_spec.rb
+- spec/unit/axiom/types/type/class_methods/include_predicate_spec.rb
+- spec/unit/axiom/types/type/class_methods/includes_spec.rb
+- spec/unit/axiom/types/type/class_methods/infer_spec.rb
+- spec/unit/axiom/types/type/class_methods/new_spec.rb
+- spec/unit/axiom/types/value_comparable/class_methods/extended_spec.rb
+- spec/unit/axiom/types/value_comparable/finalize_spec.rb
+- spec/unit/axiom/types/value_comparable/range_spec.rb
+has_rdoc: 

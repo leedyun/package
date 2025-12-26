@@ -1,0 +1,419 @@
+--- !ruby/object:Gem::Specification
+name: cfn-nag
+version: !ruby/object:Gem::Version
+  version: 0.8.10
+platform: ruby
+authors:
+- Eric Kascic
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-05-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.21'
+- !ruby/object:Gem::Dependency
+  name: cfn-model
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.6
+- !ruby/object:Gem::Dependency
+  name: logging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.2
+- !ruby/object:Gem::Dependency
+  name: netaddr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.4
+- !ruby/object:Gem::Dependency
+  name: optimist
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-s3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.76'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.76'
+- !ruby/object:Gem::Dependency
+  name: lightly
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Auditing tool for CloudFormation templates
+email: 
+executables:
+- cfn_nag
+- cfn_nag_rules
+- cfn_nag_scan
+- spcm_scan
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/cfn_nag
+- bin/cfn_nag_rules
+- bin/cfn_nag_scan
+- bin/spcm_scan
+- lib/cfn-nag.rb
+- lib/cfn-nag/base_rule.rb
+- lib/cfn-nag/cfn_nag.rb
+- lib/cfn-nag/cfn_nag_config.rb
+- lib/cfn-nag/cfn_nag_executor.rb
+- lib/cfn-nag/cfn_nag_logging.rb
+- lib/cfn-nag/cli_options.rb
+- lib/cfn-nag/custom_rule_loader.rb
+- lib/cfn-nag/custom_rules/AlexaASKSkillAuthenticationConfigurationClientSecretRule.rb
+- lib/cfn-nag/custom_rules/AlexaASKSkillAuthenticationConfigurationRefreshTokenRule.rb
+- lib/cfn-nag/custom_rules/AmazonMQBrokerEncryptionOptionsRule.rb
+- lib/cfn-nag/custom_rules/AmazonMQBrokerUsersPasswordRule.rb
+- lib/cfn-nag/custom_rules/AmazonSimpleDBDomainRule.rb
+- lib/cfn-nag/custom_rules/AmplifyAppAccessTokenRule.rb
+- lib/cfn-nag/custom_rules/AmplifyAppBasicAuthConfigPasswordRule.rb
+- lib/cfn-nag/custom_rules/AmplifyAppOauthTokenRule.rb
+- lib/cfn-nag/custom_rules/AmplifyBranchBasicAuthConfigPasswordRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayAccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayCacheEncryptedRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayDeploymentUsagePlanRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayMethodAuthorizationTypeRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewaySecurityPolicyRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayStageAccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayStageUsagePlanRule.rb
+- lib/cfn-nag/custom_rules/ApiGatewayV2AccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/AppStreamDirectoryConfigServiceAccountCredentialsAccountPasswordRule.rb
+- lib/cfn-nag/custom_rules/BatchJobDefinitionContainerPropertiesPrivilegedRule.rb
+- lib/cfn-nag/custom_rules/CloudFormationAuthenticationRule.rb
+- lib/cfn-nag/custom_rules/CloudFrontDistributionAccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/CloudfrontMinimumProtocolVersionRule.rb
+- lib/cfn-nag/custom_rules/CodeBuildEncryptionKeyRule.rb
+- lib/cfn-nag/custom_rules/CodePipelineWebhookAuthenticationConfigurationSecretTokenRule.rb
+- lib/cfn-nag/custom_rules/CognitoIdentityPoolAllowUnauthenticatedIdentitiesRule.rb
+- lib/cfn-nag/custom_rules/CognitoUserPoolMfaConfigurationOnorOptionalRule.rb
+- lib/cfn-nag/custom_rules/DAXClusterEncryptionRule.rb
+- lib/cfn-nag/custom_rules/DLMLifecyclePolicyCrossRegionCopyEncryptionRule.rb
+- lib/cfn-nag/custom_rules/DMSEndpointMongoDbSettingsPasswordRule.rb
+- lib/cfn-nag/custom_rules/DMSEndpointPasswordRule.rb
+- lib/cfn-nag/custom_rules/DMSReplicationInstanceNotPublicRule.rb
+- lib/cfn-nag/custom_rules/DirectoryServiceMicrosoftADPasswordRule.rb
+- lib/cfn-nag/custom_rules/DirectoryServiceSimpleADPasswordRule.rb
+- lib/cfn-nag/custom_rules/DocDBDBClusterMasterUserPasswordRule.rb
+- lib/cfn-nag/custom_rules/DynamoDBBackupRule.rb
+- lib/cfn-nag/custom_rules/DynamoDBBillingModeRule.rb
+- lib/cfn-nag/custom_rules/DynamoDBEncryptionRule.rb
+- lib/cfn-nag/custom_rules/EC2NetworkAclEntryDuplicateRule.rb
+- lib/cfn-nag/custom_rules/EC2NetworkAclEntryIneffectiveDenyRule.rb
+- lib/cfn-nag/custom_rules/EC2NetworkAclEntryOverlappingPortsRule.rb
+- lib/cfn-nag/custom_rules/EC2NetworkAclEntryPortRangeRule.rb
+- lib/cfn-nag/custom_rules/EC2NetworkAclEntryProtocolRule.rb
+- lib/cfn-nag/custom_rules/EC2SubnetMapPublicIpOnLaunchRule.rb
+- lib/cfn-nag/custom_rules/ECRRepositoryScanOnPushRule.rb
+- lib/cfn-nag/custom_rules/EFSFileSystemEncryptedRule.rb
+- lib/cfn-nag/custom_rules/EKSClusterEncryptionRule.rb
+- lib/cfn-nag/custom_rules/EMRClusterKerberosAttributesADDomainJoinPasswordRule.rb
+- lib/cfn-nag/custom_rules/EMRClusterKerberosAttributesCrossRealmTrustPrincipalPasswordRule.rb
+- lib/cfn-nag/custom_rules/EMRClusterKerberosAttributesKdcAdminPasswordRule.rb
+- lib/cfn-nag/custom_rules/EMRClusterSecurityConfigurationAttachedRule.rb
+- lib/cfn-nag/custom_rules/EMRSecurityConfigurationEncryptionsEnabledAndConfiguredRule.rb
+- lib/cfn-nag/custom_rules/EbsVolumeEncryptionKeyRule.rb
+- lib/cfn-nag/custom_rules/EbsVolumeHasSseRule.rb
+- lib/cfn-nag/custom_rules/ElastiCacheReplicationGroupAtRestEncryptionRule.rb
+- lib/cfn-nag/custom_rules/ElastiCacheReplicationGroupAuthTokenRule.rb
+- lib/cfn-nag/custom_rules/ElastiCacheReplicationGroupTransitEncryptionRule.rb
+- lib/cfn-nag/custom_rules/ElasticLoadBalancerAccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/ElasticLoadBalancerV2AccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/ElasticLoadBalancerV2ListenerProtocolRule.rb
+- lib/cfn-nag/custom_rules/ElasticLoadBalancerV2ListenerSslPolicyRule.rb
+- lib/cfn-nag/custom_rules/ElasticsearchDomainEncryptionAtRestOptionsRule.rb
+- lib/cfn-nag/custom_rules/ElasticsearchDomainInsideVPCRule.rb
+- lib/cfn-nag/custom_rules/ElasticsearchDomainNodeToNodeEncryptionOptionsRule.rb
+- lib/cfn-nag/custom_rules/GameLiftFleetInboundPortRangeRule.rb
+- lib/cfn-nag/custom_rules/IAMUserLoginProfilePasswordRule.rb
+- lib/cfn-nag/custom_rules/IamManagedPolicyNotActionRule.rb
+- lib/cfn-nag/custom_rules/IamManagedPolicyNotResourceRule.rb
+- lib/cfn-nag/custom_rules/IamManagedPolicyPassRoleWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/IamManagedPolicyWildcardActionRule.rb
+- lib/cfn-nag/custom_rules/IamManagedPolicyWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/IamPolicyNotActionRule.rb
+- lib/cfn-nag/custom_rules/IamPolicyNotResourceRule.rb
+- lib/cfn-nag/custom_rules/IamPolicyPassRoleWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/IamPolicyWildcardActionRule.rb
+- lib/cfn-nag/custom_rules/IamPolicyWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/IamRoleAdministratorAccessPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleElevatedManagedPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleNotActionOnPermissionsPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleNotActionOnTrustPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleNotPrincipalOnTrustPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleNotResourceOnPermissionsPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRolePassRoleWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/IamRoleWildcardActionOnPermissionsPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleWildcardActionOnTrustPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamRoleWildcardResourceOnPermissionsPolicyRule.rb
+- lib/cfn-nag/custom_rules/IamUserLoginProfilePasswordResetRule.rb
+- lib/cfn-nag/custom_rules/IotPolicyWildcardActionRule.rb
+- lib/cfn-nag/custom_rules/IotPolicyWildcardResourceRule.rb
+- lib/cfn-nag/custom_rules/KMSKeyRotationRule.rb
+- lib/cfn-nag/custom_rules/KMSKeyWildcardPrincipalRule.rb
+- lib/cfn-nag/custom_rules/KendraIndexServerSideEncryptionConfigurationKmsKeyIdRule.rb
+- lib/cfn-nag/custom_rules/KinesisFirehoseDeliveryStreamEncryptionRule.rb
+- lib/cfn-nag/custom_rules/KinesisFirehoseDeliveryStreamRedshiftDestinationConfigurationPasswordRule.rb
+- lib/cfn-nag/custom_rules/KinesisFirehoseDeliveryStreamSplunkDestinationConfigurationHECTokenRule.rb
+- lib/cfn-nag/custom_rules/KinesisStreamStreamEncryptionRule.rb
+- lib/cfn-nag/custom_rules/LambdaFunctionCloudWatchLogsRule.rb
+- lib/cfn-nag/custom_rules/LambdaFunctionInsideVPCRule.rb
+- lib/cfn-nag/custom_rules/LambdaFunctionReservedConcurrentExecutionsRule.rb
+- lib/cfn-nag/custom_rules/LambdaPermissionEventSourceTokenRule.rb
+- lib/cfn-nag/custom_rules/LambdaPermissionInvokeFunctionActionRule.rb
+- lib/cfn-nag/custom_rules/LambdaPermissionWildcardPrincipalRule.rb
+- lib/cfn-nag/custom_rules/LogsLogGroupEncryptedRule.rb
+- lib/cfn-nag/custom_rules/LogsLogGroupRetentionRule.rb
+- lib/cfn-nag/custom_rules/ManagedBlockchainMemberMemberFabricConfigurationAdminPasswordRule.rb
+- lib/cfn-nag/custom_rules/ManagedPolicyOnUserRule.rb
+- lib/cfn-nag/custom_rules/MissingBucketPolicyRule.rb
+- lib/cfn-nag/custom_rules/NeptuneDBClusterStorageEncryptedRule.rb
+- lib/cfn-nag/custom_rules/OpsWorksAppAppSourcePasswordRule.rb
+- lib/cfn-nag/custom_rules/OpsWorksAppSslConfigurationPrivateKeyRule.rb
+- lib/cfn-nag/custom_rules/OpsWorksStackCustomCookbooksSourcePasswordRule.rb
+- lib/cfn-nag/custom_rules/OpsWorksStackRdsDbInstancesDbPasswordRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSChannelPrivateKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSChannelTokenKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSSandboxChannelPrivateKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSSandboxChannelTokenKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSVoipChannelPrivateKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSVoipChannelTokenKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSVoipSandboxChannelPrivateKeyRule.rb
+- lib/cfn-nag/custom_rules/PinpointAPNSVoipSandboxChannelTokenKeyRule.rb
+- lib/cfn-nag/custom_rules/PolicyOnUserRule.rb
+- lib/cfn-nag/custom_rules/RDSDBClusterMasterUserPasswordRule.rb
+- lib/cfn-nag/custom_rules/RDSDBClusterStorageEncryptedRule.rb
+- lib/cfn-nag/custom_rules/RDSDBInstanceMasterUserPasswordRule.rb
+- lib/cfn-nag/custom_rules/RDSDBInstanceMasterUsernameRule.rb
+- lib/cfn-nag/custom_rules/RDSDBInstanceStorageEncryptedRule.rb
+- lib/cfn-nag/custom_rules/RDSInstanceBackupRetentionPeriodRule.rb
+- lib/cfn-nag/custom_rules/RDSInstanceDeletionProtectionRule.rb
+- lib/cfn-nag/custom_rules/RDSInstancePubliclyAccessibleRule.rb
+- lib/cfn-nag/custom_rules/RedshiftClusterEncryptedRule.rb
+- lib/cfn-nag/custom_rules/RedshiftClusterMasterUserPasswordRule.rb
+- lib/cfn-nag/custom_rules/ResourceWithExplicitNameRule.rb
+- lib/cfn-nag/custom_rules/S3BucketAccessLoggingRule.rb
+- lib/cfn-nag/custom_rules/S3BucketEncryptionSetRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPolicyNotActionRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPolicyNotPrincipalRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPolicyWildcardActionRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPolicyWildcardPrincipalRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPublicReadAclRule.rb
+- lib/cfn-nag/custom_rules/S3BucketPublicReadWriteAclRule.rb
+- lib/cfn-nag/custom_rules/SPCMRule.rb
+- lib/cfn-nag/custom_rules/SageMakerEndpointConfigKmsKeyIdRule.rb
+- lib/cfn-nag/custom_rules/SageMakerNotebookInstanceKmsKeyIdRule.rb
+- lib/cfn-nag/custom_rules/SecretsManagerSecretKmsKeyIdRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupEgressAllProtocolsRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupEgressOpenToWorldRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupEgressPortRangeRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupIngressAllProtocolsRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupIngressCidrNon32Rule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupIngressOpenToWorldRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupIngressPortRangeRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupMissingEgressRule.rb
+- lib/cfn-nag/custom_rules/SecurityGroupRuleDescriptionRule.rb
+- lib/cfn-nag/custom_rules/SnsTopicKmsMasterKeyIdRule.rb
+- lib/cfn-nag/custom_rules/SnsTopicPolicyNotActionRule.rb
+- lib/cfn-nag/custom_rules/SnsTopicPolicyNotPrincipalRule.rb
+- lib/cfn-nag/custom_rules/SnsTopicPolicyWildcardPrincipalRule.rb
+- lib/cfn-nag/custom_rules/SqsQueueKmsMasterKeyIdRule.rb
+- lib/cfn-nag/custom_rules/SqsQueuePolicyNotActionRule.rb
+- lib/cfn-nag/custom_rules/SqsQueuePolicyNotPrincipalRule.rb
+- lib/cfn-nag/custom_rules/SqsQueuePolicyWildcardActionRule.rb
+- lib/cfn-nag/custom_rules/SqsQueuePolicyWildcardPrincipalRule.rb
+- lib/cfn-nag/custom_rules/UserHasInlinePolicyRule.rb
+- lib/cfn-nag/custom_rules/UserMissingGroupRule.rb
+- lib/cfn-nag/custom_rules/VpcHasFlowLogRule.rb
+- lib/cfn-nag/custom_rules/WafWebAclDefaultActionRule.rb
+- lib/cfn-nag/custom_rules/WorkspacesWorkspaceEncryptionRule.rb
+- lib/cfn-nag/custom_rules/base.rb
+- lib/cfn-nag/custom_rules/boolean_base_rule.rb
+- lib/cfn-nag/custom_rules/passrole_base_rule.rb
+- lib/cfn-nag/custom_rules/password_base_rule.rb
+- lib/cfn-nag/custom_rules/resource_base_rule.rb
+- lib/cfn-nag/custom_rules/sub_property_with_list_password_base_rule.rb
+- lib/cfn-nag/deny_list_loader.rb
+- lib/cfn-nag/iam_complexity_metric/condition_metric.rb
+- lib/cfn-nag/iam_complexity_metric/html_results_renderer.rb
+- lib/cfn-nag/iam_complexity_metric/policy_document_metric.rb
+- lib/cfn-nag/iam_complexity_metric/spcm.rb
+- lib/cfn-nag/iam_complexity_metric/statement_metric.rb
+- lib/cfn-nag/iam_complexity_metric/weights.rb
+- lib/cfn-nag/ip_addr.rb
+- lib/cfn-nag/metadata.rb
+- lib/cfn-nag/profile_loader.rb
+- lib/cfn-nag/result_view/colored_stdout_results.rb
+- lib/cfn-nag/result_view/json_results.rb
+- lib/cfn-nag/result_view/rules_view.rb
+- lib/cfn-nag/result_view/sarif_results.rb
+- lib/cfn-nag/result_view/simple_stdout_results.rb
+- lib/cfn-nag/result_view/stdout_results.rb
+- lib/cfn-nag/rule_definition.rb
+- lib/cfn-nag/rule_dumper.rb
+- lib/cfn-nag/rule_id_set.rb
+- lib/cfn-nag/rule_registry.rb
+- lib/cfn-nag/rule_repo_exception.rb
+- lib/cfn-nag/rule_repos/file_based_rule_repo.rb
+- lib/cfn-nag/rule_repos/gem_based_rule_repo.rb
+- lib/cfn-nag/rule_repos/s3_based_rule_repo.rb
+- lib/cfn-nag/rule_repository_loader.rb
+- lib/cfn-nag/template_discovery.rb
+- lib/cfn-nag/util/blank.rb
+- lib/cfn-nag/util/enforce_reference_parameter.rb
+- lib/cfn-nag/util/enforce_string_or_dynamic_reference.rb
+- lib/cfn-nag/util/truthy.rb
+- lib/cfn-nag/util/wildcard_patterns.rb
+- lib/cfn-nag/version.rb
+- lib/cfn-nag/violation.rb
+- lib/cfn-nag/violation_filtering.rb
+homepage: https://github.com/stelligent/cfn_nag
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: cfn-nag
+test_files: []

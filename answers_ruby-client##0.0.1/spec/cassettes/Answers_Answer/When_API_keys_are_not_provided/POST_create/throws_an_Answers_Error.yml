@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:1337/api/v1/answers
+    body:
+      encoding: UTF-8
+      string: '{"text":"sample","in_language":"english"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b13e0db7-3b8a-44db-8712-3365ec1d642b
+      X-Runtime:
+      - '0.013001'
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Server:
+      - thin 1.6.2 codename Doc Brown
+    body:
+      encoding: UTF-8
+      string: '{"error":"You need to sign in or sign up before continuing."}'
+    http_version: 
+  recorded_at: Mon, 28 Jul 2014 14:43:13 GMT
+recorded_with: VCR 2.9.2

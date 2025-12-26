@@ -1,0 +1,70 @@
+--- !ruby/object:Gem::Specification
+name: artifactory
+version: !ruby/object:Gem::Version
+  version: 3.0.17
+platform: ruby
+authors:
+- Chef Release Engineering Team
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-10-07 00:00:00.000000000 Z
+dependencies: []
+description: A Ruby client for Artifactory
+email: releng@chef.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/artifactory.rb
+- lib/artifactory/client.rb
+- lib/artifactory/collections/artifact.rb
+- lib/artifactory/collections/base.rb
+- lib/artifactory/collections/build.rb
+- lib/artifactory/configurable.rb
+- lib/artifactory/defaults.rb
+- lib/artifactory/errors.rb
+- lib/artifactory/resources/artifact.rb
+- lib/artifactory/resources/backup.rb
+- lib/artifactory/resources/base.rb
+- lib/artifactory/resources/build.rb
+- lib/artifactory/resources/build_component.rb
+- lib/artifactory/resources/certificate.rb
+- lib/artifactory/resources/group.rb
+- lib/artifactory/resources/layout.rb
+- lib/artifactory/resources/ldap_setting.rb
+- lib/artifactory/resources/mail_server.rb
+- lib/artifactory/resources/permission_target.rb
+- lib/artifactory/resources/plugin.rb
+- lib/artifactory/resources/repository.rb
+- lib/artifactory/resources/system.rb
+- lib/artifactory/resources/url_base.rb
+- lib/artifactory/resources/user.rb
+- lib/artifactory/util.rb
+- lib/artifactory/version.rb
+homepage: https://github.com/chef/artifactory-client
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Artifactory is a simple, lightweight Ruby client for interacting with the
+  Artifactory and Artifactory Pro APIs.
+test_files: []

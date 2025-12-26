@@ -1,0 +1,212 @@
+--- !ruby/object:Gem::Specification
+name: honeybadger
+version: !ruby/object:Gem::Version
+  version: 5.26.2
+platform: ruby
+authors:
+- Honeybadger Industries LLC
+bindir: bin
+cert_chain: []
+date: 2025-01-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Make managing application errors a more pleasant experience.
+email:
+- support@honeybadger.io
+executables:
+- honeybadger
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- TROUBLESHOOTING.md
+- bin/honeybadger
+- lib/honeybadger.rb
+- lib/honeybadger/agent.rb
+- lib/honeybadger/backend.rb
+- lib/honeybadger/backend/base.rb
+- lib/honeybadger/backend/debug.rb
+- lib/honeybadger/backend/null.rb
+- lib/honeybadger/backend/server.rb
+- lib/honeybadger/backend/test.rb
+- lib/honeybadger/backtrace.rb
+- lib/honeybadger/breadcrumbs.rb
+- lib/honeybadger/breadcrumbs/active_support.rb
+- lib/honeybadger/breadcrumbs/breadcrumb.rb
+- lib/honeybadger/breadcrumbs/collector.rb
+- lib/honeybadger/breadcrumbs/logging.rb
+- lib/honeybadger/breadcrumbs/ring_buffer.rb
+- lib/honeybadger/cli.rb
+- lib/honeybadger/cli/deploy.rb
+- lib/honeybadger/cli/exec.rb
+- lib/honeybadger/cli/helpers.rb
+- lib/honeybadger/cli/heroku.rb
+- lib/honeybadger/cli/install.rb
+- lib/honeybadger/cli/main.rb
+- lib/honeybadger/cli/notify.rb
+- lib/honeybadger/cli/test.rb
+- lib/honeybadger/config.rb
+- lib/honeybadger/config/defaults.rb
+- lib/honeybadger/config/env.rb
+- lib/honeybadger/config/ruby.rb
+- lib/honeybadger/config/yaml.rb
+- lib/honeybadger/const.rb
+- lib/honeybadger/context_manager.rb
+- lib/honeybadger/conversions.rb
+- lib/honeybadger/counter.rb
+- lib/honeybadger/event.rb
+- lib/honeybadger/events_worker.rb
+- lib/honeybadger/gauge.rb
+- lib/honeybadger/histogram.rb
+- lib/honeybadger/init/hanami.rb
+- lib/honeybadger/init/rails.rb
+- lib/honeybadger/init/rake.rb
+- lib/honeybadger/init/ruby.rb
+- lib/honeybadger/init/sinatra.rb
+- lib/honeybadger/instrumentation.rb
+- lib/honeybadger/instrumentation_helper.rb
+- lib/honeybadger/karafka.rb
+- lib/honeybadger/logging.rb
+- lib/honeybadger/metric.rb
+- lib/honeybadger/metrics_worker.rb
+- lib/honeybadger/notice.rb
+- lib/honeybadger/notification_subscriber.rb
+- lib/honeybadger/plugin.rb
+- lib/honeybadger/plugins/active_job.rb
+- lib/honeybadger/plugins/autotuner.rb
+- lib/honeybadger/plugins/breadcrumbs.rb
+- lib/honeybadger/plugins/delayed_job.rb
+- lib/honeybadger/plugins/delayed_job/plugin.rb
+- lib/honeybadger/plugins/faktory.rb
+- lib/honeybadger/plugins/karafka.rb
+- lib/honeybadger/plugins/lambda.rb
+- lib/honeybadger/plugins/local_variables.rb
+- lib/honeybadger/plugins/net_http.rb
+- lib/honeybadger/plugins/passenger.rb
+- lib/honeybadger/plugins/rails.rb
+- lib/honeybadger/plugins/resque.rb
+- lib/honeybadger/plugins/shoryuken.rb
+- lib/honeybadger/plugins/sidekiq.rb
+- lib/honeybadger/plugins/solid_queue.rb
+- lib/honeybadger/plugins/sucker_punch.rb
+- lib/honeybadger/plugins/system.rb
+- lib/honeybadger/plugins/thor.rb
+- lib/honeybadger/plugins/warden.rb
+- lib/honeybadger/rack/error_notifier.rb
+- lib/honeybadger/rack/user_feedback.rb
+- lib/honeybadger/rack/user_informer.rb
+- lib/honeybadger/registry.rb
+- lib/honeybadger/registry_execution.rb
+- lib/honeybadger/ruby.rb
+- lib/honeybadger/singleton.rb
+- lib/honeybadger/tasks.rb
+- lib/honeybadger/templates/feedback_form.erb
+- lib/honeybadger/timer.rb
+- lib/honeybadger/util/http.rb
+- lib/honeybadger/util/lambda.rb
+- lib/honeybadger/util/request_hash.rb
+- lib/honeybadger/util/request_payload.rb
+- lib/honeybadger/util/revision.rb
+- lib/honeybadger/util/sanitizer.rb
+- lib/honeybadger/util/sql.rb
+- lib/honeybadger/util/stats.rb
+- lib/honeybadger/version.rb
+- lib/honeybadger/worker.rb
+- lib/puma/plugin/honeybadger.rb
+- resources/ca-bundle.crt
+- vendor/capistrano-honeybadger/lib/capistrano/honeybadger.rb
+- vendor/capistrano-honeybadger/lib/capistrano/tasks/deploy.cap
+- vendor/capistrano-honeybadger/lib/honeybadger/capistrano.rb
+- vendor/capistrano-honeybadger/lib/honeybadger/capistrano/legacy.rb
+- vendor/cli/inifile.rb
+- vendor/cli/thor.rb
+- vendor/cli/thor/actions.rb
+- vendor/cli/thor/actions/create_file.rb
+- vendor/cli/thor/actions/create_link.rb
+- vendor/cli/thor/actions/directory.rb
+- vendor/cli/thor/actions/empty_directory.rb
+- vendor/cli/thor/actions/file_manipulation.rb
+- vendor/cli/thor/actions/inject_into_file.rb
+- vendor/cli/thor/base.rb
+- vendor/cli/thor/command.rb
+- vendor/cli/thor/core_ext/hash_with_indifferent_access.rb
+- vendor/cli/thor/core_ext/io_binary_read.rb
+- vendor/cli/thor/core_ext/ordered_hash.rb
+- vendor/cli/thor/error.rb
+- vendor/cli/thor/group.rb
+- vendor/cli/thor/invocation.rb
+- vendor/cli/thor/line_editor.rb
+- vendor/cli/thor/line_editor/basic.rb
+- vendor/cli/thor/line_editor/readline.rb
+- vendor/cli/thor/parser.rb
+- vendor/cli/thor/parser/argument.rb
+- vendor/cli/thor/parser/arguments.rb
+- vendor/cli/thor/parser/option.rb
+- vendor/cli/thor/parser/options.rb
+- vendor/cli/thor/rake_compat.rb
+- vendor/cli/thor/runner.rb
+- vendor/cli/thor/shell.rb
+- vendor/cli/thor/shell/basic.rb
+- vendor/cli/thor/shell/color.rb
+- vendor/cli/thor/shell/html.rb
+- vendor/cli/thor/util.rb
+- vendor/cli/thor/version.rb
+homepage: https://www.honeybadger.io/for/ruby/
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/honeybadger-io/honeybadger-ruby/issues
+  changelog_uri: https://github.com/honeybadger-io/honeybadger-ruby/blob/master/CHANGELOG.md
+  documentation_uri: https://docs.honeybadger.io/lib/ruby/
+  homepage_uri: https://www.honeybadger.io/for/ruby/
+  source_code_uri: https://github.com/honeybadger-io/honeybadger-ruby
+rdoc_options:
+- "--markup=tomdoc"
+- "--main=README.md"
+require_paths:
+- lib
+- vendor/capistrano-honeybadger/lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Error reports you can be happy about.
+test_files: []

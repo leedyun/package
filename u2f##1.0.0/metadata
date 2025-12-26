@@ -1,0 +1,158 @@
+--- !ruby/object:Gem::Specification
+name: u2f
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Johan Brissmyr
+- Sebastian Wallin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-03-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: json_expressions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.3
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.27.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.27.1
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.10
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.10
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.11.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.11.1
+description: Library for handling registration and authentication of U2F devices
+email:
+- brissmyr@gmail.com
+- sebastian.wallin@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/u2f.rb
+- lib/u2f/client_data.rb
+- lib/u2f/errors.rb
+- lib/u2f/fake_u2f.rb
+- lib/u2f/register_request.rb
+- lib/u2f/register_response.rb
+- lib/u2f/registration.rb
+- lib/u2f/request_base.rb
+- lib/u2f/sign_request.rb
+- lib/u2f/sign_response.rb
+- lib/u2f/u2f.rb
+- lib/version.rb
+- spec/lib/client_data_spec.rb
+- spec/lib/register_request_spec.rb
+- spec/lib/register_response_spec.rb
+- spec/lib/sign_request_spec.rb
+- spec/lib/sign_response_spec.rb
+- spec/lib/u2f_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/castle/ruby-u2f
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.10
+signing_key: 
+specification_version: 4
+summary: U2F library
+test_files:
+- spec/lib/client_data_spec.rb
+- spec/lib/register_request_spec.rb
+- spec/lib/register_response_spec.rb
+- spec/lib/sign_request_spec.rb
+- spec/lib/sign_response_spec.rb
+- spec/lib/u2f_spec.rb
+- spec/spec_helper.rb

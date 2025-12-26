@@ -1,0 +1,73 @@
+--- !ruby/object:Gem::Specification
+name: hitimes
+version: !ruby/object:Gem::Version
+  version: 3.0.0
+platform: ruby
+authors:
+- Jeremy Hinegardner
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-05-01 00:00:00.000000000 Z
+dependencies: []
+description: A fast, high resolution timer library for recording performance metrics.
+email: jeremy@copiousfreetime.org
+executables: []
+extensions: []
+extra_rdoc_files:
+- CONTRIBUTING.md
+- HISTORY.md
+- LICENSE.txt
+- Manifest.txt
+- README.md
+files:
+- CONTRIBUTING.md
+- HISTORY.md
+- LICENSE.txt
+- Manifest.txt
+- README.md
+- hitimes.gemspec
+- lib/hitimes.rb
+- lib/hitimes/initialize.rb
+- lib/hitimes/instant.rb
+- lib/hitimes/interval.rb
+- lib/hitimes/metric.rb
+- lib/hitimes/mutexed_stats.rb
+- lib/hitimes/paths.rb
+- lib/hitimes/stats.rb
+- lib/hitimes/timed_metric.rb
+- lib/hitimes/timed_value_metric.rb
+- lib/hitimes/value_metric.rb
+- lib/hitimes/version.rb
+homepage: http://github.com/copiousfreetime/hitimes
+licenses:
+- ISC
+metadata:
+  bug_tracker_uri: https://github.com/copiousfreetime/hitimes/issues
+  changelog_uri: https://github.com/copiousfreetime/hitimes/blob/master/HISTORY.md
+  homepage_uri: https://github.com/copiousfreetime/hitimes
+  source_code_uri: https://github.com/copiousfreetime/hitimes
+post_install_message:
+rdoc_options:
+- "--main"
+- README.md
+- "--markup"
+- tomdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: A fast, high resolution timer library for recording performance metrics.
+test_files: []

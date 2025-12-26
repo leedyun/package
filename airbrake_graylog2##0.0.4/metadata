@@ -1,0 +1,109 @@
+--- !ruby/object:Gem::Specification
+name: airbrake_graylog2
+version: !ruby/object:Gem::Version
+  version: 0.0.4
+platform: ruby
+authors:
+- Laurynas Butkus
+- Tomas Didziokas
+- Justas Janauskas
+- Edvinas Bartkus
+- Tomas Varaneckas
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: gelf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: airbrake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 2.3.8
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: 2.3.8
+description: Send Airbrake exceptions to Graylog2
+email:
+- laurynas.butkus@gmail.com
+- tomas.did@gmail.com
+- jjanauskas@gmail.com
+- edvinas.bartkus@gmail.com
+- tomas.varaneckas@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- airbrake_graylog2.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/airbrake-graylog2.rb
+- lib/airbrake-graylog2/configuration.rb
+- lib/airbrake-graylog2/sender.rb
+- lib/airbrake-graylog2/version.rb
+- spec/airbrake-graylog2_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/vinted/airbrake-graylog2
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Send Airbrake exceptions to Graylog2
+test_files:
+- spec/airbrake-graylog2_spec.rb
+- spec/spec_helper.rb

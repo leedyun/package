@@ -1,0 +1,199 @@
+--- !ruby/object:Gem::Specification
+name: roadie-rails
+version: !ruby/object:Gem::Version
+  version: 3.3.0
+platform: ruby
+authors:
+- Magnus Bergmark
+autorequire:
+bindir: bin
+cert_chain: []
+date: 1980-01-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: roadie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+- !ruby/object:Gem::Dependency
+  name: rspec-collection_matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: standard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Hooks Roadie into your Rails application to help with email generation.
+email:
+- magnus.bergmark@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- Changelog.md
+- LICENSE.txt
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".solargraph.yml"
+- ".standard.yml"
+- Changelog.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- Upgrading.md
+- codecov.yml
+- flake.lock
+- flake.nix
+- lib/roadie-rails.rb
+- lib/roadie/rails.rb
+- lib/roadie/rails/asset_pipeline_provider.rb
+- lib/roadie/rails/asset_propshaft_provider.rb
+- lib/roadie/rails/automatic.rb
+- lib/roadie/rails/document_builder.rb
+- lib/roadie/rails/inline_on_delivery.rb
+- lib/roadie/rails/mail_inliner.rb
+- lib/roadie/rails/mailer.rb
+- lib/roadie/rails/options.rb
+- lib/roadie/rails/railtie.rb
+- lib/roadie/rails/utils.rb
+- lib/roadie/rails/version.rb
+- roadie-rails.gemspec
+- setup.sh
+homepage: https://github.com/Mange/roadie-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: This would be the last version that supports ruby 2.7
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Making HTML emails comfortable for the Rails rockstars
+test_files: []

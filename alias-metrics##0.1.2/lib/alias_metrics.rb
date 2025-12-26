@@ -1,0 +1,6 @@
+require "alias_metrics/alias_list.rb"
+require "alias_metrics/alias_usage.rb"
+require "alias_metrics/command_history.rb"
+require "alias_metrics/shortenable.rb"
+require "alias_metrics/fragment.rb"
+require "alias_metrics/alias_line_parser/zsh.rb"

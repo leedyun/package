@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'psych'
+require 'optparse'
+require 'bundler/setup'
+require 'bbs_uploader'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: bbs_uploader [options]"
+
+  opts.on_tail('-h', '--help', 'Show this message') do
+    puts opts
+    exit
+  end
+
+  opts.on_tail('-v', '--version', 'Print version') do
+    puts "bbs_uploader #{BbsUploader::VERSION}"
+    exit
+  end
+
+  opts.on('-i', '--input-file [file]', 'Input file can be URL, image file or other file') do |file|
+    options[:input_file] = File.absolute_path file
+  end
+  
+  opts.on('-d', '--input-directory [directory]', 'Input directory must be a directory') do |dir|
+    options[:input_directory] = File.absolute_path file
+  end
+end.parse!
+
+if options[:input_file].nil? || options[:input_directory].nil?
+  file = ARGV[0]
+
+  if file.nil?
+   puts "没有选择上传的文件或目录"
+   exit
+  end
+  
+  if File.directory?(File.absolute_path(file))
+    options[:input_directory] = file
+  else
+    options[:input_file] = file
+  end
+end
+
+BbsUploader.command options

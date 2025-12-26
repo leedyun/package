@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+BUFFER_LENGTH = 1024
+
+def pipe(file1,file2)
+  buffer = ''
+  while file1.read(BUFFER_LENGTH, buffer)
+    file2.write(buffer)
+  end
+end
+
+def main
+
+  if ARGV.length == 0
+    # just like cat, simple pass-through
+    pipe($stdin,$stdout)
+  elsif ARGV.length == 1
+    # write the input stream to a file
+    filename = ARGV[0]
+    open(filename,'w') do |file|
+      pipe($stdin,file)
+    end
+  else
+    raise "no can do. dog can only take one filename on the command line."
+  end
+
+end
+
+main
+

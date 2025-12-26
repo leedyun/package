@@ -1,0 +1,177 @@
+--- !ruby/object:Gem::Specification
+name: teaspoon
+version: !ruby/object:Gem::Version
+  version: 1.4.0
+platform: ruby
+authors:
+- jejacks0n
+- mikepack
+- jayzes
+- jedschneider
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-09-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Run your Javascript tests using Jasmine, Mocha or QUnit using a variety
+  of platforms.
+email:
+- jejacks0n@gmail.com
+executables:
+- teaspoon
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT.LICENSE
+- README.md
+- app/assets/javascripts/support/bind-poly.js
+- app/assets/javascripts/support/phantomjs-shims.js
+- app/assets/javascripts/support/sinon.js
+- app/assets/javascripts/teaspoon-filterer.js
+- app/assets/javascripts/teaspoon/error.coffee
+- app/assets/javascripts/teaspoon/fixture.coffee
+- app/assets/javascripts/teaspoon/hook.coffee
+- app/assets/javascripts/teaspoon/mixins/_namespace.coffee
+- app/assets/javascripts/teaspoon/mixins/filter_url.coffee
+- app/assets/javascripts/teaspoon/reporters/console.coffee
+- app/assets/javascripts/teaspoon/reporters/html.coffee
+- app/assets/javascripts/teaspoon/reporters/html/base_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/failure_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/progress_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/radial_progress_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/simple_progress_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/spec_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/suite_view.coffee
+- app/assets/javascripts/teaspoon/reporters/html/template.coffee
+- app/assets/javascripts/teaspoon/runner.coffee
+- app/assets/javascripts/teaspoon/spec.coffee
+- app/assets/javascripts/teaspoon/suite.coffee
+- app/assets/javascripts/teaspoon/teaspoon.coffee
+- app/assets/javascripts/teaspoon/utility.coffee
+- app/assets/stylesheets/teaspoon.css
+- app/controllers/teaspoon/suite_controller.rb
+- app/views/teaspoon/suite/_body.html.erb
+- app/views/teaspoon/suite/_boot.html.erb
+- app/views/teaspoon/suite/_boot_require_js.html.erb
+- app/views/teaspoon/suite/index.html.erb
+- app/views/teaspoon/suite/show.html.erb
+- bin/teaspoon
+- lib/generators/teaspoon/install/install_generator.rb
+- lib/generators/teaspoon/install/templates/MISSING_FRAMEWORK
+- lib/generators/teaspoon/install/templates/POST_INSTALL
+- lib/generators/teaspoon/install/templates/_body.html.erb
+- lib/generators/teaspoon/install/templates/_boot.html.erb
+- lib/generators/teaspoon/install/templates/env.rb.tt
+- lib/generators/teaspoon/install/templates/env_comments.rb.tt
+- lib/tasks/teaspoon.rake
+- lib/tasks/teaspoon/info.rake
+- lib/teaspoon-devkit.rb
+- lib/teaspoon.rb
+- lib/teaspoon/command_line.rb
+- lib/teaspoon/configuration.rb
+- lib/teaspoon/console.rb
+- lib/teaspoon/coverage.rb
+- lib/teaspoon/deprecated.rb
+- lib/teaspoon/driver.rb
+- lib/teaspoon/driver/base.rb
+- lib/teaspoon/driver/browserstack.rb
+- lib/teaspoon/driver/phantomjs.rb
+- lib/teaspoon/driver/phantomjs/runner.js
+- lib/teaspoon/driver/selenium.rb
+- lib/teaspoon/engine.rb
+- lib/teaspoon/environment.rb
+- lib/teaspoon/exceptions.rb
+- lib/teaspoon/exporter.rb
+- lib/teaspoon/formatter.rb
+- lib/teaspoon/formatter/base.rb
+- lib/teaspoon/formatter/clean.rb
+- lib/teaspoon/formatter/documentation.rb
+- lib/teaspoon/formatter/dot.rb
+- lib/teaspoon/formatter/json.rb
+- lib/teaspoon/formatter/junit.rb
+- lib/teaspoon/formatter/modules/report_module.rb
+- lib/teaspoon/formatter/pride.rb
+- lib/teaspoon/formatter/rspec_html.rb
+- lib/teaspoon/formatter/snowday.rb
+- lib/teaspoon/formatter/swayze_or_oprah.rb
+- lib/teaspoon/formatter/tap.rb
+- lib/teaspoon/formatter/tap_y.rb
+- lib/teaspoon/formatter/teamcity.rb
+- lib/teaspoon/framework.rb
+- lib/teaspoon/framework/base.rb
+- lib/teaspoon/instrumentation.rb
+- lib/teaspoon/registry.rb
+- lib/teaspoon/registry/has_default.rb
+- lib/teaspoon/result.rb
+- lib/teaspoon/runner.rb
+- lib/teaspoon/server.rb
+- lib/teaspoon/suite.rb
+- lib/teaspoon/utility.rb
+- lib/teaspoon/version.rb
+homepage: https://github.com/jejacks0n/teaspoon
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.18
+signing_key:
+specification_version: 4
+summary: 'Teaspoon: A Javascript test runner built on top of Rails'
+test_files: []

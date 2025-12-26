@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: slop
+version: !ruby/object:Gem::Version
+  version: 4.10.1
+platform: ruby
+authors:
+- Lee Jarvis
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-02-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+description: A DSL for gathering options and parsing command line flags
+email: ljjarvis@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/slop.rb
+- lib/slop/error.rb
+- lib/slop/option.rb
+- lib/slop/options.rb
+- lib/slop/parser.rb
+- lib/slop/result.rb
+- lib/slop/types.rb
+- slop.gemspec
+- test/error_test.rb
+- test/option_test.rb
+- test/options_test.rb
+- test/parser_test.rb
+- test/result_test.rb
+- test/slop_test.rb
+- test/test_helper.rb
+- test/types_test.rb
+homepage: http://github.com/leejarvis/slop
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Simple Lightweight Option Parsing
+test_files: []

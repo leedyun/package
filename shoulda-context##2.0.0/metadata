@@ -1,0 +1,128 @@
+--- !ruby/object:Gem::Specification
+name: shoulda-context
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- thoughtbot, inc.
+- Tammer Saleh
+- Joe Ferris
+- Ryan McGeary
+- Dan Croak
+- Matt Jankowski
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-06-13 00:00:00.000000000 Z
+dependencies: []
+description: Context framework extracted from Shoulda
+email: support@thoughtbot.com
+executables:
+- convert_to_should_syntax
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".hound.yml"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- MIT-LICENSE
+- README.md
+- Rakefile
+- bin/install_gems_in_all_appraisals
+- bin/run_all_tests
+- bin/setup
+- bin/supported_ruby_versions
+- bin/update_gem_in_all_appraisals
+- bin/update_gems_in_all_appraisals
+- exe/convert_to_should_syntax
+- gemfiles/rails_4_2.gemfile
+- gemfiles/rails_4_2.gemfile.lock
+- gemfiles/rails_5_0.gemfile
+- gemfiles/rails_5_0.gemfile.lock
+- gemfiles/rails_5_1.gemfile
+- gemfiles/rails_5_1.gemfile.lock
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_5_2.gemfile.lock
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_0.gemfile.lock
+- lib/shoulda-context.rb
+- lib/shoulda/context.rb
+- lib/shoulda/context/assertions.rb
+- lib/shoulda/context/autoload_macros.rb
+- lib/shoulda/context/configuration.rb
+- lib/shoulda/context/context.rb
+- lib/shoulda/context/dsl.rb
+- lib/shoulda/context/proc_extensions.rb
+- lib/shoulda/context/rails_test_unit_reporter_patch.rb
+- lib/shoulda/context/railtie.rb
+- lib/shoulda/context/tasks.rb
+- lib/shoulda/context/tasks/list_tests.rake
+- lib/shoulda/context/tasks/yaml_to_shoulda.rake
+- lib/shoulda/context/test_framework_detection.rb
+- lib/shoulda/context/version.rb
+- lib/shoulda/context/world.rb
+- shoulda-context.gemspec
+- tasks/shoulda.rake
+- test/fake_rails_root/test/shoulda_macros/custom_macro.rb
+- test/fake_rails_root/vendor/gems/gem_with_macro-0.0.1/shoulda_macros/gem_macro.rb
+- test/fake_rails_root/vendor/plugins/.keep
+- test/fake_rails_root/vendor/plugins/plugin_with_macro/shoulda_macros/plugin_macro.rb
+- test/shoulda/autoload_macro_test.rb
+- test/shoulda/context_test.rb
+- test/shoulda/convert_to_should_syntax_test.rb
+- test/shoulda/helpers_test.rb
+- test/shoulda/railtie_test.rb
+- test/shoulda/rerun_snippet_test.rb
+- test/shoulda/should_test.rb
+- test/shoulda/test_framework_detection_test.rb
+- test/support/current_bundle.rb
+- test/support/rails_application_with_shoulda_context.rb
+- test/support/snowglobe.rb
+- test/test_helper.rb
+homepage: http://thoughtbot.com/community/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Context framework extracted from Shoulda
+test_files:
+- test/fake_rails_root/test/shoulda_macros/custom_macro.rb
+- test/fake_rails_root/vendor/gems/gem_with_macro-0.0.1/shoulda_macros/gem_macro.rb
+- test/fake_rails_root/vendor/plugins/.keep
+- test/fake_rails_root/vendor/plugins/plugin_with_macro/shoulda_macros/plugin_macro.rb
+- test/shoulda/autoload_macro_test.rb
+- test/shoulda/context_test.rb
+- test/shoulda/convert_to_should_syntax_test.rb
+- test/shoulda/helpers_test.rb
+- test/shoulda/railtie_test.rb
+- test/shoulda/rerun_snippet_test.rb
+- test/shoulda/should_test.rb
+- test/shoulda/test_framework_detection_test.rb
+- test/support/current_bundle.rb
+- test/support/rails_application_with_shoulda_context.rb
+- test/support/snowglobe.rb
+- test/test_helper.rb

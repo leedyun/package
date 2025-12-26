@@ -1,0 +1,226 @@
+--- !ruby/object:Gem::Specification
+name: virtus
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Piotr Solnica
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-06-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: descendants_tracker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.3
+- !ruby/object:Gem::Dependency
+  name: coercible
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: axiom-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Attributes on Steroids for Plain Old Ruby Objects
+email:
+- piotr.solnica@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+- TODO.md
+files:
+- ".gitignore"
+- ".pelusa.yml"
+- ".rspec"
+- ".ruby-gemset"
+- ".travis.yml"
+- ".yardopts"
+- CONTRIBUTING.md
+- Changelog.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO.md
+- lib/virtus.rb
+- lib/virtus/attribute.rb
+- lib/virtus/attribute/accessor.rb
+- lib/virtus/attribute/boolean.rb
+- lib/virtus/attribute/builder.rb
+- lib/virtus/attribute/coercer.rb
+- lib/virtus/attribute/coercible.rb
+- lib/virtus/attribute/collection.rb
+- lib/virtus/attribute/default_value.rb
+- lib/virtus/attribute/default_value/from_callable.rb
+- lib/virtus/attribute/default_value/from_clonable.rb
+- lib/virtus/attribute/default_value/from_symbol.rb
+- lib/virtus/attribute/embedded_value.rb
+- lib/virtus/attribute/hash.rb
+- lib/virtus/attribute/lazy_default.rb
+- lib/virtus/attribute/nullify_blank.rb
+- lib/virtus/attribute/strict.rb
+- lib/virtus/attribute_set.rb
+- lib/virtus/builder.rb
+- lib/virtus/builder/hook_context.rb
+- lib/virtus/class_inclusions.rb
+- lib/virtus/class_methods.rb
+- lib/virtus/coercer.rb
+- lib/virtus/configuration.rb
+- lib/virtus/const_missing_extensions.rb
+- lib/virtus/extensions.rb
+- lib/virtus/instance_methods.rb
+- lib/virtus/model.rb
+- lib/virtus/module_extensions.rb
+- lib/virtus/support/equalizer.rb
+- lib/virtus/support/options.rb
+- lib/virtus/support/type_lookup.rb
+- lib/virtus/value_object.rb
+- lib/virtus/version.rb
+- spec/integration/attributes_attribute_spec.rb
+- spec/integration/building_module_spec.rb
+- spec/integration/collection_member_coercion_spec.rb
+- spec/integration/custom_attributes_spec.rb
+- spec/integration/custom_collection_attributes_spec.rb
+- spec/integration/default_values_spec.rb
+- spec/integration/defining_attributes_spec.rb
+- spec/integration/embedded_value_spec.rb
+- spec/integration/extending_objects_spec.rb
+- spec/integration/hash_attributes_coercion_spec.rb
+- spec/integration/inheritance_spec.rb
+- spec/integration/injectible_coercers_spec.rb
+- spec/integration/mass_assignment_with_accessors_spec.rb
+- spec/integration/overriding_virtus_spec.rb
+- spec/integration/required_attributes_spec.rb
+- spec/integration/struct_as_embedded_value_spec.rb
+- spec/integration/using_modules_spec.rb
+- spec/integration/value_object_with_custom_constructor_spec.rb
+- spec/integration/virtus/instance_level_attributes_spec.rb
+- spec/integration/virtus/value_object_spec.rb
+- spec/shared/constants_helpers.rb
+- spec/shared/freeze_method_behavior.rb
+- spec/shared/idempotent_method_behaviour.rb
+- spec/shared/options_class_method.rb
+- spec/spec_helper.rb
+- spec/unit/virtus/attribute/boolean/coerce_spec.rb
+- spec/unit/virtus/attribute/boolean/value_coerced_predicate_spec.rb
+- spec/unit/virtus/attribute/class_methods/build_spec.rb
+- spec/unit/virtus/attribute/class_methods/coerce_spec.rb
+- spec/unit/virtus/attribute/coerce_spec.rb
+- spec/unit/virtus/attribute/coercible_predicate_spec.rb
+- spec/unit/virtus/attribute/collection/class_methods/build_spec.rb
+- spec/unit/virtus/attribute/collection/coerce_spec.rb
+- spec/unit/virtus/attribute/collection/value_coerced_predicate_spec.rb
+- spec/unit/virtus/attribute/comparison_spec.rb
+- spec/unit/virtus/attribute/custom_collection_spec.rb
+- spec/unit/virtus/attribute/defined_spec.rb
+- spec/unit/virtus/attribute/embedded_value/class_methods/build_spec.rb
+- spec/unit/virtus/attribute/embedded_value/coerce_spec.rb
+- spec/unit/virtus/attribute/get_spec.rb
+- spec/unit/virtus/attribute/hash/class_methods/build_spec.rb
+- spec/unit/virtus/attribute/hash/coerce_spec.rb
+- spec/unit/virtus/attribute/lazy_predicate_spec.rb
+- spec/unit/virtus/attribute/rename_spec.rb
+- spec/unit/virtus/attribute/required_predicate_spec.rb
+- spec/unit/virtus/attribute/set_default_value_spec.rb
+- spec/unit/virtus/attribute/set_spec.rb
+- spec/unit/virtus/attribute/value_coerced_predicate_spec.rb
+- spec/unit/virtus/attribute_set/append_spec.rb
+- spec/unit/virtus/attribute_set/define_reader_method_spec.rb
+- spec/unit/virtus/attribute_set/define_writer_method_spec.rb
+- spec/unit/virtus/attribute_set/each_spec.rb
+- spec/unit/virtus/attribute_set/element_reference_spec.rb
+- spec/unit/virtus/attribute_set/element_set_spec.rb
+- spec/unit/virtus/attribute_set/merge_spec.rb
+- spec/unit/virtus/attribute_set/reset_spec.rb
+- spec/unit/virtus/attribute_spec.rb
+- spec/unit/virtus/attributes_reader_spec.rb
+- spec/unit/virtus/attributes_writer_spec.rb
+- spec/unit/virtus/class_methods/finalize_spec.rb
+- spec/unit/virtus/class_methods/new_spec.rb
+- spec/unit/virtus/config_spec.rb
+- spec/unit/virtus/element_reader_spec.rb
+- spec/unit/virtus/element_writer_spec.rb
+- spec/unit/virtus/freeze_spec.rb
+- spec/unit/virtus/model_spec.rb
+- spec/unit/virtus/module_spec.rb
+- spec/unit/virtus/set_default_attributes_spec.rb
+- spec/unit/virtus/value_object_spec.rb
+- virtus.gemspec
+homepage: https://github.com/solnic/virtus
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: Attributes on Steroids for Plain Old Ruby Objects
+test_files: []

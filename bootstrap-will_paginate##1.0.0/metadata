@@ -1,0 +1,70 @@
+--- !ruby/object:Gem::Specification
+name: bootstrap-will_paginate
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Nicholas Fine
+- Isaac Bowen
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-04-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: will_paginate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Hooks into will_paginate to format the html to match Twitter Bootstrap
+  styling.  Extension code was originally written by Isaac Bowen (https://gist.github.com/1182136).
+email:
+- nick@ndfine.com
+- ikebowen@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- boostrap-will_paginate.png
+- bootstrap-will_paginate.gemspec
+- config/initializers/will_paginate.rb
+- lib/bootstrap-will_paginate.rb
+- lib/bootstrap-will_paginate/version.rb
+homepage: https://github.com/yrgoldteeth/bootstrap-will_paginate
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: bootstrap-will_paginate
+rubygems_version: 2.6.8
+signing_key: 
+specification_version: 4
+summary: Format will_paginate html to match Twitter Bootstrap styling.
+test_files: []

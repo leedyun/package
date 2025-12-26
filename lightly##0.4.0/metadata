@@ -1,0 +1,48 @@
+--- !ruby/object:Gem::Specification
+name: lightly
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Danny Ben Shitrit
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-05-19 00:00:00.000000000 Z
+dependencies: []
+description: Easy to use file cache
+email: db@dannyben.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/lightly.rb
+- lib/lightly/cache_operations.rb
+- lib/lightly/lightly.rb
+- lib/lightly/version.rb
+homepage: https://github.com/DannyBen/lightly
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: File cache for performing heavy tasks, lightly.
+test_files: []

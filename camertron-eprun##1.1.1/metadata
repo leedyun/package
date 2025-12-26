@@ -1,0 +1,58 @@
+--- !ruby/object:Gem::Specification
+name: camertron-eprun
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Ayumu Nojima (野島 歩)
+- Martin J. Dürst
+- Cameron Dutro
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-08-24 00:00:00.000000000 Z
+dependencies: []
+description: Efficient pure Ruby Unicode normalization.
+email:
+- duerst@it.aoyama.ac.jp
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- History.txt
+- LICENSE
+- README.md
+- Rakefile
+- lib/eprun.rb
+- lib/eprun/core_ext/string.rb
+- lib/eprun/helpers.rb
+- lib/eprun/normalize.rb
+- lib/eprun/ruby18/normalize.rb
+- lib/eprun/ruby18/tables.rb
+- lib/eprun/tables.rb
+- lib/eprun/version.rb
+homepage: http://github.com/camertron/camertron-eprun
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: Efficient pure Ruby Unicode normalization.
+test_files: []

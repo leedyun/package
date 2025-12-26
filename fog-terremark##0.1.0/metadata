@@ -1,0 +1,271 @@
+--- !ruby/object:Gem::Specification
+name: fog-terremark
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Paulo Henrique Lopes Ribeiro
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-04-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: turn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |2
+                           This library can be used as a module for `fog` or
+                           as standalone provider to use the Terremark vCloud in
+                           applications.
+email:
+- plribeiro3000@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-terremark.gemspec
+- gemfiles/Gemfile.1.9.2-
+- gemfiles/Gemfile.1.9.3+
+- lib/fog/bin/terremark.rb
+- lib/fog/compute/terremark.rb
+- lib/fog/compute/terremark/common.rb
+- lib/fog/compute/terremark/mock.rb
+- lib/fog/compute/terremark/models/address.rb
+- lib/fog/compute/terremark/models/addresses.rb
+- lib/fog/compute/terremark/models/image.rb
+- lib/fog/compute/terremark/models/images.rb
+- lib/fog/compute/terremark/models/internetservice.rb
+- lib/fog/compute/terremark/models/internetservices.rb
+- lib/fog/compute/terremark/models/network.rb
+- lib/fog/compute/terremark/models/networks.rb
+- lib/fog/compute/terremark/models/nodeservice.rb
+- lib/fog/compute/terremark/models/nodeservices.rb
+- lib/fog/compute/terremark/models/server.rb
+- lib/fog/compute/terremark/models/servers.rb
+- lib/fog/compute/terremark/models/task.rb
+- lib/fog/compute/terremark/models/tasks.rb
+- lib/fog/compute/terremark/models/vdc.rb
+- lib/fog/compute/terremark/models/vdcs.rb
+- lib/fog/compute/terremark/parser.rb
+- lib/fog/compute/terremark/real.rb
+- lib/fog/compute/terremark/requests/add_internet_service.rb
+- lib/fog/compute/terremark/requests/add_node_service.rb
+- lib/fog/compute/terremark/requests/configure_vapp.rb
+- lib/fog/compute/terremark/requests/create_internet_service.rb
+- lib/fog/compute/terremark/requests/delete_internet_service.rb
+- lib/fog/compute/terremark/requests/delete_node_service.rb
+- lib/fog/compute/terremark/requests/delete_public_ip.rb
+- lib/fog/compute/terremark/requests/delete_vapp.rb
+- lib/fog/compute/terremark/requests/deploy_vapp.rb
+- lib/fog/compute/terremark/requests/get_catalog.rb
+- lib/fog/compute/terremark/requests/get_catalog_item.rb
+- lib/fog/compute/terremark/requests/get_internet_services.rb
+- lib/fog/compute/terremark/requests/get_keys_list.rb
+- lib/fog/compute/terremark/requests/get_network.rb
+- lib/fog/compute/terremark/requests/get_network_ips.rb
+- lib/fog/compute/terremark/requests/get_node_services.rb
+- lib/fog/compute/terremark/requests/get_organization.rb
+- lib/fog/compute/terremark/requests/get_organizations.rb
+- lib/fog/compute/terremark/requests/get_public_ip.rb
+- lib/fog/compute/terremark/requests/get_public_ips.rb
+- lib/fog/compute/terremark/requests/get_task.rb
+- lib/fog/compute/terremark/requests/get_tasks_list.rb
+- lib/fog/compute/terremark/requests/get_vapp.rb
+- lib/fog/compute/terremark/requests/get_vapp_template.rb
+- lib/fog/compute/terremark/requests/get_vdc.rb
+- lib/fog/compute/terremark/requests/instantiate_vapp_template.rb
+- lib/fog/compute/terremark/requests/power_off.rb
+- lib/fog/compute/terremark/requests/power_on.rb
+- lib/fog/compute/terremark/requests/power_reset.rb
+- lib/fog/compute/terremark/requests/power_shutdown.rb
+- lib/fog/parsers/terremark.rb
+- lib/fog/parsers/terremark/base.rb
+- lib/fog/parsers/terremark/get_catalog.rb
+- lib/fog/parsers/terremark/get_catalog_item.rb
+- lib/fog/parsers/terremark/get_internet_services.rb
+- lib/fog/parsers/terremark/get_keys_list.rb
+- lib/fog/parsers/terremark/get_network_ips.rb
+- lib/fog/parsers/terremark/get_node_services.rb
+- lib/fog/parsers/terremark/get_organization.rb
+- lib/fog/parsers/terremark/get_organizations.rb
+- lib/fog/parsers/terremark/get_public_ips.rb
+- lib/fog/parsers/terremark/get_tasks_list.rb
+- lib/fog/parsers/terremark/get_vapp_template.rb
+- lib/fog/parsers/terremark/get_vdc.rb
+- lib/fog/parsers/terremark/instantiate_vapp_template.rb
+- lib/fog/parsers/terremark/internet_service.rb
+- lib/fog/parsers/terremark/network.rb
+- lib/fog/parsers/terremark/node_service.rb
+- lib/fog/parsers/terremark/public_ip.rb
+- lib/fog/parsers/terremark/task.rb
+- lib/fog/parsers/terremark/vapp.rb
+- lib/fog/terremark.rb
+- lib/fog/terremark/vcloud.rb
+- lib/fog/terremark/vcloud/mock.rb
+- lib/fog/terremark/vcloud/real.rb
+- lib/fog/terremark/version.rb
+- spec/cassettes/get_login_token.yml
+- spec/credentials_spec.rb
+- spec/minitest_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.3
+signing_key: 
+specification_version: 4
+summary: Module for the 'fog' gem to support Terremark vCloud.
+test_files:
+- spec/cassettes/get_login_token.yml
+- spec/credentials_spec.rb
+- spec/minitest_helper.rb

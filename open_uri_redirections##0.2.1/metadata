@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification 
+name: open_uri_redirections
+version: !ruby/object:Gem::Version 
+  version: 0.2.1
+platform: ruby
+authors: 
+- Jaime Iniesta
+- Gabriel Cebrian
+- Felix C. Stegerman
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2014-11-26 00:00:00 Z
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        version: 3.1.0
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: fakeweb
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        version: 1.3.0
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: rake
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        version: 10.3.2
+  type: :development
+  version_requirements: *id003
+description: OpenURI patch to allow redirections between HTTP and HTTPS
+email: 
+- jaimeiniesta@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- .gitignore
+- .travis.yml
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/open-uri/redirections_patch.rb
+- lib/open_uri_redirections.rb
+- lib/open_uri_redirections/version.rb
+- open_uri_redirections.gemspec
+- spec/redirections_spec.rb
+- spec/samples/http_safe.response
+- spec/samples/http_safe2.response
+- spec/samples/http_unsafe.response
+- spec/samples/https_safe.response
+- spec/samples/https_unsafe.response
+- spec/spec_helper.rb
+homepage: https://github.com/jaimeiniesta/open_uri_redirections
+licenses: 
+- MIT
+metadata: {}
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - &id004 
+    - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - *id004
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: OpenURI patch to allow redirections between HTTP and HTTPS
+test_files: 
+- spec/redirections_spec.rb
+- spec/samples/http_safe.response
+- spec/samples/http_safe2.response
+- spec/samples/http_unsafe.response
+- spec/samples/https_safe.response
+- spec/samples/https_unsafe.response
+- spec/spec_helper.rb

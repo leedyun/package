@@ -1,0 +1,94 @@
+--- !ruby/object:Gem::Specification
+name: apple-store_search
+version: !ruby/object:Gem::Version
+  version: 0.0.5
+platform: ruby
+authors:
+- Shamith c
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: curl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Exited to watch its progress
+email: shamithc@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- apple-store_search.gemspec
+- doc/AppleStoreSearch.html
+- doc/AppleStoreSearch/Search.html
+- doc/_index.html
+- doc/class_list.html
+- doc/css/common.css
+- doc/css/full_list.css
+- doc/css/style.css
+- doc/file_list.html
+- doc/frames.html
+- doc/index.html
+- doc/js/app.js
+- doc/js/full_list.js
+- doc/js/jquery.js
+- doc/method_list.html
+- doc/top-level-namespace.html
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/apple_store_search.rb
+- lib/apple_store_search/version.rb
+homepage: http://shamith.com/
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: This is for searching in app in apple store
+test_files: []

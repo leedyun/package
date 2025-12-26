@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: riemann-client
+version: !ruby/object:Gem::Version
+  version: 1.2.1
+platform: ruby
+authors:
+- Kyle Kingsbury
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-07-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: beefcake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: mtrc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+description: Client for the distributed event system Riemann.
+email: aphyr@aphyr.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/codeql-analysis.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.markdown
+- Rakefile
+- SECURITY.md
+- lib/riemann.rb
+- lib/riemann/attribute.rb
+- lib/riemann/auto_state.rb
+- lib/riemann/client.rb
+- lib/riemann/client/ssl_socket.rb
+- lib/riemann/client/tcp.rb
+- lib/riemann/client/tcp_socket.rb
+- lib/riemann/client/udp.rb
+- lib/riemann/event.rb
+- lib/riemann/message.rb
+- lib/riemann/metric_thread.rb
+- lib/riemann/query.rb
+- lib/riemann/state.rb
+- lib/riemann/version.rb
+- riemann-client.gemspec
+- spec/client_spec.rb
+- spec/riemann.config
+- spec/shared_examples.rb
+- spec/spec_helper.rb
+homepage: https://github.com/aphyr/riemann-ruby-client
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.15
+signing_key:
+specification_version: 4
+summary: Client for the distributed event system Riemann.
+test_files:
+- spec/client_spec.rb
+- spec/riemann.config
+- spec/shared_examples.rb
+- spec/spec_helper.rb

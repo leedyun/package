@@ -1,0 +1,564 @@
+--- !ruby/object:Gem::Specification
+name: lob
+version: !ruby/object:Gem::Version
+  version: 6.0.9
+platform: ruby
+authors:
+- OpenAPI-Generator
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-04-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+description: 'The Lob API is organized around REST. Our API is designed to have predictable,
+  resource-oriented URLs and uses HTTP response codes to indicate any API errors.
+  <p> Looking for our [previous documentation](https://lob.github.io/legacy-docs/)? '
+email:
+- lob-openapi@lob.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CODE_SNIPPETS.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- MIGRATION.md
+- README.md
+- Rakefile
+- __tests__/Api/Address.unit.rb
+- __tests__/Api/BankAccount.unit.rb
+- __tests__/Api/BillingGroup.unit.rb
+- __tests__/Api/Card.unit.rb
+- __tests__/Api/CardOrder.unit.rb
+- __tests__/Api/Check.unit.rb
+- __tests__/Api/IntlAutocompletion.unit.rb
+- __tests__/Api/IntlVerification.unit.rb
+- __tests__/Api/Letter.unit.rb
+- __tests__/Api/Postcard.unit.rb
+- __tests__/Api/Require.unit.rb
+- __tests__/Api/ReverseGeocodeLookup.unit.rb
+- __tests__/Api/SelfMailer.unit.rb
+- __tests__/Api/Template.unit.rb
+- __tests__/Api/TemplateVersion.unit.rb
+- __tests__/Api/UsAutocompletion.unit.rb
+- __tests__/Api/UsVerification.unit.rb
+- __tests__/Api/ZipLookup.unit.rb
+- __tests__/Integration/Address.spec.rb
+- __tests__/Integration/BankAccount.spec.rb
+- __tests__/Integration/BillingGroup.spec.rb
+- __tests__/Integration/Card.spec.rb
+- __tests__/Integration/CardOrder.spec.rb
+- __tests__/Integration/Check.spec.rb
+- __tests__/Integration/IntlAutocompletion.spec.rb
+- __tests__/Integration/IntlVerification.spec.rb
+- __tests__/Integration/Letter.spec.rb
+- __tests__/Integration/Postcard.spec.rb
+- __tests__/Integration/ReverseGeocodeLookup.spec.rb
+- __tests__/Integration/SelfMailer.spec.rb
+- __tests__/Integration/Template.spec.rb
+- __tests__/Integration/TemplateVersion.spec.rb
+- __tests__/Integration/UsAutocompletion.spec.rb
+- __tests__/Integration/UsVerification.spec.rb
+- __tests__/Integration/ZipLookup.spec.rb
+- __tests__/TestFixtures.rb
+- docs/Address.md
+- docs/AddressDeletion.md
+- docs/AddressDomestic.md
+- docs/AddressDomesticExpanded.md
+- docs/AddressEditable.md
+- docs/AddressList.md
+- docs/AddressesApi.md
+- docs/BankAccount.md
+- docs/BankAccountDeletion.md
+- docs/BankAccountList.md
+- docs/BankAccountVerify.md
+- docs/BankAccountWritable.md
+- docs/BankAccountsApi.md
+- docs/BankTypeEnum.md
+- docs/BillingGroup.md
+- docs/BillingGroupEditable.md
+- docs/BillingGroupList.md
+- docs/BillingGroupsApi.md
+- docs/Buckslip.md
+- docs/BuckslipDeletion.md
+- docs/BuckslipEditable.md
+- docs/BuckslipOrder.md
+- docs/BuckslipOrderEditable.md
+- docs/BuckslipOrdersApi.md
+- docs/BuckslipOrdersList.md
+- docs/BuckslipUpdatable.md
+- docs/BuckslipsApi.md
+- docs/BuckslipsList.md
+- docs/BulkError.md
+- docs/BulkErrorProperties.md
+- docs/Campaign.md
+- docs/CampaignCreative.md
+- docs/CampaignDeletion.md
+- docs/CampaignUpdatable.md
+- docs/CampaignWritable.md
+- docs/CampaignsApi.md
+- docs/CampaignsList.md
+- docs/Card.md
+- docs/CardDeletion.md
+- docs/CardEditable.md
+- docs/CardList.md
+- docs/CardOrder.md
+- docs/CardOrderEditable.md
+- docs/CardOrderList.md
+- docs/CardOrdersApi.md
+- docs/CardUpdatable.md
+- docs/CardsApi.md
+- docs/Check.md
+- docs/CheckDeletion.md
+- docs/CheckEditable.md
+- docs/CheckList.md
+- docs/ChecksApi.md
+- docs/ChkUseType.md
+- docs/CmpScheduleType.md
+- docs/CmpUseType.md
+- docs/CountryExtended.md
+- docs/CountryExtendedExpanded.md
+- docs/CountryExtendedExpandedNoUs.md
+- docs/CreativePatch.md
+- docs/CreativeResponse.md
+- docs/CreativeWritable.md
+- docs/CreativesApi.md
+- docs/CustomEnvelopeReturned.md
+- docs/DefaultApi.md
+- docs/DeliverabilityAnalysis.md
+- docs/DpvFootnote.md
+- docs/EngineHtml.md
+- docs/EventType.md
+- docs/Events.md
+- docs/Export.md
+- docs/ExportModel.md
+- docs/GeocodeAddresses.md
+- docs/GeocodeComponents.md
+- docs/HTTPValidationError.md
+- docs/IdentityValidation.md
+- docs/IdentityValidationApi.md
+- docs/InlineObject.md
+- docs/IntlAddress.md
+- docs/IntlAutocompletions.md
+- docs/IntlAutocompletionsApi.md
+- docs/IntlAutocompletionsWritable.md
+- docs/IntlComponents.md
+- docs/IntlSuggestions.md
+- docs/IntlVerification.md
+- docs/IntlVerificationOrError.md
+- docs/IntlVerificationWritable.md
+- docs/IntlVerifications.md
+- docs/IntlVerificationsApi.md
+- docs/IntlVerificationsPayload.md
+- docs/Letter.md
+- docs/LetterCustomEnvelope.md
+- docs/LetterDeletion.md
+- docs/LetterDetailsReturned.md
+- docs/LetterDetailsWritable.md
+- docs/LetterEditable.md
+- docs/LetterList.md
+- docs/LettersApi.md
+- docs/LobConfidenceScore.md
+- docs/LobError.md
+- docs/Location.md
+- docs/LocationAnalysis.md
+- docs/LtrUseType.md
+- docs/MailType.md
+- docs/MultiLineAddress.md
+- docs/MultipleComponents.md
+- docs/MultipleComponentsIntl.md
+- docs/MultipleComponentsList.md
+- docs/OptionalAddressColumnMapping.md
+- docs/PlaceholderModel.md
+- docs/Postcard.md
+- docs/PostcardDeletion.md
+- docs/PostcardDetailsReturned.md
+- docs/PostcardDetailsWritable.md
+- docs/PostcardEditable.md
+- docs/PostcardList.md
+- docs/PostcardSize.md
+- docs/PostcardsApi.md
+- docs/PscUseType.md
+- docs/QrCode.md
+- docs/RequiredAddressColumnMapping.md
+- docs/ReturnEnvelope.md
+- docs/ReverseGeocode.md
+- docs/ReverseGeocodeLookupsApi.md
+- docs/SelfMailer.md
+- docs/SelfMailerDeletion.md
+- docs/SelfMailerEditable.md
+- docs/SelfMailerList.md
+- docs/SelfMailerSize.md
+- docs/SelfMailersApi.md
+- docs/SfmUseType.md
+- docs/SnapPack.md
+- docs/SnapPackDeletion.md
+- docs/SnapPackEditable.md
+- docs/SnapPackList.md
+- docs/SnapPackSize.md
+- docs/SnapPacksApi.md
+- docs/SnpUseType.md
+- docs/SortBy.md
+- docs/SortBy1.md
+- docs/SortBy2.md
+- docs/SortBy3.md
+- docs/SortBy4.md
+- docs/SortByDateModified.md
+- docs/Suggestions.md
+- docs/Template.md
+- docs/TemplateDeletion.md
+- docs/TemplateList.md
+- docs/TemplateUpdate.md
+- docs/TemplateVersion.md
+- docs/TemplateVersionDeletion.md
+- docs/TemplateVersionList.md
+- docs/TemplateVersionUpdatable.md
+- docs/TemplateVersionWritable.md
+- docs/TemplateVersionsApi.md
+- docs/TemplateWritable.md
+- docs/TemplatesApi.md
+- docs/Thumbnail.md
+- docs/TrackingEventCertified.md
+- docs/TrackingEventDetails.md
+- docs/TrackingEventNormal.md
+- docs/Upload.md
+- docs/UploadCreateExport.md
+- docs/UploadFile.md
+- docs/UploadState.md
+- docs/UploadUpdatable.md
+- docs/UploadWritable.md
+- docs/UploadsApi.md
+- docs/UploadsMetadata.md
+- docs/UsAddress.md
+- docs/UsAutocompletions.md
+- docs/UsAutocompletionsApi.md
+- docs/UsAutocompletionsWritable.md
+- docs/UsComponents.md
+- docs/UsVerification.md
+- docs/UsVerificationOrError.md
+- docs/UsVerifications.md
+- docs/UsVerificationsApi.md
+- docs/UsVerificationsWritable.md
+- docs/ValidationError.md
+- docs/Zip.md
+- docs/ZipCodeType.md
+- docs/ZipEditable.md
+- docs/ZipLookupCity.md
+- docs/ZipLookupsApi.md
+- git_push.sh
+- lib/lob.rb
+- lib/lob/api/addresses_api.rb
+- lib/lob/api/bank_accounts_api.rb
+- lib/lob/api/billing_groups_api.rb
+- lib/lob/api/buckslip_orders_api.rb
+- lib/lob/api/buckslips_api.rb
+- lib/lob/api/campaigns_api.rb
+- lib/lob/api/card_orders_api.rb
+- lib/lob/api/cards_api.rb
+- lib/lob/api/checks_api.rb
+- lib/lob/api/creatives_api.rb
+- lib/lob/api/default_api.rb
+- lib/lob/api/identity_validation_api.rb
+- lib/lob/api/intl_autocompletions_api.rb
+- lib/lob/api/intl_verifications_api.rb
+- lib/lob/api/letters_api.rb
+- lib/lob/api/postcards_api.rb
+- lib/lob/api/reverse_geocode_lookups_api.rb
+- lib/lob/api/self_mailers_api.rb
+- lib/lob/api/snap_packs_api.rb
+- lib/lob/api/template_versions_api.rb
+- lib/lob/api/templates_api.rb
+- lib/lob/api/uploads_api.rb
+- lib/lob/api/us_autocompletions_api.rb
+- lib/lob/api/us_verifications_api.rb
+- lib/lob/api/zip_lookups_api.rb
+- lib/lob/api_client.rb
+- lib/lob/api_error.rb
+- lib/lob/configuration.rb
+- lib/lob/models/address.rb
+- lib/lob/models/address_deletion.rb
+- lib/lob/models/address_domestic.rb
+- lib/lob/models/address_domestic_expanded.rb
+- lib/lob/models/address_editable.rb
+- lib/lob/models/address_list.rb
+- lib/lob/models/bank_account.rb
+- lib/lob/models/bank_account_deletion.rb
+- lib/lob/models/bank_account_list.rb
+- lib/lob/models/bank_account_verify.rb
+- lib/lob/models/bank_account_writable.rb
+- lib/lob/models/bank_type_enum.rb
+- lib/lob/models/billing_group.rb
+- lib/lob/models/billing_group_editable.rb
+- lib/lob/models/billing_group_list.rb
+- lib/lob/models/buckslip.rb
+- lib/lob/models/buckslip_deletion.rb
+- lib/lob/models/buckslip_editable.rb
+- lib/lob/models/buckslip_order.rb
+- lib/lob/models/buckslip_order_editable.rb
+- lib/lob/models/buckslip_orders_list.rb
+- lib/lob/models/buckslip_updatable.rb
+- lib/lob/models/buckslips_list.rb
+- lib/lob/models/bulk_error.rb
+- lib/lob/models/bulk_error_properties.rb
+- lib/lob/models/campaign.rb
+- lib/lob/models/campaign_creative.rb
+- lib/lob/models/campaign_deletion.rb
+- lib/lob/models/campaign_updatable.rb
+- lib/lob/models/campaign_writable.rb
+- lib/lob/models/campaigns_list.rb
+- lib/lob/models/card.rb
+- lib/lob/models/card_deletion.rb
+- lib/lob/models/card_editable.rb
+- lib/lob/models/card_list.rb
+- lib/lob/models/card_order.rb
+- lib/lob/models/card_order_editable.rb
+- lib/lob/models/card_order_list.rb
+- lib/lob/models/card_updatable.rb
+- lib/lob/models/check.rb
+- lib/lob/models/check_deletion.rb
+- lib/lob/models/check_editable.rb
+- lib/lob/models/check_list.rb
+- lib/lob/models/chk_use_type.rb
+- lib/lob/models/cmp_schedule_type.rb
+- lib/lob/models/cmp_use_type.rb
+- lib/lob/models/country_extended.rb
+- lib/lob/models/country_extended_expanded.rb
+- lib/lob/models/country_extended_expanded_no_us.rb
+- lib/lob/models/creative_patch.rb
+- lib/lob/models/creative_response.rb
+- lib/lob/models/creative_writable.rb
+- lib/lob/models/custom_envelope_returned.rb
+- lib/lob/models/deliverability_analysis.rb
+- lib/lob/models/dpv_footnote.rb
+- lib/lob/models/engine_html.rb
+- lib/lob/models/event_type.rb
+- lib/lob/models/events.rb
+- lib/lob/models/export.rb
+- lib/lob/models/export_model.rb
+- lib/lob/models/geocode_addresses.rb
+- lib/lob/models/geocode_components.rb
+- lib/lob/models/http_validation_error.rb
+- lib/lob/models/identity_validation.rb
+- lib/lob/models/inline_object.rb
+- lib/lob/models/intl_address.rb
+- lib/lob/models/intl_autocompletions.rb
+- lib/lob/models/intl_autocompletions_writable.rb
+- lib/lob/models/intl_components.rb
+- lib/lob/models/intl_suggestions.rb
+- lib/lob/models/intl_verification.rb
+- lib/lob/models/intl_verification_or_error.rb
+- lib/lob/models/intl_verification_writable.rb
+- lib/lob/models/intl_verifications.rb
+- lib/lob/models/intl_verifications_payload.rb
+- lib/lob/models/letter.rb
+- lib/lob/models/letter_custom_envelope.rb
+- lib/lob/models/letter_deletion.rb
+- lib/lob/models/letter_details_returned.rb
+- lib/lob/models/letter_details_writable.rb
+- lib/lob/models/letter_editable.rb
+- lib/lob/models/letter_list.rb
+- lib/lob/models/lob_confidence_score.rb
+- lib/lob/models/lob_error.rb
+- lib/lob/models/location.rb
+- lib/lob/models/location_analysis.rb
+- lib/lob/models/ltr_use_type.rb
+- lib/lob/models/mail_type.rb
+- lib/lob/models/multi_line_address.rb
+- lib/lob/models/multiple_components.rb
+- lib/lob/models/multiple_components_intl.rb
+- lib/lob/models/multiple_components_list.rb
+- lib/lob/models/optional_address_column_mapping.rb
+- lib/lob/models/placeholder_model.rb
+- lib/lob/models/postcard.rb
+- lib/lob/models/postcard_deletion.rb
+- lib/lob/models/postcard_details_returned.rb
+- lib/lob/models/postcard_details_writable.rb
+- lib/lob/models/postcard_editable.rb
+- lib/lob/models/postcard_list.rb
+- lib/lob/models/postcard_size.rb
+- lib/lob/models/psc_use_type.rb
+- lib/lob/models/qr_code.rb
+- lib/lob/models/required_address_column_mapping.rb
+- lib/lob/models/return_envelope.rb
+- lib/lob/models/reverse_geocode.rb
+- lib/lob/models/self_mailer.rb
+- lib/lob/models/self_mailer_deletion.rb
+- lib/lob/models/self_mailer_editable.rb
+- lib/lob/models/self_mailer_list.rb
+- lib/lob/models/self_mailer_size.rb
+- lib/lob/models/sfm_use_type.rb
+- lib/lob/models/snap_pack.rb
+- lib/lob/models/snap_pack_deletion.rb
+- lib/lob/models/snap_pack_editable.rb
+- lib/lob/models/snap_pack_list.rb
+- lib/lob/models/snap_pack_size.rb
+- lib/lob/models/snp_use_type.rb
+- lib/lob/models/sort_by.rb
+- lib/lob/models/sort_by1.rb
+- lib/lob/models/sort_by2.rb
+- lib/lob/models/sort_by3.rb
+- lib/lob/models/sort_by4.rb
+- lib/lob/models/sort_by_date_modified.rb
+- lib/lob/models/suggestions.rb
+- lib/lob/models/template.rb
+- lib/lob/models/template_deletion.rb
+- lib/lob/models/template_list.rb
+- lib/lob/models/template_update.rb
+- lib/lob/models/template_version.rb
+- lib/lob/models/template_version_deletion.rb
+- lib/lob/models/template_version_list.rb
+- lib/lob/models/template_version_updatable.rb
+- lib/lob/models/template_version_writable.rb
+- lib/lob/models/template_writable.rb
+- lib/lob/models/thumbnail.rb
+- lib/lob/models/tracking_event_certified.rb
+- lib/lob/models/tracking_event_details.rb
+- lib/lob/models/tracking_event_normal.rb
+- lib/lob/models/upload.rb
+- lib/lob/models/upload_create_export.rb
+- lib/lob/models/upload_file.rb
+- lib/lob/models/upload_state.rb
+- lib/lob/models/upload_updatable.rb
+- lib/lob/models/upload_writable.rb
+- lib/lob/models/uploads_metadata.rb
+- lib/lob/models/us_address.rb
+- lib/lob/models/us_autocompletions.rb
+- lib/lob/models/us_autocompletions_writable.rb
+- lib/lob/models/us_components.rb
+- lib/lob/models/us_verification.rb
+- lib/lob/models/us_verification_or_error.rb
+- lib/lob/models/us_verifications.rb
+- lib/lob/models/us_verifications_writable.rb
+- lib/lob/models/validation_error.rb
+- lib/lob/models/zip.rb
+- lib/lob/models/zip_code_type.rb
+- lib/lob/models/zip_editable.rb
+- lib/lob/models/zip_lookup_city.rb
+- lib/lob/version.rb
+- lib/openapi_client.rb
+- lib/openapi_client/api_client.rb
+- lib/openapi_client/api_error.rb
+- lib/openapi_client/configuration.rb
+- lib/openapi_client/version.rb
+- lob.gemspec
+- spec/api/addresses_api_spec.rb
+- spec/api/bank_accounts_api_spec.rb
+- spec/api/billing_groups_api_spec.rb
+- spec/api/buckslip_orders_api_spec.rb
+- spec/api/buckslips_api_spec.rb
+- spec/api/campaigns_api_spec.rb
+- spec/api/card_orders_api_spec.rb
+- spec/api/cards_api_spec.rb
+- spec/api/checks_api_spec.rb
+- spec/api/creatives_api_spec.rb
+- spec/api/default_api_spec.rb
+- spec/api/identity_validation_api_spec.rb
+- spec/api/intl_autocompletions_api_spec.rb
+- spec/api/intl_verifications_api_spec.rb
+- spec/api/letters_api_spec.rb
+- spec/api/postcards_api_spec.rb
+- spec/api/reverse_geocode_lookups_api_spec.rb
+- spec/api/self_mailers_api_spec.rb
+- spec/api/snap_packs_api_spec.rb
+- spec/api/template_versions_api_spec.rb
+- spec/api/templates_api_spec.rb
+- spec/api/uploads_api_spec.rb
+- spec/api/us_autocompletions_api_spec.rb
+- spec/api/us_verifications_api_spec.rb
+- spec/api/zip_lookups_api_spec.rb
+- spec/api_client_spec.rb
+- spec/configuration_spec.rb
+- spec/spec_helper.rb
+homepage: https://openapi-generator.tech
+licenses:
+- Unlicense
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Lob Ruby Gem
+test_files:
+- spec/api/snap_packs_api_spec.rb
+- spec/api/identity_validation_api_spec.rb
+- spec/api/reverse_geocode_lookups_api_spec.rb
+- spec/api/buckslip_orders_api_spec.rb
+- spec/api/us_verifications_api_spec.rb
+- spec/api/us_autocompletions_api_spec.rb
+- spec/api/billing_groups_api_spec.rb
+- spec/api/default_api_spec.rb
+- spec/api/self_mailers_api_spec.rb
+- spec/api/zip_lookups_api_spec.rb
+- spec/api/intl_verifications_api_spec.rb
+- spec/api/postcards_api_spec.rb
+- spec/api/letters_api_spec.rb
+- spec/api/template_versions_api_spec.rb
+- spec/api/intl_autocompletions_api_spec.rb
+- spec/api/bank_accounts_api_spec.rb
+- spec/api/checks_api_spec.rb
+- spec/api/templates_api_spec.rb
+- spec/api/cards_api_spec.rb
+- spec/api/uploads_api_spec.rb
+- spec/api/addresses_api_spec.rb
+- spec/api/card_orders_api_spec.rb
+- spec/api/creatives_api_spec.rb
+- spec/api/buckslips_api_spec.rb
+- spec/api/campaigns_api_spec.rb
+- spec/api_client_spec.rb
+- spec/configuration_spec.rb
+- spec/spec_helper.rb

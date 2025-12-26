@@ -1,0 +1,83 @@
+--- !ruby/object:Gem::Specification
+name: globalid
+version: !ruby/object:Gem::Version
+  version: 1.2.1
+platform: ruby
+authors:
+- David Heinemeier Hansson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-09-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: URIs for your models makes it easy to pass references around.
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- lib/global_id.rb
+- lib/global_id/fixture_set.rb
+- lib/global_id/global_id.rb
+- lib/global_id/identification.rb
+- lib/global_id/locator.rb
+- lib/global_id/railtie.rb
+- lib/global_id/signed_global_id.rb
+- lib/global_id/uri/gid.rb
+- lib/global_id/verifier.rb
+- lib/globalid.rb
+homepage: http://www.rubyonrails.org
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key: 
+specification_version: 4
+summary: 'Refer to any model with a URI: gid://app/class/id'
+test_files: []

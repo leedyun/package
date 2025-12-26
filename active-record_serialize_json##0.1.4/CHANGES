@@ -1,0 +1,11 @@
+2011-05-31 - 0.1.1
+  * Do not store non JSON documents into the column.
+2011-05-27 - 0.1.0
+  * Now Rails 2 and 3 compatible
+2011-03-21 - 0.0.2
+  * Use ActiveRecord::Base API methods to get/set attributes.
+2010-08-19 - 0.0.1
+  * Added some necessary dependencies
+  * Support for more than one attribute
+2010-08-19 - 0.0.0
+  * Initial release

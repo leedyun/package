@@ -1,0 +1,225 @@
+--- !ruby/object:Gem::Specification
+name: pry
+version: !ruby/object:Gem::Version
+  version: 0.15.2
+platform: ruby
+authors:
+- John Mair (banisterfiend)
+- Conrad Irwin
+- Ryan Fitzgerald
+- Kyrylo Silin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: coderay
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: method_source
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: |
+  Pry is a runtime developer console and IRB alternative with powerful
+  introspection capabilities. Pry aims to be more than an IRB replacement. It is
+  an attempt to bring REPL driven programming to the Ruby language.
+email:
+- jrmair@gmail.com
+- conrad.irwin@gmail.com
+- rwfitzge@gmail.com
+- silin@kyrylo.org
+executables:
+- pry
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- bin/pry
+- lib/pry.rb
+- lib/pry/basic_object.rb
+- lib/pry/block_command.rb
+- lib/pry/class_command.rb
+- lib/pry/cli.rb
+- lib/pry/code.rb
+- lib/pry/code/code_file.rb
+- lib/pry/code/code_range.rb
+- lib/pry/code/loc.rb
+- lib/pry/code_object.rb
+- lib/pry/color_printer.rb
+- lib/pry/command.rb
+- lib/pry/command_set.rb
+- lib/pry/command_state.rb
+- lib/pry/commands/amend_line.rb
+- lib/pry/commands/bang.rb
+- lib/pry/commands/bang_pry.rb
+- lib/pry/commands/cat.rb
+- lib/pry/commands/cat/abstract_formatter.rb
+- lib/pry/commands/cat/exception_formatter.rb
+- lib/pry/commands/cat/file_formatter.rb
+- lib/pry/commands/cat/input_expression_formatter.rb
+- lib/pry/commands/cd.rb
+- lib/pry/commands/change_inspector.rb
+- lib/pry/commands/change_prompt.rb
+- lib/pry/commands/clear_screen.rb
+- lib/pry/commands/code_collector.rb
+- lib/pry/commands/disable_pry.rb
+- lib/pry/commands/easter_eggs.rb
+- lib/pry/commands/edit.rb
+- lib/pry/commands/edit/exception_patcher.rb
+- lib/pry/commands/edit/file_and_line_locator.rb
+- lib/pry/commands/exit.rb
+- lib/pry/commands/exit_all.rb
+- lib/pry/commands/exit_program.rb
+- lib/pry/commands/find_method.rb
+- lib/pry/commands/fix_indent.rb
+- lib/pry/commands/help.rb
+- lib/pry/commands/hist.rb
+- lib/pry/commands/import_set.rb
+- lib/pry/commands/jump_to.rb
+- lib/pry/commands/list_inspectors.rb
+- lib/pry/commands/ls.rb
+- lib/pry/commands/ls/config.rb
+- lib/pry/commands/ls/constants.rb
+- lib/pry/commands/ls/formatter.rb
+- lib/pry/commands/ls/globals.rb
+- lib/pry/commands/ls/grep.rb
+- lib/pry/commands/ls/instance_vars.rb
+- lib/pry/commands/ls/interrogatable.rb
+- lib/pry/commands/ls/jruby_hacks.rb
+- lib/pry/commands/ls/local_names.rb
+- lib/pry/commands/ls/local_vars.rb
+- lib/pry/commands/ls/ls_entity.rb
+- lib/pry/commands/ls/methods.rb
+- lib/pry/commands/ls/methods_helper.rb
+- lib/pry/commands/ls/self_methods.rb
+- lib/pry/commands/nesting.rb
+- lib/pry/commands/play.rb
+- lib/pry/commands/pry_backtrace.rb
+- lib/pry/commands/pry_version.rb
+- lib/pry/commands/raise_up.rb
+- lib/pry/commands/reload_code.rb
+- lib/pry/commands/reset.rb
+- lib/pry/commands/ri.rb
+- lib/pry/commands/save_file.rb
+- lib/pry/commands/shell_command.rb
+- lib/pry/commands/shell_mode.rb
+- lib/pry/commands/show_doc.rb
+- lib/pry/commands/show_info.rb
+- lib/pry/commands/show_input.rb
+- lib/pry/commands/show_source.rb
+- lib/pry/commands/stat.rb
+- lib/pry/commands/switch_to.rb
+- lib/pry/commands/toggle_color.rb
+- lib/pry/commands/watch_expression.rb
+- lib/pry/commands/watch_expression/expression.rb
+- lib/pry/commands/whereami.rb
+- lib/pry/commands/wtf.rb
+- lib/pry/config.rb
+- lib/pry/config/attributable.rb
+- lib/pry/config/lazy_value.rb
+- lib/pry/config/memoized_value.rb
+- lib/pry/config/value.rb
+- lib/pry/control_d_handler.rb
+- lib/pry/core_extensions.rb
+- lib/pry/editor.rb
+- lib/pry/env.rb
+- lib/pry/exception_handler.rb
+- lib/pry/exceptions.rb
+- lib/pry/forwardable.rb
+- lib/pry/helpers.rb
+- lib/pry/helpers/base_helpers.rb
+- lib/pry/helpers/command_helpers.rb
+- lib/pry/helpers/documentation_helpers.rb
+- lib/pry/helpers/options_helpers.rb
+- lib/pry/helpers/platform.rb
+- lib/pry/helpers/table.rb
+- lib/pry/helpers/text.rb
+- lib/pry/history.rb
+- lib/pry/hooks.rb
+- lib/pry/indent.rb
+- lib/pry/input/simple_stdio.rb
+- lib/pry/input_completer.rb
+- lib/pry/input_lock.rb
+- lib/pry/inspector.rb
+- lib/pry/last_exception.rb
+- lib/pry/method.rb
+- lib/pry/method/disowned.rb
+- lib/pry/method/patcher.rb
+- lib/pry/method/weird_method_locator.rb
+- lib/pry/object_path.rb
+- lib/pry/output.rb
+- lib/pry/pager.rb
+- lib/pry/prompt.rb
+- lib/pry/pry_class.rb
+- lib/pry/pry_instance.rb
+- lib/pry/repl.rb
+- lib/pry/repl_file_loader.rb
+- lib/pry/ring.rb
+- lib/pry/slop.rb
+- lib/pry/slop/LICENSE
+- lib/pry/slop/commands.rb
+- lib/pry/slop/option.rb
+- lib/pry/syntax_highlighter.rb
+- lib/pry/system_command_handler.rb
+- lib/pry/testable.rb
+- lib/pry/testable/evalable.rb
+- lib/pry/testable/mockable.rb
+- lib/pry/testable/pry_tester.rb
+- lib/pry/testable/utility.rb
+- lib/pry/testable/variables.rb
+- lib/pry/version.rb
+- lib/pry/warning.rb
+- lib/pry/wrapped_module.rb
+- lib/pry/wrapped_module/candidate.rb
+homepage: http://pry.github.io
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/pry/pry/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/pry/pry
+  bug_tracker_uri: https://github.com/pry/pry/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.14
+signing_key:
+specification_version: 4
+summary: A runtime developer console and IRB alternative with powerful introspection
+  capabilities.
+test_files: []

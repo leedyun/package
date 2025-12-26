@@ -1,0 +1,61 @@
+--- !ruby/object:Gem::Specification
+name: ulid
+version: !ruby/object:Gem::Version
+  version: 1.4.0
+platform: ruby
+authors:
+- Rafael Sales
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-03-05 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+- rafaelcds@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- lib/ulid.rb
+- lib/ulid/generator.rb
+- lib/ulid/version.rb
+- logo.png
+- spec/lib/ulid_spec.rb
+- spec/spec_helper.rb
+- ulid.gemspec
+homepage: https://github.com/rafaelsales/ulid
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.8
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Universally Unique Lexicographically Sortable Identifier implementation for
+  Ruby
+test_files: []

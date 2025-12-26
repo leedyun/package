@@ -1,0 +1,462 @@
+--- !ruby/object:Gem::Specification
+name: fog-ecloud
+version: !ruby/object:Gem::Version
+  version: 0.3.0
+platform: ruby
+authors:
+- Paulo Henrique Lopes Ribeiro
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-06-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: turn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  This library can be used as a module for `fog` or as standalone provider
+                          to use the Terremark EnterpriseCloud in applications.
+email:
+- plribeiro3000@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-ecloud.gemspec
+- gemfiles/Gemfile.1.9.2-
+- gemfiles/Gemfile.1.9.3+
+- lib/fog/bin/ecloud.rb
+- lib/fog/compute/ecloud.rb
+- lib/fog/compute/ecloud/errors.rb
+- lib/fog/compute/ecloud/models/admin_organization.rb
+- lib/fog/compute/ecloud/models/admin_organizations.rb
+- lib/fog/compute/ecloud/models/api_key.rb
+- lib/fog/compute/ecloud/models/api_keys.rb
+- lib/fog/compute/ecloud/models/association.rb
+- lib/fog/compute/ecloud/models/associations.rb
+- lib/fog/compute/ecloud/models/authentication_level.rb
+- lib/fog/compute/ecloud/models/authentication_levels.rb
+- lib/fog/compute/ecloud/models/backup_internet_service.rb
+- lib/fog/compute/ecloud/models/backup_internet_services.rb
+- lib/fog/compute/ecloud/models/catalog.rb
+- lib/fog/compute/ecloud/models/catalog_configuration.rb
+- lib/fog/compute/ecloud/models/catalog_configurations.rb
+- lib/fog/compute/ecloud/models/catalog_item.rb
+- lib/fog/compute/ecloud/models/collection.rb
+- lib/fog/compute/ecloud/models/compute_pool.rb
+- lib/fog/compute/ecloud/models/compute_pools.rb
+- lib/fog/compute/ecloud/models/cpu_usage_detail.rb
+- lib/fog/compute/ecloud/models/cpu_usage_detail_summary.rb
+- lib/fog/compute/ecloud/models/detached_disk.rb
+- lib/fog/compute/ecloud/models/detached_disks.rb
+- lib/fog/compute/ecloud/models/environment.rb
+- lib/fog/compute/ecloud/models/environments.rb
+- lib/fog/compute/ecloud/models/firewall_acl.rb
+- lib/fog/compute/ecloud/models/firewall_acls.rb
+- lib/fog/compute/ecloud/models/group.rb
+- lib/fog/compute/ecloud/models/groups.rb
+- lib/fog/compute/ecloud/models/guest_process.rb
+- lib/fog/compute/ecloud/models/guest_processes.rb
+- lib/fog/compute/ecloud/models/hardware_configuration.rb
+- lib/fog/compute/ecloud/models/hardware_configurations.rb
+- lib/fog/compute/ecloud/models/internet_service.rb
+- lib/fog/compute/ecloud/models/internet_services.rb
+- lib/fog/compute/ecloud/models/ip_address.rb
+- lib/fog/compute/ecloud/models/ip_addresses.rb
+- lib/fog/compute/ecloud/models/layout.rb
+- lib/fog/compute/ecloud/models/layouts.rb
+- lib/fog/compute/ecloud/models/location.rb
+- lib/fog/compute/ecloud/models/locations.rb
+- lib/fog/compute/ecloud/models/login_banner.rb
+- lib/fog/compute/ecloud/models/login_banners.rb
+- lib/fog/compute/ecloud/models/memory_usage_detail.rb
+- lib/fog/compute/ecloud/models/memory_usage_detail_summary.rb
+- lib/fog/compute/ecloud/models/model.rb
+- lib/fog/compute/ecloud/models/monitor.rb
+- lib/fog/compute/ecloud/models/monitors.rb
+- lib/fog/compute/ecloud/models/network.rb
+- lib/fog/compute/ecloud/models/networks.rb
+- lib/fog/compute/ecloud/models/node.rb
+- lib/fog/compute/ecloud/models/nodes.rb
+- lib/fog/compute/ecloud/models/operating_system.rb
+- lib/fog/compute/ecloud/models/operating_system_families.rb
+- lib/fog/compute/ecloud/models/operating_system_family.rb
+- lib/fog/compute/ecloud/models/operating_systems.rb
+- lib/fog/compute/ecloud/models/organization.rb
+- lib/fog/compute/ecloud/models/organizations.rb
+- lib/fog/compute/ecloud/models/password_complexity_rule.rb
+- lib/fog/compute/ecloud/models/password_complexity_rules.rb
+- lib/fog/compute/ecloud/models/physical_device.rb
+- lib/fog/compute/ecloud/models/physical_devices.rb
+- lib/fog/compute/ecloud/models/public_ip.rb
+- lib/fog/compute/ecloud/models/public_ips.rb
+- lib/fog/compute/ecloud/models/rnat.rb
+- lib/fog/compute/ecloud/models/rnats.rb
+- lib/fog/compute/ecloud/models/role.rb
+- lib/fog/compute/ecloud/models/roles.rb
+- lib/fog/compute/ecloud/models/row.rb
+- lib/fog/compute/ecloud/models/rows.rb
+- lib/fog/compute/ecloud/models/server.rb
+- lib/fog/compute/ecloud/models/server_configuration_option.rb
+- lib/fog/compute/ecloud/models/server_configuration_options.rb
+- lib/fog/compute/ecloud/models/servers.rb
+- lib/fog/compute/ecloud/models/ssh_key.rb
+- lib/fog/compute/ecloud/models/ssh_keys.rb
+- lib/fog/compute/ecloud/models/storage_usage_detail.rb
+- lib/fog/compute/ecloud/models/storage_usage_detail_summary.rb
+- lib/fog/compute/ecloud/models/support_ticket.rb
+- lib/fog/compute/ecloud/models/support_tickets.rb
+- lib/fog/compute/ecloud/models/tag.rb
+- lib/fog/compute/ecloud/models/tags.rb
+- lib/fog/compute/ecloud/models/task.rb
+- lib/fog/compute/ecloud/models/tasks.rb
+- lib/fog/compute/ecloud/models/template.rb
+- lib/fog/compute/ecloud/models/templates.rb
+- lib/fog/compute/ecloud/models/trusted_network_group.rb
+- lib/fog/compute/ecloud/models/trusted_network_groups.rb
+- lib/fog/compute/ecloud/models/user.rb
+- lib/fog/compute/ecloud/models/users.rb
+- lib/fog/compute/ecloud/models/virtual_machine_assigned_ip.rb
+- lib/fog/compute/ecloud/models/virtual_machine_assigned_ips.rb
+- lib/fog/compute/ecloud/requests/admin_disable_support_access.rb
+- lib/fog/compute/ecloud/requests/admin_edit_authentication_levels.rb
+- lib/fog/compute/ecloud/requests/admin_edit_login_banner.rb
+- lib/fog/compute/ecloud/requests/admin_edit_password_complexity_rules.rb
+- lib/fog/compute/ecloud/requests/admin_enable_support_access.rb
+- lib/fog/compute/ecloud/requests/backup_internet_service_create.rb
+- lib/fog/compute/ecloud/requests/backup_internet_service_delete.rb
+- lib/fog/compute/ecloud/requests/backup_internet_service_edit.rb
+- lib/fog/compute/ecloud/requests/compute_pool_edit.rb
+- lib/fog/compute/ecloud/requests/firewall_acls_create.rb
+- lib/fog/compute/ecloud/requests/firewall_acls_delete.rb
+- lib/fog/compute/ecloud/requests/get_admin_organization.rb
+- lib/fog/compute/ecloud/requests/get_api_key.rb
+- lib/fog/compute/ecloud/requests/get_api_keys.rb
+- lib/fog/compute/ecloud/requests/get_association.rb
+- lib/fog/compute/ecloud/requests/get_associations.rb
+- lib/fog/compute/ecloud/requests/get_authentication_level.rb
+- lib/fog/compute/ecloud/requests/get_authentication_levels.rb
+- lib/fog/compute/ecloud/requests/get_backup_internet_service.rb
+- lib/fog/compute/ecloud/requests/get_backup_internet_services.rb
+- lib/fog/compute/ecloud/requests/get_catalog.rb
+- lib/fog/compute/ecloud/requests/get_catalog_configuration.rb
+- lib/fog/compute/ecloud/requests/get_catalog_configurations.rb
+- lib/fog/compute/ecloud/requests/get_catalog_item.rb
+- lib/fog/compute/ecloud/requests/get_compute_pool.rb
+- lib/fog/compute/ecloud/requests/get_compute_pools.rb
+- lib/fog/compute/ecloud/requests/get_cpu_usage_detail.rb
+- lib/fog/compute/ecloud/requests/get_cpu_usage_detail_summary.rb
+- lib/fog/compute/ecloud/requests/get_detached_disk.rb
+- lib/fog/compute/ecloud/requests/get_detached_disks.rb
+- lib/fog/compute/ecloud/requests/get_environment.rb
+- lib/fog/compute/ecloud/requests/get_environments.rb
+- lib/fog/compute/ecloud/requests/get_firewall_acl.rb
+- lib/fog/compute/ecloud/requests/get_firewall_acls.rb
+- lib/fog/compute/ecloud/requests/get_group.rb
+- lib/fog/compute/ecloud/requests/get_groups.rb
+- lib/fog/compute/ecloud/requests/get_guest_process.rb
+- lib/fog/compute/ecloud/requests/get_guest_processes.rb
+- lib/fog/compute/ecloud/requests/get_hardware_configuration.rb
+- lib/fog/compute/ecloud/requests/get_hardware_configurations.rb
+- lib/fog/compute/ecloud/requests/get_internet_service.rb
+- lib/fog/compute/ecloud/requests/get_internet_services.rb
+- lib/fog/compute/ecloud/requests/get_ip_address.rb
+- lib/fog/compute/ecloud/requests/get_layout.rb
+- lib/fog/compute/ecloud/requests/get_layouts.rb
+- lib/fog/compute/ecloud/requests/get_location.rb
+- lib/fog/compute/ecloud/requests/get_locations.rb
+- lib/fog/compute/ecloud/requests/get_login_banner.rb
+- lib/fog/compute/ecloud/requests/get_login_banners.rb
+- lib/fog/compute/ecloud/requests/get_memory_usage_detail.rb
+- lib/fog/compute/ecloud/requests/get_memory_usage_detail_summary.rb
+- lib/fog/compute/ecloud/requests/get_monitor.rb
+- lib/fog/compute/ecloud/requests/get_monitors.rb
+- lib/fog/compute/ecloud/requests/get_network.rb
+- lib/fog/compute/ecloud/requests/get_network_summary.rb
+- lib/fog/compute/ecloud/requests/get_networks.rb
+- lib/fog/compute/ecloud/requests/get_node.rb
+- lib/fog/compute/ecloud/requests/get_nodes.rb
+- lib/fog/compute/ecloud/requests/get_operating_system.rb
+- lib/fog/compute/ecloud/requests/get_operating_system_families.rb
+- lib/fog/compute/ecloud/requests/get_organization.rb
+- lib/fog/compute/ecloud/requests/get_organizations.rb
+- lib/fog/compute/ecloud/requests/get_password_complexity_rule.rb
+- lib/fog/compute/ecloud/requests/get_password_complexity_rules.rb
+- lib/fog/compute/ecloud/requests/get_physical_device.rb
+- lib/fog/compute/ecloud/requests/get_physical_devices.rb
+- lib/fog/compute/ecloud/requests/get_process.rb
+- lib/fog/compute/ecloud/requests/get_processes.rb
+- lib/fog/compute/ecloud/requests/get_public_ip.rb
+- lib/fog/compute/ecloud/requests/get_public_ips.rb
+- lib/fog/compute/ecloud/requests/get_rnat.rb
+- lib/fog/compute/ecloud/requests/get_rnats.rb
+- lib/fog/compute/ecloud/requests/get_role.rb
+- lib/fog/compute/ecloud/requests/get_roles.rb
+- lib/fog/compute/ecloud/requests/get_row.rb
+- lib/fog/compute/ecloud/requests/get_rows.rb
+- lib/fog/compute/ecloud/requests/get_server.rb
+- lib/fog/compute/ecloud/requests/get_server_configuration_option.rb
+- lib/fog/compute/ecloud/requests/get_server_configuration_options.rb
+- lib/fog/compute/ecloud/requests/get_servers.rb
+- lib/fog/compute/ecloud/requests/get_ssh_key.rb
+- lib/fog/compute/ecloud/requests/get_ssh_keys.rb
+- lib/fog/compute/ecloud/requests/get_storage_usage_detail.rb
+- lib/fog/compute/ecloud/requests/get_storage_usage_detail_summary.rb
+- lib/fog/compute/ecloud/requests/get_support_ticket.rb
+- lib/fog/compute/ecloud/requests/get_support_tickets.rb
+- lib/fog/compute/ecloud/requests/get_tag.rb
+- lib/fog/compute/ecloud/requests/get_tags.rb
+- lib/fog/compute/ecloud/requests/get_task.rb
+- lib/fog/compute/ecloud/requests/get_tasks.rb
+- lib/fog/compute/ecloud/requests/get_template.rb
+- lib/fog/compute/ecloud/requests/get_templates.rb
+- lib/fog/compute/ecloud/requests/get_trusted_network_group.rb
+- lib/fog/compute/ecloud/requests/get_trusted_network_groups.rb
+- lib/fog/compute/ecloud/requests/get_user.rb
+- lib/fog/compute/ecloud/requests/get_users.rb
+- lib/fog/compute/ecloud/requests/get_virtual_machine_assigned_ips.rb
+- lib/fog/compute/ecloud/requests/groups_create.rb
+- lib/fog/compute/ecloud/requests/groups_delete.rb
+- lib/fog/compute/ecloud/requests/groups_edit.rb
+- lib/fog/compute/ecloud/requests/groups_movedown.rb
+- lib/fog/compute/ecloud/requests/groups_moveup.rb
+- lib/fog/compute/ecloud/requests/internet_service_create.rb
+- lib/fog/compute/ecloud/requests/internet_service_delete.rb
+- lib/fog/compute/ecloud/requests/internet_service_edit.rb
+- lib/fog/compute/ecloud/requests/monitors_create_default.rb
+- lib/fog/compute/ecloud/requests/monitors_create_ecv.rb
+- lib/fog/compute/ecloud/requests/monitors_create_http.rb
+- lib/fog/compute/ecloud/requests/monitors_create_loopback.rb
+- lib/fog/compute/ecloud/requests/monitors_create_ping.rb
+- lib/fog/compute/ecloud/requests/monitors_disable.rb
+- lib/fog/compute/ecloud/requests/monitors_edit_ecv.rb
+- lib/fog/compute/ecloud/requests/monitors_edit_http.rb
+- lib/fog/compute/ecloud/requests/monitors_edit_ping.rb
+- lib/fog/compute/ecloud/requests/monitors_enable.rb
+- lib/fog/compute/ecloud/requests/node_service_create.rb
+- lib/fog/compute/ecloud/requests/node_service_delete.rb
+- lib/fog/compute/ecloud/requests/node_service_edit.rb
+- lib/fog/compute/ecloud/requests/power_off.rb
+- lib/fog/compute/ecloud/requests/power_on.rb
+- lib/fog/compute/ecloud/requests/power_reset.rb
+- lib/fog/compute/ecloud/requests/power_shutdown.rb
+- lib/fog/compute/ecloud/requests/public_ip_activate.rb
+- lib/fog/compute/ecloud/requests/rnat_associations_create_device.rb
+- lib/fog/compute/ecloud/requests/rnat_associations_delete.rb
+- lib/fog/compute/ecloud/requests/rnat_associations_edit_network.rb
+- lib/fog/compute/ecloud/requests/rows_create.rb
+- lib/fog/compute/ecloud/requests/rows_delete.rb
+- lib/fog/compute/ecloud/requests/rows_edit.rb
+- lib/fog/compute/ecloud/requests/rows_movedown.rb
+- lib/fog/compute/ecloud/requests/rows_moveup.rb
+- lib/fog/compute/ecloud/requests/ssh_key_create.rb
+- lib/fog/compute/ecloud/requests/ssh_key_delete.rb
+- lib/fog/compute/ecloud/requests/ssh_key_edit.rb
+- lib/fog/compute/ecloud/requests/trusted_network_groups_create.rb
+- lib/fog/compute/ecloud/requests/trusted_network_groups_delete.rb
+- lib/fog/compute/ecloud/requests/trusted_network_groups_edit.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_attach_disk.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_copy.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_copy_identical.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_create_from_template.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_delete.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_detach_disk.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_edit.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_edit_assigned_ips.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_edit_hardware_configuration.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_import.rb
+- lib/fog/compute/ecloud/requests/virtual_machine_upload_file.rb
+- lib/fog/ecloud.rb
+- lib/fog/ecloud/compute.rb
+- lib/fog/ecloud/ipaddr.rb
+- lib/fog/ecloud/mock_data_classes.rb
+- lib/fog/ecloud/version.rb
+- spec/minitest_helper.rb
+- tests/compute/helper.rb
+- tests/compute/livespec/auth_tests.rb
+- tests/compute/models/admin_organization_tests.rb
+- tests/compute/models/compute_pool_tests.rb
+- tests/compute/models/detached_disk_tests.rb
+- tests/compute/models/environment_tests.rb
+- tests/compute/models/internet_service_tests.rb
+- tests/compute/models/ip_address_tests.rb
+- tests/compute/models/network_tests.rb
+- tests/compute/models/operating_system_families_tests.rb
+- tests/compute/models/operating_system_tests.rb
+- tests/compute/models/organization_tests.rb
+- tests/compute/models/public_ip_tests.rb
+- tests/compute/models/server_tests.rb
+- tests/compute/models/ssh_key_tests.rb
+- tests/compute/models/template_tests.rb
+- tests/helper.rb
+- tests/helpers/collection_helper.rb
+- tests/helpers/compute/flavors_helper.rb
+- tests/helpers/compute/server_helper.rb
+- tests/helpers/compute/servers_helper.rb
+- tests/helpers/formats_helper.rb
+- tests/helpers/formats_helper_tests.rb
+- tests/helpers/mock_helper.rb
+- tests/helpers/model_helper.rb
+- tests/helpers/responds_to_helper.rb
+- tests/helpers/schema_validator_tests.rb
+- tests/helpers/succeeds_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.3
+signing_key: 
+specification_version: 4
+summary: Module for the 'fog' gem to support Terremark EnterpriseCloud.
+test_files:
+- spec/minitest_helper.rb

@@ -1,0 +1,252 @@
+--- !ruby/object:Gem::Specification
+name: rgeo
+version: !ruby/object:Gem::Version
+  version: 3.0.1
+platform: ruby
+authors:
+- Daniel Azuma
+- Tee Parham
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ffi-geos
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.11'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.36.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.36.0
+- !ruby/object:Gem::Dependency
+  name: ruby_memcheck
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: RGeo is a geospatial data library for Ruby. It provides an implementation
+  of the Open Geospatial Consortium's Simple Features Specification, used by most
+  standard spatial/geographic data storage systems such as PostGIS. A number of add-on
+  modules are also available to help with writing location-based applications using
+  Ruby-based frameworks such as Ruby On Rails.
+email:
+- dazuma@gmail.com
+- parhameter@gmail.com
+- kfdoggett@gmail.com
+- buonomo.ulysse@gmail.com
+executables: []
+extensions:
+- ext/geos_c_impl/extconf.rb
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- LICENSE.txt
+- README.md
+- ext/geos_c_impl/analysis.c
+- ext/geos_c_impl/analysis.h
+- ext/geos_c_impl/coordinates.c
+- ext/geos_c_impl/coordinates.h
+- ext/geos_c_impl/errors.c
+- ext/geos_c_impl/errors.h
+- ext/geos_c_impl/extconf.rb
+- ext/geos_c_impl/factory.c
+- ext/geos_c_impl/factory.h
+- ext/geos_c_impl/geometry.c
+- ext/geos_c_impl/geometry.h
+- ext/geos_c_impl/geometry_collection.c
+- ext/geos_c_impl/geometry_collection.h
+- ext/geos_c_impl/globals.c
+- ext/geos_c_impl/globals.h
+- ext/geos_c_impl/line_string.c
+- ext/geos_c_impl/line_string.h
+- ext/geos_c_impl/main.c
+- ext/geos_c_impl/point.c
+- ext/geos_c_impl/point.h
+- ext/geos_c_impl/polygon.c
+- ext/geos_c_impl/polygon.h
+- ext/geos_c_impl/preface.h
+- ext/geos_c_impl/ruby_more.c
+- ext/geos_c_impl/ruby_more.h
+- lib/rgeo.rb
+- lib/rgeo/cartesian.rb
+- lib/rgeo/cartesian/analysis.rb
+- lib/rgeo/cartesian/bounding_box.rb
+- lib/rgeo/cartesian/calculations.rb
+- lib/rgeo/cartesian/factory.rb
+- lib/rgeo/cartesian/feature_classes.rb
+- lib/rgeo/cartesian/feature_methods.rb
+- lib/rgeo/cartesian/interface.rb
+- lib/rgeo/cartesian/planar_graph.rb
+- lib/rgeo/cartesian/sweepline_intersector.rb
+- lib/rgeo/cartesian/valid_op.rb
+- lib/rgeo/coord_sys.rb
+- lib/rgeo/coord_sys/cs/entities.rb
+- lib/rgeo/coord_sys/cs/factories.rb
+- lib/rgeo/coord_sys/cs/wkt_parser.rb
+- lib/rgeo/error.rb
+- lib/rgeo/feature.rb
+- lib/rgeo/feature/curve.rb
+- lib/rgeo/feature/factory.rb
+- lib/rgeo/feature/factory_generator.rb
+- lib/rgeo/feature/geometry.rb
+- lib/rgeo/feature/geometry_collection.rb
+- lib/rgeo/feature/line.rb
+- lib/rgeo/feature/line_string.rb
+- lib/rgeo/feature/linear_ring.rb
+- lib/rgeo/feature/multi_curve.rb
+- lib/rgeo/feature/multi_line_string.rb
+- lib/rgeo/feature/multi_point.rb
+- lib/rgeo/feature/multi_polygon.rb
+- lib/rgeo/feature/multi_surface.rb
+- lib/rgeo/feature/point.rb
+- lib/rgeo/feature/polygon.rb
+- lib/rgeo/feature/surface.rb
+- lib/rgeo/feature/types.rb
+- lib/rgeo/geographic.rb
+- lib/rgeo/geographic/factory.rb
+- lib/rgeo/geographic/interface.rb
+- lib/rgeo/geographic/projected_feature_classes.rb
+- lib/rgeo/geographic/projected_feature_methods.rb
+- lib/rgeo/geographic/projected_window.rb
+- lib/rgeo/geographic/projector.rb
+- lib/rgeo/geographic/simple_mercator_projector.rb
+- lib/rgeo/geographic/spherical_feature_classes.rb
+- lib/rgeo/geographic/spherical_feature_methods.rb
+- lib/rgeo/geographic/spherical_math.rb
+- lib/rgeo/geos.rb
+- lib/rgeo/geos/capi_factory.rb
+- lib/rgeo/geos/capi_feature_classes.rb
+- lib/rgeo/geos/ffi_factory.rb
+- lib/rgeo/geos/ffi_feature_classes.rb
+- lib/rgeo/geos/ffi_feature_methods.rb
+- lib/rgeo/geos/interface.rb
+- lib/rgeo/geos/utils.rb
+- lib/rgeo/geos/zm_factory.rb
+- lib/rgeo/geos/zm_feature_classes.rb
+- lib/rgeo/geos/zm_feature_methods.rb
+- lib/rgeo/impl_helper.rb
+- lib/rgeo/impl_helper/basic_geometry_collection_methods.rb
+- lib/rgeo/impl_helper/basic_geometry_methods.rb
+- lib/rgeo/impl_helper/basic_line_string_methods.rb
+- lib/rgeo/impl_helper/basic_point_methods.rb
+- lib/rgeo/impl_helper/basic_polygon_methods.rb
+- lib/rgeo/impl_helper/math.rb
+- lib/rgeo/impl_helper/utils.rb
+- lib/rgeo/impl_helper/valid_op.rb
+- lib/rgeo/impl_helper/validity_check.rb
+- lib/rgeo/version.rb
+- lib/rgeo/wkrep.rb
+- lib/rgeo/wkrep/wkb_generator.rb
+- lib/rgeo/wkrep/wkb_parser.rb
+- lib/rgeo/wkrep/wkt_generator.rb
+- lib/rgeo/wkrep/wkt_parser.rb
+homepage: https://github.com/rgeo/rgeo
+licenses:
+- BSD-3-Clause
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key: 
+specification_version: 4
+summary: RGeo is a geospatial data library for Ruby.
+test_files: []

@@ -1,0 +1,359 @@
+--- !ruby/object:Gem::Specification
+name: ruby-graphviz
+version: !ruby/object:Gem::Version
+  version: 1.2.5
+platform: ruby
+authors:
+- Gregoire Lejeune
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-03-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: github_changelog_generator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ronn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby/Graphviz provides an interface to layout and generate images of
+  directed graphs in a variety of formats (PostScript, PNG, etc.) using GraphViz.
+email: gregoire.lejeune@free.fr
+executables:
+- dot2ruby
+- gem2gv
+- git2gv
+- ruby2gv
+- xml2gv
+extensions: []
+extra_rdoc_files:
+- README.md
+- COPYING.md
+- CHANGELOG.md
+files:
+- ".all-contributorsrc"
+- ".gemrc"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".gitignore"
+- ".travis.yml"
+- ".yardopts"
+- CHANGELOG.md
+- COPYING.md
+- Gemfile
+- README.md
+- Rakefile
+- bin/dot2ruby
+- bin/gem2gv
+- bin/git2gv
+- bin/ruby2gv
+- bin/xml2gv
+- examples/dot/JSP.dot
+- examples/dot/balanced.dot
+- examples/dot/cluster.dot
+- examples/dot/dotgraph.dot
+- examples/dot/fsm.dot
+- examples/dot/genetic.dot
+- examples/dot/hello.dot
+- examples/dot/hello_test.rb
+- examples/dot/lion_share.dot
+- examples/dot/prof.dot
+- examples/dot/psg.dot
+- examples/dot/rank.dot
+- examples/dot/sdh.dot
+- examples/dot/siblings.dot
+- examples/dot/so-sample001.gv
+- examples/dot/so-sample002.gv
+- examples/dot/so-sample003.gv
+- examples/dot/test.dot
+- examples/dot/test_parse.rb
+- examples/dot/this_crach_with_dot_2.20.dot
+- examples/dot/unix.dot
+- examples/graphml/attributes.ext.graphml
+- examples/graphml/attributes.graphml
+- examples/graphml/cluster.graphml
+- examples/graphml/failed_graph.graphml
+- examples/graphml/hyper.graphml
+- examples/graphml/nested.graphml
+- examples/graphml/port.graphml
+- examples/graphml/simple.graphml
+- examples/hello.png
+- examples/rgv/rgv.ps
+- examples/rgv/test_rgv.rb
+- examples/sample01.rb
+- examples/sample02.rb
+- examples/sample03.rb
+- examples/sample04.rb
+- examples/sample05.rb
+- examples/sample06.rb
+- examples/sample07.rb
+- examples/sample08.rb
+- examples/sample09.rb
+- examples/sample10.rb
+- examples/sample11.rb
+- examples/sample12.rb
+- examples/sample13.rb
+- examples/sample14.rb
+- examples/sample15.rb
+- examples/sample16.rb
+- examples/sample17.rb
+- examples/sample18.rb
+- examples/sample19.rb
+- examples/sample20.rb
+- examples/sample21.rb
+- examples/sample22.rb
+- examples/sample23.rb
+- examples/sample24.rb
+- examples/sample25.rb
+- examples/sample26.rb
+- examples/sample27.rb
+- examples/sample28.rb
+- examples/sample29.rb
+- examples/sample30.rb
+- examples/sample31.rb
+- examples/sample32.rb
+- examples/sample33.rb
+- examples/sample34.rb
+- examples/sample35.rb
+- examples/sample36.rb
+- examples/sample37.rb
+- examples/sample38.rb
+- examples/sample39.rb
+- examples/sample40.rb
+- examples/sample41.rb
+- examples/sample42.rb
+- examples/sample43.rb
+- examples/sample44.rb
+- examples/sample45.rb
+- examples/sample46.rb
+- examples/sample47.rb
+- examples/sample48.rb
+- examples/sample49.rb
+- examples/sample50.rb
+- examples/sample51.rb
+- examples/sample52.rb
+- examples/sample53.rb
+- examples/sample54.rb
+- examples/sample55.rb
+- examples/sample56.rb
+- examples/sample57.rb
+- examples/sample58.rb
+- examples/sample59.rb
+- examples/sample60.rb
+- examples/sample61.rb
+- examples/sample62.rb
+- examples/sample63.rb
+- examples/sample64.rb
+- examples/sample65.rb
+- examples/sample66.rb
+- examples/sample67.rb
+- examples/sample68.rb
+- examples/sample69.rb
+- examples/sample70.rb
+- examples/sample71.rb
+- examples/sample72.rb
+- examples/sample73.rb
+- examples/sample74.rb
+- examples/sample99.rb
+- examples/sdlshapes/README
+- examples/sdlshapes/sdl.ps
+- examples/sdlshapes/sdlshapes.dot
+- examples/test.xml
+- examples/theory/pert.rb
+- examples/theory/tests.rb
+- lib/ext/gvpr/dot2ruby.g
+- lib/graphviz.rb
+- lib/graphviz/attrs.rb
+- lib/graphviz/constants.rb
+- lib/graphviz/core_ext.rb
+- lib/graphviz/dot2ruby.rb
+- lib/graphviz/dot_script.rb
+- lib/graphviz/dsl.rb
+- lib/graphviz/edge.rb
+- lib/graphviz/elements.rb
+- lib/graphviz/ext.rb
+- lib/graphviz/family_tree.rb
+- lib/graphviz/family_tree/couple.rb
+- lib/graphviz/family_tree/generation.rb
+- lib/graphviz/family_tree/person.rb
+- lib/graphviz/family_tree/sibling.rb
+- lib/graphviz/graphml.rb
+- lib/graphviz/math/matrix.rb
+- lib/graphviz/node.rb
+- lib/graphviz/nothugly.rb
+- lib/graphviz/nothugly/nothugly.xsl
+- lib/graphviz/theory.rb
+- lib/graphviz/types.rb
+- lib/graphviz/types/arrow_type.rb
+- lib/graphviz/types/color.rb
+- lib/graphviz/types/color_list.rb
+- lib/graphviz/types/esc_string.rb
+- lib/graphviz/types/gv_bool.rb
+- lib/graphviz/types/gv_double.rb
+- lib/graphviz/types/html_string.rb
+- lib/graphviz/types/lbl_string.rb
+- lib/graphviz/types/rect.rb
+- lib/graphviz/types/spline_type.rb
+- lib/graphviz/utils.rb
+- lib/graphviz/utils/colors.rb
+- lib/graphviz/xml.rb
+- lib/ruby-graphviz.rb
+- man/dot2ruby.1
+- man/dot2ruby.1.ronn
+- man/gem2gv.1
+- man/gem2gv.1.ronn
+- man/git2gv.1
+- man/git2gv.1.ronn
+- man/ruby2gv.1
+- man/ruby2gv.1.ronn
+- man/xml2gv.1
+- man/xml2gv.1.ronn
+- ruby-graphviz.gemspec
+- setup.rb
+- test/helper.rb
+- test/test_dot_script.rb
+- test/test_examples.rb
+- test/test_graph.rb
+- test/test_search.rb
+- test/test_subgraph.rb
+- test/test_theory.rb
+- test/test_types.rb
+- test/test_utils_colors.rb
+homepage: https://github.com/glejeune/Ruby-Graphviz
+licenses:
+- GPL-2.0
+metadata: {}
+post_install_message: "\nYou need to install GraphViz (https://graphviz.org) to use
+  this Gem.\n\nFor more information about Ruby-Graphviz :\n* Doc: https://rdoc.info/github/glejeune/Ruby-Graphviz\n*
+  Sources: https://github.com/glejeune/Ruby-Graphviz\n* Issues: https://github.com/glejeune/Ruby-Graphviz/issues\n
+  \ "
+rdoc_options:
+- "--title"
+- Ruby/GraphViz
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements:
+- GraphViz
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Interface to the GraphViz graphing tool
+test_files: []

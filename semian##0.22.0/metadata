@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: semian
+version: !ruby/object:Gem::Version
+  version: 0.22.0
+platform: ruby
+authors:
+- Scott Francis
+- Simon Eskildsen
+- Dale Hamel
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-05 00:00:00.000000000 Z
+dependencies: []
+description: |2
+      A Ruby C extention that is used to control access to shared resources
+      across process boundaries with SysV semaphores.
+email: opensource@shopify.com
+executables: []
+extensions:
+- ext/semian/extconf.rb
+extra_rdoc_files: []
+files:
+- LICENSE.md
+- README.md
+- ext/semian/extconf.rb
+- ext/semian/resource.c
+- ext/semian/resource.h
+- ext/semian/semian.c
+- ext/semian/semian.h
+- ext/semian/sysv_semaphores.c
+- ext/semian/sysv_semaphores.h
+- ext/semian/tickets.c
+- ext/semian/tickets.h
+- ext/semian/types.h
+- lib/semian.rb
+- lib/semian/activerecord_trilogy_adapter.rb
+- lib/semian/adapter.rb
+- lib/semian/circuit_breaker.rb
+- lib/semian/grpc.rb
+- lib/semian/instrumentable.rb
+- lib/semian/lru_hash.rb
+- lib/semian/mysql2.rb
+- lib/semian/net_http.rb
+- lib/semian/platform.rb
+- lib/semian/protected_resource.rb
+- lib/semian/rails.rb
+- lib/semian/redis.rb
+- lib/semian/redis/v5.rb
+- lib/semian/redis_client.rb
+- lib/semian/resource.rb
+- lib/semian/simple_integer.rb
+- lib/semian/simple_sliding_window.rb
+- lib/semian/simple_state.rb
+- lib/semian/unprotected_resource.rb
+- lib/semian/version.rb
+homepage: https://github.com/shopify/semian
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/Shopify/semian/issues
+  changelog_uri: https://github.com/Shopify/semian/blob/main/CHANGELOG.md
+  documentation_uri: https://github.com/Shopify/semian
+  homepage_uri: https://github.com/Shopify/semian
+  source_code_uri: https://github.com/Shopify/semian
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Bulkheading for Ruby with SysV semaphores
+test_files: []

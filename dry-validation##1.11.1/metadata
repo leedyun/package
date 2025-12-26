@@ -1,0 +1,145 @@
+--- !ruby/object:Gem::Specification
+name: dry-validation
+version: !ruby/object:Gem::Version
+  version: 1.11.1
+platform: ruby
+authors:
+- Piotr Solnica
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: dry-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: dry-initializer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: dry-schema
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+description: Validation library
+email:
+- piotr.solnica@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- config/errors.yml
+- dry-validation.gemspec
+- lib/dry-validation.rb
+- lib/dry/validation.rb
+- lib/dry/validation/config.rb
+- lib/dry/validation/constants.rb
+- lib/dry/validation/contract.rb
+- lib/dry/validation/contract/class_interface.rb
+- lib/dry/validation/evaluator.rb
+- lib/dry/validation/extensions/hints.rb
+- lib/dry/validation/extensions/monads.rb
+- lib/dry/validation/extensions/predicates_as_macros.rb
+- lib/dry/validation/failures.rb
+- lib/dry/validation/function.rb
+- lib/dry/validation/macro.rb
+- lib/dry/validation/macros.rb
+- lib/dry/validation/message.rb
+- lib/dry/validation/message_set.rb
+- lib/dry/validation/messages/resolver.rb
+- lib/dry/validation/result.rb
+- lib/dry/validation/rule.rb
+- lib/dry/validation/schema_ext.rb
+- lib/dry/validation/values.rb
+- lib/dry/validation/version.rb
+homepage: https://dry-rb.org/gems/dry-validation
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  changelog_uri: https://github.com/dry-rb/dry-validation/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/dry-rb/dry-validation
+  bug_tracker_uri: https://github.com/dry-rb/dry-validation/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: Validation library
+test_files: []

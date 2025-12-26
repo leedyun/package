@@ -1,0 +1,201 @@
+--- !ruby/object:Gem::Specification
+name: extended-markdown-filter
+version: !ruby/object:Gem::Version
+  version: 0.7.0
+platform: ruby
+authors:
+- Garen Torikian
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-11-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: html-pipeline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.9'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: commonmarker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.60'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.60'
+- !ruby/object:Gem::Dependency
+  name: rubocop-github
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.12'
+description: 'This is a custom Markdown processor to be used with GitHub''s HTML::Pipeline. '
+email:
+- gjtorikian@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- extended-markdown-filter.gemspec
+- lib/extended-markdown-filter.rb
+- lib/filters/filters.rb
+- lib/filters/post/admonition.rb
+- lib/filters/post/command-line.rb
+- lib/filters/post/intro.rb
+- lib/filters/post/octicon.rb
+- lib/filters/post/os-blocks.rb
+- lib/filters/pre/helper.rb
+- lib/jekyll-override.rb
+- test/fixtures/admonition.md
+- test/fixtures/block_admonition.md
+- test/fixtures/block_intro.md
+- test/fixtures/block_octicon.md
+- test/fixtures/block_os_blocks.md
+- test/fixtures/command_line.md
+- test/fixtures/command_line_indented.md
+- test/fixtures/command_line_nested.md
+- test/fixtures/helper.md
+- test/fixtures/intro.md
+- test/fixtures/octicon.md
+- test/fixtures/os_blocks.md
+- test/test_extended_markdown_filter.rb
+- test/test_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: Add extended markup syntax to the HTML::Pipeline
+test_files:
+- test/fixtures/admonition.md
+- test/fixtures/block_admonition.md
+- test/fixtures/block_intro.md
+- test/fixtures/block_octicon.md
+- test/fixtures/block_os_blocks.md
+- test/fixtures/command_line.md
+- test/fixtures/command_line_indented.md
+- test/fixtures/command_line_nested.md
+- test/fixtures/helper.md
+- test/fixtures/intro.md
+- test/fixtures/octicon.md
+- test/fixtures/os_blocks.md
+- test/test_extended_markdown_filter.rb
+- test/test_helper.rb

@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+# vim: ft=ruby
+
+begin
+  require 'crl_watchdog'
+rescue LoadError
+  require 'rubygems'
+  require 'crl_watchdog'
+end
+
+require 'optparse'
+
+Version = CrlWatchdog::VERSION.dup
+
+options = {}
+option_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: crlwatch [options]"
+
+  opts.separator ""
+  opts.on('-f', '--file CRLFILE', 'Path to CRL file') do |crl_file|
+    options[:crl_file] = crl_file
+  end
+  opts.on('-d', '--days DAYS', '') do |days|
+    options[:days] = days
+  end
+  opts.on('-h', '--help', 'Display this help screen') do
+    puts opts
+    exit
+  end
+  opts.on('--debug', 'Display full stack traces') do
+    options[:debug] = true
+  end
+  opts.on_tail('--version', 'Display version and exit') do
+    puts opts.ver
+    puts
+    puts "Checks if an OpenSSl certificate revocation file expires"
+    puts "within a given amount of days."
+    puts
+    puts "© 2013 Absolventa GmbH"
+    puts "This is free software; see the source for copying conditions."
+    puts "There is NO warranty; not even for MERCHANTABILITY or FITNESS"
+    puts "FOR A PARTICULAR PURPOSE. Licensed under the MIT license."
+    exit
+  end
+end
+
+option_parser.parse!
+
+unless options[:days] && options[:crl_file]
+  puts "E: Not enough arguments"
+  exit 22 # invalid argument
+end
+
+begin
+  watchdog = CrlWatchdog.new(options[:crl_file])
+  expiration =  "CRL expires #{watchdog.next_update}"
+  if watchdog.expires_within_days? options[:days]
+    $stdout.puts "OK - #{expiration}"
+    exit 0
+  else
+    $stderr.puts "NOK - #{expiration}"
+    exit 1
+  end
+rescue => e
+  puts "E: #{e.message}"
+  puts e.backtrace if options[:debug]
+  exit 1
+end

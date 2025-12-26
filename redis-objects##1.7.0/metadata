@@ -1,0 +1,229 @@
+--- !ruby/object:Gem::Specification
+name: redis-objects
+version: !ruby/object:Gem::Version
+  version: 1.7.0
+platform: ruby
+authors:
+- Nate Wiger
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-06-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bacon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: connection_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis-namespace
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov-cobertura
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Map Redis types directly to Ruby objects. Works with any class or ORM.
+email:
+- nwiger@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- ATOMICITY.rdoc
+- CHANGELOG.rdoc
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/redis-objects.rb
+- lib/redis/base_object.rb
+- lib/redis/counter.rb
+- lib/redis/enumerable_object.rb
+- lib/redis/hash_key.rb
+- lib/redis/helpers/core_commands.rb
+- lib/redis/list.rb
+- lib/redis/lock.rb
+- lib/redis/objects.rb
+- lib/redis/objects/connection_pool_proxy.rb
+- lib/redis/objects/counters.rb
+- lib/redis/objects/hashes.rb
+- lib/redis/objects/lists.rb
+- lib/redis/objects/locks.rb
+- lib/redis/objects/sets.rb
+- lib/redis/objects/sorted_sets.rb
+- lib/redis/objects/values.rb
+- lib/redis/objects/version.rb
+- lib/redis/set.rb
+- lib/redis/sorted_set.rb
+- lib/redis/value.rb
+- redis-objects.gemspec
+- spec/redis_autoload_objects_spec.rb
+- spec/redis_namespace_compat_spec.rb
+- spec/redis_objects_active_record_spec.rb
+- spec/redis_objects_conn_spec.rb
+- spec/redis_objects_custom_serializer.rb
+- spec/redis_objects_instance_spec.rb
+- spec/redis_objects_model_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/nateware/redis-objects
+licenses:
+- Artistic-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Map Redis types directly to Ruby objects
+test_files:
+- spec/redis_autoload_objects_spec.rb
+- spec/redis_namespace_compat_spec.rb
+- spec/redis_objects_active_record_spec.rb
+- spec/redis_objects_conn_spec.rb
+- spec/redis_objects_custom_serializer.rb
+- spec/redis_objects_instance_spec.rb
+- spec/redis_objects_model_spec.rb
+- spec/spec_helper.rb

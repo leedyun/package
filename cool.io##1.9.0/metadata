@@ -1,0 +1,188 @@
+--- !ruby/object:Gem::Specification
+name: cool.io
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Tony Arcieri
+- Masahiro Nakagawa
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler-dock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.13.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.13.0
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+description: Cool.io provides a high performance event framework for Ruby which uses
+  the libev C library
+email:
+- tony.arcieri@gmail.com
+- repeatedly@gmail.com
+executables: []
+extensions:
+- ext/cool.io/extconf.rb
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yaml"
+- ".gitignore"
+- ".rspec"
+- CHANGES.md
+- LICENSE
+- README.md
+- Rakefile
+- appveyor.yml
+- cool.io.gemspec
+- examples/callbacked_echo_server.rb
+- examples/dslified_echo_client.rb
+- examples/dslified_echo_server.rb
+- examples/echo_client.rb
+- examples/echo_server.rb
+- examples/google.rb
+- ext/cool.io/.gitignore
+- ext/cool.io/buffer.c
+- ext/cool.io/cool.io.h
+- ext/cool.io/cool.io_ext.c
+- ext/cool.io/ev_wrap.h
+- ext/cool.io/extconf.rb
+- ext/cool.io/iowatcher.c
+- ext/cool.io/libev.c
+- ext/cool.io/loop.c
+- ext/cool.io/stat_watcher.c
+- ext/cool.io/timer_watcher.c
+- ext/cool.io/utils.c
+- ext/cool.io/watcher.c
+- ext/cool.io/watcher.h
+- ext/libev/Changes
+- ext/libev/LICENSE
+- ext/libev/README
+- ext/libev/README.embed
+- ext/libev/ev.c
+- ext/libev/ev.h
+- ext/libev/ev_epoll.c
+- ext/libev/ev_kqueue.c
+- ext/libev/ev_poll.c
+- ext/libev/ev_port.c
+- ext/libev/ev_select.c
+- ext/libev/ev_vars.h
+- ext/libev/ev_win32.c
+- ext/libev/ev_wrap.h
+- ext/libev/test_libev_win32.c
+- gems.rb
+- lib/.gitignore
+- lib/cool.io.rb
+- lib/cool.io/async_watcher.rb
+- lib/cool.io/custom_require.rb
+- lib/cool.io/dns_resolver.rb
+- lib/cool.io/dsl.rb
+- lib/cool.io/io.rb
+- lib/cool.io/iowatcher.rb
+- lib/cool.io/listener.rb
+- lib/cool.io/loop.rb
+- lib/cool.io/meta.rb
+- lib/cool.io/server.rb
+- lib/cool.io/socket.rb
+- lib/cool.io/timer_watcher.rb
+- lib/cool.io/version.rb
+- lib/coolio.rb
+- libev_ruby_gil.diff
+- libev_win_select.diff
+- spec/async_watcher_spec.rb
+- spec/dns_spec.rb
+- spec/iobuffer_spec.rb
+- spec/spec_helper.rb
+- spec/stat_watcher_spec.rb
+- spec/tcp_server_spec.rb
+- spec/tcp_socket_spec.rb
+- spec/timer_watcher_spec.rb
+- spec/udp_socket_spec.rb
+- spec/unix_listener_spec.rb
+- spec/unix_server_spec.rb
+homepage: https://github.com/socketry/cool.io
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: A cool framework for doing high performance I/O in Ruby
+test_files:
+- spec/async_watcher_spec.rb
+- spec/dns_spec.rb
+- spec/iobuffer_spec.rb
+- spec/spec_helper.rb
+- spec/stat_watcher_spec.rb
+- spec/tcp_server_spec.rb
+- spec/tcp_socket_spec.rb
+- spec/timer_watcher_spec.rb
+- spec/udp_socket_spec.rb
+- spec/unix_listener_spec.rb
+- spec/unix_server_spec.rb

@@ -1,0 +1,115 @@
+--- !ruby/object:Gem::Specification
+name: snappy
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- miyucy
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-01-08 00:00:00.000000000 Z
+dependencies: []
+description: libsnappy binding for Ruby
+email:
+- fistfvck@gmail.com
+executables: []
+extensions:
+- ext/extconf.rb
+extra_rdoc_files: []
+files:
+- ".dockerignore"
+- ".github/workflows/main.yml"
+- ".github/workflows/publish.yml"
+- ".gitignore"
+- ".gitmodules"
+- Dockerfile
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/api.c
+- ext/extconf.rb
+- ext/java/src/SnappyExtService.java
+- ext/java/src/snappy/SnappyModule.java
+- lib/snappy.rb
+- lib/snappy/hadoop.rb
+- lib/snappy/hadoop/reader.rb
+- lib/snappy/hadoop/writer.rb
+- lib/snappy/reader.rb
+- lib/snappy/shim.rb
+- lib/snappy/version.rb
+- lib/snappy/writer.rb
+- snappy.gemspec
+- test.sh
+- test/hadoop/snappy_hadoop_reader_test.rb
+- test/hadoop/snappy_hadoop_writer_test.rb
+- test/snappy_hadoop_test.rb
+- test/snappy_reader_test.rb
+- test/snappy_test.rb
+- test/snappy_writer_test.rb
+- test/test_helper.rb
+- vendor/snappy/AUTHORS
+- vendor/snappy/CMakeLists.txt
+- vendor/snappy/CONTRIBUTING.md
+- vendor/snappy/COPYING
+- vendor/snappy/NEWS
+- vendor/snappy/README.md
+- vendor/snappy/cmake/SnappyConfig.cmake.in
+- vendor/snappy/cmake/config.h.in
+- vendor/snappy/docs/README.md
+- vendor/snappy/format_description.txt
+- vendor/snappy/framing_format.txt
+- vendor/snappy/snappy-c.cc
+- vendor/snappy/snappy-c.h
+- vendor/snappy/snappy-internal.h
+- vendor/snappy/snappy-sinksource.cc
+- vendor/snappy/snappy-sinksource.h
+- vendor/snappy/snappy-stubs-internal.cc
+- vendor/snappy/snappy-stubs-internal.h
+- vendor/snappy/snappy-stubs-public.h.in
+- vendor/snappy/snappy-test.cc
+- vendor/snappy/snappy-test.h
+- vendor/snappy/snappy.cc
+- vendor/snappy/snappy.h
+- vendor/snappy/snappy_benchmark.cc
+- vendor/snappy/snappy_compress_fuzzer.cc
+- vendor/snappy/snappy_test_data.cc
+- vendor/snappy/snappy_test_data.h
+- vendor/snappy/snappy_test_tool.cc
+- vendor/snappy/snappy_uncompress_fuzzer.cc
+- vendor/snappy/snappy_unittest.cc
+homepage: http://github.com/miyucy/snappy
+licenses:
+- MIT
+metadata:
+  homepage_uri: http://github.com/miyucy/snappy
+  source_code_uri: http://github.com/miyucy/snappy
+  msys2_mingw_dependencies: snappy
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: libsnappy binding for Ruby
+test_files:
+- test/hadoop/snappy_hadoop_reader_test.rb
+- test/hadoop/snappy_hadoop_writer_test.rb
+- test/snappy_hadoop_test.rb
+- test/snappy_reader_test.rb
+- test/snappy_test.rb
+- test/snappy_writer_test.rb
+- test/test_helper.rb

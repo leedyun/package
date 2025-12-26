@@ -1,0 +1,51 @@
+--- !ruby/object:Gem::Specification
+name: spdx-licenses
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Dominic Cleal
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-02-19 00:00:00.000000000 Z
+dependencies: []
+description: Provides validation and additional data about SPDX licenses and identifiers
+email: dominic@cleal.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- Rakefile
+- lib/spdx-licenses.rb
+- lib/spdx-licenses/license.rb
+- lib/spdx-licenses/version.rb
+- licenses.json
+- test/license_test.rb
+- test/spdx_licenses_test.rb
+homepage: https://github.com/domcleal/spdx-licenses
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: SPDX license and identifier lookup
+test_files: []

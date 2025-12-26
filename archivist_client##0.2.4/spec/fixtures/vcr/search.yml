@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=creator&fl%5B%5D=date&fl%5B%5D=identifier&fl%5B%5D=language&fl%5B%5D=mediattype&fl%5B%5D=title&output=json&page=1&q=mediatype:texts%20AND%20-mediatype:collection%20AND%20(language:eng%20OR%20language:English)%20AND%20date:%5B1500-01-01%20TO%201550-12-31%5D&rows=50&sort%5B%5D=date%20asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Mar 2018 04:54:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":51,"params":{"query":"mediatype:texts
+        AND -mediatype:collection AND ( language:eng OR language:English ) AND date:[1500-01-01T00\\:00\\:00Z
+        TO 1550-12-31T23\\:59\\:59Z]","qin":"mediatype:texts AND -mediatype:collection
+        AND (language:eng OR language:English) AND date:[1500-01-01 TO 1550-12-31]","fields":"identifier,title,creator,date,language,mediattype","wt":"json","sort":"date
+        asc","rows":"50","start":0}},"response":{"numFound":241,"start":0,"docs":[{"creator":"Savonarola,
+        Hieronymus","date":"1500-01-01T00:00:00Z","identifier":"ita-bnc-in1-00000134-001","language":"English","title":"Expositio
+        in Psalmum L (51) \"Miserere mei Deus\""},{"creator":"Lichtenberger, Johannes","date":"1500-01-01T00:00:00Z","identifier":"ita-bnc-in2-00001797-001","language":"English","title":"Prognosticatio"},{"creator":"Berris
+        Tres Riches Heures","date":"1500-01-01T00:00:00Z","identifier":"in.ernet.dli.2015.233866","language":"eng","title":"The
+        Rise Of Modern Europe(vol1)"},{"creator":"BURTON","date":"1500-01-01T00:00:00Z","identifier":"NewRichTextDocument_20170225","language":"eng","title":"New
+        Rich Text Document"},{"creator":"Aurelius Prudentius Clemens","date":"1501-01-01T00:00:00Z","identifier":"bub_gb_tNMb8PrO5yAC","language":"English","title":"Prudentii
+        poetae opera. Virtutum cum uitiis pugna, heroico carmine.. Prudentii poetae
+        opera. Virtutum cum uitiis pugna, heroico carmine. Hymni diurnarum rerum,
+        ad Gallicantum. Ad matutinum. Ante cibum. Post cibum. Ad lucernae accensionem.
+        Ante somnum .."},{"creator":"United States.: Bureau of Foreign and Domestic
+        Commerce","date":"1501-01-01T00:00:00Z","identifier":"supplementto5219152unit","language":"eng","title":"Supplement
+        to Commerce reports : daily consular and trade reports issued by the Bureau
+        of Foreign and Domestic Commerce, Department of Commerce"},{"creator":"Stephanus
+        (Byzantinus)","date":"1502-01-01T00:00:00Z","identifier":"bub_gb_1x5DAAAAcAAJ","language":"English","title":"Stephanos
+        Peri pole\u014dn De urbibus"},{"creator":["Worde, Wynkyn de, -1534?, printer","Tomkinson,
+        Michael, 1841-1921, former owner","Boule, Joannis, former owner"],"date":"1502-01-01T00:00:00Z","identifier":"chronycleofenglo00word","language":"eng","title":"Chronycle
+        of Englonde"},{"creator":"Lorenzo Astemio","date":"1502-01-01T00:00:00Z","identifier":"bub_gb_bopSAAAAcAAJ","language":"English","title":"Epaminundae
+        clarissimi Thebanorum ducis vita"},{"date":"1503-01-01T00:00:00Z","identifier":"bub_gb_ERBmAAAAcAAJ","language":"English","title":"Augustini
+        dati senensis opera. Edited by Girolamo Dati."},{"creator":"Archimedes","date":"1503-01-01T00:00:00Z","identifier":"bub_gb_9fNPAAAAcAAJ","language":"English","title":"Tetragonismus"},{"creator":"Xenophon","date":"1503-01-01T00:00:00Z","identifier":"bub_gb_UQ2ed0bfxt8C","language":"English","title":"Xenophontis
+        omissa quae & graeca gesta appellantur"},{"creator":"Xenophon","date":"1503-01-01T00:00:00Z","identifier":"bub_gb_RWb2TbT9BwkC","language":"English","title":"Xenophontis
+        omissa quae & graeca gesta appellantur"},{"creator":"Philoponus, John","date":"1504-01-01T00:00:00Z","identifier":"ita-bnc-ald-00000803-001","language":"English","title":"In
+        posteriora resolutoria Aristotelis commentaria"},{"creator":"T W Arnold","date":"1504-01-01T00:00:00Z","identifier":"in.ernet.dli.2015.169486","language":"eng","title":"The
+        Little Flowers Of S Francis Of Assisi"},{"date":"1506-01-01T00:00:00Z","identifier":"bub_gb_aI5mAAAAcAAJ","language":"English","title":"Alexandri
+        Achillini bononiensis de intelligentiis"},{"creator":"British Record Society","date":"1508-01-01T00:00:00Z","identifier":"indexlibrary8150brit_0","language":"eng","title":"The
+        Index library"},{"creator":["Page, William, 1861-1934","Huguenot Society of
+        London"],"date":"1509-01-01T00:00:00Z","identifier":"lettersofdenizat8150page","language":"eng","title":"Letters
+        of denization and acts of naturalization for aliens in England, 1509-1603"},{"creator":"United
+        States.: Bureau of Foreign and Domestic Commerce","date":"1509-01-01T00:00:00Z","identifier":"supplementto65191823unit","language":"eng","title":"Supplement
+        to Commerce reports : daily consular and trade reports issued by the Bureau
+        of Foreign and Domestic Commerce, Department of Commerce"},{"creator":"The
+        Cresset Press,london","date":"1509-01-01T00:00:00Z","identifier":"in.ernet.dli.2015.182336","language":"eng","title":"The
+        Beghinnings Of English Literature To Skelton"},{"creator":"British Record
+        Society","date":"1510-01-01T00:00:00Z","identifier":"indexlibrary1151brit_0","language":"eng","title":"The
+        Index library"},{"creator":"Antoninus (Florentinus)","date":"1511-01-01T00:00:00Z","identifier":"bub_gb_7w1KAAAAcAAJ","language":"English","title":"Tractatus
+        de censuris ecclesiasticis Item tractatus de sponsalibus & matrimoniis"},{"creator":"Helwig,
+        Andreas","date":"1512-01-01T00:00:00Z","identifier":"antichristusromanus","language":"eng","title":"Antichristus
+        Romanus"},{"creator":"Plat\u00f3n","date":"1513-01-01T00:00:00Z","identifier":"bub_gb_D9EFQicVLJMC_2","language":"English","title":"Apanta
+        ta tou Platonos"},{"creator":["Whittington, Robert, -approximately 1560","Negro,
+        Pescennio Francesco, 1452-","Worde, Wynkyn de, -1534? printer","Littlefield,
+        George Emery, 1844-1915, former owner","Shillaber, William Green, former owner","Leigh,
+        Chandos, 1791-1850, former owner"],"date":"1513-01-01T00:00:00Z","identifier":"robertiwhittinto00whit","language":"eng","title":"Roberti
+        whittintoni lichfeldiensis editio : secunda pars grammatices : De sillaba
+        et eius quantitate .."},{"date":"1514-01-01T00:00:00Z","identifier":"bub_gb_3ONLAAAAcAAJ","language":"English","title":"Erkl\u00e4rung
+        Entscheid und entlicher vortrag in den Irrungen zwischen der Geistlichkeit
+        und der Stadt Speier 1514"},{"creator":"Georg Peurbach","date":"1514-01-01T00:00:00Z","identifier":"bub_gb_SRYkk0MwYvQC","language":"English","title":"Tabulae
+        eclypsium magistri Georgij Peurbachij. Tabula primi mobilis Ioannis de Monteregio.
+        Indices praeterea monumentorum quae clarissimi uiri studii Viennensis alumni
+        in astronomia & aliis mathematicis disciplinis scripta reliquerunt. .."},{"creator":"British
+        Record Society","date":"1514-01-01T00:00:00Z","identifier":"indexlibrary1615brit_0","language":"eng","title":"The
+        Index library"},{"creator":"Macer Floridus , Macer, Odo , Aemilius Macer","date":"1515-01-01T00:00:00Z","identifier":"herbarumvariasq00macegoog","language":"eng","title":"Herbarum
+        varias qui vis cognoscere vires: huc Macer adest, quo duce doctor eris"},{"creator":"British
+        Record Society","date":"1516-01-01T00:00:00Z","identifier":"indexlibrary7151brit_0","language":"eng","title":"The
+        Index library"},{"creator":"Libanio","date":"1517-01-01T00:00:00Z","identifier":"bub_gb_qPzCHRlM5tEC","language":"English","title":"Libaniou
+        sophistou Meletai logoi te kai ekphraseis"},{"creator":"Aristides retore (retore)","date":"1517-01-01T00:00:00Z","identifier":"bub_gb_lFTiWgNN41kC","language":"English","title":"Logoi
+        Aristeidou. Orationes Aristidis"},{"creator":"United States.: Bureau of Foreign
+        and Domestic Commerce","date":"1517-01-01T00:00:00Z","identifier":"supplementtoc19191820unit","language":"eng","title":"Supplement
+        to Commerce reports : daily consular and trade reports issued by the Bureau
+        of Foreign and Domestic Commerce, Department of Commerce"},{"creator":["Llull,
+        Ramon, 1232?-1316","Lavinheta, Bernardus de"],"date":"1517-01-01T00:00:00Z","identifier":"illuminatisacrep00llul","language":"eng","title":"Illuminati
+        sacre pagine p.fessoris amplissimi magistri Raymundi Lull. Ars magna, generalis
+        et vltima : quarucunq3 artium [et] scientiarum ipsius Lull. assecutrix et
+        clauigera : [et] ad eas aditum faciliore prebes, antehac nusq3 arti impressorie
+        emuctius c\u00f5mendata"},{"creator":["Llull, Ramon, 1232?-1316","Lavinheta,
+        Bernardus de"],"date":"1517-01-01T00:00:00Z","identifier":"gri_c00033125008263424","language":"eng","title":"Illuminati
+        sacre pagine p.fessoris amplissimi magistri Raymundi Lull. Ars magna, generalis
+        et vltima : quaru\u0303cunq3 artium [et] scientiarum ipsius Lull. assecutrix
+        et clauigera : [et] ad eas aditum faciliore\u0303 prebe\u0303s, antehac nusq\u03033
+        arti impressorie emu\u0303ctius co\u0303mendata"},{"date":"1518-01-01T00:00:00Z","identifier":"bub_gb_yVjXiO4WphEC","language":"English","title":"Commentarii
+        in septem tragedias Sophoclis quae ex aliis eius compluribus iniuria temporum
+        amissis, solae superfuerunt opus exactissimum rarissimumque in Gymnasio Mediceo
+        ... recognitum repurgatumque .."},{"creator":"Jakob Mennel","date":"1518-01-01T00:00:00Z","identifier":"bub_gb_qkpTAAAAcAAJ","language":"English","title":"De
+        inclito atque apud Germanos rarissimo actu ecclesiastico Kalend. Augusti Auguste,
+        celebrato anno domini 1518"},{"creator":"Ulrich Zasius","date":"1519-01-01T00:00:00Z","identifier":"bub_gb_4EpTAAAAcAAJ","language":"English","title":"Oratio
+        Friburgi in funere Maximiliani Imp. habita"},{"creator":"Aristoteles","date":"1519-01-01T00:00:00Z","identifier":"bub_gb_rzHa0ZmorUkC","language":"English","title":"Aristotelis
+        Tres de anima libri per Joannem Argyropylum e greco in latinum traducti"},{"creator":"Jakob
+        Sprenger","date":"1519-01-01T00:00:00Z","identifier":"bub_gb_TTg8AAAAcAAJ","language":"English","title":"Malleus
+        maleficarum"},{"creator":"Martin Luther","date":"1520-01-01T00:00:00Z","identifier":"bub_gb_L1ZdAAAAcAAJ","language":"English","title":"Ein
+        Sermon von dem n\u00fcwen Testament das ist von der heiligen Me\u00df"},{"creator":"\u00c9tienne
+        de La Roche","date":"1520-01-01T00:00:00Z","identifier":"bub_gb_9xg8AAAAcAAJ","language":"English","title":"L''
+        arismethique nouellement composee"},{"creator":"Carver, Robert","date":"1520-01-01T00:00:00Z","identifier":"imslp-bone-jesu--19-carver-robert","language":"English","title":"O
+        bone Jesu \u00e0 19"},{"creator":"Ferdinando Ponzetti","date":"1521-01-01T00:00:00Z","identifier":"bub_gb_QghTAAAAcAAJ","language":"English","title":"Summa
+        brevis Theologiae"},{"creator":["[London]Printed for the Chetham society,","Bradshaw,
+        Henry, d. 1513","Hawkins, Edward, 1780-1867, ed"],"date":"1521-01-01T00:00:00Z","identifier":"holylyfehistoryo00lond","language":"eng","title":"The
+        holy lyfe and history of Saynt Werburge,very frutefull for all Christen people
+        to rede."},{"date":"1521-01-01T00:00:00Z","identifier":"passyonsicofourl00rivi","language":"eng","title":"The
+        passyon of our lorde"},{"creator":"Apollonius : Rhodius","date":"1521-01-01T00:00:00Z","identifier":"bub_gb_iZYX7VSahu8C","language":"English","title":"Apolloniou
+        tou rodiou Argonautika, meta t\u014dn palai\u014dn te, kai panu \u014dphelimon
+        scholi\u014dn. Apollonij rhodij Argonautica, antiquis una, & optimis cum commentarijs"},{"creator":["Bradshaw,
+        Henry, d. 1513","Hawkins, Edward, 1780-1867, ed"],"date":"1521-01-01T00:00:00Z","identifier":"holylyfeandhist00hawkgoog","language":["eng","lat"],"title":"The
+        holy lyfe and history of Saynt Werburge, very frutefull for all Christen people
+        to rede"},{"creator":"Andrew, Laurence","date":"1521-01-01T00:00:00Z","identifier":"hin-wel-all-00001107-001","language":"eng","title":"The
+        noble lyfe & natures of man, of bestes, serpentys, fowles & fisshes yt be
+        moste knowen / [Laurence Andrew]"},{"creator":["Bradshaw, Henry, d. 1513","Hawkins,
+        Edward, 1780-1867, ed"],"date":"1521-01-01T00:00:00Z","identifier":"holylyfeandhist02hawkgoog","language":["eng","lat"],"title":"The
+        holy lyfe and history of Saynt Werburge, very frutefull for all Christen people
+        to rede"}]}}'
+    http_version: 
+  recorded_at: Mon, 05 Mar 2018 04:54:24 GMT
+recorded_with: VCR 4.0.0

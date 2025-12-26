@@ -1,0 +1,135 @@
+--- !ruby/object:Gem::Specification
+name: sucker_punch
+version: !ruby/object:Gem::Version
+  version: 3.2.0
+platform: ruby
+authors:
+- Brandon Hilkert
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-12-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Asynchronous processing library for Ruby
+email:
+- brandonhilkert@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/build.yml"
+- ".gitignore"
+- CHANGES.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/generators/sucker_punch/job_generator.rb
+- lib/generators/sucker_punch/templates/job.rb
+- lib/sucker_punch.rb
+- lib/sucker_punch/async_syntax.rb
+- lib/sucker_punch/core_ext.rb
+- lib/sucker_punch/counter.rb
+- lib/sucker_punch/job.rb
+- lib/sucker_punch/queue.rb
+- lib/sucker_punch/railtie.rb
+- lib/sucker_punch/testing.rb
+- lib/sucker_punch/testing/inline.rb
+- lib/sucker_punch/version.rb
+- sucker_punch.gemspec
+- test/sucker_punch/async_syntax_test.rb
+- test/sucker_punch/counter_test.rb
+- test/sucker_punch/job_test.rb
+- test/sucker_punch/queue_test.rb
+- test/sucker_punch_test.rb
+- test/test_helper.rb
+homepage: https://github.com/brandonhilkert/sucker_punch
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/brandonhilkert/sucker_punch/blob/master/CHANGES.md
+  source_code_uri: https://github.com/brandonhilkert/sucker_punch
+  bug_tracker_uri: https://github.com/brandonhilkert/sucker_punch/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: Sucker Punch is a Ruby asynchronous processing using concurrent-ruby, heavily
+  influenced by Sidekiq and girl_friday.
+test_files:
+- test/sucker_punch/async_syntax_test.rb
+- test/sucker_punch/counter_test.rb
+- test/sucker_punch/job_test.rb
+- test/sucker_punch/queue_test.rb
+- test/sucker_punch_test.rb
+- test/test_helper.rb

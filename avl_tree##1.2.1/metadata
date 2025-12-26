@@ -1,0 +1,67 @@
+--- !ruby/object:Gem::Specification
+name: avl_tree
+version: !ruby/object:Gem::Version
+  version: 1.2.1
+platform: ruby
+authors:
+- Hiroshi Nakamura
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-09-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: atomic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: 
+email: nahi@ruby-lang.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/avl_tree.rb
+- lib/red_black_tree.rb
+- bench/bench.rb
+- bench/bench_element_size.rb
+- bench/bench_thread.rb
+- bench/profile.rb
+- test/helper.rb
+- test/test_avl_tree.rb
+- test/test_red_black_tree.rb
+- test/test_red_black_tree_thread.rb
+- README.md
+homepage: http://github.com/nahi/avl_tree
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: AVL tree, Red black tree and Lock-free Red black tree in Ruby
+test_files: []

@@ -1,0 +1,517 @@
+--- !ruby/object:Gem::Specification
+name: cucumber
+version: !ruby/object:Gem::Version
+  version: 9.2.1
+platform: ruby
+authors:
+- Aslak Hellesøy
+- Matt Wynne
+- Steve Tooke
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: cucumber-ci-environment
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '11'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '11'
+- !ruby/object:Gem::Dependency
+  name: cucumber-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '13'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '13'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+- !ruby/object:Gem::Dependency
+  name: cucumber-cucumber-expressions
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '17.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '17.0'
+- !ruby/object:Gem::Dependency
+  name: cucumber-gherkin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '24'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '28'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '24'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '28'
+- !ruby/object:Gem::Dependency
+  name: cucumber-html-formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '20.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '22'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '20.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '22'
+- !ruby/object:Gem::Dependency
+  name: cucumber-messages
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '25'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '25'
+- !ruby/object:Gem::Dependency
+  name: diff-lcs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: mini_mime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: multi_test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: sys-uname
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: cucumber-compatibility-kit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '15.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '15.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.14'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.56.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.56.4
+- !ruby/object:Gem::Dependency
+  name: rubocop-capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.19.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.19.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-packaging
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.25.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.25.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.22.0
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+description: Behaviour Driven Development with elegance and joy
+email: cukes@googlegroups.com
+executables:
+- cucumber
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- VERSION
+- bin/cucumber
+- lib/cucumber.rb
+- lib/cucumber/cli/configuration.rb
+- lib/cucumber/cli/main.rb
+- lib/cucumber/cli/options.rb
+- lib/cucumber/cli/profile_loader.rb
+- lib/cucumber/cli/rerun_file.rb
+- lib/cucumber/configuration.rb
+- lib/cucumber/constantize.rb
+- lib/cucumber/deprecate.rb
+- lib/cucumber/encoding.rb
+- lib/cucumber/errors.rb
+- lib/cucumber/events.rb
+- lib/cucumber/events/envelope.rb
+- lib/cucumber/events/gherkin_source_parsed.rb
+- lib/cucumber/events/gherkin_source_read.rb
+- lib/cucumber/events/hook_test_step_created.rb
+- lib/cucumber/events/step_activated.rb
+- lib/cucumber/events/step_definition_registered.rb
+- lib/cucumber/events/test_case_created.rb
+- lib/cucumber/events/test_case_finished.rb
+- lib/cucumber/events/test_case_ready.rb
+- lib/cucumber/events/test_case_started.rb
+- lib/cucumber/events/test_run_finished.rb
+- lib/cucumber/events/test_run_started.rb
+- lib/cucumber/events/test_step_created.rb
+- lib/cucumber/events/test_step_finished.rb
+- lib/cucumber/events/test_step_started.rb
+- lib/cucumber/events/undefined_parameter_type.rb
+- lib/cucumber/file_specs.rb
+- lib/cucumber/filters.rb
+- lib/cucumber/filters/activate_steps.rb
+- lib/cucumber/filters/apply_after_hooks.rb
+- lib/cucumber/filters/apply_after_step_hooks.rb
+- lib/cucumber/filters/apply_around_hooks.rb
+- lib/cucumber/filters/apply_before_hooks.rb
+- lib/cucumber/filters/broadcast_test_case_ready_event.rb
+- lib/cucumber/filters/broadcast_test_run_started_event.rb
+- lib/cucumber/filters/gated_receiver.rb
+- lib/cucumber/filters/prepare_world.rb
+- lib/cucumber/filters/quit.rb
+- lib/cucumber/filters/randomizer.rb
+- lib/cucumber/filters/retry.rb
+- lib/cucumber/filters/tag_limits.rb
+- lib/cucumber/filters/tag_limits/test_case_index.rb
+- lib/cucumber/filters/tag_limits/verifier.rb
+- lib/cucumber/formatter/ansicolor.rb
+- lib/cucumber/formatter/ast_lookup.rb
+- lib/cucumber/formatter/backtrace_filter.rb
+- lib/cucumber/formatter/console.rb
+- lib/cucumber/formatter/console_counts.rb
+- lib/cucumber/formatter/console_issues.rb
+- lib/cucumber/formatter/curl_option_parser.rb
+- lib/cucumber/formatter/duration.rb
+- lib/cucumber/formatter/duration_extractor.rb
+- lib/cucumber/formatter/errors.rb
+- lib/cucumber/formatter/fail_fast.rb
+- lib/cucumber/formatter/fanout.rb
+- lib/cucumber/formatter/html.rb
+- lib/cucumber/formatter/http_io.rb
+- lib/cucumber/formatter/ignore_missing_messages.rb
+- lib/cucumber/formatter/interceptor.rb
+- lib/cucumber/formatter/io.rb
+- lib/cucumber/formatter/io_http_buffer.rb
+- lib/cucumber/formatter/json.rb
+- lib/cucumber/formatter/junit.rb
+- lib/cucumber/formatter/message.rb
+- lib/cucumber/formatter/message_builder.rb
+- lib/cucumber/formatter/pretty.rb
+- lib/cucumber/formatter/progress.rb
+- lib/cucumber/formatter/publish_banner_printer.rb
+- lib/cucumber/formatter/query/hook_by_test_step.rb
+- lib/cucumber/formatter/query/pickle_by_test.rb
+- lib/cucumber/formatter/query/pickle_step_by_test_step.rb
+- lib/cucumber/formatter/query/step_definitions_by_test_step.rb
+- lib/cucumber/formatter/query/test_case_started_by_test_case.rb
+- lib/cucumber/formatter/rerun.rb
+- lib/cucumber/formatter/stepdefs.rb
+- lib/cucumber/formatter/steps.rb
+- lib/cucumber/formatter/summary.rb
+- lib/cucumber/formatter/unicode.rb
+- lib/cucumber/formatter/url_reporter.rb
+- lib/cucumber/formatter/usage.rb
+- lib/cucumber/gherkin/data_table_parser.rb
+- lib/cucumber/gherkin/formatter/ansi_escapes.rb
+- lib/cucumber/gherkin/formatter/escaping.rb
+- lib/cucumber/gherkin/i18n.rb
+- lib/cucumber/gherkin/steps_parser.rb
+- lib/cucumber/glue/dsl.rb
+- lib/cucumber/glue/hook.rb
+- lib/cucumber/glue/invoke_in_world.rb
+- lib/cucumber/glue/proto_world.rb
+- lib/cucumber/glue/registry_and_more.rb
+- lib/cucumber/glue/registry_wrapper.rb
+- lib/cucumber/glue/snippet.rb
+- lib/cucumber/glue/step_definition.rb
+- lib/cucumber/glue/world_factory.rb
+- lib/cucumber/hooks.rb
+- lib/cucumber/load_path.rb
+- lib/cucumber/multiline_argument.rb
+- lib/cucumber/multiline_argument/data_table.rb
+- lib/cucumber/multiline_argument/data_table/diff_matrices.rb
+- lib/cucumber/multiline_argument/doc_string.rb
+- lib/cucumber/platform.rb
+- lib/cucumber/project_initializer.rb
+- lib/cucumber/rake/task.rb
+- lib/cucumber/rspec/disable_option_parser.rb
+- lib/cucumber/rspec/doubles.rb
+- lib/cucumber/running_test_case.rb
+- lib/cucumber/runtime.rb
+- lib/cucumber/runtime/after_hooks.rb
+- lib/cucumber/runtime/before_hooks.rb
+- lib/cucumber/runtime/for_programming_languages.rb
+- lib/cucumber/runtime/meta_message_builder.rb
+- lib/cucumber/runtime/step_hooks.rb
+- lib/cucumber/runtime/support_code.rb
+- lib/cucumber/runtime/user_interface.rb
+- lib/cucumber/step_definition_light.rb
+- lib/cucumber/step_definitions.rb
+- lib/cucumber/step_match.rb
+- lib/cucumber/step_match_search.rb
+- lib/cucumber/term/ansicolor.rb
+- lib/cucumber/term/banner.rb
+- lib/cucumber/unit.rb
+- lib/simplecov_setup.rb
+homepage: https://cucumber.io/
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/cucumber-ruby/issues
+  changelog_uri: https://github.com/cucumber/cucumber-ruby/blob/main/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/github/cucumber/cucumber-ruby/
+  mailing_list_uri: https://groups.google.com/forum/#!forum/cukes
+  source_code_uri: https://github.com/cucumber/cucumber-ruby
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.1
+requirements: []
+rubygems_version: 3.4.20
+signing_key:
+specification_version: 4
+summary: cucumber-9.2.1
+test_files: []

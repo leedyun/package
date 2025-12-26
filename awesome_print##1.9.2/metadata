@@ -1,0 +1,248 @@
+--- !ruby/object:Gem::Specification
+name: awesome_print
+version: !ruby/object:Gem::Version
+  version: 1.9.2
+platform: ruby
+authors:
+- Michael Dvorkin
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-03-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.2.1
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.0
+description: 'Great Ruby debugging companion: pretty print Ruby objects to visualize
+  their structure. Supports custom object formatting via plugins'
+email: mike@dvorkin.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Appraisals
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- awesome_print.gemspec
+- init.rb
+- lib/ap.rb
+- lib/awesome_print.rb
+- lib/awesome_print/colorize.rb
+- lib/awesome_print/core_ext/awesome_method_array.rb
+- lib/awesome_print/core_ext/class.rb
+- lib/awesome_print/core_ext/kernel.rb
+- lib/awesome_print/core_ext/logger.rb
+- lib/awesome_print/core_ext/method.rb
+- lib/awesome_print/core_ext/object.rb
+- lib/awesome_print/core_ext/string.rb
+- lib/awesome_print/custom_defaults.rb
+- lib/awesome_print/ext/action_view.rb
+- lib/awesome_print/ext/active_record.rb
+- lib/awesome_print/ext/active_support.rb
+- lib/awesome_print/ext/mongo_mapper.rb
+- lib/awesome_print/ext/mongoid.rb
+- lib/awesome_print/ext/nobrainer.rb
+- lib/awesome_print/ext/nokogiri.rb
+- lib/awesome_print/ext/ostruct.rb
+- lib/awesome_print/ext/ripple.rb
+- lib/awesome_print/ext/sequel.rb
+- lib/awesome_print/formatter.rb
+- lib/awesome_print/formatters.rb
+- lib/awesome_print/formatters/array_formatter.rb
+- lib/awesome_print/formatters/base_formatter.rb
+- lib/awesome_print/formatters/class_formatter.rb
+- lib/awesome_print/formatters/dir_formatter.rb
+- lib/awesome_print/formatters/file_formatter.rb
+- lib/awesome_print/formatters/hash_formatter.rb
+- lib/awesome_print/formatters/method_formatter.rb
+- lib/awesome_print/formatters/object_formatter.rb
+- lib/awesome_print/formatters/simple_formatter.rb
+- lib/awesome_print/formatters/struct_formatter.rb
+- lib/awesome_print/indentator.rb
+- lib/awesome_print/inspector.rb
+- lib/awesome_print/version.rb
+- spec/active_record_helper.rb
+- spec/colors_spec.rb
+- spec/core_ext/logger_spec.rb
+- spec/core_ext/string_spec.rb
+- spec/ext/action_view_spec.rb
+- spec/ext/active_record_spec.rb
+- spec/ext/active_support_spec.rb
+- spec/ext/mongo_mapper_spec.rb
+- spec/ext/mongoid_spec.rb
+- spec/ext/nobrainer_spec.rb
+- spec/ext/nokogiri_spec.rb
+- spec/ext/ostruct_spec.rb
+- spec/ext/ripple_spec.rb
+- spec/formats_spec.rb
+- spec/methods_spec.rb
+- spec/misc_spec.rb
+- spec/objects_spec.rb
+- spec/spec_helper.rb
+- spec/support/active_record_data.rb
+- spec/support/active_record_data/3_2_diana.txt
+- spec/support/active_record_data/3_2_diana_legacy.txt
+- spec/support/active_record_data/3_2_multi.txt
+- spec/support/active_record_data/3_2_multi_legacy.txt
+- spec/support/active_record_data/4_0_diana.txt
+- spec/support/active_record_data/4_0_multi.txt
+- spec/support/active_record_data/4_1_diana.txt
+- spec/support/active_record_data/4_1_multi.txt
+- spec/support/active_record_data/4_2_diana.txt
+- spec/support/active_record_data/4_2_diana_legacy.txt
+- spec/support/active_record_data/4_2_multi.txt
+- spec/support/active_record_data/4_2_multi_legacy.txt
+- spec/support/active_record_data/5_0_diana.txt
+- spec/support/active_record_data/5_0_multi.txt
+- spec/support/active_record_data/5_1_diana.txt
+- spec/support/active_record_data/5_1_multi.txt
+- spec/support/active_record_data/5_2_diana.txt
+- spec/support/active_record_data/5_2_multi.txt
+- spec/support/active_record_data/6_0_diana.txt
+- spec/support/active_record_data/6_0_multi.txt
+- spec/support/active_record_data/6_1_diana.txt
+- spec/support/active_record_data/6_1_multi.txt
+- spec/support/ext_verifier.rb
+- spec/support/mongoid_versions.rb
+- spec/support/rails_versions.rb
+homepage: https://github.com/awesome-print/awesome_print
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: Pretty print Ruby objects with proper indentation and colors
+test_files:
+- spec/spec_helper.rb
+- spec/core_ext/logger_spec.rb
+- spec/core_ext/string_spec.rb
+- spec/colors_spec.rb
+- spec/ext/active_support_spec.rb
+- spec/ext/mongoid_spec.rb
+- spec/ext/active_record_spec.rb
+- spec/ext/ripple_spec.rb
+- spec/ext/nokogiri_spec.rb
+- spec/ext/nobrainer_spec.rb
+- spec/ext/mongo_mapper_spec.rb
+- spec/ext/ostruct_spec.rb
+- spec/ext/action_view_spec.rb
+- spec/methods_spec.rb
+- spec/active_record_helper.rb
+- spec/objects_spec.rb
+- spec/support/mongoid_versions.rb
+- spec/support/active_record_data/4_2_multi.txt
+- spec/support/active_record_data/6_1_multi.txt
+- spec/support/active_record_data/3_2_diana.txt
+- spec/support/active_record_data/4_1_diana.txt
+- spec/support/active_record_data/5_0_multi.txt
+- spec/support/active_record_data/5_2_diana.txt
+- spec/support/active_record_data/4_2_diana_legacy.txt
+- spec/support/active_record_data/4_2_multi_legacy.txt
+- spec/support/active_record_data/6_0_multi.txt
+- spec/support/active_record_data/4_0_diana.txt
+- spec/support/active_record_data/5_1_multi.txt
+- spec/support/active_record_data/4_0_multi.txt
+- spec/support/active_record_data/5_1_diana.txt
+- spec/support/active_record_data/6_0_diana.txt
+- spec/support/active_record_data/5_2_multi.txt
+- spec/support/active_record_data/4_1_multi.txt
+- spec/support/active_record_data/5_0_diana.txt
+- spec/support/active_record_data/3_2_diana_legacy.txt
+- spec/support/active_record_data/3_2_multi_legacy.txt
+- spec/support/active_record_data/3_2_multi.txt
+- spec/support/active_record_data/6_1_diana.txt
+- spec/support/active_record_data/4_2_diana.txt
+- spec/support/ext_verifier.rb
+- spec/support/rails_versions.rb
+- spec/support/active_record_data.rb
+- spec/formats_spec.rb
+- spec/misc_spec.rb

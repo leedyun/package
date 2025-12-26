@@ -1,0 +1,94 @@
+--- !ruby/object:Gem::Specification
+name: constant_resolver
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Philip Müller
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-04-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+description: |
+  Given a code base that adheres to certain conventions, ConstantResolver resolves any, even partially qualified,
+  constant to the path of the file that defines it.
+email:
+- philip.mueller@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/probots.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop-https---shopify-github-io-ruby-style-guide-rubocop-yml"
+- ".rubocop.yml"
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- constant_resolver.gemspec
+- dev.yml
+- lib/constant_resolver.rb
+- lib/constant_resolver/version.rb
+- service.yml
+- shipit.yml
+homepage: https://github.com/Shopify/constant_resolver
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/Shopify/constant_resolver
+  source_code_uri: https://github.com/Shopify/constant_resolver
+  changelog_uri: https://github.com/Shopify/constant_resolver/releases
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.20
+signing_key: 
+specification_version: 4
+summary: Statically resolve any ruby constant
+test_files: []

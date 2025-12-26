@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      invalid_abn: 'Invalid ABN'
+      invalid_abn_length: 'Invalid ABN Length'

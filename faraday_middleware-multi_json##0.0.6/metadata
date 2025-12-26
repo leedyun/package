@@ -1,0 +1,99 @@
+--- !ruby/object:Gem::Specification
+name: faraday_middleware-multi_json
+version: !ruby/object:Gem::Version
+  version: 0.0.6
+platform: ruby
+authors:
+- Dennis Rogenius
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-05-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday_middleware
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Faraday response parser using MultiJson
+email:
+- denro03@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .rspec
+- .travis.yml
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- faraday_middleware-multi_json.gemspec
+- lib/faraday_middleware-multi_json.rb
+- lib/faraday_middleware/multi_json.rb
+- spec/faraday_middleware/multi_json_spec.rb
+- spec/spec_helper.rb
+homepage: https://www.github.com/denro/faraday_middleware-multi_json
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14
+signing_key: 
+specification_version: 4
+summary: Response JSON parser using MultiJson and FaradayMiddleware
+test_files:
+- spec/faraday_middleware/multi_json_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification
+name: jls-grok
+version: !ruby/object:Gem::Version
+  version: 0.11.5
+platform: ruby
+authors:
+- Jordan Sissel
+- Pete Fritchman
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-04-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cabin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+description: Grok ruby bindings - pattern match/extraction tool
+email:
+- jls@semicomplete.com
+- petef@databits.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/grok-pure.rb
+- lib/grok.rb
+- lib/grok/c-ext/match.rb
+- lib/grok/c-ext/pile.rb
+- lib/grok/namespace.rb
+- lib/grok/pure/discovery.rb
+- lib/grok/pure/match.rb
+homepage: http://code.google.com/p/semicomplete/wiki/Grok
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.11
+signing_key: 
+specification_version: 4
+summary: grok bindings for ruby
+test_files: []

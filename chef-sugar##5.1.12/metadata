@@ -1,0 +1,73 @@
+--- !ruby/object:Gem::Specification
+name: chef-sugar
+version: !ruby/object:Gem::Version
+  version: 5.1.12
+platform: ruby
+authors:
+- Seth Vargo
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-11-11 00:00:00.000000000 Z
+dependencies: []
+description: A series of helpful sugar of the Chef core and other resources to make
+  a cleaner, more lean recipe DSL, enforce DRY principles, and make writing Chef recipes
+  an awesome experience!
+email:
+- sethvargo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/chef/sugar.rb
+- lib/chef/sugar/architecture.rb
+- lib/chef/sugar/cloud.rb
+- lib/chef/sugar/constraints.rb
+- lib/chef/sugar/constraints_dsl.rb
+- lib/chef/sugar/core_extensions.rb
+- lib/chef/sugar/core_extensions/array.rb
+- lib/chef/sugar/core_extensions/object.rb
+- lib/chef/sugar/core_extensions/string.rb
+- lib/chef/sugar/data_bag.rb
+- lib/chef/sugar/deprecation.rb
+- lib/chef/sugar/docker.rb
+- lib/chef/sugar/filters.rb
+- lib/chef/sugar/init.rb
+- lib/chef/sugar/ip.rb
+- lib/chef/sugar/kernel.rb
+- lib/chef/sugar/kitchen.rb
+- lib/chef/sugar/node.rb
+- lib/chef/sugar/platform.rb
+- lib/chef/sugar/platform_family.rb
+- lib/chef/sugar/ruby.rb
+- lib/chef/sugar/run_context.rb
+- lib/chef/sugar/shell.rb
+- lib/chef/sugar/vagrant.rb
+- lib/chef/sugar/version.rb
+- lib/chef/sugar/virtualization.rb
+homepage: https://github.com/chef/chef-sugar
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A collection of helper methods and modules that make working with Chef recipes
+  awesome.
+test_files: []

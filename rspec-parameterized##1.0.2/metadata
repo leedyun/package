@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: rspec-parameterized
+version: !ruby/object:Gem::Version
+  version: 1.0.2
+platform: ruby
+authors:
+- tomykaira
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized-table_syntax
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+description: RSpec::Parameterized supports simple parameterized test syntax in rspec.
+email:
+- tomykaira@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/rspec.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- UPGRADING.md
+- lib/rspec-parameterized.rb
+- lib/rspec/parameterized.rb
+- lib/rspec/parameterized/version.rb
+- rspec-parameterized.gemspec
+- spec/parametarized_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/tomykaira/rspec-parameterized
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: RSpec::Parameterized supports simple parameterized test syntax in rspec.
+  I was inspired by [udzura's mock](https://gist.github.com/1881139).
+test_files:
+- spec/parametarized_spec.rb
+- spec/spec_helper.rb

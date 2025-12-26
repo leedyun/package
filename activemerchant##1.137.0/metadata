@@ -1,0 +1,508 @@
+--- !ruby/object:Gem::Specification
+name: activemerchant
+version: !ruby/object:Gem::Version
+  version: 1.137.0
+platform: ruby
+authors:
+- Tobias Luetke
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.9
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.9
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.4
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Active Merchant is a simple payment abstraction library used in and sponsored
+  by Shopify. It is written by Tobias Luetke, Cody Fauser, and contributors. The aim
+  of the project is to feel natural to Ruby users and to abstract as many parts as
+  possible away from the user to offer a consistent interface across all supported
+  gateways.
+email: tobi@leetsoft.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG
+- CONTRIBUTORS
+- MIT-LICENSE
+- README.md
+- lib/active_merchant.rb
+- lib/active_merchant/billing.rb
+- lib/active_merchant/billing/apple_pay_payment_token.rb
+- lib/active_merchant/billing/avs_result.rb
+- lib/active_merchant/billing/base.rb
+- lib/active_merchant/billing/check.rb
+- lib/active_merchant/billing/compatibility.rb
+- lib/active_merchant/billing/credit_card.rb
+- lib/active_merchant/billing/credit_card_formatting.rb
+- lib/active_merchant/billing/credit_card_methods.rb
+- lib/active_merchant/billing/cvv_result.rb
+- lib/active_merchant/billing/gateway.rb
+- lib/active_merchant/billing/gateways.rb
+- lib/active_merchant/billing/gateways/adyen.rb
+- lib/active_merchant/billing/gateways/airwallex.rb
+- lib/active_merchant/billing/gateways/alelo.rb
+- lib/active_merchant/billing/gateways/allied_wallet.rb
+- lib/active_merchant/billing/gateways/authorize_net.rb
+- lib/active_merchant/billing/gateways/authorize_net_arb.rb
+- lib/active_merchant/billing/gateways/authorize_net_cim.rb
+- lib/active_merchant/billing/gateways/axcessms.rb
+- lib/active_merchant/billing/gateways/balanced.rb
+- lib/active_merchant/billing/gateways/bambora_apac.rb
+- lib/active_merchant/billing/gateways/bank_frick.rb
+- lib/active_merchant/billing/gateways/banwire.rb
+- lib/active_merchant/billing/gateways/barclaycard_smartpay.rb
+- lib/active_merchant/billing/gateways/barclays_epdq_extra_plus.rb
+- lib/active_merchant/billing/gateways/be2bill.rb
+- lib/active_merchant/billing/gateways/beanstream.rb
+- lib/active_merchant/billing/gateways/beanstream/beanstream_core.rb
+- lib/active_merchant/billing/gateways/beanstream_interac.rb
+- lib/active_merchant/billing/gateways/blue_pay.rb
+- lib/active_merchant/billing/gateways/blue_snap.rb
+- lib/active_merchant/billing/gateways/bogus.rb
+- lib/active_merchant/billing/gateways/borgun.rb
+- lib/active_merchant/billing/gateways/bpoint.rb
+- lib/active_merchant/billing/gateways/braintree.rb
+- lib/active_merchant/billing/gateways/braintree/braintree_common.rb
+- lib/active_merchant/billing/gateways/braintree/token_nonce.rb
+- lib/active_merchant/billing/gateways/braintree_blue.rb
+- lib/active_merchant/billing/gateways/braintree_orange.rb
+- lib/active_merchant/billing/gateways/bridge_pay.rb
+- lib/active_merchant/billing/gateways/cams.rb
+- lib/active_merchant/billing/gateways/card_connect.rb
+- lib/active_merchant/billing/gateways/card_save.rb
+- lib/active_merchant/billing/gateways/card_stream.rb
+- lib/active_merchant/billing/gateways/cardknox.rb
+- lib/active_merchant/billing/gateways/cardprocess.rb
+- lib/active_merchant/billing/gateways/cashnet.rb
+- lib/active_merchant/billing/gateways/cc5.rb
+- lib/active_merchant/billing/gateways/cecabank.rb
+- lib/active_merchant/billing/gateways/cecabank/cecabank_common.rb
+- lib/active_merchant/billing/gateways/cecabank/cecabank_json.rb
+- lib/active_merchant/billing/gateways/cecabank/cecabank_xml.rb
+- lib/active_merchant/billing/gateways/cenpos.rb
+- lib/active_merchant/billing/gateways/checkout.rb
+- lib/active_merchant/billing/gateways/checkout_v2.rb
+- lib/active_merchant/billing/gateways/citrus_pay.rb
+- lib/active_merchant/billing/gateways/clearhaus.rb
+- lib/active_merchant/billing/gateways/commerce_hub.rb
+- lib/active_merchant/billing/gateways/commercegate.rb
+- lib/active_merchant/billing/gateways/conekta.rb
+- lib/active_merchant/billing/gateways/creditcall.rb
+- lib/active_merchant/billing/gateways/credorax.rb
+- lib/active_merchant/billing/gateways/ct_payment.rb
+- lib/active_merchant/billing/gateways/culqi.rb
+- lib/active_merchant/billing/gateways/cyber_source.rb
+- lib/active_merchant/billing/gateways/cyber_source/cyber_source_common.rb
+- lib/active_merchant/billing/gateways/cyber_source_rest.rb
+- lib/active_merchant/billing/gateways/d_local.rb
+- lib/active_merchant/billing/gateways/data_cash.rb
+- lib/active_merchant/billing/gateways/datatrans.rb
+- lib/active_merchant/billing/gateways/decidir.rb
+- lib/active_merchant/billing/gateways/decidir_plus.rb
+- lib/active_merchant/billing/gateways/deepstack.rb
+- lib/active_merchant/billing/gateways/dibs.rb
+- lib/active_merchant/billing/gateways/digitzs.rb
+- lib/active_merchant/billing/gateways/ebanx.rb
+- lib/active_merchant/billing/gateways/efsnet.rb
+- lib/active_merchant/billing/gateways/elavon.rb
+- lib/active_merchant/billing/gateways/element.rb
+- lib/active_merchant/billing/gateways/epay.rb
+- lib/active_merchant/billing/gateways/evo_ca.rb
+- lib/active_merchant/billing/gateways/eway.rb
+- lib/active_merchant/billing/gateways/eway_managed.rb
+- lib/active_merchant/billing/gateways/eway_rapid.rb
+- lib/active_merchant/billing/gateways/exact.rb
+- lib/active_merchant/billing/gateways/ezic.rb
+- lib/active_merchant/billing/gateways/fat_zebra.rb
+- lib/active_merchant/billing/gateways/federated_canada.rb
+- lib/active_merchant/billing/gateways/finansbank.rb
+- lib/active_merchant/billing/gateways/first_giving.rb
+- lib/active_merchant/billing/gateways/first_pay.rb
+- lib/active_merchant/billing/gateways/first_pay/first_pay_common.rb
+- lib/active_merchant/billing/gateways/first_pay/first_pay_json.rb
+- lib/active_merchant/billing/gateways/first_pay/first_pay_xml.rb
+- lib/active_merchant/billing/gateways/firstdata_e4.rb
+- lib/active_merchant/billing/gateways/firstdata_e4_v27.rb
+- lib/active_merchant/billing/gateways/flex_charge.rb
+- lib/active_merchant/billing/gateways/flo2cash.rb
+- lib/active_merchant/billing/gateways/flo2cash_simple.rb
+- lib/active_merchant/billing/gateways/forte.rb
+- lib/active_merchant/billing/gateways/garanti.rb
+- lib/active_merchant/billing/gateways/global_collect.rb
+- lib/active_merchant/billing/gateways/global_transport.rb
+- lib/active_merchant/billing/gateways/hdfc.rb
+- lib/active_merchant/billing/gateways/hi_pay.rb
+- lib/active_merchant/billing/gateways/hps.rb
+- lib/active_merchant/billing/gateways/iats_payments.rb
+- lib/active_merchant/billing/gateways/in_context_paypal_express.rb
+- lib/active_merchant/billing/gateways/inspire.rb
+- lib/active_merchant/billing/gateways/instapay.rb
+- lib/active_merchant/billing/gateways/ipg.rb
+- lib/active_merchant/billing/gateways/ipp.rb
+- lib/active_merchant/billing/gateways/iridium.rb
+- lib/active_merchant/billing/gateways/itransact.rb
+- lib/active_merchant/billing/gateways/iveri.rb
+- lib/active_merchant/billing/gateways/ixopay.rb
+- lib/active_merchant/billing/gateways/jetpay.rb
+- lib/active_merchant/billing/gateways/jetpay_v2.rb
+- lib/active_merchant/billing/gateways/komoju.rb
+- lib/active_merchant/billing/gateways/kushki.rb
+- lib/active_merchant/billing/gateways/latitude19.rb
+- lib/active_merchant/billing/gateways/linkpoint.rb
+- lib/active_merchant/billing/gateways/litle.rb
+- lib/active_merchant/billing/gateways/mastercard.rb
+- lib/active_merchant/billing/gateways/maxipago.rb
+- lib/active_merchant/billing/gateways/mercado_pago.rb
+- lib/active_merchant/billing/gateways/merchant_e_solutions.rb
+- lib/active_merchant/billing/gateways/merchant_one.rb
+- lib/active_merchant/billing/gateways/merchant_partners.rb
+- lib/active_merchant/billing/gateways/merchant_ware.rb
+- lib/active_merchant/billing/gateways/merchant_ware_version_four.rb
+- lib/active_merchant/billing/gateways/merchant_warrior.rb
+- lib/active_merchant/billing/gateways/mercury.rb
+- lib/active_merchant/billing/gateways/metrics_global.rb
+- lib/active_merchant/billing/gateways/micropayment.rb
+- lib/active_merchant/billing/gateways/migs.rb
+- lib/active_merchant/billing/gateways/migs/migs_codes.rb
+- lib/active_merchant/billing/gateways/mit.rb
+- lib/active_merchant/billing/gateways/modern_payments.rb
+- lib/active_merchant/billing/gateways/modern_payments_cim.rb
+- lib/active_merchant/billing/gateways/moka.rb
+- lib/active_merchant/billing/gateways/monei.rb
+- lib/active_merchant/billing/gateways/moneris.rb
+- lib/active_merchant/billing/gateways/money_movers.rb
+- lib/active_merchant/billing/gateways/mundipagg.rb
+- lib/active_merchant/billing/gateways/nab_transact.rb
+- lib/active_merchant/billing/gateways/ncr_secure_pay.rb
+- lib/active_merchant/billing/gateways/net_registry.rb
+- lib/active_merchant/billing/gateways/netaxept.rb
+- lib/active_merchant/billing/gateways/netbanx.rb
+- lib/active_merchant/billing/gateways/netbilling.rb
+- lib/active_merchant/billing/gateways/netpay.rb
+- lib/active_merchant/billing/gateways/network_merchants.rb
+- lib/active_merchant/billing/gateways/nmi.rb
+- lib/active_merchant/billing/gateways/ogone.rb
+- lib/active_merchant/billing/gateways/omise.rb
+- lib/active_merchant/billing/gateways/openpay.rb
+- lib/active_merchant/billing/gateways/opp.rb
+- lib/active_merchant/billing/gateways/optimal_payment.rb
+- lib/active_merchant/billing/gateways/orbital.rb
+- lib/active_merchant/billing/gateways/orbital/orbital_soft_descriptors.rb
+- lib/active_merchant/billing/gateways/pac_net_raven.rb
+- lib/active_merchant/billing/gateways/pagarme.rb
+- lib/active_merchant/billing/gateways/pago_facil.rb
+- lib/active_merchant/billing/gateways/pay_arc.rb
+- lib/active_merchant/billing/gateways/pay_conex.rb
+- lib/active_merchant/billing/gateways/pay_gate_xml.rb
+- lib/active_merchant/billing/gateways/pay_hub.rb
+- lib/active_merchant/billing/gateways/pay_junction.rb
+- lib/active_merchant/billing/gateways/pay_junction_v2.rb
+- lib/active_merchant/billing/gateways/pay_secure.rb
+- lib/active_merchant/billing/gateways/pay_trace.rb
+- lib/active_merchant/billing/gateways/paybox_direct.rb
+- lib/active_merchant/billing/gateways/payeezy.rb
+- lib/active_merchant/billing/gateways/payex.rb
+- lib/active_merchant/billing/gateways/payflow.rb
+- lib/active_merchant/billing/gateways/payflow/payflow_common_api.rb
+- lib/active_merchant/billing/gateways/payflow/payflow_express_response.rb
+- lib/active_merchant/billing/gateways/payflow/payflow_response.rb
+- lib/active_merchant/billing/gateways/payflow_express.rb
+- lib/active_merchant/billing/gateways/payflow_express_uk.rb
+- lib/active_merchant/billing/gateways/payflow_uk.rb
+- lib/active_merchant/billing/gateways/payment_express.rb
+- lib/active_merchant/billing/gateways/paymentez.rb
+- lib/active_merchant/billing/gateways/paymill.rb
+- lib/active_merchant/billing/gateways/paypal.rb
+- lib/active_merchant/billing/gateways/paypal/paypal_common_api.rb
+- lib/active_merchant/billing/gateways/paypal/paypal_express_response.rb
+- lib/active_merchant/billing/gateways/paypal/paypal_recurring_api.rb
+- lib/active_merchant/billing/gateways/paypal_ca.rb
+- lib/active_merchant/billing/gateways/paypal_digital_goods.rb
+- lib/active_merchant/billing/gateways/paypal_express.rb
+- lib/active_merchant/billing/gateways/paypal_express_common.rb
+- lib/active_merchant/billing/gateways/paysafe.rb
+- lib/active_merchant/billing/gateways/payscout.rb
+- lib/active_merchant/billing/gateways/paystation.rb
+- lib/active_merchant/billing/gateways/payu_in.rb
+- lib/active_merchant/billing/gateways/payu_latam.rb
+- lib/active_merchant/billing/gateways/payway.rb
+- lib/active_merchant/billing/gateways/payway_dot_com.rb
+- lib/active_merchant/billing/gateways/pin.rb
+- lib/active_merchant/billing/gateways/plexo.rb
+- lib/active_merchant/billing/gateways/plugnpay.rb
+- lib/active_merchant/billing/gateways/priority.rb
+- lib/active_merchant/billing/gateways/pro_pay.rb
+- lib/active_merchant/billing/gateways/psigate.rb
+- lib/active_merchant/billing/gateways/psl_card.rb
+- lib/active_merchant/billing/gateways/qbms.rb
+- lib/active_merchant/billing/gateways/quantum.rb
+- lib/active_merchant/billing/gateways/quickbooks.rb
+- lib/active_merchant/billing/gateways/quickpay.rb
+- lib/active_merchant/billing/gateways/quickpay/quickpay_common.rb
+- lib/active_merchant/billing/gateways/quickpay/quickpay_v10.rb
+- lib/active_merchant/billing/gateways/quickpay/quickpay_v4to7.rb
+- lib/active_merchant/billing/gateways/qvalent.rb
+- lib/active_merchant/billing/gateways/rapyd.rb
+- lib/active_merchant/billing/gateways/reach.rb
+- lib/active_merchant/billing/gateways/realex.rb
+- lib/active_merchant/billing/gateways/redsys.rb
+- lib/active_merchant/billing/gateways/redsys_rest.rb
+- lib/active_merchant/billing/gateways/s5.rb
+- lib/active_merchant/billing/gateways/safe_charge.rb
+- lib/active_merchant/billing/gateways/sage.rb
+- lib/active_merchant/billing/gateways/sage_pay.rb
+- lib/active_merchant/billing/gateways/sallie_mae.rb
+- lib/active_merchant/billing/gateways/secure_net.rb
+- lib/active_merchant/billing/gateways/secure_pay.rb
+- lib/active_merchant/billing/gateways/secure_pay_au.rb
+- lib/active_merchant/billing/gateways/secure_pay_tech.rb
+- lib/active_merchant/billing/gateways/securion_pay.rb
+- lib/active_merchant/billing/gateways/shift4.rb
+- lib/active_merchant/billing/gateways/shift4_v2.rb
+- lib/active_merchant/billing/gateways/simetrik.rb
+- lib/active_merchant/billing/gateways/skip_jack.rb
+- lib/active_merchant/billing/gateways/smart_ps.rb
+- lib/active_merchant/billing/gateways/so_easy_pay.rb
+- lib/active_merchant/billing/gateways/spreedly_core.rb
+- lib/active_merchant/billing/gateways/stripe.rb
+- lib/active_merchant/billing/gateways/stripe_payment_intents.rb
+- lib/active_merchant/billing/gateways/sum_up.rb
+- lib/active_merchant/billing/gateways/swipe_checkout.rb
+- lib/active_merchant/billing/gateways/telr.rb
+- lib/active_merchant/billing/gateways/tns.rb
+- lib/active_merchant/billing/gateways/trans_first.rb
+- lib/active_merchant/billing/gateways/trans_first_transaction_express.rb
+- lib/active_merchant/billing/gateways/transact_pro.rb
+- lib/active_merchant/billing/gateways/transax.rb
+- lib/active_merchant/billing/gateways/transnational.rb
+- lib/active_merchant/billing/gateways/trexle.rb
+- lib/active_merchant/billing/gateways/trust_commerce.rb
+- lib/active_merchant/billing/gateways/usa_epay.rb
+- lib/active_merchant/billing/gateways/usa_epay_advanced.rb
+- lib/active_merchant/billing/gateways/usa_epay_transaction.rb
+- lib/active_merchant/billing/gateways/vanco.rb
+- lib/active_merchant/billing/gateways/vantiv_express.rb
+- lib/active_merchant/billing/gateways/verifi.rb
+- lib/active_merchant/billing/gateways/viaklix.rb
+- lib/active_merchant/billing/gateways/visanet_peru.rb
+- lib/active_merchant/billing/gateways/vpos.rb
+- lib/active_merchant/billing/gateways/webpay.rb
+- lib/active_merchant/billing/gateways/wepay.rb
+- lib/active_merchant/billing/gateways/wirecard.rb
+- lib/active_merchant/billing/gateways/wompi.rb
+- lib/active_merchant/billing/gateways/world_net.rb
+- lib/active_merchant/billing/gateways/worldpay.rb
+- lib/active_merchant/billing/gateways/worldpay_online_payments.rb
+- lib/active_merchant/billing/gateways/worldpay_us.rb
+- lib/active_merchant/billing/gateways/xpay.rb
+- lib/active_merchant/billing/model.rb
+- lib/active_merchant/billing/network_tokenization_credit_card.rb
+- lib/active_merchant/billing/payment_token.rb
+- lib/active_merchant/billing/rails.rb
+- lib/active_merchant/billing/response.rb
+- lib/active_merchant/billing/three_d_secure_eci_mapper.rb
+- lib/active_merchant/connection.rb
+- lib/active_merchant/country.rb
+- lib/active_merchant/empty.rb
+- lib/active_merchant/errors.rb
+- lib/active_merchant/net_http_ssl_connection.rb
+- lib/active_merchant/network_connection_retries.rb
+- lib/active_merchant/post_data.rb
+- lib/active_merchant/posts_data.rb
+- lib/active_merchant/version.rb
+- lib/activemerchant.rb
+- lib/certs/cacert.pem
+- lib/support/gateway_support.rb
+- lib/support/outbound_hosts.rb
+- lib/support/ssl_verify.rb
+- lib/support/ssl_version.rb
+homepage: http://activemerchant.org/
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Framework and tools for dealing with credit card transactions.
+test_files: []

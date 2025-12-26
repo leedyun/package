@@ -1,0 +1,138 @@
+--- !ruby/object:Gem::Specification
+name: high_voltage
+version: !ruby/object:Gem::Version
+  version: 4.0.0
+platform: ruby
+authors:
+- Matt Jankowski
+- Dan Croak
+- Nick Quaranto
+- Chad Pytel
+- Joe Ferris
+- J. Edward Dewyea
+- Tammer Saleh
+- Mike Burns
+- Tristan Dunn
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-05-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.1.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.1.2
+description: Fire in the disco. Fire in the ... taco bell.
+email:
+- support@thoughtbot.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- MIT-LICENSE
+- README.md
+- app/controllers/concerns/high_voltage/static_page.rb
+- app/controllers/high_voltage/pages_controller.rb
+- config/routes.rb
+- lib/high_voltage.rb
+- lib/high_voltage/configuration.rb
+- lib/high_voltage/constraints/root_route.rb
+- lib/high_voltage/engine.rb
+- lib/high_voltage/page.rb
+- lib/high_voltage/page_collector.rb
+- lib/high_voltage/page_finder.rb
+- lib/high_voltage/route_drawers/default.rb
+- lib/high_voltage/route_drawers/root.rb
+- lib/high_voltage/version.rb
+homepage: http://github.com/thoughtbot/high_voltage
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key:
+specification_version: 4
+summary: Simple static page rendering controller
+test_files: []

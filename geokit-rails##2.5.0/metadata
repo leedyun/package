@@ -1,0 +1,413 @@
+--- !ruby/object:Gem::Specification
+name: geokit-rails
+version: !ruby/object:Gem::Version
+  version: 2.5.0
+platform: ruby
+authors:
+- Michael Noack
+- Andre Lewis
+- Bill Eisenhauer
+- Jeremy Lecour
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: geokit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.16.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.16.1
+- !ruby/object:Gem::Dependency
+  name: simplecov-rcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: net-http
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: coveralls_reborn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mysql2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Official Geokit plugin for Rails/ActiveRecord. Provides location-based
+  goodness for your Rails app. Requires the Geokit gem.
+email:
+- michael+geokit@noack.com.au
+- andre@earthcode.com
+- bill_eisenhauer@yahoo.com
+- jeremy.lecour@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- CONFIG.markdown
+- Gemfile
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- gemfiles/rails3.gemfile
+- gemfiles/rails4.gemfile
+- gemfiles/rails5.gemfile
+- gemfiles/rails6.0.gemfile
+- gemfiles/rails6.1.gemfile
+- geokit-rails.gemspec
+- lib/generators/geokit_rails/install_generator.rb
+- lib/generators/templates/geokit_config.rb
+- lib/geokit-rails.rb
+- lib/geokit-rails/acts_as_mappable.rb
+- lib/geokit-rails/acts_as_mappable/class_methods.rb
+- lib/geokit-rails/acts_as_mappable/glue.rb
+- lib/geokit-rails/adapters/abstract.rb
+- lib/geokit-rails/adapters/mysql.rb
+- lib/geokit-rails/adapters/mysql2.rb
+- lib/geokit-rails/adapters/mysql2spatial.rb
+- lib/geokit-rails/adapters/oracleenhanced.rb
+- lib/geokit-rails/adapters/postgresql.rb
+- lib/geokit-rails/adapters/sqlite.rb
+- lib/geokit-rails/adapters/sqlserver.rb
+- lib/geokit-rails/distance_collection.rb
+- lib/geokit-rails/geocoder_control.rb
+- lib/geokit-rails/ip_geocode_lookup.rb
+- lib/geokit-rails/railtie.rb
+- lib/geokit-rails/version.rb
+- test/acts_as_mappable_test.rb
+- test/boot.rb
+- test/database.yml
+- test/distance_collection_test.rb
+- test/dummy/Rakefile
+- test/dummy/app/assets/images/.keep
+- test/dummy/app/assets/stylesheets/application.css
+- test/dummy/app/channels/application_cable/channel.rb
+- test/dummy/app/channels/application_cable/connection.rb
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/controllers/concerns/.keep
+- test/dummy/app/controllers/location_aware_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/jobs/application_job.rb
+- test/dummy/app/mailers/application_mailer.rb
+- test/dummy/app/models/application_record.rb
+- test/dummy/app/models/concerns/.keep
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/app/views/layouts/mailer.html.erb
+- test/dummy/app/views/layouts/mailer.text.erb
+- test/dummy/bin/rails
+- test/dummy/bin/rake
+- test/dummy/bin/setup
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/cable.yml
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/content_security_policy.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/permissions_policy.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/puma.rb
+- test/dummy/config/routes.rb
+- test/dummy/config/storage.yml
+- test/dummy/lib/assets/.keep
+- test/dummy/log/.keep
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/apple-touch-icon-precomposed.png
+- test/dummy/public/apple-touch-icon.png
+- test/dummy/public/favicon.ico
+- test/dummy/storage/.keep
+- test/dummy/tmp/.keep
+- test/dummy/tmp/pids/.keep
+- test/dummy/tmp/storage/.keep
+- test/fixtures/companies.yml
+- test/fixtures/custom_locations.yml
+- test/fixtures/locations.yml
+- test/fixtures/mock_addresses.yml
+- test/fixtures/mock_families.yml
+- test/fixtures/mock_houses.yml
+- test/fixtures/mock_organizations.yml
+- test/fixtures/mock_people.yml
+- test/fixtures/stores.yml
+- test/ip_geocode_lookup_test.rb
+- test/models/company.rb
+- test/models/custom_location.rb
+- test/models/location.rb
+- test/models/mock_address.rb
+- test/models/mock_family.rb
+- test/models/mock_house.rb
+- test/models/mock_organization.rb
+- test/models/mock_person.rb
+- test/models/store.rb
+- test/schema.rb
+- test/tasks.rake
+- test/test_helper.rb
+homepage: http://github.com/geokit/geokit-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Geokit helpers for rails apps.
+test_files:
+- test/acts_as_mappable_test.rb
+- test/boot.rb
+- test/database.yml
+- test/distance_collection_test.rb
+- test/dummy/Rakefile
+- test/dummy/app/assets/images/.keep
+- test/dummy/app/assets/stylesheets/application.css
+- test/dummy/app/channels/application_cable/channel.rb
+- test/dummy/app/channels/application_cable/connection.rb
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/controllers/concerns/.keep
+- test/dummy/app/controllers/location_aware_controller.rb
+- test/dummy/app/helpers/application_helper.rb
+- test/dummy/app/jobs/application_job.rb
+- test/dummy/app/mailers/application_mailer.rb
+- test/dummy/app/models/application_record.rb
+- test/dummy/app/models/concerns/.keep
+- test/dummy/app/views/layouts/application.html.erb
+- test/dummy/app/views/layouts/mailer.html.erb
+- test/dummy/app/views/layouts/mailer.text.erb
+- test/dummy/bin/rails
+- test/dummy/bin/rake
+- test/dummy/bin/setup
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/cable.yml
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/development.rb
+- test/dummy/config/environments/production.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/content_security_policy.rb
+- test/dummy/config/initializers/filter_parameter_logging.rb
+- test/dummy/config/initializers/inflections.rb
+- test/dummy/config/initializers/permissions_policy.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/puma.rb
+- test/dummy/config/routes.rb
+- test/dummy/config/storage.yml
+- test/dummy/lib/assets/.keep
+- test/dummy/log/.keep
+- test/dummy/public/404.html
+- test/dummy/public/422.html
+- test/dummy/public/500.html
+- test/dummy/public/apple-touch-icon-precomposed.png
+- test/dummy/public/apple-touch-icon.png
+- test/dummy/public/favicon.ico
+- test/dummy/storage/.keep
+- test/dummy/tmp/.keep
+- test/dummy/tmp/pids/.keep
+- test/dummy/tmp/storage/.keep
+- test/fixtures/companies.yml
+- test/fixtures/custom_locations.yml
+- test/fixtures/locations.yml
+- test/fixtures/mock_addresses.yml
+- test/fixtures/mock_families.yml
+- test/fixtures/mock_houses.yml
+- test/fixtures/mock_organizations.yml
+- test/fixtures/mock_people.yml
+- test/fixtures/stores.yml
+- test/ip_geocode_lookup_test.rb
+- test/models/company.rb
+- test/models/custom_location.rb
+- test/models/location.rb
+- test/models/mock_address.rb
+- test/models/mock_family.rb
+- test/models/mock_house.rb
+- test/models/mock_organization.rb
+- test/models/mock_person.rb
+- test/models/store.rb
+- test/schema.rb
+- test/tasks.rake
+- test/test_helper.rb

@@ -1,0 +1,50 @@
+--- !ruby/object:Gem::Specification
+name: semverse
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Jamie Winsor
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-05-23 00:00:00.000000000 Z
+dependencies: []
+description: An elegant library for representing and comparing SemVer versions and
+  constraints
+email:
+- jamie@vialstudios.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/semverse.rb
+- lib/semverse/constraint.rb
+- lib/semverse/errors.rb
+- lib/semverse/gem_version.rb
+- lib/semverse/version.rb
+homepage: https://github.com/chef/semverse/
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: An elegant library for representing and comparing SemVer versions and constraints
+test_files: []

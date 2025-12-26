@@ -1,0 +1,76 @@
+--- !ruby/object:Gem::Specification
+name: will_paginate
+version: !ruby/object:Gem::Version
+  version: 4.0.1
+platform: ruby
+authors:
+- Mislav Marohnić
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-10 00:00:00.000000000 Z
+dependencies: []
+description: will_paginate provides a simple API for performing paginated queries
+  with Active Record and Sequel, and includes helpers for rendering pagination links
+  in Rails, Sinatra, and Hanami web apps.
+email: mislav.marohnic@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- LICENSE
+- README.md
+- lib/will_paginate.rb
+- lib/will_paginate/active_record.rb
+- lib/will_paginate/array.rb
+- lib/will_paginate/collection.rb
+- lib/will_paginate/core_ext.rb
+- lib/will_paginate/deprecation.rb
+- lib/will_paginate/i18n.rb
+- lib/will_paginate/locale/en.yml
+- lib/will_paginate/mongoid.rb
+- lib/will_paginate/page_number.rb
+- lib/will_paginate/per_page.rb
+- lib/will_paginate/railtie.rb
+- lib/will_paginate/sequel.rb
+- lib/will_paginate/version.rb
+- lib/will_paginate/view_helpers.rb
+- lib/will_paginate/view_helpers/action_view.rb
+- lib/will_paginate/view_helpers/hanami.rb
+- lib/will_paginate/view_helpers/link_renderer.rb
+- lib/will_paginate/view_helpers/link_renderer_base.rb
+- lib/will_paginate/view_helpers/sinatra.rb
+homepage: https://github.com/mislav/will_paginate
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/mislav/will_paginate/issues
+  changelog_uri: https://github.com/mislav/will_paginate/releases/tag/v4.0.1
+  documentation_uri: https://www.rubydoc.info/gems/will_paginate/4.0.1
+  source_code_uri: https://github.com/mislav/will_paginate/tree/v4.0.1
+  wiki_uri: https://github.com/mislav/will_paginate/wiki
+post_install_message:
+rdoc_options:
+- "--main"
+- README.md
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.4
+signing_key:
+specification_version: 4
+summary: Pagination plugin for web frameworks and other apps
+test_files: []

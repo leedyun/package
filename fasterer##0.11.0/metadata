@@ -1,0 +1,325 @@
+--- !ruby/object:Gem::Specification
+name: fasterer
+version: !ruby/object:Gem::Version
+  version: 0.11.0
+platform: ruby
+authors:
+- Damir Svrtan
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-11-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.19.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.19.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.2'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: Use Fasterer to check various places in your code that could be faster.
+email:
+- damir.svrtan@gmail.com
+executables:
+- fasterer
+extensions: []
+extra_rdoc_files: []
+files:
+- ".fasterer.yml"
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/fasterer
+- fasterer.gemspec
+- lib/fasterer.rb
+- lib/fasterer/analyzer.rb
+- lib/fasterer/cli.rb
+- lib/fasterer/config.rb
+- lib/fasterer/file_traverser.rb
+- lib/fasterer/method_call.rb
+- lib/fasterer/method_definition.rb
+- lib/fasterer/offense.rb
+- lib/fasterer/offense_collector.rb
+- lib/fasterer/painter.rb
+- lib/fasterer/parser.rb
+- lib/fasterer/rescue_call.rb
+- lib/fasterer/scanners/method_call_scanner.rb
+- lib/fasterer/scanners/method_definition_scanner.rb
+- lib/fasterer/scanners/offensive.rb
+- lib/fasterer/scanners/rescue_call_scanner.rb
+- lib/fasterer/token.rb
+- lib/fasterer/version.rb
+- spec/lib/fasterer/analyzer/02_rescue_vs_respond_to_spec.rb
+- spec/lib/fasterer/analyzer/03_module_eval_spec.rb
+- spec/lib/fasterer/analyzer/06_shuffle_first_vs_sample_spec.rb
+- spec/lib/fasterer/analyzer/08_for_loop_vs_each_spec.rb
+- spec/lib/fasterer/analyzer/09_each_with_index_vs_while_spec.rb
+- spec/lib/fasterer/analyzer/10_map_flatten_vs_flat_map_spec.rb
+- spec/lib/fasterer/analyzer/11_reverse_each_vs_reverse_each_spec.rb
+- spec/lib/fasterer/analyzer/12_select_first_vs_detect_spec.rb
+- spec/lib/fasterer/analyzer/13_sort_vs_sort_by_spec.rb
+- spec/lib/fasterer/analyzer/14_fetch_with_argument_vs_block_spec.rb
+- spec/lib/fasterer/analyzer/15_keys_each_vs_each_key_spec.rb
+- spec/lib/fasterer/analyzer/16_hash_merge_bang_vs_hash_brackets_spec.rb
+- spec/lib/fasterer/analyzer/18_block_vs_symbol_to_proc_spec.rb
+- spec/lib/fasterer/analyzer/19_proc_call_vs_yield_spec.rb
+- spec/lib/fasterer/analyzer/24_gsub_vs_tr_spec.rb
+- spec/lib/fasterer/analyzer/25_select_last_vs_reverse_detect_spec.rb
+- spec/lib/fasterer/analyzer/26_getter_vs_attr_reader_spec.rb
+- spec/lib/fasterer/analyzer/27_setter_vs_attr_writer_spec.rb
+- spec/lib/fasterer/analyzer/29_include_vs_cover_on_range_spec.rb
+- spec/lib/fasterer/analyzer/98_misc_spec.rb
+- spec/lib/fasterer/analyzer/99_exceptional_files_spec.rb
+- spec/lib/fasterer/cli_spec.rb
+- spec/lib/fasterer/config_spec.rb
+- spec/lib/fasterer/file_traverser_spec.rb
+- spec/lib/fasterer/method_call_spec.rb
+- spec/lib/fasterer/method_definition_spec.rb
+- spec/lib/fasterer/rescue_call_spec.rb
+- spec/lib/fasterer/statistics_spec.rb
+- spec/spec_helper.rb
+- spec/support/analyzer/02_rescue_vs_respond_to.rb
+- spec/support/analyzer/03_module_eval.rb
+- spec/support/analyzer/06_shuffle_first_vs_sample.rb
+- spec/support/analyzer/08_for_loop_vs_each.rb
+- spec/support/analyzer/09_each_with_index_vs_while.rb
+- spec/support/analyzer/10_map_flatten_vs_flat_map.rb
+- spec/support/analyzer/11_reverse_each_vs_reverse_each.rb
+- spec/support/analyzer/12_select_first_vs_detect.rb
+- spec/support/analyzer/13_sort_vs_sort_by.rb
+- spec/support/analyzer/14_fetch_with_argument_vs_block.rb
+- spec/support/analyzer/15_keys_each_vs_each_key.rb
+- spec/support/analyzer/16_hash_merge_bang_vs_hash_brackets.rb
+- spec/support/analyzer/18_block_vs_symbol_to_proc.rb
+- spec/support/analyzer/19_proc_call_vs_yield.rb
+- spec/support/analyzer/24_gsub_vs_tr.rb
+- spec/support/analyzer/25_select_last_vs_reverse_detect.rb
+- spec/support/analyzer/26_getter_vs_attr_reader.rb
+- spec/support/analyzer/27_setter_vs_attr_writer.rb
+- spec/support/analyzer/29_include_vs_cover_on_range.rb
+- spec/support/analyzer/98_misc.rb
+- spec/support/analyzer/99_exceptional_files.rb
+- spec/support/binary_call/simple_comparison.rb
+- spec/support/file_helper.rb
+- spec/support/isolated_environment.rb
+- spec/support/method_call/method_call_on_constant.rb
+- spec/support/method_call/method_call_on_integer.rb
+- spec/support/method_call/method_call_on_method_call.rb
+- spec/support/method_call/method_call_on_string.rb
+- spec/support/method_call/method_call_on_variable.rb
+- spec/support/method_call/method_call_with_a_block.rb
+- spec/support/method_call/method_call_with_a_integer_argument.rb
+- spec/support/method_call/method_call_with_a_regex_argument.rb
+- spec/support/method_call/method_call_with_an_argument_and_a_block.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver_and_no_brackets.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver_and_no_brackets_and_do_end.rb
+- spec/support/method_call/method_call_with_equals.rb
+- spec/support/method_call/method_call_with_one_argument.rb
+- spec/support/method_call/method_call_with_two_arguments.rb
+- spec/support/method_call/method_call_without_brackets.rb
+- spec/support/method_definition/method_with_argument_and_block.rb
+- spec/support/method_definition/method_with_block.rb
+- spec/support/method_definition/method_with_default_argument.rb
+- spec/support/method_definition/method_with_splat_and_block.rb
+- spec/support/method_definition/simple_method.rb
+- spec/support/method_definition/simple_method_omitted_parenthesis.rb
+- spec/support/method_definition/simple_method_with_argument.rb
+- spec/support/output/sample_code.rb
+- spec/support/rescue_call/plain_rescue.rb
+- spec/support/rescue_call/rescue_with_class.rb
+- spec/support/rescue_call/rescue_with_class_and_variable.rb
+- spec/support/rescue_call/rescue_with_multiple_classes.rb
+- spec/support/rescue_call/rescue_with_multiple_classes_and_variable.rb
+- spec/support/rescue_call/rescue_with_variable.rb
+homepage: https://github.com/DamirSvrtan/fasterer
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6.2
+signing_key: 
+specification_version: 4
+summary: Run Ruby more than fast. Fasterer
+test_files:
+- spec/lib/fasterer/analyzer/02_rescue_vs_respond_to_spec.rb
+- spec/lib/fasterer/analyzer/03_module_eval_spec.rb
+- spec/lib/fasterer/analyzer/06_shuffle_first_vs_sample_spec.rb
+- spec/lib/fasterer/analyzer/08_for_loop_vs_each_spec.rb
+- spec/lib/fasterer/analyzer/09_each_with_index_vs_while_spec.rb
+- spec/lib/fasterer/analyzer/10_map_flatten_vs_flat_map_spec.rb
+- spec/lib/fasterer/analyzer/11_reverse_each_vs_reverse_each_spec.rb
+- spec/lib/fasterer/analyzer/12_select_first_vs_detect_spec.rb
+- spec/lib/fasterer/analyzer/13_sort_vs_sort_by_spec.rb
+- spec/lib/fasterer/analyzer/14_fetch_with_argument_vs_block_spec.rb
+- spec/lib/fasterer/analyzer/15_keys_each_vs_each_key_spec.rb
+- spec/lib/fasterer/analyzer/16_hash_merge_bang_vs_hash_brackets_spec.rb
+- spec/lib/fasterer/analyzer/18_block_vs_symbol_to_proc_spec.rb
+- spec/lib/fasterer/analyzer/19_proc_call_vs_yield_spec.rb
+- spec/lib/fasterer/analyzer/24_gsub_vs_tr_spec.rb
+- spec/lib/fasterer/analyzer/25_select_last_vs_reverse_detect_spec.rb
+- spec/lib/fasterer/analyzer/26_getter_vs_attr_reader_spec.rb
+- spec/lib/fasterer/analyzer/27_setter_vs_attr_writer_spec.rb
+- spec/lib/fasterer/analyzer/29_include_vs_cover_on_range_spec.rb
+- spec/lib/fasterer/analyzer/98_misc_spec.rb
+- spec/lib/fasterer/analyzer/99_exceptional_files_spec.rb
+- spec/lib/fasterer/cli_spec.rb
+- spec/lib/fasterer/config_spec.rb
+- spec/lib/fasterer/file_traverser_spec.rb
+- spec/lib/fasterer/method_call_spec.rb
+- spec/lib/fasterer/method_definition_spec.rb
+- spec/lib/fasterer/rescue_call_spec.rb
+- spec/lib/fasterer/statistics_spec.rb
+- spec/spec_helper.rb
+- spec/support/analyzer/02_rescue_vs_respond_to.rb
+- spec/support/analyzer/03_module_eval.rb
+- spec/support/analyzer/06_shuffle_first_vs_sample.rb
+- spec/support/analyzer/08_for_loop_vs_each.rb
+- spec/support/analyzer/09_each_with_index_vs_while.rb
+- spec/support/analyzer/10_map_flatten_vs_flat_map.rb
+- spec/support/analyzer/11_reverse_each_vs_reverse_each.rb
+- spec/support/analyzer/12_select_first_vs_detect.rb
+- spec/support/analyzer/13_sort_vs_sort_by.rb
+- spec/support/analyzer/14_fetch_with_argument_vs_block.rb
+- spec/support/analyzer/15_keys_each_vs_each_key.rb
+- spec/support/analyzer/16_hash_merge_bang_vs_hash_brackets.rb
+- spec/support/analyzer/18_block_vs_symbol_to_proc.rb
+- spec/support/analyzer/19_proc_call_vs_yield.rb
+- spec/support/analyzer/24_gsub_vs_tr.rb
+- spec/support/analyzer/25_select_last_vs_reverse_detect.rb
+- spec/support/analyzer/26_getter_vs_attr_reader.rb
+- spec/support/analyzer/27_setter_vs_attr_writer.rb
+- spec/support/analyzer/29_include_vs_cover_on_range.rb
+- spec/support/analyzer/98_misc.rb
+- spec/support/analyzer/99_exceptional_files.rb
+- spec/support/binary_call/simple_comparison.rb
+- spec/support/file_helper.rb
+- spec/support/isolated_environment.rb
+- spec/support/method_call/method_call_on_constant.rb
+- spec/support/method_call/method_call_on_integer.rb
+- spec/support/method_call/method_call_on_method_call.rb
+- spec/support/method_call/method_call_on_string.rb
+- spec/support/method_call/method_call_on_variable.rb
+- spec/support/method_call/method_call_with_a_block.rb
+- spec/support/method_call/method_call_with_a_integer_argument.rb
+- spec/support/method_call/method_call_with_a_regex_argument.rb
+- spec/support/method_call/method_call_with_an_argument_and_a_block.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver_and_no_brackets.rb
+- spec/support/method_call/method_call_with_an_implicit_receiver_and_no_brackets_and_do_end.rb
+- spec/support/method_call/method_call_with_equals.rb
+- spec/support/method_call/method_call_with_one_argument.rb
+- spec/support/method_call/method_call_with_two_arguments.rb
+- spec/support/method_call/method_call_without_brackets.rb
+- spec/support/method_definition/method_with_argument_and_block.rb
+- spec/support/method_definition/method_with_block.rb
+- spec/support/method_definition/method_with_default_argument.rb
+- spec/support/method_definition/method_with_splat_and_block.rb
+- spec/support/method_definition/simple_method.rb
+- spec/support/method_definition/simple_method_omitted_parenthesis.rb
+- spec/support/method_definition/simple_method_with_argument.rb
+- spec/support/output/sample_code.rb
+- spec/support/rescue_call/plain_rescue.rb
+- spec/support/rescue_call/rescue_with_class.rb
+- spec/support/rescue_call/rescue_with_class_and_variable.rb
+- spec/support/rescue_call/rescue_with_multiple_classes.rb
+- spec/support/rescue_call/rescue_with_multiple_classes_and_variable.rb
+- spec/support/rescue_call/rescue_with_variable.rb

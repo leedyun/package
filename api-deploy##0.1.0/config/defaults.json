@@ -1,0 +1,21 @@
+{
+  "teamcity":{
+    "url":"http://teamcity.yoox.net/httpAuth/app/rest",
+    "user":"continuous_integration",
+    "pass":"PASSWORD"
+  },
+  "artifactory":{
+    "url":"http://artifactory.yoox.net/artifactory",
+    "user":"continuous_integration",
+    "pass":"PASSWORD"
+  },
+  "octopus":{
+    "url":"http://octopus3.yoox.net/api",
+    "api_key":"APIKEY"
+  },
+  "bitbucket":{
+    "url":"https://git.yoox.net/",
+    "user":"administrator",
+    "pass":"PASSWORD"
+  }
+}

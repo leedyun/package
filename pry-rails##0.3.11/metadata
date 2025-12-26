@@ -1,0 +1,159 @@
+--- !ruby/object:Gem::Specification
+name: pry-rails
+version: !ruby/object:Gem::Version
+  version: 0.3.11
+platform: ruby
+authors:
+- Robin Wenglewski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-06-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.13.0
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description:
+email:
+- robin@wenglewski.de
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- Gemfile
+- LICENCE
+- Rakefile
+- Readme.md
+- lib/pry-rails.rb
+- lib/pry-rails/commands.rb
+- lib/pry-rails/commands/find_route.rb
+- lib/pry-rails/commands/recognize_path.rb
+- lib/pry-rails/commands/show_middleware.rb
+- lib/pry-rails/commands/show_model.rb
+- lib/pry-rails/commands/show_models.rb
+- lib/pry-rails/commands/show_routes.rb
+- lib/pry-rails/console.rb
+- lib/pry-rails/model_formatter.rb
+- lib/pry-rails/prompt.rb
+- lib/pry-rails/railtie.rb
+- lib/pry-rails/version.rb
+- pry-rails.gemspec
+- scenarios.yml
+- scenarios/rails30.docker-compose.yml
+- scenarios/rails30.dockerfile
+- scenarios/rails30.gemfile
+- scenarios/rails31.docker-compose.yml
+- scenarios/rails31.dockerfile
+- scenarios/rails31.gemfile
+- scenarios/rails32.docker-compose.yml
+- scenarios/rails32.dockerfile
+- scenarios/rails32.gemfile
+- scenarios/rails40.docker-compose.yml
+- scenarios/rails40.dockerfile
+- scenarios/rails40.gemfile
+- scenarios/rails41.docker-compose.yml
+- scenarios/rails41.dockerfile
+- scenarios/rails41.gemfile
+- scenarios/rails42.docker-compose.yml
+- scenarios/rails42.dockerfile
+- scenarios/rails42.gemfile
+- scenarios/rails50.docker-compose.yml
+- scenarios/rails50.dockerfile
+- scenarios/rails50.gemfile
+- scenarios/rails51.docker-compose.yml
+- scenarios/rails51.dockerfile
+- scenarios/rails51.gemfile
+- scenarios/rails52.docker-compose.yml
+- scenarios/rails52.dockerfile
+- scenarios/rails52.gemfile
+- scenarios/rails60.docker-compose.yml
+- scenarios/rails60.dockerfile
+- scenarios/rails60.gemfile
+- spec/config/config.ru
+- spec/config/database.yml
+- spec/config/environment.rb
+- spec/config/routes.rb
+- spec/find_route_spec.rb
+- spec/railtie_spec.rb
+- spec/recognize_path_spec.rb
+- spec/show_middleware_spec.rb
+- spec/show_model_spec.rb
+- spec/show_models_spec.rb
+- spec/show_routes_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/rweng/pry-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.1
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key:
+specification_version: 4
+summary: Use Pry as your rails console
+test_files:
+- spec/config/config.ru
+- spec/config/database.yml
+- spec/config/environment.rb
+- spec/config/routes.rb
+- spec/find_route_spec.rb
+- spec/railtie_spec.rb
+- spec/recognize_path_spec.rb
+- spec/show_middleware_spec.rb
+- spec/show_model_spec.rb
+- spec/show_models_spec.rb
+- spec/show_routes_spec.rb
+- spec/spec_helper.rb

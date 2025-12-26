@@ -1,0 +1,3 @@
+class LanguageMixer::BingTranslate
+  
+end

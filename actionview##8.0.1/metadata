@@ -1,0 +1,275 @@
+--- !ruby/object:Gem::Specification
+name: actionview
+version: !ruby/object:Gem::Version
+  version: 8.0.1
+platform: ruby
+authors:
+- David Heinemeier Hansson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+- !ruby/object:Gem::Dependency
+  name: rails-html-sanitizer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rails-dom-testing
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+description: Simple, battle-tested conventions and helpers for building web pages.
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.rdoc
+- app/assets/javascripts/rails-ujs.esm.js
+- app/assets/javascripts/rails-ujs.js
+- lib/action_view.rb
+- lib/action_view/base.rb
+- lib/action_view/buffers.rb
+- lib/action_view/cache_expiry.rb
+- lib/action_view/context.rb
+- lib/action_view/dependency_tracker.rb
+- lib/action_view/dependency_tracker/erb_tracker.rb
+- lib/action_view/dependency_tracker/ruby_tracker.rb
+- lib/action_view/dependency_tracker/wildcard_resolver.rb
+- lib/action_view/deprecator.rb
+- lib/action_view/digestor.rb
+- lib/action_view/flows.rb
+- lib/action_view/gem_version.rb
+- lib/action_view/helpers.rb
+- lib/action_view/helpers/active_model_helper.rb
+- lib/action_view/helpers/asset_tag_helper.rb
+- lib/action_view/helpers/asset_url_helper.rb
+- lib/action_view/helpers/atom_feed_helper.rb
+- lib/action_view/helpers/cache_helper.rb
+- lib/action_view/helpers/capture_helper.rb
+- lib/action_view/helpers/content_exfiltration_prevention_helper.rb
+- lib/action_view/helpers/controller_helper.rb
+- lib/action_view/helpers/csp_helper.rb
+- lib/action_view/helpers/csrf_helper.rb
+- lib/action_view/helpers/date_helper.rb
+- lib/action_view/helpers/debug_helper.rb
+- lib/action_view/helpers/form_helper.rb
+- lib/action_view/helpers/form_options_helper.rb
+- lib/action_view/helpers/form_tag_helper.rb
+- lib/action_view/helpers/javascript_helper.rb
+- lib/action_view/helpers/number_helper.rb
+- lib/action_view/helpers/output_safety_helper.rb
+- lib/action_view/helpers/rendering_helper.rb
+- lib/action_view/helpers/sanitize_helper.rb
+- lib/action_view/helpers/tag_helper.rb
+- lib/action_view/helpers/tags.rb
+- lib/action_view/helpers/tags/base.rb
+- lib/action_view/helpers/tags/check_box.rb
+- lib/action_view/helpers/tags/checkable.rb
+- lib/action_view/helpers/tags/collection_check_boxes.rb
+- lib/action_view/helpers/tags/collection_helpers.rb
+- lib/action_view/helpers/tags/collection_radio_buttons.rb
+- lib/action_view/helpers/tags/collection_select.rb
+- lib/action_view/helpers/tags/color_field.rb
+- lib/action_view/helpers/tags/date_field.rb
+- lib/action_view/helpers/tags/date_select.rb
+- lib/action_view/helpers/tags/datetime_field.rb
+- lib/action_view/helpers/tags/datetime_local_field.rb
+- lib/action_view/helpers/tags/datetime_select.rb
+- lib/action_view/helpers/tags/email_field.rb
+- lib/action_view/helpers/tags/file_field.rb
+- lib/action_view/helpers/tags/grouped_collection_select.rb
+- lib/action_view/helpers/tags/hidden_field.rb
+- lib/action_view/helpers/tags/label.rb
+- lib/action_view/helpers/tags/month_field.rb
+- lib/action_view/helpers/tags/number_field.rb
+- lib/action_view/helpers/tags/password_field.rb
+- lib/action_view/helpers/tags/placeholderable.rb
+- lib/action_view/helpers/tags/radio_button.rb
+- lib/action_view/helpers/tags/range_field.rb
+- lib/action_view/helpers/tags/search_field.rb
+- lib/action_view/helpers/tags/select.rb
+- lib/action_view/helpers/tags/select_renderer.rb
+- lib/action_view/helpers/tags/tel_field.rb
+- lib/action_view/helpers/tags/text_area.rb
+- lib/action_view/helpers/tags/text_field.rb
+- lib/action_view/helpers/tags/time_field.rb
+- lib/action_view/helpers/tags/time_select.rb
+- lib/action_view/helpers/tags/time_zone_select.rb
+- lib/action_view/helpers/tags/translator.rb
+- lib/action_view/helpers/tags/url_field.rb
+- lib/action_view/helpers/tags/week_field.rb
+- lib/action_view/helpers/tags/weekday_select.rb
+- lib/action_view/helpers/text_helper.rb
+- lib/action_view/helpers/translation_helper.rb
+- lib/action_view/helpers/url_helper.rb
+- lib/action_view/layouts.rb
+- lib/action_view/locale/en.yml
+- lib/action_view/log_subscriber.rb
+- lib/action_view/lookup_context.rb
+- lib/action_view/model_naming.rb
+- lib/action_view/path_registry.rb
+- lib/action_view/path_set.rb
+- lib/action_view/railtie.rb
+- lib/action_view/record_identifier.rb
+- lib/action_view/render_parser.rb
+- lib/action_view/render_parser/prism_render_parser.rb
+- lib/action_view/render_parser/ripper_render_parser.rb
+- lib/action_view/renderer/abstract_renderer.rb
+- lib/action_view/renderer/collection_renderer.rb
+- lib/action_view/renderer/object_renderer.rb
+- lib/action_view/renderer/partial_renderer.rb
+- lib/action_view/renderer/partial_renderer/collection_caching.rb
+- lib/action_view/renderer/renderer.rb
+- lib/action_view/renderer/streaming_template_renderer.rb
+- lib/action_view/renderer/template_renderer.rb
+- lib/action_view/rendering.rb
+- lib/action_view/routing_url_for.rb
+- lib/action_view/tasks/cache_digests.rake
+- lib/action_view/template.rb
+- lib/action_view/template/error.rb
+- lib/action_view/template/handlers.rb
+- lib/action_view/template/handlers/builder.rb
+- lib/action_view/template/handlers/erb.rb
+- lib/action_view/template/handlers/erb/erubi.rb
+- lib/action_view/template/handlers/html.rb
+- lib/action_view/template/handlers/raw.rb
+- lib/action_view/template/html.rb
+- lib/action_view/template/inline.rb
+- lib/action_view/template/raw_file.rb
+- lib/action_view/template/renderable.rb
+- lib/action_view/template/resolver.rb
+- lib/action_view/template/sources.rb
+- lib/action_view/template/sources/file.rb
+- lib/action_view/template/text.rb
+- lib/action_view/template/types.rb
+- lib/action_view/template_details.rb
+- lib/action_view/template_path.rb
+- lib/action_view/test_case.rb
+- lib/action_view/testing/resolvers.rb
+- lib/action_view/unbound_template.rb
+- lib/action_view/version.rb
+- lib/action_view/view_paths.rb
+homepage: https://rubyonrails.org
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/rails/rails/issues
+  changelog_uri: https://github.com/rails/rails/blob/v8.0.1/actionview/CHANGELOG.md
+  documentation_uri: https://api.rubyonrails.org/v8.0.1/
+  mailing_list_uri: https://discuss.rubyonrails.org/c/rubyonrails-talk
+  source_code_uri: https://github.com/rails/rails/tree/v8.0.1/actionview
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements:
+- none
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Rendering framework putting the V in MVC (part of Rails).
+test_files: []

@@ -1,0 +1,117 @@
+--- !ruby/object:Gem::Specification
+name: admiral-stats_parser
+version: !ruby/object:Gem::Version
+  version: 1.17.1
+platform: ruby
+authors:
+- Masahiro Yoshizawa
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Parser for admiral stats JSON data exported from kancolle-arcade.net
+email:
+- muziyoshiz@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CODE_OF_CONDUCT.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- admiral-stats_parser.gemspec
+- bin/console
+- bin/setup
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/admiral_stats_parser.rb
+- lib/admiral_stats_parser/model/area_capture_info.rb
+- lib/admiral_stats_parser/model/blueprint_list_info.rb
+- lib/admiral_stats_parser/model/character_list_info.rb
+- lib/admiral_stats_parser/model/cop_info.rb
+- lib/admiral_stats_parser/model/equip_book_info.rb
+- lib/admiral_stats_parser/model/equip_list_info.rb
+- lib/admiral_stats_parser/model/event_info.rb
+- lib/admiral_stats_parser/model/personal_basic_info.rb
+- lib/admiral_stats_parser/model/tc_book_info.rb
+- lib/admiral_stats_parser/parser/area_capture_info_parser.rb
+- lib/admiral_stats_parser/parser/blueprint_list_info_parser.rb
+- lib/admiral_stats_parser/parser/character_list_info_parser.rb
+- lib/admiral_stats_parser/parser/cop_info_parser.rb
+- lib/admiral_stats_parser/parser/equip_book_info_parser.rb
+- lib/admiral_stats_parser/parser/equip_list_info_parser.rb
+- lib/admiral_stats_parser/parser/event_info_parser.rb
+- lib/admiral_stats_parser/parser/personal_basic_info_parser.rb
+- lib/admiral_stats_parser/parser/tc_book_info_parser.rb
+- lib/admiral_stats_parser/version.rb
+homepage: https://github.com/muziyoshiz/admiral_stats_parser
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: JSON data parser for kancolle-arcade.net
+test_files: []

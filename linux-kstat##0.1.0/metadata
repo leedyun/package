@@ -1,0 +1,90 @@
+--- !ruby/object:Gem::Specification 
+name: linux-kstat
+version: !ruby/object:Gem::Version 
+  hash: 27
+  prerelease: false
+  segments: 
+  - 0
+  - 1
+  - 0
+  version: 0.1.0
+platform: ruby
+authors: 
+- Daniel J. Berger
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-02-10 00:00:00 -07:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: test-unit
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 15
+        segments: 
+        - 2
+        - 1
+        - 2
+        version: 2.1.2
+  type: :development
+  version_requirements: *id001
+description: "    The linux-kstat library provides a hash style interface for reading\n    Linux kernel statistics read out of /proc/stat.\n"
+email: djberg96@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+- CHANGES
+- MANIFEST
+files: 
+- Rakefile
+- README
+- lib/linux/kstat.rb
+- CHANGES
+- test/test_linux_kstat.rb
+- MANIFEST
+- linux-kstat.gemspec
+has_rdoc: true
+homepage: http://www.rubyforge.org/projects/shards
+licenses: 
+- Artistic 2.0
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: shards
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Ruby interface for Linux kernel stats in /proc/stat
+test_files: 
+- test/test_linux_kstat.rb

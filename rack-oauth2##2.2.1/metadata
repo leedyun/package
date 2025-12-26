@@ -1,0 +1,358 @@
+--- !ruby/object:Gem::Specification
+name: rack-oauth2
+version: !ruby/object:Gem::Version
+  version: 2.2.1
+platform: ruby
+authors:
+- nov matake
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-12-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.1.0
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: faraday-follow_redirects
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: attr_required
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json-jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.11.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: OAuth 2.0 Server & Client Library. Both Bearer token type are supported.
+email: nov@matake.jp
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- ".document"
+- ".github/FUNDING.yml"
+- ".github/workflows/spec.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.rdoc
+- Rakefile
+- VERSION
+- lib/rack/oauth2.rb
+- lib/rack/oauth2/access_token.rb
+- lib/rack/oauth2/access_token/authenticator.rb
+- lib/rack/oauth2/access_token/bearer.rb
+- lib/rack/oauth2/access_token/mtls.rb
+- lib/rack/oauth2/client.rb
+- lib/rack/oauth2/client/error.rb
+- lib/rack/oauth2/client/grant.rb
+- lib/rack/oauth2/client/grant/authorization_code.rb
+- lib/rack/oauth2/client/grant/client_credentials.rb
+- lib/rack/oauth2/client/grant/jwt_bearer.rb
+- lib/rack/oauth2/client/grant/password.rb
+- lib/rack/oauth2/client/grant/refresh_token.rb
+- lib/rack/oauth2/client/grant/saml2_bearer.rb
+- lib/rack/oauth2/client/grant/token_exchange.rb
+- lib/rack/oauth2/server.rb
+- lib/rack/oauth2/server/abstract.rb
+- lib/rack/oauth2/server/abstract/error.rb
+- lib/rack/oauth2/server/abstract/handler.rb
+- lib/rack/oauth2/server/abstract/request.rb
+- lib/rack/oauth2/server/abstract/response.rb
+- lib/rack/oauth2/server/authorize.rb
+- lib/rack/oauth2/server/authorize/code.rb
+- lib/rack/oauth2/server/authorize/error.rb
+- lib/rack/oauth2/server/authorize/extension.rb
+- lib/rack/oauth2/server/authorize/extension/code_and_token.rb
+- lib/rack/oauth2/server/authorize/token.rb
+- lib/rack/oauth2/server/extension.rb
+- lib/rack/oauth2/server/extension/pkce.rb
+- lib/rack/oauth2/server/extension/response_mode.rb
+- lib/rack/oauth2/server/rails.rb
+- lib/rack/oauth2/server/rails/authorize.rb
+- lib/rack/oauth2/server/rails/response_ext.rb
+- lib/rack/oauth2/server/resource.rb
+- lib/rack/oauth2/server/resource/bearer.rb
+- lib/rack/oauth2/server/resource/bearer/error.rb
+- lib/rack/oauth2/server/resource/error.rb
+- lib/rack/oauth2/server/token.rb
+- lib/rack/oauth2/server/token/authorization_code.rb
+- lib/rack/oauth2/server/token/client_credentials.rb
+- lib/rack/oauth2/server/token/error.rb
+- lib/rack/oauth2/server/token/extension.rb
+- lib/rack/oauth2/server/token/extension/example.rb
+- lib/rack/oauth2/server/token/jwt_bearer.rb
+- lib/rack/oauth2/server/token/password.rb
+- lib/rack/oauth2/server/token/refresh_token.rb
+- lib/rack/oauth2/server/token/saml2_bearer.rb
+- lib/rack/oauth2/urn.rb
+- lib/rack/oauth2/util.rb
+- rack-oauth2.gemspec
+- spec/helpers/time.rb
+- spec/helpers/webmock_helper.rb
+- spec/mock_response/blank.txt
+- spec/mock_response/errors/invalid_request.json
+- spec/mock_response/resources/fake.txt
+- spec/mock_response/tokens/_Bearer.json
+- spec/mock_response/tokens/bearer.json
+- spec/mock_response/tokens/unknown.json
+- spec/rack/oauth2/access_token/authenticator_spec.rb
+- spec/rack/oauth2/access_token/bearer_spec.rb
+- spec/rack/oauth2/access_token_spec.rb
+- spec/rack/oauth2/client/error_spec.rb
+- spec/rack/oauth2/client/grant/authorization_code_spec.rb
+- spec/rack/oauth2/client/grant/client_credentials_spec.rb
+- spec/rack/oauth2/client/grant/jwt_bearer_spec.rb
+- spec/rack/oauth2/client/grant/password_spec.rb
+- spec/rack/oauth2/client/grant/refresh_token_spec.rb
+- spec/rack/oauth2/client/grant/saml2_bearer_spec.rb
+- spec/rack/oauth2/client_spec.rb
+- spec/rack/oauth2/oauth2_spec.rb
+- spec/rack/oauth2/server/abstract/error_spec.rb
+- spec/rack/oauth2/server/authorize/code_spec.rb
+- spec/rack/oauth2/server/authorize/error_spec.rb
+- spec/rack/oauth2/server/authorize/extensions/code_and_token_spec.rb
+- spec/rack/oauth2/server/authorize/token_spec.rb
+- spec/rack/oauth2/server/authorize_spec.rb
+- spec/rack/oauth2/server/extension/pkce_spec.rb
+- spec/rack/oauth2/server/extension/response_mode_spec.rb
+- spec/rack/oauth2/server/resource/bearer/error_spec.rb
+- spec/rack/oauth2/server/resource/bearer_spec.rb
+- spec/rack/oauth2/server/resource/error_spec.rb
+- spec/rack/oauth2/server/resource_spec.rb
+- spec/rack/oauth2/server/token/authorization_code_spec.rb
+- spec/rack/oauth2/server/token/client_credentials_spec.rb
+- spec/rack/oauth2/server/token/error_spec.rb
+- spec/rack/oauth2/server/token/jwt_bearer_spec.rb
+- spec/rack/oauth2/server/token/password_spec.rb
+- spec/rack/oauth2/server/token/refresh_token_spec.rb
+- spec/rack/oauth2/server/token/saml2_bearer_spec.rb
+- spec/rack/oauth2/server/token_spec.rb
+- spec/rack/oauth2/util_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/nov/rack-oauth2
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: OAuth 2.0 Server & Client Library - Both Bearer token type are supported
+test_files:
+- spec/helpers/time.rb
+- spec/helpers/webmock_helper.rb
+- spec/mock_response/blank.txt
+- spec/mock_response/errors/invalid_request.json
+- spec/mock_response/resources/fake.txt
+- spec/mock_response/tokens/_Bearer.json
+- spec/mock_response/tokens/bearer.json
+- spec/mock_response/tokens/unknown.json
+- spec/rack/oauth2/access_token/authenticator_spec.rb
+- spec/rack/oauth2/access_token/bearer_spec.rb
+- spec/rack/oauth2/access_token_spec.rb
+- spec/rack/oauth2/client/error_spec.rb
+- spec/rack/oauth2/client/grant/authorization_code_spec.rb
+- spec/rack/oauth2/client/grant/client_credentials_spec.rb
+- spec/rack/oauth2/client/grant/jwt_bearer_spec.rb
+- spec/rack/oauth2/client/grant/password_spec.rb
+- spec/rack/oauth2/client/grant/refresh_token_spec.rb
+- spec/rack/oauth2/client/grant/saml2_bearer_spec.rb
+- spec/rack/oauth2/client_spec.rb
+- spec/rack/oauth2/oauth2_spec.rb
+- spec/rack/oauth2/server/abstract/error_spec.rb
+- spec/rack/oauth2/server/authorize/code_spec.rb
+- spec/rack/oauth2/server/authorize/error_spec.rb
+- spec/rack/oauth2/server/authorize/extensions/code_and_token_spec.rb
+- spec/rack/oauth2/server/authorize/token_spec.rb
+- spec/rack/oauth2/server/authorize_spec.rb
+- spec/rack/oauth2/server/extension/pkce_spec.rb
+- spec/rack/oauth2/server/extension/response_mode_spec.rb
+- spec/rack/oauth2/server/resource/bearer/error_spec.rb
+- spec/rack/oauth2/server/resource/bearer_spec.rb
+- spec/rack/oauth2/server/resource/error_spec.rb
+- spec/rack/oauth2/server/resource_spec.rb
+- spec/rack/oauth2/server/token/authorization_code_spec.rb
+- spec/rack/oauth2/server/token/client_credentials_spec.rb
+- spec/rack/oauth2/server/token/error_spec.rb
+- spec/rack/oauth2/server/token/jwt_bearer_spec.rb
+- spec/rack/oauth2/server/token/password_spec.rb
+- spec/rack/oauth2/server/token/refresh_token_spec.rb
+- spec/rack/oauth2/server/token/saml2_bearer_spec.rb
+- spec/rack/oauth2/server/token_spec.rb
+- spec/rack/oauth2/util_spec.rb
+- spec/spec_helper.rb

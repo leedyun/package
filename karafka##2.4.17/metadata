@@ -1,0 +1,625 @@
+--- !ruby/object:Gem::Specification
+name: karafka
+version: !ruby/object:Gem::Version
+  version: 2.4.17
+platform: ruby
+authors:
+- Maciej Mensfeld
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEcDCCAtigAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MRAwDgYDVQQDDAdjb250
+  YWN0MRcwFQYKCZImiZPyLGQBGRYHa2FyYWZrYTESMBAGCgmSJomT8ixkARkWAmlv
+  MB4XDTI0MDgyMzEwMTkyMFoXDTQ5MDgxNzEwMTkyMFowPzEQMA4GA1UEAwwHY29u
+  dGFjdDEXMBUGCgmSJomT8ixkARkWB2thcmFma2ExEjAQBgoJkiaJk/IsZAEZFgJp
+  bzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKjLhLjQqUlNayxkXnO+
+  PsmCDs/KFIzhrsYMfLZRZNaWmzV3ujljMOdDjd4snM2X06C41iVdQPWjpe3j8vVe
+  ZXEWR/twSbOP6Eeg8WVH2wCOo0x5i7yhVn4UBLH4JpfEMCbemVcWQ9ry9OMg4WpH
+  Uu4dRwxFV7hzCz3p0QfNLRI4miAxnGWcnlD98IJRjBAksTuR1Llj0vbOrDGsL9ZT
+  JeXP2gdRLd8SqzAFJEWrbeTBCBU7gfSh3oMg5SVDLjaqf7Kz5wC/8bDZydzanOxB
+  T6CDXPsCnllmvTNx2ei2T5rGYJOzJeNTmJLLK6hJWUlAvaQSvCwZRvFJ0tVGLEoS
+  flqSr6uGyyl1eMUsNmsH4BqPEYcAV6P2PKTv2vUR8AP0raDvZ3xL1TKvfRb8xRpo
+  vPopCGlY5XBWEc6QERHfVLTIVsjnls2/Ujj4h8/TSfqqYnaHKefIMLbuD/tquMjD
+  iWQsW2qStBV0T+U7FijKxVfrfqZP7GxQmDAc9o1iiyAa3QIDAQABo3cwdTAJBgNV
+  HRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNVHQ4EFgQU3O4dTXmvE7YpAkszGzR9DdL9
+  sbEwHQYDVR0RBBYwFIESY29udGFjdEBrYXJhZmthLmlvMB0GA1UdEgQWMBSBEmNv
+  bnRhY3RAa2FyYWZrYS5pbzANBgkqhkiG9w0BAQsFAAOCAYEAVKTfoLXn7mqdSxIR
+  eqxcR6Huudg1jes81s1+X0uiRTR3hxxKZ3Y82cPsee9zYWyBrN8TA4KA0WILTru7
+  Ygxvzha0SRPsSiaKLmgOJ+61ebI4+bOORzIJLpD6GxCxu1r7MI4+0r1u1xe0EWi8
+  agkVo1k4Vi8cKMLm6Gl9b3wG9zQBw6fcgKwmpjKiNnOLP+OytzUANrIUJjoq6oal
+  TC+f/Uc0TLaRqUaW/bejxzDWWHoM3SU6aoLPuerglzp9zZVzihXwx3jPLUVKDFpF
+  Rl2lcBDxlpYGueGo0/oNzGJAAy6js8jhtHC9+19PD53vk7wHtFTZ/0ugDQYnwQ+x
+  oml2fAAuVWpTBCgOVFe6XCQpMKopzoxQ1PjKztW2KYxgJdIBX87SnL3aWuBQmhRd
+  i9zWxov0mr44TWegTVeypcWGd/0nxu1+QHVNHJrpqlPBRvwQsUm7fwmRInGpcaB8
+  ap8wNYvryYzrzvzUxIVFBVM5PacgkFqRmolCa8I7tdKQN+R1
+  -----END CERTIFICATE-----
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: karafka-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.4
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.4.4
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: karafka-rdkafka
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.2
+- !ruby/object:Gem::Dependency
+  name: waterdrop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.7.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.7.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+description: |2
+      Karafka is Ruby and Rails efficient Kafka processing framework.
+
+      Karafka allows you to capture everything that happens in your systems in large scale,
+      without having to focus on things that are not your business domain.
+email:
+- contact@karafka.io
+executables:
+- karafka
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coditsu/ci.yml"
+- ".console_irbrc"
+- ".diffend.yml"
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- LICENSE-COMM
+- LICENSE-LGPL
+- README.md
+- SECURITY.md
+- bin/benchmarks
+- bin/create_token
+- bin/integrations
+- bin/karafka
+- bin/record_rss
+- bin/rspecs
+- bin/scenario
+- bin/stress_many
+- bin/stress_one
+- bin/verify_license_integrity
+- bin/wait_for_kafka
+- certs/cert.pem
+- certs/karafka-pro.pem
+- config/locales/errors.yml
+- config/locales/pro_errors.yml
+- docker-compose.yml
+- karafka.gemspec
+- lib/active_job/karafka.rb
+- lib/active_job/queue_adapters/karafka_adapter.rb
+- lib/karafka.rb
+- lib/karafka/active_job/consumer.rb
+- lib/karafka/active_job/current_attributes.rb
+- lib/karafka/active_job/current_attributes/loading.rb
+- lib/karafka/active_job/current_attributes/persistence.rb
+- lib/karafka/active_job/dispatcher.rb
+- lib/karafka/active_job/job_extensions.rb
+- lib/karafka/active_job/job_options_contract.rb
+- lib/karafka/admin.rb
+- lib/karafka/admin/acl.rb
+- lib/karafka/admin/configs.rb
+- lib/karafka/admin/configs/config.rb
+- lib/karafka/admin/configs/resource.rb
+- lib/karafka/app.rb
+- lib/karafka/base_consumer.rb
+- lib/karafka/cli.rb
+- lib/karafka/cli/base.rb
+- lib/karafka/cli/console.rb
+- lib/karafka/cli/help.rb
+- lib/karafka/cli/info.rb
+- lib/karafka/cli/install.rb
+- lib/karafka/cli/server.rb
+- lib/karafka/cli/swarm.rb
+- lib/karafka/cli/topics.rb
+- lib/karafka/cli/topics/align.rb
+- lib/karafka/cli/topics/base.rb
+- lib/karafka/cli/topics/create.rb
+- lib/karafka/cli/topics/delete.rb
+- lib/karafka/cli/topics/migrate.rb
+- lib/karafka/cli/topics/plan.rb
+- lib/karafka/cli/topics/repartition.rb
+- lib/karafka/cli/topics/reset.rb
+- lib/karafka/connection/client.rb
+- lib/karafka/connection/conductor.rb
+- lib/karafka/connection/listener.rb
+- lib/karafka/connection/listeners_batch.rb
+- lib/karafka/connection/manager.rb
+- lib/karafka/connection/messages_buffer.rb
+- lib/karafka/connection/pauses_manager.rb
+- lib/karafka/connection/proxy.rb
+- lib/karafka/connection/raw_messages_buffer.rb
+- lib/karafka/connection/rebalance_manager.rb
+- lib/karafka/connection/status.rb
+- lib/karafka/constraints.rb
+- lib/karafka/contracts.rb
+- lib/karafka/contracts/base.rb
+- lib/karafka/contracts/config.rb
+- lib/karafka/contracts/consumer_group.rb
+- lib/karafka/contracts/routing.rb
+- lib/karafka/contracts/server_cli_options.rb
+- lib/karafka/contracts/topic.rb
+- lib/karafka/deserializers/headers.rb
+- lib/karafka/deserializers/key.rb
+- lib/karafka/deserializers/payload.rb
+- lib/karafka/embedded.rb
+- lib/karafka/env.rb
+- lib/karafka/errors.rb
+- lib/karafka/helpers/async.rb
+- lib/karafka/helpers/colorize.rb
+- lib/karafka/helpers/config_importer.rb
+- lib/karafka/helpers/interval_runner.rb
+- lib/karafka/helpers/multi_delegator.rb
+- lib/karafka/instrumentation/assignments_tracker.rb
+- lib/karafka/instrumentation/callbacks/error.rb
+- lib/karafka/instrumentation/callbacks/oauthbearer_token_refresh.rb
+- lib/karafka/instrumentation/callbacks/rebalance.rb
+- lib/karafka/instrumentation/callbacks/statistics.rb
+- lib/karafka/instrumentation/logger.rb
+- lib/karafka/instrumentation/logger_listener.rb
+- lib/karafka/instrumentation/monitor.rb
+- lib/karafka/instrumentation/notifications.rb
+- lib/karafka/instrumentation/proctitle_listener.rb
+- lib/karafka/instrumentation/vendors/appsignal/base.rb
+- lib/karafka/instrumentation/vendors/appsignal/client.rb
+- lib/karafka/instrumentation/vendors/appsignal/dashboard.json
+- lib/karafka/instrumentation/vendors/appsignal/errors_listener.rb
+- lib/karafka/instrumentation/vendors/appsignal/metrics_listener.rb
+- lib/karafka/instrumentation/vendors/datadog/dashboard.json
+- lib/karafka/instrumentation/vendors/datadog/logger_listener.rb
+- lib/karafka/instrumentation/vendors/datadog/metrics_listener.rb
+- lib/karafka/instrumentation/vendors/kubernetes/base_listener.rb
+- lib/karafka/instrumentation/vendors/kubernetes/liveness_listener.rb
+- lib/karafka/instrumentation/vendors/kubernetes/swarm_liveness_listener.rb
+- lib/karafka/licenser.rb
+- lib/karafka/messages/batch_metadata.rb
+- lib/karafka/messages/builders/batch_metadata.rb
+- lib/karafka/messages/builders/message.rb
+- lib/karafka/messages/builders/messages.rb
+- lib/karafka/messages/message.rb
+- lib/karafka/messages/messages.rb
+- lib/karafka/messages/metadata.rb
+- lib/karafka/messages/parser.rb
+- lib/karafka/messages/seek.rb
+- lib/karafka/patches/rdkafka/bindings.rb
+- lib/karafka/patches/rdkafka/opaque.rb
+- lib/karafka/pro.rb
+- lib/karafka/pro/active_job/consumer.rb
+- lib/karafka/pro/active_job/dispatcher.rb
+- lib/karafka/pro/active_job/job_options_contract.rb
+- lib/karafka/pro/base_consumer.rb
+- lib/karafka/pro/cleaner.rb
+- lib/karafka/pro/cleaner/errors.rb
+- lib/karafka/pro/cleaner/messages/message.rb
+- lib/karafka/pro/cleaner/messages/messages.rb
+- lib/karafka/pro/cleaner/messages/metadata.rb
+- lib/karafka/pro/connection/manager.rb
+- lib/karafka/pro/connection/multiplexing/listener.rb
+- lib/karafka/pro/contracts/base.rb
+- lib/karafka/pro/contracts/server_cli_options.rb
+- lib/karafka/pro/encryption.rb
+- lib/karafka/pro/encryption/cipher.rb
+- lib/karafka/pro/encryption/contracts/config.rb
+- lib/karafka/pro/encryption/errors.rb
+- lib/karafka/pro/encryption/messages/middleware.rb
+- lib/karafka/pro/encryption/messages/parser.rb
+- lib/karafka/pro/encryption/setup/config.rb
+- lib/karafka/pro/instrumentation/performance_tracker.rb
+- lib/karafka/pro/iterator.rb
+- lib/karafka/pro/iterator/expander.rb
+- lib/karafka/pro/iterator/tpl_builder.rb
+- lib/karafka/pro/loader.rb
+- lib/karafka/pro/processing/adaptive_iterator/consumer.rb
+- lib/karafka/pro/processing/adaptive_iterator/tracker.rb
+- lib/karafka/pro/processing/collapser.rb
+- lib/karafka/pro/processing/coordinator.rb
+- lib/karafka/pro/processing/coordinators/errors_tracker.rb
+- lib/karafka/pro/processing/coordinators/filters_applier.rb
+- lib/karafka/pro/processing/coordinators/virtual_offset_manager.rb
+- lib/karafka/pro/processing/executor.rb
+- lib/karafka/pro/processing/expansions_selector.rb
+- lib/karafka/pro/processing/filters/base.rb
+- lib/karafka/pro/processing/filters/delayer.rb
+- lib/karafka/pro/processing/filters/expirer.rb
+- lib/karafka/pro/processing/filters/inline_insights_delayer.rb
+- lib/karafka/pro/processing/filters/throttler.rb
+- lib/karafka/pro/processing/filters/virtual_limiter.rb
+- lib/karafka/pro/processing/jobs/consume_non_blocking.rb
+- lib/karafka/pro/processing/jobs/eofed_non_blocking.rb
+- lib/karafka/pro/processing/jobs/periodic.rb
+- lib/karafka/pro/processing/jobs/periodic_non_blocking.rb
+- lib/karafka/pro/processing/jobs/revoked_non_blocking.rb
+- lib/karafka/pro/processing/jobs_builder.rb
+- lib/karafka/pro/processing/jobs_queue.rb
+- lib/karafka/pro/processing/offset_metadata/consumer.rb
+- lib/karafka/pro/processing/offset_metadata/fetcher.rb
+- lib/karafka/pro/processing/offset_metadata/listener.rb
+- lib/karafka/pro/processing/partitioner.rb
+- lib/karafka/pro/processing/periodic_job/consumer.rb
+- lib/karafka/pro/processing/piping/consumer.rb
+- lib/karafka/pro/processing/schedulers/base.rb
+- lib/karafka/pro/processing/schedulers/default.rb
+- lib/karafka/pro/processing/strategies.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_ftr_lrj_mom.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_ftr_lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_ftr_mom.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_ftr_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_lrj_mom.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_mom.rb
+- lib/karafka/pro/processing/strategies/aj/dlq_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/ftr_lrj_mom.rb
+- lib/karafka/pro/processing/strategies/aj/ftr_lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/ftr_mom.rb
+- lib/karafka/pro/processing/strategies/aj/ftr_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/lrj_mom.rb
+- lib/karafka/pro/processing/strategies/aj/lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/aj/mom.rb
+- lib/karafka/pro/processing/strategies/aj/mom_vp.rb
+- lib/karafka/pro/processing/strategies/base.rb
+- lib/karafka/pro/processing/strategies/default.rb
+- lib/karafka/pro/processing/strategies/dlq/default.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_lrj.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_lrj_mom.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_lrj_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_mom.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_mom_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/ftr_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/lrj.rb
+- lib/karafka/pro/processing/strategies/dlq/lrj_mom.rb
+- lib/karafka/pro/processing/strategies/dlq/lrj_mom_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/lrj_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/mom.rb
+- lib/karafka/pro/processing/strategies/dlq/mom_vp.rb
+- lib/karafka/pro/processing/strategies/dlq/vp.rb
+- lib/karafka/pro/processing/strategies/ftr/default.rb
+- lib/karafka/pro/processing/strategies/ftr/vp.rb
+- lib/karafka/pro/processing/strategies/lrj/default.rb
+- lib/karafka/pro/processing/strategies/lrj/ftr.rb
+- lib/karafka/pro/processing/strategies/lrj/ftr_mom.rb
+- lib/karafka/pro/processing/strategies/lrj/ftr_mom_vp.rb
+- lib/karafka/pro/processing/strategies/lrj/ftr_vp.rb
+- lib/karafka/pro/processing/strategies/lrj/mom.rb
+- lib/karafka/pro/processing/strategies/lrj/mom_vp.rb
+- lib/karafka/pro/processing/strategies/lrj/vp.rb
+- lib/karafka/pro/processing/strategies/mom/default.rb
+- lib/karafka/pro/processing/strategies/mom/ftr.rb
+- lib/karafka/pro/processing/strategies/mom/ftr_vp.rb
+- lib/karafka/pro/processing/strategies/mom/vp.rb
+- lib/karafka/pro/processing/strategies/vp/default.rb
+- lib/karafka/pro/processing/strategy_selector.rb
+- lib/karafka/pro/processing/subscription_groups_coordinator.rb
+- lib/karafka/pro/recurring_tasks.rb
+- lib/karafka/pro/recurring_tasks/consumer.rb
+- lib/karafka/pro/recurring_tasks/contracts/config.rb
+- lib/karafka/pro/recurring_tasks/contracts/task.rb
+- lib/karafka/pro/recurring_tasks/deserializer.rb
+- lib/karafka/pro/recurring_tasks/dispatcher.rb
+- lib/karafka/pro/recurring_tasks/errors.rb
+- lib/karafka/pro/recurring_tasks/executor.rb
+- lib/karafka/pro/recurring_tasks/listener.rb
+- lib/karafka/pro/recurring_tasks/matcher.rb
+- lib/karafka/pro/recurring_tasks/schedule.rb
+- lib/karafka/pro/recurring_tasks/serializer.rb
+- lib/karafka/pro/recurring_tasks/setup/config.rb
+- lib/karafka/pro/recurring_tasks/task.rb
+- lib/karafka/pro/routing/features/active_job.rb
+- lib/karafka/pro/routing/features/active_job/builder.rb
+- lib/karafka/pro/routing/features/adaptive_iterator.rb
+- lib/karafka/pro/routing/features/adaptive_iterator/config.rb
+- lib/karafka/pro/routing/features/adaptive_iterator/contracts/topic.rb
+- lib/karafka/pro/routing/features/adaptive_iterator/topic.rb
+- lib/karafka/pro/routing/features/base.rb
+- lib/karafka/pro/routing/features/dead_letter_queue.rb
+- lib/karafka/pro/routing/features/dead_letter_queue/contracts/topic.rb
+- lib/karafka/pro/routing/features/dead_letter_queue/topic.rb
+- lib/karafka/pro/routing/features/delaying.rb
+- lib/karafka/pro/routing/features/delaying/config.rb
+- lib/karafka/pro/routing/features/delaying/contracts/topic.rb
+- lib/karafka/pro/routing/features/delaying/topic.rb
+- lib/karafka/pro/routing/features/direct_assignments.rb
+- lib/karafka/pro/routing/features/direct_assignments/config.rb
+- lib/karafka/pro/routing/features/direct_assignments/contracts/consumer_group.rb
+- lib/karafka/pro/routing/features/direct_assignments/contracts/topic.rb
+- lib/karafka/pro/routing/features/direct_assignments/subscription_group.rb
+- lib/karafka/pro/routing/features/direct_assignments/topic.rb
+- lib/karafka/pro/routing/features/expiring.rb
+- lib/karafka/pro/routing/features/expiring/config.rb
+- lib/karafka/pro/routing/features/expiring/contracts/topic.rb
+- lib/karafka/pro/routing/features/expiring/topic.rb
+- lib/karafka/pro/routing/features/filtering.rb
+- lib/karafka/pro/routing/features/filtering/config.rb
+- lib/karafka/pro/routing/features/filtering/contracts/topic.rb
+- lib/karafka/pro/routing/features/filtering/topic.rb
+- lib/karafka/pro/routing/features/inline_insights.rb
+- lib/karafka/pro/routing/features/inline_insights/config.rb
+- lib/karafka/pro/routing/features/inline_insights/contracts/topic.rb
+- lib/karafka/pro/routing/features/inline_insights/topic.rb
+- lib/karafka/pro/routing/features/long_running_job.rb
+- lib/karafka/pro/routing/features/long_running_job/config.rb
+- lib/karafka/pro/routing/features/long_running_job/contracts/topic.rb
+- lib/karafka/pro/routing/features/long_running_job/topic.rb
+- lib/karafka/pro/routing/features/multiplexing.rb
+- lib/karafka/pro/routing/features/multiplexing/config.rb
+- lib/karafka/pro/routing/features/multiplexing/contracts/topic.rb
+- lib/karafka/pro/routing/features/multiplexing/patches/contracts/consumer_group.rb
+- lib/karafka/pro/routing/features/multiplexing/proxy.rb
+- lib/karafka/pro/routing/features/multiplexing/subscription_group.rb
+- lib/karafka/pro/routing/features/multiplexing/subscription_groups_builder.rb
+- lib/karafka/pro/routing/features/non_blocking_job.rb
+- lib/karafka/pro/routing/features/non_blocking_job/topic.rb
+- lib/karafka/pro/routing/features/offset_metadata.rb
+- lib/karafka/pro/routing/features/offset_metadata/config.rb
+- lib/karafka/pro/routing/features/offset_metadata/contracts/topic.rb
+- lib/karafka/pro/routing/features/offset_metadata/topic.rb
+- lib/karafka/pro/routing/features/patterns.rb
+- lib/karafka/pro/routing/features/patterns/builder.rb
+- lib/karafka/pro/routing/features/patterns/config.rb
+- lib/karafka/pro/routing/features/patterns/consumer_group.rb
+- lib/karafka/pro/routing/features/patterns/contracts/consumer_group.rb
+- lib/karafka/pro/routing/features/patterns/contracts/pattern.rb
+- lib/karafka/pro/routing/features/patterns/contracts/topic.rb
+- lib/karafka/pro/routing/features/patterns/detector.rb
+- lib/karafka/pro/routing/features/patterns/pattern.rb
+- lib/karafka/pro/routing/features/patterns/patterns.rb
+- lib/karafka/pro/routing/features/patterns/topic.rb
+- lib/karafka/pro/routing/features/patterns/topics.rb
+- lib/karafka/pro/routing/features/pausing.rb
+- lib/karafka/pro/routing/features/pausing/contracts/topic.rb
+- lib/karafka/pro/routing/features/pausing/topic.rb
+- lib/karafka/pro/routing/features/periodic_job.rb
+- lib/karafka/pro/routing/features/periodic_job/config.rb
+- lib/karafka/pro/routing/features/periodic_job/contracts/topic.rb
+- lib/karafka/pro/routing/features/periodic_job/topic.rb
+- lib/karafka/pro/routing/features/recurring_tasks.rb
+- lib/karafka/pro/routing/features/recurring_tasks/builder.rb
+- lib/karafka/pro/routing/features/recurring_tasks/config.rb
+- lib/karafka/pro/routing/features/recurring_tasks/contracts/topic.rb
+- lib/karafka/pro/routing/features/recurring_tasks/proxy.rb
+- lib/karafka/pro/routing/features/recurring_tasks/topic.rb
+- lib/karafka/pro/routing/features/scheduled_messages.rb
+- lib/karafka/pro/routing/features/scheduled_messages/builder.rb
+- lib/karafka/pro/routing/features/scheduled_messages/config.rb
+- lib/karafka/pro/routing/features/scheduled_messages/contracts/topic.rb
+- lib/karafka/pro/routing/features/scheduled_messages/proxy.rb
+- lib/karafka/pro/routing/features/scheduled_messages/topic.rb
+- lib/karafka/pro/routing/features/swarm.rb
+- lib/karafka/pro/routing/features/swarm/config.rb
+- lib/karafka/pro/routing/features/swarm/contracts/routing.rb
+- lib/karafka/pro/routing/features/swarm/contracts/topic.rb
+- lib/karafka/pro/routing/features/swarm/topic.rb
+- lib/karafka/pro/routing/features/throttling.rb
+- lib/karafka/pro/routing/features/throttling/config.rb
+- lib/karafka/pro/routing/features/throttling/contracts/topic.rb
+- lib/karafka/pro/routing/features/throttling/topic.rb
+- lib/karafka/pro/routing/features/virtual_partitions.rb
+- lib/karafka/pro/routing/features/virtual_partitions/config.rb
+- lib/karafka/pro/routing/features/virtual_partitions/contracts/topic.rb
+- lib/karafka/pro/routing/features/virtual_partitions/topic.rb
+- lib/karafka/pro/scheduled_messages.rb
+- lib/karafka/pro/scheduled_messages/consumer.rb
+- lib/karafka/pro/scheduled_messages/contracts/config.rb
+- lib/karafka/pro/scheduled_messages/contracts/message.rb
+- lib/karafka/pro/scheduled_messages/daily_buffer.rb
+- lib/karafka/pro/scheduled_messages/day.rb
+- lib/karafka/pro/scheduled_messages/deserializers/headers.rb
+- lib/karafka/pro/scheduled_messages/deserializers/payload.rb
+- lib/karafka/pro/scheduled_messages/dispatcher.rb
+- lib/karafka/pro/scheduled_messages/errors.rb
+- lib/karafka/pro/scheduled_messages/max_epoch.rb
+- lib/karafka/pro/scheduled_messages/proxy.rb
+- lib/karafka/pro/scheduled_messages/schema_validator.rb
+- lib/karafka/pro/scheduled_messages/serializer.rb
+- lib/karafka/pro/scheduled_messages/setup/config.rb
+- lib/karafka/pro/scheduled_messages/state.rb
+- lib/karafka/pro/scheduled_messages/tracker.rb
+- lib/karafka/pro/swarm/liveness_listener.rb
+- lib/karafka/process.rb
+- lib/karafka/processing/coordinator.rb
+- lib/karafka/processing/coordinators_buffer.rb
+- lib/karafka/processing/executor.rb
+- lib/karafka/processing/executors_buffer.rb
+- lib/karafka/processing/expansions_selector.rb
+- lib/karafka/processing/inline_insights/consumer.rb
+- lib/karafka/processing/inline_insights/listener.rb
+- lib/karafka/processing/inline_insights/tracker.rb
+- lib/karafka/processing/jobs/base.rb
+- lib/karafka/processing/jobs/consume.rb
+- lib/karafka/processing/jobs/eofed.rb
+- lib/karafka/processing/jobs/idle.rb
+- lib/karafka/processing/jobs/revoked.rb
+- lib/karafka/processing/jobs/shutdown.rb
+- lib/karafka/processing/jobs_builder.rb
+- lib/karafka/processing/jobs_queue.rb
+- lib/karafka/processing/partitioner.rb
+- lib/karafka/processing/result.rb
+- lib/karafka/processing/schedulers/default.rb
+- lib/karafka/processing/strategies/aj_dlq_mom.rb
+- lib/karafka/processing/strategies/aj_mom.rb
+- lib/karafka/processing/strategies/base.rb
+- lib/karafka/processing/strategies/default.rb
+- lib/karafka/processing/strategies/dlq.rb
+- lib/karafka/processing/strategies/dlq_mom.rb
+- lib/karafka/processing/strategies/mom.rb
+- lib/karafka/processing/strategy_selector.rb
+- lib/karafka/processing/timed_queue.rb
+- lib/karafka/processing/worker.rb
+- lib/karafka/processing/workers_batch.rb
+- lib/karafka/railtie.rb
+- lib/karafka/routing/activity_manager.rb
+- lib/karafka/routing/builder.rb
+- lib/karafka/routing/consumer_group.rb
+- lib/karafka/routing/features/active_job.rb
+- lib/karafka/routing/features/active_job/builder.rb
+- lib/karafka/routing/features/active_job/config.rb
+- lib/karafka/routing/features/active_job/contracts/topic.rb
+- lib/karafka/routing/features/active_job/proxy.rb
+- lib/karafka/routing/features/active_job/topic.rb
+- lib/karafka/routing/features/base.rb
+- lib/karafka/routing/features/base/expander.rb
+- lib/karafka/routing/features/dead_letter_queue.rb
+- lib/karafka/routing/features/dead_letter_queue/config.rb
+- lib/karafka/routing/features/dead_letter_queue/contracts/topic.rb
+- lib/karafka/routing/features/dead_letter_queue/topic.rb
+- lib/karafka/routing/features/declaratives.rb
+- lib/karafka/routing/features/declaratives/config.rb
+- lib/karafka/routing/features/declaratives/contracts/topic.rb
+- lib/karafka/routing/features/declaratives/topic.rb
+- lib/karafka/routing/features/deserializers.rb
+- lib/karafka/routing/features/deserializers/config.rb
+- lib/karafka/routing/features/deserializers/contracts/topic.rb
+- lib/karafka/routing/features/deserializers/topic.rb
+- lib/karafka/routing/features/eofed.rb
+- lib/karafka/routing/features/eofed/config.rb
+- lib/karafka/routing/features/eofed/contracts/topic.rb
+- lib/karafka/routing/features/eofed/topic.rb
+- lib/karafka/routing/features/inline_insights.rb
+- lib/karafka/routing/features/inline_insights/config.rb
+- lib/karafka/routing/features/inline_insights/contracts/topic.rb
+- lib/karafka/routing/features/inline_insights/topic.rb
+- lib/karafka/routing/features/manual_offset_management.rb
+- lib/karafka/routing/features/manual_offset_management/config.rb
+- lib/karafka/routing/features/manual_offset_management/contracts/topic.rb
+- lib/karafka/routing/features/manual_offset_management/topic.rb
+- lib/karafka/routing/proxy.rb
+- lib/karafka/routing/router.rb
+- lib/karafka/routing/subscription_group.rb
+- lib/karafka/routing/subscription_groups_builder.rb
+- lib/karafka/routing/topic.rb
+- lib/karafka/routing/topics.rb
+- lib/karafka/runner.rb
+- lib/karafka/server.rb
+- lib/karafka/setup/attributes_map.rb
+- lib/karafka/setup/config.rb
+- lib/karafka/setup/defaults_injector.rb
+- lib/karafka/setup/dsl.rb
+- lib/karafka/status.rb
+- lib/karafka/swarm.rb
+- lib/karafka/swarm/liveness_listener.rb
+- lib/karafka/swarm/manager.rb
+- lib/karafka/swarm/node.rb
+- lib/karafka/swarm/pidfd.rb
+- lib/karafka/swarm/supervisor.rb
+- lib/karafka/templates/application_consumer.rb.erb
+- lib/karafka/templates/example_consumer.rb.erb
+- lib/karafka/templates/karafka.rb.erb
+- lib/karafka/time_trackers/base.rb
+- lib/karafka/time_trackers/pause.rb
+- lib/karafka/time_trackers/poll.rb
+- lib/karafka/version.rb
+- log/.gitkeep
+- renovate.json
+homepage: https://karafka.io
+licenses:
+- LGPL-3.0-only
+- Commercial
+metadata:
+  funding_uri: https://karafka.io/#become-pro
+  homepage_uri: https://karafka.io
+  changelog_uri: https://karafka.io/docs/Changelog-Karafka
+  bug_tracker_uri: https://github.com/karafka/karafka/issues
+  source_code_uri: https://github.com/karafka/karafka
+  documentation_uri: https://karafka.io/docs
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Karafka is Ruby and Rails efficient Kafka processing framework.
+test_files: []

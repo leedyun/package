@@ -1,0 +1,150 @@
+<nav class="sidebar-nav">
+  <%== partial 'shared/brand' %>
+  <%== partial 'shared/branding/label' %>
+
+  <ul class="menu grow">
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/dashboard') %>"
+        href="<%= root_path('dashboard') %>"
+      >
+        <%== icon(:home) %>
+        <span class="sidebar-nav-item-label">Dashboard</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(match: /\A\/(consumers|commands)/) %>"
+        href="<%= root_path('consumers') %>"
+      >
+        <%== icon(:cpu) %>
+        <span class="sidebar-nav-item-label">Consumers</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/jobs') %>"
+        href="<%= root_path('jobs/running') %>"
+      >
+        <%== icon(:arrow_on_squares) %>
+        <span class="sidebar-nav-item-label">Jobs</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/health') %>"
+        href="<%= root_path('health/overview') %>"
+      >
+        <%== icon(:heart) %>
+        <span class="sidebar-nav-item-label">Health</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/routing') %>"
+        href="<%= root_path('routing') %>"
+      >
+        <%== icon(:queue_list) %>
+        <span class="sidebar-nav-item-label">Routing</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/explorer') %>"
+        href="<%= root_path('explorer') %>"
+      >
+        <%== icon(:document_glass) %>
+        <span class="sidebar-nav-item-label">Explorer</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/recurring_tasks') %>"
+        href="<%= root_path('recurring_tasks') %>"
+      >
+        <%== icon(:arrow_path_rounded) %>
+        <span class="sidebar-nav-item-label">Cron</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/scheduled_messages') %>"
+        href="<%= root_path('scheduled_messages') %>"
+      >
+        <%== icon(:calendar) %>
+        <span class="sidebar-nav-item-label">Schedules</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/errors') %>"
+        href="<%= root_path('errors') %>"
+      >
+        <%== icon(:bug) %>
+        <span class="sidebar-nav-item-label">Errors</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/dlq') %>"
+        href="<%= root_path('dlq') %>"
+      >
+        <%== icon(:x_circle) %>
+        <span class="sidebar-nav-item-label">Dead</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/cluster') %>"
+        href="<%= root_path('cluster') %>"
+      >
+        <%== icon(:blocks) %>
+        <span class="sidebar-nav-item-label">Cluster</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/topics') %>"
+        href="<%= root_path('topics') %>"
+      >
+        <%== icon(:list_bullets) %>
+        <span class="sidebar-nav-item-label">Topics</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/status') %>"
+        href="<%= root_path('status') %>"
+      >
+        <%== icon(:check_badge) %>
+        <span class="sidebar-nav-item-label">Status</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="sidebar-nav-item <%= nav_class(start_with: '/support') %>"
+        href="<%= root_path('support') %>"
+      >
+        <%== icon(:lifebuoy) %>
+        <span class="sidebar-nav-item-label">Support</span>
+      </a>
+    </li>
+  </ul>
+
+  <button type="button" class="btn-toggle-nav-collapsed grid gap-2 grid-flow-col items-center justify-start ml-6 text-sm invisible lg:visible" data-toggle-target="drawer-side">
+    <%== icon(:chevron) %>
+  </button>
+</nav>

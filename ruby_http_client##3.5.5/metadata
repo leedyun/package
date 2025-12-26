@@ -1,0 +1,128 @@
+--- !ruby/object:Gem::Specification
+name: ruby_http_client
+version: !ruby/object:Gem::Version
+  version: 3.5.5
+platform: ruby
+authors:
+- Elmer Thomas
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-03-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: codecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.18.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.18.5
+description: Quickly and easily access any REST or REST-like API.
+email: help@twilio.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".env_sample"
+- ".github/ISSUE_TEMPLATE/config.yml"
+- ".github/workflows/test-and-deploy.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- FIRST_TIMERS.md
+- Gemfile
+- ISSUE_TEMPLATE.md
+- LICENSE
+- Makefile
+- PULL_REQUEST_TEMPLATE.md
+- README.md
+- Rakefile
+- TROUBLESHOOTING.md
+- USAGE.md
+- examples/example.rb
+- lib/ruby_http_client.rb
+- ruby_http_client.gemspec
+- static/img/github-fork.png
+- static/img/github-sign-up.png
+- test/test_helper.rb
+- test/test_ruby_http_client.rb
+- twilio_sendgrid_logo.png
+- use_cases/README.md
+homepage: http://github.com/sendgrid/ruby-http-client
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key: 
+specification_version: 4
+summary: A simple REST client
+test_files:
+- test/test_helper.rb
+- test/test_ruby_http_client.rb

@@ -1,0 +1,160 @@
+--- !ruby/object:Gem::Specification
+name: protocol
+version: !ruby/object:Gem::Version
+  version: 2.0.1
+platform: ruby
+authors:
+- Florian Frank
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-07-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: gem_hadar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.15.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.15.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: |
+  This library offers an implementation of protocols against which you can check
+  the conformity of your classes or instances of your classes. They are a bit
+  like Java Interfaces, but as mixin modules they can also contain already
+  implemented methods. Additionaly you can define preconditions/postconditions
+  for methods specified in a protocol.
+email: flori@ping.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+- lib/protocol.rb
+- lib/protocol/core.rb
+- lib/protocol/descriptor.rb
+- lib/protocol/errors.rb
+- lib/protocol/message.rb
+- lib/protocol/method_parser/ruby_parser.rb
+- lib/protocol/post_condition.rb
+- lib/protocol/protocol_module.rb
+- lib/protocol/utilities.rb
+- lib/protocol/version.rb
+- lib/protocol/xt.rb
+files:
+- ".gitignore"
+- ".travis.yml"
+- ".utilsrc"
+- CHANGES
+- COPYING
+- Gemfile
+- README.rdoc
+- Rakefile
+- VERSION
+- benchmarks/data/.keep
+- benchmarks/method_parser.rb
+- examples/assignments.rb
+- examples/comparing.rb
+- examples/enumerating.rb
+- examples/game.rb
+- examples/hello_world_patternitis.rb
+- examples/indexing.rb
+- examples/queue.rb
+- examples/stack.rb
+- examples/synchronizing.rb
+- install.rb
+- lib/protocol.rb
+- lib/protocol/core.rb
+- lib/protocol/descriptor.rb
+- lib/protocol/errors.rb
+- lib/protocol/message.rb
+- lib/protocol/method_parser/ruby_parser.rb
+- lib/protocol/post_condition.rb
+- lib/protocol/protocol_module.rb
+- lib/protocol/utilities.rb
+- lib/protocol/version.rb
+- lib/protocol/xt.rb
+- protocol.gemspec
+- tests/protocol_core_test.rb
+- tests/protocol_method_parser_test.rb
+- tests/protocol_test.rb
+- tests/test_helper.rb
+homepage: https://github.com/flori/protocol
+licenses:
+- GPL-2
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--title"
+- Protocol - Method Protocols for Ruby Classes
+- "--main"
+- README.rdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Method Protocols for Ruby Classes
+test_files:
+- tests/protocol_core_test.rb
+- tests/protocol_method_parser_test.rb
+- tests/protocol_test.rb
+- tests/test_helper.rb

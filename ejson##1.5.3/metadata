@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification
+name: ejson
+version: !ruby/object:Gem::Version
+  version: 1.5.3
+platform: ruby
+authors:
+- Shopify
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-06 00:00:00.000000000 Z
+dependencies: []
+description: Secret management by encrypting values in a JSON hash with a public/private
+  keypair
+email:
+- admins@shopify.com
+executables:
+- ejson
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- bin/ejson
+- build/darwin-amd64/ejson
+- build/darwin-arm64/ejson
+- build/freebsd-amd64/ejson
+- build/linux-amd64/ejson
+- build/linux-arm64/ejson
+- ejson.gemspec
+- lib/ejson/version.rb
+homepage: https://github.com/Shopify/ejson
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Asymmetric keywise encryption for JSON
+test_files: []

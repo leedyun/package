@@ -1,0 +1,573 @@
+--- !ruby/object:Gem::Specification
+name: devise-security
+version: !ruby/object:Gem::Version
+  version: 0.18.0
+platform: ruby
+authors:
+- Alexander Dreher
+- Dillon Welch
+- Kevin Olbrich
+- Marco Scholl
+- Nate Bird
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-04-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: devise
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.0
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: easy_captcha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n-tasks
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: omniauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-rescue
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails_email_validator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov-lcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: solargraph
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: solargraph-arc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: An enterprise security extension for devise.
+email: natebird@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- app/controllers/devise/paranoid_verification_code_controller.rb
+- app/controllers/devise/password_expired_controller.rb
+- app/views/devise/paranoid_verification_code/show.html.erb
+- app/views/devise/password_expired/show.html.erb
+- config/locales/bg.yml
+- config/locales/by.yml
+- config/locales/cs.yml
+- config/locales/de.yml
+- config/locales/en.yml
+- config/locales/es.yml
+- config/locales/fa.yml
+- config/locales/fr.yml
+- config/locales/hi.yml
+- config/locales/it.yml
+- config/locales/ja.yml
+- config/locales/nl.yml
+- config/locales/pt.yml
+- config/locales/ru.yml
+- config/locales/tr.yml
+- config/locales/uk.yml
+- config/locales/zh_CN.yml
+- config/locales/zh_TW.yml
+- lib/devise-security.rb
+- lib/devise-security/controllers/helpers.rb
+- lib/devise-security/hooks/expirable.rb
+- lib/devise-security/hooks/paranoid_verification.rb
+- lib/devise-security/hooks/password_expirable.rb
+- lib/devise-security/hooks/session_limitable.rb
+- lib/devise-security/models/active_record/old_password.rb
+- lib/devise-security/models/compatibility.rb
+- lib/devise-security/models/compatibility/active_record_patch.rb
+- lib/devise-security/models/compatibility/mongoid_patch.rb
+- lib/devise-security/models/database_authenticatable_patch.rb
+- lib/devise-security/models/expirable.rb
+- lib/devise-security/models/mongoid/old_password.rb
+- lib/devise-security/models/paranoid_verification.rb
+- lib/devise-security/models/password_archivable.rb
+- lib/devise-security/models/password_expirable.rb
+- lib/devise-security/models/secure_validatable.rb
+- lib/devise-security/models/security_questionable.rb
+- lib/devise-security/models/session_limitable.rb
+- lib/devise-security/orm/mongoid.rb
+- lib/devise-security/patches.rb
+- lib/devise-security/patches/controller_captcha.rb
+- lib/devise-security/patches/controller_security_question.rb
+- lib/devise-security/rails.rb
+- lib/devise-security/routes.rb
+- lib/devise-security/validators/password_complexity_validator.rb
+- lib/devise-security/version.rb
+- lib/generators/devise_security/install_generator.rb
+- lib/generators/templates/devise_security.rb
+- test/controllers/test_captcha_controller.rb
+- test/controllers/test_paranoid_verification_code_controller.rb
+- test/controllers/test_password_expired_controller.rb
+- test/controllers/test_security_question_controller.rb
+- test/dummy/Rakefile
+- test/dummy/app/assets/config/manifest.js
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/controllers/captcha/sessions_controller.rb
+- test/dummy/app/controllers/overrides/paranoid_verification_code_controller.rb
+- test/dummy/app/controllers/overrides/password_expired_controller.rb
+- test/dummy/app/controllers/security_question/unlocks_controller.rb
+- test/dummy/app/controllers/widgets_controller.rb
+- test/dummy/app/models/application_record.rb
+- test/dummy/app/models/application_user_record.rb
+- test/dummy/app/models/captcha_user.rb
+- test/dummy/app/models/mongoid/confirmable_fields.rb
+- test/dummy/app/models/mongoid/database_authenticable_fields.rb
+- test/dummy/app/models/mongoid/expirable_fields.rb
+- test/dummy/app/models/mongoid/lockable_fields.rb
+- test/dummy/app/models/mongoid/mappings.rb
+- test/dummy/app/models/mongoid/omniauthable_fields.rb
+- test/dummy/app/models/mongoid/paranoid_verification_fields.rb
+- test/dummy/app/models/mongoid/password_archivable_fields.rb
+- test/dummy/app/models/mongoid/password_expirable_fields.rb
+- test/dummy/app/models/mongoid/recoverable_fields.rb
+- test/dummy/app/models/mongoid/registerable_fields.rb
+- test/dummy/app/models/mongoid/rememberable_fields.rb
+- test/dummy/app/models/mongoid/secure_validatable_fields.rb
+- test/dummy/app/models/mongoid/security_questionable_fields.rb
+- test/dummy/app/models/mongoid/session_limitable_fields.rb
+- test/dummy/app/models/mongoid/timeoutable_fields.rb
+- test/dummy/app/models/mongoid/trackable_fields.rb
+- test/dummy/app/models/mongoid/validatable_fields.rb
+- test/dummy/app/models/paranoid_verification_user.rb
+- test/dummy/app/models/password_expired_user.rb
+- test/dummy/app/models/security_question_user.rb
+- test/dummy/app/models/user.rb
+- test/dummy/app/models/widget.rb
+- test/dummy/app/mongoid/admin.rb
+- test/dummy/app/mongoid/one_user.rb
+- test/dummy/app/mongoid/shim.rb
+- test/dummy/app/mongoid/user_on_engine.rb
+- test/dummy/app/mongoid/user_on_main_app.rb
+- test/dummy/app/mongoid/user_with_validations.rb
+- test/dummy/app/mongoid/user_without_email.rb
+- test/dummy/app/views/foos/index.html.erb
+- test/dummy/config.ru
+- test/dummy/config/application.rb
+- test/dummy/config/boot.rb
+- test/dummy/config/database.yml
+- test/dummy/config/environment.rb
+- test/dummy/config/environments/test.rb
+- test/dummy/config/initializers/devise.rb
+- test/dummy/config/initializers/migration_class.rb
+- test/dummy/config/locales/en.yml
+- test/dummy/config/mongoid.yml
+- test/dummy/config/routes.rb
+- test/dummy/config/secrets.yml
+- test/dummy/db/migrate/20120508165529_create_tables.rb
+- test/dummy/db/migrate/20150402165590_add_verification_columns.rb
+- test/dummy/db/migrate/20150407162345_add_verification_attempt_column.rb
+- test/dummy/db/migrate/20160320162345_add_security_questions_fields.rb
+- test/dummy/db/migrate/20180318103603_add_expireable_columns.rb
+- test/dummy/db/migrate/20180318105329_add_confirmable_columns.rb
+- test/dummy/db/migrate/20180318105732_add_rememberable_columns.rb
+- test/dummy/db/migrate/20180318111336_add_recoverable_columns.rb
+- test/dummy/db/migrate/20180319114023_add_widget.rb
+- test/dummy/lib/shared_expirable_columns.rb
+- test/dummy/lib/shared_security_questions_fields.rb
+- test/dummy/lib/shared_user.rb
+- test/dummy/lib/shared_user_with_password_verification.rb
+- test/dummy/lib/shared_user_without_omniauth.rb
+- test/dummy/lib/shared_verification_fields.rb
+- test/dummy/log/test.log
+- test/i18n_test.rb
+- test/integration/test_paranoid_verification_code_workflow.rb
+- test/integration/test_password_expirable_workflow.rb
+- test/integration/test_session_limitable_workflow.rb
+- test/orm/active_record.rb
+- test/orm/mongoid.rb
+- test/support/integration_helpers.rb
+- test/support/mongoid.yml
+- test/test_compatibility.rb
+- test/test_complexity_validator.rb
+- test/test_database_authenticatable_patch.rb
+- test/test_helper.rb
+- test/test_install_generator.rb
+- test/test_paranoid_verification.rb
+- test/test_password_archivable.rb
+- test/test_password_expirable.rb
+- test/test_secure_validatable.rb
+- test/test_secure_validatable_overrides.rb
+- test/test_session_limitable.rb
+- test/tmp/config/initializers/devise_security.rb
+- test/tmp/config/locales/devise.security_extension.by.yml
+- test/tmp/config/locales/devise.security_extension.cs.yml
+- test/tmp/config/locales/devise.security_extension.de.yml
+- test/tmp/config/locales/devise.security_extension.en.yml
+- test/tmp/config/locales/devise.security_extension.es.yml
+- test/tmp/config/locales/devise.security_extension.fa.yml
+- test/tmp/config/locales/devise.security_extension.fr.yml
+- test/tmp/config/locales/devise.security_extension.hi.yml
+- test/tmp/config/locales/devise.security_extension.it.yml
+- test/tmp/config/locales/devise.security_extension.ja.yml
+- test/tmp/config/locales/devise.security_extension.nl.yml
+- test/tmp/config/locales/devise.security_extension.pt.yml
+- test/tmp/config/locales/devise.security_extension.ru.yml
+- test/tmp/config/locales/devise.security_extension.tr.yml
+- test/tmp/config/locales/devise.security_extension.uk.yml
+- test/tmp/config/locales/devise.security_extension.zh_CN.yml
+- test/tmp/config/locales/devise.security_extension.zh_TW.yml
+homepage: https://github.com/devise-security/devise-security
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Security extension for devise
+test_files:
+- test/test_password_archivable.rb
+- test/dummy/app/mongoid/shim.rb
+- test/dummy/app/mongoid/user_on_main_app.rb
+- test/dummy/app/mongoid/user_on_engine.rb
+- test/dummy/app/mongoid/one_user.rb
+- test/dummy/app/mongoid/admin.rb
+- test/dummy/app/mongoid/user_with_validations.rb
+- test/dummy/app/mongoid/user_without_email.rb
+- test/dummy/app/models/mongoid/password_archivable_fields.rb
+- test/dummy/app/models/mongoid/registerable_fields.rb
+- test/dummy/app/models/mongoid/mappings.rb
+- test/dummy/app/models/mongoid/session_limitable_fields.rb
+- test/dummy/app/models/mongoid/timeoutable_fields.rb
+- test/dummy/app/models/mongoid/paranoid_verification_fields.rb
+- test/dummy/app/models/mongoid/confirmable_fields.rb
+- test/dummy/app/models/mongoid/password_expirable_fields.rb
+- test/dummy/app/models/mongoid/expirable_fields.rb
+- test/dummy/app/models/mongoid/database_authenticable_fields.rb
+- test/dummy/app/models/mongoid/secure_validatable_fields.rb
+- test/dummy/app/models/mongoid/rememberable_fields.rb
+- test/dummy/app/models/mongoid/lockable_fields.rb
+- test/dummy/app/models/mongoid/security_questionable_fields.rb
+- test/dummy/app/models/mongoid/validatable_fields.rb
+- test/dummy/app/models/mongoid/trackable_fields.rb
+- test/dummy/app/models/mongoid/recoverable_fields.rb
+- test/dummy/app/models/mongoid/omniauthable_fields.rb
+- test/dummy/app/models/security_question_user.rb
+- test/dummy/app/models/application_user_record.rb
+- test/dummy/app/models/widget.rb
+- test/dummy/app/models/password_expired_user.rb
+- test/dummy/app/models/paranoid_verification_user.rb
+- test/dummy/app/models/application_record.rb
+- test/dummy/app/models/captcha_user.rb
+- test/dummy/app/models/user.rb
+- test/dummy/app/controllers/overrides/password_expired_controller.rb
+- test/dummy/app/controllers/overrides/paranoid_verification_code_controller.rb
+- test/dummy/app/controllers/application_controller.rb
+- test/dummy/app/controllers/captcha/sessions_controller.rb
+- test/dummy/app/controllers/widgets_controller.rb
+- test/dummy/app/controllers/security_question/unlocks_controller.rb
+- test/dummy/app/views/foos/index.html.erb
+- test/dummy/app/assets/config/manifest.js
+- test/dummy/config/secrets.yml
+- test/dummy/config/routes.rb
+- test/dummy/config/mongoid.yml
+- test/dummy/config/locales/en.yml
+- test/dummy/config/environments/test.rb
+- test/dummy/config/environment.rb
+- test/dummy/config/application.rb
+- test/dummy/config/database.yml
+- test/dummy/config/boot.rb
+- test/dummy/config/initializers/migration_class.rb
+- test/dummy/config/initializers/devise.rb
+- test/dummy/config.ru
+- test/dummy/Rakefile
+- test/dummy/lib/shared_verification_fields.rb
+- test/dummy/lib/shared_user.rb
+- test/dummy/lib/shared_user_without_omniauth.rb
+- test/dummy/lib/shared_user_with_password_verification.rb
+- test/dummy/lib/shared_expirable_columns.rb
+- test/dummy/lib/shared_security_questions_fields.rb
+- test/dummy/db/migrate/20120508165529_create_tables.rb
+- test/dummy/db/migrate/20150402165590_add_verification_columns.rb
+- test/dummy/db/migrate/20180318111336_add_recoverable_columns.rb
+- test/dummy/db/migrate/20180318105732_add_rememberable_columns.rb
+- test/dummy/db/migrate/20160320162345_add_security_questions_fields.rb
+- test/dummy/db/migrate/20180319114023_add_widget.rb
+- test/dummy/db/migrate/20180318103603_add_expireable_columns.rb
+- test/dummy/db/migrate/20150407162345_add_verification_attempt_column.rb
+- test/dummy/db/migrate/20180318105329_add_confirmable_columns.rb
+- test/dummy/log/test.log
+- test/test_install_generator.rb
+- test/test_secure_validatable_overrides.rb
+- test/i18n_test.rb
+- test/test_paranoid_verification.rb
+- test/integration/test_session_limitable_workflow.rb
+- test/integration/test_password_expirable_workflow.rb
+- test/integration/test_paranoid_verification_code_workflow.rb
+- test/test_database_authenticatable_patch.rb
+- test/test_secure_validatable.rb
+- test/test_session_limitable.rb
+- test/support/mongoid.yml
+- test/support/integration_helpers.rb
+- test/test_helper.rb
+- test/orm/mongoid.rb
+- test/orm/active_record.rb
+- test/test_compatibility.rb
+- test/test_password_expirable.rb
+- test/controllers/test_security_question_controller.rb
+- test/controllers/test_paranoid_verification_code_controller.rb
+- test/controllers/test_captcha_controller.rb
+- test/controllers/test_password_expired_controller.rb
+- test/tmp/config/locales/devise.security_extension.by.yml
+- test/tmp/config/locales/devise.security_extension.nl.yml
+- test/tmp/config/locales/devise.security_extension.tr.yml
+- test/tmp/config/locales/devise.security_extension.ru.yml
+- test/tmp/config/locales/devise.security_extension.fr.yml
+- test/tmp/config/locales/devise.security_extension.fa.yml
+- test/tmp/config/locales/devise.security_extension.hi.yml
+- test/tmp/config/locales/devise.security_extension.ja.yml
+- test/tmp/config/locales/devise.security_extension.en.yml
+- test/tmp/config/locales/devise.security_extension.pt.yml
+- test/tmp/config/locales/devise.security_extension.it.yml
+- test/tmp/config/locales/devise.security_extension.de.yml
+- test/tmp/config/locales/devise.security_extension.es.yml
+- test/tmp/config/locales/devise.security_extension.zh_CN.yml
+- test/tmp/config/locales/devise.security_extension.uk.yml
+- test/tmp/config/locales/devise.security_extension.zh_TW.yml
+- test/tmp/config/locales/devise.security_extension.cs.yml
+- test/tmp/config/initializers/devise_security.rb
+- test/test_complexity_validator.rb

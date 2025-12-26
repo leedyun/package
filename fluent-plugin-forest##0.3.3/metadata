@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification
+name: fluent-plugin-forest
+version: !ruby/object:Gem::Version
+  version: 0.3.3
+platform: ruby
+authors:
+- TAGOMORI Satoshi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-10-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.7
+- !ruby/object:Gem::Dependency
+  name: fluentd
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: create sub-plugin dynamically per tags, with template configuration and
+  parameters
+email:
+- tagomoris@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- example/file.conf
+- example/sample.conf
+- fluent-plugin-forest.gemspec
+- lib/fluent/plugin/out_forest.rb
+- test/helper.rb
+- test/output/out_forest_test.rb
+- test/plugin/test_out_forest.rb
+- test/plugin/test_out_forest_test.rb
+homepage: https://github.com/tagomoris/fluent-plugin-forest
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: plugin to create output plugin instances per tags dynamically
+test_files:
+- test/helper.rb
+- test/output/out_forest_test.rb
+- test/plugin/test_out_forest.rb
+- test/plugin/test_out_forest_test.rb
+has_rdoc: 

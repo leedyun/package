@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: attr_required
+version: !ruby/object:Gem::Version
+  version: 1.0.2
+platform: ruby
+authors:
+- nov matake
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-12-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: attr_required and attr_optional
+email: nov@matake.jp
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- ".github/FUNDING.yml"
+- ".github/workflows/spec.yml"
+- ".gitignore"
+- ".rspec"
+- Gemfile
+- LICENSE
+- README.rdoc
+- Rakefile
+- VERSION
+- attr_required.gemspec
+- lib/attr_optional.rb
+- lib/attr_required.rb
+- spec/attr_optional_spec.rb
+- spec/attr_required_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/nov/attr_required
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: attr_required and attr_optional
+test_files:
+- spec/attr_optional_spec.rb
+- spec/attr_required_spec.rb
+- spec/spec_helper.rb

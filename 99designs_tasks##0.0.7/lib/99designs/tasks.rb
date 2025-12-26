@@ -1,0 +1,10 @@
+require "99designs/tasks/version"
+require "99designs/tasks/api_client"
+
+require "99designs/errors/base_error"
+require "99designs/errors/api_error"
+require "99designs/errors/validation_error"
+require "99designs/errors/authentication_error"
+require "99designs/errors/payment_error"
+require "99designs/errors/not_found_error"
+require "99designs/errors/invalid_state_error"

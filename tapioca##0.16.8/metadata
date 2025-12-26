@@ -1,0 +1,304 @@
+--- !ruby/object:Gem::Specification
+name: tapioca
+version: !ruby/object:Gem::Version
+  version: 0.16.8
+platform: ruby
+authors:
+- Ufuk Kayserilioglu
+- Alan Wu
+- Alexandre Terrasa
+- Peter Zhu
+bindir: exe
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: benchmark
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.25
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.25
+- !ruby/object:Gem::Dependency
+  name: netrc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+- !ruby/object:Gem::Dependency
+  name: parallel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+- !ruby/object:Gem::Dependency
+  name: rbi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: sorbet-static-and-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.11087
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.11087
+- !ruby/object:Gem::Dependency
+  name: spoom
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: yard-sorbet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+email:
+- ruby@shopify.com
+executables:
+- tapioca
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- exe/tapioca
+- lib/ruby_lsp/tapioca/addon.rb
+- lib/ruby_lsp/tapioca/server_addon.rb
+- lib/tapioca.rb
+- lib/tapioca/bundler_ext/auto_require_hook.rb
+- lib/tapioca/cli.rb
+- lib/tapioca/commands.rb
+- lib/tapioca/commands/abstract_dsl.rb
+- lib/tapioca/commands/abstract_gem.rb
+- lib/tapioca/commands/annotations.rb
+- lib/tapioca/commands/check_shims.rb
+- lib/tapioca/commands/command.rb
+- lib/tapioca/commands/command_without_tracker.rb
+- lib/tapioca/commands/configure.rb
+- lib/tapioca/commands/dsl_compiler_list.rb
+- lib/tapioca/commands/dsl_generate.rb
+- lib/tapioca/commands/dsl_verify.rb
+- lib/tapioca/commands/gem_generate.rb
+- lib/tapioca/commands/gem_sync.rb
+- lib/tapioca/commands/gem_verify.rb
+- lib/tapioca/commands/require.rb
+- lib/tapioca/commands/todo.rb
+- lib/tapioca/dsl.rb
+- lib/tapioca/dsl/compiler.rb
+- lib/tapioca/dsl/compilers.rb
+- lib/tapioca/dsl/compilers/aasm.rb
+- lib/tapioca/dsl/compilers/action_controller_helpers.rb
+- lib/tapioca/dsl/compilers/action_mailer.rb
+- lib/tapioca/dsl/compilers/action_text.rb
+- lib/tapioca/dsl/compilers/active_job.rb
+- lib/tapioca/dsl/compilers/active_model_attributes.rb
+- lib/tapioca/dsl/compilers/active_model_secure_password.rb
+- lib/tapioca/dsl/compilers/active_model_validations_confirmation.rb
+- lib/tapioca/dsl/compilers/active_record_associations.rb
+- lib/tapioca/dsl/compilers/active_record_columns.rb
+- lib/tapioca/dsl/compilers/active_record_delegated_types.rb
+- lib/tapioca/dsl/compilers/active_record_enum.rb
+- lib/tapioca/dsl/compilers/active_record_fixtures.rb
+- lib/tapioca/dsl/compilers/active_record_relations.rb
+- lib/tapioca/dsl/compilers/active_record_scope.rb
+- lib/tapioca/dsl/compilers/active_record_secure_token.rb
+- lib/tapioca/dsl/compilers/active_record_store.rb
+- lib/tapioca/dsl/compilers/active_record_typed_store.rb
+- lib/tapioca/dsl/compilers/active_resource.rb
+- lib/tapioca/dsl/compilers/active_storage.rb
+- lib/tapioca/dsl/compilers/active_support_concern.rb
+- lib/tapioca/dsl/compilers/active_support_current_attributes.rb
+- lib/tapioca/dsl/compilers/active_support_time_ext.rb
+- lib/tapioca/dsl/compilers/config.rb
+- lib/tapioca/dsl/compilers/frozen_record.rb
+- lib/tapioca/dsl/compilers/graphql_input_object.rb
+- lib/tapioca/dsl/compilers/graphql_mutation.rb
+- lib/tapioca/dsl/compilers/identity_cache.rb
+- lib/tapioca/dsl/compilers/json_api_client_resource.rb
+- lib/tapioca/dsl/compilers/kredis.rb
+- lib/tapioca/dsl/compilers/mixed_in_class_attributes.rb
+- lib/tapioca/dsl/compilers/protobuf.rb
+- lib/tapioca/dsl/compilers/rails_generators.rb
+- lib/tapioca/dsl/compilers/sidekiq_worker.rb
+- lib/tapioca/dsl/compilers/smart_properties.rb
+- lib/tapioca/dsl/compilers/state_machines.rb
+- lib/tapioca/dsl/compilers/url_helpers.rb
+- lib/tapioca/dsl/extensions/active_record.rb
+- lib/tapioca/dsl/extensions/frozen_record.rb
+- lib/tapioca/dsl/extensions/kredis.rb
+- lib/tapioca/dsl/helpers/active_model_type_helper.rb
+- lib/tapioca/dsl/helpers/active_record_column_type_helper.rb
+- lib/tapioca/dsl/helpers/active_record_constants_helper.rb
+- lib/tapioca/dsl/helpers/graphql_type_helper.rb
+- lib/tapioca/dsl/pipeline.rb
+- lib/tapioca/executor.rb
+- lib/tapioca/gem.rb
+- lib/tapioca/gem/events.rb
+- lib/tapioca/gem/listeners.rb
+- lib/tapioca/gem/listeners/base.rb
+- lib/tapioca/gem/listeners/dynamic_mixins.rb
+- lib/tapioca/gem/listeners/foreign_constants.rb
+- lib/tapioca/gem/listeners/methods.rb
+- lib/tapioca/gem/listeners/mixins.rb
+- lib/tapioca/gem/listeners/remove_empty_payload_scopes.rb
+- lib/tapioca/gem/listeners/sorbet_enums.rb
+- lib/tapioca/gem/listeners/sorbet_helpers.rb
+- lib/tapioca/gem/listeners/sorbet_props.rb
+- lib/tapioca/gem/listeners/sorbet_required_ancestors.rb
+- lib/tapioca/gem/listeners/sorbet_signatures.rb
+- lib/tapioca/gem/listeners/sorbet_type_variables.rb
+- lib/tapioca/gem/listeners/source_location.rb
+- lib/tapioca/gem/listeners/subconstants.rb
+- lib/tapioca/gem/listeners/yard_doc.rb
+- lib/tapioca/gem/pipeline.rb
+- lib/tapioca/gem_info.rb
+- lib/tapioca/gemfile.rb
+- lib/tapioca/helpers/cli_helper.rb
+- lib/tapioca/helpers/config_helper.rb
+- lib/tapioca/helpers/env_helper.rb
+- lib/tapioca/helpers/gem_helper.rb
+- lib/tapioca/helpers/git_attributes.rb
+- lib/tapioca/helpers/rbi_files_helper.rb
+- lib/tapioca/helpers/rbi_helper.rb
+- lib/tapioca/helpers/sorbet_helper.rb
+- lib/tapioca/helpers/source_uri.rb
+- lib/tapioca/helpers/test/content.rb
+- lib/tapioca/helpers/test/dsl_compiler.rb
+- lib/tapioca/helpers/test/isolation.rb
+- lib/tapioca/helpers/test/template.rb
+- lib/tapioca/internal.rb
+- lib/tapioca/loaders/dsl.rb
+- lib/tapioca/loaders/gem.rb
+- lib/tapioca/loaders/loader.rb
+- lib/tapioca/rbi_ext/model.rb
+- lib/tapioca/rbi_formatter.rb
+- lib/tapioca/repo_index.rb
+- lib/tapioca/runtime/attached_class_of_32.rb
+- lib/tapioca/runtime/attached_class_of_legacy.rb
+- lib/tapioca/runtime/dynamic_mixin_compiler.rb
+- lib/tapioca/runtime/generic_type_registry.rb
+- lib/tapioca/runtime/reflection.rb
+- lib/tapioca/runtime/trackers.rb
+- lib/tapioca/runtime/trackers/autoload.rb
+- lib/tapioca/runtime/trackers/constant_definition.rb
+- lib/tapioca/runtime/trackers/mixin.rb
+- lib/tapioca/runtime/trackers/required_ancestor.rb
+- lib/tapioca/runtime/trackers/tracker.rb
+- lib/tapioca/sorbet_ext/backcompat_patches.rb
+- lib/tapioca/sorbet_ext/generic_name_patch.rb
+- lib/tapioca/sorbet_ext/name_patch.rb
+- lib/tapioca/sorbet_ext/proc_bind_patch.rb
+- lib/tapioca/static/requires_compiler.rb
+- lib/tapioca/static/symbol_loader.rb
+- lib/tapioca/static/symbol_table_parser.rb
+- lib/tapioca/version.rb
+homepage: https://github.com/Shopify/tapioca
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: A Ruby Interface file generator for gems, core types and the Ruby standard
+  library
+test_files: []

@@ -1,0 +1,196 @@
+--- !ruby/object:Gem::Specification
+name: powerpack
+version: !ruby/object:Gem::Version
+  version: 0.1.3
+platform: ruby
+authors:
+- Bozhidar Batsov
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-11-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+description: A few useful extensions to core Ruby classes.
+email:
+- bozhidar@batsov.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/powerpack.rb
+- lib/powerpack/array.rb
+- lib/powerpack/array/butfirst.rb
+- lib/powerpack/array/butlast.rb
+- lib/powerpack/enumerable.rb
+- lib/powerpack/enumerable/average.rb
+- lib/powerpack/enumerable/drop_last.rb
+- lib/powerpack/enumerable/drop_last_while.rb
+- lib/powerpack/enumerable/exactly.rb
+- lib/powerpack/enumerable/frequencies.rb
+- lib/powerpack/enumerable/several.rb
+- lib/powerpack/enumerable/sum.rb
+- lib/powerpack/enumerable/take_last.rb
+- lib/powerpack/enumerable/take_last_while.rb
+- lib/powerpack/hash.rb
+- lib/powerpack/hash/symbolize_keys.rb
+- lib/powerpack/numeric.rb
+- lib/powerpack/numeric/neg.rb
+- lib/powerpack/numeric/pos.rb
+- lib/powerpack/numeric/scale.rb
+- lib/powerpack/string.rb
+- lib/powerpack/string/ascii_only.rb
+- lib/powerpack/string/blank.rb
+- lib/powerpack/string/format.rb
+- lib/powerpack/string/remove.rb
+- lib/powerpack/string/remove_prefix.rb
+- lib/powerpack/string/remove_suffix.rb
+- lib/powerpack/string/squish.rb
+- lib/powerpack/string/strip_indent.rb
+- lib/powerpack/string/strip_margin.rb
+- lib/powerpack/version.rb
+- powerpack.gemspec
+- spec/powerpack/array/butfirst_spec.rb
+- spec/powerpack/array/butlast_spec.rb
+- spec/powerpack/enumerable/average_spec.rb
+- spec/powerpack/enumerable/drop_last_spec.rb
+- spec/powerpack/enumerable/drop_last_while_spec.rb
+- spec/powerpack/enumerable/exactly_spec.rb
+- spec/powerpack/enumerable/frequencies_spec.rb
+- spec/powerpack/enumerable/several_spec.rb
+- spec/powerpack/enumerable/sum_spec.rb
+- spec/powerpack/enumerable/take_last_spec.rb
+- spec/powerpack/enumerable/take_last_while_spec.rb
+- spec/powerpack/hash/symbolize_keys_spec.rb
+- spec/powerpack/numeric/neg_spec.rb
+- spec/powerpack/numeric/pos_spec.rb
+- spec/powerpack/numeric/scale_spec.rb
+- spec/powerpack/string/ascii_only_spec.rb
+- spec/powerpack/string/blank_spec.rb
+- spec/powerpack/string/format_spec.rb
+- spec/powerpack/string/remove_prefix_spec.rb
+- spec/powerpack/string/remove_spec.rb
+- spec/powerpack/string/remove_suffix_spec.rb
+- spec/powerpack/string/squish_spec.rb
+- spec/powerpack/string/strip_indent_spec.rb
+- spec/powerpack/string/strip_margin_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/bbatsov/powerpack
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: A few useful extensions to core Ruby classes.
+test_files:
+- spec/powerpack/array/butfirst_spec.rb
+- spec/powerpack/array/butlast_spec.rb
+- spec/powerpack/enumerable/average_spec.rb
+- spec/powerpack/enumerable/drop_last_spec.rb
+- spec/powerpack/enumerable/drop_last_while_spec.rb
+- spec/powerpack/enumerable/exactly_spec.rb
+- spec/powerpack/enumerable/frequencies_spec.rb
+- spec/powerpack/enumerable/several_spec.rb
+- spec/powerpack/enumerable/sum_spec.rb
+- spec/powerpack/enumerable/take_last_spec.rb
+- spec/powerpack/enumerable/take_last_while_spec.rb
+- spec/powerpack/hash/symbolize_keys_spec.rb
+- spec/powerpack/numeric/neg_spec.rb
+- spec/powerpack/numeric/pos_spec.rb
+- spec/powerpack/numeric/scale_spec.rb
+- spec/powerpack/string/ascii_only_spec.rb
+- spec/powerpack/string/blank_spec.rb
+- spec/powerpack/string/format_spec.rb
+- spec/powerpack/string/remove_prefix_spec.rb
+- spec/powerpack/string/remove_spec.rb
+- spec/powerpack/string/remove_suffix_spec.rb
+- spec/powerpack/string/squish_spec.rb
+- spec/powerpack/string/strip_indent_spec.rb
+- spec/powerpack/string/strip_margin_spec.rb
+- spec/spec_helper.rb

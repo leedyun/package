@@ -1,0 +1,181 @@
+--- !ruby/object:Gem::Specification
+name: sinatra
+version: !ruby/object:Gem::Version
+  version: 4.1.1
+platform: ruby
+authors:
+- Blake Mizerany
+- Ryan Tomayko
+- Simon Rozet
+- Konstantin Haase
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+- !ruby/object:Gem::Dependency
+  name: mustermann
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: rack-protection
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 4.1.1
+- !ruby/object:Gem::Dependency
+  name: rack-session
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: Sinatra is a DSL for quickly creating web applications in Ruby with minimal
+  effort.
+email: sinatrarb@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".yardopts"
+- AUTHORS.md
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE
+- MAINTENANCE.md
+- README.md
+- Rakefile
+- SECURITY.md
+- VERSION
+- examples/chat.rb
+- examples/lifecycle_events.rb
+- examples/simple.rb
+- examples/stream.ru
+- lib/sinatra.rb
+- lib/sinatra/base.rb
+- lib/sinatra/images/404.png
+- lib/sinatra/images/500.png
+- lib/sinatra/indifferent_hash.rb
+- lib/sinatra/main.rb
+- lib/sinatra/middleware/logger.rb
+- lib/sinatra/show_exceptions.rb
+- lib/sinatra/version.rb
+- sinatra.gemspec
+homepage: http://sinatrarb.com/
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/sinatra/sinatra
+  changelog_uri: https://github.com/sinatra/sinatra/blob/main/CHANGELOG.md
+  homepage_uri: http://sinatrarb.com/
+  bug_tracker_uri: https://github.com/sinatra/sinatra/issues
+  mailing_list_uri: http://groups.google.com/group/sinatrarb
+  documentation_uri: https://www.rubydoc.info/gems/sinatra
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--title"
+- Sinatra
+- "--main"
+- README.rdoc
+- "--encoding=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.8
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Classy web-development dressed in a DSL
+test_files: []

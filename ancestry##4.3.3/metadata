@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: ancestry
+version: !ruby/object:Gem::Version
+  version: 4.3.3
+platform: ruby
+authors:
+- Stefan Kroes
+- Keenan Brock
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-04-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.6
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |2
+    Ancestry allows the records of a ActiveRecord model to be organized in a tree
+    structure, using the materialized path pattern. It exposes the standard
+    relations (ancestors, parent, root, children, siblings, descendants)
+    and allows them to be fetched in a single query. Additional features include
+    named scopes, integrity checking, integrity restoration, arrangement
+    of (sub)tree into hashes and different strategies for dealing with orphaned
+    records.
+email: keenan@thebrocks.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- lib/ancestry.rb
+- lib/ancestry/class_methods.rb
+- lib/ancestry/exceptions.rb
+- lib/ancestry/has_ancestry.rb
+- lib/ancestry/instance_methods.rb
+- lib/ancestry/locales/en.yml
+- lib/ancestry/materialized_path.rb
+- lib/ancestry/materialized_path2.rb
+- lib/ancestry/materialized_path_pg.rb
+- lib/ancestry/version.rb
+homepage: https://github.com/stefankroes/ancestry
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/stefankroes/ancestry
+  changelog_uri: https://github.com/stefankroes/ancestry/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/stefankroes/ancestry/
+  bug_tracker_uri: https://github.com/stefankroes/ancestry/issues
+post_install_message: Thank you for installing Ancestry. You can visit http://github.com/stefankroes/ancestry
+  to read the documentation.
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: Organize ActiveRecord model into a tree structure
+test_files: []

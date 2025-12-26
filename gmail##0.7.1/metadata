@@ -1,0 +1,221 @@
+--- !ruby/object:Gem::Specification
+name: gmail
+version: !ruby/object:Gem::Version
+  version: 0.7.1
+platform: ruby
+authors:
+- Chris Kowalik
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-07-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: gmail_xoauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+- !ruby/object:Gem::Dependency
+  name: mail
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.1
+- !ruby/object:Gem::Dependency
+  name: gem-release
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.34.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.34.2
+description: "A Rubyesque interface to Gmail, with all the tools you will need.\n
+  \ Search, read and send multipart emails; archive, mark as read/unread,\n  delete
+  emails; and manage labels.\n  "
+email:
+- chris@nu7hat.ch
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coveralls.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- gmail.gemspec
+- lib/gmail.rb
+- lib/gmail/client.rb
+- lib/gmail/client/base.rb
+- lib/gmail/client/plain.rb
+- lib/gmail/client/xoauth.rb
+- lib/gmail/client/xoauth2.rb
+- lib/gmail/imap_extensions.rb
+- lib/gmail/labels.rb
+- lib/gmail/mailbox.rb
+- lib/gmail/message.rb
+- lib/gmail/version.rb
+- spec/account.yml.example
+- spec/account.yml.obfus
+- spec/gmail/client/base_spec.rb
+- spec/gmail/client/plain_spec.rb
+- spec/gmail/client/xoauth2_spec.rb
+- spec/gmail/client/xoauth_spec.rb
+- spec/gmail/client_spec.rb
+- spec/gmail/imap_extensions_spec.rb
+- spec/gmail/labels_spec.rb
+- spec/gmail/mailbox_spec.rb
+- spec/gmail/message_spec.rb
+- spec/gmail_spec.rb
+- spec/recordings/gmail/_new_connects_with_client_and_give_it_context_when_block_given.yml
+- spec/recordings/gmail/_new_connects_with_gmail_service_and_return_valid_connection_object.yml
+- spec/recordings/gmail/_new_does_not_raise_error_when_couldn_t_connect_with_given_account.yml
+- spec/recordings/gmail/_new_raises_error_when_couldn_t_connect_with_given_account.yml
+- spec/recordings/gmail_client_plain/instance/delivers_inline_composed_email.yml
+- spec/recordings/gmail_client_plain/instance/does_not_log_in_when_given_gmail_account_is_invalid.yml
+- spec/recordings/gmail_client_plain/instance/does_not_raise_error_even_though_gmail_account_is_invalid.yml
+- spec/recordings/gmail_client_plain/instance/labels/checks_if_there_is_given_label_defined.yml
+- spec/recordings/gmail_client_plain/instance/labels/creates_given_label.yml
+- spec/recordings/gmail_client_plain/instance/labels/removes_existing_label.yml
+- spec/recordings/gmail_client_plain/instance/labels/returns_list_of_all_available_labels.yml
+- spec/recordings/gmail_client_plain/instance/properly_logs_in_to_valid_gmail_account.yml
+- spec/recordings/gmail_client_plain/instance/properly_logs_out_from_gmail.yml
+- spec/recordings/gmail_client_plain/instance/properly_switches_to_given_mailbox.yml
+- spec/recordings/gmail_client_plain/instance/properly_switches_to_given_mailbox_using_block_style.yml
+- spec/recordings/gmail_client_plain/instance/raises_error_when_given_gmail_account_is_invalid_and_errors_enabled.yml
+- spec/recordings/gmail_client_xo_auth2/instance/does_not_log_in_when_given_gmail_account_is_invalid.yml
+- spec/recordings/gmail_client_xo_auth2/instance/labels/checks_if_there_is_given_label_defined.yml
+- spec/recordings/gmail_client_xo_auth2/instance/labels/creates_given_label.yml
+- spec/recordings/gmail_client_xo_auth2/instance/labels/removes_existing_label.yml
+- spec/recordings/gmail_client_xo_auth2/instance/labels/returns_list_of_all_available_labels.yml
+- spec/recordings/gmail_client_xo_auth2/instance/properly_logs_in_to_valid_gmail_account.yml
+- spec/recordings/gmail_client_xo_auth2/instance/properly_logs_out_from_gmail.yml
+- spec/recordings/gmail_client_xo_auth2/instance/properly_switches_to_given_mailbox.yml
+- spec/recordings/gmail_client_xo_auth2/instance/properly_switches_to_given_mailbox_using_block_style.yml
+- spec/recordings/gmail_client_xo_auth2/instance/raises_error_when_given_gmail_account_is_invalid_and_errors_enabled.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/all/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/and_the_mailbox_does_not_exist/returns_the_mailbox_name_as_a_string.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/drafts/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/flagged/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/important/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/inbox/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/junk/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/sent/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_labels/localize/when_given_the_xl_is_tflag/trash/localizes_into_the_appropriate_label.yml
+- spec/recordings/gmail_mailbox/instance/counts_all_emails.yml
+- spec/recordings/gmail_mailbox/instance/finds_messages.yml
+- spec/recordings/gmail_mailbox/instance/waits_once.yml
+- spec/recordings/gmail_mailbox/instance/waits_repeatedly.yml
+- spec/recordings/gmail_mailbox/instance/waits_with_29-minute_re-issue.yml
+- spec/recordings/gmail_mailbox/instance/waits_with_an_unblocked_connection.yml
+- spec/recordings/gmail_mailbox/on_initialize/sets_client_and_name.yml
+- spec/recordings/gmail_mailbox/on_initialize/works_in_inbox_by_default.yml
+- spec/recordings/gmail_message/initialize/sets_prefetch_attrs.yml
+- spec/recordings/gmail_message/initialize/sets_uid_and_mailbox.yml
+- spec/recordings/gmail_message/instance_methods/deletes_itself.yml
+- spec/recordings/gmail_message/instance_methods/marks_itself_read.yml
+- spec/recordings/gmail_message/instance_methods/marks_itself_unread.yml
+- spec/recordings/gmail_message/instance_methods/moves_from_one_tag_to_other.yml
+- spec/recordings/gmail_message/instance_methods/removes_a_given_label.yml
+- spec/recordings/gmail_message/instance_methods/removes_a_given_label_with_old_method.yml
+- spec/recordings/gmail_message/instance_methods/sets_given_label.yml
+- spec/recordings/gmail_message/instance_methods/sets_given_label_with_old_method.yml
+- spec/spec_helper.rb
+- spec/support/imap_mock.rb
+- spec/support/obfuscation.rb
+homepage: http://github.com/gmailgem/gmail
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.7
+signing_key: 
+specification_version: 4
+summary: A Rubyesque interface to Gmail, with all the tools you will need.
+test_files: []

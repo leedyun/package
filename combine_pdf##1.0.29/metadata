@@ -1,0 +1,151 @@
+--- !ruby/object:Gem::Specification
+name: combine_pdf
+version: !ruby/object:Gem::Version
+  version: 1.0.29
+platform: ruby
+authors:
+- Boaz Segev
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ruby-rc4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+- !ruby/object:Gem::Dependency
+  name: matrix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-around
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A nifty gem, in pure Ruby, to parse PDF files and combine (merge) them
+  with other PDF files, number the pages, watermark them or stamp them, create tables,
+  add basic text objects etc` (all using the PDF file format).
+email:
+- bo@bowild.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- combine_pdf.gemspec
+- lib/combine_pdf.rb
+- lib/combine_pdf/api.rb
+- lib/combine_pdf/basic_writer.rb
+- lib/combine_pdf/decrypt.rb
+- lib/combine_pdf/exceptions.rb
+- lib/combine_pdf/filter.rb
+- lib/combine_pdf/fonts.rb
+- lib/combine_pdf/page_methods.rb
+- lib/combine_pdf/parser.rb
+- lib/combine_pdf/pdf_protected.rb
+- lib/combine_pdf/pdf_public.rb
+- lib/combine_pdf/renderer.rb
+- lib/combine_pdf/version.rb
+- test/automated
+- test/combine_pdf/load_test.rb
+- test/combine_pdf/renderer_test.rb
+- test/console
+- test/fixtures/files/sample_encrypted_pdf.pdf
+- test/fixtures/files/sample_pdf.pdf
+- test/named_dest
+homepage: https://github.com/boazsegev/combine_pdf
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 4
+summary: Combine, stamp and watermark PDF files in pure Ruby.
+test_files:
+- test/automated
+- test/combine_pdf/load_test.rb
+- test/combine_pdf/renderer_test.rb
+- test/console
+- test/fixtures/files/sample_encrypted_pdf.pdf
+- test/fixtures/files/sample_pdf.pdf
+- test/named_dest

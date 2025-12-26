@@ -1,0 +1,177 @@
+--- !ruby/object:Gem::Specification
+name: amazon_kinesis-client-ruby
+version: !ruby/object:Gem::Version
+  version: 1.0.1
+platform: ruby
+authors:
+- Soloman Weng
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: aws-kclrb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.0
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.27.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.27.1
+- !ruby/object:Gem::Dependency
+  name: ruby-maven
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+description: Amazon Kinesis Client Library for Ruby
+email:
+- solomanw@everydayhero.com.au
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- amazon_kinesis-client-ruby.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/jars/amazon-kinesis-client-1.2.0.jar
+- lib/jars/aws-java-sdk-1.7.13.jar
+- lib/jars/commons-codec-1.3.jar
+- lib/jars/commons-logging-1.1.1.jar
+- lib/jars/httpclient-4.2.jar
+- lib/jars/httpcore-4.2.jar
+- lib/jars/jackson-annotations-2.1.1.jar
+- lib/jars/jackson-core-2.1.1.jar
+- lib/jars/jackson-databind-2.1.1.jar
+- lib/jars/joda-time-2.5.jar
+- lib/kcl.rb
+- lib/kcl/advanced_record_processor.rb
+- lib/kcl/configuration.rb
+- lib/kcl/executor.rb
+- lib/kcl/executor_command_builder.rb
+- lib/kcl/record_processor.rb
+- lib/kcl/version.rb
+- pom.xml
+- shippable.yml
+- spec/configuration_spec.rb
+- spec/executor_command_builder_spec.rb
+- spec/executor_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - "~>"
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Amazon Kinesis Client Library for Ruby
+test_files:
+- spec/configuration_spec.rb
+- spec/executor_command_builder_spec.rb
+- spec/executor_spec.rb
+- spec/spec_helper.rb

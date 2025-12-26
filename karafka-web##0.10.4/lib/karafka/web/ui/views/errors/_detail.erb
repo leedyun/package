@@ -1,0 +1,49 @@
+<% if v.is_a?(Hash) %>
+  <% v.each do |k2, v2| %>
+    <tr>
+      <td>
+        <%= "#{k}.#{k2}" %>
+      </td>
+      <td>
+        <% if %w[sasl ssl].any? { |scope| k2.to_s.include?(scope) } %>
+          ***
+        <% elsif k2.to_s == 'tags' %>
+          <%== tags(v2) %>
+        <% elsif k2.to_s == 'first_offset' %>
+          <a href="<%= explorer_path(v[:topic], v[:partition], v[:first_offset]) %>">
+            <%= v2 %>
+          </a>
+        <% elsif k2.to_s == 'last_offset' %>
+          <a href="<%= explorer_path(v[:topic], v[:partition], v[:last_offset]) %>">
+            <%= v2 %>
+          </a>
+        <% elsif k2.to_s == 'committed_offset' && v2 >=0 %>
+          <a href="<%= explorer_path(v[:topic], v[:partition], v[:committed_offset]) %>">
+            <%= v2 %>
+          </a>
+        <% else %>
+          <%= v2 %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+<% else %>
+  <tr>
+    <td>
+      <%= k %>
+    </td>
+    <td>
+      <% case k
+         when :occurred_at
+      %>
+        <%== relative_time v %>
+      <% when :error_class %>
+        <code><%= v %></code>
+      <% when :type %>
+        <%== badge_secondary v %>
+      <% else %>
+        <%= v %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

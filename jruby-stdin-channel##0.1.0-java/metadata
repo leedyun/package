@@ -1,0 +1,80 @@
+--- !ruby/object:Gem::Specification
+name: jruby-stdin-channel
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: java
+authors:
+- Colin Surprenant
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2015-05-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  name: rspec
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+  name: rake
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 10.0.0
+description: JRuby extension to expose an interruptible NIO FileChannel for STDIN
+email:
+- colin.surprenant@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- jruby-stdin-channel.gemspec
+- lib/jruby-stdin-channel.rb
+- lib/jruby_stdin_channel.rb
+- lib/jruby_stdin_channel/jruby_stdin_channel.jar
+- lib/jruby_stdin_channel/jruby_stdin_channel.rb
+- lib/jruby_stdin_channel/version.rb
+- src/main/java/StdinChannelService.java
+- src/main/java/com/jrubystdinchannel/StdinChannelLibrary.java
+homepage: http://github.com/colinsurprenant/jruby-stdin-channel
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project:
+rubygems_version: 2.4.6
+signing_key:
+specification_version: 4
+summary: JRuby extension to expose an interruptible NIO FileChannel for STDIN
+test_files: []

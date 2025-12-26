@@ -1,0 +1,263 @@
+--- !ruby/object:Gem::Specification
+name: zip_tricks
+version: !ruby/object:Gem::Version
+  version: 5.6.0
+platform: ruby
+authors:
+- Julik Tarkhanov
+- Noah Berman
+- Dmitry Tymchuk
+- David Bosveld
+- Felix Bünemann
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2021-06-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.2'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: complexity_assert
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coderay
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: allocation_stats
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.1.5
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: wetransfer_style
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Stream out ZIP files from Ruby
+email:
+- me@julik.nl
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".document"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".yardopts"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- IMPLEMENTATION_DETAILS.md
+- LICENSE.txt
+- README.md
+- Rakefile
+- bench/buffered_crc32_bench.rb
+- examples/archive_size_estimate.rb
+- examples/config.ru
+- examples/deferred_write.rb
+- examples/parallel_compression_with_block_deflate.rb
+- examples/rack_application.rb
+- lib/zip_tricks.rb
+- lib/zip_tricks/block_deflate.rb
+- lib/zip_tricks/block_write.rb
+- lib/zip_tricks/file_reader.rb
+- lib/zip_tricks/file_reader/inflating_reader.rb
+- lib/zip_tricks/file_reader/stored_reader.rb
+- lib/zip_tricks/null_writer.rb
+- lib/zip_tricks/output_enumerator.rb
+- lib/zip_tricks/path_set.rb
+- lib/zip_tricks/rack_body.rb
+- lib/zip_tricks/rails_streaming.rb
+- lib/zip_tricks/remote_io.rb
+- lib/zip_tricks/remote_uncap.rb
+- lib/zip_tricks/size_estimator.rb
+- lib/zip_tricks/stream_crc32.rb
+- lib/zip_tricks/streamer.rb
+- lib/zip_tricks/streamer/deflated_writer.rb
+- lib/zip_tricks/streamer/entry.rb
+- lib/zip_tricks/streamer/stored_writer.rb
+- lib/zip_tricks/streamer/writable.rb
+- lib/zip_tricks/uniquify_filename.rb
+- lib/zip_tricks/version.rb
+- lib/zip_tricks/write_and_tell.rb
+- lib/zip_tricks/write_buffer.rb
+- lib/zip_tricks/zip_writer.rb
+- zip_tricks.gemspec
+homepage: https://github.com/wetransfer/zip_tricks
+licenses:
+- MIT (Hippocratic)
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key:
+specification_version: 4
+summary: Stream out ZIP files from Ruby
+test_files: []

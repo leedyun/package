@@ -1,0 +1,55 @@
+--- !ruby/object:Gem::Specification
+name: deb_version
+version: !ruby/object:Gem::Version
+  version: 1.0.2
+platform: ruby
+authors:
+- Nemo
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-05-30 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+- rubygem@captnemo.in
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- bin/console
+- bin/setup
+- lib/deb_version.rb
+- lib/deb_version/compare.rb
+- lib/deb_version/version.rb
+homepage: https://github.com/captn3m0/ruby-deb-version
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/captn3m0/ruby-deb-version
+  source_code_uri: https://github.com/captn3m0/ruby-deb-version
+  changelog_uri: https://github.com/captn3m0/ruby-deb-version/blob/main/README.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.25
+signing_key:
+specification_version: 4
+summary: A port of Debian Version comparison to Ruby.
+test_files: []

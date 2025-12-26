@@ -1,0 +1,276 @@
+--- !ruby/object:Gem::Specification
+name: grape
+version: !ruby/object:Gem::Version
+  version: 2.2.0
+platform: ruby
+authors:
+- Michael Bleigh
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: dry-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: mustermann-grape
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Ruby framework for rapid API development with great conventions.
+email:
+- michael@intridea.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- UPGRADING.md
+- grape.gemspec
+- grape.png
+- lib/grape.rb
+- lib/grape/api.rb
+- lib/grape/api/helpers.rb
+- lib/grape/api/instance.rb
+- lib/grape/content_types.rb
+- lib/grape/cookies.rb
+- lib/grape/dry_types.rb
+- lib/grape/dsl/api.rb
+- lib/grape/dsl/callbacks.rb
+- lib/grape/dsl/configuration.rb
+- lib/grape/dsl/desc.rb
+- lib/grape/dsl/headers.rb
+- lib/grape/dsl/helpers.rb
+- lib/grape/dsl/inside_route.rb
+- lib/grape/dsl/logger.rb
+- lib/grape/dsl/middleware.rb
+- lib/grape/dsl/parameters.rb
+- lib/grape/dsl/request_response.rb
+- lib/grape/dsl/routing.rb
+- lib/grape/dsl/settings.rb
+- lib/grape/dsl/validations.rb
+- lib/grape/endpoint.rb
+- lib/grape/env.rb
+- lib/grape/error_formatter.rb
+- lib/grape/error_formatter/base.rb
+- lib/grape/error_formatter/json.rb
+- lib/grape/error_formatter/txt.rb
+- lib/grape/error_formatter/xml.rb
+- lib/grape/exceptions/base.rb
+- lib/grape/exceptions/empty_message_body.rb
+- lib/grape/exceptions/incompatible_option_values.rb
+- lib/grape/exceptions/invalid_accept_header.rb
+- lib/grape/exceptions/invalid_formatter.rb
+- lib/grape/exceptions/invalid_message_body.rb
+- lib/grape/exceptions/invalid_response.rb
+- lib/grape/exceptions/invalid_version_header.rb
+- lib/grape/exceptions/invalid_versioner_option.rb
+- lib/grape/exceptions/invalid_with_option_for_represent.rb
+- lib/grape/exceptions/method_not_allowed.rb
+- lib/grape/exceptions/missing_group_type.rb
+- lib/grape/exceptions/missing_mime_type.rb
+- lib/grape/exceptions/missing_option.rb
+- lib/grape/exceptions/missing_vendor_option.rb
+- lib/grape/exceptions/too_many_multipart_files.rb
+- lib/grape/exceptions/unknown_options.rb
+- lib/grape/exceptions/unknown_parameter.rb
+- lib/grape/exceptions/unknown_validator.rb
+- lib/grape/exceptions/unsupported_group_type.rb
+- lib/grape/exceptions/validation.rb
+- lib/grape/exceptions/validation_array_errors.rb
+- lib/grape/exceptions/validation_errors.rb
+- lib/grape/extensions/active_support/hash_with_indifferent_access.rb
+- lib/grape/extensions/hash.rb
+- lib/grape/extensions/hashie/mash.rb
+- lib/grape/formatter.rb
+- lib/grape/formatter/json.rb
+- lib/grape/formatter/serializable_hash.rb
+- lib/grape/formatter/txt.rb
+- lib/grape/formatter/xml.rb
+- lib/grape/http/headers.rb
+- lib/grape/json.rb
+- lib/grape/locale/en.yml
+- lib/grape/middleware/auth/base.rb
+- lib/grape/middleware/auth/dsl.rb
+- lib/grape/middleware/auth/strategies.rb
+- lib/grape/middleware/auth/strategy_info.rb
+- lib/grape/middleware/base.rb
+- lib/grape/middleware/error.rb
+- lib/grape/middleware/filter.rb
+- lib/grape/middleware/formatter.rb
+- lib/grape/middleware/globals.rb
+- lib/grape/middleware/helpers.rb
+- lib/grape/middleware/stack.rb
+- lib/grape/middleware/versioner.rb
+- lib/grape/middleware/versioner/accept_version_header.rb
+- lib/grape/middleware/versioner/header.rb
+- lib/grape/middleware/versioner/param.rb
+- lib/grape/middleware/versioner/path.rb
+- lib/grape/middleware/versioner_helpers.rb
+- lib/grape/namespace.rb
+- lib/grape/parser.rb
+- lib/grape/parser/json.rb
+- lib/grape/parser/xml.rb
+- lib/grape/path.rb
+- lib/grape/presenters/presenter.rb
+- lib/grape/railtie.rb
+- lib/grape/request.rb
+- lib/grape/router.rb
+- lib/grape/router/base_route.rb
+- lib/grape/router/greedy_route.rb
+- lib/grape/router/pattern.rb
+- lib/grape/router/route.rb
+- lib/grape/serve_stream/file_body.rb
+- lib/grape/serve_stream/sendfile_response.rb
+- lib/grape/serve_stream/stream_response.rb
+- lib/grape/types/invalid_value.rb
+- lib/grape/util/base_inheritable.rb
+- lib/grape/util/cache.rb
+- lib/grape/util/endpoint_configuration.rb
+- lib/grape/util/header.rb
+- lib/grape/util/inheritable_setting.rb
+- lib/grape/util/inheritable_values.rb
+- lib/grape/util/lazy/block.rb
+- lib/grape/util/lazy/object.rb
+- lib/grape/util/lazy/value.rb
+- lib/grape/util/lazy/value_array.rb
+- lib/grape/util/lazy/value_enumerable.rb
+- lib/grape/util/lazy/value_hash.rb
+- lib/grape/util/media_type.rb
+- lib/grape/util/reverse_stackable_values.rb
+- lib/grape/util/stackable_values.rb
+- lib/grape/util/strict_hash_configuration.rb
+- lib/grape/validations.rb
+- lib/grape/validations/attributes_doc.rb
+- lib/grape/validations/attributes_iterator.rb
+- lib/grape/validations/contract_scope.rb
+- lib/grape/validations/multiple_attributes_iterator.rb
+- lib/grape/validations/params_scope.rb
+- lib/grape/validations/single_attribute_iterator.rb
+- lib/grape/validations/types.rb
+- lib/grape/validations/types/array_coercer.rb
+- lib/grape/validations/types/build_coercer.rb
+- lib/grape/validations/types/custom_type_coercer.rb
+- lib/grape/validations/types/custom_type_collection_coercer.rb
+- lib/grape/validations/types/dry_type_coercer.rb
+- lib/grape/validations/types/file.rb
+- lib/grape/validations/types/invalid_value.rb
+- lib/grape/validations/types/json.rb
+- lib/grape/validations/types/multiple_type_coercer.rb
+- lib/grape/validations/types/primitive_coercer.rb
+- lib/grape/validations/types/set_coercer.rb
+- lib/grape/validations/types/variant_collection_coercer.rb
+- lib/grape/validations/validator_factory.rb
+- lib/grape/validations/validators/all_or_none_of_validator.rb
+- lib/grape/validations/validators/allow_blank_validator.rb
+- lib/grape/validations/validators/as_validator.rb
+- lib/grape/validations/validators/at_least_one_of_validator.rb
+- lib/grape/validations/validators/base.rb
+- lib/grape/validations/validators/coerce_validator.rb
+- lib/grape/validations/validators/default_validator.rb
+- lib/grape/validations/validators/exactly_one_of_validator.rb
+- lib/grape/validations/validators/except_values_validator.rb
+- lib/grape/validations/validators/length_validator.rb
+- lib/grape/validations/validators/multiple_params_base.rb
+- lib/grape/validations/validators/mutual_exclusion_validator.rb
+- lib/grape/validations/validators/presence_validator.rb
+- lib/grape/validations/validators/regexp_validator.rb
+- lib/grape/validations/validators/same_as_validator.rb
+- lib/grape/validations/validators/values_validator.rb
+- lib/grape/version.rb
+- lib/grape/xml.rb
+homepage: https://github.com/ruby-grape/grape
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/ruby-grape/grape/issues
+  changelog_uri: https://github.com/ruby-grape/grape/blob/v2.2.0/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/grape/2.2.0
+  source_code_uri: https://github.com/ruby-grape/grape/tree/v2.2.0
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.13
+signing_key:
+specification_version: 4
+summary: A simple Ruby framework for building REST-like APIs.
+test_files: []

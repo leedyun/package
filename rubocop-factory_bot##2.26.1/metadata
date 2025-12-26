@@ -1,0 +1,92 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-factory_bot
+version: !ruby/object:Gem::Version
+  version: 2.26.1
+platform: ruby
+authors:
+- John Backus
+- Ian MacLeod
+- Phil Pirozhkov
+- Maxim Krizhanovsky
+- Andrew Bromwich
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-06-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.61'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.61'
+description: |
+  Code style checking for factory_bot files.
+  A plugin for the RuboCop code style enforcing & linting tool.
+email: 
+executables: []
+extensions: []
+extra_rdoc_files:
+- MIT-LICENSE.md
+- README.md
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- MIT-LICENSE.md
+- README.md
+- config/default.yml
+- lib/rubocop-factory_bot.rb
+- lib/rubocop/cop/factory_bot/association_style.rb
+- lib/rubocop/cop/factory_bot/attribute_defined_statically.rb
+- lib/rubocop/cop/factory_bot/consistent_parentheses_style.rb
+- lib/rubocop/cop/factory_bot/create_list.rb
+- lib/rubocop/cop/factory_bot/excessive_create_list.rb
+- lib/rubocop/cop/factory_bot/factory_association_with_strategy.rb
+- lib/rubocop/cop/factory_bot/factory_class_name.rb
+- lib/rubocop/cop/factory_bot/factory_name_style.rb
+- lib/rubocop/cop/factory_bot/id_sequence.rb
+- lib/rubocop/cop/factory_bot/mixin/configurable_explicit_only.rb
+- lib/rubocop/cop/factory_bot/redundant_factory_option.rb
+- lib/rubocop/cop/factory_bot/syntax_methods.rb
+- lib/rubocop/cop/factory_bot_cops.rb
+- lib/rubocop/factory_bot/config_formatter.rb
+- lib/rubocop/factory_bot/cop/generator.rb
+- lib/rubocop/factory_bot/description_extractor.rb
+- lib/rubocop/factory_bot/factory_bot.rb
+- lib/rubocop/factory_bot/language.rb
+- lib/rubocop/factory_bot/version.rb
+homepage: https://github.com/rubocop/rubocop-factory_bot
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/rubocop/rubocop-factory_bot/blob/master/CHANGELOG.md
+  documentation_uri: https://docs.rubocop.org/rubocop-factory_bot/
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key: 
+specification_version: 4
+summary: Code style checking for factory_bot files
+test_files: []

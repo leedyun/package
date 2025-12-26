@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "pry/shell"
+require "pry/shell/cli"
+
+Pry::Shell::CLI.run

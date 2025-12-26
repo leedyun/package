@@ -1,0 +1,240 @@
+--- !ruby/object:Gem::Specification
+name: slim-rails
+version: !ruby/object:Gem::Version
+  version: 3.7.0
+platform: ruby
+authors:
+- Leonardo Almeida
+- Janusz Mordarski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: slim
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - "!="
+      - !ruby/object:Gem::Version
+        version: 5.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: sprockets-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slim_lint
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.24.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.24.0
+- !ruby/object:Gem::Dependency
+  name: rocco
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: awesome_print
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: actionmailer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: standardrb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Provides the generator settings required for Rails to use Slim
+email:
+- lalmeida08@gmail.com
+- janusz.m@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/generators/slim/authentication/authentication_generator.rb
+- lib/generators/slim/authentication/templates/passwords/edit.html.slim
+- lib/generators/slim/authentication/templates/passwords/new.html.slim
+- lib/generators/slim/authentication/templates/sessions/new.html.slim
+- lib/generators/slim/controller/controller_generator.rb
+- lib/generators/slim/controller/templates/view.html.slim
+- lib/generators/slim/mailer/mailer_generator.rb
+- lib/generators/slim/mailer/templates/layout.html.slim
+- lib/generators/slim/mailer/templates/layout.text.slim
+- lib/generators/slim/mailer/templates/view.html.slim
+- lib/generators/slim/mailer/templates/view.text.slim
+- lib/generators/slim/scaffold/legacy_templates/_form.html.slim.tt
+- lib/generators/slim/scaffold/legacy_templates/edit.html.slim.tt
+- lib/generators/slim/scaffold/legacy_templates/index.html.slim.tt
+- lib/generators/slim/scaffold/legacy_templates/new.html.slim.tt
+- lib/generators/slim/scaffold/legacy_templates/show.html.slim.tt
+- lib/generators/slim/scaffold/scaffold_generator.rb
+- lib/generators/slim/scaffold/templates/_form.html.slim.tt
+- lib/generators/slim/scaffold/templates/edit.html.slim.tt
+- lib/generators/slim/scaffold/templates/index.html.slim.tt
+- lib/generators/slim/scaffold/templates/new.html.slim.tt
+- lib/generators/slim/scaffold/templates/partial.html.slim.tt
+- lib/generators/slim/scaffold/templates/show.html.slim.tt
+- lib/slim-rails.rb
+- lib/slim-rails/register_engine.rb
+- lib/slim-rails/version.rb
+homepage: https://github.com/slim-template/slim-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.23
+signing_key:
+specification_version: 4
+summary: Slim templates generator for Rails
+test_files: []

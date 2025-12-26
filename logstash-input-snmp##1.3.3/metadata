@@ -1,0 +1,496 @@
+--- !ruby/object:Gem::Specification
+name: logstash-input-snmp
+version: !ruby/object:Gem::Version
+  version: 1.3.3
+platform: ruby
+authors:
+- Elasticsearch
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-08-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  name: logstash-mixin-ecs_compatibility_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: logstash-mixin-event_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: logstash-mixin-validator_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-codec-plain
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.22
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  name: stud
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.0.22
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: rspec-wait
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- DEVELOPER.md
+- Gemfile
+- LICENSE
+- README.md
+- docs/index.asciidoc
+- lib/logstash-input-snmp_jars.rb
+- lib/logstash/inputs/snmp.rb
+- lib/logstash/inputs/snmp/base_client.rb
+- lib/logstash/inputs/snmp/client.rb
+- lib/logstash/inputs/snmp/clientv3.rb
+- lib/logstash/inputs/snmp/mib.rb
+- lib/mibs/ietf/ACCOUNTING-CONTROL-MIB.dic
+- lib/mibs/ietf/ADSL-LINE-EXT-MIB.dic
+- lib/mibs/ietf/ADSL-LINE-MIB.dic
+- lib/mibs/ietf/ADSL-TC-MIB.dic
+- lib/mibs/ietf/ADSL2-LINE-MIB.dic
+- lib/mibs/ietf/ADSL2-LINE-TC-MIB.dic
+- lib/mibs/ietf/AGENTX-MIB.dic
+- lib/mibs/ietf/AGGREGATE-MIB.dic
+- lib/mibs/ietf/ALARM-MIB.dic
+- lib/mibs/ietf/APM-MIB.dic
+- lib/mibs/ietf/APPC-MIB.dic
+- lib/mibs/ietf/APPLETALK-MIB.dic
+- lib/mibs/ietf/APPLICATION-MIB.dic
+- lib/mibs/ietf/APPN-DLUR-MIB.dic
+- lib/mibs/ietf/APPN-MIB.dic
+- lib/mibs/ietf/APPN-TRAP-MIB.dic
+- lib/mibs/ietf/APS-MIB.dic
+- lib/mibs/ietf/ARC-MIB.dic
+- lib/mibs/ietf/ATM-ACCOUNTING-INFORMATION-MIB.dic
+- lib/mibs/ietf/ATM-MIB.dic
+- lib/mibs/ietf/ATM-TC-MIB.dic
+- lib/mibs/ietf/ATM2-MIB.dic
+- lib/mibs/ietf/BFD-STD-MIB.dic
+- lib/mibs/ietf/BFD-TC-STD-MIB.dic
+- lib/mibs/ietf/BGP4-MIB.dic
+- lib/mibs/ietf/BLDG-HVAC-MIB.dic
+- lib/mibs/ietf/BRIDGE-MIB.dic
+- lib/mibs/ietf/CAPWAP-BASE-MIB.dic
+- lib/mibs/ietf/CAPWAP-DOT11-MIB.dic
+- lib/mibs/ietf/CHARACTER-MIB.dic
+- lib/mibs/ietf/CIRCUIT-IF-MIB.dic
+- lib/mibs/ietf/CLNS-MIB.dic
+- lib/mibs/ietf/COFFEE-POT-MIB.dic
+- lib/mibs/ietf/COPS-CLIENT-MIB.dic
+- lib/mibs/ietf/DECNET-PHIV-MIB.dic
+- lib/mibs/ietf/DIAL-CONTROL-MIB.dic
+- lib/mibs/ietf/DIFFSERV-CONFIG-MIB.dic
+- lib/mibs/ietf/DIFFSERV-MIB.dic
+- lib/mibs/ietf/DIRECTORY-SERVER-MIB.dic
+- lib/mibs/ietf/DISMAN-EVENT-MIB.dic
+- lib/mibs/ietf/DISMAN-EXPRESSION-MIB.dic
+- lib/mibs/ietf/DISMAN-NSLOOKUP-MIB.dic
+- lib/mibs/ietf/DISMAN-PING-MIB.dic
+- lib/mibs/ietf/DISMAN-SCHEDULE-MIB.dic
+- lib/mibs/ietf/DISMAN-SCRIPT-MIB.dic
+- lib/mibs/ietf/DISMAN-TRACEROUTE-MIB.dic
+- lib/mibs/ietf/DLSW-MIB.dic
+- lib/mibs/ietf/DNS-RESOLVER-MIB.dic
+- lib/mibs/ietf/DNS-SERVER-MIB.dic
+- lib/mibs/ietf/DOCS-BPI-MIB.dic
+- lib/mibs/ietf/DOCS-CABLE-DEVICE-MIB.dic
+- lib/mibs/ietf/DOCS-IETF-BPI2-MIB.dic
+- lib/mibs/ietf/DOCS-IETF-CABLE-DEVICE-NOTIFICATION-MIB.dic
+- lib/mibs/ietf/DOCS-IETF-QOS-MIB.dic
+- lib/mibs/ietf/DOCS-IETF-SUBMGT-MIB.dic
+- lib/mibs/ietf/DOCS-IF-MIB.dic
+- lib/mibs/ietf/DOT12-IF-MIB.dic
+- lib/mibs/ietf/DOT12-RPTR-MIB.dic
+- lib/mibs/ietf/DOT3-EPON-MIB.dic
+- lib/mibs/ietf/DOT3-OAM-MIB.dic
+- lib/mibs/ietf/DS0-MIB.dic
+- lib/mibs/ietf/DS0BUNDLE-MIB.dic
+- lib/mibs/ietf/DS1-MIB.dic
+- lib/mibs/ietf/DS3-MIB.dic
+- lib/mibs/ietf/DSA-MIB.dic
+- lib/mibs/ietf/DSMON-MIB.dic
+- lib/mibs/ietf/DVB-RCS-MIB.dic
+- lib/mibs/ietf/EBN-MIB.dic
+- lib/mibs/ietf/EFM-CU-MIB.dic
+- lib/mibs/ietf/ENTITY-MIB.dic
+- lib/mibs/ietf/ENTITY-SENSOR-MIB.dic
+- lib/mibs/ietf/ENTITY-STATE-MIB.dic
+- lib/mibs/ietf/ENTITY-STATE-TC-MIB.dic
+- lib/mibs/ietf/ETHER-CHIPSET-MIB.dic
+- lib/mibs/ietf/EtherLike-MIB.dic
+- lib/mibs/ietf/FC-MGMT-MIB.dic
+- lib/mibs/ietf/FCIP-MGMT-MIB.dic
+- lib/mibs/ietf/FDDI-SMT73-MIB.dic
+- lib/mibs/ietf/FIBRE-CHANNEL-FE-MIB.dic
+- lib/mibs/ietf/FLOAT-TC-MIB.dic
+- lib/mibs/ietf/FLOW-METER-MIB.dic
+- lib/mibs/ietf/FORCES-MIB.dic
+- lib/mibs/ietf/FR-ATM-PVC-SERVICE-IWF-MIB.dic
+- lib/mibs/ietf/FR-MFR-MIB.dic
+- lib/mibs/ietf/FRAME-RELAY-DTE-MIB.dic
+- lib/mibs/ietf/FRNETSERV-MIB.dic
+- lib/mibs/ietf/FRSLD-MIB.dic
+- lib/mibs/ietf/Finisher-MIB.dic
+- lib/mibs/ietf/GMPLS-LABEL-STD-MIB.dic
+- lib/mibs/ietf/GMPLS-LSR-STD-MIB.dic
+- lib/mibs/ietf/GMPLS-TC-STD-MIB.dic
+- lib/mibs/ietf/GMPLS-TE-STD-MIB.dic
+- lib/mibs/ietf/GSMP-MIB.dic
+- lib/mibs/ietf/HC-ALARM-MIB.dic
+- lib/mibs/ietf/HC-PerfHist-TC-MIB.dic
+- lib/mibs/ietf/HC-RMON-MIB.dic
+- lib/mibs/ietf/HDSL2-SHDSL-LINE-MIB.dic
+- lib/mibs/ietf/HOST-RESOURCES-MIB.dic
+- lib/mibs/ietf/HPR-IP-MIB.dic
+- lib/mibs/ietf/HPR-MIB.dic
+- lib/mibs/ietf/IANA-ITU-ALARM-TC-MIB.dic
+- lib/mibs/ietf/IF-CAP-STACK-MIB.dic
+- lib/mibs/ietf/IF-INVERTED-STACK-MIB.dic
+- lib/mibs/ietf/IF-MIB.dic
+- lib/mibs/ietf/IFCP-MGMT-MIB.dic
+- lib/mibs/ietf/IGMP-STD-MIB.dic
+- lib/mibs/ietf/INET-ADDRESS-MIB.dic
+- lib/mibs/ietf/INTEGRATED-SERVICES-GUARANTEED-MIB.dic
+- lib/mibs/ietf/INTEGRATED-SERVICES-MIB.dic
+- lib/mibs/ietf/INTERFACETOPN-MIB.dic
+- lib/mibs/ietf/IP-FORWARD-MIB.dic
+- lib/mibs/ietf/IP-MIB.dic
+- lib/mibs/ietf/IPATM-IPMC-MIB.dic
+- lib/mibs/ietf/IPFIX-MIB.dic
+- lib/mibs/ietf/IPFIX-SELECTOR-MIB.dic
+- lib/mibs/ietf/IPMCAST-MIB.dic
+- lib/mibs/ietf/IPMROUTE-STD-MIB.dic
+- lib/mibs/ietf/IPOA-MIB.dic
+- lib/mibs/ietf/IPS-AUTH-MIB.dic
+- lib/mibs/ietf/IPSEC-SPD-MIB.dic
+- lib/mibs/ietf/IPV6-FLOW-LABEL-MIB.dic
+- lib/mibs/ietf/IPV6-ICMP-MIB.dic
+- lib/mibs/ietf/IPV6-MIB.dic
+- lib/mibs/ietf/IPV6-MLD-MIB.dic
+- lib/mibs/ietf/IPV6-TCP-MIB.dic
+- lib/mibs/ietf/IPV6-UDP-MIB.dic
+- lib/mibs/ietf/ISCSI-MIB.dic
+- lib/mibs/ietf/ISDN-MIB.dic
+- lib/mibs/ietf/ISIS-MIB.dic
+- lib/mibs/ietf/ISNS-MIB.dic
+- lib/mibs/ietf/ITU-ALARM-MIB.dic
+- lib/mibs/ietf/ITU-ALARM-TC-MIB.dic
+- lib/mibs/ietf/Job-Monitoring-MIB.dic
+- lib/mibs/ietf/L2TP-MIB.dic
+- lib/mibs/ietf/LANGTAG-TC-MIB.dic
+- lib/mibs/ietf/LISP-MIB.dic
+- lib/mibs/ietf/LMP-MIB.dic
+- lib/mibs/ietf/MALLOC-MIB.dic
+- lib/mibs/ietf/MAU-MIB.dic
+- lib/mibs/ietf/MIDCOM-MIB.dic
+- lib/mibs/ietf/MIOX25-MIB.dic
+- lib/mibs/ietf/MIP-MIB.dic
+- lib/mibs/ietf/MOBILEIPV6-MIB.dic
+- lib/mibs/ietf/MPLS-FTN-STD-MIB.dic
+- lib/mibs/ietf/MPLS-L3VPN-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LC-ATM-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LC-FR-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LDP-ATM-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LDP-FRAME-RELAY-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LDP-GENERIC-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LDP-STD-MIB.dic
+- lib/mibs/ietf/MPLS-LSR-STD-MIB.dic
+- lib/mibs/ietf/MPLS-TC-STD-MIB.dic
+- lib/mibs/ietf/MPLS-TE-STD-MIB.dic
+- lib/mibs/ietf/MSDP-MIB.dic
+- lib/mibs/ietf/MTA-MIB.dic
+- lib/mibs/ietf/Modem-MIB.dic
+- lib/mibs/ietf/NAT-MIB.dic
+- lib/mibs/ietf/NETWORK-SERVICES-MIB.dic
+- lib/mibs/ietf/NHDP-MIB.dic
+- lib/mibs/ietf/NHRP-MIB.dic
+- lib/mibs/ietf/NOTIFICATION-LOG-MIB.dic
+- lib/mibs/ietf/NTPv4-MIB.dic
+- lib/mibs/ietf/OPT-IF-MIB.dic
+- lib/mibs/ietf/OSPF-MIB.dic
+- lib/mibs/ietf/OSPF-TRAP-MIB.dic
+- lib/mibs/ietf/OSPFV3-MIB.dic
+- lib/mibs/ietf/P-BRIDGE-MIB.dic
+- lib/mibs/ietf/PARALLEL-MIB.dic
+- lib/mibs/ietf/PIM-MIB.dic
+- lib/mibs/ietf/PIM-STD-MIB.dic
+- lib/mibs/ietf/PINT-MIB.dic
+- lib/mibs/ietf/PKTC-IETF-MTA-MIB.dic
+- lib/mibs/ietf/PKTC-IETF-SIG-MIB.dic
+- lib/mibs/ietf/PMIPV6-MIB.dic
+- lib/mibs/ietf/PMIPV6-TC-MIB.dic
+- lib/mibs/ietf/POLICY-BASED-MANAGEMENT-MIB.dic
+- lib/mibs/ietf/POWER-ETHERNET-MIB.dic
+- lib/mibs/ietf/PPP-BRIDGE-NCP-MIB.dic
+- lib/mibs/ietf/PPP-IP-NCP-MIB.dic
+- lib/mibs/ietf/PPP-LCP-MIB.dic
+- lib/mibs/ietf/PPP-SEC-MIB.dic
+- lib/mibs/ietf/PSAMP-MIB.dic
+- lib/mibs/ietf/PTOPO-MIB.dic
+- lib/mibs/ietf/PW-ATM-MIB.dic
+- lib/mibs/ietf/PW-CEP-STD-MIB.dic
+- lib/mibs/ietf/PW-STD-MIB.dic
+- lib/mibs/ietf/PW-TC-STD-MIB.dic
+- lib/mibs/ietf/PW-TDM-MIB.dic
+- lib/mibs/ietf/PerfHist-TC-MIB.dic
+- lib/mibs/ietf/Printer-MIB.dic
+- lib/mibs/ietf/Q-BRIDGE-MIB.dic
+- lib/mibs/ietf/RADIUS-ACC-CLIENT-MIB.dic
+- lib/mibs/ietf/RADIUS-ACC-SERVER-MIB.dic
+- lib/mibs/ietf/RADIUS-AUTH-CLIENT-MIB.dic
+- lib/mibs/ietf/RADIUS-AUTH-SERVER-MIB.dic
+- lib/mibs/ietf/RADIUS-DYNAUTH-CLIENT-MIB.dic
+- lib/mibs/ietf/RADIUS-DYNAUTH-SERVER-MIB.dic
+- lib/mibs/ietf/RAQMON-MIB.dic
+- lib/mibs/ietf/RBRIDGE-MIB.dic
+- lib/mibs/ietf/RDBMS-MIB.dic
+- lib/mibs/ietf/RFC1065-SMI.dic
+- lib/mibs/ietf/RFC1155-SMI.dic
+- lib/mibs/ietf/RFC1158-MIB.dic
+- lib/mibs/ietf/RFC1213-MIB.dic
+- lib/mibs/ietf/RFC1269-MIB.dic
+- lib/mibs/ietf/RFC1271-MIB.dic
+- lib/mibs/ietf/RFC1285-MIB.dic
+- lib/mibs/ietf/RFC1316-MIB.dic
+- lib/mibs/ietf/RFC1381-MIB.dic
+- lib/mibs/ietf/RFC1382-MIB.dic
+- lib/mibs/ietf/RFC1414-MIB.dic
+- lib/mibs/ietf/RIPv2-MIB.dic
+- lib/mibs/ietf/RMON-MIB.dic
+- lib/mibs/ietf/RMON2-MIB.dic
+- lib/mibs/ietf/ROHC-MIB.dic
+- lib/mibs/ietf/ROHC-RTP-MIB.dic
+- lib/mibs/ietf/ROHC-UNCOMPRESSED-MIB.dic
+- lib/mibs/ietf/RPKI-ROUTER-MIB.dic
+- lib/mibs/ietf/RS-232-MIB.dic
+- lib/mibs/ietf/RSERPOOL-MIB.dic
+- lib/mibs/ietf/RSTP-MIB.dic
+- lib/mibs/ietf/RSVP-MIB.dic
+- lib/mibs/ietf/RTP-MIB.dic
+- lib/mibs/ietf/SCSI-MIB.dic
+- lib/mibs/ietf/SCTP-MIB.dic
+- lib/mibs/ietf/SFLOW-MIB.dic
+- lib/mibs/ietf/SIP-COMMON-MIB.dic
+- lib/mibs/ietf/SIP-MIB.dic
+- lib/mibs/ietf/SIP-SERVER-MIB.dic
+- lib/mibs/ietf/SIP-TC-MIB.dic
+- lib/mibs/ietf/SIP-UA-MIB.dic
+- lib/mibs/ietf/SLAPM-MIB.dic
+- lib/mibs/ietf/SMON-MIB.dic
+- lib/mibs/ietf/SNA-NAU-MIB.dic
+- lib/mibs/ietf/SNA-SDLC-MIB.dic
+- lib/mibs/ietf/SNMP-COMMUNITY-MIB.dic
+- lib/mibs/ietf/SNMP-FRAMEWORK-MIB.dic
+- lib/mibs/ietf/SNMP-MPD-MIB.dic
+- lib/mibs/ietf/SNMP-NOTIFICATION-MIB.dic
+- lib/mibs/ietf/SNMP-PROXY-MIB.dic
+- lib/mibs/ietf/SNMP-REPEATER-MIB.dic
+- lib/mibs/ietf/SNMP-SSH-TM-MIB.dic
+- lib/mibs/ietf/SNMP-TARGET-MIB.dic
+- lib/mibs/ietf/SNMP-TLS-TM-MIB.dic
+- lib/mibs/ietf/SNMP-TSM-MIB.dic
+- lib/mibs/ietf/SNMP-USER-BASED-SM-MIB.dic
+- lib/mibs/ietf/SNMP-USM-AES-MIB.dic
+- lib/mibs/ietf/SNMP-USM-DH-OBJECTS-MIB.dic
+- lib/mibs/ietf/SNMP-VIEW-BASED-ACM-MIB.dic
+- lib/mibs/ietf/SNMPv2-MIB.dic
+- lib/mibs/ietf/SNMPv2-SMI.dic
+- lib/mibs/ietf/SNMPv2-USEC-MIB.dic
+- lib/mibs/ietf/SONET-MIB.dic
+- lib/mibs/ietf/SOURCE-ROUTING-MIB.dic
+- lib/mibs/ietf/SSPM-MIB.dic
+- lib/mibs/ietf/SYSAPPL-MIB.dic
+- lib/mibs/ietf/T11-FC-FABRIC-ADDR-MGR-MIB.dic
+- lib/mibs/ietf/T11-FC-FABRIC-CONFIG-SERVER-MIB.dic
+- lib/mibs/ietf/T11-FC-FABRIC-LOCK-MIB.dic
+- lib/mibs/ietf/T11-FC-FSPF-MIB.dic
+- lib/mibs/ietf/T11-FC-NAME-SERVER-MIB.dic
+- lib/mibs/ietf/T11-FC-ROUTE-MIB.dic
+- lib/mibs/ietf/T11-FC-RSCN-MIB.dic
+- lib/mibs/ietf/T11-FC-VIRTUAL-FABRIC-MIB.dic
+- lib/mibs/ietf/T11-FC-ZONE-SERVER-MIB.dic
+- lib/mibs/ietf/T11-TC-MIB.dic
+- lib/mibs/ietf/TCP-ESTATS-MIB.dic
+- lib/mibs/ietf/TCP-MIB.dic
+- lib/mibs/ietf/TCPIPX-MIB.dic
+- lib/mibs/ietf/TE-LINK-STD-MIB.dic
+- lib/mibs/ietf/TE-MIB.dic
+- lib/mibs/ietf/TED-MIB.dic
+- lib/mibs/ietf/TIME-AGGREGATE-MIB.dic
+- lib/mibs/ietf/TN3270E-MIB.dic
+- lib/mibs/ietf/TN3270E-RT-MIB.dic
+- lib/mibs/ietf/TOKEN-RING-RMON-MIB.dic
+- lib/mibs/ietf/TOKENRING-MIB.dic
+- lib/mibs/ietf/TOKENRING-STATION-SR-MIB.dic
+- lib/mibs/ietf/TRANSPORT-ADDRESS-MIB.dic
+- lib/mibs/ietf/TRIP-MIB.dic
+- lib/mibs/ietf/TRIP-TC-MIB.dic
+- lib/mibs/ietf/TUNNEL-MIB.dic
+- lib/mibs/ietf/UDP-MIB.dic
+- lib/mibs/ietf/UDPLITE-MIB.dic
+- lib/mibs/ietf/UPS-MIB.dic
+- lib/mibs/ietf/URI-TC-MIB.dic
+- lib/mibs/ietf/UUID-TC-MIB.dic
+- lib/mibs/ietf/VDSL-LINE-EXT-MCM-MIB.dic
+- lib/mibs/ietf/VDSL-LINE-EXT-SCM-MIB.dic
+- lib/mibs/ietf/VDSL-LINE-MIB.dic
+- lib/mibs/ietf/VDSL2-LINE-MIB.dic
+- lib/mibs/ietf/VDSL2-LINE-TC-MIB.dic
+- lib/mibs/ietf/VPN-TC-STD-MIB.dic
+- lib/mibs/ietf/VRRP-MIB.dic
+- lib/mibs/ietf/VRRPV3-MIB.dic
+- lib/mibs/ietf/WWW-MIB.dic
+- lib/mibs/logstash/iso.dic
+- logstash-input-snmp.gemspec
+- spec/fixtures/RFC1213-MIB.dic
+- spec/fixtures/collision.dic
+- spec/inputs/integration/it_spec.rb
+- spec/inputs/snmp/base_client_spec.rb
+- spec/inputs/snmp/mib_spec.rb
+- spec/inputs/snmp_spec.rb
+- vendor/jar-dependencies/org/snmp4j/snmp4j/2.8.4/snmp4j-2.8.4.jar
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache-2.0
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: input
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+- vendor/jar-dependencies
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key:
+specification_version: 4
+summary: SNMP input plugin
+test_files:
+- spec/fixtures/RFC1213-MIB.dic
+- spec/fixtures/collision.dic
+- spec/inputs/integration/it_spec.rb
+- spec/inputs/snmp/base_client_spec.rb
+- spec/inputs/snmp/mib_spec.rb
+- spec/inputs/snmp_spec.rb

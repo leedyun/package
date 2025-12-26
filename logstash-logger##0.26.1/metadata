@@ -1,0 +1,336 @@
+--- !ruby/object:Gem::Specification
+name: logstash-logger
+version: !ruby/object:Gem::Version
+  version: 0.26.1
+platform: ruby
+authors:
+- David Butler
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-02-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logstash-event
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: poseidon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-kinesis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-firehose
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: wwtd
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby logger that writes directly to LogStash
+email:
+- dwbutler@ucla.edu
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- gemfiles/rails_3.2.gemfile
+- gemfiles/rails_4.0.gemfile
+- gemfiles/rails_4.1.gemfile
+- gemfiles/rails_4.2.gemfile
+- gemfiles/rails_5.0.gemfile
+- gemfiles/rails_5.1.gemfile
+- lib/logstash-logger.rb
+- lib/logstash-logger/buffer.rb
+- lib/logstash-logger/configuration.rb
+- lib/logstash-logger/device.rb
+- lib/logstash-logger/device/aws_stream.rb
+- lib/logstash-logger/device/balancer.rb
+- lib/logstash-logger/device/base.rb
+- lib/logstash-logger/device/connectable.rb
+- lib/logstash-logger/device/file.rb
+- lib/logstash-logger/device/firehose.rb
+- lib/logstash-logger/device/io.rb
+- lib/logstash-logger/device/kafka.rb
+- lib/logstash-logger/device/kinesis.rb
+- lib/logstash-logger/device/multi_delegator.rb
+- lib/logstash-logger/device/redis.rb
+- lib/logstash-logger/device/socket.rb
+- lib/logstash-logger/device/stderr.rb
+- lib/logstash-logger/device/stdout.rb
+- lib/logstash-logger/device/tcp.rb
+- lib/logstash-logger/device/udp.rb
+- lib/logstash-logger/device/unix.rb
+- lib/logstash-logger/formatter.rb
+- lib/logstash-logger/formatter/base.rb
+- lib/logstash-logger/formatter/cee.rb
+- lib/logstash-logger/formatter/cee_syslog.rb
+- lib/logstash-logger/formatter/json.rb
+- lib/logstash-logger/formatter/json_lines.rb
+- lib/logstash-logger/formatter/logstash_event.rb
+- lib/logstash-logger/logger.rb
+- lib/logstash-logger/multi_logger.rb
+- lib/logstash-logger/railtie.rb
+- lib/logstash-logger/silenced_logging.rb
+- lib/logstash-logger/tagged_logging.rb
+- lib/logstash-logger/version.rb
+- logstash-logger.gemspec
+- samples/example.crt
+- samples/example.key
+- samples/file.conf
+- samples/redis.conf
+- samples/ssl.conf
+- samples/syslog.conf
+- samples/tcp.conf
+- samples/udp.conf
+- samples/unix.conf
+- spec/configuration_spec.rb
+- spec/constructor_spec.rb
+- spec/device/balancer_spec.rb
+- spec/device/connectable_spec.rb
+- spec/device/file_spec.rb
+- spec/device/firehose_spec.rb
+- spec/device/io_spec.rb
+- spec/device/kafka_spec.rb
+- spec/device/kinesis_spec.rb
+- spec/device/multi_delegator_spec.rb
+- spec/device/redis_spec.rb
+- spec/device/socket_spec.rb
+- spec/device/stderr_spec.rb
+- spec/device/stdout_spec.rb
+- spec/device/tcp_spec.rb
+- spec/device/udp_spec.rb
+- spec/device/unix_spec.rb
+- spec/device_spec.rb
+- spec/formatter/base_spec.rb
+- spec/formatter/cee_spec.rb
+- spec/formatter/cee_syslog_spec.rb
+- spec/formatter/json_lines_spec.rb
+- spec/formatter/json_spec.rb
+- spec/formatter/logstash_event_spec.rb
+- spec/formatter_spec.rb
+- spec/logger_spec.rb
+- spec/multi_logger_spec.rb
+- spec/rails_spec.rb
+- spec/silenced_logging_spec.rb
+- spec/spec_helper.rb
+- spec/syslog_spec.rb
+- spec/tagged_logging_spec.rb
+homepage: http://github.com/dwbutler/logstash-logger
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: LogStash Logger for ruby
+test_files:
+- spec/configuration_spec.rb
+- spec/constructor_spec.rb
+- spec/device/balancer_spec.rb
+- spec/device/connectable_spec.rb
+- spec/device/file_spec.rb
+- spec/device/firehose_spec.rb
+- spec/device/io_spec.rb
+- spec/device/kafka_spec.rb
+- spec/device/kinesis_spec.rb
+- spec/device/multi_delegator_spec.rb
+- spec/device/redis_spec.rb
+- spec/device/socket_spec.rb
+- spec/device/stderr_spec.rb
+- spec/device/stdout_spec.rb
+- spec/device/tcp_spec.rb
+- spec/device/udp_spec.rb
+- spec/device/unix_spec.rb
+- spec/device_spec.rb
+- spec/formatter/base_spec.rb
+- spec/formatter/cee_spec.rb
+- spec/formatter/cee_syslog_spec.rb
+- spec/formatter/json_lines_spec.rb
+- spec/formatter/json_spec.rb
+- spec/formatter/logstash_event_spec.rb
+- spec/formatter_spec.rb
+- spec/logger_spec.rb
+- spec/multi_logger_spec.rb
+- spec/rails_spec.rb
+- spec/silenced_logging_spec.rb
+- spec/spec_helper.rb
+- spec/syslog_spec.rb
+- spec/tagged_logging_spec.rb

@@ -1,0 +1,319 @@
+--- !ruby/object:Gem::Specification
+name: caxlsx
+version: !ruby/object:Gem::Version
+  version: 4.2.0
+platform: ruby
+authors:
+- Randy Morgan
+- Jurriaan Pruis
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: htmlentities
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.4
+- !ruby/object:Gem::Dependency
+  name: marcel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.4
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description: 'xlsx spreadsheet generation with charts, images, automated column width,
+  customizable styles and full schema validation. Axlsx helps you create beautiful
+  Office Open XML Spreadsheet documents (Excel, Google Spreadsheets, Numbers, LibreOffice)
+  without having to understand the entire ECMA specification. Check out the README
+  for some examples of how easy it is. Best of all, you can validate your xlsx file
+  before serialization so you know for sure that anything generated is going to load
+  on your client''s machine.
+
+  '
+email: noel@peden.biz
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- ".yardopts_guide"
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- examples/assets/image1.jpeg
+- examples/generate.rb
+- lib/axlsx.rb
+- lib/axlsx/content_type/abstract_content_type.rb
+- lib/axlsx/content_type/content_type.rb
+- lib/axlsx/content_type/default.rb
+- lib/axlsx/content_type/override.rb
+- lib/axlsx/doc_props/app.rb
+- lib/axlsx/doc_props/core.rb
+- lib/axlsx/drawing/area_chart.rb
+- lib/axlsx/drawing/area_series.rb
+- lib/axlsx/drawing/ax_data_source.rb
+- lib/axlsx/drawing/axes.rb
+- lib/axlsx/drawing/axis.rb
+- lib/axlsx/drawing/bar_3D_chart.rb
+- lib/axlsx/drawing/bar_chart.rb
+- lib/axlsx/drawing/bar_series.rb
+- lib/axlsx/drawing/bubble_chart.rb
+- lib/axlsx/drawing/bubble_series.rb
+- lib/axlsx/drawing/cat_axis.rb
+- lib/axlsx/drawing/chart.rb
+- lib/axlsx/drawing/d_lbls.rb
+- lib/axlsx/drawing/drawing.rb
+- lib/axlsx/drawing/graphic_frame.rb
+- lib/axlsx/drawing/hyperlink.rb
+- lib/axlsx/drawing/line_3D_chart.rb
+- lib/axlsx/drawing/line_chart.rb
+- lib/axlsx/drawing/line_series.rb
+- lib/axlsx/drawing/marker.rb
+- lib/axlsx/drawing/num_data.rb
+- lib/axlsx/drawing/num_data_source.rb
+- lib/axlsx/drawing/num_val.rb
+- lib/axlsx/drawing/one_cell_anchor.rb
+- lib/axlsx/drawing/pic.rb
+- lib/axlsx/drawing/picture_locking.rb
+- lib/axlsx/drawing/pie_3D_chart.rb
+- lib/axlsx/drawing/pie_chart.rb
+- lib/axlsx/drawing/pie_series.rb
+- lib/axlsx/drawing/scaling.rb
+- lib/axlsx/drawing/scatter_chart.rb
+- lib/axlsx/drawing/scatter_series.rb
+- lib/axlsx/drawing/ser_axis.rb
+- lib/axlsx/drawing/series.rb
+- lib/axlsx/drawing/series_title.rb
+- lib/axlsx/drawing/str_data.rb
+- lib/axlsx/drawing/str_val.rb
+- lib/axlsx/drawing/title.rb
+- lib/axlsx/drawing/two_cell_anchor.rb
+- lib/axlsx/drawing/val_axis.rb
+- lib/axlsx/drawing/view_3D.rb
+- lib/axlsx/drawing/vml_drawing.rb
+- lib/axlsx/drawing/vml_shape.rb
+- lib/axlsx/package.rb
+- lib/axlsx/rels/relationship.rb
+- lib/axlsx/rels/relationships.rb
+- lib/axlsx/stylesheet/border.rb
+- lib/axlsx/stylesheet/border_pr.rb
+- lib/axlsx/stylesheet/cell_alignment.rb
+- lib/axlsx/stylesheet/cell_protection.rb
+- lib/axlsx/stylesheet/cell_style.rb
+- lib/axlsx/stylesheet/color.rb
+- lib/axlsx/stylesheet/dxf.rb
+- lib/axlsx/stylesheet/fill.rb
+- lib/axlsx/stylesheet/font.rb
+- lib/axlsx/stylesheet/gradient_fill.rb
+- lib/axlsx/stylesheet/gradient_stop.rb
+- lib/axlsx/stylesheet/num_fmt.rb
+- lib/axlsx/stylesheet/pattern_fill.rb
+- lib/axlsx/stylesheet/styles.rb
+- lib/axlsx/stylesheet/table_style.rb
+- lib/axlsx/stylesheet/table_style_element.rb
+- lib/axlsx/stylesheet/table_styles.rb
+- lib/axlsx/stylesheet/xf.rb
+- lib/axlsx/util/accessors.rb
+- lib/axlsx/util/buffered_zip_output_stream.rb
+- lib/axlsx/util/constants.rb
+- lib/axlsx/util/mime_type_utils.rb
+- lib/axlsx/util/options_parser.rb
+- lib/axlsx/util/serialized_attributes.rb
+- lib/axlsx/util/simple_typed_list.rb
+- lib/axlsx/util/storage.rb
+- lib/axlsx/util/validators.rb
+- lib/axlsx/util/zip_command.rb
+- lib/axlsx/version.rb
+- lib/axlsx/workbook/defined_name.rb
+- lib/axlsx/workbook/defined_names.rb
+- lib/axlsx/workbook/shared_strings_table.rb
+- lib/axlsx/workbook/workbook.rb
+- lib/axlsx/workbook/workbook_view.rb
+- lib/axlsx/workbook/workbook_views.rb
+- lib/axlsx/workbook/worksheet/auto_filter/auto_filter.rb
+- lib/axlsx/workbook/worksheet/auto_filter/filter_column.rb
+- lib/axlsx/workbook/worksheet/auto_filter/filters.rb
+- lib/axlsx/workbook/worksheet/auto_filter/sort_condition.rb
+- lib/axlsx/workbook/worksheet/auto_filter/sort_state.rb
+- lib/axlsx/workbook/worksheet/border_creator.rb
+- lib/axlsx/workbook/worksheet/break.rb
+- lib/axlsx/workbook/worksheet/cell.rb
+- lib/axlsx/workbook/worksheet/cell_serializer.rb
+- lib/axlsx/workbook/worksheet/cfvo.rb
+- lib/axlsx/workbook/worksheet/cfvos.rb
+- lib/axlsx/workbook/worksheet/col.rb
+- lib/axlsx/workbook/worksheet/col_breaks.rb
+- lib/axlsx/workbook/worksheet/color_scale.rb
+- lib/axlsx/workbook/worksheet/cols.rb
+- lib/axlsx/workbook/worksheet/comment.rb
+- lib/axlsx/workbook/worksheet/comments.rb
+- lib/axlsx/workbook/worksheet/conditional_formatting.rb
+- lib/axlsx/workbook/worksheet/conditional_formatting_rule.rb
+- lib/axlsx/workbook/worksheet/conditional_formattings.rb
+- lib/axlsx/workbook/worksheet/data_bar.rb
+- lib/axlsx/workbook/worksheet/data_validation.rb
+- lib/axlsx/workbook/worksheet/data_validations.rb
+- lib/axlsx/workbook/worksheet/date_time_converter.rb
+- lib/axlsx/workbook/worksheet/dimension.rb
+- lib/axlsx/workbook/worksheet/header_footer.rb
+- lib/axlsx/workbook/worksheet/icon_set.rb
+- lib/axlsx/workbook/worksheet/merged_cells.rb
+- lib/axlsx/workbook/worksheet/outline_pr.rb
+- lib/axlsx/workbook/worksheet/page_margins.rb
+- lib/axlsx/workbook/worksheet/page_set_up_pr.rb
+- lib/axlsx/workbook/worksheet/page_setup.rb
+- lib/axlsx/workbook/worksheet/pane.rb
+- lib/axlsx/workbook/worksheet/pivot_table.rb
+- lib/axlsx/workbook/worksheet/pivot_table_cache_definition.rb
+- lib/axlsx/workbook/worksheet/pivot_tables.rb
+- lib/axlsx/workbook/worksheet/print_options.rb
+- lib/axlsx/workbook/worksheet/protected_range.rb
+- lib/axlsx/workbook/worksheet/protected_ranges.rb
+- lib/axlsx/workbook/worksheet/rich_text.rb
+- lib/axlsx/workbook/worksheet/rich_text_run.rb
+- lib/axlsx/workbook/worksheet/row.rb
+- lib/axlsx/workbook/worksheet/row_breaks.rb
+- lib/axlsx/workbook/worksheet/selection.rb
+- lib/axlsx/workbook/worksheet/sheet_calc_pr.rb
+- lib/axlsx/workbook/worksheet/sheet_data.rb
+- lib/axlsx/workbook/worksheet/sheet_format_pr.rb
+- lib/axlsx/workbook/worksheet/sheet_pr.rb
+- lib/axlsx/workbook/worksheet/sheet_protection.rb
+- lib/axlsx/workbook/worksheet/sheet_view.rb
+- lib/axlsx/workbook/worksheet/table.rb
+- lib/axlsx/workbook/worksheet/table_style_info.rb
+- lib/axlsx/workbook/worksheet/tables.rb
+- lib/axlsx/workbook/worksheet/worksheet.rb
+- lib/axlsx/workbook/worksheet/worksheet_comments.rb
+- lib/axlsx/workbook/worksheet/worksheet_drawing.rb
+- lib/axlsx/workbook/worksheet/worksheet_hyperlink.rb
+- lib/axlsx/workbook/worksheet/worksheet_hyperlinks.rb
+- lib/caxlsx.rb
+- lib/schema/dc.xsd
+- lib/schema/dcmitype.xsd
+- lib/schema/dcterms.xsd
+- lib/schema/dml-chart.xsd
+- lib/schema/dml-chartDrawing.xsd
+- lib/schema/dml-compatibility.xsd
+- lib/schema/dml-diagram.xsd
+- lib/schema/dml-lockedCanvas.xsd
+- lib/schema/dml-main.xsd
+- lib/schema/dml-picture.xsd
+- lib/schema/dml-spreadsheetDrawing.xsd
+- lib/schema/dml-wordprocessingDrawing.xsd
+- lib/schema/opc-contentTypes.xsd
+- lib/schema/opc-coreProperties.xsd
+- lib/schema/opc-digSig.xsd
+- lib/schema/opc-relationships.xsd
+- lib/schema/pml.xsd
+- lib/schema/shared-additionalCharacteristics.xsd
+- lib/schema/shared-bibliography.xsd
+- lib/schema/shared-commonSimpleTypes.xsd
+- lib/schema/shared-customXmlDataProperties.xsd
+- lib/schema/shared-customXmlSchemaProperties.xsd
+- lib/schema/shared-documentPropertiesCustom.xsd
+- lib/schema/shared-documentPropertiesExtended.xsd
+- lib/schema/shared-documentPropertiesVariantTypes.xsd
+- lib/schema/shared-math.xsd
+- lib/schema/shared-relationshipReference.xsd
+- lib/schema/sml.xsd
+- lib/schema/vml-main.xsd
+- lib/schema/vml-officeDrawing.xsd
+- lib/schema/vml-presentationDrawing.xsd
+- lib/schema/vml-spreadsheetDrawing.xsd
+- lib/schema/vml-wordprocessingDrawing.xsd
+- lib/schema/wml.xsd
+- lib/schema/xml.xsd
+homepage: https://github.com/caxlsx/caxlsx
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/caxlsx/caxlsx/issues
+  changelog_uri: https://github.com/caxlsx/caxlsx/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/caxlsx/caxlsx
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Excel OOXML (xlsx) with charts, styles, images and autowidth columns.
+test_files: []

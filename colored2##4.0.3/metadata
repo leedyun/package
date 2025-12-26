@@ -1,0 +1,75 @@
+--- !ruby/object:Gem::Specification
+name: colored2
+version: !ruby/object:Gem::Version
+  version: 4.0.3
+platform: ruby
+authors:
+- Chris Wanstrath
+- Konstantin Gredeskoul
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-18 00:00:00.000000000 Z
+dependencies: []
+description: |+
+  This is a heavily modified fork of http://github.com/defunkt/colored gem, with many
+  sensible pull requests combined. Since the authors of the original gem no longer support it,
+  this might, perhaps, be considered a good alternative.
+
+  Simple gem that adds various color methods to String class, and can be used as follows:
+
+    require 'colored2'
+
+    puts 'this is red'.red
+    puts 'this is red with a yellow background'.red.on.yellow
+    puts 'this is red with and italic'.red.italic
+    puts 'this is green bold'.green.bold << ' and regular'.green
+    puts 'this is really bold blue on white but reversed'.bold.blue.on.white.reversed
+    puts 'this is regular, but '.red! << 'this is red '.yellow! << ' and yellow.'.no_color!
+    puts ('this is regular, but '.red! do
+      'this is red '.yellow! do
+        ' and yellow.'.no_color!
+      end
+    end)
+
+email: kigster@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- Rakefile
+- lib/colored2.rb
+- lib/colored2/ascii_decorator.rb
+- lib/colored2/codes.rb
+- lib/colored2/numbers.rb
+- lib/colored2/object.rb
+- lib/colored2/strings.rb
+- lib/colored2/version.rb
+homepage: http://github.com/kigster/colored2
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Add even more color to your life.
+test_files: []
+...

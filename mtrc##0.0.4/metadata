@@ -1,0 +1,52 @@
+--- !ruby/object:Gem::Specification
+name: mtrc
+version: !ruby/object:Gem::Version
+  version: 0.0.4
+  prerelease: 
+platform: ruby
+authors:
+- Kyle Kingsbury
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2011-09-13 00:00:00.000000000Z
+dependencies: []
+description: 
+email: aphyr@aphyr.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/mtrc.rb
+- lib/mtrc/rate.rb
+- lib/mtrc/sample.rb
+- lib/mtrc/version.rb
+- lib/mtrc/samples.rb
+- lib/mtrc/sorted_samples.rb
+- LICENSE
+- README.markdown
+homepage: https://github.com/aphyr/mtrc
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: 1.8.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: mtrc
+rubygems_version: 1.8.10
+signing_key: 
+specification_version: 3
+summary: Minimal metric aggregation.
+test_files: []

@@ -1,0 +1,244 @@
+--- !ruby/object:Gem::Specification
+name: tiny_tds
+version: !ruby/object:Gem::Version
+  version: 3.1.0
+platform: ruby
+authors:
+- Ken Collins
+- Erik Bryn
+- Will Bond
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: mini_portile2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.0
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler-dock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.25'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.25'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.1
+- !ruby/object:Gem::Dependency
+  name: connection_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+- !ruby/object:Gem::Dependency
+  name: toxiproxy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+description: TinyTDS - A modern, simple and fast FreeTDS library for Ruby using DB-Library.
+  Developed for the ActiveRecord SQL Server adapter.
+email:
+- ken@metaskills.net
+- will@wbond.net
+executables:
+- defncopy-ttds
+- tsql-ttds
+extensions:
+- ext/tiny_tds/extconf.rb
+extra_rdoc_files: []
+files:
+- ".codeclimate.yml"
+- ".gitattributes"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- ISSUE_TEMPLATE.md
+- MIT-LICENSE
+- README.md
+- Rakefile
+- VERSION
+- bin/defncopy-ttds
+- bin/tsql-ttds
+- docker-compose.yml
+- exe/.keep
+- ext/tiny_tds/client.c
+- ext/tiny_tds/client.h
+- ext/tiny_tds/extconf.rb
+- ext/tiny_tds/extconsts.rb
+- ext/tiny_tds/result.c
+- ext/tiny_tds/result.h
+- ext/tiny_tds/tiny_tds_ext.c
+- ext/tiny_tds/tiny_tds_ext.h
+- lib/tiny_tds.rb
+- lib/tiny_tds/bin.rb
+- lib/tiny_tds/client.rb
+- lib/tiny_tds/error.rb
+- lib/tiny_tds/gem.rb
+- lib/tiny_tds/result.rb
+- lib/tiny_tds/version.rb
+- patches/freetds/1.00.27/0001-mingw_missing_inet_pton.diff
+- patches/freetds/1.00.27/0002-Don-t-use-MSYS2-file-libws2_32.diff
+- patches/libiconv/1.14/1-avoid-gets-error.patch
+- setup_cimgruby_dev.sh
+- start_dev.sh
+- tasks/native_gem.rake
+- tasks/package.rake
+- tasks/ports.rake
+- tasks/ports/freetds.rb
+- tasks/ports/libiconv.rb
+- tasks/ports/openssl.rb
+- tasks/ports/recipe.rb
+- tasks/test.rake
+- test/benchmark/query.rb
+- test/benchmark/query_odbc.rb
+- test/benchmark/query_tinytds.rb
+- test/bin/install-freetds.sh
+- test/bin/install-mssql.ps1
+- test/bin/install-mssqltools.sh
+- test/bin/install-openssl.sh
+- test/bin/setup_tinytds_db.sh
+- test/bin/setup_volume_permissions.sh
+- test/client_test.rb
+- test/gem_test.rb
+- test/result_test.rb
+- test/schema/1px.gif
+- test/schema/sqlserver_2017.sql
+- test/schema/sqlserver_azure.sql
+- test/schema_test.rb
+- test/sql/db-create.sql
+- test/sql/db-login.sql
+- test/test_helper.rb
+- test/thread_test.rb
+- tiny_tds.gemspec
+homepage: http://github.com/rails-sqlserver/tiny_tds
+licenses:
+- MIT
+metadata:
+  msys2_mingw_dependencies: freetds
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: TinyTDS - A modern, simple and fast FreeTDS library for Ruby using DB-Library.
+test_files: []

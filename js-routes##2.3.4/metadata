@@ -1,0 +1,171 @@
+--- !ruby/object:Gem::Specification
+name: js-routes
+version: !ruby/object:Gem::Version
+  version: 2.3.4
+platform: ruby
+authors:
+- Bogdan Gusiev
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: sorbet-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sprockets-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.10.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.10.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.25
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.2.25
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+- !ruby/object:Gem::Dependency
+  name: mini_racer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+description: Exposes all Rails Routes URL helpers as javascript module
+email: agresso@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- Readme.md
+- app/assets/javascripts/js-routes.js.erb
+- lib/js-routes.rb
+- lib/js_routes.rb
+- lib/js_routes/configuration.rb
+- lib/js_routes/engine.rb
+- lib/js_routes/generators/base.rb
+- lib/js_routes/generators/middleware.rb
+- lib/js_routes/generators/webpacker.rb
+- lib/js_routes/instance.rb
+- lib/js_routes/middleware.rb
+- lib/js_routes/route.rb
+- lib/js_routes/types.rb
+- lib/js_routes/utils.rb
+- lib/js_routes/version.rb
+- lib/routes.d.ts
+- lib/routes.js
+- lib/routes.ts
+- lib/tasks/js_routes.rake
+- lib/templates/erb.js
+- lib/templates/initializer.rb
+- lib/templates/routes.js.erb
+homepage: http://github.com/railsware/js-routes
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/railsware/js-routes/issues
+  changelog_uri: https://github.com/railsware/js-routes/blob/v2.3.4/CHANGELOG.md
+  documentation_uri: https://github.com/railsware/js-routes
+  source_code_uri: https://github.com/railsware/js-routes/tree/v2.3.4/activerecord
+  rubygems_mfa_required: 'true'
+  github_repo: ssh://github.com/railsware/js-routes
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Brings Rails named routes to javascript
+test_files: []

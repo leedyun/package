@@ -1,0 +1,150 @@
+--- !ruby/object:Gem::Specification
+name: net-ssh-gateway
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Jamis Buck
+- Delano Mandelbaum
+- Miklós Fazekas
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDeDCCAmCgAwIBAgIBATANBgkqhkiG9w0BAQUFADBBMQ8wDQYDVQQDDAZuZXRz
+  c2gxGTAXBgoJkiaJk/IsZAEZFglzb2x1dGlvdXMxEzARBgoJkiaJk/IsZAEZFgNj
+  b20wHhcNMTYxMjE1MTgwNTIyWhcNMTcxMjE1MTgwNTIyWjBBMQ8wDQYDVQQDDAZu
+  ZXRzc2gxGTAXBgoJkiaJk/IsZAEZFglzb2x1dGlvdXMxEzARBgoJkiaJk/IsZAEZ
+  FgNjb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGJ4TbZ9H+qZ08
+  pQfJhPJTHaDCyQvCsKTFrL5O9z3tllQ7B/zksMMM+qFBpNYu9HCcg4yBATacE/PB
+  qVVyUrpr6lbH/XwoN5ljXm+bdCfmnjZvTCL2FTE6o+bcnaF0IsJyC0Q2B1fbWdXN
+  6Off1ZWoUk6We2BIM1bn6QJLxBpGyYhvOPXsYoqSuzDf2SJDDsWFZ8kV5ON13Ohm
+  JbBzn0oD8HF8FuYOewwsC0C1q4w7E5GtvHcQ5juweS7+RKsyDcVcVrLuNzoGRttS
+  KP4yMn+TzaXijyjRg7gECfJr3TGASaA4bQsILFGG5dAWcwO4OMrZedR7SHj/o0Kf
+  3gL7P0axAgMBAAGjezB5MAkGA1UdEwQCMAAwCwYDVR0PBAQDAgSwMB0GA1UdDgQW
+  BBQF8qLA7Z4zg0SJGtUbv3eoQ8tjIzAfBgNVHREEGDAWgRRuZXRzc2hAc29sdXRp
+  b3VzLmNvbTAfBgNVHRIEGDAWgRRuZXRzc2hAc29sdXRpb3VzLmNvbTANBgkqhkiG
+  9w0BAQUFAAOCAQEATd8If+Ytmhf5lELy24j76ahGv64m518WTCdV2nIViGXB2BnV
+  uLQylGRb1rcgUS3Eh9TE28hqrfhotKS6a96qF9kN0mY2H6UwPWswJ+tj3gA1vLW8
+  wlZNlYGJ91Ig9zULPSbATyOOprUZyggy5p1260BaaI3LQYDeGJOSqpHCVu+TuMcy
+  k00ofiLT1crDSUl2WE/OIFK8AXpmd798AMsef8okHeoo+Dj7zCXn0VSimN+MO1mE
+  L4d54WIy4HkZCqQXoTSiK5HZMIdXkPk3F1bZdJ8Dy1sMRru0rUkkM5mW7TQ75mfW
+  Zp0QrZyNZhtitrXFbZneGRrIA/8G2Krft5Ly/A==
+  -----END CERTIFICATE-----
+date: 2017-01-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.8.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.8.4
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+- !ruby/object:Gem::Dependency
+  name: net-ssh
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+description: A simple library to assist in establishing tunneled Net::SSH connections
+email:
+- net-ssh@solutious.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".ruby-version"
+- ".travis.yml"
+- CHANGES.txt
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/net/ssh/gateway.rb
+- lib/net/ssh/gateway/version.rb
+- net-ssh-gateway.gemspec
+- net-ssh-public_cert.pem
+homepage: https://github.com/net-ssh/net-ssh-gateway
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5
+signing_key: 
+specification_version: 4
+summary: A simple library to assist in establishing tunneled Net::SSH connections
+test_files: []

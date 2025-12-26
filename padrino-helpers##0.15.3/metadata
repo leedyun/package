@@ -1,0 +1,359 @@
+--- !ruby/object:Gem::Specification
+name: padrino-helpers
+version: !ruby/object:Gem::Version
+  version: 0.15.3
+platform: ruby
+authors:
+- Padrino Team
+- Nathan Esquenazi
+- Davide D'Agostino
+- Arthur Chiu
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: padrino-support
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.15.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.15.3
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.7
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.7
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+description: Tag helpers, asset helpers, form helpers, form builders and many more
+  helpers for padrino
+email: padrinorb@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+files:
+- ".document"
+- ".gitignore"
+- ".yardopts"
+- LICENSE.txt
+- README.rdoc
+- Rakefile
+- lib/padrino-helpers.rb
+- lib/padrino-helpers/asset_tag_helpers.rb
+- lib/padrino-helpers/form_builder/abstract_form_builder.rb
+- lib/padrino-helpers/form_builder/standard_form_builder.rb
+- lib/padrino-helpers/form_helpers.rb
+- lib/padrino-helpers/form_helpers/errors.rb
+- lib/padrino-helpers/form_helpers/options.rb
+- lib/padrino-helpers/form_helpers/security.rb
+- lib/padrino-helpers/format_helpers.rb
+- lib/padrino-helpers/locale/cs.yml
+- lib/padrino-helpers/locale/da.yml
+- lib/padrino-helpers/locale/de.yml
+- lib/padrino-helpers/locale/en.yml
+- lib/padrino-helpers/locale/es.yml
+- lib/padrino-helpers/locale/fr.yml
+- lib/padrino-helpers/locale/hu.yml
+- lib/padrino-helpers/locale/it.yml
+- lib/padrino-helpers/locale/ja.yml
+- lib/padrino-helpers/locale/lv.yml
+- lib/padrino-helpers/locale/nl.yml
+- lib/padrino-helpers/locale/no.yml
+- lib/padrino-helpers/locale/pl.yml
+- lib/padrino-helpers/locale/pt_br.yml
+- lib/padrino-helpers/locale/ro.yml
+- lib/padrino-helpers/locale/ru.yml
+- lib/padrino-helpers/locale/sv.yml
+- lib/padrino-helpers/locale/tr.yml
+- lib/padrino-helpers/locale/uk.yml
+- lib/padrino-helpers/locale/zh_cn.yml
+- lib/padrino-helpers/locale/zh_tw.yml
+- lib/padrino-helpers/number_helpers.rb
+- lib/padrino-helpers/output_helpers.rb
+- lib/padrino-helpers/output_helpers/abstract_handler.rb
+- lib/padrino-helpers/output_helpers/erb_handler.rb
+- lib/padrino-helpers/output_helpers/haml_handler.rb
+- lib/padrino-helpers/output_helpers/slim_handler.rb
+- lib/padrino-helpers/render_helpers.rb
+- lib/padrino-helpers/tag_helpers.rb
+- lib/padrino-helpers/translation_helpers.rb
+- lib/padrino/core_ext/output_safety.rb
+- lib/padrino/rendering.rb
+- lib/padrino/rendering/erb_template.rb
+- lib/padrino/rendering/erubi_template.rb
+- lib/padrino/rendering/erubis_template.rb
+- lib/padrino/rendering/haml_template.rb
+- lib/padrino/rendering/hamlit_template.rb
+- lib/padrino/rendering/slim_template.rb
+- lib/padrino/safe_buffer.rb
+- padrino-helpers.gemspec
+- test/fixtures/apps/.components
+- test/fixtures/apps/.gitignore
+- test/fixtures/apps/render.rb
+- test/fixtures/apps/views/article/comment/show.slim
+- test/fixtures/apps/views/blog/post.erb
+- test/fixtures/apps/views/layouts/specific.erb
+- test/fixtures/apps/views/test/post.erb
+- test/fixtures/layouts/layout.erb
+- test/fixtures/markup_app/app.rb
+- test/fixtures/markup_app/views/button_to.erb
+- test/fixtures/markup_app/views/button_to.haml
+- test/fixtures/markup_app/views/button_to.slim
+- test/fixtures/markup_app/views/capture_concat.erb
+- test/fixtures/markup_app/views/capture_concat.haml
+- test/fixtures/markup_app/views/capture_concat.slim
+- test/fixtures/markup_app/views/content_for.erb
+- test/fixtures/markup_app/views/content_for.haml
+- test/fixtures/markup_app/views/content_for.slim
+- test/fixtures/markup_app/views/content_tag.erb
+- test/fixtures/markup_app/views/content_tag.haml
+- test/fixtures/markup_app/views/content_tag.slim
+- test/fixtures/markup_app/views/current_engine.erb
+- test/fixtures/markup_app/views/current_engine.haml
+- test/fixtures/markup_app/views/current_engine.slim
+- test/fixtures/markup_app/views/fields_for.erb
+- test/fixtures/markup_app/views/fields_for.haml
+- test/fixtures/markup_app/views/fields_for.slim
+- test/fixtures/markup_app/views/form_for.erb
+- test/fixtures/markup_app/views/form_for.haml
+- test/fixtures/markup_app/views/form_for.slim
+- test/fixtures/markup_app/views/form_tag.erb
+- test/fixtures/markup_app/views/form_tag.haml
+- test/fixtures/markup_app/views/form_tag.slim
+- test/fixtures/markup_app/views/link_to.erb
+- test/fixtures/markup_app/views/link_to.haml
+- test/fixtures/markup_app/views/link_to.slim
+- test/fixtures/markup_app/views/mail_to.erb
+- test/fixtures/markup_app/views/mail_to.haml
+- test/fixtures/markup_app/views/mail_to.slim
+- test/fixtures/markup_app/views/meta_tag.erb
+- test/fixtures/markup_app/views/meta_tag.haml
+- test/fixtures/markup_app/views/meta_tag.slim
+- test/fixtures/markup_app/views/partials/_erb.erb
+- test/fixtures/markup_app/views/partials/_haml.haml
+- test/fixtures/markup_app/views/partials/_slim.slim
+- test/fixtures/markup_app/views/simple_partial.erb
+- test/fixtures/markup_app/views/simple_partial.haml
+- test/fixtures/markup_app/views/simple_partial.slim
+- test/fixtures/render_app/app.rb
+- test/fixtures/render_app/views/_deep.erb
+- test/fixtures/render_app/views/_deep.haml
+- test/fixtures/render_app/views/_deep.slim
+- test/fixtures/render_app/views/_foo.haml
+- test/fixtures/render_app/views/_partial_block_erb.erb
+- test/fixtures/render_app/views/_partial_block_haml.haml
+- test/fixtures/render_app/views/_partial_block_slim.slim
+- test/fixtures/render_app/views/_unsafe.html.builder
+- test/fixtures/render_app/views/_unsafe_object.html.builder
+- test/fixtures/render_app/views/current_engine.haml
+- test/fixtures/render_app/views/current_engines/_erb.erb
+- test/fixtures/render_app/views/current_engines/_haml.haml
+- test/fixtures/render_app/views/current_engines/_slim.slim
+- test/fixtures/render_app/views/dive_inner_erb.erb
+- test/fixtures/render_app/views/dive_inner_haml.haml
+- test/fixtures/render_app/views/dive_inner_slim.slim
+- test/fixtures/render_app/views/dive_outer_erb.erb
+- test/fixtures/render_app/views/dive_outer_haml.haml
+- test/fixtures/render_app/views/dive_outer_slim.slim
+- test/fixtures/render_app/views/double_capture_erb.erb
+- test/fixtures/render_app/views/double_capture_haml.haml
+- test/fixtures/render_app/views/double_capture_slim.slim
+- test/fixtures/render_app/views/erb/test.erb
+- test/fixtures/render_app/views/explicit_engine.haml
+- test/fixtures/render_app/views/haml/test.haml
+- test/fixtures/render_app/views/index.haml
+- test/fixtures/render_app/views/layouts/application.haml
+- test/fixtures/render_app/views/render_block_erb.erb
+- test/fixtures/render_app/views/render_block_haml.haml
+- test/fixtures/render_app/views/render_block_slim.slim
+- test/fixtures/render_app/views/ruby_block_capture_erb.erb
+- test/fixtures/render_app/views/ruby_block_capture_haml.haml
+- test/fixtures/render_app/views/ruby_block_capture_slim.slim
+- test/fixtures/render_app/views/template/_user.haml
+- test/fixtures/render_app/views/template/haml_template.haml
+- test/fixtures/render_app/views/template/some_template.haml
+- test/fixtures/render_app/views/wrong_capture_erb.erb
+- test/fixtures/render_app/views/wrong_capture_haml.haml
+- test/fixtures/render_app/views/wrong_capture_slim.slim
+- test/helper.rb
+- test/test_asset_tag_helpers.rb
+- test/test_form_builder.rb
+- test/test_form_helpers.rb
+- test/test_format_helpers.rb
+- test/test_helpers.rb
+- test/test_locale.rb
+- test/test_number_helpers.rb
+- test/test_output_helpers.rb
+- test/test_render_helpers.rb
+- test/test_rendering.rb
+- test/test_rendering_extensions.rb
+- test/test_tag_helpers.rb
+homepage: http://www.padrinorb.com
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.0.8
+signing_key:
+specification_version: 4
+summary: Helpers for padrino
+test_files:
+- test/fixtures/apps/.components
+- test/fixtures/apps/.gitignore
+- test/fixtures/apps/render.rb
+- test/fixtures/apps/views/article/comment/show.slim
+- test/fixtures/apps/views/blog/post.erb
+- test/fixtures/apps/views/layouts/specific.erb
+- test/fixtures/apps/views/test/post.erb
+- test/fixtures/layouts/layout.erb
+- test/fixtures/markup_app/app.rb
+- test/fixtures/markup_app/views/button_to.erb
+- test/fixtures/markup_app/views/button_to.haml
+- test/fixtures/markup_app/views/button_to.slim
+- test/fixtures/markup_app/views/capture_concat.erb
+- test/fixtures/markup_app/views/capture_concat.haml
+- test/fixtures/markup_app/views/capture_concat.slim
+- test/fixtures/markup_app/views/content_for.erb
+- test/fixtures/markup_app/views/content_for.haml
+- test/fixtures/markup_app/views/content_for.slim
+- test/fixtures/markup_app/views/content_tag.erb
+- test/fixtures/markup_app/views/content_tag.haml
+- test/fixtures/markup_app/views/content_tag.slim
+- test/fixtures/markup_app/views/current_engine.erb
+- test/fixtures/markup_app/views/current_engine.haml
+- test/fixtures/markup_app/views/current_engine.slim
+- test/fixtures/markup_app/views/fields_for.erb
+- test/fixtures/markup_app/views/fields_for.haml
+- test/fixtures/markup_app/views/fields_for.slim
+- test/fixtures/markup_app/views/form_for.erb
+- test/fixtures/markup_app/views/form_for.haml
+- test/fixtures/markup_app/views/form_for.slim
+- test/fixtures/markup_app/views/form_tag.erb
+- test/fixtures/markup_app/views/form_tag.haml
+- test/fixtures/markup_app/views/form_tag.slim
+- test/fixtures/markup_app/views/link_to.erb
+- test/fixtures/markup_app/views/link_to.haml
+- test/fixtures/markup_app/views/link_to.slim
+- test/fixtures/markup_app/views/mail_to.erb
+- test/fixtures/markup_app/views/mail_to.haml
+- test/fixtures/markup_app/views/mail_to.slim
+- test/fixtures/markup_app/views/meta_tag.erb
+- test/fixtures/markup_app/views/meta_tag.haml
+- test/fixtures/markup_app/views/meta_tag.slim
+- test/fixtures/markup_app/views/partials/_erb.erb
+- test/fixtures/markup_app/views/partials/_haml.haml
+- test/fixtures/markup_app/views/partials/_slim.slim
+- test/fixtures/markup_app/views/simple_partial.erb
+- test/fixtures/markup_app/views/simple_partial.haml
+- test/fixtures/markup_app/views/simple_partial.slim
+- test/fixtures/render_app/app.rb
+- test/fixtures/render_app/views/_deep.erb
+- test/fixtures/render_app/views/_deep.haml
+- test/fixtures/render_app/views/_deep.slim
+- test/fixtures/render_app/views/_foo.haml
+- test/fixtures/render_app/views/_partial_block_erb.erb
+- test/fixtures/render_app/views/_partial_block_haml.haml
+- test/fixtures/render_app/views/_partial_block_slim.slim
+- test/fixtures/render_app/views/_unsafe.html.builder
+- test/fixtures/render_app/views/_unsafe_object.html.builder
+- test/fixtures/render_app/views/current_engine.haml
+- test/fixtures/render_app/views/current_engines/_erb.erb
+- test/fixtures/render_app/views/current_engines/_haml.haml
+- test/fixtures/render_app/views/current_engines/_slim.slim
+- test/fixtures/render_app/views/dive_inner_erb.erb
+- test/fixtures/render_app/views/dive_inner_haml.haml
+- test/fixtures/render_app/views/dive_inner_slim.slim
+- test/fixtures/render_app/views/dive_outer_erb.erb
+- test/fixtures/render_app/views/dive_outer_haml.haml
+- test/fixtures/render_app/views/dive_outer_slim.slim
+- test/fixtures/render_app/views/double_capture_erb.erb
+- test/fixtures/render_app/views/double_capture_haml.haml
+- test/fixtures/render_app/views/double_capture_slim.slim
+- test/fixtures/render_app/views/erb/test.erb
+- test/fixtures/render_app/views/explicit_engine.haml
+- test/fixtures/render_app/views/haml/test.haml
+- test/fixtures/render_app/views/index.haml
+- test/fixtures/render_app/views/layouts/application.haml
+- test/fixtures/render_app/views/render_block_erb.erb
+- test/fixtures/render_app/views/render_block_haml.haml
+- test/fixtures/render_app/views/render_block_slim.slim
+- test/fixtures/render_app/views/ruby_block_capture_erb.erb
+- test/fixtures/render_app/views/ruby_block_capture_haml.haml
+- test/fixtures/render_app/views/ruby_block_capture_slim.slim
+- test/fixtures/render_app/views/template/_user.haml
+- test/fixtures/render_app/views/template/haml_template.haml
+- test/fixtures/render_app/views/template/some_template.haml
+- test/fixtures/render_app/views/wrong_capture_erb.erb
+- test/fixtures/render_app/views/wrong_capture_haml.haml
+- test/fixtures/render_app/views/wrong_capture_slim.slim
+- test/helper.rb
+- test/test_asset_tag_helpers.rb
+- test/test_form_builder.rb
+- test/test_form_helpers.rb
+- test/test_format_helpers.rb
+- test/test_helpers.rb
+- test/test_locale.rb
+- test/test_number_helpers.rb
+- test/test_output_helpers.rb
+- test/test_render_helpers.rb
+- test/test_rendering.rb
+- test/test_rendering_extensions.rb
+- test/test_tag_helpers.rb

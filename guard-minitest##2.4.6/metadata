@@ -1,0 +1,102 @@
+--- !ruby/object:Gem::Specification
+name: guard-minitest
+version: !ruby/object:Gem::Version
+  version: 2.4.6
+platform: ruby
+authors:
+- Yann Lugrin
+- Rémy Coutable
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-07-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: guard-compat
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Guard::Minitest automatically run your tests with Minitest framework
+  (much like autotest)
+email:
+- remy@rymai.me
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- lib/guard/minitest.rb
+- lib/guard/minitest/inspector.rb
+- lib/guard/minitest/notifier.rb
+- lib/guard/minitest/reporter.rb
+- lib/guard/minitest/reporters/old_reporter.rb
+- lib/guard/minitest/runner.rb
+- lib/guard/minitest/runners/old_runner.rb
+- lib/guard/minitest/templates/Guardfile
+- lib/guard/minitest/utils.rb
+- lib/guard/minitest/version.rb
+- lib/minitest/guard_minitest_plugin.rb
+homepage: https://rubygems.org/gems/guard-minitest
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.4
+signing_key: 
+specification_version: 4
+summary: Guard plugin for the Minitest framework
+test_files: []

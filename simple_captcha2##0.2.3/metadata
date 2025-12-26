@@ -1,0 +1,121 @@
+--- !ruby/object:Gem::Specification
+name: simple_captcha2
+version: !ruby/object:Gem::Version
+  version: 0.2.3
+platform: ruby
+authors:
+- Pavlo Galeta
+- Igor Galeta
+- Stefan Wienert
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-03-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara-mechanize
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: SimpleCaptcha is available to be used with Rails 3 + 4 or above and also
+  it provides the backward compatibility with previous versions of Rails.
+email: stwienert@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- README.md
+- Rakefile
+- lib/generators/USAGE
+- lib/generators/simple_captcha_generator.rb
+- lib/generators/templates/migration.rb
+- lib/generators/templates/partial.erb
+- lib/simple_captcha.rb
+- lib/simple_captcha/active_record.rb
+- lib/simple_captcha/controller.rb
+- lib/simple_captcha/engine.rb
+- lib/simple_captcha/form_builder.rb
+- lib/simple_captcha/formtastic.rb
+- lib/simple_captcha/image.rb
+- lib/simple_captcha/middleware.rb
+- lib/simple_captcha/simple_captcha_data.rb
+- lib/simple_captcha/simple_captcha_data_mongoid.rb
+- lib/simple_captcha/utils.rb
+- lib/simple_captcha/version.rb
+- lib/simple_captcha/view.rb
+homepage: http://github.com/pludoni/simple-captcha
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.3
+signing_key: 
+specification_version: 4
+summary: SimpleCaptcha is the simplest and a robust captcha plugin.
+test_files: []

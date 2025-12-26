@@ -1,0 +1,92 @@
+--- !ruby/object:Gem::Specification
+name: ione
+version: !ruby/object:Gem::Version
+  version: 1.2.5
+platform: ruby
+authors:
+- Theo Hultberg
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-07-22 00:00:00.000000000 Z
+dependencies: []
+description: Reactive programming framework for Ruby, painless evented IO, futures
+  and an efficient byte buffer
+email:
+- theo@iconara.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- README.md
+- lib/ione.rb
+- lib/ione/byte_buffer.rb
+- lib/ione/future.rb
+- lib/ione/heap.rb
+- lib/ione/io.rb
+- lib/ione/io/acceptor.rb
+- lib/ione/io/base_connection.rb
+- lib/ione/io/connection.rb
+- lib/ione/io/io_reactor.rb
+- lib/ione/io/server_connection.rb
+- lib/ione/io/ssl_acceptor.rb
+- lib/ione/io/ssl_connection.rb
+- lib/ione/io/ssl_server_connection.rb
+- lib/ione/version.rb
+- spec/integration/io_spec.rb
+- spec/integration/ssl_spec.rb
+- spec/ione/byte_buffer_spec.rb
+- spec/ione/future_spec.rb
+- spec/ione/heap_spec.rb
+- spec/ione/io/acceptor_spec.rb
+- spec/ione/io/connection_common.rb
+- spec/ione/io/connection_spec.rb
+- spec/ione/io/io_reactor_spec.rb
+- spec/ione/io/server_connection_spec.rb
+- spec/ione/io/ssl_acceptor_spec.rb
+- spec/ione/io/ssl_connection_spec.rb
+- spec/ione/io/ssl_server_connection_spec.rb
+- spec/spec_helper.rb
+- spec/support/await_helper.rb
+- spec/support/fake_server.rb
+homepage: http://github.com/iconara/ione
+licenses:
+- Apache License 2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Reactive programming framework for Ruby
+test_files:
+- spec/spec_helper.rb
+- spec/ione/io/ssl_acceptor_spec.rb
+- spec/ione/io/server_connection_spec.rb
+- spec/ione/io/ssl_server_connection_spec.rb
+- spec/ione/io/acceptor_spec.rb
+- spec/ione/io/connection_spec.rb
+- spec/ione/io/ssl_connection_spec.rb
+- spec/ione/io/io_reactor_spec.rb
+- spec/ione/io/connection_common.rb
+- spec/ione/heap_spec.rb
+- spec/ione/byte_buffer_spec.rb
+- spec/ione/future_spec.rb
+- spec/integration/ssl_spec.rb
+- spec/integration/io_spec.rb
+- spec/support/await_helper.rb
+- spec/support/fake_server.rb

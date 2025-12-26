@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: jgrep
+version: !ruby/object:Gem::Version
+  version: 1.5.4
+platform: ruby
+authors:
+- P Loubser
+- Dominic Cleal
+- R.I. Pienaar
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-09-10 00:00:00.000000000 Z
+dependencies: []
+description: Compare a list of json documents to a simple logical language and returns
+  matches as output
+email:
+- ploubser@gmail.com
+- dominic@cleal.org
+- rip@devco.net
+executables:
+- jgrep
+extensions: []
+extra_rdoc_files:
+- CHANGELOG.markdown
+- README.markdown
+files:
+- CHANGELOG.markdown
+- COPYING
+- README.markdown
+- Rakefile
+- bin/jgrep
+- lib/jgrep.rb
+- lib/parser/parser.rb
+- lib/parser/scanner.rb
+- spec/Rakefile
+- spec/spec_helper.rb
+- spec/unit/jgrep_spec.rb
+- spec/unit/parser_spec.rb
+- spec/unit/scanner_spec.rb
+homepage: https://github.com/ploubser/JSON-Grep
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Filter JSON documents with a simple logical language
+test_files: []

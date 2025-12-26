@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification
+name: net-smtp
+version: !ruby/object:Gem::Version
+  version: 0.5.0
+platform: ruby
+authors:
+- Yukihiro Matsumoto
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-03-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: net-protocol
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Simple Mail Transfer Protocol client library for Ruby.
+email:
+- matz@ruby-lang.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- NEWS.md
+- README.md
+- lib/net/smtp.rb
+- lib/net/smtp/auth_cram_md5.rb
+- lib/net/smtp/auth_login.rb
+- lib/net/smtp/auth_plain.rb
+- lib/net/smtp/auth_xoauth2.rb
+- lib/net/smtp/authenticator.rb
+homepage: https://github.com/ruby/net-smtp
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata:
+  homepage_uri: https://github.com/ruby/net-smtp
+  source_code_uri: https://github.com/ruby/net-smtp
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Simple Mail Transfer Protocol client library for Ruby.
+test_files: []

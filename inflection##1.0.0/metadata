@@ -1,0 +1,58 @@
+--- !ruby/object:Gem::Specification
+name: inflection
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+  prerelease: 
+platform: ruby
+authors:
+- Dan Kubb
+- Simon Hafner
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2011-11-12 00:00:00.000000000 Z
+dependencies: []
+description: Support library for inflections
+email: hafnersimon@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.rdoc
+files:
+- .gitignore
+- LICENSE
+- README.rdoc
+- VERSION
+- inflection.gemspec
+- lib/inflection.rb
+- spec/inflection
+- spec/inflection.rb
+- spec/injective
+homepage: http://github.com/Tass/extlib/tree/inflection
+licenses: []
+post_install_message: 
+rdoc_options:
+- --charset=UTF-8
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.11
+signing_key: 
+specification_version: 3
+summary: Provies english inflection.
+test_files: []
+has_rdoc: 

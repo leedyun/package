@@ -1,0 +1,174 @@
+--- !ruby/object:Gem::Specification
+name: sentry-ruby-core
+version: !ruby/object:Gem::Version
+  version: 5.22.1
+platform: ruby
+authors:
+- Sentry Team
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sentry-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.22.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 5.22.1
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A gem that provides a client interface for the Sentry error logger
+email: accounts@sentry.io
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE.txt
+files:
+- ".gitignore"
+- ".rspec"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- Makefile
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- lib/sentry-ruby.rb
+- lib/sentry/attachment.rb
+- lib/sentry/background_worker.rb
+- lib/sentry/backpressure_monitor.rb
+- lib/sentry/backtrace.rb
+- lib/sentry/baggage.rb
+- lib/sentry/breadcrumb.rb
+- lib/sentry/breadcrumb/sentry_logger.rb
+- lib/sentry/breadcrumb_buffer.rb
+- lib/sentry/check_in_event.rb
+- lib/sentry/client.rb
+- lib/sentry/configuration.rb
+- lib/sentry/core_ext/object/deep_dup.rb
+- lib/sentry/core_ext/object/duplicable.rb
+- lib/sentry/cron/configuration.rb
+- lib/sentry/cron/monitor_check_ins.rb
+- lib/sentry/cron/monitor_config.rb
+- lib/sentry/cron/monitor_schedule.rb
+- lib/sentry/dsn.rb
+- lib/sentry/envelope.rb
+- lib/sentry/envelope/item.rb
+- lib/sentry/error_event.rb
+- lib/sentry/event.rb
+- lib/sentry/exceptions.rb
+- lib/sentry/excon.rb
+- lib/sentry/excon/middleware.rb
+- lib/sentry/faraday.rb
+- lib/sentry/graphql.rb
+- lib/sentry/hub.rb
+- lib/sentry/integrable.rb
+- lib/sentry/interface.rb
+- lib/sentry/interfaces/exception.rb
+- lib/sentry/interfaces/mechanism.rb
+- lib/sentry/interfaces/request.rb
+- lib/sentry/interfaces/single_exception.rb
+- lib/sentry/interfaces/stacktrace.rb
+- lib/sentry/interfaces/stacktrace_builder.rb
+- lib/sentry/interfaces/threads.rb
+- lib/sentry/linecache.rb
+- lib/sentry/logger.rb
+- lib/sentry/metrics.rb
+- lib/sentry/metrics/aggregator.rb
+- lib/sentry/metrics/configuration.rb
+- lib/sentry/metrics/counter_metric.rb
+- lib/sentry/metrics/distribution_metric.rb
+- lib/sentry/metrics/gauge_metric.rb
+- lib/sentry/metrics/local_aggregator.rb
+- lib/sentry/metrics/metric.rb
+- lib/sentry/metrics/set_metric.rb
+- lib/sentry/metrics/timing.rb
+- lib/sentry/net/http.rb
+- lib/sentry/profiler.rb
+- lib/sentry/profiler/helpers.rb
+- lib/sentry/propagation_context.rb
+- lib/sentry/puma.rb
+- lib/sentry/rack.rb
+- lib/sentry/rack/capture_exceptions.rb
+- lib/sentry/rake.rb
+- lib/sentry/redis.rb
+- lib/sentry/release_detector.rb
+- lib/sentry/rspec.rb
+- lib/sentry/scope.rb
+- lib/sentry/session.rb
+- lib/sentry/session_flusher.rb
+- lib/sentry/span.rb
+- lib/sentry/test_helper.rb
+- lib/sentry/threaded_periodic_worker.rb
+- lib/sentry/transaction.rb
+- lib/sentry/transaction_event.rb
+- lib/sentry/transport.rb
+- lib/sentry/transport/configuration.rb
+- lib/sentry/transport/dummy_transport.rb
+- lib/sentry/transport/http_transport.rb
+- lib/sentry/transport/spotlight_transport.rb
+- lib/sentry/utils/argument_checking_helper.rb
+- lib/sentry/utils/custom_inspection.rb
+- lib/sentry/utils/encoding_helper.rb
+- lib/sentry/utils/env_helper.rb
+- lib/sentry/utils/exception_cause_chain.rb
+- lib/sentry/utils/http_tracing.rb
+- lib/sentry/utils/logging_helper.rb
+- lib/sentry/utils/real_ip.rb
+- lib/sentry/utils/request_id.rb
+- lib/sentry/vernier/output.rb
+- lib/sentry/vernier/profiler.rb
+- lib/sentry/version.rb
+- sentry-ruby-core.gemspec
+- sentry-ruby.gemspec
+homepage: https://github.com/getsentry/sentry-ruby
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/getsentry/sentry-ruby
+  source_code_uri: https://github.com/getsentry/sentry-ruby
+  changelog_uri: https://github.com/getsentry/sentry-ruby/blob/master/CHANGELOG.md
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: A gem that provides a client interface for the Sentry error logger
+test_files: []

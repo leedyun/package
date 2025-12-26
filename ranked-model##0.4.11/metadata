@@ -1,0 +1,212 @@
+--- !ruby/object:Gem::Specification
+name: ranked-model
+version: !ruby/object:Gem::Version
+  version: 0.4.11
+platform: ruby
+authors:
+- Matthew Beale
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: ranked-model is a modern row sorting library built for Rails 4.2+. It
+  uses ARel aggressively and is better optimized than most other libraries.
+email:
+- matt.beale@madhatted.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- Rakefile
+- Readme.mkd
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_1.gemfile
+- gemfiles/rails_7_0.gemfile
+- lib/ranked-model.rb
+- lib/ranked-model/railtie.rb
+- lib/ranked-model/ranker.rb
+- lib/ranked-model/version.rb
+- rails/init.rb
+- ranked-model.gemspec
+- spec/duck-model/column_default_ducks_spec.rb
+- spec/duck-model/duck_spec.rb
+- spec/duck-model/inferred_ducks_spec.rb
+- spec/duck-model/lots_of_ducks_spec.rb
+- spec/duck-model/wrong_ducks_spec.rb
+- spec/ego-model/ego_spec.rb
+- spec/notifications_spec.rb
+- spec/number-model/number_spec.rb
+- spec/player-model/records_already_exist_spec.rb
+- spec/ranked-model/ranker_spec.rb
+- spec/ranked-model/version_spec.rb
+- spec/spec_helper.rb
+- spec/sti-model/element_spec.rb
+- spec/sti-model/vehicle_spec.rb
+- spec/support/active_record.rb
+- spec/support/database.yml
+- tmp/.gitignore
+homepage: https://github.com/mixonic/ranked-model
+licenses:
+- MIT
+metadata:
+  funding_uri: https://github.com/sponsors/brendon
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.32
+signing_key:
+specification_version: 4
+summary: An acts_as_sortable replacement built for Rails 4.2+
+test_files:
+- spec/duck-model/column_default_ducks_spec.rb
+- spec/duck-model/duck_spec.rb
+- spec/duck-model/inferred_ducks_spec.rb
+- spec/duck-model/lots_of_ducks_spec.rb
+- spec/duck-model/wrong_ducks_spec.rb
+- spec/ego-model/ego_spec.rb
+- spec/notifications_spec.rb
+- spec/number-model/number_spec.rb
+- spec/player-model/records_already_exist_spec.rb
+- spec/ranked-model/ranker_spec.rb
+- spec/ranked-model/version_spec.rb
+- spec/spec_helper.rb
+- spec/sti-model/element_spec.rb
+- spec/sti-model/vehicle_spec.rb
+- spec/support/active_record.rb
+- spec/support/database.yml

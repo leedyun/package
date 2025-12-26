@@ -1,0 +1,138 @@
+--- !ruby/object:Gem::Specification
+name: jekyll-paginate
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Parker Moore
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-10-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: jekyll
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: 
+email:
+- parkrmoore@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- History.markdown
+- LICENSE.txt
+- README.md
+- Rakefile
+- jekyll-paginate.gemspec
+- lib/jekyll-paginate.rb
+- lib/jekyll-paginate/pager.rb
+- lib/jekyll-paginate/pagination.rb
+- lib/jekyll-paginate/version.rb
+- script/bootstrap
+- script/cibuild
+- script/unbundle
+- spec/pager_spec.rb
+- spec/pagination_spec.rb
+- spec/source/_posts/2014-05-20-blah.html
+- spec/source/_posts/2014-05-21-bleh.html
+- spec/source/_posts/2014-05-22-humor.html
+- spec/source/_posts/2014-05-23-hey-there.html
+- spec/source/_posts/2014-05-24-whateva.html
+- spec/source/_posts/2014-05-25-oh-yes.html
+- spec/source/contacts/index.html
+- spec/source/index.html
+- spec/spec_helper.rb
+homepage: https://github.com/jekyll/jekyll-paginate
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Built-in Pagination Generator for Jekyll
+test_files:
+- spec/pager_spec.rb
+- spec/pagination_spec.rb
+- spec/source/_posts/2014-05-20-blah.html
+- spec/source/_posts/2014-05-21-bleh.html
+- spec/source/_posts/2014-05-22-humor.html
+- spec/source/_posts/2014-05-23-hey-there.html
+- spec/source/_posts/2014-05-24-whateva.html
+- spec/source/_posts/2014-05-25-oh-yes.html
+- spec/source/contacts/index.html
+- spec/source/index.html
+- spec/spec_helper.rb

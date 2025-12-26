@@ -1,0 +1,164 @@
+--- !ruby/object:Gem::Specification
+name: liquid
+version: !ruby/object:Gem::Version
+  version: 5.7.0
+platform: ruby
+authors:
+- Tobias Lütke
+bindir: bin
+cert_chain: []
+date: 2025-01-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: strscan
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.1.1
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+email:
+- tobi@leetsoft.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- History.md
+- README.md
+files:
+- History.md
+- LICENSE
+- README.md
+- lib/liquid.rb
+- lib/liquid/block.rb
+- lib/liquid/block_body.rb
+- lib/liquid/condition.rb
+- lib/liquid/const.rb
+- lib/liquid/context.rb
+- lib/liquid/deprecations.rb
+- lib/liquid/document.rb
+- lib/liquid/drop.rb
+- lib/liquid/environment.rb
+- lib/liquid/errors.rb
+- lib/liquid/expression.rb
+- lib/liquid/extensions.rb
+- lib/liquid/file_system.rb
+- lib/liquid/forloop_drop.rb
+- lib/liquid/i18n.rb
+- lib/liquid/interrupts.rb
+- lib/liquid/lexer.rb
+- lib/liquid/locales/en.yml
+- lib/liquid/parse_context.rb
+- lib/liquid/parse_tree_visitor.rb
+- lib/liquid/parser.rb
+- lib/liquid/parser_switching.rb
+- lib/liquid/partial_cache.rb
+- lib/liquid/profiler.rb
+- lib/liquid/profiler/hooks.rb
+- lib/liquid/range_lookup.rb
+- lib/liquid/registers.rb
+- lib/liquid/resource_limits.rb
+- lib/liquid/standardfilters.rb
+- lib/liquid/strainer_template.rb
+- lib/liquid/tablerowloop_drop.rb
+- lib/liquid/tag.rb
+- lib/liquid/tag/disableable.rb
+- lib/liquid/tag/disabler.rb
+- lib/liquid/tags.rb
+- lib/liquid/tags/assign.rb
+- lib/liquid/tags/break.rb
+- lib/liquid/tags/capture.rb
+- lib/liquid/tags/case.rb
+- lib/liquid/tags/comment.rb
+- lib/liquid/tags/continue.rb
+- lib/liquid/tags/cycle.rb
+- lib/liquid/tags/decrement.rb
+- lib/liquid/tags/echo.rb
+- lib/liquid/tags/for.rb
+- lib/liquid/tags/if.rb
+- lib/liquid/tags/ifchanged.rb
+- lib/liquid/tags/include.rb
+- lib/liquid/tags/increment.rb
+- lib/liquid/tags/inline_comment.rb
+- lib/liquid/tags/raw.rb
+- lib/liquid/tags/render.rb
+- lib/liquid/tags/table_row.rb
+- lib/liquid/tags/unless.rb
+- lib/liquid/template.rb
+- lib/liquid/template_factory.rb
+- lib/liquid/tokenizer.rb
+- lib/liquid/usage.rb
+- lib/liquid/utils.rb
+- lib/liquid/variable.rb
+- lib/liquid/variable_lookup.rb
+- lib/liquid/version.rb
+homepage: https://shopify.github.io/liquid/
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.7
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: A secure, non-evaling end user template engine with aesthetic markup.
+test_files: []

@@ -1,0 +1,65 @@
+--- !ruby/object:Gem::Specification
+name: faraday-rack
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- "@iMacTia"
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-03-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: Faraday adapter for Rack
+email:
+- giuffrida.mattia@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.md
+- README.md
+- lib/faraday/adapter/rack.rb
+- lib/faraday/rack.rb
+- lib/faraday/rack/version.rb
+homepage: https://github.com/lostisland/faraday-rack
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/lostisland/faraday-rack
+  source_code_uri: https://github.com/lostisland/faraday-rack
+  changelog_uri: https://github.com/lostisland/faraday-rack
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Faraday adapter for Rack
+test_files: []

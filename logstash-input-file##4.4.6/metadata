@@ -1,0 +1,312 @@
+--- !ruby/object:Gem::Specification
+name: logstash-input-file
+version: !ruby/object:Gem::Version
+  version: 4.4.6
+platform: ruby
+authors:
+- Elastic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-codec-plain
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: addressable
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: concurrent-ruby
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  name: logstash-codec-multiline
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  name: logstash-mixin-ecs_compatibility_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.19
+  name: stud
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.19
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-codec-json
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: rspec-sequencing
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: rspec-wait
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: timecop
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- JAR_VERSION
+- LICENSE
+- NOTICE.TXT
+- README.md
+- docs/index.asciidoc
+- lib/filewatch/bootstrap.rb
+- lib/filewatch/discoverer.rb
+- lib/filewatch/helper.rb
+- lib/filewatch/observing_base.rb
+- lib/filewatch/observing_read.rb
+- lib/filewatch/observing_tail.rb
+- lib/filewatch/processor.rb
+- lib/filewatch/read_mode/handlers/base.rb
+- lib/filewatch/read_mode/handlers/read_file.rb
+- lib/filewatch/read_mode/handlers/read_zip_file.rb
+- lib/filewatch/read_mode/processor.rb
+- lib/filewatch/settings.rb
+- lib/filewatch/sincedb_collection.rb
+- lib/filewatch/sincedb_record_serializer.rb
+- lib/filewatch/sincedb_value.rb
+- lib/filewatch/stat/generic.rb
+- lib/filewatch/stat/windows_path.rb
+- lib/filewatch/tail_mode/handlers/base.rb
+- lib/filewatch/tail_mode/handlers/create.rb
+- lib/filewatch/tail_mode/handlers/create_initial.rb
+- lib/filewatch/tail_mode/handlers/delete.rb
+- lib/filewatch/tail_mode/handlers/grow.rb
+- lib/filewatch/tail_mode/handlers/shrink.rb
+- lib/filewatch/tail_mode/handlers/timeout.rb
+- lib/filewatch/tail_mode/handlers/unignore.rb
+- lib/filewatch/tail_mode/processor.rb
+- lib/filewatch/watch.rb
+- lib/filewatch/watched_file.rb
+- lib/filewatch/watched_files_collection.rb
+- lib/filewatch/winhelper.rb
+- lib/jars/filewatch-1.0.1.jar
+- lib/logstash/inputs/delete_completed_file_handler.rb
+- lib/logstash/inputs/file.rb
+- lib/logstash/inputs/file/patch.rb
+- lib/logstash/inputs/file_listener.rb
+- lib/logstash/inputs/friendly_durations.rb
+- lib/logstash/inputs/log_completed_file_handler.rb
+- logstash-input-file.gemspec
+- spec/file_ext/file_ext_windows_spec.rb
+- spec/filewatch/buftok_spec.rb
+- spec/filewatch/read_mode_handlers_read_file_spec.rb
+- spec/filewatch/reading_spec.rb
+- spec/filewatch/rotate_spec.rb
+- spec/filewatch/settings_spec.rb
+- spec/filewatch/sincedb_record_serializer_spec.rb
+- spec/filewatch/spec_helper.rb
+- spec/filewatch/tailing_spec.rb
+- spec/filewatch/watched_file_spec.rb
+- spec/filewatch/watched_files_collection_spec.rb
+- spec/filewatch/winhelper_spec.rb
+- spec/fixtures/compressed.log.gz
+- spec/fixtures/compressed.log.gzip
+- spec/fixtures/invalid_utf8.gbk.log
+- spec/fixtures/no-final-newline.log
+- spec/fixtures/uncompressed.log
+- spec/helpers/logging_level_helper.rb
+- spec/helpers/rspec_wait_handler_helper.rb
+- spec/helpers/spec_helper.rb
+- spec/inputs/file_read_spec.rb
+- spec/inputs/file_tail_spec.rb
+- spec/inputs/friendly_durations_spec.rb
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache-2.0
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: input
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key:
+specification_version: 4
+summary: Streams events from files
+test_files:
+- spec/file_ext/file_ext_windows_spec.rb
+- spec/filewatch/buftok_spec.rb
+- spec/filewatch/read_mode_handlers_read_file_spec.rb
+- spec/filewatch/reading_spec.rb
+- spec/filewatch/rotate_spec.rb
+- spec/filewatch/settings_spec.rb
+- spec/filewatch/sincedb_record_serializer_spec.rb
+- spec/filewatch/spec_helper.rb
+- spec/filewatch/tailing_spec.rb
+- spec/filewatch/watched_file_spec.rb
+- spec/filewatch/watched_files_collection_spec.rb
+- spec/filewatch/winhelper_spec.rb
+- spec/fixtures/compressed.log.gz
+- spec/fixtures/compressed.log.gzip
+- spec/fixtures/invalid_utf8.gbk.log
+- spec/fixtures/no-final-newline.log
+- spec/fixtures/uncompressed.log
+- spec/helpers/logging_level_helper.rb
+- spec/helpers/rspec_wait_handler_helper.rb
+- spec/helpers/spec_helper.rb
+- spec/inputs/file_read_spec.rb
+- spec/inputs/file_tail_spec.rb
+- spec/inputs/friendly_durations_spec.rb

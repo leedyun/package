@@ -1,0 +1,240 @@
+--- !ruby/object:Gem::Specification
+name: cassandra-driver
+version: !ruby/object:Gem::Version
+  version: 3.2.5
+platform: ruby
+authors:
+- Theo Hultberg
+- Bulat Shakirzyanov
+- Sandeep Tamhankar
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-10-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ione
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+description: A pure Ruby driver for Apache Cassandra
+email:
+- theo@iconara.net
+- bulat.shakirzyanov@datastax.com
+- sandeep.tamhankar@datastax.com
+executables: []
+extensions:
+- ext/cassandra_murmur3/extconf.rb
+extra_rdoc_files:
+- README.md
+files:
+- ".yardopts"
+- README.md
+- ext/cassandra_murmur3/cassandra_murmur3.c
+- ext/cassandra_murmur3/extconf.rb
+- lib/cassandra.rb
+- lib/cassandra/address_resolution.rb
+- lib/cassandra/address_resolution/policies.rb
+- lib/cassandra/address_resolution/policies/ec2_multi_region.rb
+- lib/cassandra/address_resolution/policies/none.rb
+- lib/cassandra/aggregate.rb
+- lib/cassandra/argument.rb
+- lib/cassandra/attr_boolean.rb
+- lib/cassandra/auth.rb
+- lib/cassandra/auth/providers.rb
+- lib/cassandra/auth/providers/password.rb
+- lib/cassandra/cassandra_logger.rb
+- lib/cassandra/cluster.rb
+- lib/cassandra/cluster/client.rb
+- lib/cassandra/cluster/connection_pool.rb
+- lib/cassandra/cluster/connector.rb
+- lib/cassandra/cluster/control_connection.rb
+- lib/cassandra/cluster/failed_connection.rb
+- lib/cassandra/cluster/metadata.rb
+- lib/cassandra/cluster/options.rb
+- lib/cassandra/cluster/registry.rb
+- lib/cassandra/cluster/schema.rb
+- lib/cassandra/cluster/schema/cql_type_parser.rb
+- lib/cassandra/cluster/schema/fetchers.rb
+- lib/cassandra/cluster/schema/fqcn_type_parser.rb
+- lib/cassandra/cluster/schema/partitioners.rb
+- lib/cassandra/cluster/schema/partitioners/murmur3.rb
+- lib/cassandra/cluster/schema/partitioners/ordered.rb
+- lib/cassandra/cluster/schema/partitioners/random.rb
+- lib/cassandra/cluster/schema/replication_strategies.rb
+- lib/cassandra/cluster/schema/replication_strategies/network_topology.rb
+- lib/cassandra/cluster/schema/replication_strategies/none.rb
+- lib/cassandra/cluster/schema/replication_strategies/simple.rb
+- lib/cassandra/column.rb
+- lib/cassandra/column_container.rb
+- lib/cassandra/compression.rb
+- lib/cassandra/compression/compressors/lz4.rb
+- lib/cassandra/compression/compressors/snappy.rb
+- lib/cassandra/custom_data.rb
+- lib/cassandra/driver.rb
+- lib/cassandra/duration.rb
+- lib/cassandra/errors.rb
+- lib/cassandra/execution/info.rb
+- lib/cassandra/execution/options.rb
+- lib/cassandra/execution/profile.rb
+- lib/cassandra/execution/profile_manager.rb
+- lib/cassandra/execution/trace.rb
+- lib/cassandra/executors.rb
+- lib/cassandra/function.rb
+- lib/cassandra/function_collection.rb
+- lib/cassandra/future.rb
+- lib/cassandra/host.rb
+- lib/cassandra/index.rb
+- lib/cassandra/keyspace.rb
+- lib/cassandra/listener.rb
+- lib/cassandra/load_balancing.rb
+- lib/cassandra/load_balancing/policies.rb
+- lib/cassandra/load_balancing/policies/dc_aware_round_robin.rb
+- lib/cassandra/load_balancing/policies/round_robin.rb
+- lib/cassandra/load_balancing/policies/token_aware.rb
+- lib/cassandra/load_balancing/policies/white_list.rb
+- lib/cassandra/materialized_view.rb
+- lib/cassandra/null_logger.rb
+- lib/cassandra/protocol.rb
+- lib/cassandra/protocol/coder.rb
+- lib/cassandra/protocol/cql_byte_buffer.rb
+- lib/cassandra/protocol/cql_protocol_handler.rb
+- lib/cassandra/protocol/request.rb
+- lib/cassandra/protocol/requests/auth_response_request.rb
+- lib/cassandra/protocol/requests/batch_request.rb
+- lib/cassandra/protocol/requests/credentials_request.rb
+- lib/cassandra/protocol/requests/execute_request.rb
+- lib/cassandra/protocol/requests/options_request.rb
+- lib/cassandra/protocol/requests/prepare_request.rb
+- lib/cassandra/protocol/requests/query_request.rb
+- lib/cassandra/protocol/requests/register_request.rb
+- lib/cassandra/protocol/requests/startup_request.rb
+- lib/cassandra/protocol/requests/void_query_request.rb
+- lib/cassandra/protocol/response.rb
+- lib/cassandra/protocol/responses/already_exists_error_response.rb
+- lib/cassandra/protocol/responses/auth_challenge_response.rb
+- lib/cassandra/protocol/responses/auth_success_response.rb
+- lib/cassandra/protocol/responses/authenticate_response.rb
+- lib/cassandra/protocol/responses/error_response.rb
+- lib/cassandra/protocol/responses/event_response.rb
+- lib/cassandra/protocol/responses/function_failure_error_response.rb
+- lib/cassandra/protocol/responses/prepared_result_response.rb
+- lib/cassandra/protocol/responses/raw_rows_result_response.rb
+- lib/cassandra/protocol/responses/read_failure_error_response.rb
+- lib/cassandra/protocol/responses/read_timeout_error_response.rb
+- lib/cassandra/protocol/responses/ready_response.rb
+- lib/cassandra/protocol/responses/result_response.rb
+- lib/cassandra/protocol/responses/rows_result_response.rb
+- lib/cassandra/protocol/responses/schema_change_event_response.rb
+- lib/cassandra/protocol/responses/schema_change_result_response.rb
+- lib/cassandra/protocol/responses/set_keyspace_result_response.rb
+- lib/cassandra/protocol/responses/status_change_event_response.rb
+- lib/cassandra/protocol/responses/supported_response.rb
+- lib/cassandra/protocol/responses/topology_change_event_response.rb
+- lib/cassandra/protocol/responses/unavailable_error_response.rb
+- lib/cassandra/protocol/responses/unprepared_error_response.rb
+- lib/cassandra/protocol/responses/void_result_response.rb
+- lib/cassandra/protocol/responses/write_failure_error_response.rb
+- lib/cassandra/protocol/responses/write_timeout_error_response.rb
+- lib/cassandra/protocol/v1.rb
+- lib/cassandra/protocol/v3.rb
+- lib/cassandra/protocol/v4.rb
+- lib/cassandra/reconnection.rb
+- lib/cassandra/reconnection/policies.rb
+- lib/cassandra/reconnection/policies/constant.rb
+- lib/cassandra/reconnection/policies/exponential.rb
+- lib/cassandra/result.rb
+- lib/cassandra/retry.rb
+- lib/cassandra/retry/policies.rb
+- lib/cassandra/retry/policies/default.rb
+- lib/cassandra/retry/policies/downgrading_consistency.rb
+- lib/cassandra/retry/policies/fallthrough.rb
+- lib/cassandra/session.rb
+- lib/cassandra/statement.rb
+- lib/cassandra/statements.rb
+- lib/cassandra/statements/batch.rb
+- lib/cassandra/statements/bound.rb
+- lib/cassandra/statements/prepared.rb
+- lib/cassandra/statements/simple.rb
+- lib/cassandra/statements/void.rb
+- lib/cassandra/table.rb
+- lib/cassandra/time.rb
+- lib/cassandra/time_uuid.rb
+- lib/cassandra/timestamp_generator.rb
+- lib/cassandra/timestamp_generator/simple.rb
+- lib/cassandra/timestamp_generator/ticking_on_duplicate.rb
+- lib/cassandra/trigger.rb
+- lib/cassandra/tuple.rb
+- lib/cassandra/types.rb
+- lib/cassandra/udt.rb
+- lib/cassandra/util.rb
+- lib/cassandra/uuid.rb
+- lib/cassandra/uuid/generator.rb
+- lib/cassandra/version.rb
+- lib/datastax/cassandra.rb
+homepage: http://datastax.github.io/ruby-driver
+licenses:
+- Apache License 2.0
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--title"
+- Datastax Ruby Driver
+- "--main"
+- README.md
+- "--line-numbers"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.8
+signing_key: 
+specification_version: 4
+summary: Datastax Ruby Driver for Apache Cassandra
+test_files: []

@@ -1,0 +1,9 @@
+---
+require:
+  - rubocop-capybara
+  - ./lib/gitlab/styles/rubocop
+
+# Checks if there is a more specific finder offered by Capybara.
+# https://gitlab.com/gitlab-org/ruby/gems/gitlab-styles/-/merge_requests/131#note_1141024624
+Capybara/SpecificFinders:
+  Enabled: false

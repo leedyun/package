@@ -1,0 +1,334 @@
+--- !ruby/object:Gem::Specification
+name: active_attr
+version: !ruby/object:Gem::Version
+  version: 0.17.1
+platform: ruby
+authors:
+- Chris Griego
+- Ben Poweski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: factory_bot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: tzinfo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Create plain old Ruby models without reinventing the wheel.
+email:
+- cgriego@gmail.com
+- bpoweski@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/test.yaml"
+- ".gitignore"
+- ".rspec"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- active_attr.gemspec
+- gemfiles/rails_3_0.gemfile
+- gemfiles/rails_3_1.gemfile
+- gemfiles/rails_3_2.gemfile
+- gemfiles/rails_4_0.gemfile
+- gemfiles/rails_4_1.gemfile
+- gemfiles/rails_4_2.gemfile
+- gemfiles/rails_5_0.gemfile
+- gemfiles/rails_5_1.gemfile
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_1.gemfile
+- gemfiles/rails_7_0.gemfile
+- gemfiles/rails_7_1.gemfile
+- gemfiles/rails_7_2.gemfile
+- gemfiles/rails_head.gemfile
+- lib/active_attr.rb
+- lib/active_attr/attribute_defaults.rb
+- lib/active_attr/attribute_definition.rb
+- lib/active_attr/attributes.rb
+- lib/active_attr/basic_model.rb
+- lib/active_attr/block_initialization.rb
+- lib/active_attr/chainable_initialization.rb
+- lib/active_attr/dangerous_attribute_error.rb
+- lib/active_attr/error.rb
+- lib/active_attr/logger.rb
+- lib/active_attr/mass_assignment.rb
+- lib/active_attr/matchers.rb
+- lib/active_attr/matchers/have_attribute_matcher.rb
+- lib/active_attr/model.rb
+- lib/active_attr/query_attributes.rb
+- lib/active_attr/railtie.rb
+- lib/active_attr/rspec.rb
+- lib/active_attr/serialization.rb
+- lib/active_attr/typecasted_attributes.rb
+- lib/active_attr/typecasting.rb
+- lib/active_attr/typecasting/big_decimal_typecaster.rb
+- lib/active_attr/typecasting/boolean.rb
+- lib/active_attr/typecasting/boolean_typecaster.rb
+- lib/active_attr/typecasting/date_time_typecaster.rb
+- lib/active_attr/typecasting/date_typecaster.rb
+- lib/active_attr/typecasting/float_typecaster.rb
+- lib/active_attr/typecasting/integer_typecaster.rb
+- lib/active_attr/typecasting/object_typecaster.rb
+- lib/active_attr/typecasting/string_typecaster.rb
+- lib/active_attr/typecasting/unknown_typecaster_error.rb
+- lib/active_attr/unknown_attribute_error.rb
+- lib/active_attr/version.rb
+- spec/functional/active_attr/attribute_defaults_spec.rb
+- spec/functional/active_attr/attributes_spec.rb
+- spec/functional/active_attr/chainable_initialization_spec.rb
+- spec/functional/active_attr/mass_assignment_spec.rb
+- spec/functional/active_attr/matchers/have_attribute_matcher_spec.rb
+- spec/functional/active_attr/model_spec.rb
+- spec/functional/active_attr/query_attributes_spec.rb
+- spec/functional/active_attr/serialization_spec.rb
+- spec/functional/active_attr/typecasted_attributes_spec.rb
+- spec/spec_helper.rb
+- spec/support/active_model_lint.rb
+- spec/support/age.rb
+- spec/support/initialization_verifier.rb
+- spec/support/mass_assignment_shared_examples.rb
+- spec/unit/active_attr/attribute_defaults_spec.rb
+- spec/unit/active_attr/attribute_definition_spec.rb
+- spec/unit/active_attr/attributes_spec.rb
+- spec/unit/active_attr/basic_model_spec.rb
+- spec/unit/active_attr/block_initialization_spec.rb
+- spec/unit/active_attr/dangerous_attribute_error_spec.rb
+- spec/unit/active_attr/error_spec.rb
+- spec/unit/active_attr/logger_spec.rb
+- spec/unit/active_attr/mass_assignment_spec.rb
+- spec/unit/active_attr/matchers/have_attribute_matcher_spec.rb
+- spec/unit/active_attr/matchers_spec.rb
+- spec/unit/active_attr/query_attributes_spec.rb
+- spec/unit/active_attr/typecasted_attributes_spec.rb
+- spec/unit/active_attr/typecasting/big_decimal_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/boolean_spec.rb
+- spec/unit/active_attr/typecasting/boolean_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/date_time_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/date_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/float_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/integer_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/object_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/string_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/unknown_typecaster_error_spec.rb
+- spec/unit/active_attr/typecasting_spec.rb
+- spec/unit/active_attr/unknown_attribute_error_spec.rb
+- spec/unit/active_attr/version_spec.rb
+homepage: https://github.com/cgriego/active_attr
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/cgriego/active_attr/blob/master/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: What ActiveModel left out
+test_files:
+- spec/functional/active_attr/attribute_defaults_spec.rb
+- spec/functional/active_attr/attributes_spec.rb
+- spec/functional/active_attr/chainable_initialization_spec.rb
+- spec/functional/active_attr/mass_assignment_spec.rb
+- spec/functional/active_attr/matchers/have_attribute_matcher_spec.rb
+- spec/functional/active_attr/model_spec.rb
+- spec/functional/active_attr/query_attributes_spec.rb
+- spec/functional/active_attr/serialization_spec.rb
+- spec/functional/active_attr/typecasted_attributes_spec.rb
+- spec/spec_helper.rb
+- spec/support/active_model_lint.rb
+- spec/support/age.rb
+- spec/support/initialization_verifier.rb
+- spec/support/mass_assignment_shared_examples.rb
+- spec/unit/active_attr/attribute_defaults_spec.rb
+- spec/unit/active_attr/attribute_definition_spec.rb
+- spec/unit/active_attr/attributes_spec.rb
+- spec/unit/active_attr/basic_model_spec.rb
+- spec/unit/active_attr/block_initialization_spec.rb
+- spec/unit/active_attr/dangerous_attribute_error_spec.rb
+- spec/unit/active_attr/error_spec.rb
+- spec/unit/active_attr/logger_spec.rb
+- spec/unit/active_attr/mass_assignment_spec.rb
+- spec/unit/active_attr/matchers/have_attribute_matcher_spec.rb
+- spec/unit/active_attr/matchers_spec.rb
+- spec/unit/active_attr/query_attributes_spec.rb
+- spec/unit/active_attr/typecasted_attributes_spec.rb
+- spec/unit/active_attr/typecasting/big_decimal_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/boolean_spec.rb
+- spec/unit/active_attr/typecasting/boolean_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/date_time_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/date_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/float_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/integer_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/object_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/string_typecaster_spec.rb
+- spec/unit/active_attr/typecasting/unknown_typecaster_error_spec.rb
+- spec/unit/active_attr/typecasting_spec.rb
+- spec/unit/active_attr/unknown_attribute_error_spec.rb
+- spec/unit/active_attr/version_spec.rb

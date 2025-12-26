@@ -1,0 +1,131 @@
+--- !ruby/object:Gem::Specification
+name: sdoc
+version: !ruby/object:Gem::Version
+  version: 2.6.1
+platform: ruby
+authors:
+- Vladimir Kolesnikov
+- Nathan Broadbent
+- Jean Mertz
+- Zachary Scott
+- Petrik de Heus
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-02-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+description: rdoc generator html with javascript search index.
+email: voloko@gmail.com mail@zzak.io
+executables:
+- sdoc
+- sdoc-merge
+extensions: []
+extra_rdoc_files:
+- README.md
+files:
+- ".github/workflows/test.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/sdoc
+- bin/sdoc-merge
+- config.ru
+- lib/rdoc/discover.rb
+- lib/rdoc/generator/template/rails/_context.rhtml
+- lib/rdoc/generator/template/rails/_head.rhtml
+- lib/rdoc/generator/template/rails/_panel.rhtml
+- lib/rdoc/generator/template/rails/class.rhtml
+- lib/rdoc/generator/template/rails/file.rhtml
+- lib/rdoc/generator/template/rails/index.rhtml
+- lib/rdoc/generator/template/rails/resources/apple-touch-icon.png
+- lib/rdoc/generator/template/rails/resources/css/github.css
+- lib/rdoc/generator/template/rails/resources/css/main.css
+- lib/rdoc/generator/template/rails/resources/css/panel.css
+- lib/rdoc/generator/template/rails/resources/css/reset.css
+- lib/rdoc/generator/template/rails/resources/favicon.ico
+- lib/rdoc/generator/template/rails/resources/i/arrow-down-current.svg
+- lib/rdoc/generator/template/rails/resources/i/arrow-down.svg
+- lib/rdoc/generator/template/rails/resources/i/arrow-right-current.svg
+- lib/rdoc/generator/template/rails/resources/i/arrow-right.svg
+- lib/rdoc/generator/template/rails/resources/i/search.svg
+- lib/rdoc/generator/template/rails/resources/i/tree_bg.svg
+- lib/rdoc/generator/template/rails/resources/js/highlight.pack.js
+- lib/rdoc/generator/template/rails/resources/js/jquery-3.5.1.min.js
+- lib/rdoc/generator/template/rails/resources/js/main.js
+- lib/rdoc/generator/template/rails/resources/js/searchdoc.js
+- lib/rdoc/generator/template/rails/resources/js/turbolinks.js
+- lib/rdoc/generator/template/rails/search_index.rhtml
+- lib/rdoc/generator/template/sdoc/_context.rhtml
+- lib/rdoc/generator/template/sdoc/_head.rhtml
+- lib/rdoc/generator/template/sdoc/class.rhtml
+- lib/rdoc/generator/template/sdoc/file.rhtml
+- lib/rdoc/generator/template/sdoc/index.rhtml
+- lib/rdoc/generator/template/sdoc/resources/apple-touch-icon.png
+- lib/rdoc/generator/template/sdoc/resources/css/github.css
+- lib/rdoc/generator/template/sdoc/resources/css/main.css
+- lib/rdoc/generator/template/sdoc/resources/css/panel.css
+- lib/rdoc/generator/template/sdoc/resources/css/reset.css
+- lib/rdoc/generator/template/sdoc/resources/favicon.ico
+- lib/rdoc/generator/template/sdoc/resources/i/arrows.png
+- lib/rdoc/generator/template/sdoc/resources/i/results_bg.png
+- lib/rdoc/generator/template/sdoc/resources/i/tree_bg.png
+- lib/rdoc/generator/template/sdoc/resources/js/highlight.pack.js
+- lib/rdoc/generator/template/sdoc/resources/js/jquery-1.3.2.min.js
+- lib/rdoc/generator/template/sdoc/resources/js/main.js
+- lib/rdoc/generator/template/sdoc/resources/js/searchdoc.js
+- lib/rdoc/generator/template/sdoc/resources/panel/index.html
+- lib/rdoc/generator/template/sdoc/search_index.rhtml
+- lib/sdoc.rb
+- lib/sdoc/generator.rb
+- lib/sdoc/github.rb
+- lib/sdoc/helpers.rb
+- lib/sdoc/merge.rb
+- lib/sdoc/templatable.rb
+- lib/sdoc/version.rb
+- netlify.toml
+- sdoc.gemspec
+- spec/helpers_spec.rb
+- spec/rdoc_generator_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/zzak/sdoc
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: rdoc html with javascript search index.
+test_files: []

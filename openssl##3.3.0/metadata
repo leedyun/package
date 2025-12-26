@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: openssl
+version: !ruby/object:Gem::Version
+  version: 3.3.0
+platform: ruby
+authors:
+- Martin Bosslet
+- SHIBATA Hiroshi
+- Zachary Scott
+- Kazuki Yamaguchi
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-21 00:00:00.000000000 Z
+dependencies: []
+description: OpenSSL for Ruby provides access to SSL/TLS and general-purpose cryptography
+  based on the OpenSSL library.
+email:
+- ruby-core@ruby-lang.org
+executables: []
+extensions:
+- ext/openssl/extconf.rb
+extra_rdoc_files:
+- CONTRIBUTING.md
+- History.md
+- README.md
+files:
+- BSDL
+- CONTRIBUTING.md
+- COPYING
+- History.md
+- README.md
+- ext/openssl/extconf.rb
+- ext/openssl/openssl_missing.c
+- ext/openssl/openssl_missing.h
+- ext/openssl/ossl.c
+- ext/openssl/ossl.h
+- ext/openssl/ossl_asn1.c
+- ext/openssl/ossl_asn1.h
+- ext/openssl/ossl_bio.c
+- ext/openssl/ossl_bio.h
+- ext/openssl/ossl_bn.c
+- ext/openssl/ossl_bn.h
+- ext/openssl/ossl_cipher.c
+- ext/openssl/ossl_cipher.h
+- ext/openssl/ossl_config.c
+- ext/openssl/ossl_config.h
+- ext/openssl/ossl_digest.c
+- ext/openssl/ossl_digest.h
+- ext/openssl/ossl_engine.c
+- ext/openssl/ossl_engine.h
+- ext/openssl/ossl_hmac.c
+- ext/openssl/ossl_hmac.h
+- ext/openssl/ossl_kdf.c
+- ext/openssl/ossl_kdf.h
+- ext/openssl/ossl_ns_spki.c
+- ext/openssl/ossl_ns_spki.h
+- ext/openssl/ossl_ocsp.c
+- ext/openssl/ossl_ocsp.h
+- ext/openssl/ossl_pkcs12.c
+- ext/openssl/ossl_pkcs12.h
+- ext/openssl/ossl_pkcs7.c
+- ext/openssl/ossl_pkcs7.h
+- ext/openssl/ossl_pkey.c
+- ext/openssl/ossl_pkey.h
+- ext/openssl/ossl_pkey_dh.c
+- ext/openssl/ossl_pkey_dsa.c
+- ext/openssl/ossl_pkey_ec.c
+- ext/openssl/ossl_pkey_rsa.c
+- ext/openssl/ossl_provider.c
+- ext/openssl/ossl_provider.h
+- ext/openssl/ossl_rand.c
+- ext/openssl/ossl_rand.h
+- ext/openssl/ossl_ssl.c
+- ext/openssl/ossl_ssl.h
+- ext/openssl/ossl_ssl_session.c
+- ext/openssl/ossl_ts.c
+- ext/openssl/ossl_ts.h
+- ext/openssl/ossl_x509.c
+- ext/openssl/ossl_x509.h
+- ext/openssl/ossl_x509attr.c
+- ext/openssl/ossl_x509cert.c
+- ext/openssl/ossl_x509crl.c
+- ext/openssl/ossl_x509ext.c
+- ext/openssl/ossl_x509name.c
+- ext/openssl/ossl_x509req.c
+- ext/openssl/ossl_x509revoked.c
+- ext/openssl/ossl_x509store.c
+- lib/openssl.rb
+- lib/openssl/asn1.rb
+- lib/openssl/bn.rb
+- lib/openssl/buffering.rb
+- lib/openssl/cipher.rb
+- lib/openssl/digest.rb
+- lib/openssl/hmac.rb
+- lib/openssl/marshal.rb
+- lib/openssl/pkcs5.rb
+- lib/openssl/pkey.rb
+- lib/openssl/ssl.rb
+- lib/openssl/version.rb
+- lib/openssl/x509.rb
+homepage: https://github.com/ruby/openssl
+licenses:
+- Ruby
+- BSD-2-Clause
+metadata:
+  msys2_mingw_dependencies: openssl
+post_install_message:
+rdoc_options:
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: SSL/TLS and general-purpose cryptography for Ruby
+test_files: []

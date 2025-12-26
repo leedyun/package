@@ -1,0 +1,229 @@
+mysql: &mysql
+  adapter: mysql2
+  username: <%= ENV['MYSQL_USER'] || 'root' %>
+  host: localhost
+
+mysql_unavailable: &mysql_unavailable
+  adapter: mysql2
+  username: <%= ENV['MYSQL_USER'] || 'root' %>
+  host: 192.0.2.1
+  connect_timeout: 3
+
+octopus: &octopus
+  shards:
+    alone_shard:
+      database: octopus_shard_5
+      <<: *mysql
+
+    postgresql_shard:
+      adapter: postgresql
+      username: <%= ENV['POSTGRES_USER'] || 'postgres' %>
+      password:
+      database: octopus_shard_1
+      encoding: unicode
+      host: localhost
+
+    sqlite_shard:
+      adapter: sqlite3
+      database: /tmp/database.sqlite3
+
+    history_shards:
+      aug2009:
+        database: octopus_shard_2
+        <<: *mysql
+      aug2010:
+        database: octopus_shard_3
+        <<: *mysql
+      aug2011:
+        database: octopus_shard_4
+        <<: *mysql
+
+    country_shards:
+      canada:
+        database: octopus_shard_2
+        <<: *mysql
+      brazil:
+        database: octopus_shard_3
+        <<: *mysql
+      russia:
+        database: octopus_shard_4
+        <<: *mysql
+
+    protocol_shard: postgres://<%= ENV['POSTGRES_USER'] || 'postgres' %>@localhost:5432/octopus_shard_2
+
+octopus_with_default_migration_group:
+   <<: *octopus
+   default_migration_group: country_shards
+
+production_raise_error:
+  shards:
+    history_shards:
+      duplicated_shard_name:
+        database: octopus_shard_5
+        <<: *mysql
+
+    country_shards:
+      duplicated_shard_name:
+        database: octopus_shard_4
+        <<: *mysql
+
+production_replicated:
+  replicated: true
+  fully_replicated: false
+
+  shards:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql
+    slave2:
+      database: octopus_shard_3
+      <<: *mysql
+    slave3:
+      database: octopus_shard_4
+      <<: *mysql
+    slave4:
+      database: octopus_shard_5
+      <<: *mysql
+
+
+production_fully_replicated:
+  replicated: true
+  fully_replicated: true
+
+  shards:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql
+    slave2:
+      database: octopus_shard_3
+      <<: *mysql
+
+replicated_with_one_slave:
+  replicated: true
+  shards:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql
+
+replicated_with_one_slave_unavailable:
+  replicated: true
+  shards:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql_unavailable
+
+
+production_fully_replicated:
+  replicated: true
+  shards:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql
+    slave2:
+      database: octopus_shard_3
+      <<: *mysql
+    slave3:
+      database: octopus_shard_4
+      <<: *mysql
+    slave4:
+      database: octopus_shard_5
+      <<: *mysql
+
+octopus_rails:
+  replicated: true
+  environments:
+    - staging
+    - production
+
+  staging:
+    slave1:
+      database: octopus_shard_2
+      <<: *mysql
+    slave2:
+      database: octopus_shard_3
+      <<: *mysql
+
+  production:
+    slave3:
+      database: octopus_shard_4
+      <<: *mysql
+    slave4:
+      database: octopus_shard_5
+      <<: *mysql
+
+not_entire_sharded:
+  entire_sharded: false
+  shards:
+    europe:
+      database: octopus_shard_2
+      <<: *mysql
+    canada:
+      database: octopus_shard_3
+      <<: *mysql
+    brazil:
+      database: octopus_shard_4
+      <<: *mysql
+    russia:
+      database: octopus_shard_5
+      <<: *mysql
+
+sharded_replicated_slave_grouped:
+  replicated: true
+  fully_replicated: true
+  shards:
+    russia:
+      database: octopus_shard_1
+      <<: *mysql
+      slaves1:
+        russia_slave11:
+          database: octopus_shard_1
+          <<: *mysql
+        russia_slave21:
+          database: octopus_shard_2
+          <<: *mysql
+      slaves2:
+        russia_slave21:
+          database: octopus_shard_3
+          <<: *mysql
+        russia_slave22:
+            database: octopus_shard_1
+            <<: *mysql
+    europe:
+      database: octopus_shard_2
+      <<: *mysql
+      slaves1:
+        europe_slave11:
+          database: octopus_shard_3
+          <<: *mysql
+      slaves2:
+        europe_slave21:
+          database: octopus_shard_1
+          <<: *mysql
+
+replicated_slave_grouped:
+  replicated: true
+  fully_replicated: true
+  shards:
+    slaves1:
+      slave11:
+        database: octopus_shard_2
+        <<: *mysql
+    slaves2:
+      slave21:
+        database: octopus_shard_1
+        <<: *mysql
+    slaves3:
+      slave31:
+        database: octopus_shard_1
+        <<: *mysql
+      slave32:
+        database: octopus_shard_2
+        <<: *mysql
+
+modify_config:
+  replicated: true
+  shards:
+    modify_config_read:
+      adapter: modify_config
+      database: octopus_shard_1
+      host: localhost

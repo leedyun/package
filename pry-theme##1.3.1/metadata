@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: pry-theme
+version: !ruby/object:Gem::Version
+  version: 1.3.1
+platform: ruby
+authors:
+- Kyrylo Silin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-08-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: coderay
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: The plugin enables color theme support for Pry.
+email: silin@kyrylo.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- VERSION
+- lib/pry-theme.rb
+- lib/pry-theme/basic_editor.rb
+- lib/pry-theme/cli.rb
+- lib/pry-theme/color.rb
+- lib/pry-theme/color_table.rb
+- lib/pry-theme/colors/color16.rb
+- lib/pry-theme/colors/color256.rb
+- lib/pry-theme/colors/color8.rb
+- lib/pry-theme/commands.rb
+- lib/pry-theme/config.rb
+- lib/pry-theme/declaration.rb
+- lib/pry-theme/definition.rb
+- lib/pry-theme/formattable.rb
+- lib/pry-theme/hex.rb
+- lib/pry-theme/preview.rb
+- lib/pry-theme/rgb.rb
+- lib/pry-theme/term.rb
+- lib/pry-theme/theme.rb
+- lib/pry-theme/theme_list.rb
+- lib/pry-theme/when_started_hook.rb
+- pry-theme.gemspec
+- screenshots/railscasts.png
+- screenshots/solarized.png
+- screenshots/tomorrow.png
+- screenshots/zenburn.png
+- spec/color_table.rb
+- spec/colors/color16_spec.rb
+- spec/colors/color256_spec.rb
+- spec/colors/color8_spec.rb
+- spec/commands_spec.rb
+- spec/config_spec.rb
+- spec/helper.rb
+- spec/hex_spec.rb
+- spec/rgb_spec.rb
+- spec/term_spec.rb
+- spec/theme_spec.rb
+- themes/github.prytheme.rb
+- themes/monokai.prytheme.rb
+- themes/pry-classic-16.prytheme.rb
+- themes/pry-classic-256.prytheme.rb
+- themes/pry-classic-8.prytheme.rb
+- themes/pry-cold.prytheme.rb
+- themes/pry-love-16.prytheme.rb
+- themes/pry-love-8.prytheme.rb
+- themes/pry-modern-16.prytheme.rb
+- themes/pry-modern-256.prytheme.rb
+- themes/pry-modern-8.prytheme.rb
+- themes/pry-monochrome.prytheme.rb
+- themes/pry-siberia-16.prytheme.rb
+- themes/pry-siberia-8.prytheme.rb
+- themes/pry-tepid-16.prytheme.rb
+- themes/pry-tepid-8.prytheme.rb
+- themes/pry-zealand-16.prytheme.rb
+- themes/pry-zealand-8.prytheme.rb
+- themes/railscasts.prytheme.rb
+- themes/solarized.prytheme.rb
+- themes/tomorrow.prytheme.rb
+- themes/twilight.prytheme.rb
+- themes/vim-default.prytheme.rb
+- themes/vim-detailed.prytheme.rb
+- themes/zenburn.prytheme.rb
+homepage: https://github.com/kyrylo/pry-theme
+licenses:
+- zlib
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key:
+specification_version: 4
+summary: An easy way to customize Pry colors via theme files
+test_files: []

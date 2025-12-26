@@ -1,0 +1,233 @@
+--- !ruby/object:Gem::Specification
+name: foot-stats
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Tomas D'Stefano
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redis-namespace
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rest-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fakeweb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: FootStats API Client in Ruby.
+email:
+- tomas_stefano@successoft.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- foot-stats.gemspec
+- lib/foot_stats.rb
+- lib/foot_stats/attribute_accessor.rb
+- lib/foot_stats/championship.rb
+- lib/foot_stats/championship_classification.rb
+- lib/foot_stats/error_response.rb
+- lib/foot_stats/live.rb
+- lib/foot_stats/live_card.rb
+- lib/foot_stats/live_goal.rb
+- lib/foot_stats/live_player.rb
+- lib/foot_stats/live_team.rb
+- lib/foot_stats/match.rb
+- lib/foot_stats/narration.rb
+- lib/foot_stats/player.rb
+- lib/foot_stats/redis_payload_store.rb
+- lib/foot_stats/request.rb
+- lib/foot_stats/resource.rb
+- lib/foot_stats/response.rb
+- lib/foot_stats/round_match.rb
+- lib/foot_stats/setup.rb
+- lib/foot_stats/stream.rb
+- lib/foot_stats/team.rb
+- lib/foot_stats/version.rb
+- spec/cassettes/championship.yml
+- spec/cassettes/championship_classification.yml
+- spec/cassettes/championship_classification_error_response.yml
+- spec/cassettes/championship_match.yml
+- spec/cassettes/championship_match_error_response.yml
+- spec/cassettes/championship_teams.yml
+- spec/cassettes/championship_teams_error_response.yml
+- spec/cassettes/error_response.yml
+- spec/cassettes/live_match.yml
+- spec/cassettes/match_narration.yml
+- spec/cassettes/match_null_narration.yml
+- spec/cassettes/team_player.yml
+- spec/foot_stats/championship_classification_spec.rb
+- spec/foot_stats/championship_spec.rb
+- spec/foot_stats/live_spec.rb
+- spec/foot_stats/match_spec.rb
+- spec/foot_stats/narration_spec.rb
+- spec/foot_stats/player_spec.rb
+- spec/foot_stats/request_spec.rb
+- spec/foot_stats/response_spec.rb
+- spec/foot_stats/setup_spec.rb
+- spec/foot_stats/stream_spec.rb
+- spec/foot_stats/team_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/tomas-stefano/foot_stats
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: FootStats API Client.
+test_files:
+- spec/cassettes/championship.yml
+- spec/cassettes/championship_classification.yml
+- spec/cassettes/championship_classification_error_response.yml
+- spec/cassettes/championship_match.yml
+- spec/cassettes/championship_match_error_response.yml
+- spec/cassettes/championship_teams.yml
+- spec/cassettes/championship_teams_error_response.yml
+- spec/cassettes/error_response.yml
+- spec/cassettes/live_match.yml
+- spec/cassettes/match_narration.yml
+- spec/cassettes/match_null_narration.yml
+- spec/cassettes/team_player.yml
+- spec/foot_stats/championship_classification_spec.rb
+- spec/foot_stats/championship_spec.rb
+- spec/foot_stats/live_spec.rb
+- spec/foot_stats/match_spec.rb
+- spec/foot_stats/narration_spec.rb
+- spec/foot_stats/player_spec.rb
+- spec/foot_stats/request_spec.rb
+- spec/foot_stats/response_spec.rb
+- spec/foot_stats/setup_spec.rb
+- spec/foot_stats/stream_spec.rb
+- spec/foot_stats/team_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "optparse"
+
+require_relative "../lib/gitlab_quality/test_tooling"
+
+params = {}
+
+options = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+
+  opts.on('-i', '--input-files INPUT_FILES', String, 'JSON RSpec report files JSON') do |input_files|
+    params[:input_files] = input_files
+  end
+
+  opts.on('-p', '--project PROJECT', String, 'Can be an integer or a group/project string') do |project|
+    params[:project] = project
+  end
+
+  opts.on('-m', '--merge_request_iid MERGE_REQUEST_IID', String, 'An integer merge request IID') do |merge_request_iid|
+    params[:merge_request_iid] = merge_request_iid
+  end
+
+  opts.on('-t', '--token TOKEN', String, 'A valid access token with `api` scope and Maintainer permission in PROJECT') do |token|
+    params[:token] = token
+  end
+
+  opts.on('--dry-run', "Perform a dry-run (don't create note)") do
+    params[:dry_run] = true
+  end
+
+  opts.on_tail('-v', '--version', 'Show the version') do
+    require_relative "../lib/gitlab_quality/test_tooling/version"
+    puts "#{$PROGRAM_NAME} : #{GitlabQuality::TestTooling::VERSION}"
+    exit
+  end
+
+  opts.on_tail('-h', '--help', 'Show the usage') do
+    puts "Purpose: Create slow test note on merge requests from JSON RSpec report files"
+    puts opts
+    exit
+  end
+
+  opts.parse(ARGV)
+end
+
+if params.any?
+  GitlabQuality::TestTooling::Report::MergeRequestSlowTestsReport.new(**params).invoke!
+else
+  puts options
+  exit 1
+end

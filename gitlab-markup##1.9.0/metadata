@@ -1,0 +1,221 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-markup
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Chris Wanstrath
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: html-pipeline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.4.3
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.13.8
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.13.8
+- !ruby/object:Gem::Dependency
+  name: nokogiri-diff
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: sanitize
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 5.1.0
+description: This gem is used by GitLab to render any non Markdown markup
+email: chris@ozmm.org
+executables:
+- gitlab-markup
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".kick"
+- ".travis.yml"
+- CONTRIBUTING.md
+- Gemfile
+- HISTORY.md
+- LICENSE
+- README.md
+- Rakefile
+- bin/gitlab-markup
+- gitlab-markup.gemspec
+- lib/github-markup.rb
+- lib/github/commands/rest2html
+- lib/github/markup.rb
+- lib/github/markup/command_implementation.rb
+- lib/github/markup/gem_implementation.rb
+- lib/github/markup/implementation.rb
+- lib/github/markup/markdown.rb
+- lib/github/markup/rdoc.rb
+- lib/github/markups.rb
+- script/bootstrap
+- script/cibuild
+- test/fixtures/fail.sh
+- test/markup_test.rb
+- test/markups/README.asciidoc
+- test/markups/README.asciidoc.html
+- test/markups/README.creole
+- test/markups/README.creole.html
+- test/markups/README.large.rst
+- test/markups/README.large.rst.html
+- test/markups/README.litcoffee
+- test/markups/README.litcoffee.html
+- test/markups/README.markdown
+- test/markups/README.markdown.html
+- test/markups/README.mediawiki
+- test/markups/README.mediawiki.html
+- test/markups/README.noformat
+- test/markups/README.noformat.html
+- test/markups/README.org
+- test/markups/README.org.html
+- test/markups/README.pod
+- test/markups/README.pod.html
+- test/markups/README.rdoc
+- test/markups/README.rdoc.html
+- test/markups/README.rmd
+- test/markups/README.rmd.html
+- test/markups/README.rst
+- test/markups/README.rst.html
+- test/markups/README.rst.txt
+- test/markups/README.rst.txt.html
+- test/markups/README.textile
+- test/markups/README.textile.html
+- test/markups/README.toc.rst
+- test/markups/README.toc.rst.html
+- test/markups/README.txt
+- test/markups/README.txt.html
+homepage: https://gitlab.com/gitlab-org/gitlab-markup
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://gitlab.com/gitlab-org/gitlab-markup/issues
+  changelog_uri: https://gitlab.com/gitlab-org/gitlab-markup/blob/master/HISTORY.md
+  source_code_uri: https://gitlab.com/gitlab-org/gitlab-markup
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key:
+specification_version: 4
+summary: Fork from github-markup GitLab uses to render non markdown content
+test_files:
+- test/fixtures/fail.sh
+- test/markup_test.rb
+- test/markups/README.asciidoc
+- test/markups/README.asciidoc.html
+- test/markups/README.creole
+- test/markups/README.creole.html
+- test/markups/README.large.rst
+- test/markups/README.large.rst.html
+- test/markups/README.litcoffee
+- test/markups/README.litcoffee.html
+- test/markups/README.markdown
+- test/markups/README.markdown.html
+- test/markups/README.mediawiki
+- test/markups/README.mediawiki.html
+- test/markups/README.noformat
+- test/markups/README.noformat.html
+- test/markups/README.org
+- test/markups/README.org.html
+- test/markups/README.pod
+- test/markups/README.pod.html
+- test/markups/README.rdoc
+- test/markups/README.rdoc.html
+- test/markups/README.rmd
+- test/markups/README.rmd.html
+- test/markups/README.rst
+- test/markups/README.rst.html
+- test/markups/README.rst.txt
+- test/markups/README.rst.txt.html
+- test/markups/README.textile
+- test/markups/README.textile.html
+- test/markups/README.toc.rst
+- test/markups/README.toc.rst.html
+- test/markups/README.txt
+- test/markups/README.txt.html

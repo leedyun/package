@@ -1,0 +1,48 @@
+--- !ruby/object:Gem::Specification
+name: unix_crypt
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Roger Nesbitt
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-04-13 00:00:00.000000000 Z
+dependencies: []
+description: Performs the UNIX crypt(3) algorithm using DES (standard 13 character
+  passwords), MD5 (starting with $1$), SHA256 (starting with $5$) and SHA512 (starting
+  with $6$)
+email: roger@seriousorange.com
+executables:
+- mkunixcrypt
+- ls
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/ls
+- bin/mkunixcrypt
+homepage: https://github.com/mogest/unix-crypt
+licenses:
+- BSD
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Performs the UNIX crypt(3) algorithm using DES, MD5, SHA256 or SHA512
+test_files: []

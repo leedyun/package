@@ -1,0 +1,160 @@
+--- !ruby/object:Gem::Specification
+name: ZenTest
+version: !ruby/object:Gem::Version
+  version: 4.12.2
+platform: ruby
+authors:
+- Ryan Davis
+- Eric Hodel
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDPjCCAiagAwIBAgIBCDANBgkqhkiG9w0BAQsFADBFMRMwEQYDVQQDDApyeWFu
+  ZC1ydWJ5MRkwFwYKCZImiZPyLGQBGRYJemVuc3BpZGVyMRMwEQYKCZImiZPyLGQB
+  GRYDY29tMB4XDTI0MDEwMjIxMjEyM1oXDTI1MDEwMTIxMjEyM1owRTETMBEGA1UE
+  AwwKcnlhbmQtcnVieTEZMBcGCgmSJomT8ixkARkWCXplbnNwaWRlcjETMBEGCgmS
+  JomT8ixkARkWA2NvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALda
+  b9DCgK+627gPJkB6XfjZ1itoOQvpqH1EXScSaba9/S2VF22VYQbXU1xQXL/WzCkx
+  taCPaLmfYIaFcHHCSY4hYDJijRQkLxPeB3xbOfzfLoBDbjvx5JxgJxUjmGa7xhcT
+  oOvjtt5P8+GSK9zLzxQP0gVLS/D0FmoE44XuDr3iQkVS2ujU5zZL84mMNqNB1znh
+  GiadM9GHRaDiaxuX0cIUBj19T01mVE2iymf9I6bEsiayK/n6QujtyCbTWsAS9Rqt
+  qhtV7HJxNKuPj/JFH0D2cswvzznE/a5FOYO68g+YCuFi5L8wZuuM8zzdwjrWHqSV
+  gBEfoTEGr7Zii72cx+sCAwEAAaM5MDcwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAw
+  HQYDVR0OBBYEFEfFe9md/r/tj/Wmwpy+MI8d9k/hMA0GCSqGSIb3DQEBCwUAA4IB
+  AQCygvpmncmkiSs9r/Kceo4bBPDszhTv6iBi4LwMReqnFrpNLMOWJw7xi8x+3eL2
+  XS09ZPNOt2zm70KmFouBMgOysnDY4k2dE8uF6B8JbZOO8QfalW+CoNBliefOTcn2
+  bg5IOP7UoGM5lC174/cbDJrJnRG9bzig5FAP0mvsgA8zgTRXQzIUAZEo92D5K7p4
+  B4/O998ho6BSOgYBI9Yk1ttdCtti6Y+8N9+fZESsjtWMykA+WXWeGUScHqiU+gH8
+  S7043fq9EbQdBr2AXdj92+CDwuTfHI6/Hj5FVBDULufrJaan4xUgL70Hvc6pTTeW
+  deKfBjgVAq7EYHu1AczzlUly
+  -----END CERTIFICATE-----
+date: 2024-07-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7'
+- !ruby/object:Gem::Dependency
+  name: hoe
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.2'
+description: |-
+  ZenTest provides 4 different tools: zentest, unit_diff, autotest, and
+  multiruby.
+
+  zentest scans your target and unit-test code and writes your missing
+  code based on simple naming rules, enabling XP at a much quicker pace.
+  zentest only works with Ruby and Minitest or Test::Unit. There is
+  enough evidence to show that this is still proving useful to users, so
+  it stays.
+
+  unit_diff is a command-line filter to diff expected results from
+  actual results and allow you to quickly see exactly what is wrong.
+  Do note that minitest 2.2+ provides an enhanced assert_equal obviating
+  the need for unit_diff
+
+  autotest is a continous testing facility meant to be used during
+  development. As soon as you save a file, autotest will run the
+  corresponding dependent tests.
+
+  multiruby runs anything you want on multiple versions of ruby. Great
+  for compatibility checking! Use multiruby_setup to manage your
+  installed versions.
+
+  *NOTE:* The next major release of zentest will not include autotest
+  (use minitest-autotest instead) and multiruby will use rbenv /
+  ruby-build for version management.
+email:
+- ryand-ruby@zenspider.com
+- drbrain@segment7.net
+executables:
+- multigem
+- multiruby
+- unit_diff
+- zentest
+extensions: []
+extra_rdoc_files:
+- History.txt
+- Manifest.txt
+- README.txt
+- articles/how_to_use_zentest.txt
+- example.txt
+files:
+- ".autotest"
+- History.txt
+- Manifest.txt
+- README.txt
+- Rakefile
+- articles/Article.css
+- articles/how_to_use_zentest.txt
+- bin/multigem
+- bin/multiruby
+- bin/unit_diff
+- bin/zentest
+- example.txt
+- example1.rb
+- example2.rb
+- lib/focus.rb
+- lib/functional_test_matrix.rb
+- lib/unit_diff.rb
+- lib/zentest.rb
+- lib/zentest_mapping.rb
+- test/test_focus.rb
+- test/test_unit_diff.rb
+- test/test_zentest.rb
+- test/test_zentest_mapping.rb
+homepage: https://github.com/seattlerb/zentest
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/seattlerb/zentest
+post_install_message:
+rdoc_options:
+- "--main"
+- README.txt
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.14
+signing_key:
+specification_version: 4
+summary: 'ZenTest provides 4 different tools: zentest, unit_diff, autotest, and multiruby'
+test_files: []

@@ -1,0 +1,135 @@
+--- !ruby/object:Gem::Specification
+name: unicode_utils
+version: !ruby/object:Gem::Version
+  version: 1.4.0
+  prerelease: 
+platform: ruby
+authors:
+- Stefan Lang
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2012-09-30 00:00:00.000000000 Z
+dependencies: []
+description: 
+email: langstefan@gmx.at
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+- INSTALL.txt
+- CHANGES.txt
+files:
+- lib/unicode_utils.rb
+- lib/unicode_utils/canonical_decomposition.rb
+- lib/unicode_utils/simple_upcase.rb
+- lib/unicode_utils/titlecase.rb
+- lib/unicode_utils/hangul_syllable_decomposition.rb
+- lib/unicode_utils/combining_class.rb
+- lib/unicode_utils/general_category.rb
+- lib/unicode_utils/read_cdata.rb
+- lib/unicode_utils/soft_dotted_char_q.rb
+- lib/unicode_utils/nfkc.rb
+- lib/unicode_utils/casefold.rb
+- lib/unicode_utils/lowercase_char_q.rb
+- lib/unicode_utils/canonical_equivalents_q.rb
+- lib/unicode_utils/titlecase_char_q.rb
+- lib/unicode_utils/sid.rb
+- lib/unicode_utils/uppercase_char_q.rb
+- lib/unicode_utils/char_type.rb
+- lib/unicode_utils/gc.rb
+- lib/unicode_utils/char_name.rb
+- lib/unicode_utils/char_display_width.rb
+- lib/unicode_utils/conditional_casing.rb
+- lib/unicode_utils/downcase.rb
+- lib/unicode_utils/cased_char_q.rb
+- lib/unicode_utils/east_asian_width.rb
+- lib/unicode_utils/each_word.rb
+- lib/unicode_utils/nfd.rb
+- lib/unicode_utils/simple_downcase.rb
+- lib/unicode_utils/name_aliases.rb
+- lib/unicode_utils/codepoint.rb
+- lib/unicode_utils/code_point_type.rb
+- lib/unicode_utils/grep.rb
+- lib/unicode_utils/nfkd.rb
+- lib/unicode_utils/upcase.rb
+- lib/unicode_utils/white_space_char_q.rb
+- lib/unicode_utils/compatibility_decomposition.rb
+- lib/unicode_utils/u.rb
+- lib/unicode_utils/name_alias.rb
+- lib/unicode_utils/case_ignorable_char_q.rb
+- lib/unicode_utils/graphic_char_q.rb
+- lib/unicode_utils/display_width.rb
+- lib/unicode_utils/default_ignorable_char_q.rb
+- lib/unicode_utils/debug.rb
+- lib/unicode_utils/each_grapheme.rb
+- lib/unicode_utils/nfc.rb
+- lib/unicode_utils/simple_casefold.rb
+- lib/unicode_utils/jamo_short_name.rb
+- lib/unicode_utils/version.rb
+- cdata/casefold_s_map
+- cdata/general_category_per_cp
+- cdata/prop_set_uppercase
+- cdata/special_lc_map
+- cdata/grapheme_break_property
+- cdata/combining_class_map
+- cdata/jamo_short_names
+- cdata/soft_dotted_set
+- cdata/word_break_property
+- cdata/white_space_set
+- cdata/simple_lc_map
+- cdata/names
+- cdata/cond_lc_map
+- cdata/cond_tc_map
+- cdata/simple_tc_map
+- cdata/prop_set_lowercase
+- cdata/general_category_aliases
+- cdata/composition_exclusion_set
+- cdata/casefold_c_map
+- cdata/cat_set_titlecase
+- cdata/cond_uc_map
+- cdata/east_asian_width_property_per_cp
+- cdata/casefold_f_map
+- cdata/special_uc_map
+- cdata/name_aliases
+- cdata/canonical_decomposition_map
+- cdata/case_ignorable_set
+- cdata/general_category_ranges
+- cdata/prop_set_default_ignorable
+- cdata/simple_uc_map
+- cdata/east_asian_width_property_ranges
+- cdata/special_tc_map
+- cdata/compatibility_decomposition_map
+- test/test_unicode_utils.rb
+- README.rdoc
+- INSTALL.txt
+- LICENSE.txt
+- CHANGES.txt
+homepage: http://github.com/lang/unicode_utils
+licenses: []
+post_install_message: 
+rdoc_options:
+- --main=README.rdoc
+- --charset=UTF-8
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: 1.9.1
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: unicode-utils
+rubygems_version: 1.8.11
+signing_key: 
+specification_version: 3
+summary: additional Unicode aware functions for Ruby 1.9
+test_files:
+- test/test_unicode_utils.rb

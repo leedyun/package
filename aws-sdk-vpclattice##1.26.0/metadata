@@ -1,0 +1,99 @@
+--- !ruby/object:Gem::Specification
+name: aws-sdk-vpclattice
+version: !ruby/object:Gem::Version
+  version: 1.26.0
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.216.0
+- !ruby/object:Gem::Dependency
+  name: aws-sigv4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+description: Official AWS Ruby gem for Amazon VPC Lattice. This gem is part of the
+  AWS SDK for Ruby.
+email:
+- aws-dr-rubygems@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- VERSION
+- lib/aws-sdk-vpclattice.rb
+- lib/aws-sdk-vpclattice/client.rb
+- lib/aws-sdk-vpclattice/client_api.rb
+- lib/aws-sdk-vpclattice/customizations.rb
+- lib/aws-sdk-vpclattice/endpoint_parameters.rb
+- lib/aws-sdk-vpclattice/endpoint_provider.rb
+- lib/aws-sdk-vpclattice/endpoints.rb
+- lib/aws-sdk-vpclattice/errors.rb
+- lib/aws-sdk-vpclattice/plugins/endpoints.rb
+- lib/aws-sdk-vpclattice/resource.rb
+- lib/aws-sdk-vpclattice/types.rb
+- sig/client.rbs
+- sig/errors.rbs
+- sig/resource.rbs
+- sig/types.rbs
+- sig/waiters.rbs
+homepage: https://github.com/aws/aws-sdk-ruby
+licenses:
+- Apache-2.0
+metadata:
+  source_code_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-vpclattice
+  changelog_uri: https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-vpclattice/CHANGELOG.md
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: AWS SDK for Ruby - Amazon VPC Lattice
+test_files: []

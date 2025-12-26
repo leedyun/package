@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: ar_transaction_changes
+version: !ruby/object:Gem::Version
+  version: 1.1.9
+platform: ruby
+authors:
+- Dylan Thacker-Smith
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.2.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mysql2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Solves the problem of trying to get all the changes to an object during
+  a transaction in an after_commit callbacks.
+email:
+- Dylan.Smith@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Gemfile
+- Gemfile.rails6
+- Gemfile.rails_head
+- LICENSE.txt
+- README.md
+- Rakefile
+- ar_transaction_changes.gemspec
+- lib/ar_transaction_changes.rb
+- lib/ar_transaction_changes/version.rb
+- test/database.yml.default
+- test/models/user.rb
+- test/test_helper.rb
+- test/transaction_changes_test.rb
+homepage: https://github.com/dylanahsmith/ar_transaction_changes
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key:
+specification_version: 4
+summary: Store transaction changes for active record objects
+test_files:
+- test/database.yml.default
+- test/models/user.rb
+- test/test_helper.rb
+- test/transaction_changes_test.rb

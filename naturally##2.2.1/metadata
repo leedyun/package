@@ -1,0 +1,56 @@
+--- !ruby/object:Gem::Specification
+name: naturally
+version: !ruby/object:Gem::Version
+  version: 2.2.1
+platform: ruby
+authors:
+- Robb Shecter
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-01-18 00:00:00.000000000 Z
+dependencies: []
+description: Natural Sorting with support for legal numbering, course numbers, and
+  other number/letter mixes.
+email:
+- robb@public.law
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/naturally.rb
+- lib/naturally/segment.rb
+- lib/naturally/version.rb
+- naturally.gemspec
+- spec/naturally_spec.rb
+homepage: http://github.com/dogweather/naturally
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.5
+signing_key:
+specification_version: 4
+summary: Sorts numbers according to the way people are used to seeing them.
+test_files:
+- spec/naturally_spec.rb

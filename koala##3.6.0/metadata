@@ -1,0 +1,199 @@
+--- !ruby/object:Gem::Specification
+name: koala
+version: !ruby/object:Gem::Version
+  version: 3.6.0
+platform: ruby
+authors:
+- Alex Koppel
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-06-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday-multipart
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Koala is a lightweight, flexible Ruby SDK for Facebook.  It allows read/write
+  access to the social graph via the Graph and REST APIs, as well as support for realtime
+  updates and OAuth and Facebook Connect authentication.  Koala is fully tested and
+  supports Net::HTTP and Typhoeus connections out of the box and can accept custom
+  modules for other services.
+email: alex@alexkoppel.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- readme.md
+- changelog.md
+files:
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rspec"
+- ".yardopts"
+- Gemfile
+- ISSUE_TEMPLATE
+- LICENSE
+- Manifest
+- PULL_REQUEST_TEMPLATE
+- Rakefile
+- changelog.md
+- code_of_conduct.md
+- koala.gemspec
+- lib/koala.rb
+- lib/koala/api.rb
+- lib/koala/api/batch_operation.rb
+- lib/koala/api/graph_api_methods.rb
+- lib/koala/api/graph_batch_api.rb
+- lib/koala/api/graph_collection.rb
+- lib/koala/api/graph_error_checker.rb
+- lib/koala/configuration.rb
+- lib/koala/errors.rb
+- lib/koala/http_service.rb
+- lib/koala/http_service/request.rb
+- lib/koala/http_service/response.rb
+- lib/koala/http_service/uploadable_io.rb
+- lib/koala/oauth.rb
+- lib/koala/realtime_updates.rb
+- lib/koala/test_users.rb
+- lib/koala/utils.rb
+- lib/koala/version.rb
+- readme.md
+- spec/cases/api_spec.rb
+- spec/cases/configuration_spec.rb
+- spec/cases/error_spec.rb
+- spec/cases/graph_api_batch_spec.rb
+- spec/cases/graph_api_spec.rb
+- spec/cases/graph_collection_spec.rb
+- spec/cases/graph_error_checker_spec.rb
+- spec/cases/http_service/request_spec.rb
+- spec/cases/http_service/response_spec.rb
+- spec/cases/http_service_spec.rb
+- spec/cases/koala_spec.rb
+- spec/cases/koala_test_spec.rb
+- spec/cases/oauth_spec.rb
+- spec/cases/realtime_updates_spec.rb
+- spec/cases/test_users_spec.rb
+- spec/cases/uploadable_io_spec.rb
+- spec/cases/utils_spec.rb
+- spec/fixtures/beach.jpg
+- spec/fixtures/cat.m4v
+- spec/fixtures/facebook_data.yml
+- spec/fixtures/mock_facebook_responses.yml
+- spec/fixtures/vcr_cassettes/app_test_accounts.yml
+- spec/fixtures/vcr_cassettes/friend_list_next_page.yml
+- spec/integration/graph_collection_spec.rb
+- spec/spec_helper.rb
+- spec/support/custom_matchers.rb
+- spec/support/graph_api_shared_examples.rb
+- spec/support/koala_test.rb
+- spec/support/mock_http_service.rb
+- spec/support/uploadable_io_shared_examples.rb
+homepage: http://github.com/arsduo/koala
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Koala
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: A lightweight, flexible library for Facebook with support for the Graph API,
+  the REST API, realtime updates, and OAuth authentication.
+test_files: []

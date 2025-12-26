@@ -1,0 +1,201 @@
+--- !ruby/object:Gem::Specification
+name: creek
+version: !ruby/object:Gem::Version
+  version: 2.6.3
+platform: ruby
+authors:
+- pythonicrubyist
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-05-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.6.0
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.0
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+description: A Ruby gem that streams and parses large Excel(xlsx and xlsm) files fast
+  and efficiently.
+email:
+- pythonicrubyist@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".DS_Store"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- creek.gemspec
+- lib/creek.rb
+- lib/creek/book.rb
+- lib/creek/drawing.rb
+- lib/creek/shared_strings.rb
+- lib/creek/sheet.rb
+- lib/creek/styles.rb
+- lib/creek/styles/constants.rb
+- lib/creek/styles/converter.rb
+- lib/creek/styles/style_types.rb
+- lib/creek/utils.rb
+- lib/creek/version.rb
+- spec/.DS_Store
+- spec/drawing_spec.rb
+- spec/fixtures/escaped.xlsx
+- spec/fixtures/escaped2.xlsx
+- spec/fixtures/invalid.xls
+- spec/fixtures/large_numbers.xlsx
+- spec/fixtures/sample-as-zip.zip
+- spec/fixtures/sample-with-headers.xlsx
+- spec/fixtures/sample-with-headers_namespaced.xlsx
+- spec/fixtures/sample-with-images.xlsx
+- spec/fixtures/sample-with-one-cell-anchored-images.xlsx
+- spec/fixtures/sample.xlsx
+- spec/fixtures/sample_dates.xlsx
+- spec/fixtures/sample_namespaced.xlsx
+- spec/fixtures/sheets/sample_dates.xlsx
+- spec/fixtures/sheets/sheet1.xml
+- spec/fixtures/sheets/single_data_programme.xlsx
+- spec/fixtures/sst.xml
+- spec/fixtures/sst_namespaced.xml
+- spec/fixtures/styles/first.xml
+- spec/fixtures/temp_string_io_file_path_with_no_extension
+- spec/shared_string_spec.rb
+- spec/sheet_spec.rb
+- spec/spec_helper.rb
+- spec/styles/converter_spec.rb
+- spec/styles/style_types_spec.rb
+- spec/test_spec.rb
+homepage: https://github.com/pythonicrubyist/creek
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: A Ruby gem for parsing large Excel(xlsx and xlsm) files.
+test_files:
+- spec/.DS_Store
+- spec/drawing_spec.rb
+- spec/fixtures/escaped.xlsx
+- spec/fixtures/escaped2.xlsx
+- spec/fixtures/invalid.xls
+- spec/fixtures/large_numbers.xlsx
+- spec/fixtures/sample-as-zip.zip
+- spec/fixtures/sample-with-headers.xlsx
+- spec/fixtures/sample-with-headers_namespaced.xlsx
+- spec/fixtures/sample-with-images.xlsx
+- spec/fixtures/sample-with-one-cell-anchored-images.xlsx
+- spec/fixtures/sample.xlsx
+- spec/fixtures/sample_dates.xlsx
+- spec/fixtures/sample_namespaced.xlsx
+- spec/fixtures/sheets/sample_dates.xlsx
+- spec/fixtures/sheets/sheet1.xml
+- spec/fixtures/sheets/single_data_programme.xlsx
+- spec/fixtures/sst.xml
+- spec/fixtures/sst_namespaced.xml
+- spec/fixtures/styles/first.xml
+- spec/fixtures/temp_string_io_file_path_with_no_extension
+- spec/shared_string_spec.rb
+- spec/sheet_spec.rb
+- spec/spec_helper.rb
+- spec/styles/converter_spec.rb
+- spec/styles/style_types_spec.rb
+- spec/test_spec.rb

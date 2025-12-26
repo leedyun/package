@@ -1,0 +1,77 @@
+/**
+ * Utility Nav
+ * Displays current user and logout information
+ */
+
+#utility_nav {
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQ4cHgiIGhlaWdodD0iNDhweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+IDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNCw0QzEyLjk1LDQsNCwxMi45NSw0LDI0czguOTUsMjAsMjAsMjBzMjAtOC45NSwyMC0yMFMzNS4wNSw0LDI0LDR6IE0yNCwxMGMzLjMxMSwwLDYsMi42OSw2LDYgYzAsMy4zMi0yLjY4OSw2LTYsNmMtMy4zMSwwLTYtMi42OC02LTZDMTgsMTIuNjksMjAuNjksMTAsMjQsMTB6IE0yNCwzOC40Yy01LjAxLDAtOS40MS0yLjU2MS0xMi02LjQ0YzAuMDUtMy45Nyw4LjAxLTYuMTYsMTItNi4xNiBzMTEuOTM5LDIuMTksMTIsNi4xNkMzMy40MSwzNS44NCwyOS4wMSwzOC40LDI0LDM4LjR6Ii8+IDwvc3ZnPg==') no-repeat;
+  background-size: am-unit(5);
+  width: am-unit(5);
+  height: am-unit(5);
+  margin-top: am-unit(-2.5);
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: am-unit(2);
+
+  // Increase the hit region
+  &:before {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    width: 90px;
+    height: 50px;
+    top: 0;
+    right: -12px;
+  }
+
+  a {
+    color: #333;
+  }
+
+  > li {
+    &:first-child {
+      margin-top: 45px;
+
+      &:before {
+        content: "";
+        border: 7px solid transparent;
+        border-bottom-color: #fff;
+        top: -14px;
+        right: 12px;
+        position: absolute;
+      }
+    }
+
+    border-top: 1px solid #d9d9d9;
+    box-shadow: 0 1px 2px rgba(#000, 0.22);
+    width: 200px;
+    float: right;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background: #efefef;
+    text-align: right;
+    clip: rect(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.28s all;
+    position: relative;
+
+    a {
+      @include am-btn;
+    }
+  }
+
+  #current_user {
+    background: #fff;
+    text-align: center;
+  }
+
+  &:hover {
+    > li {
+      clip: initial;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

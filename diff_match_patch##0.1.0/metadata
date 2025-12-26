@@ -1,0 +1,50 @@
+--- !ruby/object:Gem::Specification
+name: diff_match_patch
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+  prerelease: 
+platform: ruby
+authors:
+- Jorge Kalmbach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2011-11-18 00:00:00.000000000 Z
+dependencies: []
+description: Ruby implementation of Google diff_match_patch
+email: kalmbach@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- LICENSE
+- Rakefile
+- lib/diff_match_patch.rb
+- lib/patch_obj.rb
+- test/diff_match_patch-test.rb
+homepage: https://github.com/kalmbach/diff_match_patch
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.10
+signing_key: 
+specification_version: 3
+summary: Ruby implementation of Google diff_match_patch
+test_files: []

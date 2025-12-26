@@ -1,0 +1,113 @@
+--- !ruby/object:Gem::Specification
+name: aes
+version: !ruby/object:Gem::Version
+  version: 0.5.1
+platform: ruby
+authors:
+- Carl Hicks
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-09-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: shoulda
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jeweler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  An AES encrypt/decrypt gem built ontop of OpenSSL.  Not as quick as FastAES, but it doesn't require building
+      native extensions and supports Base64 encoded input and output.
+email: carl.hicks@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.rdoc
+files:
+- ".document"
+- Gemfile
+- LICENSE.txt
+- README.rdoc
+- Rakefile
+- VERSION
+- aes.gemspec
+- lib/aes.rb
+- lib/aes/aes.rb
+- test/helper.rb
+- test/test_aes.rb
+homepage: http://github.com/chicks/aes
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.1
+signing_key: 
+specification_version: 3
+summary: AES#encrypt(key, data), AES#decrypt(key, data). Capiche?
+test_files: []

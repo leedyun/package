@@ -1,0 +1,151 @@
+--- !ruby/object:Gem::Specification
+name: configatron
+version: !ruby/object:Gem::Version
+  version: 4.5.1
+platform: ruby
+authors:
+- Mark Bates
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-03-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: subprocess
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 5.2.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 5.2.3
+description: A powerful Ruby configuration system.
+email:
+- mark@markbates.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- .travis.yml
+- Gemfile
+- Guardfile
+- History.txt
+- LICENSE.txt
+- README.md
+- Rakefile
+- V2-README.md
+- configatron.gemspec
+- lib/configatron.rb
+- lib/configatron/core.rb
+- lib/configatron/delayed.rb
+- lib/configatron/dynamic.rb
+- lib/configatron/errors.rb
+- lib/configatron/ext/kernel.rb
+- lib/configatron/integrations.rb
+- lib/configatron/integrations/minitest.rb
+- lib/configatron/integrations/rails.rb
+- lib/configatron/proc.rb
+- lib/configatron/root_store.rb
+- lib/configatron/store.rb
+- lib/configatron/version.rb
+- lib/generators/configatron/install/install_generator.rb
+- lib/generators/configatron/install/templates/configatron/defaults.rb
+- lib/generators/configatron/install/templates/configatron/development.rb
+- lib/generators/configatron/install/templates/configatron/production.rb
+- lib/generators/configatron/install/templates/configatron/test.rb
+- lib/generators/configatron/install/templates/initializers/configatron.rb
+- test/_lib.rb
+- test/functional/_lib.rb
+- test/functional/_lib/scripts/core.rb
+- test/functional/configatron.rb
+- test/functional/delayed.rb
+- test/functional/loading.rb
+- test/functional/minitest.rb
+- test/unit/_lib.rb
+- test/unit/configatron/proc.rb
+- test/unit/configatron/root_store.rb
+- test/unit/configatron/store.rb
+homepage: https://github.com/markbates/configatron
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.14.1
+signing_key: 
+specification_version: 4
+summary: A powerful Ruby configuration system.
+test_files:
+- test/_lib.rb
+- test/functional/_lib.rb
+- test/functional/_lib/scripts/core.rb
+- test/functional/configatron.rb
+- test/functional/delayed.rb
+- test/functional/loading.rb
+- test/functional/minitest.rb
+- test/unit/_lib.rb
+- test/unit/configatron/proc.rb
+- test/unit/configatron/root_store.rb
+- test/unit/configatron/store.rb

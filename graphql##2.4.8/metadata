@@ -1,0 +1,676 @@
+--- !ruby/object:Gem::Specification
+name: graphql
+version: !ruby/object:Gem::Version
+  version: 2.4.8
+platform: ruby
+authors:
+- Robert Mosolgo
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fiber-storage
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: graphql-batch
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: memory_profiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-focus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake-compiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jekyll
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jekyll-algolia
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jekyll-redirect-from
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.0
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A plain-Ruby implementation of GraphQL.
+email:
+- rdmosolgo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- MIT-LICENSE
+- lib/generators/graphql/core.rb
+- lib/generators/graphql/enum_generator.rb
+- lib/generators/graphql/field_extractor.rb
+- lib/generators/graphql/input_generator.rb
+- lib/generators/graphql/install/mutation_root_generator.rb
+- lib/generators/graphql/install/templates/base_mutation.erb
+- lib/generators/graphql/install/templates/mutation_type.erb
+- lib/generators/graphql/install_generator.rb
+- lib/generators/graphql/interface_generator.rb
+- lib/generators/graphql/loader_generator.rb
+- lib/generators/graphql/mutation_create_generator.rb
+- lib/generators/graphql/mutation_delete_generator.rb
+- lib/generators/graphql/mutation_generator.rb
+- lib/generators/graphql/mutation_update_generator.rb
+- lib/generators/graphql/object_generator.rb
+- lib/generators/graphql/orm_mutations_base.rb
+- lib/generators/graphql/relay.rb
+- lib/generators/graphql/relay_generator.rb
+- lib/generators/graphql/scalar_generator.rb
+- lib/generators/graphql/templates/base_argument.erb
+- lib/generators/graphql/templates/base_connection.erb
+- lib/generators/graphql/templates/base_edge.erb
+- lib/generators/graphql/templates/base_enum.erb
+- lib/generators/graphql/templates/base_field.erb
+- lib/generators/graphql/templates/base_input_object.erb
+- lib/generators/graphql/templates/base_interface.erb
+- lib/generators/graphql/templates/base_object.erb
+- lib/generators/graphql/templates/base_resolver.erb
+- lib/generators/graphql/templates/base_scalar.erb
+- lib/generators/graphql/templates/base_union.erb
+- lib/generators/graphql/templates/enum.erb
+- lib/generators/graphql/templates/graphql_controller.erb
+- lib/generators/graphql/templates/input.erb
+- lib/generators/graphql/templates/interface.erb
+- lib/generators/graphql/templates/loader.erb
+- lib/generators/graphql/templates/mutation.erb
+- lib/generators/graphql/templates/mutation_create.erb
+- lib/generators/graphql/templates/mutation_delete.erb
+- lib/generators/graphql/templates/mutation_update.erb
+- lib/generators/graphql/templates/node_type.erb
+- lib/generators/graphql/templates/object.erb
+- lib/generators/graphql/templates/query_type.erb
+- lib/generators/graphql/templates/scalar.erb
+- lib/generators/graphql/templates/schema.erb
+- lib/generators/graphql/templates/union.erb
+- lib/generators/graphql/type_generator.rb
+- lib/generators/graphql/union_generator.rb
+- lib/graphql.rb
+- lib/graphql/analysis.rb
+- lib/graphql/analysis/analyzer.rb
+- lib/graphql/analysis/field_usage.rb
+- lib/graphql/analysis/max_query_complexity.rb
+- lib/graphql/analysis/max_query_depth.rb
+- lib/graphql/analysis/query_complexity.rb
+- lib/graphql/analysis/query_depth.rb
+- lib/graphql/analysis/visitor.rb
+- lib/graphql/analysis_error.rb
+- lib/graphql/autoload.rb
+- lib/graphql/backtrace.rb
+- lib/graphql/backtrace/inspect_result.rb
+- lib/graphql/backtrace/table.rb
+- lib/graphql/backtrace/trace.rb
+- lib/graphql/backtrace/traced_error.rb
+- lib/graphql/backtrace/tracer.rb
+- lib/graphql/coercion_error.rb
+- lib/graphql/current.rb
+- lib/graphql/dataloader.rb
+- lib/graphql/dataloader/async_dataloader.rb
+- lib/graphql/dataloader/null_dataloader.rb
+- lib/graphql/dataloader/request.rb
+- lib/graphql/dataloader/request_all.rb
+- lib/graphql/dataloader/source.rb
+- lib/graphql/date_encoding_error.rb
+- lib/graphql/dig.rb
+- lib/graphql/duration_encoding_error.rb
+- lib/graphql/execution.rb
+- lib/graphql/execution/directive_checks.rb
+- lib/graphql/execution/errors.rb
+- lib/graphql/execution/interpreter.rb
+- lib/graphql/execution/interpreter/argument_value.rb
+- lib/graphql/execution/interpreter/arguments.rb
+- lib/graphql/execution/interpreter/arguments_cache.rb
+- lib/graphql/execution/interpreter/execution_errors.rb
+- lib/graphql/execution/interpreter/handles_raw_value.rb
+- lib/graphql/execution/interpreter/resolve.rb
+- lib/graphql/execution/interpreter/runtime.rb
+- lib/graphql/execution/interpreter/runtime/graphql_result.rb
+- lib/graphql/execution/lazy.rb
+- lib/graphql/execution/lazy/lazy_method_map.rb
+- lib/graphql/execution/lookahead.rb
+- lib/graphql/execution/multiplex.rb
+- lib/graphql/execution_error.rb
+- lib/graphql/integer_decoding_error.rb
+- lib/graphql/integer_encoding_error.rb
+- lib/graphql/introspection.rb
+- lib/graphql/introspection/base_object.rb
+- lib/graphql/introspection/directive_location_enum.rb
+- lib/graphql/introspection/directive_type.rb
+- lib/graphql/introspection/dynamic_fields.rb
+- lib/graphql/introspection/entry_points.rb
+- lib/graphql/introspection/enum_value_type.rb
+- lib/graphql/introspection/field_type.rb
+- lib/graphql/introspection/input_value_type.rb
+- lib/graphql/introspection/introspection_query.rb
+- lib/graphql/introspection/schema_type.rb
+- lib/graphql/introspection/type_kind_enum.rb
+- lib/graphql/introspection/type_type.rb
+- lib/graphql/invalid_name_error.rb
+- lib/graphql/invalid_null_error.rb
+- lib/graphql/language.rb
+- lib/graphql/language/block_string.rb
+- lib/graphql/language/cache.rb
+- lib/graphql/language/comment.rb
+- lib/graphql/language/definition_slice.rb
+- lib/graphql/language/document_from_schema_definition.rb
+- lib/graphql/language/generation.rb
+- lib/graphql/language/lexer.rb
+- lib/graphql/language/nodes.rb
+- lib/graphql/language/parser.rb
+- lib/graphql/language/printer.rb
+- lib/graphql/language/sanitized_printer.rb
+- lib/graphql/language/static_visitor.rb
+- lib/graphql/language/visitor.rb
+- lib/graphql/load_application_object_failed_error.rb
+- lib/graphql/name_validator.rb
+- lib/graphql/pagination.rb
+- lib/graphql/pagination/active_record_relation_connection.rb
+- lib/graphql/pagination/array_connection.rb
+- lib/graphql/pagination/connection.rb
+- lib/graphql/pagination/connections.rb
+- lib/graphql/pagination/mongoid_relation_connection.rb
+- lib/graphql/pagination/relation_connection.rb
+- lib/graphql/pagination/sequel_dataset_connection.rb
+- lib/graphql/parse_error.rb
+- lib/graphql/query.rb
+- lib/graphql/query/context.rb
+- lib/graphql/query/context/scoped_context.rb
+- lib/graphql/query/fingerprint.rb
+- lib/graphql/query/input_validation_result.rb
+- lib/graphql/query/null_context.rb
+- lib/graphql/query/result.rb
+- lib/graphql/query/validation_pipeline.rb
+- lib/graphql/query/variable_validation_error.rb
+- lib/graphql/query/variables.rb
+- lib/graphql/railtie.rb
+- lib/graphql/rake_task.rb
+- lib/graphql/rake_task/validate.rb
+- lib/graphql/relay.rb
+- lib/graphql/relay/range_add.rb
+- lib/graphql/rubocop.rb
+- lib/graphql/rubocop/graphql/base_cop.rb
+- lib/graphql/rubocop/graphql/default_null_true.rb
+- lib/graphql/rubocop/graphql/default_required_true.rb
+- lib/graphql/rubocop/graphql/field_type_in_block.rb
+- lib/graphql/rubocop/graphql/root_types_in_block.rb
+- lib/graphql/runtime_type_error.rb
+- lib/graphql/schema.rb
+- lib/graphql/schema/addition.rb
+- lib/graphql/schema/always_visible.rb
+- lib/graphql/schema/argument.rb
+- lib/graphql/schema/base_64_encoder.rb
+- lib/graphql/schema/build_from_definition.rb
+- lib/graphql/schema/build_from_definition/resolve_map.rb
+- lib/graphql/schema/build_from_definition/resolve_map/default_resolve.rb
+- lib/graphql/schema/built_in_types.rb
+- lib/graphql/schema/directive.rb
+- lib/graphql/schema/directive/deprecated.rb
+- lib/graphql/schema/directive/feature.rb
+- lib/graphql/schema/directive/flagged.rb
+- lib/graphql/schema/directive/include.rb
+- lib/graphql/schema/directive/one_of.rb
+- lib/graphql/schema/directive/skip.rb
+- lib/graphql/schema/directive/specified_by.rb
+- lib/graphql/schema/directive/transform.rb
+- lib/graphql/schema/enum.rb
+- lib/graphql/schema/enum_value.rb
+- lib/graphql/schema/field.rb
+- lib/graphql/schema/field/connection_extension.rb
+- lib/graphql/schema/field/scope_extension.rb
+- lib/graphql/schema/field_extension.rb
+- lib/graphql/schema/find_inherited_value.rb
+- lib/graphql/schema/finder.rb
+- lib/graphql/schema/has_single_input_argument.rb
+- lib/graphql/schema/input_object.rb
+- lib/graphql/schema/interface.rb
+- lib/graphql/schema/introspection_system.rb
+- lib/graphql/schema/late_bound_type.rb
+- lib/graphql/schema/list.rb
+- lib/graphql/schema/loader.rb
+- lib/graphql/schema/member.rb
+- lib/graphql/schema/member/base_dsl_methods.rb
+- lib/graphql/schema/member/build_type.rb
+- lib/graphql/schema/member/graphql_type_names.rb
+- lib/graphql/schema/member/has_arguments.rb
+- lib/graphql/schema/member/has_ast_node.rb
+- lib/graphql/schema/member/has_deprecation_reason.rb
+- lib/graphql/schema/member/has_directives.rb
+- lib/graphql/schema/member/has_fields.rb
+- lib/graphql/schema/member/has_interfaces.rb
+- lib/graphql/schema/member/has_path.rb
+- lib/graphql/schema/member/has_unresolved_type_error.rb
+- lib/graphql/schema/member/has_validators.rb
+- lib/graphql/schema/member/relay_shortcuts.rb
+- lib/graphql/schema/member/scoped.rb
+- lib/graphql/schema/member/type_system_helpers.rb
+- lib/graphql/schema/member/validates_input.rb
+- lib/graphql/schema/mutation.rb
+- lib/graphql/schema/non_null.rb
+- lib/graphql/schema/null_mask.rb
+- lib/graphql/schema/object.rb
+- lib/graphql/schema/printer.rb
+- lib/graphql/schema/relay_classic_mutation.rb
+- lib/graphql/schema/resolver.rb
+- lib/graphql/schema/resolver/has_payload_type.rb
+- lib/graphql/schema/scalar.rb
+- lib/graphql/schema/subscription.rb
+- lib/graphql/schema/timeout.rb
+- lib/graphql/schema/type_expression.rb
+- lib/graphql/schema/type_membership.rb
+- lib/graphql/schema/union.rb
+- lib/graphql/schema/unique_within_type.rb
+- lib/graphql/schema/validator.rb
+- lib/graphql/schema/validator/all_validator.rb
+- lib/graphql/schema/validator/allow_blank_validator.rb
+- lib/graphql/schema/validator/allow_null_validator.rb
+- lib/graphql/schema/validator/exclusion_validator.rb
+- lib/graphql/schema/validator/format_validator.rb
+- lib/graphql/schema/validator/inclusion_validator.rb
+- lib/graphql/schema/validator/length_validator.rb
+- lib/graphql/schema/validator/numericality_validator.rb
+- lib/graphql/schema/validator/required_validator.rb
+- lib/graphql/schema/visibility.rb
+- lib/graphql/schema/visibility/migration.rb
+- lib/graphql/schema/visibility/profile.rb
+- lib/graphql/schema/visibility/visit.rb
+- lib/graphql/schema/warden.rb
+- lib/graphql/schema/wrapper.rb
+- lib/graphql/static_validation.rb
+- lib/graphql/static_validation/all_rules.rb
+- lib/graphql/static_validation/base_visitor.rb
+- lib/graphql/static_validation/definition_dependencies.rb
+- lib/graphql/static_validation/error.rb
+- lib/graphql/static_validation/interpreter_visitor.rb
+- lib/graphql/static_validation/literal_validator.rb
+- lib/graphql/static_validation/rules/argument_literals_are_compatible.rb
+- lib/graphql/static_validation/rules/argument_literals_are_compatible_error.rb
+- lib/graphql/static_validation/rules/argument_names_are_unique.rb
+- lib/graphql/static_validation/rules/argument_names_are_unique_error.rb
+- lib/graphql/static_validation/rules/arguments_are_defined.rb
+- lib/graphql/static_validation/rules/arguments_are_defined_error.rb
+- lib/graphql/static_validation/rules/directives_are_defined.rb
+- lib/graphql/static_validation/rules/directives_are_defined_error.rb
+- lib/graphql/static_validation/rules/directives_are_in_valid_locations.rb
+- lib/graphql/static_validation/rules/directives_are_in_valid_locations_error.rb
+- lib/graphql/static_validation/rules/fields_are_defined_on_type.rb
+- lib/graphql/static_validation/rules/fields_are_defined_on_type_error.rb
+- lib/graphql/static_validation/rules/fields_have_appropriate_selections.rb
+- lib/graphql/static_validation/rules/fields_have_appropriate_selections_error.rb
+- lib/graphql/static_validation/rules/fields_will_merge.rb
+- lib/graphql/static_validation/rules/fields_will_merge_error.rb
+- lib/graphql/static_validation/rules/fragment_names_are_unique.rb
+- lib/graphql/static_validation/rules/fragment_names_are_unique_error.rb
+- lib/graphql/static_validation/rules/fragment_spreads_are_possible.rb
+- lib/graphql/static_validation/rules/fragment_spreads_are_possible_error.rb
+- lib/graphql/static_validation/rules/fragment_types_exist.rb
+- lib/graphql/static_validation/rules/fragment_types_exist_error.rb
+- lib/graphql/static_validation/rules/fragments_are_finite.rb
+- lib/graphql/static_validation/rules/fragments_are_finite_error.rb
+- lib/graphql/static_validation/rules/fragments_are_named.rb
+- lib/graphql/static_validation/rules/fragments_are_named_error.rb
+- lib/graphql/static_validation/rules/fragments_are_on_composite_types.rb
+- lib/graphql/static_validation/rules/fragments_are_on_composite_types_error.rb
+- lib/graphql/static_validation/rules/fragments_are_used.rb
+- lib/graphql/static_validation/rules/fragments_are_used_error.rb
+- lib/graphql/static_validation/rules/input_object_names_are_unique.rb
+- lib/graphql/static_validation/rules/input_object_names_are_unique_error.rb
+- lib/graphql/static_validation/rules/mutation_root_exists.rb
+- lib/graphql/static_validation/rules/mutation_root_exists_error.rb
+- lib/graphql/static_validation/rules/no_definitions_are_present.rb
+- lib/graphql/static_validation/rules/no_definitions_are_present_error.rb
+- lib/graphql/static_validation/rules/one_of_input_objects_are_valid.rb
+- lib/graphql/static_validation/rules/one_of_input_objects_are_valid_error.rb
+- lib/graphql/static_validation/rules/operation_names_are_valid.rb
+- lib/graphql/static_validation/rules/operation_names_are_valid_error.rb
+- lib/graphql/static_validation/rules/query_root_exists.rb
+- lib/graphql/static_validation/rules/query_root_exists_error.rb
+- lib/graphql/static_validation/rules/required_arguments_are_present.rb
+- lib/graphql/static_validation/rules/required_arguments_are_present_error.rb
+- lib/graphql/static_validation/rules/required_input_object_attributes_are_present.rb
+- lib/graphql/static_validation/rules/required_input_object_attributes_are_present_error.rb
+- lib/graphql/static_validation/rules/subscription_root_exists.rb
+- lib/graphql/static_validation/rules/subscription_root_exists_error.rb
+- lib/graphql/static_validation/rules/unique_directives_per_location.rb
+- lib/graphql/static_validation/rules/unique_directives_per_location_error.rb
+- lib/graphql/static_validation/rules/variable_default_values_are_correctly_typed.rb
+- lib/graphql/static_validation/rules/variable_default_values_are_correctly_typed_error.rb
+- lib/graphql/static_validation/rules/variable_names_are_unique.rb
+- lib/graphql/static_validation/rules/variable_names_are_unique_error.rb
+- lib/graphql/static_validation/rules/variable_usages_are_allowed.rb
+- lib/graphql/static_validation/rules/variable_usages_are_allowed_error.rb
+- lib/graphql/static_validation/rules/variables_are_input_types.rb
+- lib/graphql/static_validation/rules/variables_are_input_types_error.rb
+- lib/graphql/static_validation/rules/variables_are_used_and_defined.rb
+- lib/graphql/static_validation/rules/variables_are_used_and_defined_error.rb
+- lib/graphql/static_validation/validation_context.rb
+- lib/graphql/static_validation/validation_timeout_error.rb
+- lib/graphql/static_validation/validator.rb
+- lib/graphql/string_encoding_error.rb
+- lib/graphql/subscriptions.rb
+- lib/graphql/subscriptions/action_cable_subscriptions.rb
+- lib/graphql/subscriptions/broadcast_analyzer.rb
+- lib/graphql/subscriptions/default_subscription_resolve_extension.rb
+- lib/graphql/subscriptions/event.rb
+- lib/graphql/subscriptions/serialize.rb
+- lib/graphql/testing.rb
+- lib/graphql/testing/helpers.rb
+- lib/graphql/tracing.rb
+- lib/graphql/tracing/active_support_notifications_trace.rb
+- lib/graphql/tracing/active_support_notifications_tracing.rb
+- lib/graphql/tracing/appoptics_trace.rb
+- lib/graphql/tracing/appoptics_tracing.rb
+- lib/graphql/tracing/appsignal_trace.rb
+- lib/graphql/tracing/appsignal_tracing.rb
+- lib/graphql/tracing/call_legacy_tracers.rb
+- lib/graphql/tracing/data_dog_trace.rb
+- lib/graphql/tracing/data_dog_tracing.rb
+- lib/graphql/tracing/legacy_hooks_trace.rb
+- lib/graphql/tracing/legacy_trace.rb
+- lib/graphql/tracing/new_relic_trace.rb
+- lib/graphql/tracing/new_relic_tracing.rb
+- lib/graphql/tracing/notifications_trace.rb
+- lib/graphql/tracing/notifications_tracing.rb
+- lib/graphql/tracing/null_trace.rb
+- lib/graphql/tracing/platform_trace.rb
+- lib/graphql/tracing/platform_tracing.rb
+- lib/graphql/tracing/prometheus_trace.rb
+- lib/graphql/tracing/prometheus_trace/graphql_collector.rb
+- lib/graphql/tracing/prometheus_tracing.rb
+- lib/graphql/tracing/scout_trace.rb
+- lib/graphql/tracing/scout_tracing.rb
+- lib/graphql/tracing/sentry_trace.rb
+- lib/graphql/tracing/statsd_trace.rb
+- lib/graphql/tracing/statsd_tracing.rb
+- lib/graphql/tracing/trace.rb
+- lib/graphql/type_kinds.rb
+- lib/graphql/types.rb
+- lib/graphql/types/big_int.rb
+- lib/graphql/types/boolean.rb
+- lib/graphql/types/float.rb
+- lib/graphql/types/id.rb
+- lib/graphql/types/int.rb
+- lib/graphql/types/iso_8601_date.rb
+- lib/graphql/types/iso_8601_date_time.rb
+- lib/graphql/types/iso_8601_duration.rb
+- lib/graphql/types/json.rb
+- lib/graphql/types/relay.rb
+- lib/graphql/types/relay/base_connection.rb
+- lib/graphql/types/relay/base_edge.rb
+- lib/graphql/types/relay/connection_behaviors.rb
+- lib/graphql/types/relay/edge_behaviors.rb
+- lib/graphql/types/relay/has_node_field.rb
+- lib/graphql/types/relay/has_nodes_field.rb
+- lib/graphql/types/relay/node.rb
+- lib/graphql/types/relay/node_behaviors.rb
+- lib/graphql/types/relay/page_info.rb
+- lib/graphql/types/relay/page_info_behaviors.rb
+- lib/graphql/types/string.rb
+- lib/graphql/unauthorized_enum_value_error.rb
+- lib/graphql/unauthorized_error.rb
+- lib/graphql/unauthorized_field_error.rb
+- lib/graphql/unresolved_type_error.rb
+- lib/graphql/version.rb
+- readme.md
+homepage: https://github.com/rmosolgo/graphql-ruby
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://graphql-ruby.org
+  changelog_uri: https://github.com/rmosolgo/graphql-ruby/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/rmosolgo/graphql-ruby
+  bug_tracker_uri: https://github.com/rmosolgo/graphql-ruby/issues
+  mailing_list_uri: https://buttondown.email/graphql-ruby
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.12
+signing_key:
+specification_version: 4
+summary: A GraphQL language and runtime for Ruby
+test_files: []

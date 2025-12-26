@@ -1,0 +1,100 @@
+--- !ruby/object:Gem::Specification
+name: aws-record
+version: !ruby/object:Gem::Version
+  version: 2.13.3
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-02 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-dynamodb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.85.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.85.0
+description: Provides an object mapping abstraction for Amazon DynamoDB.
+email:
+- aws-dr-rubygems@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- VERSION
+- lib/aws-record.rb
+- lib/aws-record/record.rb
+- lib/aws-record/record/attribute.rb
+- lib/aws-record/record/attributes.rb
+- lib/aws-record/record/batch.rb
+- lib/aws-record/record/batch_read.rb
+- lib/aws-record/record/batch_write.rb
+- lib/aws-record/record/buildable_search.rb
+- lib/aws-record/record/client_configuration.rb
+- lib/aws-record/record/dirty_tracking.rb
+- lib/aws-record/record/errors.rb
+- lib/aws-record/record/item_collection.rb
+- lib/aws-record/record/item_data.rb
+- lib/aws-record/record/item_operations.rb
+- lib/aws-record/record/key_attributes.rb
+- lib/aws-record/record/marshalers/boolean_marshaler.rb
+- lib/aws-record/record/marshalers/date_marshaler.rb
+- lib/aws-record/record/marshalers/date_time_marshaler.rb
+- lib/aws-record/record/marshalers/epoch_time_marshaler.rb
+- lib/aws-record/record/marshalers/float_marshaler.rb
+- lib/aws-record/record/marshalers/integer_marshaler.rb
+- lib/aws-record/record/marshalers/list_marshaler.rb
+- lib/aws-record/record/marshalers/map_marshaler.rb
+- lib/aws-record/record/marshalers/numeric_set_marshaler.rb
+- lib/aws-record/record/marshalers/string_marshaler.rb
+- lib/aws-record/record/marshalers/string_set_marshaler.rb
+- lib/aws-record/record/marshalers/time_marshaler.rb
+- lib/aws-record/record/model_attributes.rb
+- lib/aws-record/record/query.rb
+- lib/aws-record/record/secondary_indexes.rb
+- lib/aws-record/record/table_config.rb
+- lib/aws-record/record/table_migration.rb
+- lib/aws-record/record/transactions.rb
+- lib/aws-record/record/version.rb
+homepage: https://github.com/aws/aws-sdk-ruby-record
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: AWS Record library for Amazon DynamoDB
+test_files: []

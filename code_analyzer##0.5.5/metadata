@@ -1,0 +1,122 @@
+--- !ruby/object:Gem::Specification
+name: code_analyzer
+version: !ruby/object:Gem::Version
+  version: 0.5.5
+platform: ruby
+authors:
+- Richard Huang
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: sexp_processor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: a code analyzer tool which extracted from rails_best_practices, it helps
+  you easily build your own code analyzer tool.
+email:
+- flyerhzm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/main.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-version"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- code_analyzer.gemspec
+- lib/code_analyzer.rb
+- lib/code_analyzer/analyzer_exception.rb
+- lib/code_analyzer/checker.rb
+- lib/code_analyzer/checking_visitor.rb
+- lib/code_analyzer/checking_visitor/base.rb
+- lib/code_analyzer/checking_visitor/default.rb
+- lib/code_analyzer/checking_visitor/plain.rb
+- lib/code_analyzer/nil.rb
+- lib/code_analyzer/sexp.rb
+- lib/code_analyzer/version.rb
+- lib/code_analyzer/warning.rb
+- spec/code_analyzer/checker_spec.rb
+- spec/code_analyzer/checking_visitor/base_spec.rb
+- spec/code_analyzer/checking_visitor/default_spec.rb
+- spec/code_analyzer/checking_visitor/plain_spec.rb
+- spec/code_analyzer/nil_spec.rb
+- spec/code_analyzer/sexp_spec.rb
+- spec/code_analyzer/warning_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/flyerhzm/code_analyzer
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.3
+signing_key:
+specification_version: 4
+summary: a code analyzer helps you build your own code analyzer tool.
+test_files:
+- spec/code_analyzer/checker_spec.rb
+- spec/code_analyzer/checking_visitor/base_spec.rb
+- spec/code_analyzer/checking_visitor/default_spec.rb
+- spec/code_analyzer/checking_visitor/plain_spec.rb
+- spec/code_analyzer/nil_spec.rb
+- spec/code_analyzer/sexp_spec.rb
+- spec/code_analyzer/warning_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: fog-local
+version: !ruby/object:Gem::Version
+  version: 0.8.0
+platform: ruby
+authors:
+- Wesley Beary
+- Ville Lautanala
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.3'
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.27'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.27'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: |-
+  This library can be used as a module for `fog` or as standalone provider
+                         to use local filesystem storage.
+email:
+- geemus@gmail.com
+- lautis@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ruby.yml"
+- ".github/workflows/stale.yml"
+- ".gitignore"
+- ".ruby-gemset"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- fog-local.gemspec
+- lib/fog/bin/local.rb
+- lib/fog/local.rb
+- lib/fog/local/models/directories.rb
+- lib/fog/local/models/directory.rb
+- lib/fog/local/models/file.rb
+- lib/fog/local/models/files.rb
+- lib/fog/local/storage.rb
+- lib/fog/local/version.rb
+- tests/helper.rb
+- tests/helpers/collection_helper.rb
+- tests/helpers/mock_helper.rb
+- tests/helpers/model_helper.rb
+- tests/helpers/succeeds_helper.rb
+- tests/local/models/directories_tests.rb
+- tests/local/models/directory_tests.rb
+- tests/local/models/file_tests.rb
+- tests/local/models/files_tests.rb
+- tests/local/storage_tests.rb
+- tests/watchr.rb
+homepage: https://github.com/fog/fog-local
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: Module for the 'fog' gem to support local filesystem storage.
+test_files: []

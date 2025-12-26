@@ -1,0 +1,195 @@
+--- !ruby/object:Gem::Specification
+name: asset-symlink
+version: !ruby/object:Gem::Version
+  version: 0.3.1
+platform: ruby
+authors:
+- Frederick Cheung
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '11.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.0
+description: easily make assets available under a consistent public name
+email:
+- frederick.cheung@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Appraisals
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- asset-symlink.gemspec
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- gemfiles/4.2.10.gemfile
+- gemfiles/4.2.10.gemfile.lock
+- gemfiles/5.0.gemfile
+- gemfiles/5.0.gemfile.lock
+- gemfiles/5.1.gemfile
+- gemfiles/5.1.gemfile.lock
+- gemfiles/5.2.gemfile
+- gemfiles/5.2.gemfile.lock
+- lib/asset_symlink.rb
+- lib/asset_symlink/railtie.rb
+- lib/asset_symlink/tasks/symlink.rake
+- lib/asset_symlink/version.rb
+- spec/asset_symlink_spec.rb
+- spec/dummy_app/README.rdoc
+- spec/dummy_app/Rakefile
+- spec/dummy_app/app/assets/javascripts/3rdparty/lib.js
+- spec/dummy_app/app/assets/javascripts/application.js
+- spec/dummy_app/app/assets/javascripts/test.js
+- spec/dummy_app/app/assets/stylesheets/application.css
+- spec/dummy_app/app/controllers/application_controller.rb
+- spec/dummy_app/app/helpers/application_helper.rb
+- spec/dummy_app/app/views/layouts/application.html.erb
+- spec/dummy_app/bin/bundle
+- spec/dummy_app/bin/rails
+- spec/dummy_app/bin/rake
+- spec/dummy_app/config.ru
+- spec/dummy_app/config/application.rb
+- spec/dummy_app/config/boot.rb
+- spec/dummy_app/config/database.yml
+- spec/dummy_app/config/environment.rb
+- spec/dummy_app/config/environments/development.rb
+- spec/dummy_app/config/environments/production.rb
+- spec/dummy_app/config/environments/test.rb
+- spec/dummy_app/config/initializers/backtrace_silencers.rb
+- spec/dummy_app/config/locales/en.yml
+- spec/dummy_app/config/routes.rb
+- spec/dummy_app/log/development.log
+- spec/integration_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/fcheung/asset_symlink
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: easily make assets available under a consistent public name
+test_files:
+- spec/asset_symlink_spec.rb
+- spec/dummy_app/README.rdoc
+- spec/dummy_app/Rakefile
+- spec/dummy_app/app/assets/javascripts/3rdparty/lib.js
+- spec/dummy_app/app/assets/javascripts/application.js
+- spec/dummy_app/app/assets/javascripts/test.js
+- spec/dummy_app/app/assets/stylesheets/application.css
+- spec/dummy_app/app/controllers/application_controller.rb
+- spec/dummy_app/app/helpers/application_helper.rb
+- spec/dummy_app/app/views/layouts/application.html.erb
+- spec/dummy_app/bin/bundle
+- spec/dummy_app/bin/rails
+- spec/dummy_app/bin/rake
+- spec/dummy_app/config.ru
+- spec/dummy_app/config/application.rb
+- spec/dummy_app/config/boot.rb
+- spec/dummy_app/config/database.yml
+- spec/dummy_app/config/environment.rb
+- spec/dummy_app/config/environments/development.rb
+- spec/dummy_app/config/environments/production.rb
+- spec/dummy_app/config/environments/test.rb
+- spec/dummy_app/config/initializers/backtrace_silencers.rb
+- spec/dummy_app/config/locales/en.yml
+- spec/dummy_app/config/routes.rb
+- spec/dummy_app/log/development.log
+- spec/integration_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification
+name: database_cleaner
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- Ben Mabey
+- Ernesto Tagwerker
+- Micah Geisel
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: database_cleaner-active_record
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+description: Strategies for cleaning databases. Can be used to ensure a clean slate
+  for testing.
+email:
+- ernesto@ombulabs.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/database_cleaner.rb
+homepage: https://github.com/DatabaseCleaner/database_cleaner
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/DatabaseCleaner/database_cleaner/blob/master/History.rdoc
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.10
+signing_key:
+specification_version: 4
+summary: Strategies for cleaning databases. Can be used to ensure a clean slate for
+  testing.
+test_files: []

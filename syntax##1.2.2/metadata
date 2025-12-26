@@ -1,0 +1,125 @@
+--- !ruby/object:Gem::Specification
+name: syntax
+version: !ruby/object:Gem::Version
+  version: 1.2.2
+  prerelease: 
+platform: ruby
+authors:
+- Jamis Buck
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-07-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - <
+      - !ruby/object:Gem::Version
+        version: 11.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - <
+      - !ruby/object:Gem::Version
+        version: 11.0.0
+- !ruby/object:Gem::Dependency
+  name: rake-contrib
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Syntax is Ruby library for performing simple syntax highlighting.
+email: jamis@jamisbuck.org
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.rdoc
+- CHANGELOG
+- lib/syntax/common.rb
+- lib/syntax/convertors/abstract.rb
+- lib/syntax/convertors/html.rb
+- lib/syntax/lang/ansic.rb
+- lib/syntax/lang/css21.rb
+- lib/syntax/lang/fortran.rb
+- lib/syntax/lang/javascript.rb
+- lib/syntax/lang/ruby.rb
+- lib/syntax/lang/sqlite.rb
+- lib/syntax/lang/xml.rb
+- lib/syntax/lang/yaml.rb
+- lib/syntax/version.rb
+- lib/syntax.rb
+homepage: https://github.com/dblock/syntax
+licenses:
+- BSD
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.30
+signing_key: 
+specification_version: 3
+summary: Perform simple syntax highlighting.
+test_files: []

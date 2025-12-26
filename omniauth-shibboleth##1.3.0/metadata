@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: omniauth-shibboleth
+version: !ruby/object:Gem::Version
+  version: 1.3.0
+platform: ruby
+authors:
+- Toyokazu Akiyama
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-08-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: omniauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.8'
+description: OmniAuth Shibboleth strategies for OmniAuth 1.x
+email:
+- toyokazu@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.md
+- Rakefile
+- lib/omniauth-shibboleth.rb
+- lib/omniauth-shibboleth/version.rb
+- lib/omniauth/strategies/shibboleth.rb
+- omniauth-shibboleth.gemspec
+- spec/app_spec.rb
+- spec/omniauth/strategies/shibboleth_spec.rb
+- spec/spec_helper.rb
+homepage: ''
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.8
+signing_key: 
+specification_version: 4
+summary: OmniAuth Shibboleth strategies for OmniAuth 1.x
+test_files:
+- spec/app_spec.rb
+- spec/omniauth/strategies/shibboleth_spec.rb
+- spec/spec_helper.rb

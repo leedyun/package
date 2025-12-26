@@ -1,0 +1,119 @@
+--- !ruby/object:Gem::Specification
+name: rails_semantic_logger
+version: !ruby/object:Gem::Version
+  version: 4.17.0
+platform: ruby
+authors:
+- Reid Morrison
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-07-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: semantic_logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.16'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.16'
+description:
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/rails_semantic_logger.rb
+- lib/rails_semantic_logger/action_controller/log_subscriber.rb
+- lib/rails_semantic_logger/action_mailer/log_subscriber.rb
+- lib/rails_semantic_logger/action_view/log_subscriber.rb
+- lib/rails_semantic_logger/active_job/log_subscriber.rb
+- lib/rails_semantic_logger/active_record/log_subscriber.rb
+- lib/rails_semantic_logger/delayed_job/plugin.rb
+- lib/rails_semantic_logger/engine.rb
+- lib/rails_semantic_logger/extensions/action_cable/tagged_logger_proxy.rb
+- lib/rails_semantic_logger/extensions/action_controller/live.rb
+- lib/rails_semantic_logger/extensions/action_dispatch/debug_exceptions.rb
+- lib/rails_semantic_logger/extensions/action_view/streaming_template_renderer.rb
+- lib/rails_semantic_logger/extensions/active_job/logging.rb
+- lib/rails_semantic_logger/extensions/active_model_serializers/logging.rb
+- lib/rails_semantic_logger/extensions/active_support/log_subscriber.rb
+- lib/rails_semantic_logger/extensions/active_support/logger.rb
+- lib/rails_semantic_logger/extensions/active_support/tagged_logging.rb
+- lib/rails_semantic_logger/extensions/mongoid/config.rb
+- lib/rails_semantic_logger/extensions/rack/server.rb
+- lib/rails_semantic_logger/extensions/rackup/server.rb
+- lib/rails_semantic_logger/extensions/rails/server.rb
+- lib/rails_semantic_logger/extensions/sidekiq/sidekiq.rb
+- lib/rails_semantic_logger/options.rb
+- lib/rails_semantic_logger/rack/logger.rb
+- lib/rails_semantic_logger/sidekiq/defaults.rb
+- lib/rails_semantic_logger/sidekiq/job_logger.rb
+- lib/rails_semantic_logger/sidekiq/loggable.rb
+- lib/rails_semantic_logger/version.rb
+homepage: https://logger.rocketjob.io
+licenses:
+- Apache-2.0
+metadata:
+  bug_tracker_uri: https://github.com/reidmorrison/rails_semantic_logger/issues
+  documentation_uri: https://logger.rocketjob.io
+  source_code_uri: https://github.com/reidmorrison/rails_semantic_logger/tree/v4.17.0
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Feature rich logging framework that replaces the Rails logger.
+test_files: []

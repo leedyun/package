@@ -1,0 +1,81 @@
+--- !ruby/object:Gem::Specification
+name: simplecov-html
+version: !ruby/object:Gem::Version
+  version: 0.13.1
+platform: ruby
+authors:
+- Christoph Olszowka
+bindir: bin
+cert_chain: []
+date: 2024-09-09 00:00:00.000000000 Z
+dependencies: []
+description: Default HTML formatter for SimpleCov code coverage tool for ruby 2.4+
+email:
+- christoph at olszowka de
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- lib/simplecov-html.rb
+- lib/simplecov-html/version.rb
+- public/DataTables-1.10.20/images/sort_asc.png
+- public/DataTables-1.10.20/images/sort_asc_disabled.png
+- public/DataTables-1.10.20/images/sort_both.png
+- public/DataTables-1.10.20/images/sort_desc.png
+- public/DataTables-1.10.20/images/sort_desc_disabled.png
+- public/application.css
+- public/application.js
+- public/colorbox/border.png
+- public/colorbox/controls.png
+- public/colorbox/loading.gif
+- public/colorbox/loading_background.png
+- public/favicon_green.png
+- public/favicon_red.png
+- public/favicon_yellow.png
+- public/images/ui-bg_flat_0_aaaaaa_40x100.png
+- public/images/ui-bg_flat_75_ffffff_40x100.png
+- public/images/ui-bg_glass_55_fbf9ee_1x400.png
+- public/images/ui-bg_glass_65_ffffff_1x400.png
+- public/images/ui-bg_glass_75_dadada_1x400.png
+- public/images/ui-bg_glass_75_e6e6e6_1x400.png
+- public/images/ui-bg_glass_95_fef1ec_1x400.png
+- public/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+- public/images/ui-icons_222222_256x240.png
+- public/images/ui-icons_2e83ff_256x240.png
+- public/images/ui-icons_454545_256x240.png
+- public/images/ui-icons_888888_256x240.png
+- public/images/ui-icons_cd0a0a_256x240.png
+- public/loading.gif
+- public/magnify.png
+- views/covered_percent.erb
+- views/file_list.erb
+- views/layout.erb
+- views/source_file.erb
+homepage: https://github.com/simplecov-ruby/simplecov-html
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.0.dev
+specification_version: 4
+summary: Default HTML formatter for SimpleCov code coverage tool for ruby 2.4+
+test_files: []

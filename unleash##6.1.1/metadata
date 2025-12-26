@@ -1,0 +1,210 @@
+--- !ruby/object:Gem::Specification
+name: unleash
+version: !ruby/object:Gem::Version
+  version: 6.1.1
+platform: ruby
+authors:
+- Renato Arruda
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: yggdrasil-engine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.12'
+- !ruby/object:Gem::Dependency
+  name: rspec-json_expectations
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.18.1
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.51.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.51.0
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+- !ruby/object:Gem::Dependency
+  name: simplecov-lcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+description: |-
+  This is the ruby client for Unleash, a powerful feature toggle system
+      that gives you a great overview over all feature toggles across all your applications and services.
+email:
+- rarruda@rarruda.org
+executables:
+- unleash-client
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/stale.yml"
+- ".github/workflows/add-to-project.yml"
+- ".github/workflows/pull_request.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- bin/unleash-client
+- echo_client_spec_version.rb
+- examples/bootstrap.rb
+- examples/default-toggles.json
+- examples/extending_unleash_with_opentelemetry.rb
+- examples/simple.rb
+- lib/unleash.rb
+- lib/unleash/bootstrap/configuration.rb
+- lib/unleash/bootstrap/handler.rb
+- lib/unleash/bootstrap/provider/base.rb
+- lib/unleash/bootstrap/provider/from_file.rb
+- lib/unleash/bootstrap/provider/from_url.rb
+- lib/unleash/client.rb
+- lib/unleash/configuration.rb
+- lib/unleash/context.rb
+- lib/unleash/metrics_reporter.rb
+- lib/unleash/scheduled_executor.rb
+- lib/unleash/spec_version.rb
+- lib/unleash/strategies.rb
+- lib/unleash/toggle_fetcher.rb
+- lib/unleash/util/http.rb
+- lib/unleash/variant.rb
+- lib/unleash/version.rb
+- unleash-client.gemspec
+- v6_MIGRATION_GUIDE.md
+homepage: https://github.com/unleash/unleash-client-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Unleash feature toggle client.
+test_files: []

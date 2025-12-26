@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: devfile
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+platform: ruby
+authors:
+- GitLab
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-27 00:00:00.000000000 Z
+dependencies: []
+description: Library used to generate kubernetes manifests from a Devfile.
+email:
+- cwoolley@gitlab.com
+- vtak@gitlab.com
+- spatnaik@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/devfile
+- ext/devfile.go
+- ext/go.mod
+- ext/go.sum
+- ext/main.go
+- ext/volume.go
+- lib/devfile.rb
+homepage: https://gitlab.com
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://gitlab.com/gitlab-org/ruby/gems/devfile-gem
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.4
+signing_key: 
+specification_version: 4
+summary: Parse and generate kubernetes manifests from a Devfile
+test_files: []

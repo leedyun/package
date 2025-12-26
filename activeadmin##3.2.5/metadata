@@ -1,0 +1,542 @@
+--- !ruby/object:Gem::Specification
+name: activeadmin
+version: !ruby/object:Gem::Version
+  version: 3.2.5
+platform: ruby
+authors:
+- Charles Maresh
+- David Rodríguez
+- Greg Bell
+- Igor Fedoronchuk
+- Javier Julio
+- Piers C
+- Sean Linsley
+- Timo Schilling
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: arbre
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+- !ruby/object:Gem::Dependency
+  name: csv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: formtastic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: formtastic_i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: inherited_resources
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: jquery-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: kaminari
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.1
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.1'
+- !ruby/object:Gem::Dependency
+  name: ransack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+description: The administration framework for Ruby on Rails.
+email:
+- deivid.rodriguez@riseup.net
+executables: []
+extensions: []
+extra_rdoc_files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- README.md
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE
+- README.md
+- app/assets/javascripts/active_admin/base.js
+- app/assets/stylesheets/active_admin/_base.scss
+- app/assets/stylesheets/active_admin/_forms.scss
+- app/assets/stylesheets/active_admin/_header.scss
+- app/assets/stylesheets/active_admin/_mixins.scss
+- app/assets/stylesheets/active_admin/_normalize.scss
+- app/assets/stylesheets/active_admin/_print.scss
+- app/assets/stylesheets/active_admin/_typography.scss
+- app/assets/stylesheets/active_admin/components/_batch_actions.scss
+- app/assets/stylesheets/active_admin/components/_blank_slates.scss
+- app/assets/stylesheets/active_admin/components/_breadcrumbs.scss
+- app/assets/stylesheets/active_admin/components/_buttons.scss
+- app/assets/stylesheets/active_admin/components/_columns.scss
+- app/assets/stylesheets/active_admin/components/_comments.scss
+- app/assets/stylesheets/active_admin/components/_date_picker.scss
+- app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+- app/assets/stylesheets/active_admin/components/_flash_messages.scss
+- app/assets/stylesheets/active_admin/components/_grid.scss
+- app/assets/stylesheets/active_admin/components/_index_list.scss
+- app/assets/stylesheets/active_admin/components/_links.scss
+- app/assets/stylesheets/active_admin/components/_modal_dialog.scss
+- app/assets/stylesheets/active_admin/components/_pagination.scss
+- app/assets/stylesheets/active_admin/components/_panels.scss
+- app/assets/stylesheets/active_admin/components/_scopes.scss
+- app/assets/stylesheets/active_admin/components/_status_tags.scss
+- app/assets/stylesheets/active_admin/components/_table_tools.scss
+- app/assets/stylesheets/active_admin/components/_tables.scss
+- app/assets/stylesheets/active_admin/components/_tabs.scss
+- app/assets/stylesheets/active_admin/components/_unsupported_browser.scss
+- app/assets/stylesheets/active_admin/mixins/_all.scss
+- app/assets/stylesheets/active_admin/mixins/_buttons.scss
+- app/assets/stylesheets/active_admin/mixins/_gradients.scss
+- app/assets/stylesheets/active_admin/mixins/_rounded.scss
+- app/assets/stylesheets/active_admin/mixins/_sections.scss
+- app/assets/stylesheets/active_admin/mixins/_shadows.scss
+- app/assets/stylesheets/active_admin/mixins/_typography.scss
+- app/assets/stylesheets/active_admin/mixins/_utilities.scss
+- app/assets/stylesheets/active_admin/mixins/_variables.scss
+- app/assets/stylesheets/active_admin/pages/_logged_out.scss
+- app/assets/stylesheets/active_admin/structure/_footer.scss
+- app/assets/stylesheets/active_admin/structure/_main_structure.scss
+- app/assets/stylesheets/active_admin/structure/_title_bar.scss
+- app/javascript/active_admin/base.js
+- app/javascript/active_admin/ext/jquery-ui.js
+- app/javascript/active_admin/ext/jquery.js
+- app/javascript/active_admin/initializers/batch-actions.js
+- app/javascript/active_admin/initializers/checkbox-toggler.js
+- app/javascript/active_admin/initializers/datepicker.js
+- app/javascript/active_admin/initializers/dropdown-menu.js
+- app/javascript/active_admin/initializers/filters.js
+- app/javascript/active_admin/initializers/has-many.js
+- app/javascript/active_admin/initializers/per-page.js
+- app/javascript/active_admin/initializers/table-checkbox-toggler.js
+- app/javascript/active_admin/initializers/tabs.js
+- app/javascript/active_admin/lib/checkbox-toggler.js
+- app/javascript/active_admin/lib/dropdown-menu.js
+- app/javascript/active_admin/lib/filters.js
+- app/javascript/active_admin/lib/modal-dialog.js
+- app/javascript/active_admin/lib/per-page.js
+- app/javascript/active_admin/lib/table-checkbox-toggler.js
+- app/javascript/active_admin/lib/utils.js
+- app/views/active_admin/devise/confirmations/new.html.erb
+- app/views/active_admin/devise/mailer/reset_password_instructions.html.erb
+- app/views/active_admin/devise/mailer/unlock_instructions.html.erb
+- app/views/active_admin/devise/passwords/edit.html.erb
+- app/views/active_admin/devise/passwords/new.html.erb
+- app/views/active_admin/devise/registrations/new.html.erb
+- app/views/active_admin/devise/sessions/new.html.erb
+- app/views/active_admin/devise/shared/_error_messages.html.erb
+- app/views/active_admin/devise/shared/_links.erb
+- app/views/active_admin/devise/unlocks/new.html.erb
+- app/views/active_admin/page/index.html.arb
+- app/views/active_admin/resource/edit.html.arb
+- app/views/active_admin/resource/index.html.arb
+- app/views/active_admin/resource/new.html.arb
+- app/views/active_admin/resource/show.html.arb
+- app/views/kaminari/active_admin/_first_page.html.erb
+- app/views/kaminari/active_admin/_gap.html.erb
+- app/views/kaminari/active_admin/_last_page.html.erb
+- app/views/kaminari/active_admin/_next_page.html.erb
+- app/views/kaminari/active_admin/_page.html.erb
+- app/views/kaminari/active_admin/_paginator.html.erb
+- app/views/kaminari/active_admin/_prev_page.html.erb
+- app/views/kaminari/active_admin_countless/_first_page.html.erb
+- app/views/kaminari/active_admin_countless/_gap.html.erb
+- app/views/kaminari/active_admin_countless/_next_page.html.erb
+- app/views/kaminari/active_admin_countless/_page.html.erb
+- app/views/kaminari/active_admin_countless/_paginator.html.erb
+- app/views/kaminari/active_admin_countless/_prev_page.html.erb
+- app/views/layouts/active_admin.html.arb
+- app/views/layouts/active_admin_logged_out.html.erb
+- config/locales/ar.yml
+- config/locales/az.yml
+- config/locales/bg.yml
+- config/locales/bs.yml
+- config/locales/ca.yml
+- config/locales/cs.yml
+- config/locales/da.yml
+- config/locales/de-CH.yml
+- config/locales/de.yml
+- config/locales/el.yml
+- config/locales/en-CA.yml
+- config/locales/en-GB.yml
+- config/locales/en.yml
+- config/locales/eo.yml
+- config/locales/es-MX.yml
+- config/locales/es.yml
+- config/locales/fa.yml
+- config/locales/fi.yml
+- config/locales/fr.yml
+- config/locales/he.yml
+- config/locales/hr.yml
+- config/locales/hu.yml
+- config/locales/id.yml
+- config/locales/it.yml
+- config/locales/ja.yml
+- config/locales/ko.yml
+- config/locales/lt.yml
+- config/locales/lv.yml
+- config/locales/mk.yml
+- config/locales/nb.yml
+- config/locales/nl.yml
+- config/locales/pl.yml
+- config/locales/pt-BR.yml
+- config/locales/pt-PT.yml
+- config/locales/ro.yml
+- config/locales/ru.yml
+- config/locales/sk.yml
+- config/locales/sv-SE.yml
+- config/locales/tr.yml
+- config/locales/uk.yml
+- config/locales/vi.yml
+- config/locales/zh-CN.yml
+- config/locales/zh-TW.yml
+- lib/active_admin.rb
+- lib/active_admin/abstract_view_factory.rb
+- lib/active_admin/application.rb
+- lib/active_admin/application_settings.rb
+- lib/active_admin/asset_registration.rb
+- lib/active_admin/authorization_adapter.rb
+- lib/active_admin/base_controller.rb
+- lib/active_admin/base_controller/authorization.rb
+- lib/active_admin/base_controller/menu.rb
+- lib/active_admin/batch_actions.rb
+- lib/active_admin/batch_actions/controller.rb
+- lib/active_admin/batch_actions/resource_extension.rb
+- lib/active_admin/batch_actions/views/batch_action_form.rb
+- lib/active_admin/batch_actions/views/batch_action_selector.rb
+- lib/active_admin/batch_actions/views/selection_cells.rb
+- lib/active_admin/callbacks.rb
+- lib/active_admin/cancan_adapter.rb
+- lib/active_admin/collection_decorator.rb
+- lib/active_admin/component.rb
+- lib/active_admin/controller_action.rb
+- lib/active_admin/csv_builder.rb
+- lib/active_admin/dependency.rb
+- lib/active_admin/devise.rb
+- lib/active_admin/dsl.rb
+- lib/active_admin/dynamic_setting.rb
+- lib/active_admin/dynamic_settings_node.rb
+- lib/active_admin/engine.rb
+- lib/active_admin/error.rb
+- lib/active_admin/filters.rb
+- lib/active_admin/filters/active.rb
+- lib/active_admin/filters/active_filter.rb
+- lib/active_admin/filters/active_sidebar.rb
+- lib/active_admin/filters/dsl.rb
+- lib/active_admin/filters/forms.rb
+- lib/active_admin/filters/formtastic_addons.rb
+- lib/active_admin/filters/resource_extension.rb
+- lib/active_admin/form_builder.rb
+- lib/active_admin/generators/boilerplate.rb
+- lib/active_admin/helpers/collection.rb
+- lib/active_admin/helpers/i18n.rb
+- lib/active_admin/helpers/optional_display.rb
+- lib/active_admin/helpers/routes/url_helpers.rb
+- lib/active_admin/helpers/scope_chain.rb
+- lib/active_admin/inputs.rb
+- lib/active_admin/inputs/datepicker_input.rb
+- lib/active_admin/inputs/filters/base.rb
+- lib/active_admin/inputs/filters/base/search_method_select.rb
+- lib/active_admin/inputs/filters/boolean_input.rb
+- lib/active_admin/inputs/filters/check_boxes_input.rb
+- lib/active_admin/inputs/filters/date_picker_input.rb
+- lib/active_admin/inputs/filters/date_range_input.rb
+- lib/active_admin/inputs/filters/numeric_input.rb
+- lib/active_admin/inputs/filters/select_input.rb
+- lib/active_admin/inputs/filters/string_input.rb
+- lib/active_admin/inputs/filters/text_input.rb
+- lib/active_admin/localizers.rb
+- lib/active_admin/localizers/resource_localizer.rb
+- lib/active_admin/menu.rb
+- lib/active_admin/menu_collection.rb
+- lib/active_admin/menu_item.rb
+- lib/active_admin/namespace.rb
+- lib/active_admin/namespace_settings.rb
+- lib/active_admin/order_clause.rb
+- lib/active_admin/orm/active_record.rb
+- lib/active_admin/orm/active_record/comments.rb
+- lib/active_admin/orm/active_record/comments/comment.rb
+- lib/active_admin/orm/active_record/comments/namespace_helper.rb
+- lib/active_admin/orm/active_record/comments/resource_helper.rb
+- lib/active_admin/orm/active_record/comments/show_page_helper.rb
+- lib/active_admin/orm/active_record/comments/views.rb
+- lib/active_admin/orm/active_record/comments/views/active_admin_comments.rb
+- lib/active_admin/orm/mongoid.rb
+- lib/active_admin/orm/mongoid/.gitkeep
+- lib/active_admin/page.rb
+- lib/active_admin/page_controller.rb
+- lib/active_admin/page_dsl.rb
+- lib/active_admin/page_presenter.rb
+- lib/active_admin/pundit_adapter.rb
+- lib/active_admin/resource.rb
+- lib/active_admin/resource/action_items.rb
+- lib/active_admin/resource/attributes.rb
+- lib/active_admin/resource/belongs_to.rb
+- lib/active_admin/resource/controllers.rb
+- lib/active_admin/resource/includes.rb
+- lib/active_admin/resource/menu.rb
+- lib/active_admin/resource/model.rb
+- lib/active_admin/resource/naming.rb
+- lib/active_admin/resource/ordering.rb
+- lib/active_admin/resource/page_presenters.rb
+- lib/active_admin/resource/pagination.rb
+- lib/active_admin/resource/routes.rb
+- lib/active_admin/resource/scope_to.rb
+- lib/active_admin/resource/scopes.rb
+- lib/active_admin/resource/sidebars.rb
+- lib/active_admin/resource_collection.rb
+- lib/active_admin/resource_controller.rb
+- lib/active_admin/resource_controller/action_builder.rb
+- lib/active_admin/resource_controller/data_access.rb
+- lib/active_admin/resource_controller/decorators.rb
+- lib/active_admin/resource_controller/polymorphic_routes.rb
+- lib/active_admin/resource_controller/resource_class_methods.rb
+- lib/active_admin/resource_controller/scoping.rb
+- lib/active_admin/resource_controller/sidebars.rb
+- lib/active_admin/resource_controller/streaming.rb
+- lib/active_admin/resource_dsl.rb
+- lib/active_admin/router.rb
+- lib/active_admin/scope.rb
+- lib/active_admin/settings_node.rb
+- lib/active_admin/sidebar_section.rb
+- lib/active_admin/version.rb
+- lib/active_admin/view_factory.rb
+- lib/active_admin/view_helpers.rb
+- lib/active_admin/view_helpers/active_admin_application_helper.rb
+- lib/active_admin/view_helpers/auto_link_helper.rb
+- lib/active_admin/view_helpers/breadcrumb_helper.rb
+- lib/active_admin/view_helpers/display_helper.rb
+- lib/active_admin/view_helpers/download_format_links_helper.rb
+- lib/active_admin/view_helpers/fields_for.rb
+- lib/active_admin/view_helpers/flash_helper.rb
+- lib/active_admin/view_helpers/form_helper.rb
+- lib/active_admin/view_helpers/method_or_proc_helper.rb
+- lib/active_admin/view_helpers/scope_name_helper.rb
+- lib/active_admin/view_helpers/sidebar_helper.rb
+- lib/active_admin/view_helpers/title_helper.rb
+- lib/active_admin/view_helpers/view_factory_helper.rb
+- lib/active_admin/views.rb
+- lib/active_admin/views/action_items.rb
+- lib/active_admin/views/components/active_admin_form.rb
+- lib/active_admin/views/components/active_filters_sidebar_content.rb
+- lib/active_admin/views/components/attributes_table.rb
+- lib/active_admin/views/components/blank_slate.rb
+- lib/active_admin/views/components/columns.rb
+- lib/active_admin/views/components/dropdown_menu.rb
+- lib/active_admin/views/components/index_list.rb
+- lib/active_admin/views/components/menu.rb
+- lib/active_admin/views/components/menu_item.rb
+- lib/active_admin/views/components/paginated_collection.rb
+- lib/active_admin/views/components/panel.rb
+- lib/active_admin/views/components/scopes.rb
+- lib/active_admin/views/components/sidebar.rb
+- lib/active_admin/views/components/sidebar_section.rb
+- lib/active_admin/views/components/site_title.rb
+- lib/active_admin/views/components/status_tag.rb
+- lib/active_admin/views/components/table_for.rb
+- lib/active_admin/views/components/tabs.rb
+- lib/active_admin/views/components/unsupported_browser.rb
+- lib/active_admin/views/footer.rb
+- lib/active_admin/views/header.rb
+- lib/active_admin/views/index_as_block.rb
+- lib/active_admin/views/index_as_blog.rb
+- lib/active_admin/views/index_as_grid.rb
+- lib/active_admin/views/index_as_table.rb
+- lib/active_admin/views/pages/base.rb
+- lib/active_admin/views/pages/form.rb
+- lib/active_admin/views/pages/index.rb
+- lib/active_admin/views/pages/layout.rb
+- lib/active_admin/views/pages/page.rb
+- lib/active_admin/views/pages/show.rb
+- lib/active_admin/views/tabbed_navigation.rb
+- lib/active_admin/views/title_bar.rb
+- lib/activeadmin.rb
+- lib/generators/active_admin/assets/assets_generator.rb
+- lib/generators/active_admin/assets/templates/active_admin.js
+- lib/generators/active_admin/assets/templates/active_admin.scss
+- lib/generators/active_admin/devise/devise_generator.rb
+- lib/generators/active_admin/install/install_generator.rb
+- lib/generators/active_admin/install/templates/active_admin.rb.erb
+- lib/generators/active_admin/install/templates/admin_users.rb.erb
+- lib/generators/active_admin/install/templates/dashboard.rb
+- lib/generators/active_admin/install/templates/migrations/create_active_admin_comments.rb.erb
+- lib/generators/active_admin/page/USAGE
+- lib/generators/active_admin/page/page_generator.rb
+- lib/generators/active_admin/page/templates/page.rb
+- lib/generators/active_admin/resource/resource_generator.rb
+- lib/generators/active_admin/resource/templates/admin.rb.erb
+- lib/generators/active_admin/webpacker/plugins/jquery.js
+- lib/generators/active_admin/webpacker/templates/active_admin.js
+- lib/generators/active_admin/webpacker/templates/active_admin.scss
+- lib/generators/active_admin/webpacker/templates/print.scss
+- lib/generators/active_admin/webpacker/webpacker_generator.rb
+- vendor/assets/javascripts/jquery-ui/data.js
+- vendor/assets/javascripts/jquery-ui/disable-selection.js
+- vendor/assets/javascripts/jquery-ui/focusable.js
+- vendor/assets/javascripts/jquery-ui/form-reset-mixin.js
+- vendor/assets/javascripts/jquery-ui/form.js
+- vendor/assets/javascripts/jquery-ui/ie.js
+- vendor/assets/javascripts/jquery-ui/keycode.js
+- vendor/assets/javascripts/jquery-ui/labels.js
+- vendor/assets/javascripts/jquery-ui/plugin.js
+- vendor/assets/javascripts/jquery-ui/position.js
+- vendor/assets/javascripts/jquery-ui/safe-active-element.js
+- vendor/assets/javascripts/jquery-ui/safe-blur.js
+- vendor/assets/javascripts/jquery-ui/scroll-parent.js
+- vendor/assets/javascripts/jquery-ui/tabbable.js
+- vendor/assets/javascripts/jquery-ui/unique-id.js
+- vendor/assets/javascripts/jquery-ui/version.js
+- vendor/assets/javascripts/jquery-ui/widget.js
+- vendor/assets/javascripts/jquery-ui/widgets/button.js
+- vendor/assets/javascripts/jquery-ui/widgets/checkboxradio.js
+- vendor/assets/javascripts/jquery-ui/widgets/controlgroup.js
+- vendor/assets/javascripts/jquery-ui/widgets/datepicker.js
+- vendor/assets/javascripts/jquery-ui/widgets/dialog.js
+- vendor/assets/javascripts/jquery-ui/widgets/draggable.js
+- vendor/assets/javascripts/jquery-ui/widgets/mouse.js
+- vendor/assets/javascripts/jquery-ui/widgets/resizable.js
+- vendor/assets/javascripts/jquery-ui/widgets/sortable.js
+- vendor/assets/javascripts/jquery-ui/widgets/tabs.js
+homepage: https://activeadmin.info
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/activeadmin/activeadmin/issues
+  changelog_uri: https://github.com/activeadmin/activeadmin/blob/master/CHANGELOG.md
+  documentation_uri: https://activeadmin.info
+  homepage_uri: https://activeadmin.info
+  mailing_list_uri: https://groups.google.com/group/activeadmin
+  rubygems_mfa_required: 'true'
+  source_code_uri: https://github.com/activeadmin/activeadmin
+  wiki_uri: https://github.com/activeadmin/activeadmin/wiki
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Active Admin is a Ruby on Rails plugin for generating administration style
+  interfaces. It abstracts common business application patterns to make it simple
+  for developers to implement beautiful and elegant interfaces with very little effort.
+test_files: []

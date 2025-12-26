@@ -1,0 +1,105 @@
+--- !ruby/object:Gem::Specification
+name: mimemagic
+version: !ruby/object:Gem::Version
+  version: 0.4.3
+platform: ruby
+authors:
+- Daniel Mendler
+- Jon Wood
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-03-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.14'
+description: Fast mime detection by extension or content (Uses freedesktop.org.xml
+  shared-mime-info database)
+email:
+- mail@daniel-mendler.de
+- jon@blankpad.net
+executables: []
+extensions:
+- ext/mimemagic/Rakefile
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- ext/mimemagic/Rakefile
+- lib/mimemagic.rb
+- lib/mimemagic/tables.rb
+- lib/mimemagic/version.rb
+- mimemagic.gemspec
+homepage: https://github.com/mimemagicrb/mimemagic
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/mimemagicrb/mimemagic/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/mimemagicrb/mimemagic
+  bug_tracker_uri: https://github.com/mimemagicrb/mimemagic/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key:
+specification_version: 4
+summary: Fast mime detection by extension or content
+test_files: []

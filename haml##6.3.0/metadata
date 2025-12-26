@@ -1,0 +1,344 @@
+--- !ruby/object:Gem::Specification
+name: haml
+version: !ruby/object:Gem::Version
+  version: 6.3.0
+platform: ruby
+authors:
+- Natalie Weizenbaum
+- Hampton Catlin
+- Norman Clarke
+- Akira Matsuda
+- Takashi Kokubun
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2023-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: temple
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.2
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark_driver
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coffee-script
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: erubi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: less
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sass
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slim
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: string_template
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: unindent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: An elegant, structured (X)HTML/XML templating engine.
+email:
+- haml@googlegroups.com
+- ronnie@dio.jp
+executables:
+- haml
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".yardopts"
+- CHANGELOG.md
+- FAQ.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- REFERENCE.md
+- Rakefile
+- bin/bench
+- bin/console
+- bin/ruby
+- bin/setup
+- bin/stackprof
+- bin/test
+- exe/haml
+- haml.gemspec
+- lib/haml.rb
+- lib/haml/ambles.rb
+- lib/haml/attribute_builder.rb
+- lib/haml/attribute_compiler.rb
+- lib/haml/attribute_parser.rb
+- lib/haml/cli.rb
+- lib/haml/compiler.rb
+- lib/haml/compiler/children_compiler.rb
+- lib/haml/compiler/comment_compiler.rb
+- lib/haml/compiler/doctype_compiler.rb
+- lib/haml/compiler/script_compiler.rb
+- lib/haml/compiler/silent_script_compiler.rb
+- lib/haml/compiler/tag_compiler.rb
+- lib/haml/dynamic_merger.rb
+- lib/haml/engine.rb
+- lib/haml/error.rb
+- lib/haml/escape.rb
+- lib/haml/escape_any.rb
+- lib/haml/filters.rb
+- lib/haml/filters/base.rb
+- lib/haml/filters/cdata.rb
+- lib/haml/filters/coffee.rb
+- lib/haml/filters/css.rb
+- lib/haml/filters/erb.rb
+- lib/haml/filters/escaped.rb
+- lib/haml/filters/javascript.rb
+- lib/haml/filters/less.rb
+- lib/haml/filters/markdown.rb
+- lib/haml/filters/plain.rb
+- lib/haml/filters/preserve.rb
+- lib/haml/filters/ruby.rb
+- lib/haml/filters/sass.rb
+- lib/haml/filters/scss.rb
+- lib/haml/filters/text_base.rb
+- lib/haml/filters/tilt_base.rb
+- lib/haml/force_escape.rb
+- lib/haml/helpers.rb
+- lib/haml/html.rb
+- lib/haml/identity.rb
+- lib/haml/object_ref.rb
+- lib/haml/parser.rb
+- lib/haml/rails_helpers.rb
+- lib/haml/rails_template.rb
+- lib/haml/railtie.rb
+- lib/haml/ruby_expression.rb
+- lib/haml/string_splitter.rb
+- lib/haml/template.rb
+- lib/haml/temple_line_counter.rb
+- lib/haml/util.rb
+- lib/haml/version.rb
+- lib/haml/whitespace.rb
+homepage: https://haml.info
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: An elegant, structured (X)HTML/XML templating engine.
+test_files: []

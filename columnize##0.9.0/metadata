@@ -1,0 +1,121 @@
+--- !ruby/object:Gem::Specification
+name: columnize
+version: !ruby/object:Gem::Version
+  version: 0.9.0
+  prerelease: 
+platform: ruby
+authors:
+- Rocky Bernstein
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-12-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+description: ! '
+
+  In showing a long lists, sometimes one would prefer to see the value
+
+  arranged aligned in columns. Some examples include listing methods
+
+  of an object or debugger commands.
+
+  See Examples in the rdoc documentation for examples.
+
+'
+email: rockyb@rubyforge.net
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- lib/columnize.rb
+- COPYING
+- THANKS
+files:
+- .gitignore
+- .travis.yml
+- AUTHORS
+- COPYING
+- ChangeLog
+- Gemfile
+- Gemfile.lock
+- Makefile
+- NEWS
+- README.md
+- Rakefile
+- THANKS
+- columnize.gemspec
+- lib/Makefile
+- lib/columnize.rb
+- lib/columnize/Makefile
+- lib/columnize/columnize.rb
+- lib/columnize/opts.rb
+- lib/columnize/version.rb
+- test/test-columnize-array.rb
+- test/test-columnize.rb
+- test/test-columnizer.rb
+- test/test-hashparm.rb
+- test/test-issue3.rb
+- test/test-min_rows_and_colwidths.rb
+homepage: https://github.com/rocky/columnize
+licenses:
+- Ruby
+- GPL2
+post_install_message: 
+rdoc_options:
+- --main
+- README
+- --title
+- Columnize 0.9.0 Documentation
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: 1.8.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: columnize
+rubygems_version: 1.8.23
+signing_key: 
+specification_version: 3
+summary: Module to format an Array as an Array of String aligned in columns
+test_files: []

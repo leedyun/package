@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: wmi-lite
+version: !ruby/object:Gem::Version
+  version: 1.0.7
+platform: ruby
+authors:
+- Adam Edwards
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-03-31 00:00:00.000000000 Z
+dependencies: []
+description: A lightweight utility over win32ole for accessing basic WMI (Windows
+  Management Instrumentation) functionality in the Microsoft Windows operating system.
+  It has no runtime dependencies other than Ruby, so it can be used without concerns
+  around dependency issues.
+email:
+- dev@chef.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- lib/wmi-lite.rb
+- lib/wmi-lite/version.rb
+- lib/wmi-lite/wmi.rb
+- lib/wmi-lite/wmi_exception.rb
+- lib/wmi-lite/wmi_instance.rb
+homepage: https://github.com/chef/wmi-lite
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.4
+signing_key: 
+specification_version: 4
+summary: A lightweight utility library for accessing basic WMI (Windows Management
+  Instrumentation) functionality on Windows
+test_files: []

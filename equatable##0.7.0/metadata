@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification
+name: equatable
+version: !ruby/object:Gem::Version
+  version: 0.7.0
+platform: ruby
+authors:
+- Piotr Murach
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-04-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: Provide equality comparison methods for objects based on their attributes
+  by generating implementations for the ==, eql?, hash and inspect methods.
+email:
+- piotr@piotrmurach.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CHANGELOG.md
+- LICENSE.txt
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- lib/equatable.rb
+- lib/equatable/version.rb
+homepage: https://github.com/piotrmurach/equatable
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  bug_tracker_uri: https://github.com/piotrmurach/equatable/issues
+  changelog_uri: https://github.com/piotrmurach/equatable/blob/master/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/github/piotrmurach/equatable
+  homepage_uri: https://github.com/piotrmurach/equatable
+  source_code_uri: https://github.com/piotrmurach/equatable
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Provide equality comparison methods for objects based on their attributes.
+test_files: []

@@ -1,0 +1,394 @@
+--- !ruby/object:Gem::Specification
+name: acquia-toolbelt
+version: !ruby/object:Gem::Version
+  version: 2.4.1
+platform: ruby
+authors:
+- Jacob Bednarz
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.18.1
+- !ruby/object:Gem::Dependency
+  name: netrc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.7
+- !ruby/object:Gem::Dependency
+  name: highline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.6.19
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.6.19
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.8.8
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.8.8
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+- !ruby/object:Gem::Dependency
+  name: rainbow
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+- !ruby/object:Gem::Dependency
+  name: sshkey
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+- !ruby/object:Gem::Dependency
+  name: terminal-table
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.4.5
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.4.5
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 10.1.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 2.7.0
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.15.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.15.2
+description: The Acquia Toolbelt allows you to interact with the Acquia Cloud API
+  via the CLI.
+email:
+- jacob.bednarz@gmail.com
+executables:
+- acquia
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- acquia-toolbelt.gemspec
+- bin/acquia
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/acquia_toolbelt.rb
+- lib/acquia_toolbelt/cli.rb
+- lib/acquia_toolbelt/cli/api.rb
+- lib/acquia_toolbelt/cli/auth.rb
+- lib/acquia_toolbelt/cli/database.rb
+- lib/acquia_toolbelt/cli/deploy.rb
+- lib/acquia_toolbelt/cli/domain.rb
+- lib/acquia_toolbelt/cli/environment.rb
+- lib/acquia_toolbelt/cli/file.rb
+- lib/acquia_toolbelt/cli/server.rb
+- lib/acquia_toolbelt/cli/site.rb
+- lib/acquia_toolbelt/cli/ssh.rb
+- lib/acquia_toolbelt/cli/svn.rb
+- lib/acquia_toolbelt/cli/task.rb
+- lib/acquia_toolbelt/cli/ui.rb
+- lib/acquia_toolbelt/error.rb
+- lib/acquia_toolbelt/thor.rb
+- lib/acquia_toolbelt/version.rb
+- lib/vendor/thor/CHANGELOG.md
+- lib/vendor/thor/Gemfile
+- lib/vendor/thor/LICENSE.md
+- lib/vendor/thor/README.md
+- lib/vendor/thor/lib/thor.rb
+- lib/vendor/thor/lib/thor/actions.rb
+- lib/vendor/thor/lib/thor/actions/create_file.rb
+- lib/vendor/thor/lib/thor/actions/create_link.rb
+- lib/vendor/thor/lib/thor/actions/directory.rb
+- lib/vendor/thor/lib/thor/actions/empty_directory.rb
+- lib/vendor/thor/lib/thor/actions/file_manipulation.rb
+- lib/vendor/thor/lib/thor/actions/inject_into_file.rb
+- lib/vendor/thor/lib/thor/base.rb
+- lib/vendor/thor/lib/thor/command.rb
+- lib/vendor/thor/lib/thor/core_ext/hash_with_indifferent_access.rb
+- lib/vendor/thor/lib/thor/core_ext/io_binary_read.rb
+- lib/vendor/thor/lib/thor/core_ext/ordered_hash.rb
+- lib/vendor/thor/lib/thor/error.rb
+- lib/vendor/thor/lib/thor/group.rb
+- lib/vendor/thor/lib/thor/invocation.rb
+- lib/vendor/thor/lib/thor/parser.rb
+- lib/vendor/thor/lib/thor/parser/argument.rb
+- lib/vendor/thor/lib/thor/parser/arguments.rb
+- lib/vendor/thor/lib/thor/parser/option.rb
+- lib/vendor/thor/lib/thor/parser/options.rb
+- lib/vendor/thor/lib/thor/rake_compat.rb
+- lib/vendor/thor/lib/thor/runner.rb
+- lib/vendor/thor/lib/thor/shell.rb
+- lib/vendor/thor/lib/thor/shell/basic.rb
+- lib/vendor/thor/lib/thor/shell/color.rb
+- lib/vendor/thor/lib/thor/shell/html.rb
+- lib/vendor/thor/lib/thor/util.rb
+- lib/vendor/thor/lib/thor/version.rb
+- lib/vendor/thor/spec/actions/create_file_spec.rb
+- lib/vendor/thor/spec/actions/create_link_spec.rb
+- lib/vendor/thor/spec/actions/directory_spec.rb
+- lib/vendor/thor/spec/actions/empty_directory_spec.rb
+- lib/vendor/thor/spec/actions/file_manipulation_spec.rb
+- lib/vendor/thor/spec/actions/inject_into_file_spec.rb
+- lib/vendor/thor/spec/actions_spec.rb
+- lib/vendor/thor/spec/base_spec.rb
+- lib/vendor/thor/spec/command_spec.rb
+- lib/vendor/thor/spec/core_ext/hash_with_indifferent_access_spec.rb
+- lib/vendor/thor/spec/core_ext/ordered_hash_spec.rb
+- lib/vendor/thor/spec/exit_condition_spec.rb
+- lib/vendor/thor/spec/fixtures/application.rb
+- lib/vendor/thor/spec/fixtures/app{1}/README
+- lib/vendor/thor/spec/fixtures/bundle/execute.rb
+- lib/vendor/thor/spec/fixtures/bundle/main.thor
+- lib/vendor/thor/spec/fixtures/command.thor
+- lib/vendor/thor/spec/fixtures/doc/%file_name%.rb.tt
+- lib/vendor/thor/spec/fixtures/doc/COMMENTER
+- lib/vendor/thor/spec/fixtures/doc/README
+- lib/vendor/thor/spec/fixtures/doc/block_helper.rb
+- lib/vendor/thor/spec/fixtures/doc/config.rb
+- lib/vendor/thor/spec/fixtures/doc/config.yaml.tt
+- lib/vendor/thor/spec/fixtures/doc/excluding/%file_name%.rb.tt
+- lib/vendor/thor/spec/fixtures/enum.thor
+- lib/vendor/thor/spec/fixtures/group.thor
+- lib/vendor/thor/spec/fixtures/invoke.thor
+- lib/vendor/thor/spec/fixtures/path with spaces
+- lib/vendor/thor/spec/fixtures/preserve/script.sh
+- lib/vendor/thor/spec/fixtures/script.thor
+- lib/vendor/thor/spec/fixtures/subcommand.thor
+- lib/vendor/thor/spec/group_spec.rb
+- lib/vendor/thor/spec/helper.rb
+- lib/vendor/thor/spec/invocation_spec.rb
+- lib/vendor/thor/spec/parser/argument_spec.rb
+- lib/vendor/thor/spec/parser/arguments_spec.rb
+- lib/vendor/thor/spec/parser/option_spec.rb
+- lib/vendor/thor/spec/parser/options_spec.rb
+- lib/vendor/thor/spec/rake_compat_spec.rb
+- lib/vendor/thor/spec/register_spec.rb
+- lib/vendor/thor/spec/runner_spec.rb
+- lib/vendor/thor/spec/shell/basic_spec.rb
+- lib/vendor/thor/spec/shell/color_spec.rb
+- lib/vendor/thor/spec/shell/html_spec.rb
+- lib/vendor/thor/spec/shell_spec.rb
+- lib/vendor/thor/spec/subcommand_spec.rb
+- lib/vendor/thor/spec/thor_spec.rb
+- lib/vendor/thor/spec/util_spec.rb
+- lib/vendor/thor/thor.gemspec
+- script/release
+- script/setup_build
+- script/test
+- spec/auth_spec.rb
+- spec/cassettes/databases/all_databases.json
+- spec/cassettes/databases/copy_database_from_dev_to_stage.json
+- spec/cassettes/databases/create_a_database_backup.json
+- spec/cassettes/databases/create_a_new_database.json
+- spec/cassettes/databases/delete_a_database.json
+- spec/cassettes/databases/get_all_existing_databases.json
+- spec/cassettes/databases/list_all_database_backups.json
+- spec/cassettes/databases/view_database_instance_details.json
+- spec/cassettes/deploy/release_vcs_branch.json
+- spec/cassettes/domains/create_new_domain.json
+- spec/cassettes/domains/delete_a_domain.json
+- spec/cassettes/domains/get_all_existing_domains.json
+- spec/cassettes/domains/list_all_dev_domains.json
+- spec/cassettes/domains/move_from_dev_to_stage.json
+- spec/cassettes/domains/purge_varnish_cache.json
+- spec/cassettes/environments/all_environments.json
+- spec/cassettes/environments/disable_live_development.json
+- spec/cassettes/environments/enable_live_development.json
+- spec/cassettes/files/copy_from_dev_to_stage.json
+- spec/cassettes/servers/all_dev_servers.json
+- spec/cassettes/servers/all_prod_servers.json
+- spec/cassettes/sites/all_sites.json
+- spec/cassettes/ssh/all_sshkeys.json
+- spec/cassettes/svn/all_svnusers.json
+- spec/cassettes/tasks/all_tasks.json
+- spec/databases_spec.rb
+- spec/deploy_spec.rb
+- spec/domains_spec.rb
+- spec/environments_spec.rb
+- spec/files_spec.rb
+- spec/helper.rb
+- spec/servers_spec.rb
+- spec/sites_spec.rb
+- spec/ssh_spec.rb
+- spec/svn_spec.rb
+- spec/tasks_spec.rb
+homepage: https://github.com/jacobbednarz/acquia-toolbelt
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A CLI tool for interacting with Acquia's hosting services.
+test_files: []

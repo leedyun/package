@@ -1,0 +1,266 @@
+//
+//  <%= @project_prefix %>BootstrapDelegate.m
+//  <%= @project_name %>
+//
+//  Created by cocoapods-icemobile-plugin
+//  Copyright (c) <%= @project_year %> IceMobile. All rights reserved.
+//
+
+#import "revision.h"
+#import "<%= @project_prefix %>BootstrapDelegate.h"
+#import <ParisHilton/BFDebugService.h>
+
+@implementation <%= @project_prefix %>BootstrapDelegate
+
+#pragma mark - BFBootstrapDelegate
+
+- (BFModuleConfiguration *)moduleConfigurationForBootstrap:(BFBootstrap *)bootstrap {
+    
+    BFModuleConfiguration *config = [super moduleConfigurationForBootstrap:bootstrap];
+    
+    // ShoppingList
+    {
+        BFSettingsSection *section = [BFSettingsSection sectionWithTitle:@"Shopping List" order:1];
+        
+        [config addImplementation:[BFShoppingListService class] forProtocol:@protocol(BFShoppingListService) configureBlock:^(BFShoppingListService *service) {
+            service.updateWithTimeInterval.groupItem = self.debugSettingsGroup;
+            service.updateWithTimeInterval.visible = YES;
+            service.updateWithTimeInterval.section = section;
+            service.updateWithTimeInterval.title = @"List Update Interval";
+            
+            service.maximumNumberOfShoppingListItems.groupItem = self.debugSettingsGroup;
+            service.maximumNumberOfShoppingListItems.visible = YES;
+            service.maximumNumberOfShoppingListItems.section = section;
+            service.maximumNumberOfShoppingListItems.title = @"Max List Item";
+            
+            service.testThousandShoppingListItems.groupItem = self.debugSettingsGroup;
+            service.testThousandShoppingListItems.visible = YES;
+            service.testThousandShoppingListItems.section = section;
+            service.testThousandShoppingListItems.title = @"Set 1000 Items";
+        }];
+        [config addImplementation:[BFShoppingListUIProvider class] forProtocol:@protocol(BFShoppingListUIProvider) configureBlock:^(BFShoppingListUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:0];
+            
+            provider.shoppingListOverlayButtonEnabled.groupItem = self.debugSettingsGroup;
+            provider.shoppingListOverlayButtonEnabled.visible = YES;
+            provider.shoppingListOverlayButtonEnabled.section = section;
+            provider.shoppingListOverlayButtonEnabled.title = @"Shopping List Button";
+        }];
+        
+        [config addImplementation:[BFAutocompleteService class] forProtocol:@protocol(BFAutocompleteService) configureBlock:NULL];
+    }
+    [config addDynamicModule:@"Shopping List" order:0 enabledByDefault:YES forProtocols:@[@protocol(BFShoppingListService), @protocol(BFShoppingListUIProvider), @protocol(BFAutocompleteService)]];
+    
+    
+    // Stamps
+    {
+        BFSettingsSection *section = [BFSettingsSection sectionWithTitle:@"Stamps" order:1];
+        
+        [config addImplementation:[BFJoinProgramService class] forProtocol:@protocol(BFJoinProgramService) configureBlock:^(BFJoinProgramService *service) {
+            service.identitySettingsItem.section = [BFSettingsSection sectionWithTitle:BFLocalizedString(@"stampsCard_label_settingsHeaderTitle") order:0];
+        }];
+        [config addImplementation:[BFJoinProgramUIProvider class] forProtocol:@protocol(BFJoinProgramUIProvider) configureBlock:NULL];
+        
+        [config addImplementation:[BFStampsService class] forProtocol:@protocol(BFStampsService) configureBlock:NULL];
+        [config addImplementation:[BFStampsUIProvider class] forProtocol:@protocol(BFStampsUIProvider) withId:@"stamps" configureBlock:^(BFStampsUIProvider *provider) {
+            
+            BFMenuSection *stampsSection = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:1];
+            provider.menuItem.section = stampsSection;
+            provider.menuItem.order = 0;
+            
+            provider.rewardsMenuItem.section = stampsSection;
+            provider.rewardsMenuItem.order = 1;
+            
+            provider.myCollectionMenuItem.section = stampsSection;
+            provider.myCollectionMenuItem.order = 2;
+            
+            provider.programInfoMenuItem.section = stampsSection;
+            provider.programInfoMenuItem.order = 3;
+            
+            provider.topMenuEnabledSetting.groupItem = self.debugSettingsGroup;
+            provider.topMenuEnabledSetting.visible = YES;
+            provider.topMenuEnabledSetting.section = section;
+            provider.topMenuEnabledSetting.title = @"Top Menu Enabled";
+            
+            provider.rewardsDisplayTypeSetting.groupItem = self.debugSettingsGroup;
+            provider.rewardsDisplayTypeSetting.visible = YES;
+            provider.rewardsDisplayTypeSetting.section = section;
+            provider.rewardsDisplayTypeSetting.title = @"Rewards Display Type";
+            
+            provider.myCollectionDisplayTypeSetting.groupItem = self.debugSettingsGroup;
+            provider.myCollectionDisplayTypeSetting.visible = YES;
+            provider.myCollectionDisplayTypeSetting.section = section;
+            provider.myCollectionDisplayTypeSetting.title = @"My Collection Display Type";
+        }];
+    }
+    [config addDynamicModule:@"Stamps" order:1 enabledByDefault:YES forProtocols:@[@protocol(BFJoinProgramService), @protocol(BFJoinProgramUIProvider), @protocol(BFStampsService), @protocol(BFStampsUIProvider)]];
+
+    
+    // ProductAnnouncements
+    {
+        BFSettingsSection *section = [BFSettingsSection sectionWithTitle:@"Product Announcements" order:1];
+        
+        [config addImplementation:[BFProductAnnouncementsService class] forProtocol:@protocol(BFProductAnnouncementsService) configureBlock:^(BFProductAnnouncementsService *service) {
+            
+            BFGroupSettingsItem *promotionsBannerGroupItem = [[BFGroupSettingsItem alloc] init];
+            promotionsBannerGroupItem.section = section;
+            promotionsBannerGroupItem.title = @"Promotions Banner Settings";
+            promotionsBannerGroupItem.groupItem = self.debugSettingsGroup;
+            
+            BFSettingsSection *bannerSection = [BFSettingsSection sectionWithTitle:@"Promotions Banner" order:0];
+            
+            service.productBannerViewTimeInterval.groupItem = promotionsBannerGroupItem;
+            service.productBannerViewTimeInterval.visible = YES;
+            service.productBannerViewTimeInterval.section = bannerSection;
+            service.productBannerViewTimeInterval.order = 0;
+            service.productBannerViewTimeInterval.title = @"Banner time interval";
+            
+            service.productBannerViewShouldTurnPageDirection.groupItem = promotionsBannerGroupItem;
+            service.productBannerViewShouldTurnPageDirection.visible = YES;
+            service.productBannerViewShouldTurnPageDirection.section = bannerSection;
+            service.productBannerViewShouldTurnPageDirection.order = 1;
+            service.productBannerViewShouldTurnPageDirection.title = @"Turn banner direction";
+            
+            service.maxNumberProductBannerItems.groupItem = promotionsBannerGroupItem;
+            service.maxNumberProductBannerItems.visible = YES;
+            service.maxNumberProductBannerItems.section = bannerSection;
+            service.maxNumberProductBannerItems.order = 2;
+            service.maxNumberProductBannerItems.title = @"Max. numb. banner items";
+            
+            service.productBannerViewShouldAnimatedLastTransition.groupItem = promotionsBannerGroupItem;
+            service.productBannerViewShouldAnimatedLastTransition.visible = YES;
+            service.productBannerViewShouldAnimatedLastTransition.section = bannerSection;
+            service.productBannerViewShouldAnimatedLastTransition.order = 3;
+            service.productBannerViewShouldAnimatedLastTransition.title = @"Animate last banner transition";
+            
+            service.detailInShoppingListIFFValidSetting.visible = YES;
+            service.detailInShoppingListIFFValidSetting.groupItem = self.debugSettingsGroup;
+            service.detailInShoppingListIFFValidSetting.section = section;
+            service.detailInShoppingListIFFValidSetting.title = @"Detail in Shopping List IFF valid";
+            service.detailInShoppingListIFFValidSetting.defaultValue = @(YES);
+        }];
+        
+        [config addImplementation:[BFSpecialOffersUIProvider class] forProtocol:@protocol(BFSpecialOffersUIProvider) configureBlock:^(BFSpecialOffersUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:2];
+            
+            provider.displayTypeSetting.visible = YES;
+            provider.displayTypeSetting.groupItem = self.debugSettingsGroup;
+            provider.displayTypeSetting.section = section;
+            provider.displayTypeSetting.title = @"Promotions Display Type";
+        }];
+        
+        [config addImplementation:[BFBonusStampOffersUIProvider class] forProtocol:@protocol(BFBonusStampOffersUIProvider) configureBlock:^(BFBonusStampOffersUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:3];
+            
+            provider.displayTypeSetting.groupItem = self.debugSettingsGroup;
+            provider.displayTypeSetting.visible = YES;
+            provider.displayTypeSetting.section = section;
+            provider.displayTypeSetting.title = @"Bonus Stamps Display Type";
+        }];
+        
+        [config addImplementation:[BFPromoReaderService class] forProtocol:@protocol(BFPromoReaderService) configureBlock:NULL];
+    }
+    [config addDynamicModule:@"Promotions" order:2 enabledByDefault:YES forProtocols:@[@protocol(BFProductAnnouncementsService), @protocol(BFSpecialOffersUIProvider)]];
+    [config addDynamicModule:@"Bonus Stamps" order:3 enabledByDefault:YES forProtocols:@[@protocol(BFProductAnnouncementsService), @protocol(BFBonusStampOffersUIProvider)]];
+    
+    // Recipes
+    {
+        [config addImplementation:[BFRecipesService class] forProtocol:@protocol(BFRecipesService) configureBlock:NULL];
+        [config addImplementation:[BFRecipesUIProvider class] forProtocol:@protocol(BFRecipesUIProvider) configureBlock:^(BFRecipesUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:4];
+        }];
+    }
+    [config addDynamicModule:@"Recipes" order:4 enabledByDefault:YES forProtocols:@[@protocol(BFRecipesService), @protocol(BFRecipesUIProvider)]];
+    
+    // StoreFinder
+    {
+        [config addImplementation:[BFStoreFinderService class] forProtocol:@protocol(BFStoreFinderService) configureBlock:NULL];
+        [config addImplementation:[BFStoreFinderUIProvider class] forProtocol:@protocol(BFStoreFinderUIProvider) configureBlock:^(BFStoreFinderUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:5];
+            
+            provider.initialMapRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(51.932, 5.279), 390008, 436163);
+        }];
+    }
+    [config addDynamicModule:@"Stores" order:5 enabledByDefault:YES forProtocols:@[@protocol(BFStoreFinderService), @protocol(BFStoreFinderUIProvider)]];
+    
+    // Contact / Help
+    {
+        [config addImplementation:[BFFeedbackService class] forProtocol:@protocol(BFFeedbackService) configureBlock:NULL];
+        [config addImplementation:[BFContactUIProvider class] forProtocol:@protocol(BFContactUIProvider) configureBlock:^(BFContactUIProvider *provider) {
+            
+            provider.menuItem.section = [BFMenuSection sectionWithTitle:provider.menuItem.section.title order:NSIntegerMax - 1];
+        }];
+        
+        [config addImplementation:[BFFAQService class] forProtocol:@protocol(BFFAQService) configureBlock:NULL];
+    }
+    [config addDynamicModule:@"Contact" order:6 enabledByDefault:YES forProtocols:@[@protocol(BFContactUIProvider), @protocol(BFFeedbackService), @protocol(BFFAQService)]];
+
+    return config;
+}
+
+- (void)bootstrapDidCreateSettingsItems:(BFBootstrap *)bootstrap {
+    self.revision.section = [BFSettingsSection sectionWithTitle:BFLocalizedString(@"contact_header_settingsVersion") order:NSIntegerMax];
+    self.revision.title = BFLocalizedString(@"contact_label_settingsVersion");
+    
+    BFSettingsSection *legalSection = [BFSettingsSection sectionWithTitle:BFLocalizedString(@"contact_header_settingsLegal") order:0];
+    
+    self.termsAndConditionsSetting.section = legalSection;
+    self.termsAndConditionsSetting.order = 0;
+    self.termsAndConditionsSetting.title = BFLocalizedString(@"contact_label_settingsTermsConditions");
+    self.termsAndConditionsSetting.screenTitle = BFLocalizedString(@"contact_screenTitle_termsConditions");
+    self.termsAndConditionsSetting.dynamicContentKey = @"legalinfo";
+    self.termsAndConditionsSetting.trackingModule = @"settings";
+    self.termsAndConditionsSetting.trackingIdentifier = @"termsAndConditions";
+    
+    self.privacyPolicySetting.section = legalSection;
+    self.privacyPolicySetting.order = 1;
+    self.privacyPolicySetting.title = BFLocalizedString(@"contact_label_settingsPrivacyPolicy");
+    self.privacyPolicySetting.screenTitle = BFLocalizedString(@"contact_screenTitle_privacyPolicy");
+    self.privacyPolicySetting.dynamicContentKey = @"privacypolicy";
+    self.privacyPolicySetting.trackingModule = @"settings";
+    self.privacyPolicySetting.trackingIdentifier = @"privacyPolicy";
+    
+    self.resetSettingsItem.groupItem = self.debugSettingsGroup;
+    self.resetSettingsItem.title = @"Reset";
+    self.resetSettingsItem.section = bootstrap.dynamicModuleSettingsGroup.section;
+    [self.resetSettingsItem setActionBlock:^{
+        [[BFSettingsManager sharedManager] resetAllSettings];
+        [[BFSettingsManager sharedManager] resetUserDefaults];
+        [[BFBootstrap sharedBootstrap] restartBootstrap];
+    }];
+}
+
+- (BOOL)bootstrap:(BFBootstrap *)bootstrap didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    if ([bootstrap.window respondsToSelector:@selector(tintColor)]) {
+        bootstrap.window.tintColor = [UIColor colorWithHex:0x96C733];
+    }
+
+#if DEBUG
+    // Revision
+    {
+        NSString *revision = <%= @project_name %>Revision;
+        if ([revision length] > 9) {
+            revision = [revision substringToIndex:9];
+        }
+        [[BFSettingsManager sharedManager] setValue:revision forSettingsItem:self.revision];
+    }
+#endif
+    
+    // Statusbar Style
+    {
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    }
+    return YES;
+}
+
+- (NSString *)skinNameForBootstrap:(BFBootstrap *)bootstrap {
+    return @"<%= @project_prefix %>";
+}
+
+@end

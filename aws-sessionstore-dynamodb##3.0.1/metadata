@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification
+name: aws-sessionstore-dynamodb
+version: !ruby/object:Gem::Version
+  version: 3.0.1
+platform: ruby
+authors:
+- Amazon Web Services
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: rack-session
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-dynamodb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.85.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.85.0
+description: The Amazon DynamoDB Session Store handles sessions for Rack web applications
+  using a DynamoDB backend.
+email:
+- aws-dr-rubygems@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- VERSION
+- lib/aws-sessionstore-dynamodb.rb
+- lib/aws/session_store/dynamo_db/configuration.rb
+- lib/aws/session_store/dynamo_db/errors.rb
+- lib/aws/session_store/dynamo_db/errors/base_handler.rb
+- lib/aws/session_store/dynamo_db/errors/default_handler.rb
+- lib/aws/session_store/dynamo_db/garbage_collection.rb
+- lib/aws/session_store/dynamo_db/locking.rb
+- lib/aws/session_store/dynamo_db/locking/base.rb
+- lib/aws/session_store/dynamo_db/locking/null.rb
+- lib/aws/session_store/dynamo_db/locking/pessimistic.rb
+- lib/aws/session_store/dynamo_db/rack_middleware.rb
+- lib/aws/session_store/dynamo_db/table.rb
+homepage: https://github.com/aws/aws-sessionstore-dynamodb-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Amazon DynamoDB Session Store for Rack web applications.
+test_files: []

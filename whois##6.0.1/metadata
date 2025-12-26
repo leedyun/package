@@ -1,0 +1,174 @@
+--- !ruby/object:Gem::Specification
+name: whois
+version: !ruby/object:Gem::Version
+  version: 6.0.1
+platform: ruby
+authors:
+- Simone Carletti
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Whois is an intelligent WHOIS client and parser written in pure Ruby.
+  It can query registry data for IPv4, IPv6 and top level domains, and parse the responses
+  into easy-to-use Ruby objects via the whois-parser library.
+email:
+- weppos@weppos.net
+executables:
+- whoisrb
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- ".yardopts"
+files:
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/codeql-analysis.yml"
+- ".github/workflows/release.yml"
+- ".github/workflows/tests.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_opinionated.yml"
+- ".rubocop_todo.yml"
+- ".simplecov"
+- ".tool-versions"
+- ".yardopts"
+- 4.0-Upgrade.md
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- SECURITY.md
+- bin/console
+- bin/whoisrb
+- data/asn16.json
+- data/asn32.json
+- data/ipv4.json
+- data/ipv6.json
+- data/tld.json
+- lib/whois.rb
+- lib/whois/client.rb
+- lib/whois/errors.rb
+- lib/whois/record.rb
+- lib/whois/record/part.rb
+- lib/whois/server.rb
+- lib/whois/server/adapters/afilias.rb
+- lib/whois/server/adapters/arin.rb
+- lib/whois/server/adapters/arpa.rb
+- lib/whois/server/adapters/base.rb
+- lib/whois/server/adapters/formatted.rb
+- lib/whois/server/adapters/none.rb
+- lib/whois/server/adapters/not_implemented.rb
+- lib/whois/server/adapters/standard.rb
+- lib/whois/server/adapters/verisign.rb
+- lib/whois/server/adapters/web.rb
+- lib/whois/server/socket_handler.rb
+- lib/whois/version.rb
+- spec/fixtures/referrals/afilias.bz.txt
+- spec/fixtures/referrals/arin_referral_apnic.txt
+- spec/fixtures/referrals/arin_referral_missing.txt
+- spec/fixtures/referrals/arin_referral_ripe.txt
+- spec/fixtures/referrals/arin_referral_rwhois.txt
+- spec/fixtures/referrals/arin_referral_servernap.txt
+- spec/fixtures/referrals/arin_referral_whois.txt
+- spec/fixtures/referrals/crsnic.com.txt
+- spec/fixtures/referrals/crsnic.com_referral.txt
+- spec/fixtures/referrals/crsnic.com_referral_missing.txt
+- spec/integration/whois_spec.rb
+- spec/spec_helper.rb
+- spec/support/helpers/connectivity_helper.rb
+- spec/support/helpers/spec_helper.rb
+- spec/whois/client_spec.rb
+- spec/whois/record/part_spec.rb
+- spec/whois/record_spec.rb
+- spec/whois/server/adapters/afilias_spec.rb
+- spec/whois/server/adapters/arin_spec.rb
+- spec/whois/server/adapters/arpa_spec.rb
+- spec/whois/server/adapters/base_spec.rb
+- spec/whois/server/adapters/formatted_spec.rb
+- spec/whois/server/adapters/none_spec.rb
+- spec/whois/server/adapters/not_implemented_spec.rb
+- spec/whois/server/adapters/standard_spec.rb
+- spec/whois/server/adapters/verisign_spec.rb
+- spec/whois/server/adapters/web_spec.rb
+- spec/whois/server/socket_handler_spec.rb
+- spec/whois/server_spec.rb
+- spec/whois/web_interface_error_spec.rb
+- spec/whois/whois_spec.rb
+- utils/compare-whois.rb
+- utils/deftld.rb
+- utils/defutils.rb
+- utils/fixupd.rb
+- utils/matrix.rb
+- utils/mkwhois.rb
+- whois.gemspec
+homepage: https://whoisrb.org/
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: An intelligent pure Ruby WHOIS client and parser.
+test_files: []

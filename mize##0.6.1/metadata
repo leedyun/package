@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification
+name: mize
+version: !ruby/object:Gem::Version
+  version: 0.6.1
+platform: ruby
+authors:
+- Florian Frank
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: gem_hadar
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.19'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.19'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: all_images
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: debug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Library that provides memoziation for methods and functions for Ruby.
+email: flori@ping.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- lib/mize.rb
+- lib/mize/cache_methods.rb
+- lib/mize/cache_protocol.rb
+- lib/mize/configure.rb
+- lib/mize/default_cache.rb
+- lib/mize/global_clear.rb
+- lib/mize/memoize.rb
+- lib/mize/railtie.rb
+- lib/mize/reload.rb
+- lib/mize/version.rb
+files:
+- ".all_images.yml"
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- ".utilsrc"
+- CHANGES.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- VERSION
+- config/broken_config.yml
+- config/config.yml
+- lib/mize.rb
+- lib/mize/cache_methods.rb
+- lib/mize/cache_protocol.rb
+- lib/mize/configure.rb
+- lib/mize/default_cache.rb
+- lib/mize/global_clear.rb
+- lib/mize/memoize.rb
+- lib/mize/railtie.rb
+- lib/mize/reload.rb
+- lib/mize/version.rb
+- mize.gemspec
+- spec/mize/global_clear_spec.rb
+- spec/mize/memoize_method_spec.rb
+- spec/mize/memoize_reload_spec.rb
+- spec/mize/version_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/flori/mize
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--title"
+- Mize - Library that provides memoziation for methods and functions
+- "--main"
+- README.md
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: Library that provides memoziation for methods and functions
+test_files:
+- spec/mize/global_clear_spec.rb
+- spec/mize/memoize_method_spec.rb
+- spec/mize/memoize_reload_spec.rb
+- spec/mize/version_spec.rb
+- spec/spec_helper.rb

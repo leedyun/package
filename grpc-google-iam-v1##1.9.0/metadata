@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: grpc-google-iam-v1
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Google LLC
+bindir: bin
+cert_chain: []
+date: 2025-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: googleapis-common-protos
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: google-protobuf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.18'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.18'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 5.a
+- !ruby/object:Gem::Dependency
+  name: grpc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.41'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.41'
+description: Common protos and gRPC services for Google IAM
+email:
+- googleapis-packages@google.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- README.md
+- lib/google/iam/v1/iam_policy_pb.rb
+- lib/google/iam/v1/iam_policy_services_pb.rb
+- lib/google/iam/v1/options_pb.rb
+- lib/google/iam/v1/policy_pb.rb
+- lib/google/iam/v1/resource_policy_member_pb.rb
+- lib/grpc/google/iam/v1/version.rb
+homepage: https://github.com/googleapis/common-protos-ruby
+licenses:
+- Apache-2.0
+metadata: {}
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Common protos and gRPC services for Google IAM
+test_files: []

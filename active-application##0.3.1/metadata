@@ -1,0 +1,538 @@
+--- !ruby/object:Gem::Specification
+name: active-application
+version: !ruby/object:Gem::Version
+  version: 0.3.1
+platform: ruby
+authors:
+- Jari Jokinen
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.11
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.11
+- !ruby/object:Gem::Dependency
+  name: cancan
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.8
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.8
+- !ruby/object:Gem::Dependency
+  name: devise-formtastic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.1
+- !ruby/object:Gem::Dependency
+  name: formtastic-bootstrap
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: has_scope
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.1
+- !ruby/object:Gem::Dependency
+  name: jquery-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+- !ruby/object:Gem::Dependency
+  name: kaminari
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.1
+- !ruby/object:Gem::Dependency
+  name: less-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.6
+- !ruby/object:Gem::Dependency
+  name: modernizr-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.1
+- !ruby/object:Gem::Dependency
+  name: rolify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.0
+- !ruby/object:Gem::Dependency
+  name: simple_resource
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: stringex
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.5.1
+- !ruby/object:Gem::Dependency
+  name: therubyracer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.11.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.11.3
+- !ruby/object:Gem::Dependency
+  name: twitter-bootstrap-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.2.0
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.1.4
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.1
+- !ruby/object:Gem::Dependency
+  name: factory_girl_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.1.0
+- !ruby/object:Gem::Dependency
+  name: forgery
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.3.3
+- !ruby/object:Gem::Dependency
+  name: guard-spork
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.1
+- !ruby/object:Gem::Dependency
+  name: launchy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.1.2
+- !ruby/object:Gem::Dependency
+  name: rb-inotify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.12.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.12.2
+- !ruby/object:Gem::Dependency
+  name: spork-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.2.1
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.3.7
+description: Application framework for Rails
+email:
+- info@jarijokinen.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- active-application.gemspec
+- app/assets/javascripts/active_application/base.js
+- app/assets/stylesheets/active_application/base.css
+- app/assets/stylesheets/active_application/layout.css
+- app/assets/stylesheets/bootstrap_and_overrides.css.less
+- app/controllers/active_application/public_controller.rb
+- app/controllers/active_application/resource_controller.rb
+- app/controllers/active_application/user_resource_controller.rb
+- app/helpers/active_application/base_helper.rb
+- app/helpers/active_application/bootstrap_helper.rb
+- app/helpers/active_application/layout_helper.rb
+- app/helpers/simple_resource/custom_helper.rb
+- app/models/active_application/user.rb
+- app/views/active_application/public/404.html.erb
+- app/views/active_application/public/index.html.erb
+- app/views/devise/sessions/new.html.erb
+- app/views/devise/shared/_links.erb
+- app/views/kaminari/_first_page.html.erb
+- app/views/kaminari/_gap.html.erb
+- app/views/kaminari/_last_page.html.erb
+- app/views/kaminari/_next_page.html.erb
+- app/views/kaminari/_page.html.erb
+- app/views/kaminari/_paginator.html.erb
+- app/views/kaminari/_prev_page.html.erb
+- app/views/layouts/_menu.html.erb
+- app/views/layouts/application.html.erb
+- config/routes.rb
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- lib/active_application.rb
+- lib/active_application/engine.rb
+- lib/active_application/routes.rb
+- lib/active_application/version.rb
+- spec/dummy/README.rdoc
+- spec/dummy/Rakefile
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/assets/stylesheets/application.css
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/milestones_controller.rb
+- spec/dummy/app/controllers/projects_controller.rb
+- spec/dummy/app/controllers/tasks_controller.rb
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/app/models/ability.rb
+- spec/dummy/app/models/milestone.rb
+- spec/dummy/app/models/project.rb
+- spec/dummy/app/models/task.rb
+- spec/dummy/app/models/user.rb
+- spec/dummy/app/views/layouts/_menu.html.erb
+- spec/dummy/app/views/projects/_actions.html.erb
+- spec/dummy/config.ru
+- spec/dummy/config/application.rb
+- spec/dummy/config/boot.rb
+- spec/dummy/config/database.yml
+- spec/dummy/config/environment.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/production.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/devise.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/initializers/wrap_parameters.rb
+- spec/dummy/config/locales/devise.en.yml
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/routes.rb
+- spec/dummy/db/migrate/20121018181406_devise_create_users.rb
+- spec/dummy/db/migrate/20121018214335_create_projects.rb
+- spec/dummy/db/migrate/20121019000703_create_milestones.rb
+- spec/dummy/db/migrate/20121019001551_create_tasks.rb
+- spec/dummy/db/schema.rb
+- spec/dummy/db/seeds.rb
+- spec/dummy/public/404.html
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/favicon.ico
+- spec/dummy/script/rails
+- spec/factories/users.rb
+- spec/features/users/forgot_password_spec.rb
+- spec/features/users/sign_up_confirmation_spec.rb
+- spec/features/visitors/sign_up_spec.rb
+- spec/helpers/base_helper_spec.rb
+- spec/spec_helper.rb
+- spec/support/helpers.rb
+homepage: https://github.com/jarijokinen/active_application
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Application framework for Rails
+test_files:
+- spec/dummy/README.rdoc
+- spec/dummy/Rakefile
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/assets/stylesheets/application.css
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/milestones_controller.rb
+- spec/dummy/app/controllers/projects_controller.rb
+- spec/dummy/app/controllers/tasks_controller.rb
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/app/models/ability.rb
+- spec/dummy/app/models/milestone.rb
+- spec/dummy/app/models/project.rb
+- spec/dummy/app/models/task.rb
+- spec/dummy/app/models/user.rb
+- spec/dummy/app/views/layouts/_menu.html.erb
+- spec/dummy/app/views/projects/_actions.html.erb
+- spec/dummy/config.ru
+- spec/dummy/config/application.rb
+- spec/dummy/config/boot.rb
+- spec/dummy/config/database.yml
+- spec/dummy/config/environment.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/production.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/devise.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/initializers/wrap_parameters.rb
+- spec/dummy/config/locales/devise.en.yml
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/routes.rb
+- spec/dummy/db/migrate/20121018181406_devise_create_users.rb
+- spec/dummy/db/migrate/20121018214335_create_projects.rb
+- spec/dummy/db/migrate/20121019000703_create_milestones.rb
+- spec/dummy/db/migrate/20121019001551_create_tasks.rb
+- spec/dummy/db/schema.rb
+- spec/dummy/db/seeds.rb
+- spec/dummy/public/404.html
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/favicon.ico
+- spec/dummy/script/rails
+- spec/factories/users.rb
+- spec/features/users/forgot_password_spec.rb
+- spec/features/users/sign_up_confirmation_spec.rb
+- spec/features/visitors/sign_up_spec.rb
+- spec/helpers/base_helper_spec.rb
+- spec/spec_helper.rb
+- spec/support/helpers.rb

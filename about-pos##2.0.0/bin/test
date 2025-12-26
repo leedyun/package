@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# -*- bash -*-
+#
+#
+files="specs/$1.rb"
+set -u -e -o pipefail
+
+if [[ -f "$files" ]]; then
+  shift
+else
+  files="$(find specs/ -maxdepth 1 -type f -iname "*.rb" )"
+fi
+
+if [[ -z "$files" ]]; then
+  colorize yellow "No tests found." 1>&2
+  exit 0
+else
+  bundle exec bacon specs/lib/helpers.rb $files "$@"
+fi

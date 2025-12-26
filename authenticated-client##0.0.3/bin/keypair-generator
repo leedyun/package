@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+require "pathname"
+bin_file = Pathname.new(__FILE__).realpath
+$:.unshift File.expand_path("../../lib", bin_file)
+
+require 'authenticated_client'
+require 'yaml'
+require 'json'
+
+class Main
+
+  def generate_keypair
+    #create and configure auditing instance
+    keypair_generator = AuthenticatedClient::KeypairGenerator.new
+    private_key, public_key = keypair_generator.generate
+    configuration = {
+      'private_key' => private_key,
+      'public_key' => public_key
+    }
+    puts "------------"
+    puts "YAML Format:"
+    puts "------------"
+    print configuration.to_yaml
+    puts ""
+    puts "------------"
+    puts "JSON Format:"
+    puts "------------"
+    print configuration.to_json
+    puts ""
+    puts ""
+    puts "------------"
+
+  end
+end
+
+main = Main.new
+main.generate_keypair

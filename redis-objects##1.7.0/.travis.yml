@@ -1,0 +1,16 @@
+language: ruby
+
+# This intended to fix bundler bug in Ruby 1.9.3 (see https://github.com/travis-ci/travis-ci/issues/5239)
+before_install:
+  - gem install bundler
+
+rvm:
+  - 2.3.8
+  - 2.4.10
+  - 2.5.9
+  - 2.6.7
+  - 2.7.3
+  - 3.0.1
+
+# For code coverage reports
+script: bundle exec rake

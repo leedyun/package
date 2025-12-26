@@ -1,0 +1,23 @@
+mapping:
+  - source: 'app/(.+)\.rb'
+    test: 'spec/%s_spec.rb'
+  - source: 'lib/(.+)\.rb'
+    test: 'spec/lib/%s_spec.rb'
+  - source:
+      - 'db/schema\.rb'
+      - 'db/migrate/(.+)\.rb'
+    test: 'spec/db/schema_spec.rb'
+  - source: 'spec/(.+)_spec\.rb'
+    test:
+      - 'spec/%s_spec.rb'
+      - 'spec/smoke_spec.rb'
+  - source:
+      - 'views/.+\.html\.haml'
+      - 'assets/.+'
+    test:
+      - 'spec/views/main_spec.rb'
+      - 'features/smoke.feature'
+  - source: '(?<ee>ee/)?lib/api/(?<name>.*)\.rb'
+    test:
+      - '%{ee}spec/requests/api/%{name}_spec.rb'
+      - '%{ee}spec/requests/api/%{name}/%{name}_spec.rb'

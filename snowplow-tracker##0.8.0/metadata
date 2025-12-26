@@ -1,0 +1,82 @@
+--- !ruby/object:Gem::Specification
+name: snowplow-tracker
+version: !ruby/object:Gem::Version
+  version: 0.8.0
+platform: ruby
+authors:
+- Snowplow Analytics Ltd
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-10-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.10'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.14'
+description: With this tracker you can collect event data from your Ruby applications,
+  Ruby on Rails web applications and Ruby gems.
+email: support@snowplowanalytics.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE-2.0.txt
+- README.md
+- lib/snowplow-tracker.rb
+- lib/snowplow-tracker/emitters.rb
+- lib/snowplow-tracker/page.rb
+- lib/snowplow-tracker/payload.rb
+- lib/snowplow-tracker/self_describing_json.rb
+- lib/snowplow-tracker/subject.rb
+- lib/snowplow-tracker/timestamp.rb
+- lib/snowplow-tracker/tracker.rb
+- lib/snowplow-tracker/version.rb
+homepage: http://github.com/snowplow/snowplow-ruby-tracker
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Ruby Analytics for Snowplow
+test_files: []

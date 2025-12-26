@@ -1,0 +1,566 @@
+--- !ruby/object:Gem::Specification
+name: derailed_benchmarks
+version: !ruby/object:Gem::Version
+  version: 2.2.1
+platform: ruby
+authors:
+- Richard Schneeman
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: heapy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: memory_profiler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: get_process_mem
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '14'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.19'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: ruby-statistics
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.1
+- !ruby/object:Gem::Dependency
+  name: mini_histogram
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.0
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: drb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby2_keywords
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '7.1'
+- !ruby/object:Gem::Dependency
+  name: devise
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '3'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6'
+description: " Go faster, off the Rails "
+email:
+- richard.schneeman+rubygems@gmail.com
+executables:
+- derailed
+extensions: []
+extra_rdoc_files: []
+files:
+- ".devcontainer/devcontainer.json"
+- ".github/workflows/check_changelog.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- README.md
+- Rakefile
+- bin/derailed
+- derailed_benchmarks.gemspec
+- gemfiles/.bundle/config
+- gemfiles/rails_5_1.gemfile
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_1.gemfile
+- gemfiles/rails_7_0.gemfile
+- gemfiles/rails_7_1.gemfile
+- gemfiles/rails_7_2.gemfile
+- gemfiles/rails_head.gemfile
+- lib/derailed_benchmarks.rb
+- lib/derailed_benchmarks/auth_helper.rb
+- lib/derailed_benchmarks/auth_helpers/devise.rb
+- lib/derailed_benchmarks/core_ext/kernel_require.rb
+- lib/derailed_benchmarks/git/commit.rb
+- lib/derailed_benchmarks/git/in_path.rb
+- lib/derailed_benchmarks/git/switch_project.rb
+- lib/derailed_benchmarks/git_switch_project.rb
+- lib/derailed_benchmarks/load_tasks.rb
+- lib/derailed_benchmarks/require_tree.rb
+- lib/derailed_benchmarks/stats_for_file.rb
+- lib/derailed_benchmarks/stats_from_dir.rb
+- lib/derailed_benchmarks/tasks.rb
+- lib/derailed_benchmarks/version.rb
+- test/derailed_benchmarks/core_ext/kernel_require_test.rb
+- test/derailed_benchmarks/git_switch_project_test.rb
+- test/derailed_benchmarks/require_tree_test.rb
+- test/derailed_benchmarks/stats_from_dir_test.rb
+- test/derailed_test.rb
+- test/fixtures/require/autoload_child.rb
+- test/fixtures/require/autoload_parent.rb
+- test/fixtures/require/child_one.rb
+- test/fixtures/require/child_two.rb
+- test/fixtures/require/load_child.rb
+- test/fixtures/require/load_parent.rb
+- test/fixtures/require/parent_one.rb
+- test/fixtures/require/raise_child.rb
+- test/fixtures/require/relative_child.rb
+- test/fixtures/require/relative_child_two.rb
+- test/fixtures/stats/significant/loser.bench.txt
+- test/fixtures/stats/significant/winner.bench.txt
+- test/integration/tasks_test.rb
+- test/rails_app/Rakefile
+- test/rails_app/app/assets/config/manifest.js
+- test/rails_app/app/assets/javascripts/authenticated.js
+- test/rails_app/app/assets/stylesheets/authenticated.css
+- test/rails_app/app/controllers/application_controller.rb
+- test/rails_app/app/controllers/authenticated_controller.rb
+- test/rails_app/app/controllers/pages_controller.rb
+- test/rails_app/app/controllers/users_controller.rb
+- test/rails_app/app/helpers/application_helper.rb
+- test/rails_app/app/helpers/authenticated_helper.rb
+- test/rails_app/app/models/user.rb
+- test/rails_app/app/views/authenticated/index.html.erb
+- test/rails_app/app/views/layouts/application.html.erb
+- test/rails_app/app/views/pages/index.html.erb
+- test/rails_app/config.ru
+- test/rails_app/config/application.rb
+- test/rails_app/config/boot.rb
+- test/rails_app/config/database.yml
+- test/rails_app/config/environment.rb
+- test/rails_app/config/environments/development.rb
+- test/rails_app/config/environments/production.rb
+- test/rails_app/config/environments/test.rb
+- test/rails_app/config/initializers/backtrace_silencers.rb
+- test/rails_app/config/initializers/devise.rb
+- test/rails_app/config/initializers/inflections.rb
+- test/rails_app/config/initializers/mime_types.rb
+- test/rails_app/config/initializers/secret_token.rb
+- test/rails_app/config/initializers/session_store.rb
+- test/rails_app/config/locales/devise.en.yml
+- test/rails_app/config/locales/en.yml
+- test/rails_app/config/locales/es.yml
+- test/rails_app/config/routes.rb
+- test/rails_app/config/storage.yml
+- test/rails_app/db/migrate/20141210070547_devise_create_users.rb
+- test/rails_app/db/schema.rb
+- test/rails_app/perf.rake
+- test/rails_app/public/404.html
+- test/rails_app/public/422.html
+- test/rails_app/public/500.html
+- test/rails_app/public/favicon.ico
+- test/rails_app/public/javascripts/application.js
+- test/rails_app/public/javascripts/controls.js
+- test/rails_app/public/javascripts/dragdrop.js
+- test/rails_app/public/javascripts/effects.js
+- test/rails_app/public/javascripts/prototype.js
+- test/rails_app/public/javascripts/rails.js
+- test/rails_app/public/stylesheets/.gitkeep
+- test/rails_app/script/rails
+- test/support/integration_case.rb
+- test/test_helper.rb
+homepage: https://github.com/zombocom/derailed_benchmarks
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Benchmarks designed to performance test your ENTIRE site
+test_files:
+- test/derailed_benchmarks/core_ext/kernel_require_test.rb
+- test/derailed_benchmarks/git_switch_project_test.rb
+- test/derailed_benchmarks/require_tree_test.rb
+- test/derailed_benchmarks/stats_from_dir_test.rb
+- test/derailed_test.rb
+- test/fixtures/require/autoload_child.rb
+- test/fixtures/require/autoload_parent.rb
+- test/fixtures/require/child_one.rb
+- test/fixtures/require/child_two.rb
+- test/fixtures/require/load_child.rb
+- test/fixtures/require/load_parent.rb
+- test/fixtures/require/parent_one.rb
+- test/fixtures/require/raise_child.rb
+- test/fixtures/require/relative_child.rb
+- test/fixtures/require/relative_child_two.rb
+- test/fixtures/stats/significant/loser.bench.txt
+- test/fixtures/stats/significant/winner.bench.txt
+- test/integration/tasks_test.rb
+- test/rails_app/Rakefile
+- test/rails_app/app/assets/config/manifest.js
+- test/rails_app/app/assets/javascripts/authenticated.js
+- test/rails_app/app/assets/stylesheets/authenticated.css
+- test/rails_app/app/controllers/application_controller.rb
+- test/rails_app/app/controllers/authenticated_controller.rb
+- test/rails_app/app/controllers/pages_controller.rb
+- test/rails_app/app/controllers/users_controller.rb
+- test/rails_app/app/helpers/application_helper.rb
+- test/rails_app/app/helpers/authenticated_helper.rb
+- test/rails_app/app/models/user.rb
+- test/rails_app/app/views/authenticated/index.html.erb
+- test/rails_app/app/views/layouts/application.html.erb
+- test/rails_app/app/views/pages/index.html.erb
+- test/rails_app/config.ru
+- test/rails_app/config/application.rb
+- test/rails_app/config/boot.rb
+- test/rails_app/config/database.yml
+- test/rails_app/config/environment.rb
+- test/rails_app/config/environments/development.rb
+- test/rails_app/config/environments/production.rb
+- test/rails_app/config/environments/test.rb
+- test/rails_app/config/initializers/backtrace_silencers.rb
+- test/rails_app/config/initializers/devise.rb
+- test/rails_app/config/initializers/inflections.rb
+- test/rails_app/config/initializers/mime_types.rb
+- test/rails_app/config/initializers/secret_token.rb
+- test/rails_app/config/initializers/session_store.rb
+- test/rails_app/config/locales/devise.en.yml
+- test/rails_app/config/locales/en.yml
+- test/rails_app/config/locales/es.yml
+- test/rails_app/config/routes.rb
+- test/rails_app/config/storage.yml
+- test/rails_app/db/migrate/20141210070547_devise_create_users.rb
+- test/rails_app/db/schema.rb
+- test/rails_app/perf.rake
+- test/rails_app/public/404.html
+- test/rails_app/public/422.html
+- test/rails_app/public/500.html
+- test/rails_app/public/favicon.ico
+- test/rails_app/public/javascripts/application.js
+- test/rails_app/public/javascripts/controls.js
+- test/rails_app/public/javascripts/dragdrop.js
+- test/rails_app/public/javascripts/effects.js
+- test/rails_app/public/javascripts/prototype.js
+- test/rails_app/public/javascripts/rails.js
+- test/rails_app/public/stylesheets/.gitkeep
+- test/rails_app/script/rails
+- test/support/integration_case.rb
+- test/test_helper.rb

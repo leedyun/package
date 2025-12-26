@@ -1,0 +1,8 @@
+require 'active_model_validators_ex/version'
+require 'active_model_validators_ex/array_validator_base'
+require 'active_model_validators_ex/array_format_validator'
+require 'active_model_validators_ex/array_inclusion_validator'
+require 'active_model_validators_ex/time_format_validator'
+
+module ActiveModelValidatorsEx
+end

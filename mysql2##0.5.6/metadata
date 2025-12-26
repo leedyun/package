@@ -1,0 +1,85 @@
+--- !ruby/object:Gem::Specification
+name: mysql2
+version: !ruby/object:Gem::Version
+  version: 0.5.6
+platform: ruby
+authors:
+- Brian Lopez
+- Aaron Stone
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-02-08 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+- seniorlopez@gmail.com
+- aaron@serendipity.cx
+executables: []
+extensions:
+- ext/mysql2/extconf.rb
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- ext/mysql2/client.c
+- ext/mysql2/client.h
+- ext/mysql2/extconf.rb
+- ext/mysql2/infile.c
+- ext/mysql2/infile.h
+- ext/mysql2/mysql2_ext.c
+- ext/mysql2/mysql2_ext.h
+- ext/mysql2/mysql_enc_name_to_ruby.h
+- ext/mysql2/mysql_enc_to_ruby.h
+- ext/mysql2/result.c
+- ext/mysql2/result.h
+- ext/mysql2/statement.c
+- ext/mysql2/statement.h
+- ext/mysql2/wait_for_single_fd.h
+- lib/mysql2.rb
+- lib/mysql2/client.rb
+- lib/mysql2/console.rb
+- lib/mysql2/em.rb
+- lib/mysql2/error.rb
+- lib/mysql2/field.rb
+- lib/mysql2/result.rb
+- lib/mysql2/statement.rb
+- lib/mysql2/version.rb
+- support/3A79BD29.asc
+- support/5072E1F5.asc
+- support/C74CD1D8.asc
+- support/libmysql.def
+- support/mysql_enc_to_ruby.rb
+- support/ruby_enc_to_mysql.rb
+homepage: https://github.com/brianmario/mysql2
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/brianmario/mysql2/issues
+  changelog_uri: https://github.com/brianmario/mysql2/releases/tag/0.5.6
+  documentation_uri: https://www.rubydoc.info/gems/mysql2/0.5.6
+  homepage_uri: https://github.com/brianmario/mysql2
+  source_code_uri: https://github.com/brianmario/mysql2/tree/0.5.6
+  msys2_mingw_dependencies: libmariadbclient
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.0.dev
+signing_key:
+specification_version: 4
+summary: A simple, fast Mysql library for Ruby, binding to libmysql
+test_files: []

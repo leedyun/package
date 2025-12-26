@@ -1,0 +1,17 @@
+development:
+  client_id: ''
+  client_secret: ''
+  site: ''
+  redirect_uri: ''
+
+test:
+  client_id: ''
+  client_secret: ''
+  site: ''
+  redirect_uri: ''
+
+production:
+  client_id: ''
+  client_secret: ''
+  site: ''
+  redirect_uri: ''

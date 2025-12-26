@@ -1,0 +1,150 @@
+--- !ruby/object:Gem::Specification
+name: active_utils
+version: !ruby/object:Gem::Version
+  version: 3.4.1
+platform: ruby
+authors:
+- Shopify
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-04-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.2'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- developers@jadedpixel.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/cla.yml"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- active_utils.gemspec
+- gemfiles/Gemfile.activesupport-master
+- gemfiles/Gemfile.activesupport42
+- gemfiles/Gemfile.activesupport50
+- gemfiles/Gemfile.activesupport52
+- lib/active_utils.rb
+- lib/active_utils/connection.rb
+- lib/active_utils/country.rb
+- lib/active_utils/currency_code.rb
+- lib/active_utils/error.rb
+- lib/active_utils/network_connection_retries.rb
+- lib/active_utils/post_data.rb
+- lib/active_utils/posts_data.rb
+- lib/active_utils/requires_parameters.rb
+- lib/active_utils/validateable.rb
+- lib/active_utils/version.rb
+- lib/certs/cacert.pem
+- shipit.rubygems.yml
+- test/test_helper.rb
+- test/unit/connection_test.rb
+- test/unit/country_code_test.rb
+- test/unit/country_test.rb
+- test/unit/currency_code_test.rb
+- test/unit/network_connection_retries_test.rb
+- test/unit/post_data_test.rb
+- test/unit/posts_data_test.rb
+- test/unit/validateable_test.rb
+homepage: http://github.com/shopify/active_utils
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: Common utils used by active_merchant, active_fulfillment, and active_shipping
+test_files: []

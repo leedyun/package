@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: css_parser
+version: !ruby/object:Gem::Version
+  version: 1.21.0
+platform: ruby
+authors:
+- Alex Dunae
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A set of classes for parsing CSS in Ruby.
+email: code@dunae.ca
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- lib/css_parser.rb
+- lib/css_parser/parser.rb
+- lib/css_parser/regexps.rb
+- lib/css_parser/rule_set.rb
+- lib/css_parser/version.rb
+homepage: https://github.com/premailer/css_parser
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/premailer/css_parser/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/premailer/css_parser
+  bug_tracker_uri: https://github.com/premailer/css_parser/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Ruby CSS parser.
+test_files: []

@@ -1,0 +1,341 @@
+--- !ruby/object:Gem::Specification
+name: fog-core
+version: !ruby/object:Gem::Version
+  version: 2.6.0
+platform: ruby
+authors:
+- Evan Light
+- Wesley Beary
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: excon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: formatador
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-stub-const
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: tins
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Shared classes and tests for fog providers and services.
+email:
+- evan@tripledogdare.net
+- geemus@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- SECURITY.md
+- changelog.md
+- fog-core.gemspec
+- lib/fog/account.rb
+- lib/fog/baremetal.rb
+- lib/fog/billing.rb
+- lib/fog/cdn.rb
+- lib/fog/compute.rb
+- lib/fog/compute/models/server.rb
+- lib/fog/core.rb
+- lib/fog/core/association.rb
+- lib/fog/core/associations/default.rb
+- lib/fog/core/associations/many_identities.rb
+- lib/fog/core/associations/many_models.rb
+- lib/fog/core/associations/one_identity.rb
+- lib/fog/core/associations/one_model.rb
+- lib/fog/core/attributes.rb
+- lib/fog/core/attributes/array.rb
+- lib/fog/core/attributes/boolean.rb
+- lib/fog/core/attributes/default.rb
+- lib/fog/core/attributes/float.rb
+- lib/fog/core/attributes/integer.rb
+- lib/fog/core/attributes/string.rb
+- lib/fog/core/attributes/time.rb
+- lib/fog/core/attributes/timestamp.rb
+- lib/fog/core/cache.rb
+- lib/fog/core/collection.rb
+- lib/fog/core/connection.rb
+- lib/fog/core/credentials.rb
+- lib/fog/core/current_machine.rb
+- lib/fog/core/deprecated_connection_accessors.rb
+- lib/fog/core/deprecation.rb
+- lib/fog/core/errors.rb
+- lib/fog/core/hmac.rb
+- lib/fog/core/logger.rb
+- lib/fog/core/mock.rb
+- lib/fog/core/model.rb
+- lib/fog/core/provider.rb
+- lib/fog/core/scp.rb
+- lib/fog/core/service.rb
+- lib/fog/core/services_mixin.rb
+- lib/fog/core/ssh.rb
+- lib/fog/core/stringify_keys.rb
+- lib/fog/core/time.rb
+- lib/fog/core/utils.rb
+- lib/fog/core/uuid.rb
+- lib/fog/core/version.rb
+- lib/fog/core/wait_for.rb
+- lib/fog/core/wait_for_defaults.rb
+- lib/fog/core/whitelist_keys.rb
+- lib/fog/dns.rb
+- lib/fog/formatador.rb
+- lib/fog/identity.rb
+- lib/fog/image.rb
+- lib/fog/introspection.rb
+- lib/fog/metering.rb
+- lib/fog/monitoring.rb
+- lib/fog/network.rb
+- lib/fog/nfv.rb
+- lib/fog/orchestration.rb
+- lib/fog/schema/data_validator.rb
+- lib/fog/storage.rb
+- lib/fog/support.rb
+- lib/fog/test_helpers.rb
+- lib/fog/test_helpers/collection_helper.rb
+- lib/fog/test_helpers/compute/flavors_helper.rb
+- lib/fog/test_helpers/compute/server_helper.rb
+- lib/fog/test_helpers/compute/servers_helper.rb
+- lib/fog/test_helpers/formats_helper.rb
+- lib/fog/test_helpers/helper.rb
+- lib/fog/test_helpers/minitest/assertions.rb
+- lib/fog/test_helpers/minitest/expectations.rb
+- lib/fog/test_helpers/mock_helper.rb
+- lib/fog/test_helpers/model_helper.rb
+- lib/fog/test_helpers/responds_to_helper.rb
+- lib/fog/test_helpers/succeeds_helper.rb
+- lib/fog/test_helpers/types_helper.rb
+- lib/fog/volume.rb
+- lib/fog/vpn.rb
+- lib/tasks/test_task.rb
+homepage: https://github.com/fog/fog-core
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/fog/fog-core/blob/master/changelog.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: Shared classes and tests for fog providers and services.
+test_files: []

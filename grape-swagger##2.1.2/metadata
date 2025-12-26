@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification
+name: grape-swagger
+version: !ruby/object:Gem::Version
+  version: 2.1.2
+platform: ruby
+authors:
+- LeFnord
+- Tim Vandecasteele
+bindir: bin
+cert_chain: []
+date: 2025-01-07 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: grape
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+email:
+- pscholz.le@gmail.com
+- tim.vandecasteele@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTING.md
+- LICENSE.txt
+- README.md
+- RELEASING.md
+- UPGRADING.md
+- grape-swagger.gemspec
+- lib/grape-swagger.rb
+- lib/grape-swagger/doc_methods.rb
+- lib/grape-swagger/doc_methods/build_model_definition.rb
+- lib/grape-swagger/doc_methods/data_type.rb
+- lib/grape-swagger/doc_methods/extensions.rb
+- lib/grape-swagger/doc_methods/format_data.rb
+- lib/grape-swagger/doc_methods/headers.rb
+- lib/grape-swagger/doc_methods/move_params.rb
+- lib/grape-swagger/doc_methods/operation_id.rb
+- lib/grape-swagger/doc_methods/optional_object.rb
+- lib/grape-swagger/doc_methods/parse_params.rb
+- lib/grape-swagger/doc_methods/path_string.rb
+- lib/grape-swagger/doc_methods/produces_consumes.rb
+- lib/grape-swagger/doc_methods/status_codes.rb
+- lib/grape-swagger/doc_methods/tag_name_description.rb
+- lib/grape-swagger/doc_methods/version.rb
+- lib/grape-swagger/endpoint.rb
+- lib/grape-swagger/endpoint/params_parser.rb
+- lib/grape-swagger/errors.rb
+- lib/grape-swagger/instance.rb
+- lib/grape-swagger/model_parsers.rb
+- lib/grape-swagger/rake/oapi_tasks.rb
+- lib/grape-swagger/version.rb
+homepage: https://github.com/ruby-grape/grape-swagger
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Add auto generated documentation to your Grape API that can be displayed
+  with Swagger.
+test_files: []

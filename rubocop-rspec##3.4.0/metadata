@@ -1,0 +1,211 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-rspec
+version: !ruby/object:Gem::Version
+  version: 3.4.0
+platform: ruby
+authors:
+- John Backus
+- Ian MacLeod
+- Nils Gemeinhardt
+bindir: bin
+cert_chain: []
+date: 2025-01-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.61'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.61'
+description: |
+  Code style checking for RSpec files.
+  A plugin for the RuboCop code style enforcing & linting tool.
+email:
+- johncbackus@gmail.com
+- ian@nevir.net
+- git@nilsgemeinhardt.de
+executables: []
+extensions: []
+extra_rdoc_files:
+- MIT-LICENSE.md
+- README.md
+files:
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- MIT-LICENSE.md
+- README.md
+- config/default.yml
+- config/obsoletion.yml
+- lib/rubocop-rspec.rb
+- lib/rubocop/cop/rspec/align_left_let_brace.rb
+- lib/rubocop/cop/rspec/align_right_let_brace.rb
+- lib/rubocop/cop/rspec/any_instance.rb
+- lib/rubocop/cop/rspec/around_block.rb
+- lib/rubocop/cop/rspec/base.rb
+- lib/rubocop/cop/rspec/be.rb
+- lib/rubocop/cop/rspec/be_empty.rb
+- lib/rubocop/cop/rspec/be_eq.rb
+- lib/rubocop/cop/rspec/be_eql.rb
+- lib/rubocop/cop/rspec/be_nil.rb
+- lib/rubocop/cop/rspec/before_after_all.rb
+- lib/rubocop/cop/rspec/change_by_zero.rb
+- lib/rubocop/cop/rspec/class_check.rb
+- lib/rubocop/cop/rspec/contain_exactly.rb
+- lib/rubocop/cop/rspec/context_method.rb
+- lib/rubocop/cop/rspec/context_wording.rb
+- lib/rubocop/cop/rspec/describe_class.rb
+- lib/rubocop/cop/rspec/describe_method.rb
+- lib/rubocop/cop/rspec/describe_symbol.rb
+- lib/rubocop/cop/rspec/described_class.rb
+- lib/rubocop/cop/rspec/described_class_module_wrapping.rb
+- lib/rubocop/cop/rspec/dialect.rb
+- lib/rubocop/cop/rspec/duplicated_metadata.rb
+- lib/rubocop/cop/rspec/empty_example_group.rb
+- lib/rubocop/cop/rspec/empty_hook.rb
+- lib/rubocop/cop/rspec/empty_line_after_example.rb
+- lib/rubocop/cop/rspec/empty_line_after_example_group.rb
+- lib/rubocop/cop/rspec/empty_line_after_final_let.rb
+- lib/rubocop/cop/rspec/empty_line_after_hook.rb
+- lib/rubocop/cop/rspec/empty_line_after_subject.rb
+- lib/rubocop/cop/rspec/empty_metadata.rb
+- lib/rubocop/cop/rspec/empty_output.rb
+- lib/rubocop/cop/rspec/eq.rb
+- lib/rubocop/cop/rspec/example_length.rb
+- lib/rubocop/cop/rspec/example_without_description.rb
+- lib/rubocop/cop/rspec/example_wording.rb
+- lib/rubocop/cop/rspec/excessive_docstring_spacing.rb
+- lib/rubocop/cop/rspec/expect_actual.rb
+- lib/rubocop/cop/rspec/expect_change.rb
+- lib/rubocop/cop/rspec/expect_in_hook.rb
+- lib/rubocop/cop/rspec/expect_in_let.rb
+- lib/rubocop/cop/rspec/expect_output.rb
+- lib/rubocop/cop/rspec/focus.rb
+- lib/rubocop/cop/rspec/hook_argument.rb
+- lib/rubocop/cop/rspec/hooks_before_examples.rb
+- lib/rubocop/cop/rspec/identical_equality_assertion.rb
+- lib/rubocop/cop/rspec/implicit_block_expectation.rb
+- lib/rubocop/cop/rspec/implicit_expect.rb
+- lib/rubocop/cop/rspec/implicit_subject.rb
+- lib/rubocop/cop/rspec/indexed_let.rb
+- lib/rubocop/cop/rspec/instance_spy.rb
+- lib/rubocop/cop/rspec/instance_variable.rb
+- lib/rubocop/cop/rspec/is_expected_specify.rb
+- lib/rubocop/cop/rspec/it_behaves_like.rb
+- lib/rubocop/cop/rspec/iterated_expectation.rb
+- lib/rubocop/cop/rspec/leading_subject.rb
+- lib/rubocop/cop/rspec/leaky_constant_declaration.rb
+- lib/rubocop/cop/rspec/let_before_examples.rb
+- lib/rubocop/cop/rspec/let_setup.rb
+- lib/rubocop/cop/rspec/match_array.rb
+- lib/rubocop/cop/rspec/message_chain.rb
+- lib/rubocop/cop/rspec/message_expectation.rb
+- lib/rubocop/cop/rspec/message_spies.rb
+- lib/rubocop/cop/rspec/metadata_style.rb
+- lib/rubocop/cop/rspec/missing_example_group_argument.rb
+- lib/rubocop/cop/rspec/missing_expectation_target_method.rb
+- lib/rubocop/cop/rspec/mixin/comments_help.rb
+- lib/rubocop/cop/rspec/mixin/empty_line_separation.rb
+- lib/rubocop/cop/rspec/mixin/file_help.rb
+- lib/rubocop/cop/rspec/mixin/final_end_location.rb
+- lib/rubocop/cop/rspec/mixin/inside_example_group.rb
+- lib/rubocop/cop/rspec/mixin/location_help.rb
+- lib/rubocop/cop/rspec/mixin/metadata.rb
+- lib/rubocop/cop/rspec/mixin/namespace.rb
+- lib/rubocop/cop/rspec/mixin/skip_or_pending.rb
+- lib/rubocop/cop/rspec/mixin/top_level_group.rb
+- lib/rubocop/cop/rspec/mixin/variable.rb
+- lib/rubocop/cop/rspec/multiple_describes.rb
+- lib/rubocop/cop/rspec/multiple_expectations.rb
+- lib/rubocop/cop/rspec/multiple_memoized_helpers.rb
+- lib/rubocop/cop/rspec/multiple_subjects.rb
+- lib/rubocop/cop/rspec/named_subject.rb
+- lib/rubocop/cop/rspec/nested_groups.rb
+- lib/rubocop/cop/rspec/no_expectation_example.rb
+- lib/rubocop/cop/rspec/not_to_not.rb
+- lib/rubocop/cop/rspec/overwriting_setup.rb
+- lib/rubocop/cop/rspec/pending.rb
+- lib/rubocop/cop/rspec/pending_without_reason.rb
+- lib/rubocop/cop/rspec/predicate_matcher.rb
+- lib/rubocop/cop/rspec/receive_counts.rb
+- lib/rubocop/cop/rspec/receive_messages.rb
+- lib/rubocop/cop/rspec/receive_never.rb
+- lib/rubocop/cop/rspec/redundant_around.rb
+- lib/rubocop/cop/rspec/redundant_predicate_matcher.rb
+- lib/rubocop/cop/rspec/remove_const.rb
+- lib/rubocop/cop/rspec/repeated_description.rb
+- lib/rubocop/cop/rspec/repeated_example.rb
+- lib/rubocop/cop/rspec/repeated_example_group_body.rb
+- lib/rubocop/cop/rspec/repeated_example_group_description.rb
+- lib/rubocop/cop/rspec/repeated_include_example.rb
+- lib/rubocop/cop/rspec/repeated_subject_call.rb
+- lib/rubocop/cop/rspec/return_from_stub.rb
+- lib/rubocop/cop/rspec/scattered_let.rb
+- lib/rubocop/cop/rspec/scattered_setup.rb
+- lib/rubocop/cop/rspec/shared_context.rb
+- lib/rubocop/cop/rspec/shared_examples.rb
+- lib/rubocop/cop/rspec/single_argument_message_chain.rb
+- lib/rubocop/cop/rspec/skip_block_inside_example.rb
+- lib/rubocop/cop/rspec/sort_metadata.rb
+- lib/rubocop/cop/rspec/spec_file_path_format.rb
+- lib/rubocop/cop/rspec/spec_file_path_suffix.rb
+- lib/rubocop/cop/rspec/stubbed_mock.rb
+- lib/rubocop/cop/rspec/subject_declaration.rb
+- lib/rubocop/cop/rspec/subject_stub.rb
+- lib/rubocop/cop/rspec/undescriptive_literals_description.rb
+- lib/rubocop/cop/rspec/unspecified_exception.rb
+- lib/rubocop/cop/rspec/variable_definition.rb
+- lib/rubocop/cop/rspec/variable_name.rb
+- lib/rubocop/cop/rspec/verified_double_reference.rb
+- lib/rubocop/cop/rspec/verified_doubles.rb
+- lib/rubocop/cop/rspec/void_expect.rb
+- lib/rubocop/cop/rspec/yield.rb
+- lib/rubocop/cop/rspec_cops.rb
+- lib/rubocop/rspec.rb
+- lib/rubocop/rspec/align_let_brace.rb
+- lib/rubocop/rspec/concept.rb
+- lib/rubocop/rspec/config_formatter.rb
+- lib/rubocop/rspec/cop/generator.rb
+- lib/rubocop/rspec/corrector/move_node.rb
+- lib/rubocop/rspec/description_extractor.rb
+- lib/rubocop/rspec/example.rb
+- lib/rubocop/rspec/example_group.rb
+- lib/rubocop/rspec/hook.rb
+- lib/rubocop/rspec/inject.rb
+- lib/rubocop/rspec/language.rb
+- lib/rubocop/rspec/node.rb
+- lib/rubocop/rspec/shared_contexts/default_rspec_language_config_context.rb
+- lib/rubocop/rspec/version.rb
+- lib/rubocop/rspec/wording.rb
+homepage: https://github.com/rubocop/rubocop-rspec
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/rubocop/rubocop-rspec/blob/master/CHANGELOG.md
+  documentation_uri: https://docs.rubocop.org/rubocop-rspec/
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Code style checking for RSpec files
+test_files: []

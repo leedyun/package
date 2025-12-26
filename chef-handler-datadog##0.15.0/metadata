@@ -1,0 +1,288 @@
+--- !ruby/object:Gem::Specification
+name: chef-handler-datadog
+version: !ruby/object:Gem::Version
+  version: 0.15.0
+platform: ruby
+authors:
+- Mike Fiedler
+- Adam Jacob
+- Alexis Le-Quoc
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2020-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dogapi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.44.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.44.0
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.0.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: chef
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '12.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '12.7'
+- !ruby/object:Gem::Dependency
+  name: dotenv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: vcr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This Handler will report the events and metrics for a chef-client run
+  to Datadog.
+email:
+- package@datadoghq.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE.txt
+files:
+- ".circleci/config.yml"
+- ".env.example"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- Appraisals
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- chef-handler-datadog.gemspec
+- lib/chef/handler/datadog.rb
+- lib/chef/handler/datadog_chef_events.rb
+- lib/chef/handler/datadog_chef_metrics.rb
+- lib/chef/handler/datadog_chef_tags.rb
+- lib/chef/handler/datadog_util.rb
+- lib/chef_handler_datadog.rb
+- spec/datadog_spec.rb
+- spec/spec_helper.rb
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_alert_handles_when_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_event_title_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_priority_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/hostname/uses_the_node_name_when_no_config_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/hostname/uses_the_specified_hostname_when_provided.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/does_not_use_the_instance_id_when_config_specified_to_false.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/uses_the_instance_id_when_config_is_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/uses_the_instance_id_when_no_config_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_events/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_events/sets_priority_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_metrics/reports_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/sets_tags/puts_the_tags_for_the_current_node.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase/only_emits_the_run_status_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase_with_an_elapsed_time_and_incomplete_resource_collection/only_emits_the_run_status_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase_with_an_elapsed_time_and_incomplete_resource_collection/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_policy_tags_are_enabled/sets_the_policy_name_and_policy_group_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_policy_tags_are_not_enabled/does_not_set_the_policy_name_and_policy_group_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_empty_scope_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_empty_tag_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_user-specified_scope_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_user-specified_tag_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/sets_the_role_and_env_and_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_tag_blacklist_is_specified/does_not_include_the_tag_s_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_tag_blacklist_is_unspecified/should_include_all_of_the_tag_s_.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_unspecified/sets_role_env_and_nothing_else.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_not_specified/does_not_retry_after_a_failed_submission.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_specified_as_2_retries/retries_no_more_than_twice.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_specified_as_2_retries/stops_retrying_once_submission_is_successful.yml
+- spec/support/cassettes/Chef_Handler_Datadog/updated_resources/posts_an_event.yml
+homepage: http://www.datadoghq.com/
+licenses:
+- BSD
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project:
+rubygems_version: 2.7.6
+signing_key:
+specification_version: 4
+summary: Chef Handler reports events and metrics to Datadog
+test_files:
+- spec/datadog_spec.rb
+- spec/spec_helper.rb
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_alert_handles_when_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_event_title_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/failed_Chef_run/sets_priority_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/hostname/uses_the_node_name_when_no_config_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/hostname/uses_the_specified_hostname_when_provided.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/does_not_use_the_instance_id_when_config_specified_to_false.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/uses_the_instance_id_when_config_is_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_correct_hostname_on_an_ec2_node/uses_the_instance_id_when_no_config_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_events/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_events/sets_priority_correctly.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/emits_metrics/reports_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/reports_metrics_event_and_sets_tags/sets_tags/puts_the_tags_for_the_current_node.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase/only_emits_the_run_status_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase_with_an_elapsed_time_and_incomplete_resource_collection/only_emits_the_run_status_metrics.yml
+- spec/support/cassettes/Chef_Handler_Datadog/resources/failure_during_compile_phase_with_an_elapsed_time_and_incomplete_resource_collection/posts_an_event.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_policy_tags_are_enabled/sets_the_policy_name_and_policy_group_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_policy_tags_are_not_enabled/does_not_set_the_policy_name_and_policy_group_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_empty_scope_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_empty_tag_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_user-specified_scope_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/allows_for_user-specified_tag_prefix.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_specified/sets_the_role_and_env_and_tags.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_tag_blacklist_is_specified/does_not_include_the_tag_s_specified.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_tag_blacklist_is_unspecified/should_include_all_of_the_tag_s_.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags/when_unspecified/sets_role_env_and_nothing_else.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_not_specified/does_not_retry_after_a_failed_submission.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_specified_as_2_retries/retries_no_more_than_twice.yml
+- spec/support/cassettes/Chef_Handler_Datadog/tags_submission_retries/when_specified_as_2_retries/stops_retrying_once_submission_is_successful.yml
+- spec/support/cassettes/Chef_Handler_Datadog/updated_resources/posts_an_event.yml

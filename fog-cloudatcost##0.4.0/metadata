@@ -1,0 +1,218 @@
+--- !ruby/object:Gem::Specification
+name: fog-cloudatcost
+version: !ruby/object:Gem::Version
+  version: 0.4.0
+platform: ruby
+authors:
+- Suraj Shirvankar
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-06-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ipaddress
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This library can be used as a module for `fog` or as standalone provider
+  to use the CloudAtCost in applications.
+email:
+- surajshirvankar@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rubocop.yml"
+- ".ruby-gemset"
+- ".ruby-version"
+- ".travis.yml"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- fog-cloudatcost.gemspec
+- gemfiles/Gemfile-edge
+- lib/fog/cloudatcost.rb
+- lib/fog/cloudatcost/compute.rb
+- lib/fog/cloudatcost/examples/getting_started.md
+- lib/fog/cloudatcost/models/server.rb
+- lib/fog/cloudatcost/models/servers.rb
+- lib/fog/cloudatcost/models/task.rb
+- lib/fog/cloudatcost/models/tasks.rb
+- lib/fog/cloudatcost/models/template.rb
+- lib/fog/cloudatcost/models/templates.rb
+- lib/fog/cloudatcost/requests/console.rb
+- lib/fog/cloudatcost/requests/create_server.rb
+- lib/fog/cloudatcost/requests/delete_server.rb
+- lib/fog/cloudatcost/requests/list_servers.rb
+- lib/fog/cloudatcost/requests/list_tasks.rb
+- lib/fog/cloudatcost/requests/list_templates.rb
+- lib/fog/cloudatcost/requests/power_off.rb
+- lib/fog/cloudatcost/requests/power_on.rb
+- lib/fog/cloudatcost/requests/rename_server.rb
+- lib/fog/cloudatcost/requests/reset.rb
+- lib/fog/cloudatcost/requests/reverse_dns.rb
+- lib/fog/cloudatcost/requests/run_mode.rb
+- lib/fog/cloudatcost/version.rb
+- spec/fog/models/server_spec.rb
+- spec/fog/models/servers_spec.rb
+- spec/fog/models/task_spec.rb
+- spec/fog/models/tasks_spec.rb
+- spec/fog/models/template_spec.rb
+- spec/fog/models/templates_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/fog/fog-cloudatcost
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.6
+signing_key: 
+specification_version: 4
+summary: Module for the 'fog' gem to support CloudAtCost.
+test_files:
+- spec/fog/models/server_spec.rb
+- spec/fog/models/servers_spec.rb
+- spec/fog/models/task_spec.rb
+- spec/fog/models/tasks_spec.rb
+- spec/fog/models/template_spec.rb
+- spec/fog/models/templates_spec.rb
+- spec/spec_helper.rb

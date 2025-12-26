@@ -1,0 +1,64 @@
+--- !ruby/object:Gem::Specification
+name: phonelib
+version: !ruby/object:Gem::Version
+  version: 0.10.3
+platform: ruby
+authors:
+- Vadim Senderovich
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-16 00:00:00.000000000 Z
+dependencies: []
+description: |2
+      Google libphonenumber library was taken as a basis for
+      this gem. Gem uses its data file for validations and number formatting.
+email:
+- daddyzgm@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- Rakefile
+- data/extended_data.dat
+- data/phone_data.dat
+- lib/phonelib.rb
+- lib/phonelib/core.rb
+- lib/phonelib/data_importer.rb
+- lib/phonelib/data_importer_helper.rb
+- lib/phonelib/phone.rb
+- lib/phonelib/phone_analyzer.rb
+- lib/phonelib/phone_analyzer_helper.rb
+- lib/phonelib/phone_extended_data.rb
+- lib/phonelib/phone_formatter.rb
+- lib/phonelib/version.rb
+- lib/tasks/phonelib_tasks.rake
+- lib/validators/phone_validator.rb
+homepage: https://github.com/daddyz/phonelib
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/daddyz/phonelib/releases/tag/v0.10.3
+post_install_message: 
+rdoc_options:
+- " --no-private - CHANGELOG.md --readme README.md"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: Gem validates phone numbers with Google libphonenumber database
+test_files: []

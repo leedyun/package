@@ -1,0 +1,639 @@
+--- !ruby/object:Gem::Specification
+name: solargraph
+version: !ruby/object:Gem::Version
+  version: 0.51.0
+platform: ruby
+authors:
+- Fred Snyder
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: backport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: benchmark
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: diff-lcs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: jaro_winkler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: kramdown
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+- !ruby/object:Gem::Dependency
+  name: kramdown-parser-gfm
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: observer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.1'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rbs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: reverse_markdown
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.38'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.38'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: tilt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.24
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.24
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: public_suffix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.2'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.5'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.14'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.6'
+description: IDE tools for code completion, inline documentation, and static analysis
+email: admin@castwide.com
+executables:
+- solargraph
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/FUNDING.yml"
+- ".github/workflows/rspec.yml"
+- ".gitignore"
+- ".rspec"
+- ".yardopts"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- SPONSORS.md
+- bin/solargraph
+- lib/.rubocop.yml
+- lib/solargraph.rb
+- lib/solargraph/api_map.rb
+- lib/solargraph/api_map/bundler_methods.rb
+- lib/solargraph/api_map/cache.rb
+- lib/solargraph/api_map/source_to_yard.rb
+- lib/solargraph/api_map/store.rb
+- lib/solargraph/bench.rb
+- lib/solargraph/cache.rb
+- lib/solargraph/complex_type.rb
+- lib/solargraph/complex_type/type_methods.rb
+- lib/solargraph/complex_type/unique_type.rb
+- lib/solargraph/convention.rb
+- lib/solargraph/convention/base.rb
+- lib/solargraph/convention/gemfile.rb
+- lib/solargraph/convention/gemspec.rb
+- lib/solargraph/convention/rakefile.rb
+- lib/solargraph/converters/dd.rb
+- lib/solargraph/converters/dl.rb
+- lib/solargraph/converters/dt.rb
+- lib/solargraph/converters/misc.rb
+- lib/solargraph/diagnostics.rb
+- lib/solargraph/diagnostics/base.rb
+- lib/solargraph/diagnostics/require_not_found.rb
+- lib/solargraph/diagnostics/rubocop.rb
+- lib/solargraph/diagnostics/rubocop_helpers.rb
+- lib/solargraph/diagnostics/severities.rb
+- lib/solargraph/diagnostics/type_check.rb
+- lib/solargraph/diagnostics/update_errors.rb
+- lib/solargraph/documentor.rb
+- lib/solargraph/environ.rb
+- lib/solargraph/language_server.rb
+- lib/solargraph/language_server/completion_item_kinds.rb
+- lib/solargraph/language_server/error_codes.rb
+- lib/solargraph/language_server/host.rb
+- lib/solargraph/language_server/host/cataloger.rb
+- lib/solargraph/language_server/host/diagnoser.rb
+- lib/solargraph/language_server/host/dispatch.rb
+- lib/solargraph/language_server/host/message_worker.rb
+- lib/solargraph/language_server/host/sources.rb
+- lib/solargraph/language_server/message.rb
+- lib/solargraph/language_server/message/base.rb
+- lib/solargraph/language_server/message/cancel_request.rb
+- lib/solargraph/language_server/message/client.rb
+- lib/solargraph/language_server/message/client/register_capability.rb
+- lib/solargraph/language_server/message/completion_item.rb
+- lib/solargraph/language_server/message/completion_item/resolve.rb
+- lib/solargraph/language_server/message/exit_notification.rb
+- lib/solargraph/language_server/message/extended.rb
+- lib/solargraph/language_server/message/extended/check_gem_version.rb
+- lib/solargraph/language_server/message/extended/document.rb
+- lib/solargraph/language_server/message/extended/document_gems.rb
+- lib/solargraph/language_server/message/extended/download_core.rb
+- lib/solargraph/language_server/message/extended/environment.rb
+- lib/solargraph/language_server/message/extended/search.rb
+- lib/solargraph/language_server/message/initialize.rb
+- lib/solargraph/language_server/message/initialized.rb
+- lib/solargraph/language_server/message/method_not_found.rb
+- lib/solargraph/language_server/message/method_not_implemented.rb
+- lib/solargraph/language_server/message/shutdown.rb
+- lib/solargraph/language_server/message/text_document.rb
+- lib/solargraph/language_server/message/text_document/base.rb
+- lib/solargraph/language_server/message/text_document/code_action.rb
+- lib/solargraph/language_server/message/text_document/completion.rb
+- lib/solargraph/language_server/message/text_document/definition.rb
+- lib/solargraph/language_server/message/text_document/did_change.rb
+- lib/solargraph/language_server/message/text_document/did_close.rb
+- lib/solargraph/language_server/message/text_document/did_open.rb
+- lib/solargraph/language_server/message/text_document/did_save.rb
+- lib/solargraph/language_server/message/text_document/document_highlight.rb
+- lib/solargraph/language_server/message/text_document/document_symbol.rb
+- lib/solargraph/language_server/message/text_document/folding_range.rb
+- lib/solargraph/language_server/message/text_document/formatting.rb
+- lib/solargraph/language_server/message/text_document/hover.rb
+- lib/solargraph/language_server/message/text_document/on_type_formatting.rb
+- lib/solargraph/language_server/message/text_document/prepare_rename.rb
+- lib/solargraph/language_server/message/text_document/references.rb
+- lib/solargraph/language_server/message/text_document/rename.rb
+- lib/solargraph/language_server/message/text_document/signature_help.rb
+- lib/solargraph/language_server/message/text_document/type_definition.rb
+- lib/solargraph/language_server/message/workspace.rb
+- lib/solargraph/language_server/message/workspace/did_change_configuration.rb
+- lib/solargraph/language_server/message/workspace/did_change_watched_files.rb
+- lib/solargraph/language_server/message/workspace/did_change_workspace_folders.rb
+- lib/solargraph/language_server/message/workspace/workspace_symbol.rb
+- lib/solargraph/language_server/message_types.rb
+- lib/solargraph/language_server/request.rb
+- lib/solargraph/language_server/symbol_kinds.rb
+- lib/solargraph/language_server/transport.rb
+- lib/solargraph/language_server/transport/adapter.rb
+- lib/solargraph/language_server/transport/data_reader.rb
+- lib/solargraph/language_server/uri_helpers.rb
+- lib/solargraph/library.rb
+- lib/solargraph/location.rb
+- lib/solargraph/logging.rb
+- lib/solargraph/page.rb
+- lib/solargraph/parser.rb
+- lib/solargraph/parser/comment_ripper.rb
+- lib/solargraph/parser/legacy.rb
+- lib/solargraph/parser/legacy/class_methods.rb
+- lib/solargraph/parser/legacy/flawed_builder.rb
+- lib/solargraph/parser/legacy/node_chainer.rb
+- lib/solargraph/parser/legacy/node_methods.rb
+- lib/solargraph/parser/legacy/node_processors.rb
+- lib/solargraph/parser/legacy/node_processors/alias_node.rb
+- lib/solargraph/parser/legacy/node_processors/args_node.rb
+- lib/solargraph/parser/legacy/node_processors/begin_node.rb
+- lib/solargraph/parser/legacy/node_processors/block_node.rb
+- lib/solargraph/parser/legacy/node_processors/casgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/cvasgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/def_node.rb
+- lib/solargraph/parser/legacy/node_processors/defs_node.rb
+- lib/solargraph/parser/legacy/node_processors/gvasgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/ivasgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/lvasgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/namespace_node.rb
+- lib/solargraph/parser/legacy/node_processors/orasgn_node.rb
+- lib/solargraph/parser/legacy/node_processors/resbody_node.rb
+- lib/solargraph/parser/legacy/node_processors/sclass_node.rb
+- lib/solargraph/parser/legacy/node_processors/send_node.rb
+- lib/solargraph/parser/legacy/node_processors/sym_node.rb
+- lib/solargraph/parser/node_methods.rb
+- lib/solargraph/parser/node_processor.rb
+- lib/solargraph/parser/node_processor/base.rb
+- lib/solargraph/parser/region.rb
+- lib/solargraph/parser/rubyvm.rb
+- lib/solargraph/parser/rubyvm/class_methods.rb
+- lib/solargraph/parser/rubyvm/node_chainer.rb
+- lib/solargraph/parser/rubyvm/node_methods.rb
+- lib/solargraph/parser/rubyvm/node_processors.rb
+- lib/solargraph/parser/rubyvm/node_processors/alias_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/args_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/begin_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/block_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/casgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/cvasgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/def_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/defs_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/gvasgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/ivasgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/kw_arg_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/lit_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/lvasgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/namespace_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/opt_arg_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/orasgn_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/resbody_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/sclass_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/scope_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/send_node.rb
+- lib/solargraph/parser/rubyvm/node_processors/sym_node.rb
+- lib/solargraph/parser/rubyvm/node_wrapper.rb
+- lib/solargraph/parser/snippet.rb
+- lib/solargraph/pin.rb
+- lib/solargraph/pin/base.rb
+- lib/solargraph/pin/base_variable.rb
+- lib/solargraph/pin/block.rb
+- lib/solargraph/pin/class_variable.rb
+- lib/solargraph/pin/closure.rb
+- lib/solargraph/pin/common.rb
+- lib/solargraph/pin/constant.rb
+- lib/solargraph/pin/conversions.rb
+- lib/solargraph/pin/delegated_method.rb
+- lib/solargraph/pin/documenting.rb
+- lib/solargraph/pin/duck_method.rb
+- lib/solargraph/pin/global_variable.rb
+- lib/solargraph/pin/instance_variable.rb
+- lib/solargraph/pin/keyword.rb
+- lib/solargraph/pin/keyword_param.rb
+- lib/solargraph/pin/local_variable.rb
+- lib/solargraph/pin/method.rb
+- lib/solargraph/pin/method_alias.rb
+- lib/solargraph/pin/namespace.rb
+- lib/solargraph/pin/parameter.rb
+- lib/solargraph/pin/proxy_type.rb
+- lib/solargraph/pin/reference.rb
+- lib/solargraph/pin/reference/extend.rb
+- lib/solargraph/pin/reference/include.rb
+- lib/solargraph/pin/reference/override.rb
+- lib/solargraph/pin/reference/prepend.rb
+- lib/solargraph/pin/reference/require.rb
+- lib/solargraph/pin/reference/superclass.rb
+- lib/solargraph/pin/search.rb
+- lib/solargraph/pin/signature.rb
+- lib/solargraph/pin/singleton.rb
+- lib/solargraph/pin/symbol.rb
+- lib/solargraph/position.rb
+- lib/solargraph/range.rb
+- lib/solargraph/rbs_map.rb
+- lib/solargraph/rbs_map/conversions.rb
+- lib/solargraph/rbs_map/core_fills.rb
+- lib/solargraph/rbs_map/core_map.rb
+- lib/solargraph/rbs_map/core_signs.rb
+- lib/solargraph/rbs_map/stdlib_map.rb
+- lib/solargraph/server_methods.rb
+- lib/solargraph/shell.rb
+- lib/solargraph/source.rb
+- lib/solargraph/source/chain.rb
+- lib/solargraph/source/chain/block_variable.rb
+- lib/solargraph/source/chain/call.rb
+- lib/solargraph/source/chain/class_variable.rb
+- lib/solargraph/source/chain/constant.rb
+- lib/solargraph/source/chain/global_variable.rb
+- lib/solargraph/source/chain/hash.rb
+- lib/solargraph/source/chain/head.rb
+- lib/solargraph/source/chain/instance_variable.rb
+- lib/solargraph/source/chain/link.rb
+- lib/solargraph/source/chain/literal.rb
+- lib/solargraph/source/chain/or.rb
+- lib/solargraph/source/chain/q_call.rb
+- lib/solargraph/source/chain/variable.rb
+- lib/solargraph/source/chain/z_super.rb
+- lib/solargraph/source/change.rb
+- lib/solargraph/source/cursor.rb
+- lib/solargraph/source/encoding_fixes.rb
+- lib/solargraph/source/source_chainer.rb
+- lib/solargraph/source/updater.rb
+- lib/solargraph/source_map.rb
+- lib/solargraph/source_map/clip.rb
+- lib/solargraph/source_map/completion.rb
+- lib/solargraph/source_map/mapper.rb
+- lib/solargraph/type_checker.rb
+- lib/solargraph/type_checker/checks.rb
+- lib/solargraph/type_checker/param_def.rb
+- lib/solargraph/type_checker/problem.rb
+- lib/solargraph/type_checker/rules.rb
+- lib/solargraph/version.rb
+- lib/solargraph/views/_method.erb
+- lib/solargraph/views/_name_type_tag.erb
+- lib/solargraph/views/_namespace.erb
+- lib/solargraph/views/document.erb
+- lib/solargraph/views/environment.erb
+- lib/solargraph/views/layout.erb
+- lib/solargraph/views/search.erb
+- lib/solargraph/workspace.rb
+- lib/solargraph/workspace/config.rb
+- lib/solargraph/yard_map.rb
+- lib/solargraph/yard_map/cache.rb
+- lib/solargraph/yard_map/helpers.rb
+- lib/solargraph/yard_map/mapper.rb
+- lib/solargraph/yard_map/mapper/to_constant.rb
+- lib/solargraph/yard_map/mapper/to_method.rb
+- lib/solargraph/yard_map/mapper/to_namespace.rb
+- lib/solargraph/yard_map/to_method.rb
+- lib/yard-solargraph.rb
+- solargraph.gemspec
+homepage: https://solargraph.org
+licenses:
+- MIT
+metadata:
+  funding_uri: https://www.patreon.com/castwide
+  bug_tracker_uri: https://github.com/castwide/solargraph/issues
+  changelog_uri: https://github.com/castwide/solargraph/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/castwide/solargraph
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: A Ruby language server
+test_files: []

@@ -1,0 +1,363 @@
+--- !ruby/object:Gem::Specification
+name: dragonfly
+version: !ruby/object:Gem::Version
+  version: 1.4.1
+platform: ruby
+authors:
+- Mark Evans
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.3'
+- !ruby/object:Gem::Dependency
+  name: ostruct
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |-
+  Dragonfly is a framework that enables on-the-fly processing for any content type.
+    It is especially suited to image handling. Its uses range from image thumbnails to standard attachments to on-demand text generation.
+email: mark@new-bamboo.co.uk
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- History.md
+- LICENSE
+- README.md
+- Rakefile
+- dev/grid.jpg
+- dev/irbrc.rb
+- dev/rails_template.rb
+- dev/test.ru
+- dev/test_rails
+- dragonfly.gemspec
+- lib/dragonfly.rb
+- lib/dragonfly/app.rb
+- lib/dragonfly/configurable.rb
+- lib/dragonfly/content.rb
+- lib/dragonfly/cookie_monster.rb
+- lib/dragonfly/core_ext/array.rb
+- lib/dragonfly/core_ext/hash.rb
+- lib/dragonfly/core_ext/object.rb
+- lib/dragonfly/file_data_store.rb
+- lib/dragonfly/has_filename.rb
+- lib/dragonfly/hash_with_css_style_keys.rb
+- lib/dragonfly/image_magick/analysers/image_properties.rb
+- lib/dragonfly/image_magick/commands.rb
+- lib/dragonfly/image_magick/generators/plain.rb
+- lib/dragonfly/image_magick/generators/plasma.rb
+- lib/dragonfly/image_magick/generators/text.rb
+- lib/dragonfly/image_magick/plugin.rb
+- lib/dragonfly/image_magick/processors/encode.rb
+- lib/dragonfly/image_magick/processors/thumb.rb
+- lib/dragonfly/job.rb
+- lib/dragonfly/job/fetch.rb
+- lib/dragonfly/job/fetch_file.rb
+- lib/dragonfly/job/fetch_url.rb
+- lib/dragonfly/job/generate.rb
+- lib/dragonfly/job/process.rb
+- lib/dragonfly/job/step.rb
+- lib/dragonfly/job_endpoint.rb
+- lib/dragonfly/memory_data_store.rb
+- lib/dragonfly/middleware.rb
+- lib/dragonfly/model.rb
+- lib/dragonfly/model/attachment.rb
+- lib/dragonfly/model/attachment_class_methods.rb
+- lib/dragonfly/model/class_methods.rb
+- lib/dragonfly/model/instance_methods.rb
+- lib/dragonfly/model/validations.rb
+- lib/dragonfly/param_validators.rb
+- lib/dragonfly/rails/images.rb
+- lib/dragonfly/railtie.rb
+- lib/dragonfly/register.rb
+- lib/dragonfly/response.rb
+- lib/dragonfly/routed_endpoint.rb
+- lib/dragonfly/serializer.rb
+- lib/dragonfly/server.rb
+- lib/dragonfly/shell.rb
+- lib/dragonfly/spec/data_store_examples.rb
+- lib/dragonfly/temp_object.rb
+- lib/dragonfly/url_attributes.rb
+- lib/dragonfly/url_mapper.rb
+- lib/dragonfly/utils.rb
+- lib/dragonfly/version.rb
+- lib/dragonfly/whitelist.rb
+- lib/rails/generators/dragonfly/USAGE
+- lib/rails/generators/dragonfly/dragonfly_generator.rb
+- lib/rails/generators/dragonfly/templates/initializer.rb.erb
+- samples/DSC02119.JPG
+- samples/a.jp2
+- samples/beach.jpg
+- samples/beach.png
+- samples/egg.png
+- samples/gif.gif
+- samples/mevs' white pixel.png
+- samples/round.gif
+- samples/sample.docx
+- samples/taj.jpg
+- spec/dragonfly/app_spec.rb
+- spec/dragonfly/configurable_spec.rb
+- spec/dragonfly/content_spec.rb
+- spec/dragonfly/cookie_monster_spec.rb
+- spec/dragonfly/core_ext/array_spec.rb
+- spec/dragonfly/core_ext/hash_spec.rb
+- spec/dragonfly/file_data_store_spec.rb
+- spec/dragonfly/has_filename_spec.rb
+- spec/dragonfly/hash_with_css_style_keys_spec.rb
+- spec/dragonfly/image_magick/analysers/image_properties_spec.rb
+- spec/dragonfly/image_magick/commands_spec.rb
+- spec/dragonfly/image_magick/generators/plain_spec.rb
+- spec/dragonfly/image_magick/generators/plasma_spec.rb
+- spec/dragonfly/image_magick/generators/text_spec.rb
+- spec/dragonfly/image_magick/plugin_spec.rb
+- spec/dragonfly/image_magick/processors/encode_spec.rb
+- spec/dragonfly/image_magick/processors/thumb_spec.rb
+- spec/dragonfly/job/fetch_file_spec.rb
+- spec/dragonfly/job/fetch_spec.rb
+- spec/dragonfly/job/fetch_url_spec.rb
+- spec/dragonfly/job/generate_spec.rb
+- spec/dragonfly/job/process_spec.rb
+- spec/dragonfly/job_endpoint_spec.rb
+- spec/dragonfly/job_spec.rb
+- spec/dragonfly/memory_data_store_spec.rb
+- spec/dragonfly/middleware_spec.rb
+- spec/dragonfly/model/active_record_spec.rb
+- spec/dragonfly/model/model_spec.rb
+- spec/dragonfly/model/validations_spec.rb
+- spec/dragonfly/param_validators_spec.rb
+- spec/dragonfly/register_spec.rb
+- spec/dragonfly/routed_endpoint_spec.rb
+- spec/dragonfly/serializer_spec.rb
+- spec/dragonfly/server_spec.rb
+- spec/dragonfly/shell_spec.rb
+- spec/dragonfly/temp_object_spec.rb
+- spec/dragonfly/url_attributes_spec.rb
+- spec/dragonfly/url_mapper_spec.rb
+- spec/dragonfly/utils_spec.rb
+- spec/dragonfly/whitelist_spec.rb
+- spec/dragonfly_spec.rb
+- spec/fixtures/deprecated_stored_content/eggs.bonus
+- spec/fixtures/deprecated_stored_content/eggs.bonus.meta
+- spec/functional/cleanup_spec.rb
+- spec/functional/configuration_spec.rb
+- spec/functional/model_urls_spec.rb
+- spec/functional/remote_on_the_fly_spec.rb
+- spec/functional/shell_commands_spec.rb
+- spec/functional/to_response_spec.rb
+- spec/functional/urls_spec.rb
+- spec/spec_helper.rb
+- spec/support/argument_matchers.rb
+- spec/support/image_matchers.rb
+- spec/support/model_helpers.rb
+- spec/support/rack_helpers.rb
+- spec/support/simple_matchers.rb
+- tmp/.gitignore
+homepage: http://github.com/markevans/dragonfly
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: Ideal gem for handling attachments in Rails, Sinatra and Rack applications.
+test_files:
+- spec/dragonfly/app_spec.rb
+- spec/dragonfly/configurable_spec.rb
+- spec/dragonfly/content_spec.rb
+- spec/dragonfly/cookie_monster_spec.rb
+- spec/dragonfly/core_ext/array_spec.rb
+- spec/dragonfly/core_ext/hash_spec.rb
+- spec/dragonfly/file_data_store_spec.rb
+- spec/dragonfly/has_filename_spec.rb
+- spec/dragonfly/hash_with_css_style_keys_spec.rb
+- spec/dragonfly/image_magick/analysers/image_properties_spec.rb
+- spec/dragonfly/image_magick/commands_spec.rb
+- spec/dragonfly/image_magick/generators/plain_spec.rb
+- spec/dragonfly/image_magick/generators/plasma_spec.rb
+- spec/dragonfly/image_magick/generators/text_spec.rb
+- spec/dragonfly/image_magick/plugin_spec.rb
+- spec/dragonfly/image_magick/processors/encode_spec.rb
+- spec/dragonfly/image_magick/processors/thumb_spec.rb
+- spec/dragonfly/job/fetch_file_spec.rb
+- spec/dragonfly/job/fetch_spec.rb
+- spec/dragonfly/job/fetch_url_spec.rb
+- spec/dragonfly/job/generate_spec.rb
+- spec/dragonfly/job/process_spec.rb
+- spec/dragonfly/job_endpoint_spec.rb
+- spec/dragonfly/job_spec.rb
+- spec/dragonfly/memory_data_store_spec.rb
+- spec/dragonfly/middleware_spec.rb
+- spec/dragonfly/model/active_record_spec.rb
+- spec/dragonfly/model/model_spec.rb
+- spec/dragonfly/model/validations_spec.rb
+- spec/dragonfly/param_validators_spec.rb
+- spec/dragonfly/register_spec.rb
+- spec/dragonfly/routed_endpoint_spec.rb
+- spec/dragonfly/serializer_spec.rb
+- spec/dragonfly/server_spec.rb
+- spec/dragonfly/shell_spec.rb
+- spec/dragonfly/temp_object_spec.rb
+- spec/dragonfly/url_attributes_spec.rb
+- spec/dragonfly/url_mapper_spec.rb
+- spec/dragonfly/utils_spec.rb
+- spec/dragonfly/whitelist_spec.rb
+- spec/dragonfly_spec.rb
+- spec/fixtures/deprecated_stored_content/eggs.bonus
+- spec/fixtures/deprecated_stored_content/eggs.bonus.meta
+- spec/functional/cleanup_spec.rb
+- spec/functional/configuration_spec.rb
+- spec/functional/model_urls_spec.rb
+- spec/functional/remote_on_the_fly_spec.rb
+- spec/functional/shell_commands_spec.rb
+- spec/functional/to_response_spec.rb
+- spec/functional/urls_spec.rb
+- spec/spec_helper.rb
+- spec/support/argument_matchers.rb
+- spec/support/image_matchers.rb
+- spec/support/model_helpers.rb
+- spec/support/rack_helpers.rb
+- spec/support/simple_matchers.rb

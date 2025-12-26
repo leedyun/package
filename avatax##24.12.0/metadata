@@ -1,0 +1,210 @@
+--- !ruby/object:Gem::Specification
+name: avatax
+version: !ruby/object:Gem::Version
+  version: 24.12.0
+platform: ruby
+authors:
+- Marcus Vorwaller
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-18 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.0.0
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.10'
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.7
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.7
+description: A Ruby wrapper for the AvaTax REST and Search APIs
+email:
+- marcus.vorwaller@avalara.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/gem-push.yml"
+- ".gitignore"
+- ".rspec"
+- ".vs/AvaTax-REST-V2-Ruby-SDK/v15/.suo"
+- ".vs/VSWorkspaceState.json"
+- ".vs/slnx.sqlite"
+- ".yardopts"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- avatax.gemspec
+- example/avatax.rb
+- example/credentials.example.yaml
+- lib/avatax.rb
+- lib/avatax/api.rb
+- lib/avatax/client.rb
+- lib/avatax/client/accounts.rb
+- lib/avatax/client/addresses.rb
+- lib/avatax/client/advancedrules.rb
+- lib/avatax/client/ageverification.rb
+- lib/avatax/client/apconfigsetting.rb
+- lib/avatax/client/avafileforms.rb
+- lib/avatax/client/batches.rb
+- lib/avatax/client/certexpressinvites.rb
+- lib/avatax/client/certificates.rb
+- lib/avatax/client/communicationcertificates.rb
+- lib/avatax/client/companies.rb
+- lib/avatax/client/compliance.rb
+- lib/avatax/client/contacts.rb
+- lib/avatax/client/costcenter.rb
+- lib/avatax/client/customers.rb
+- lib/avatax/client/datasources.rb
+- lib/avatax/client/definitions.rb
+- lib/avatax/client/distancethresholds.rb
+- lib/avatax/client/domaincontrolverification.rb
+- lib/avatax/client/ecmeventnotifications.rb
+- lib/avatax/client/ecms.rb
+- lib/avatax/client/ecommercetoken.rb
+- lib/avatax/client/errortransactions.rb
+- lib/avatax/client/filingcalendars.rb
+- lib/avatax/client/filings.rb
+- lib/avatax/client/firmclientlinkages.rb
+- lib/avatax/client/free.rb
+- lib/avatax/client/fundingrequests.rb
+- lib/avatax/client/glaccount.rb
+- lib/avatax/client/items.rb
+- lib/avatax/client/jurisdictionoverrides.rb
+- lib/avatax/client/locations.rb
+- lib/avatax/client/multidocument.rb
+- lib/avatax/client/nexus.rb
+- lib/avatax/client/notices.rb
+- lib/avatax/client/notifications.rb
+- lib/avatax/client/onboarding.rb
+- lib/avatax/client/pointofsale.rb
+- lib/avatax/client/provisioning.rb
+- lib/avatax/client/registrar.rb
+- lib/avatax/client/reports.rb
+- lib/avatax/client/settings.rb
+- lib/avatax/client/shippingverification.rb
+- lib/avatax/client/shippingverificationbatches.rb
+- lib/avatax/client/subscriptions.rb
+- lib/avatax/client/taxContent/README.txt
+- lib/avatax/client/taxRatesByZip/README.txt
+- lib/avatax/client/taxcodes.rb
+- lib/avatax/client/taxcontent.rb
+- lib/avatax/client/taxprofiles.rb
+- lib/avatax/client/taxrules.rb
+- lib/avatax/client/transactions.rb
+- lib/avatax/client/upcs.rb
+- lib/avatax/client/userdefinedfields.rb
+- lib/avatax/client/users.rb
+- lib/avatax/client/utilities.rb
+- lib/avatax/configuration.rb
+- lib/avatax/connection.rb
+- lib/avatax/request.rb
+- lib/avatax/version.rb
+- spec/avatax/client/accounts_spec.rb
+- spec/avatax/client/transactions_spec.rb
+- spec/avatax/request_spec.rb
+- spec/avatax_spec.rb
+- spec/credentials.yaml.example
+- spec/fixtures/accounts.json
+- spec/spec_helper.rb
+homepage: https://github.com/avadev/AvaTax-REST-V2-Ruby-SDK
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+requirements: []
+rubygems_version: 3.0.3.1
+signing_key: 
+specification_version: 4
+summary: Ruby wrapper for the AvaTax API
+test_files: []

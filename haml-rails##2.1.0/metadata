@@ -1,0 +1,207 @@
+--- !ruby/object:Gem::Specification
+name: haml-rails
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- André Arko
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-09-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.6
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: html2haml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.1
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Haml-rails provides Haml generators for Rails 5. It also enables Haml
+  as the templating engine for you, so you don't have to screw around in your own
+  application.rb when your Gemfile already clearly indicated what templating engine
+  you have installed. Hurrah.
+email:
+- andre@arko.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- Appraisals
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- gemfiles/rails_5_1.gemfile
+- gemfiles/rails_5_2.gemfile
+- gemfiles/rails_6_0.gemfile
+- gemfiles/rails_6_1.gemfile
+- gemfiles/rails_7_0.gemfile
+- haml-rails.gemspec
+- lib/generators/haml/controller/controller_generator.rb
+- lib/generators/haml/controller/templates/view.html.haml
+- lib/generators/haml/mailer/mailer_generator.rb
+- lib/generators/haml/mailer/templates/layout.html.haml
+- lib/generators/haml/mailer/templates/layout.text.haml
+- lib/generators/haml/mailer/templates/view.html.haml
+- lib/generators/haml/mailer/templates/view.text.haml
+- lib/generators/haml/scaffold/scaffold_generator.rb
+- lib/generators/haml/scaffold/templates/_form.html.haml
+- lib/generators/haml/scaffold/templates/edit.html.haml
+- lib/generators/haml/scaffold/templates/index.html.haml
+- lib/generators/haml/scaffold/templates/new.html.haml
+- lib/generators/haml/scaffold/templates/show.html.haml
+- lib/haml-rails.rb
+- lib/haml-rails/version.rb
+- lib/rails/generators/haml/application_layout/application_layout_generator.rb
+- lib/tasks/erb2haml.rake
+- test/fixtures/routes.rb
+- test/lib/generators/haml/controller_generator_test.rb
+- test/lib/generators/haml/mailer_generator_test.rb
+- test/lib/generators/haml/scaffold_generator_test.rb
+- test/test_helper.rb
+homepage: https://github.com/haml/haml-rails
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.3.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+requirements: []
+rubygems_version: 3.4.0.dev
+signing_key:
+specification_version: 4
+summary: let your Gemfile do the configuring
+test_files: []

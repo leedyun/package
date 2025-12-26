@@ -1,0 +1,96 @@
+--- !ruby/object:Gem::Specification
+name: dry-matcher
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Tim Riley
+- Nikita Shilnikov
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dry-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Flexible, expressive pattern matching for Ruby
+email:
+- tim@icelab.com.au
+- fg@flashgordon.ru
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- dry-matcher.gemspec
+- lib/dry-matcher.rb
+- lib/dry/matcher.rb
+- lib/dry/matcher/case.rb
+- lib/dry/matcher/either_matcher.rb
+- lib/dry/matcher/evaluator.rb
+- lib/dry/matcher/match.rb
+- lib/dry/matcher/maybe_matcher.rb
+- lib/dry/matcher/result_matcher.rb
+- lib/dry/matcher/version.rb
+homepage: https://dry-rb.org/gems/dry-matcher
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  changelog_uri: https://github.com/dry-rb/dry-matcher/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/dry-rb/dry-matcher
+  bug_tracker_uri: https://github.com/dry-rb/dry-matcher/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key:
+specification_version: 4
+summary: Flexible, expressive pattern matching for Ruby
+test_files: []

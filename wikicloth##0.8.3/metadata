@@ -1,0 +1,222 @@
+--- !ruby/object:Gem::Specification
+name: wikicloth
+version: !ruby/object:Gem::Version
+  version: 0.8.3
+  prerelease: 
+platform: ruby
+authors:
+- David Ricciardi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-03-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: &21800440 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *21800440
+- !ruby/object:Gem::Dependency
+  name: expression_parser
+  requirement: &21800020 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *21800020
+- !ruby/object:Gem::Dependency
+  name: twitter-text
+  requirement: &21799600 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *21799600
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: &21799180 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *21799180
+- !ruby/object:Gem::Dependency
+  name: htmlentities
+  requirement: &21798760 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *21798760
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: &21798340 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21798340
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: &21797920 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21797920
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: &21835860 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21835860
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: &21835440 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21835440
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: &21835020 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21835020
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: &21834600 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *21834600
+description: mediawiki parser
+email: nricciar@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README
+- MIT-LICENSE
+files:
+- .gitignore
+- .travis.yml
+- Gemfile
+- MIT-LICENSE
+- README
+- README.textile
+- Rakefile
+- examples/info.rb
+- examples/print.rb
+- examples/template_extractor.rb
+- init.rb
+- lang/de.yml
+- lang/en.yml
+- lib/wikicloth.rb
+- lib/wikicloth/core_ext.rb
+- lib/wikicloth/extension.rb
+- lib/wikicloth/extensions/lua.rb
+- lib/wikicloth/extensions/lua/COPYING
+- lib/wikicloth/extensions/lua/luawrapper.lua
+- lib/wikicloth/extensions/math.rb
+- lib/wikicloth/extensions/poem.rb
+- lib/wikicloth/extensions/references.rb
+- lib/wikicloth/extensions/source.rb
+- lib/wikicloth/i18n.rb
+- lib/wikicloth/namespaces.rb
+- lib/wikicloth/parser.rb
+- lib/wikicloth/section.rb
+- lib/wikicloth/version.rb
+- lib/wikicloth/wiki_buffer.rb
+- lib/wikicloth/wiki_buffer/html_element.rb
+- lib/wikicloth/wiki_buffer/link.rb
+- lib/wikicloth/wiki_buffer/table.rb
+- lib/wikicloth/wiki_buffer/var.rb
+- lib/wikicloth/wiki_link_handler.rb
+- run_tests.rb
+- sample_documents/air_force_one.wiki
+- sample_documents/cheatsheet.wiki
+- sample_documents/default.css
+- sample_documents/elements.wiki
+- sample_documents/george_washington.wiki
+- sample_documents/images.wiki
+- sample_documents/klaus_schulze.wiki
+- sample_documents/lists.wiki
+- sample_documents/lua.wiki
+- sample_documents/pipe_trick.wiki
+- sample_documents/random.wiki
+- sample_documents/tv.wiki
+- sample_documents/wiki.png
+- sample_documents/wiki_tables.wiki
+- tasks/wikicloth_tasks.rake
+- test/locales.yml
+- test/test_helper.rb
+- test/wiki_cloth_test.rb
+- wikicloth.gemspec
+homepage: http://github.com/nricciar/wikicloth
+licenses:
+- MIT
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.11
+signing_key: 
+specification_version: 3
+summary: An implementation of the mediawiki markup in ruby
+test_files: []

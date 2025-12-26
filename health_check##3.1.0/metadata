@@ -1,0 +1,177 @@
+--- !ruby/object:Gem::Specification
+name: health_check
+version: !ruby/object:Gem::Version
+  version: 3.1.0
+platform: ruby
+authors:
+- Ian Heggie
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-05-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: smarter_bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.1.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.8.3
+- !ruby/object:Gem::Dependency
+  name: shoulda
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.11.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.11.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+description: "  \tSimple health check of Rails app for uptime monitoring with Pingdom,
+  NewRelic, EngineYard etc.\n"
+email:
+- ian@heggie.biz
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+files:
+- ".document"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG
+- Gemfile
+- MIT-LICENSE
+- README.rdoc
+- Rakefile
+- Vagrantfile
+- config/routes.rb
+- health_check.gemspec
+- init.rb
+- lib/health_check.rb
+- lib/health_check/base_health_check.rb
+- lib/health_check/elasticsearch_health_check.rb
+- lib/health_check/health_check_controller.rb
+- lib/health_check/health_check_routes.rb
+- lib/health_check/middleware_health_check.rb
+- lib/health_check/rabbitmq_health_check.rb
+- lib/health_check/redis_health_check.rb
+- lib/health_check/resque_health_check.rb
+- lib/health_check/s3_health_check.rb
+- lib/health_check/sidekiq_health_check.rb
+- lib/health_check/utils.rb
+- lib/health_check/version.rb
+- test/fake_smtp_server
+- test/init_variables
+- test/migrate/empty/do_not_remove.txt
+- test/migrate/nine/9_create_countries.rb
+- test/migrate/twelve/011_create_roles.roles.rb
+- test/migrate/twelve/012_create_users.rb
+- test/migrate/twelve/9_create_countries.rb
+- test/provision_vagrant
+- test/rails_5.0.gemfile
+- test/rails_5.1.gemfile
+- test/rails_5.2.gemfile
+- test/rails_6.0.gemfile
+- test/rails_6.1.gemfile
+- test/rails_6.2.gemfile
+- test/rails_edge.gemfile
+- test/setup_railsapp
+- test/test_with_railsapp
+- test/testurl
+homepage: https://github.com/ianheggie/health_check
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.2.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.15
+signing_key:
+specification_version: 4
+summary: Simple health check of Rails app for uptime monitoring with Pingdom, NewRelic,
+  EngineYard etc.
+test_files:
+- test/fake_smtp_server
+- test/init_variables
+- test/migrate/empty/do_not_remove.txt
+- test/migrate/nine/9_create_countries.rb
+- test/migrate/twelve/011_create_roles.roles.rb
+- test/migrate/twelve/012_create_users.rb
+- test/migrate/twelve/9_create_countries.rb
+- test/provision_vagrant
+- test/rails_5.0.gemfile
+- test/rails_5.1.gemfile
+- test/rails_5.2.gemfile
+- test/rails_6.0.gemfile
+- test/rails_6.1.gemfile
+- test/rails_6.2.gemfile
+- test/rails_edge.gemfile
+- test/setup_railsapp
+- test/test_with_railsapp
+- test/testurl

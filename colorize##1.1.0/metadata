@@ -1,0 +1,57 @@
+--- !ruby/object:Gem::Specification
+name: colorize
+version: !ruby/object:Gem::Version
+  version: 1.1.0
+platform: ruby
+authors:
+- Michał Kalbarczyk
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-06-23 00:00:00.000000000 Z
+dependencies: []
+description: Extends String class or add a ColorizedString with methods to set text
+  color, background color and text effects.
+email: fazibear@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- Rakefile
+- colorize.gemspec
+- lib/colorize.rb
+- lib/colorize/class_methods.rb
+- lib/colorize/errors.rb
+- lib/colorize/instance_methods.rb
+- lib/colorize/version.rb
+- lib/colorized_string.rb
+- test/test_colorize.rb
+- test/test_colorized_string.rb
+homepage: http://github.com/fazibear/colorize
+licenses:
+- GPL-2.0
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.14
+signing_key:
+specification_version: 4
+summary: Ruby gem for colorizing text using ANSI escape sequences.
+test_files: []

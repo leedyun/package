@@ -1,0 +1,220 @@
+--- !ruby/object:Gem::Specification
+name: rubyntlm
+version: !ruby/object:Gem::Version
+  version: 0.6.5
+platform: ruby
+authors:
+- Kohei Kajimoto
+- Paul Morton
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-06-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: github_changelog_generator
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.14.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.14.3
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.11'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby/NTLM provides message creator and parser for the NTLM authentication.
+email:
+- koheik@gmail.com
+- paul.e.morton@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".devcontainer/devcontainer.json"
+- ".github/dependabot.yml"
+- ".github/workflows/build.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- examples/http.rb
+- examples/imap.rb
+- examples/smtp.rb
+- lib/net/ntlm.rb
+- lib/net/ntlm/blob.rb
+- lib/net/ntlm/channel_binding.rb
+- lib/net/ntlm/client.rb
+- lib/net/ntlm/client/session.rb
+- lib/net/ntlm/encode_util.rb
+- lib/net/ntlm/exceptions.rb
+- lib/net/ntlm/field.rb
+- lib/net/ntlm/field_set.rb
+- lib/net/ntlm/int16_le.rb
+- lib/net/ntlm/int32_le.rb
+- lib/net/ntlm/int64_le.rb
+- lib/net/ntlm/md4.rb
+- lib/net/ntlm/message.rb
+- lib/net/ntlm/message/type0.rb
+- lib/net/ntlm/message/type1.rb
+- lib/net/ntlm/message/type2.rb
+- lib/net/ntlm/message/type3.rb
+- lib/net/ntlm/rc4.rb
+- lib/net/ntlm/security_buffer.rb
+- lib/net/ntlm/string.rb
+- lib/net/ntlm/target_info.rb
+- lib/net/ntlm/version.rb
+- lib/rubyntlm.rb
+- rubyntlm.gemspec
+- spec/lib/net/ntlm/blob_spec.rb
+- spec/lib/net/ntlm/channel_binding_spec.rb
+- spec/lib/net/ntlm/client/session_spec.rb
+- spec/lib/net/ntlm/client_spec.rb
+- spec/lib/net/ntlm/encode_util_spec.rb
+- spec/lib/net/ntlm/field_set_spec.rb
+- spec/lib/net/ntlm/field_spec.rb
+- spec/lib/net/ntlm/int16_le_spec.rb
+- spec/lib/net/ntlm/int32_le_spec.rb
+- spec/lib/net/ntlm/int64_le_spec.rb
+- spec/lib/net/ntlm/message/type0_spec.rb
+- spec/lib/net/ntlm/message/type1_spec.rb
+- spec/lib/net/ntlm/message/type2_spec.rb
+- spec/lib/net/ntlm/message/type3_spec.rb
+- spec/lib/net/ntlm/message_spec.rb
+- spec/lib/net/ntlm/security_buffer_spec.rb
+- spec/lib/net/ntlm/string_spec.rb
+- spec/lib/net/ntlm/target_info_spec.rb
+- spec/lib/net/ntlm/version_spec.rb
+- spec/lib/net/ntlm_spec.rb
+- spec/spec_helper.rb
+- spec/support/certificates/sha_256_hash.pem
+- spec/support/shared/examples/net/ntlm/field_shared.rb
+- spec/support/shared/examples/net/ntlm/fieldset_shared.rb
+- spec/support/shared/examples/net/ntlm/int_shared.rb
+- spec/support/shared/examples/net/ntlm/message_shared.rb
+homepage: https://github.com/winrb/rubyntlm
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key: 
+specification_version: 4
+summary: Ruby/NTLM library.
+test_files:
+- spec/lib/net/ntlm/blob_spec.rb
+- spec/lib/net/ntlm/channel_binding_spec.rb
+- spec/lib/net/ntlm/client/session_spec.rb
+- spec/lib/net/ntlm/client_spec.rb
+- spec/lib/net/ntlm/encode_util_spec.rb
+- spec/lib/net/ntlm/field_set_spec.rb
+- spec/lib/net/ntlm/field_spec.rb
+- spec/lib/net/ntlm/int16_le_spec.rb
+- spec/lib/net/ntlm/int32_le_spec.rb
+- spec/lib/net/ntlm/int64_le_spec.rb
+- spec/lib/net/ntlm/message/type0_spec.rb
+- spec/lib/net/ntlm/message/type1_spec.rb
+- spec/lib/net/ntlm/message/type2_spec.rb
+- spec/lib/net/ntlm/message/type3_spec.rb
+- spec/lib/net/ntlm/message_spec.rb
+- spec/lib/net/ntlm/security_buffer_spec.rb
+- spec/lib/net/ntlm/string_spec.rb
+- spec/lib/net/ntlm/target_info_spec.rb
+- spec/lib/net/ntlm/version_spec.rb
+- spec/lib/net/ntlm_spec.rb
+- spec/spec_helper.rb
+- spec/support/certificates/sha_256_hash.pem
+- spec/support/shared/examples/net/ntlm/field_shared.rb
+- spec/support/shared/examples/net/ntlm/fieldset_shared.rb
+- spec/support/shared/examples/net/ntlm/int_shared.rb
+- spec/support/shared/examples/net/ntlm/message_shared.rb

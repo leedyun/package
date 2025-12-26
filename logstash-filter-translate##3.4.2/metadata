@@ -1,0 +1,242 @@
+--- !ruby/object:Gem::Specification
+name: logstash-filter-translate
+version: !ruby/object:Gem::Version
+  version: 3.4.2
+platform: ruby
+authors:
+- Elastic
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-06-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+  name: logstash-core-plugin-api
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.60'
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '2.99'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  name: logstash-mixin-ecs_compatibility_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: logstash-mixin-validator_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: logstash-mixin-deprecation_logger_support
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  name: logstash-mixin-scheduler
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.1.0
+  name: psych
+  prerelease: false
+  type: :runtime
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 5.1.0
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: logstash-devutils
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: rspec-sequencing
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: rspec-wait
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  name: benchmark-ips
+  prerelease: false
+  type: :development
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem is a Logstash plugin required to be installed on top of the
+  Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This
+  gem is not a stand-alone program
+email: info@elastic.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- CONTRIBUTORS
+- Gemfile
+- LICENSE
+- NOTICE.TXT
+- README.md
+- docs/index.asciidoc
+- lib/logstash/filters/array_of_maps_value_update.rb
+- lib/logstash/filters/array_of_values_update.rb
+- lib/logstash/filters/dictionary/csv_file.rb
+- lib/logstash/filters/dictionary/file.rb
+- lib/logstash/filters/dictionary/json_file.rb
+- lib/logstash/filters/dictionary/memory.rb
+- lib/logstash/filters/dictionary/yaml_file.rb
+- lib/logstash/filters/dictionary/yaml_visitor.rb
+- lib/logstash/filters/fetch_strategy/file.rb
+- lib/logstash/filters/fetch_strategy/memory.rb
+- lib/logstash/filters/single_value_update.rb
+- lib/logstash/filters/translate.rb
+- logstash-filter-translate.gemspec
+- spec/filters/benchmark_rspec.rb
+- spec/filters/scheduling_spec.rb
+- spec/filters/translate_spec.rb
+- spec/filters/yaml_visitor_spec.rb
+- spec/fixtures/dict-wrong.yml
+- spec/fixtures/dict.csv
+- spec/fixtures/dict.json
+- spec/fixtures/dict.other
+- spec/fixtures/dict.yml
+- spec/fixtures/regex_dict.csv
+- spec/fixtures/regex_union_dict.csv
+- spec/fixtures/tag-map-dict.yml
+- spec/fixtures/tag-omap-dict.yml
+- spec/support/build_huge_dictionaries.rb
+- spec/support/rspec_wait_handler_helper.rb
+homepage: http://www.elastic.co/guide/en/logstash/current/index.html
+licenses:
+- Apache License (2.0)
+metadata:
+  logstash_plugin: 'true'
+  logstash_group: filter
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.33
+signing_key:
+specification_version: 4
+summary: Replaces field contents based on a hash or YAML file
+test_files:
+- spec/filters/benchmark_rspec.rb
+- spec/filters/scheduling_spec.rb
+- spec/filters/translate_spec.rb
+- spec/filters/yaml_visitor_spec.rb
+- spec/fixtures/dict-wrong.yml
+- spec/fixtures/dict.csv
+- spec/fixtures/dict.json
+- spec/fixtures/dict.other
+- spec/fixtures/dict.yml
+- spec/fixtures/regex_dict.csv
+- spec/fixtures/regex_union_dict.csv
+- spec/fixtures/tag-map-dict.yml
+- spec/fixtures/tag-omap-dict.yml
+- spec/support/build_huge_dictionaries.rb
+- spec/support/rspec_wait_handler_helper.rb

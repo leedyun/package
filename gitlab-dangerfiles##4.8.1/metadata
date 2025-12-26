@@ -1,0 +1,289 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-dangerfiles
+version: !ruby/object:Gem::Version
+  version: 4.8.1
+platform: ruby
+authors:
+- GitLab
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2025-01-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: danger-gitlab
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 8.0.0
+- !ruby/object:Gem::Dependency
+  name: danger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 9.3.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 9.3.0
+- !ruby/object:Gem::Dependency
+  name: climate_control
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: gitlab-styles
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.7.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.7.3
+- !ruby/object:Gem::Dependency
+  name: lefthook
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rspec-parameterized
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: rubocop-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.21.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.21.2
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This gem provides common Dangerfile and plugins for GitLab projects.
+email:
+- gitlab_rubygems@gitlab.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".gitlab/CODEOWNERS"
+- ".gitlab/changelog_config.yml"
+- ".gitlab/merge_request_templates/Release.md"
+- ".gitpod.yml"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".yardopts"
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Dangerfile
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- fixtures/emojis/aliases.json
+- fixtures/emojis/digests.json
+- gitlab-dangerfiles.gemspec
+- lefthook.yml
+- lib/danger/plugins/changelog.rb
+- lib/danger/plugins/internal/helper.rb
+- lib/danger/plugins/roulette.rb
+- lib/danger/rules/changelog/Dangerfile
+- lib/danger/rules/changes_size/Dangerfile
+- lib/danger/rules/commit_messages/Dangerfile
+- lib/danger/rules/commits_counter/Dangerfile
+- lib/danger/rules/metadata/Dangerfile
+- lib/danger/rules/simple_roulette/Dangerfile
+- lib/danger/rules/type_label/Dangerfile
+- lib/danger/rules/z_add_labels/Dangerfile
+- lib/danger/rules/z_retry_link/Dangerfile
+- lib/gitlab-dangerfiles.rb
+- lib/gitlab/Dangerfile
+- lib/gitlab/dangerfiles.rb
+- lib/gitlab/dangerfiles/approval.rb
+- lib/gitlab/dangerfiles/base_linter.rb
+- lib/gitlab/dangerfiles/capability.rb
+- lib/gitlab/dangerfiles/changes.rb
+- lib/gitlab/dangerfiles/commit_linter.rb
+- lib/gitlab/dangerfiles/config.rb
+- lib/gitlab/dangerfiles/emoji_checker.rb
+- lib/gitlab/dangerfiles/merge_request_linter.rb
+- lib/gitlab/dangerfiles/spec_helper.rb
+- lib/gitlab/dangerfiles/spin.rb
+- lib/gitlab/dangerfiles/spinner.rb
+- lib/gitlab/dangerfiles/task_loader.rb
+- lib/gitlab/dangerfiles/tasks/main.rake
+- lib/gitlab/dangerfiles/teammate.rb
+- lib/gitlab/dangerfiles/title_linting.rb
+- lib/gitlab/dangerfiles/type_label_guesser.rb
+- lib/gitlab/dangerfiles/version.rb
+- lib/gitlab/dangerfiles/weightage.rb
+- lib/gitlab/dangerfiles/weightage/maintainers.rb
+- lib/gitlab/dangerfiles/weightage/reviewers.rb
+homepage: https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  homepage_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles
+  source_code_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles
+  changelog_uri: https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles/-/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: This gem provides common Dangerfile and plugins for GitLab projects.
+test_files: []

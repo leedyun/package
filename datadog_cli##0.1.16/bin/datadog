@@ -1,0 +1,322 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', File.realpath(__FILE__))
+
+require "thor"
+require "http"
+require "json"
+require "yaml"
+require "deep_merge"
+require "fileutils"
+require "tablelize"
+require "colorize"
+require "datadog"
+require "liquid"
+
+puts "Hello from datadog-cli"
+
+module Datadog
+
+  DATADOG_API_KEY  = "DATADOG_API_KEY"
+  DATADOG_APP_KEY  = "DATADOG_APP_KEY"
+  DATADOG_CONFIG   = "DATADOG_CONFIG"
+  DATADOG_ENDPOINT = "https://app.datadoghq.com/api/v1/monitor"
+  DATADOG_HEADERS  = {
+    "Content-Type" => "application/json",
+  }
+
+  class Monitor < Thor
+    class_option :vars, :type => :string
+
+    desc "ls [FILTER] [EXCLUDE]", "Lists all monitors that match FILTER"
+    def ls filter = nil, exclude = false
+      rows = []
+      rows << ["ID", "NAME"]
+      data = _list()
+      data.each do |m|
+        if filter
+          next if exclude == "true" and m["name"].downcase.match /#{filter}/im
+          next if exclude == "false" and not m["name"].downcase.match /#{filter}/im
+        end
+
+        rows << [m["id"], m["name"]]
+      end
+      Tablelize::table rows
+    end
+
+    desc "download DIR [FILTER] [INVERT]", "Downloads all monitors that match FILTER"
+    def download dir, filter = nil, invert = false
+      data = _list()
+      time = Time.now.strftime('%Y%m%d-%H%M%S')
+      dir  = "#{dir}/#{time}"
+      FileUtils.mkdir_p dir unless Dir.exists? dir
+      data.each do |m|
+        if filter
+          if invert == "true" and m["name"].downcase.match filter
+            next
+          elsif not m["name"].downcase.match filter
+            next
+          end
+        end
+
+        json = JSON.pretty_generate(m)
+        file = "#{dir}/#{m['name'].clean}.json"
+        File.write(file, json)
+        print "Download".green, "  #{file}\n"
+      end
+    end
+
+    desc "check PATH", "Checks if monitor(s) from PATH exist"
+    def check path
+      if File.directory? path
+        Dir["#{path}/**/*"].each do |f|
+          check f unless File.directory? f
+        end
+      else
+        if _check(path)
+          print "Exists".green, "   #{path}\n"
+        else
+          print "New".yellow, "      #{path}\n"
+        end
+      end
+    end
+
+    desc "update PATH", "Updates or creates monitor(s) from PATH"
+    def update path
+      if File.directory? path
+        Dir["#{path}/**/*.json"].each do |f|
+          update f unless File.directory? f
+        end
+      else
+        ok = _update(path)
+        if ok.is_a? Numeric
+          print "Updated".cyan,   "   #{path}\n"
+        elsif ok
+          print "Created".green,       "   #{path}\n"
+        else
+          print "Failed".red,       "   #{path}\n"
+          abort "Aborting on failure to update"
+        end
+      end
+    end
+
+    desc "render PATH [VARS]", "Renders template(s) from PATH with a VARS file"
+    def render path, vars = nil
+      if File.directory? path
+        Dir["#{path}/**/*.json.j2"].each do |f|
+          render f, vars unless File.directory? f
+        end
+      else
+        text = _render(path, vars)
+        puts text
+      end
+    end
+
+    desc "generate PATH [DIR] [VARS]", "Renders template(s) from PATH into DIR with a VARS file"
+    def generate path, dir = nil, vars = nil
+      vars ||= options[:vars]
+      if File.directory? path
+        Dir["#{path}/**/*.json.j2"].each do |f|
+          generate f, dir, vars unless File.directory? f
+        end
+      else
+        text = _render(path, vars)
+        base = File.basename(path, ".j2")
+        dir ||= "."
+        FileUtils.mkdir_p dir unless Dir.exists? dir
+        path = "#{dir}/#{base}"
+        File.write(path, text)
+        _lint path
+        print "Wrote".green + "     #{path}\n"
+      end
+    end
+
+    private
+    def _find_keys_from_env
+      api_key = ENV.fetch(DATADOG_API_KEY, nil)
+      app_key = ENV.fetch(DATADOG_APP_KEY, nil)
+
+      if api_key && app_key
+        @api_key = api_key
+        @app_key = app_key
+        return true
+      end
+      false
+    end
+
+    def _find_keys_from_files
+      files = [
+        File.expand_path("./datadog-cli.yaml"),
+        File.expand_path("~/.datadog-cli.yaml"),
+        "/etc/datadog-cli.yaml",
+      ]
+
+      config = ENV.fetch(DATADOG_CONFIG, nil)
+      files.unshift config if config
+
+      files.each do |file|
+        if File.exists? file
+          config = YAML.load_file(file)["creds"]
+          _log "Error", "Datadog keys were not found in #{file}" unless config
+          @api_key = config["api_key"]
+          @app_key = config["app_key"]
+          return true
+        end
+      end
+      false
+    end
+
+    def _find_keys
+      return if _find_keys_from_env
+      return if _find_keys_from_files
+      abort "Error: Could not found any datadog env keys or any config file."
+    end
+
+    def _init
+      return if @init
+      _find_keys
+      puts "==> Using API_KEY #{@api_key} and APP_KEY #{@app_key}"
+      @params = "api_key=#{@api_key}&application_key=#{@app_key}"
+      @init   = true
+    end
+
+    def _request method, url = "", body = nil
+      url = "#{DATADOG_ENDPOINT}#{url}?#{@params}"
+      res = HTTP.request(method, url, body: body, headers: DATADOG_HEADERS)
+      if res.code >= 300
+        print "Error".red, "    Request #{method} #{url} failed.\n#{res.to_s}\n"
+        return false
+      end
+      res.body.to_s
+    end
+
+    def _list
+      return @list if @list
+      _init
+      json  = _request("get")
+      @list = JSON.load(json)
+    end
+
+    def _check file
+      json = File.read(file)
+      data = JSON.parse(json)
+      name = data["name"]
+      _list().each do |m|
+        return true if m["name"] == name
+        return true if m["name"].hyphenate == name
+      end
+      return false
+    end
+
+    def _check_name data
+      _list().each do |m|
+        return m["id"] if m["name"] == data["name"]
+      end
+      return false
+    end
+
+    def _get id, raw = false
+      _init
+      json = _request("get", "/#{id}").body.to_s
+      return json if raw
+      JSON.load(json)
+    end
+
+    def _clean data
+      data.delete "id"
+      data.delete "org_id"
+      data.delete "creator"
+      data.delete "created"
+      data.delete "created_at"
+      data.delete "modified"
+      data
+    end
+
+    def _update file
+      _init
+      _lint file
+
+      json = File.read(file)
+      data = JSON.load(json)
+      data = _clean(data)
+
+      id = _check_name data
+      if id
+        return id if _request("put", "/#{id}", json)
+      else
+        return true if _request("post", "", json)
+      end
+
+      false
+    end
+
+    def _lint file
+      `jsonlint #{file}`
+      return true if $?.exitstatus == 0
+      abort "Error: ".red + "File '#{file}' failed to lint."
+    end
+
+    def _get_vars vars
+      file = _find_vars(vars)
+      data = YAML.load_file(file)
+
+      if data["import"]
+        impf = "#{File.dirname(file)}/#{data["import"]}"
+        impd = YAML.load_file(impf)
+        data.deep_merge(impd)
+      end
+
+      data
+    end
+
+    def _self_render file
+      vars      = _get_vars(file)
+      # template  = File.read(file)
+      # renderer  = Liquid::Template.parse(template)
+      # output    = renderer.render(vars)
+    end
+
+    def _render file, vars
+      vars      = _self_render(vars)
+      template  = _encode_template(File.read(file))
+      renderer  = Liquid::Template.parse(template)
+      output    = _decode_template(renderer.render(vars))
+    end
+
+    def _encode_template text
+      text
+        .gsub(/\{\{#(.*?)\}\}/,   "#{5.chr}\\1#{3.chr}")
+        .gsub(/\{\{\/(.*?)\}\}/,  "#{6.chr}\\1#{3.chr}")
+        .gsub(/\{\{\^(.*?)\}\}/,  "#{7.chr}\\1#{3.chr}")
+    end
+
+    def _decode_template text
+      text
+        .gsub(/#{5.chr}(.*?)#{3.chr}/, "{{#\\1}}")
+        .gsub(/#{6.chr}(.*?)#{3.chr}/, "{{\/\\1}}")
+        .gsub(/#{7.chr}(.*?)#{3.chr}/, "{{\^\\1}}")
+    end
+
+    def _find_vars vars
+      # files = [vars, options[:vars], "#{File.dirname(file)}/vars.yaml"]
+      files = [vars, options[:vars]]
+      files.each do |file|
+        return file if file and File.exist? file
+      end
+      abort "Error: Couldn't find a valid vars file." +
+        " You can always pass it via --vars <path/to/vars.yaml>."
+    end
+
+  end
+
+  class Cli < Thor
+    desc "version", "Shows the version"
+    def version
+      puts "v#{VERSION}"
+    end
+
+    desc "monitor COMMAND", "Manage your datadog monitors"
+    subcommand "monitor", Monitor
+  end
+end
+
+Datadog::Cli.start(ARGV)

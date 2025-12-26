@@ -1,0 +1,257 @@
+--- !ruby/object:Gem::Specification
+name: attr_encrypted
+version: !ruby/object:Gem::Version
+  version: 4.1.1
+platform: ruby
+authors:
+- Sean Huber
+- S. Brent Faulkner
+- William Monk
+- Stephen Aghaulor
+- Josh Branham
+- Mike Vastola
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-09-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: encryptor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sequel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.5.4
+- !ruby/object:Gem::Dependency
+  name: dm-sqlite-adapter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov-rcov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Generates attr_accessors that encrypt and decrypt attributes transparently
+email:
+- seah@shuber.io
+- sbfaulkner@gmail.com
+- billy.monk@gmail.com
+- saghaulor@gmail.com
+- josh.php@gmail.com
+- Mike@Vasto.la
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/CI.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- attr_encrypted.gemspec
+- checksum/attr_encrypted-3.0.0.gem.sha256
+- checksum/attr_encrypted-3.0.0.gem.sha512
+- checksum/attr_encrypted-3.0.1.gem.sha256
+- checksum/attr_encrypted-3.0.1.gem.sha512
+- checksum/attr_encrypted-3.0.2.gem.sha256
+- checksum/attr_encrypted-3.0.2.gem.sha512
+- checksum/attr_encrypted-3.0.3.gem.sha256
+- checksum/attr_encrypted-3.0.3.gem.sha512
+- checksum/attr_encrypted-3.1.0.gem.sha256
+- checksum/attr_encrypted-3.1.0.gem.sha512
+- lib/attr_encrypted.rb
+- lib/attr_encrypted/adapters/active_record.rb
+- lib/attr_encrypted/adapters/sequel.rb
+- lib/attr_encrypted/version.rb
+- test/active_record_test.rb
+- test/attr_encrypted_test.rb
+- test/compatibility_test.rb
+- test/legacy_active_record_test.rb
+- test/legacy_attr_encrypted_test.rb
+- test/legacy_compatibility_test.rb
+- test/legacy_sequel_test.rb
+- test/run.sh
+- test/sequel_test.rb
+- test/test_helper.rb
+homepage: http://github.com/attr-encrypted/attr_encrypted
+licenses:
+- MIT
+metadata: {}
+post_install_message: |2+
+
+
+
+  WARNING: Using `#encrypted_attributes` is no longer supported. Instead, use `#attr_encrypted_encrypted_attributes` to avoid
+    collision with Active Record 7 native encryption.
+
+
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Encrypt and decrypt attributes
+test_files:
+- test/active_record_test.rb
+- test/attr_encrypted_test.rb
+- test/compatibility_test.rb
+- test/legacy_active_record_test.rb
+- test/legacy_attr_encrypted_test.rb
+- test/legacy_compatibility_test.rb
+- test/legacy_sequel_test.rb
+- test/run.sh
+- test/sequel_test.rb
+- test/test_helper.rb
+...

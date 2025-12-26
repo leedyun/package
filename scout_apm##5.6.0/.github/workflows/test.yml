@@ -1,0 +1,64 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 2.6
+      - run: bundle exec rubocop
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ruby: 2.5
+          - ruby: 2.6
+          - ruby: 2.6
+            gemfile: gems/typhoeus.gemfile
+            test_features: "typhoeus"
+          - ruby: 2.6
+            gemfile: gems/octoshark.gemfile
+          - ruby: 2.7
+          - ruby: 2.7
+            prepend: true
+          - ruby: "3.0"
+          - ruby: "3.0"
+            prepend: true
+          - ruby: "3.0"
+            gemfile: gems/instruments.gemfile
+            test_features: "instruments"
+          - ruby: "3.0"
+            gemfile: gems/instruments.gemfile
+            prepend: true
+            test_features: "instruments"
+          - ruby: "3.0"
+            gemfile: gems/sidekiq.gemfile
+            test_features: "sidekiq_install"
+          - ruby: 3.1
+          - ruby: 3.2
+            gemfile: gems/sqlite3-v2.gemfile
+          - ruby: 3.3
+            gemfile: gems/sqlite3-v2.gemfile
+    env:
+      BUNDLE_GEMFILE: ${{ matrix.gemfile }}
+      SCOUT_TEST_FEATURES: ${{ matrix.test_features }}
+      SCOUT_USE_PREPEND: ${{ matrix.prepend }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          bundler: ${{matrix.bundler}}
+          ruby-version: ${{ matrix.ruby }}
+      - run: bundle exec rake

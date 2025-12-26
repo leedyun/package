@@ -1,0 +1,76 @@
+--- !ruby/object:Gem::Specification
+name: redis-client
+version: !ruby/object:Gem::Version
+  version: 0.23.2
+platform: ruby
+authors:
+- Jean Boussier
+bindir: bin
+cert_chain: []
+date: 2025-01-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: connection_pool
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+email:
+- jean.boussier@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.md
+- README.md
+- lib/redis-client.rb
+- lib/redis_client.rb
+- lib/redis_client/circuit_breaker.rb
+- lib/redis_client/command_builder.rb
+- lib/redis_client/config.rb
+- lib/redis_client/connection_mixin.rb
+- lib/redis_client/decorator.rb
+- lib/redis_client/middlewares.rb
+- lib/redis_client/pid_cache.rb
+- lib/redis_client/pooled.rb
+- lib/redis_client/ruby_connection.rb
+- lib/redis_client/ruby_connection/buffered_io.rb
+- lib/redis_client/ruby_connection/resp3.rb
+- lib/redis_client/sentinel_config.rb
+- lib/redis_client/url_config.rb
+- lib/redis_client/version.rb
+homepage: https://github.com/redis-rb/redis-client
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  homepage_uri: https://github.com/redis-rb/redis-client
+  source_code_uri: https://github.com/redis-rb/redis-client
+  changelog_uri: https://github.com/redis-rb/redis-client/blob/master/CHANGELOG.md
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.6.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Simple low-level client for Redis 6+
+test_files: []

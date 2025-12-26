@@ -1,0 +1,236 @@
+--- !ruby/object:Gem::Specification
+name: racecar
+version: !ruby/object:Gem::Version
+  version: 2.11.0
+platform: ruby
+authors:
+- Daniel Schierbeck
+- Benjamin Quorning
+autorequire: 
+bindir: exe
+cert_chain: []
+date: 2024-06-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: king_konf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: rdkafka
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.15.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.15.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.13'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.13'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dogstatsd-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- dschierbeck@zendesk.com
+- bquorning@zendesk.com
+executables:
+- racecar
+- racecarctl
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".github/workflows/publish.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Dockerfile
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- Procfile
+- README.md
+- Rakefile
+- bin/console
+- bin/setup
+- docker-compose.yml
+- examples/batch_consumer.rb
+- examples/cat_consumer.rb
+- examples/producing_consumer.rb
+- exe/racecar
+- exe/racecarctl
+- extra/datadog-dashboard.json
+- lib/ensure_hash_compact.rb
+- lib/generators/racecar/consumer_generator.rb
+- lib/generators/racecar/install_generator.rb
+- lib/generators/templates/consumer.rb.erb
+- lib/generators/templates/racecar.yml.erb
+- lib/racecar.rb
+- lib/racecar/cli.rb
+- lib/racecar/config.rb
+- lib/racecar/consumer.rb
+- lib/racecar/consumer_set.rb
+- lib/racecar/ctl.rb
+- lib/racecar/daemon.rb
+- lib/racecar/datadog.rb
+- lib/racecar/delivery_callback.rb
+- lib/racecar/erroneous_state_error.rb
+- lib/racecar/heroku.rb
+- lib/racecar/instrumenter.rb
+- lib/racecar/liveness_probe.rb
+- lib/racecar/message.rb
+- lib/racecar/message_delivery_error.rb
+- lib/racecar/null_instrumenter.rb
+- lib/racecar/parallel_runner.rb
+- lib/racecar/pause.rb
+- lib/racecar/producer.rb
+- lib/racecar/rails_config_file_loader.rb
+- lib/racecar/rebalance_listener.rb
+- lib/racecar/runner.rb
+- lib/racecar/version.rb
+- racecar.gemspec
+homepage: https://github.com/zendesk/racecar
+licenses:
+- Apache License Version 2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key: 
+specification_version: 4
+summary: A framework for running Kafka consumers
+test_files: []

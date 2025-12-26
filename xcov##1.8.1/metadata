@@ -1,0 +1,230 @@
+--- !ruby/object:Gem::Specification
+name: xcov
+version: !ruby/object:Gem::Version
+  version: 1.8.1
+platform: ruby
+authors:
+- Carlos Vidal
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-03-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fastlane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.141.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.141.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: slack-notifier
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: xcodeproj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: terminal-table
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multipart-post
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: xcresult
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.2.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: xcov is a friendly visualizer for Xcode's code coverage files
+email:
+- nakioparkour@gmail.com
+executables:
+- xcov
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- assets/images/file_cpp.png
+- assets/images/file_objc.png
+- assets/images/file_swift.png
+- assets/images/xcov_logo.png
+- assets/javascripts/application.js
+- assets/javascripts/bootstrap.min.js
+- assets/javascripts/jquery.min.js
+- assets/javascripts/main.js
+- assets/stylesheets/application.css
+- assets/stylesheets/bootstrap.min.css
+- assets/stylesheets/main.css
+- assets/stylesheets/opensans.css
+- bin/xcov
+- lib/xcov-core.rb
+- lib/xcov-core/bin/xcov-core
+- lib/xcov-core/bin/xcov-core-legacy
+- lib/xcov-core/version.rb
+- lib/xcov.rb
+- lib/xcov/commands_generator.rb
+- lib/xcov/coveralls_handler.rb
+- lib/xcov/error_handler.rb
+- lib/xcov/ignore_handler.rb
+- lib/xcov/manager.rb
+- lib/xcov/model/base.rb
+- lib/xcov/model/function.rb
+- lib/xcov/model/line.rb
+- lib/xcov/model/range.rb
+- lib/xcov/model/report.rb
+- lib/xcov/model/source.rb
+- lib/xcov/model/target.rb
+- lib/xcov/options.rb
+- lib/xcov/project_extensions.rb
+- lib/xcov/slack_poster.rb
+- lib/xcov/version.rb
+- views/file.erb
+- views/function.erb
+- views/report.erb
+- views/target.erb
+homepage: https://github.com/fastlane-community/xcov
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.3
+signing_key:
+specification_version: 4
+summary: xcov is a friendly visualizer for Xcode's code coverage files
+test_files: []

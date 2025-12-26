@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: httparty
+version: !ruby/object:Gem::Version
+  version: 0.22.0
+platform: ruby
+authors:
+- John Nunemaker
+- Sandro Turriate
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: csv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multi_xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.2
+- !ruby/object:Gem::Dependency
+  name: mini_mime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+description: Makes http fun! Also, makes consuming restful web services dead easy.
+email:
+- nunemaker@gmail.com
+executables:
+- httparty
+extensions: []
+extra_rdoc_files: []
+files:
+- ".editorconfig"
+- ".github/dependabot.yml"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CONTRIBUTING.md
+- Changelog.md
+- Gemfile
+- Guardfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- bin/httparty
+- cucumber.yml
+- docs/README.md
+- examples/README.md
+- examples/aaws.rb
+- examples/basic.rb
+- examples/body_stream.rb
+- examples/crack.rb
+- examples/custom_parsers.rb
+- examples/delicious.rb
+- examples/google.rb
+- examples/headers_and_user_agents.rb
+- examples/idn.rb
+- examples/logging.rb
+- examples/microsoft_graph.rb
+- examples/multipart.rb
+- examples/nokogiri_html_parser.rb
+- examples/peer_cert.rb
+- examples/rescue_json.rb
+- examples/rubyurl.rb
+- examples/stackexchange.rb
+- examples/stream_download.rb
+- examples/tripit_sign_in.rb
+- examples/twitter.rb
+- examples/whoismyrep.rb
+- httparty.gemspec
+- lib/httparty.rb
+- lib/httparty/connection_adapter.rb
+- lib/httparty/cookie_hash.rb
+- lib/httparty/decompressor.rb
+- lib/httparty/exceptions.rb
+- lib/httparty/hash_conversions.rb
+- lib/httparty/headers_processor.rb
+- lib/httparty/logger/apache_formatter.rb
+- lib/httparty/logger/curl_formatter.rb
+- lib/httparty/logger/logger.rb
+- lib/httparty/logger/logstash_formatter.rb
+- lib/httparty/module_inheritable_attributes.rb
+- lib/httparty/net_digest_auth.rb
+- lib/httparty/parser.rb
+- lib/httparty/request.rb
+- lib/httparty/request/body.rb
+- lib/httparty/request/multipart_boundary.rb
+- lib/httparty/response.rb
+- lib/httparty/response/headers.rb
+- lib/httparty/response_fragment.rb
+- lib/httparty/text_encoder.rb
+- lib/httparty/utils.rb
+- lib/httparty/version.rb
+- script/release
+- website/css/common.css
+- website/index.html
+homepage: https://github.com/jnunemaker/httparty
+licenses:
+- MIT
+metadata: {}
+post_install_message: When you HTTParty, you must party hard!
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Makes http fun! Also, makes consuming restful web services dead easy.
+test_files: []

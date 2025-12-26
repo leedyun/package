@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: rswag-ui
+version: !ruby/object:Gem::Version
+  version: 2.16.0
+platform: ruby
+authors:
+- Richie Morris
+- Greg Myers
+- Jay Danielian
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '8.1'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.21.2
+description: 'Expose beautiful API documentation, powered by Swagger JSON endpoints,
+  including a UI to explore and test operations. More about the OpenAPI initiative
+  here: http://spec.openapis.org/'
+email:
+- domaindrivendev@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- Rakefile
+- lib/generators/rswag/ui/custom/USAGE
+- lib/generators/rswag/ui/custom/custom_generator.rb
+- lib/generators/rswag/ui/install/USAGE
+- lib/generators/rswag/ui/install/install_generator.rb
+- lib/generators/rswag/ui/install/templates/rswag_ui.rb
+- lib/rswag/ui.rb
+- lib/rswag/ui/basic_auth.rb
+- lib/rswag/ui/configuration.rb
+- lib/rswag/ui/engine.rb
+- lib/rswag/ui/index.erb
+- lib/rswag/ui/middleware.rb
+- lib/tasks/rswag-ui_tasks.rake
+- node_modules/swagger-ui-dist/LICENSE
+- node_modules/swagger-ui-dist/NOTICE
+- node_modules/swagger-ui-dist/README.md
+- node_modules/swagger-ui-dist/absolute-path.js
+- node_modules/swagger-ui-dist/favicon-16x16.png
+- node_modules/swagger-ui-dist/favicon-32x32.png
+- node_modules/swagger-ui-dist/index.css
+- node_modules/swagger-ui-dist/index.html
+- node_modules/swagger-ui-dist/index.js
+- node_modules/swagger-ui-dist/oauth2-redirect.html
+- node_modules/swagger-ui-dist/package.json
+- node_modules/swagger-ui-dist/swagger-initializer.js
+- node_modules/swagger-ui-dist/swagger-ui-bundle.js
+- node_modules/swagger-ui-dist/swagger-ui-bundle.js.map
+- node_modules/swagger-ui-dist/swagger-ui-es-bundle-core.js
+- node_modules/swagger-ui-dist/swagger-ui-es-bundle-core.js.map
+- node_modules/swagger-ui-dist/swagger-ui-es-bundle.js
+- node_modules/swagger-ui-dist/swagger-ui-es-bundle.js.map
+- node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js
+- node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js.map
+- node_modules/swagger-ui-dist/swagger-ui.css
+- node_modules/swagger-ui-dist/swagger-ui.css.map
+- node_modules/swagger-ui-dist/swagger-ui.js
+- node_modules/swagger-ui-dist/swagger-ui.js.map
+homepage: https://github.com/rswag/rswag
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key: 
+specification_version: 4
+summary: A Rails Engine that includes swagger-ui and powers it from configured OpenAPI
+  (formerly named Swagger) endpoints
+test_files: []

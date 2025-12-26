@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification
+name: angularjs-rails
+version: !ruby/object:Gem::Version
+  version: 1.8.0
+platform: ruby
+authors:
+- Hirav Gandhi
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-07-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: versionomy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Injects Angular.js into your asset pipeline as well as other Angular
+  modules.
+email: hgandhi@alumni.stanford.edu
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- lib/angularjs-rails.rb
+- lib/angularjs-rails/engine.rb
+- lib/angularjs-rails/sprockets.rb
+- lib/angularjs-rails/version.rb
+- vendor/assets/javascripts/angular-animate.js
+- vendor/assets/javascripts/angular-aria.js
+- vendor/assets/javascripts/angular-cookies.js
+- vendor/assets/javascripts/angular-loader.js
+- vendor/assets/javascripts/angular-message-format.js
+- vendor/assets/javascripts/angular-messages.js
+- vendor/assets/javascripts/angular-mocks.js
+- vendor/assets/javascripts/angular-parse-ext.js
+- vendor/assets/javascripts/angular-resource.js
+- vendor/assets/javascripts/angular-route.js
+- vendor/assets/javascripts/angular-sanitize.js
+- vendor/assets/javascripts/angular-touch.js
+- vendor/assets/javascripts/angular.js
+- vendor/assets/javascripts/unstable/angular2-polyfills.js
+- vendor/assets/javascripts/unstable/angular2.js
+homepage: https://github.com/hiravgandhi/angularjs-rails/
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.3.0
+signing_key: 
+specification_version: 4
+summary: Angular.js on Rails
+test_files: []

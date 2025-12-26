@@ -1,0 +1,160 @@
+--- !ruby/object:Gem::Specification
+name: daemons
+version: !ruby/object:Gem::Version
+  version: 1.4.1
+platform: ruby
+authors:
+- Thomas Uehlinger
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2021-08-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 12.3.3
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: |2
+      Daemons provides an easy way to wrap existing ruby scripts (for example a
+      self-written server)  to be run as a daemon and to be controlled by simple
+      start/stop/restart commands.
+
+      You can also call blocks as daemons and control them from the parent or just
+      daemonize the current process.
+
+      Besides this basic functionality, daemons offers many advanced features like
+      exception backtracing and logging (in case your ruby script crashes) and
+      monitoring and automatic restarting of your processes if they crash.
+email: thomas.uehinger@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- Releases
+- examples/call/call.rb
+- examples/call/call_monitor.rb
+- examples/daemonize/daemonize.rb
+- examples/run/ctrl_crash.rb
+- examples/run/ctrl_custom_logfiles.rb
+- examples/run/ctrl_exec.rb
+- examples/run/ctrl_exit.rb
+- examples/run/ctrl_hanging.rb
+- examples/run/ctrl_keep_pid_files.rb
+- examples/run/ctrl_monitor.rb
+- examples/run/ctrl_monitor_multiple.rb
+- examples/run/ctrl_monitor_nocrash.rb
+- examples/run/ctrl_multiple.rb
+- examples/run/ctrl_normal.rb
+- examples/run/ctrl_ontop.rb
+- examples/run/ctrl_optionparser.rb
+- examples/run/ctrl_proc.rb
+- examples/run/ctrl_proc_multiple.rb
+- examples/run/ctrl_proc_rand.rb
+- examples/run/ctrl_proc_simple.rb
+- examples/run/ctrl_slowstop.rb
+- examples/run/myserver.rb
+- examples/run/myserver_crashing.rb
+- examples/run/myserver_exiting.rb
+- examples/run/myserver_hanging.rb
+- examples/run/myserver_slowstop.rb
+- lib/daemons.rb
+- lib/daemons/application.rb
+- lib/daemons/application_group.rb
+- lib/daemons/change_privilege.rb
+- lib/daemons/cmdline.rb
+- lib/daemons/controller.rb
+- lib/daemons/daemonize.rb
+- lib/daemons/etc_extension.rb
+- lib/daemons/exceptions.rb
+- lib/daemons/monitor.rb
+- lib/daemons/pid.rb
+- lib/daemons/pidfile.rb
+- lib/daemons/pidmem.rb
+- lib/daemons/reporter.rb
+- lib/daemons/syslogio.rb
+- lib/daemons/version.rb
+homepage: https://github.com/thuehlinger/daemons
+licenses:
+- MIT
+metadata:
+  documentation_uri: http://www.rubydoc.info/gems/daemons
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: A toolkit to create and control daemons in different ways
+test_files: []

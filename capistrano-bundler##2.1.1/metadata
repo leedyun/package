@@ -1,0 +1,121 @@
+--- !ruby/object:Gem::Specification
+name: capistrano-bundler
+version: !ruby/object:Gem::Version
+  version: 2.1.1
+platform: ruby
+authors:
+- Tom Clements
+- Lee Hambley
+- Kir Shatrov
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: capistrano
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: danger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Bundler support for Capistrano 3.x
+email:
+- seenmyfate@gmail.com
+- lee.hambley@gmail.com
+- shatrov@me.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/release-drafter.yml"
+- ".github/workflows/push.yml"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- Dangerfile
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- capistrano-bundler.gemspec
+- lib/capistrano-bundler.rb
+- lib/capistrano/bundler.rb
+- lib/capistrano/bundler/hooks.rb
+- lib/capistrano/bundler/tasks.rb
+- lib/capistrano/tasks/bundler.cap
+- lib/capistrano/tasks/hooks.cap
+homepage: https://github.com/capistrano/bundler
+licenses:
+- MIT
+metadata:
+  changelog_uri: https://github.com/capistrano/bundler/releases
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Bundler support for Capistrano 3.x
+test_files: []

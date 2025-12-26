@@ -1,0 +1,144 @@
+--- !ruby/object:Gem::Specification
+name: childprocess
+version: !ruby/object:Gem::Version
+  version: 5.1.0
+platform: ruby
+authors:
+- Jari Bakken
+- Eric Kessler
+- Shane da Silva
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-08-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: This gem aims at being a simple and reliable solution for controlling
+  external programs running in the background on any Ruby / OS combination.
+email:
+- morrow748@gmail.com
+- shane@dasilva.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".document"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- childprocess.gemspec
+- lib/childprocess.rb
+- lib/childprocess/abstract_io.rb
+- lib/childprocess/abstract_process.rb
+- lib/childprocess/errors.rb
+- lib/childprocess/process_spawn_process.rb
+- lib/childprocess/unix.rb
+- lib/childprocess/unix/io.rb
+- lib/childprocess/unix/process.rb
+- lib/childprocess/version.rb
+- lib/childprocess/windows.rb
+- lib/childprocess/windows/io.rb
+- lib/childprocess/windows/process.rb
+- spec/abstract_io_spec.rb
+- spec/childprocess_spec.rb
+- spec/get_env.ps1
+- spec/io_spec.rb
+- spec/pid_behavior.rb
+- spec/platform_detection_spec.rb
+- spec/spec_helper.rb
+- spec/unix_spec.rb
+- spec/windows_spec.rb
+homepage: https://github.com/enkessler/childprocess
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.4.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: A simple and reliable solution for controlling external programs running
+  in the background on any Ruby / OS combination.
+test_files:
+- spec/abstract_io_spec.rb
+- spec/childprocess_spec.rb
+- spec/get_env.ps1
+- spec/io_spec.rb
+- spec/pid_behavior.rb
+- spec/platform_detection_spec.rb
+- spec/spec_helper.rb
+- spec/unix_spec.rb
+- spec/windows_spec.rb

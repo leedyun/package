@@ -1,0 +1,129 @@
+--- !ruby/object:Gem::Specification
+name: acts_as_tree
+version: !ruby/object:Gem::Version
+  version: 2.9.1
+platform: ruby
+authors:
+- Erik Dahlstrand
+- Rails Core
+- Mark Turner
+- Swanand Pagnis
+- Felix Bünemann
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.7.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.7.5
+description: A gem that adds simple support for organizing ActiveRecord models into
+  parent–children relationships.
+email:
+- erik.dahlstrand@gmail.com
+- mark@amerine.net
+- swanand.pagnis@gmail.com
+- felix.buenemann@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- README.md
+- Rakefile
+- acts_as_tree.gemspec
+- gemfiles/rails-3.0.gemfile
+- gemfiles/rails-3.1.gemfile
+- gemfiles/rails-3.2.gemfile
+- gemfiles/rails-4.0.gemfile
+- gemfiles/rails-4.1.gemfile
+- gemfiles/rails-4.2.gemfile
+- gemfiles/rails-5.0.gemfile
+- gemfiles/rails-5.1.gemfile
+- gemfiles/rails-5.2.gemfile
+- gemfiles/rails-6.0.gemfile
+- lib/acts_as_tree.rb
+- lib/acts_as_tree/active_record/acts/tree.rb
+- lib/acts_as_tree/railtie.rb
+- lib/acts_as_tree/version.rb
+- test/acts_as_tree_test.rb
+homepage: https://github.com/amerine/acts_as_tree
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: Provides a simple tree behaviour to active_record models.
+test_files:
+- test/acts_as_tree_test.rb

@@ -1,0 +1,987 @@
+--- !ruby/object:Gem::Specification
+name: axlsx_rails
+version: !ruby/object:Gem::Version
+  version: 0.6.1
+platform: ruby
+authors:
+- Noel Peden
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: caxlsx
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: roo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubyzip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: growl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rb-fsevent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: coveralls
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-nav
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Axlsx_Rails provides an Axlsx renderer so you can move all your spreadsheet
+  code from your controller into view files. Partials are supported so you can organize
+  any code into reusable chunks (e.g. cover sheets, common styling, etc.) You can
+  use it with acts_as_xlsx, placing the to_xlsx call in a view and adding ':package
+  => xlsx_package' to the parameter list. Now you can keep your controllers thin!
+email:
+- noel@peden.biz
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- Gemfile.lock.4.2
+- Gemfile.lock.5.1
+- Gemfile.lock.5.2
+- Guardfile
+- MIT-LICENSE
+- README.md
+- Rakefile
+- lib/axlsx_rails.rb
+- lib/axlsx_rails/action_controller.rb
+- lib/axlsx_rails/railtie.rb
+- lib/axlsx_rails/template_handler.rb
+- lib/axlsx_rails/version.rb
+- lib/tasks/axlsx_rails_tasks.rake
+- spec/axlsx_builder_spec.rb
+- spec/axlsx_mailer_spec.rb
+- spec/axlsx_renderer_spec.rb
+- spec/axlsx_request_spec.rb
+- spec/ci.rb
+- spec/dummy/Rakefile
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/assets/stylesheets/application.css
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/home_controller.rb
+- spec/dummy/app/controllers/likes_controller.rb
+- spec/dummy/app/controllers/users_controller.rb
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/app/mailers/notifier.rb
+- spec/dummy/app/models/like.rb
+- spec/dummy/app/models/user.rb
+- spec/dummy/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy/app/views/home/index.html.erb
+- spec/dummy/app/views/home/index.xlsx.axlsx
+- spec/dummy/app/views/home/useheader.xlsx.axlsx
+- spec/dummy/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy/app/views/layouts/application.html.erb
+- spec/dummy/app/views/likes/index.html.erb
+- spec/dummy/app/views/likes/index.xlsx.axlsx
+- spec/dummy/app/views/notifier/instructions.html.erb
+- spec/dummy/app/views/users/index.html.erb
+- spec/dummy/app/views/users/index.xlsx.axlsx
+- spec/dummy/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy/config.ru
+- spec/dummy/config/application.rb
+- spec/dummy/config/boot.rb
+- spec/dummy/config/database.yml
+- spec/dummy/config/environment.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/production.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/initializers/wrap_parameters.rb
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/routes.rb
+- spec/dummy/db/migrate/20120717192452_create_users.rb
+- spec/dummy/db/migrate/20121206210955_create_likes.rb
+- spec/dummy/db/schema.rb
+- spec/dummy/public/404.html
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/favicon.ico
+- spec/dummy/script/rails
+- spec/dummy_4/Rakefile
+- spec/dummy_4/app/assets/javascripts/application.js
+- spec/dummy_4/app/assets/stylesheets/application.css
+- spec/dummy_4/app/controllers/application_controller.rb
+- spec/dummy_4/app/controllers/home_controller.rb
+- spec/dummy_4/app/controllers/likes_controller.rb
+- spec/dummy_4/app/controllers/users_controller.rb
+- spec/dummy_4/app/helpers/application_helper.rb
+- spec/dummy_4/app/mailers/notifier.rb
+- spec/dummy_4/app/models/like.rb
+- spec/dummy_4/app/models/user.rb
+- spec/dummy_4/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_4/app/views/home/index.html.erb
+- spec/dummy_4/app/views/home/index.xlsx.axlsx
+- spec/dummy_4/app/views/home/only_html.html.erb
+- spec/dummy_4/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_4/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_4/app/views/layouts/application.html.erb
+- spec/dummy_4/app/views/layouts/users.html.erb
+- spec/dummy_4/app/views/likes/index.html.erb
+- spec/dummy_4/app/views/likes/index.xlsx.axlsx
+- spec/dummy_4/app/views/notifier/instructions.html.erb
+- spec/dummy_4/app/views/notifier/instructions.txt.erb
+- spec/dummy_4/app/views/users/export.xlsx.axlsx
+- spec/dummy_4/app/views/users/index.html.erb
+- spec/dummy_4/app/views/users/index.xlsx.axlsx
+- spec/dummy_4/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_4/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_4/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_4/bin/bundle
+- spec/dummy_4/bin/rails
+- spec/dummy_4/bin/rake
+- spec/dummy_4/config.ru
+- spec/dummy_4/config/application.rb
+- spec/dummy_4/config/boot.rb
+- spec/dummy_4/config/database.yml
+- spec/dummy_4/config/environment.rb
+- spec/dummy_4/config/environments/development.rb
+- spec/dummy_4/config/environments/production.rb
+- spec/dummy_4/config/environments/test.rb
+- spec/dummy_4/config/initializers/backtrace_silencers.rb
+- spec/dummy_4/config/initializers/cookies_serializer.rb
+- spec/dummy_4/config/initializers/filter_parameter_logging.rb
+- spec/dummy_4/config/initializers/inflections.rb
+- spec/dummy_4/config/initializers/mime_types.rb
+- spec/dummy_4/config/initializers/secret_token.rb
+- spec/dummy_4/config/initializers/session_store.rb
+- spec/dummy_4/config/initializers/wrap_parameters.rb
+- spec/dummy_4/config/locales/en.yml
+- spec/dummy_4/config/routes.rb
+- spec/dummy_4/config/secrets.yml
+- spec/dummy_4/db/migrate/20120717192452_create_users.rb
+- spec/dummy_4/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_4/db/schema.rb
+- spec/dummy_4/db/test.sqlite3
+- spec/dummy_4/log/test.log
+- spec/dummy_4/public/404.html
+- spec/dummy_4/public/422.html
+- spec/dummy_4/public/500.html
+- spec/dummy_4/public/favicon.ico
+- spec/dummy_5.0/Rakefile
+- spec/dummy_5.0/app/assets/javascripts/application.js
+- spec/dummy_5.0/app/assets/stylesheets/application.css
+- spec/dummy_5.0/app/controllers/application_controller.rb
+- spec/dummy_5.0/app/controllers/home_controller.rb
+- spec/dummy_5.0/app/controllers/likes_controller.rb
+- spec/dummy_5.0/app/controllers/users_controller.rb
+- spec/dummy_5.0/app/helpers/application_helper.rb
+- spec/dummy_5.0/app/mailers/notifier.rb
+- spec/dummy_5.0/app/models/like.rb
+- spec/dummy_5.0/app/models/user.rb
+- spec/dummy_5.0/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/index.html.erb
+- spec/dummy_5.0/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/only_html.html.erb
+- spec/dummy_5.0/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.0/app/views/layouts/application.html.erb
+- spec/dummy_5.0/app/views/layouts/users.html.erb
+- spec/dummy_5.0/app/views/likes/index.html.erb
+- spec/dummy_5.0/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/notifier/instructions.html.erb
+- spec/dummy_5.0/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.0/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/index.html.erb
+- spec/dummy_5.0/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.0/bin/bundle
+- spec/dummy_5.0/bin/rails
+- spec/dummy_5.0/bin/rake
+- spec/dummy_5.0/config.ru
+- spec/dummy_5.0/config/application.rb
+- spec/dummy_5.0/config/boot.rb
+- spec/dummy_5.0/config/database.yml
+- spec/dummy_5.0/config/environment.rb
+- spec/dummy_5.0/config/environments/development.rb
+- spec/dummy_5.0/config/environments/production.rb
+- spec/dummy_5.0/config/environments/test.rb
+- spec/dummy_5.0/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.0/config/initializers/cookies_serializer.rb
+- spec/dummy_5.0/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.0/config/initializers/inflections.rb
+- spec/dummy_5.0/config/initializers/mime_types.rb
+- spec/dummy_5.0/config/initializers/secret_token.rb
+- spec/dummy_5.0/config/initializers/session_store.rb
+- spec/dummy_5.0/config/initializers/wrap_parameters.rb
+- spec/dummy_5.0/config/locales/en.yml
+- spec/dummy_5.0/config/routes.rb
+- spec/dummy_5.0/config/secrets.yml
+- spec/dummy_5.0/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.0/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_5.0/db/schema.rb
+- spec/dummy_5.0/public/404.html
+- spec/dummy_5.0/public/422.html
+- spec/dummy_5.0/public/500.html
+- spec/dummy_5.0/public/favicon.ico
+- spec/dummy_5.1/Rakefile
+- spec/dummy_5.1/app/assets/javascripts/application.js
+- spec/dummy_5.1/app/assets/stylesheets/application.css
+- spec/dummy_5.1/app/controllers/application_controller.rb
+- spec/dummy_5.1/app/controllers/home_controller.rb
+- spec/dummy_5.1/app/controllers/likes_controller.rb
+- spec/dummy_5.1/app/controllers/users_controller.rb
+- spec/dummy_5.1/app/helpers/application_helper.rb
+- spec/dummy_5.1/app/mailers/notifier.rb
+- spec/dummy_5.1/app/models/like.rb
+- spec/dummy_5.1/app/models/user.rb
+- spec/dummy_5.1/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/index.html.erb
+- spec/dummy_5.1/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/only_html.html.erb
+- spec/dummy_5.1/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.1/app/views/layouts/application.html.erb
+- spec/dummy_5.1/app/views/layouts/users.html.erb
+- spec/dummy_5.1/app/views/likes/index.html.erb
+- spec/dummy_5.1/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/notifier/instructions.html.erb
+- spec/dummy_5.1/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.1/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/index.html.erb
+- spec/dummy_5.1/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.1/bin/bundle
+- spec/dummy_5.1/bin/rails
+- spec/dummy_5.1/bin/rake
+- spec/dummy_5.1/config.ru
+- spec/dummy_5.1/config/application.rb
+- spec/dummy_5.1/config/boot.rb
+- spec/dummy_5.1/config/database.yml
+- spec/dummy_5.1/config/environment.rb
+- spec/dummy_5.1/config/environments/development.rb
+- spec/dummy_5.1/config/environments/production.rb
+- spec/dummy_5.1/config/environments/test.rb
+- spec/dummy_5.1/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.1/config/initializers/cookies_serializer.rb
+- spec/dummy_5.1/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.1/config/initializers/inflections.rb
+- spec/dummy_5.1/config/initializers/mime_types.rb
+- spec/dummy_5.1/config/initializers/secret_token.rb
+- spec/dummy_5.1/config/initializers/session_store.rb
+- spec/dummy_5.1/config/initializers/wrap_parameters.rb
+- spec/dummy_5.1/config/locales/en.yml
+- spec/dummy_5.1/config/routes.rb
+- spec/dummy_5.1/config/secrets.yml
+- spec/dummy_5.1/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.1/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_5.1/db/schema.rb
+- spec/dummy_5.1/db/test.sqlite3
+- spec/dummy_5.1/log/test.log
+- spec/dummy_5.1/public/404.html
+- spec/dummy_5.1/public/422.html
+- spec/dummy_5.1/public/500.html
+- spec/dummy_5.1/public/favicon.ico
+- spec/dummy_5.2/Rakefile
+- spec/dummy_5.2/app/assets/javascripts/application.js
+- spec/dummy_5.2/app/assets/stylesheets/application.css
+- spec/dummy_5.2/app/controllers/application_controller.rb
+- spec/dummy_5.2/app/controllers/home_controller.rb
+- spec/dummy_5.2/app/controllers/likes_controller.rb
+- spec/dummy_5.2/app/controllers/users_controller.rb
+- spec/dummy_5.2/app/helpers/application_helper.rb
+- spec/dummy_5.2/app/mailers/notifier.rb
+- spec/dummy_5.2/app/models/like.rb
+- spec/dummy_5.2/app/models/user.rb
+- spec/dummy_5.2/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/index.html.erb
+- spec/dummy_5.2/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/only_html.html.erb
+- spec/dummy_5.2/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.2/app/views/layouts/application.html.erb
+- spec/dummy_5.2/app/views/layouts/users.html.erb
+- spec/dummy_5.2/app/views/likes/index.html.erb
+- spec/dummy_5.2/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/notifier/instructions.html.erb
+- spec/dummy_5.2/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.2/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/index.html.erb
+- spec/dummy_5.2/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.2/bin/bundle
+- spec/dummy_5.2/bin/rails
+- spec/dummy_5.2/bin/rake
+- spec/dummy_5.2/config.ru
+- spec/dummy_5.2/config/application.rb
+- spec/dummy_5.2/config/boot.rb
+- spec/dummy_5.2/config/database.yml
+- spec/dummy_5.2/config/environment.rb
+- spec/dummy_5.2/config/environments/development.rb
+- spec/dummy_5.2/config/environments/production.rb
+- spec/dummy_5.2/config/environments/test.rb
+- spec/dummy_5.2/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.2/config/initializers/cookies_serializer.rb
+- spec/dummy_5.2/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.2/config/initializers/inflections.rb
+- spec/dummy_5.2/config/initializers/mime_types.rb
+- spec/dummy_5.2/config/initializers/secret_token.rb
+- spec/dummy_5.2/config/initializers/session_store.rb
+- spec/dummy_5.2/config/initializers/wrap_parameters.rb
+- spec/dummy_5.2/config/locales/en.yml
+- spec/dummy_5.2/config/routes.rb
+- spec/dummy_5.2/config/secrets.yml
+- spec/dummy_5.2/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.2/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_5.2/db/schema.rb
+- spec/dummy_5.2/db/test.sqlite3
+- spec/dummy_5.2/log/test.log
+- spec/dummy_5.2/public/404.html
+- spec/dummy_5.2/public/422.html
+- spec/dummy_5.2/public/500.html
+- spec/dummy_5.2/public/favicon.ico
+- spec/dummy_5/db/test.sqlite3
+- spec/dummy_5/log/test.log
+- spec/dummy_6.0/Rakefile
+- spec/dummy_6.0/app/assets/javascripts/application.js
+- spec/dummy_6.0/app/assets/stylesheets/application.css
+- spec/dummy_6.0/app/controllers/application_controller.rb
+- spec/dummy_6.0/app/controllers/home_controller.rb
+- spec/dummy_6.0/app/controllers/likes_controller.rb
+- spec/dummy_6.0/app/controllers/users_controller.rb
+- spec/dummy_6.0/app/helpers/application_helper.rb
+- spec/dummy_6.0/app/mailers/notifier.rb
+- spec/dummy_6.0/app/models/like.rb
+- spec/dummy_6.0/app/models/user.rb
+- spec/dummy_6.0/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/index.html.erb
+- spec/dummy_6.0/app/views/home/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/only_html.html.erb
+- spec/dummy_6.0/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_6.0/app/views/layouts/application.html.erb
+- spec/dummy_6.0/app/views/layouts/users.html.erb
+- spec/dummy_6.0/app/views/likes/index.html.erb
+- spec/dummy_6.0/app/views/likes/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/notifier/instructions.html.erb
+- spec/dummy_6.0/app/views/notifier/instructions.txt.erb
+- spec/dummy_6.0/app/views/users/export.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/index.html.erb
+- spec/dummy_6.0/app/views/users/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_6.0/bin/bundle
+- spec/dummy_6.0/bin/rails
+- spec/dummy_6.0/bin/rake
+- spec/dummy_6.0/config.ru
+- spec/dummy_6.0/config/application.rb
+- spec/dummy_6.0/config/boot.rb
+- spec/dummy_6.0/config/database.yml
+- spec/dummy_6.0/config/environment.rb
+- spec/dummy_6.0/config/environments/development.rb
+- spec/dummy_6.0/config/environments/production.rb
+- spec/dummy_6.0/config/environments/test.rb
+- spec/dummy_6.0/config/initializers/backtrace_silencers.rb
+- spec/dummy_6.0/config/initializers/cookies_serializer.rb
+- spec/dummy_6.0/config/initializers/filter_parameter_logging.rb
+- spec/dummy_6.0/config/initializers/inflections.rb
+- spec/dummy_6.0/config/initializers/mime_types.rb
+- spec/dummy_6.0/config/initializers/secret_token.rb
+- spec/dummy_6.0/config/initializers/session_store.rb
+- spec/dummy_6.0/config/initializers/wrap_parameters.rb
+- spec/dummy_6.0/config/locales/en.yml
+- spec/dummy_6.0/config/routes.rb
+- spec/dummy_6.0/config/secrets.yml
+- spec/dummy_6.0/db/migrate/20120717192452_create_users.rb
+- spec/dummy_6.0/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_6.0/db/schema.rb
+- spec/dummy_6.0/public/404.html
+- spec/dummy_6.0/public/422.html
+- spec/dummy_6.0/public/500.html
+- spec/dummy_6.0/public/favicon.ico
+- spec/reset_gems.sh
+- spec/spec_helper.rb
+- spec/test_3.1.sh
+- spec/test_3.2.sh
+- spec/test_4.0.sh
+- spec/test_4.1.sh
+- spec/test_4.2.sh
+- spec/test_5.0.sh
+- spec/test_5.1.sh
+- spec/test_5.2.sh
+- spec/test_6.0.sh
+- spec/test_all_rails.sh
+- spec/test_revert.sh
+homepage: https://github.com/caxlsx/axlsx_rails
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.4
+signing_key: 
+specification_version: 4
+summary: A simple rails plugin to provide an xlsx renderer using the caxlsx gem.
+test_files:
+- spec/spec_helper.rb
+- spec/test_4.0.sh
+- spec/axlsx_request_spec.rb
+- spec/test_5.1.sh
+- spec/dummy/app/mailers/notifier.rb
+- spec/dummy/app/models/like.rb
+- spec/dummy/app/models/user.rb
+- spec/dummy/app/controllers/application_controller.rb
+- spec/dummy/app/controllers/likes_controller.rb
+- spec/dummy/app/controllers/users_controller.rb
+- spec/dummy/app/controllers/home_controller.rb
+- spec/dummy/app/views/home/index.html.erb
+- spec/dummy/app/views/home/useheader.xlsx.axlsx
+- spec/dummy/app/views/home/index.xlsx.axlsx
+- spec/dummy/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy/app/views/notifier/instructions.html.erb
+- spec/dummy/app/views/likes/index.html.erb
+- spec/dummy/app/views/likes/index.xlsx.axlsx
+- spec/dummy/app/views/layouts/application.html.erb
+- spec/dummy/app/views/users/index.html.erb
+- spec/dummy/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy/app/views/users/index.xlsx.axlsx
+- spec/dummy/app/assets/javascripts/application.js
+- spec/dummy/app/assets/stylesheets/application.css
+- spec/dummy/app/helpers/application_helper.rb
+- spec/dummy/config/routes.rb
+- spec/dummy/config/locales/en.yml
+- spec/dummy/config/environments/production.rb
+- spec/dummy/config/environments/development.rb
+- spec/dummy/config/environments/test.rb
+- spec/dummy/config/environment.rb
+- spec/dummy/config/application.rb
+- spec/dummy/config/database.yml
+- spec/dummy/config/boot.rb
+- spec/dummy/config/initializers/backtrace_silencers.rb
+- spec/dummy/config/initializers/mime_types.rb
+- spec/dummy/config/initializers/session_store.rb
+- spec/dummy/config/initializers/wrap_parameters.rb
+- spec/dummy/config/initializers/secret_token.rb
+- spec/dummy/config/initializers/inflections.rb
+- spec/dummy/config.ru
+- spec/dummy/script/rails
+- spec/dummy/Rakefile
+- spec/dummy/public/favicon.ico
+- spec/dummy/public/422.html
+- spec/dummy/public/500.html
+- spec/dummy/public/404.html
+- spec/dummy/db/schema.rb
+- spec/dummy/db/migrate/20120717192452_create_users.rb
+- spec/dummy/db/migrate/20121206210955_create_likes.rb
+- spec/test_4.1.sh
+- spec/test_5.0.sh
+- spec/axlsx_mailer_spec.rb
+- spec/reset_gems.sh
+- spec/test_3.1.sh
+- spec/dummy_5/db/test.sqlite3
+- spec/dummy_5/log/test.log
+- spec/dummy_4/app/mailers/notifier.rb
+- spec/dummy_4/app/models/like.rb
+- spec/dummy_4/app/models/user.rb
+- spec/dummy_4/app/controllers/application_controller.rb
+- spec/dummy_4/app/controllers/likes_controller.rb
+- spec/dummy_4/app/controllers/users_controller.rb
+- spec/dummy_4/app/controllers/home_controller.rb
+- spec/dummy_4/app/views/home/index.html.erb
+- spec/dummy_4/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_4/app/views/home/index.xlsx.axlsx
+- spec/dummy_4/app/views/home/only_html.html.erb
+- spec/dummy_4/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_4/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_4/app/views/notifier/instructions.html.erb
+- spec/dummy_4/app/views/notifier/instructions.txt.erb
+- spec/dummy_4/app/views/likes/index.html.erb
+- spec/dummy_4/app/views/likes/index.xlsx.axlsx
+- spec/dummy_4/app/views/layouts/users.html.erb
+- spec/dummy_4/app/views/layouts/application.html.erb
+- spec/dummy_4/app/views/users/index.html.erb
+- spec/dummy_4/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_4/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_4/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_4/app/views/users/index.xlsx.axlsx
+- spec/dummy_4/app/views/users/export.xlsx.axlsx
+- spec/dummy_4/app/assets/javascripts/application.js
+- spec/dummy_4/app/assets/stylesheets/application.css
+- spec/dummy_4/app/helpers/application_helper.rb
+- spec/dummy_4/bin/rake
+- spec/dummy_4/bin/bundle
+- spec/dummy_4/bin/rails
+- spec/dummy_4/config/secrets.yml
+- spec/dummy_4/config/routes.rb
+- spec/dummy_4/config/locales/en.yml
+- spec/dummy_4/config/environments/production.rb
+- spec/dummy_4/config/environments/development.rb
+- spec/dummy_4/config/environments/test.rb
+- spec/dummy_4/config/environment.rb
+- spec/dummy_4/config/application.rb
+- spec/dummy_4/config/database.yml
+- spec/dummy_4/config/boot.rb
+- spec/dummy_4/config/initializers/backtrace_silencers.rb
+- spec/dummy_4/config/initializers/mime_types.rb
+- spec/dummy_4/config/initializers/filter_parameter_logging.rb
+- spec/dummy_4/config/initializers/session_store.rb
+- spec/dummy_4/config/initializers/wrap_parameters.rb
+- spec/dummy_4/config/initializers/cookies_serializer.rb
+- spec/dummy_4/config/initializers/secret_token.rb
+- spec/dummy_4/config/initializers/inflections.rb
+- spec/dummy_4/config.ru
+- spec/dummy_4/Rakefile
+- spec/dummy_4/public/favicon.ico
+- spec/dummy_4/public/422.html
+- spec/dummy_4/public/500.html
+- spec/dummy_4/public/404.html
+- spec/dummy_4/db/schema.rb
+- spec/dummy_4/db/test.sqlite3
+- spec/dummy_4/db/migrate/20120717192452_create_users.rb
+- spec/dummy_4/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_4/log/test.log
+- spec/dummy_5.2/app/mailers/notifier.rb
+- spec/dummy_5.2/app/models/like.rb
+- spec/dummy_5.2/app/models/user.rb
+- spec/dummy_5.2/app/controllers/application_controller.rb
+- spec/dummy_5.2/app/controllers/likes_controller.rb
+- spec/dummy_5.2/app/controllers/users_controller.rb
+- spec/dummy_5.2/app/controllers/home_controller.rb
+- spec/dummy_5.2/app/views/home/index.html.erb
+- spec/dummy_5.2/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/only_html.html.erb
+- spec/dummy_5.2/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.2/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.2/app/views/notifier/instructions.html.erb
+- spec/dummy_5.2/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.2/app/views/likes/index.html.erb
+- spec/dummy_5.2/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/layouts/users.html.erb
+- spec/dummy_5.2/app/views/layouts/application.html.erb
+- spec/dummy_5.2/app/views/users/index.html.erb
+- spec/dummy_5.2/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.2/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.2/app/assets/javascripts/application.js
+- spec/dummy_5.2/app/assets/stylesheets/application.css
+- spec/dummy_5.2/app/helpers/application_helper.rb
+- spec/dummy_5.2/bin/rake
+- spec/dummy_5.2/bin/bundle
+- spec/dummy_5.2/bin/rails
+- spec/dummy_5.2/config/secrets.yml
+- spec/dummy_5.2/config/routes.rb
+- spec/dummy_5.2/config/locales/en.yml
+- spec/dummy_5.2/config/environments/production.rb
+- spec/dummy_5.2/config/environments/development.rb
+- spec/dummy_5.2/config/environments/test.rb
+- spec/dummy_5.2/config/environment.rb
+- spec/dummy_5.2/config/application.rb
+- spec/dummy_5.2/config/database.yml
+- spec/dummy_5.2/config/boot.rb
+- spec/dummy_5.2/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.2/config/initializers/mime_types.rb
+- spec/dummy_5.2/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.2/config/initializers/session_store.rb
+- spec/dummy_5.2/config/initializers/wrap_parameters.rb
+- spec/dummy_5.2/config/initializers/cookies_serializer.rb
+- spec/dummy_5.2/config/initializers/secret_token.rb
+- spec/dummy_5.2/config/initializers/inflections.rb
+- spec/dummy_5.2/config.ru
+- spec/dummy_5.2/Rakefile
+- spec/dummy_5.2/public/favicon.ico
+- spec/dummy_5.2/public/422.html
+- spec/dummy_5.2/public/500.html
+- spec/dummy_5.2/public/404.html
+- spec/dummy_5.2/db/schema.rb
+- spec/dummy_5.2/db/test.sqlite3
+- spec/dummy_5.2/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.2/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_5.2/log/test.log
+- spec/axlsx_renderer_spec.rb
+- spec/test_all_rails.sh
+- spec/axlsx_builder_spec.rb
+- spec/test_revert.sh
+- spec/ci.rb
+- spec/test_3.2.sh
+- spec/dummy_6.0/app/mailers/notifier.rb
+- spec/dummy_6.0/app/models/like.rb
+- spec/dummy_6.0/app/models/user.rb
+- spec/dummy_6.0/app/controllers/application_controller.rb
+- spec/dummy_6.0/app/controllers/likes_controller.rb
+- spec/dummy_6.0/app/controllers/users_controller.rb
+- spec/dummy_6.0/app/controllers/home_controller.rb
+- spec/dummy_6.0/app/views/home/index.html.erb
+- spec/dummy_6.0/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/only_html.html.erb
+- spec/dummy_6.0/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_6.0/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_6.0/app/views/notifier/instructions.html.erb
+- spec/dummy_6.0/app/views/notifier/instructions.txt.erb
+- spec/dummy_6.0/app/views/likes/index.html.erb
+- spec/dummy_6.0/app/views/likes/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/layouts/users.html.erb
+- spec/dummy_6.0/app/views/layouts/application.html.erb
+- spec/dummy_6.0/app/views/users/index.html.erb
+- spec/dummy_6.0/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/index.xlsx.axlsx
+- spec/dummy_6.0/app/views/users/export.xlsx.axlsx
+- spec/dummy_6.0/app/assets/javascripts/application.js
+- spec/dummy_6.0/app/assets/stylesheets/application.css
+- spec/dummy_6.0/app/helpers/application_helper.rb
+- spec/dummy_6.0/bin/rake
+- spec/dummy_6.0/bin/bundle
+- spec/dummy_6.0/bin/rails
+- spec/dummy_6.0/config/secrets.yml
+- spec/dummy_6.0/config/routes.rb
+- spec/dummy_6.0/config/locales/en.yml
+- spec/dummy_6.0/config/environments/production.rb
+- spec/dummy_6.0/config/environments/development.rb
+- spec/dummy_6.0/config/environments/test.rb
+- spec/dummy_6.0/config/environment.rb
+- spec/dummy_6.0/config/application.rb
+- spec/dummy_6.0/config/database.yml
+- spec/dummy_6.0/config/boot.rb
+- spec/dummy_6.0/config/initializers/backtrace_silencers.rb
+- spec/dummy_6.0/config/initializers/mime_types.rb
+- spec/dummy_6.0/config/initializers/filter_parameter_logging.rb
+- spec/dummy_6.0/config/initializers/session_store.rb
+- spec/dummy_6.0/config/initializers/wrap_parameters.rb
+- spec/dummy_6.0/config/initializers/cookies_serializer.rb
+- spec/dummy_6.0/config/initializers/secret_token.rb
+- spec/dummy_6.0/config/initializers/inflections.rb
+- spec/dummy_6.0/config.ru
+- spec/dummy_6.0/Rakefile
+- spec/dummy_6.0/public/favicon.ico
+- spec/dummy_6.0/public/422.html
+- spec/dummy_6.0/public/500.html
+- spec/dummy_6.0/public/404.html
+- spec/dummy_6.0/db/schema.rb
+- spec/dummy_6.0/db/migrate/20120717192452_create_users.rb
+- spec/dummy_6.0/db/migrate/20121206210955_create_likes.rb
+- spec/test_4.2.sh
+- spec/test_6.0.sh
+- spec/dummy_5.1/app/mailers/notifier.rb
+- spec/dummy_5.1/app/models/like.rb
+- spec/dummy_5.1/app/models/user.rb
+- spec/dummy_5.1/app/controllers/application_controller.rb
+- spec/dummy_5.1/app/controllers/likes_controller.rb
+- spec/dummy_5.1/app/controllers/users_controller.rb
+- spec/dummy_5.1/app/controllers/home_controller.rb
+- spec/dummy_5.1/app/views/home/index.html.erb
+- spec/dummy_5.1/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/only_html.html.erb
+- spec/dummy_5.1/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.1/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.1/app/views/notifier/instructions.html.erb
+- spec/dummy_5.1/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.1/app/views/likes/index.html.erb
+- spec/dummy_5.1/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/layouts/users.html.erb
+- spec/dummy_5.1/app/views/layouts/application.html.erb
+- spec/dummy_5.1/app/views/users/index.html.erb
+- spec/dummy_5.1/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.1/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.1/app/assets/javascripts/application.js
+- spec/dummy_5.1/app/assets/stylesheets/application.css
+- spec/dummy_5.1/app/helpers/application_helper.rb
+- spec/dummy_5.1/bin/rake
+- spec/dummy_5.1/bin/bundle
+- spec/dummy_5.1/bin/rails
+- spec/dummy_5.1/config/secrets.yml
+- spec/dummy_5.1/config/routes.rb
+- spec/dummy_5.1/config/locales/en.yml
+- spec/dummy_5.1/config/environments/production.rb
+- spec/dummy_5.1/config/environments/development.rb
+- spec/dummy_5.1/config/environments/test.rb
+- spec/dummy_5.1/config/environment.rb
+- spec/dummy_5.1/config/application.rb
+- spec/dummy_5.1/config/database.yml
+- spec/dummy_5.1/config/boot.rb
+- spec/dummy_5.1/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.1/config/initializers/mime_types.rb
+- spec/dummy_5.1/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.1/config/initializers/session_store.rb
+- spec/dummy_5.1/config/initializers/wrap_parameters.rb
+- spec/dummy_5.1/config/initializers/cookies_serializer.rb
+- spec/dummy_5.1/config/initializers/secret_token.rb
+- spec/dummy_5.1/config/initializers/inflections.rb
+- spec/dummy_5.1/config.ru
+- spec/dummy_5.1/Rakefile
+- spec/dummy_5.1/public/favicon.ico
+- spec/dummy_5.1/public/422.html
+- spec/dummy_5.1/public/500.html
+- spec/dummy_5.1/public/404.html
+- spec/dummy_5.1/db/schema.rb
+- spec/dummy_5.1/db/test.sqlite3
+- spec/dummy_5.1/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.1/db/migrate/20121206210955_create_likes.rb
+- spec/dummy_5.1/log/test.log
+- spec/dummy_5.0/app/mailers/notifier.rb
+- spec/dummy_5.0/app/models/like.rb
+- spec/dummy_5.0/app/models/user.rb
+- spec/dummy_5.0/app/controllers/application_controller.rb
+- spec/dummy_5.0/app/controllers/likes_controller.rb
+- spec/dummy_5.0/app/controllers/users_controller.rb
+- spec/dummy_5.0/app/controllers/home_controller.rb
+- spec/dummy_5.0/app/views/home/index.html.erb
+- spec/dummy_5.0/app/views/home/useheader.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/only_html.html.erb
+- spec/dummy_5.0/app/views/home/_cover_sheet.xlsx.axlsx
+- spec/dummy_5.0/app/views/home/withpartial.xlsx.axlsx
+- spec/dummy_5.0/app/views/notifier/instructions.html.erb
+- spec/dummy_5.0/app/views/notifier/instructions.txt.erb
+- spec/dummy_5.0/app/views/likes/index.html.erb
+- spec/dummy_5.0/app/views/likes/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/layouts/users.html.erb
+- spec/dummy_5.0/app/views/layouts/application.html.erb
+- spec/dummy_5.0/app/views/users/index.html.erb
+- spec/dummy_5.0/app/views/users/noaction.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/respond_with.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/send_instructions.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/index.xlsx.axlsx
+- spec/dummy_5.0/app/views/users/export.xlsx.axlsx
+- spec/dummy_5.0/app/assets/javascripts/application.js
+- spec/dummy_5.0/app/assets/stylesheets/application.css
+- spec/dummy_5.0/app/helpers/application_helper.rb
+- spec/dummy_5.0/bin/rake
+- spec/dummy_5.0/bin/bundle
+- spec/dummy_5.0/bin/rails
+- spec/dummy_5.0/config/secrets.yml
+- spec/dummy_5.0/config/routes.rb
+- spec/dummy_5.0/config/locales/en.yml
+- spec/dummy_5.0/config/environments/production.rb
+- spec/dummy_5.0/config/environments/development.rb
+- spec/dummy_5.0/config/environments/test.rb
+- spec/dummy_5.0/config/environment.rb
+- spec/dummy_5.0/config/application.rb
+- spec/dummy_5.0/config/database.yml
+- spec/dummy_5.0/config/boot.rb
+- spec/dummy_5.0/config/initializers/backtrace_silencers.rb
+- spec/dummy_5.0/config/initializers/mime_types.rb
+- spec/dummy_5.0/config/initializers/filter_parameter_logging.rb
+- spec/dummy_5.0/config/initializers/session_store.rb
+- spec/dummy_5.0/config/initializers/wrap_parameters.rb
+- spec/dummy_5.0/config/initializers/cookies_serializer.rb
+- spec/dummy_5.0/config/initializers/secret_token.rb
+- spec/dummy_5.0/config/initializers/inflections.rb
+- spec/dummy_5.0/config.ru
+- spec/dummy_5.0/Rakefile
+- spec/dummy_5.0/public/favicon.ico
+- spec/dummy_5.0/public/422.html
+- spec/dummy_5.0/public/500.html
+- spec/dummy_5.0/public/404.html
+- spec/dummy_5.0/db/schema.rb
+- spec/dummy_5.0/db/migrate/20120717192452_create_users.rb
+- spec/dummy_5.0/db/migrate/20121206210955_create_likes.rb
+- spec/test_5.2.sh
+- Guardfile

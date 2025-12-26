@@ -1,0 +1,53 @@
+--- !ruby/object:Gem::Specification
+name: aggregate
+version: !ruby/object:Gem::Version
+  version: 0.2.4
+platform: ruby
+authors:
+- Joseph Ruscio
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-08-01 00:00:00.000000000 Z
+dependencies: []
+description: 'Aggregate is a Ruby class for accumulating aggregate statistics and
+  includes histogram support. For a detailed README see: http://github.com/josephruscio/aggregate'
+email: joe@ruscio.org
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.textile
+files:
+- LICENSE
+- README.textile
+- lib/aggregate.rb
+- lib/aggregate/version.rb
+- test/ts_aggregate.rb
+homepage: http://github.com/josephruscio/aggregate
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key:
+specification_version: 3
+summary: Aggregate is a Ruby class for accumulating aggregate statistics and includes
+  histogram support
+test_files:
+- test/ts_aggregate.rb

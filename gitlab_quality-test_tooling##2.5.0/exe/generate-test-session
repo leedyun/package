@@ -1,0 +1,70 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "optparse"
+
+require_relative "../lib/gitlab_quality/test_tooling"
+
+params = {}
+
+options = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+
+  opts.on('-i', '--input-files INPUT_FILES', String, 'RSpec report files (JSON or JUnit XML)') do |input_files|
+    params[:input_files] = input_files
+  end
+
+  opts.on('-p', '--project PROJECT', String, 'Can be an integer or a group/project string') do |project|
+    params[:project] = project
+  end
+
+  opts.on('-t', '--token TOKEN', String, 'A valid access token with `api` scope and Reporter permission in PROJECT') do |token|
+    params[:token] = token
+  end
+
+  opts.on('-c', '--ci-project-token CI_PROJECT_TOKEN', String, 'A valid access token with `read_api` scope permission in current ENV["CI_PROJECT_ID"]') do |ci_project_token|
+    params[:ci_project_token] = ci_project_token
+  end
+
+  opts.on('-f', '--issue-url-file ISSUE_URL_FILE', 'Output the created test session issue URL') do |issue_url_file|
+    params[:issue_url_file] = issue_url_file
+  end
+
+  opts.on('--pipeline-stages STAGES', String, 'Comma-separated list of pipeline stages to include in test session issue') do |pipeline_stages|
+    params[:pipeline_stages] = pipeline_stages.split(',')
+  end
+
+  opts.on('--confidential', "Makes test session issue confidential") do
+    params[:confidential] = true
+  end
+
+  opts.on('--dry-run', "Perform a dry-run (don't create or update issues or test cases)") do
+    params[:dry_run] = true
+  end
+
+  opts.on_tail('-v', '--version', 'Show the version') do
+    require_relative "../lib/gitlab_quality/test_tooling/version"
+    puts "#{$PROGRAM_NAME} : #{GitlabQuality::TestTooling::VERSION}"
+    exit
+  end
+
+  opts.on_tail('-h', '--help', 'Show the usage') do
+    puts "Purpose: Generate test session report based on RSpec report files (JSON or JUnit XML)"
+    puts opts
+    exit
+  end
+
+  opts.parse(ARGV)
+end
+
+issue_url_file = params.delete(:issue_url_file)
+
+if params.any?
+  issue_url = GitlabQuality::TestTooling::Report::GenerateTestSession.new(**params).invoke!
+
+  File.write(issue_url_file, issue_url) if issue_url_file && issue_url
+else
+  puts options
+  exit 1
+end

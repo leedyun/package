@@ -1,0 +1,498 @@
+--- !ruby/object:Gem::Specification
+name: jira-ruby
+version: !ruby/object:Gem::Version
+  version: 2.3.0
+platform: ruby
+authors:
+- SUMO Heavy Industries
+- test IO
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: atlassian-jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: multipart-post
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: oauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.5.0
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.13'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.13.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.13'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.13.0
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.6.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.6.5
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.10.3
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 10.3.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 10.3.2
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.18'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.18.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.18'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.18.0
+description: API for JIRA
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- example.rb
+- http-basic-example.rb
+- jira-ruby.gemspec
+- lib/jira-ruby.rb
+- lib/jira/base.rb
+- lib/jira/base_factory.rb
+- lib/jira/client.rb
+- lib/jira/has_many_proxy.rb
+- lib/jira/http_client.rb
+- lib/jira/http_error.rb
+- lib/jira/jwt_client.rb
+- lib/jira/oauth_client.rb
+- lib/jira/railtie.rb
+- lib/jira/request_client.rb
+- lib/jira/resource/agile.rb
+- lib/jira/resource/applinks.rb
+- lib/jira/resource/attachment.rb
+- lib/jira/resource/board.rb
+- lib/jira/resource/board_configuration.rb
+- lib/jira/resource/comment.rb
+- lib/jira/resource/component.rb
+- lib/jira/resource/createmeta.rb
+- lib/jira/resource/field.rb
+- lib/jira/resource/filter.rb
+- lib/jira/resource/issue.rb
+- lib/jira/resource/issue_picker_suggestions.rb
+- lib/jira/resource/issue_picker_suggestions_issue.rb
+- lib/jira/resource/issuelink.rb
+- lib/jira/resource/issuelinktype.rb
+- lib/jira/resource/issuetype.rb
+- lib/jira/resource/priority.rb
+- lib/jira/resource/project.rb
+- lib/jira/resource/rapidview.rb
+- lib/jira/resource/remotelink.rb
+- lib/jira/resource/resolution.rb
+- lib/jira/resource/serverinfo.rb
+- lib/jira/resource/sprint.rb
+- lib/jira/resource/sprint_report.rb
+- lib/jira/resource/status.rb
+- lib/jira/resource/suggested_issue.rb
+- lib/jira/resource/transition.rb
+- lib/jira/resource/user.rb
+- lib/jira/resource/version.rb
+- lib/jira/resource/watcher.rb
+- lib/jira/resource/webhook.rb
+- lib/jira/resource/worklog.rb
+- lib/jira/tasks.rb
+- lib/jira/version.rb
+- lib/tasks/generate.rake
+- spec/integration/attachment_spec.rb
+- spec/integration/comment_spec.rb
+- spec/integration/component_spec.rb
+- spec/integration/field_spec.rb
+- spec/integration/issue_spec.rb
+- spec/integration/issuelinktype_spec.rb
+- spec/integration/issuetype_spec.rb
+- spec/integration/priority_spec.rb
+- spec/integration/project_spec.rb
+- spec/integration/rapidview_spec.rb
+- spec/integration/resolution_spec.rb
+- spec/integration/status_spec.rb
+- spec/integration/transition_spec.rb
+- spec/integration/user_spec.rb
+- spec/integration/version_spec.rb
+- spec/integration/watcher_spec.rb
+- spec/integration/webhook.rb
+- spec/integration/worklog_spec.rb
+- spec/jira/base_factory_spec.rb
+- spec/jira/base_spec.rb
+- spec/jira/client_spec.rb
+- spec/jira/has_many_proxy_spec.rb
+- spec/jira/http_client_spec.rb
+- spec/jira/http_error_spec.rb
+- spec/jira/jwt_uri_builder_spec.rb
+- spec/jira/oauth_client_spec.rb
+- spec/jira/request_client_spec.rb
+- spec/jira/resource/agile_spec.rb
+- spec/jira/resource/attachment_spec.rb
+- spec/jira/resource/board_spec.rb
+- spec/jira/resource/createmeta_spec.rb
+- spec/jira/resource/field_spec.rb
+- spec/jira/resource/filter_spec.rb
+- spec/jira/resource/issue_picker_suggestions_spec.rb
+- spec/jira/resource/issue_spec.rb
+- spec/jira/resource/issuelink_spec.rb
+- spec/jira/resource/jira_picker_suggestions_issue_spec.rb
+- spec/jira/resource/project_factory_spec.rb
+- spec/jira/resource/project_spec.rb
+- spec/jira/resource/sprint_spec.rb
+- spec/jira/resource/user_factory_spec.rb
+- spec/jira/resource/worklog_spec.rb
+- spec/mock_responses/board/1.json
+- spec/mock_responses/board/1_issues.json
+- spec/mock_responses/component.post.json
+- spec/mock_responses/component/10000.invalid.put.json
+- spec/mock_responses/component/10000.json
+- spec/mock_responses/component/10000.put.json
+- spec/mock_responses/empty_issues.json
+- spec/mock_responses/field.json
+- spec/mock_responses/field/1.json
+- spec/mock_responses/issue.json
+- spec/mock_responses/issue.post.json
+- spec/mock_responses/issue/10002.invalid.put.json
+- spec/mock_responses/issue/10002.json
+- spec/mock_responses/issue/10002.put.missing_field_update.json
+- spec/mock_responses/issue/10002/attachments/10000.json
+- spec/mock_responses/issue/10002/comment.json
+- spec/mock_responses/issue/10002/comment.post.json
+- spec/mock_responses/issue/10002/comment/10000.json
+- spec/mock_responses/issue/10002/comment/10000.put.json
+- spec/mock_responses/issue/10002/transitions.json
+- spec/mock_responses/issue/10002/transitions.post.json
+- spec/mock_responses/issue/10002/watchers.json
+- spec/mock_responses/issue/10002/worklog.json
+- spec/mock_responses/issue/10002/worklog.post.json
+- spec/mock_responses/issue/10002/worklog/10000.json
+- spec/mock_responses/issue/10002/worklog/10000.put.json
+- spec/mock_responses/issueLinkType.json
+- spec/mock_responses/issueLinkType/10000.json
+- spec/mock_responses/issuetype.json
+- spec/mock_responses/issuetype/5.json
+- spec/mock_responses/jira/rest/webhooks/1.0/webhook.json
+- spec/mock_responses/jira/rest/webhooks/1.0/webhook/2.json
+- spec/mock_responses/priority.json
+- spec/mock_responses/priority/1.json
+- spec/mock_responses/project.json
+- spec/mock_responses/project/SAMPLEPROJECT.issues.json
+- spec/mock_responses/project/SAMPLEPROJECT.json
+- spec/mock_responses/rapidview.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.issues.full.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.issues.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.json
+- spec/mock_responses/resolution.json
+- spec/mock_responses/resolution/1.json
+- spec/mock_responses/sprint/1_issues.json
+- spec/mock_responses/status.json
+- spec/mock_responses/status/1.json
+- spec/mock_responses/user_username=admin.json
+- spec/mock_responses/version.post.json
+- spec/mock_responses/version/10000.invalid.put.json
+- spec/mock_responses/version/10000.json
+- spec/mock_responses/version/10000.put.json
+- spec/mock_responses/webhook.json
+- spec/mock_responses/webhook/webhook.json
+- spec/spec_helper.rb
+- spec/support/clients_helper.rb
+- spec/support/matchers/have_attributes.rb
+- spec/support/matchers/have_many.rb
+- spec/support/matchers/have_one.rb
+- spec/support/shared_examples/integration.rb
+homepage: http://www.sumoheavy.com
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/sumoheavy/jira-ruby
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Ruby Gem for use with the Atlassian JIRA REST API
+test_files:
+- spec/integration/attachment_spec.rb
+- spec/integration/comment_spec.rb
+- spec/integration/component_spec.rb
+- spec/integration/field_spec.rb
+- spec/integration/issue_spec.rb
+- spec/integration/issuelinktype_spec.rb
+- spec/integration/issuetype_spec.rb
+- spec/integration/priority_spec.rb
+- spec/integration/project_spec.rb
+- spec/integration/rapidview_spec.rb
+- spec/integration/resolution_spec.rb
+- spec/integration/status_spec.rb
+- spec/integration/transition_spec.rb
+- spec/integration/user_spec.rb
+- spec/integration/version_spec.rb
+- spec/integration/watcher_spec.rb
+- spec/integration/webhook.rb
+- spec/integration/worklog_spec.rb
+- spec/jira/base_factory_spec.rb
+- spec/jira/base_spec.rb
+- spec/jira/client_spec.rb
+- spec/jira/has_many_proxy_spec.rb
+- spec/jira/http_client_spec.rb
+- spec/jira/http_error_spec.rb
+- spec/jira/jwt_uri_builder_spec.rb
+- spec/jira/oauth_client_spec.rb
+- spec/jira/request_client_spec.rb
+- spec/jira/resource/agile_spec.rb
+- spec/jira/resource/attachment_spec.rb
+- spec/jira/resource/board_spec.rb
+- spec/jira/resource/createmeta_spec.rb
+- spec/jira/resource/field_spec.rb
+- spec/jira/resource/filter_spec.rb
+- spec/jira/resource/issue_picker_suggestions_spec.rb
+- spec/jira/resource/issue_spec.rb
+- spec/jira/resource/issuelink_spec.rb
+- spec/jira/resource/jira_picker_suggestions_issue_spec.rb
+- spec/jira/resource/project_factory_spec.rb
+- spec/jira/resource/project_spec.rb
+- spec/jira/resource/sprint_spec.rb
+- spec/jira/resource/user_factory_spec.rb
+- spec/jira/resource/worklog_spec.rb
+- spec/mock_responses/board/1.json
+- spec/mock_responses/board/1_issues.json
+- spec/mock_responses/component.post.json
+- spec/mock_responses/component/10000.invalid.put.json
+- spec/mock_responses/component/10000.json
+- spec/mock_responses/component/10000.put.json
+- spec/mock_responses/empty_issues.json
+- spec/mock_responses/field.json
+- spec/mock_responses/field/1.json
+- spec/mock_responses/issue.json
+- spec/mock_responses/issue.post.json
+- spec/mock_responses/issue/10002.invalid.put.json
+- spec/mock_responses/issue/10002.json
+- spec/mock_responses/issue/10002.put.missing_field_update.json
+- spec/mock_responses/issue/10002/attachments/10000.json
+- spec/mock_responses/issue/10002/comment.json
+- spec/mock_responses/issue/10002/comment.post.json
+- spec/mock_responses/issue/10002/comment/10000.json
+- spec/mock_responses/issue/10002/comment/10000.put.json
+- spec/mock_responses/issue/10002/transitions.json
+- spec/mock_responses/issue/10002/transitions.post.json
+- spec/mock_responses/issue/10002/watchers.json
+- spec/mock_responses/issue/10002/worklog.json
+- spec/mock_responses/issue/10002/worklog.post.json
+- spec/mock_responses/issue/10002/worklog/10000.json
+- spec/mock_responses/issue/10002/worklog/10000.put.json
+- spec/mock_responses/issueLinkType.json
+- spec/mock_responses/issueLinkType/10000.json
+- spec/mock_responses/issuetype.json
+- spec/mock_responses/issuetype/5.json
+- spec/mock_responses/jira/rest/webhooks/1.0/webhook.json
+- spec/mock_responses/jira/rest/webhooks/1.0/webhook/2.json
+- spec/mock_responses/priority.json
+- spec/mock_responses/priority/1.json
+- spec/mock_responses/project.json
+- spec/mock_responses/project/SAMPLEPROJECT.issues.json
+- spec/mock_responses/project/SAMPLEPROJECT.json
+- spec/mock_responses/rapidview.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.issues.full.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.issues.json
+- spec/mock_responses/rapidview/SAMPLEPROJECT.json
+- spec/mock_responses/resolution.json
+- spec/mock_responses/resolution/1.json
+- spec/mock_responses/sprint/1_issues.json
+- spec/mock_responses/status.json
+- spec/mock_responses/status/1.json
+- spec/mock_responses/user_username=admin.json
+- spec/mock_responses/version.post.json
+- spec/mock_responses/version/10000.invalid.put.json
+- spec/mock_responses/version/10000.json
+- spec/mock_responses/version/10000.put.json
+- spec/mock_responses/webhook.json
+- spec/mock_responses/webhook/webhook.json
+- spec/spec_helper.rb
+- spec/support/clients_helper.rb
+- spec/support/matchers/have_attributes.rb
+- spec/support/matchers/have_many.rb
+- spec/support/matchers/have_one.rb
+- spec/support/shared_examples/integration.rb

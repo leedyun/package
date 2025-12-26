@@ -1,0 +1,139 @@
+--- !ruby/object:Gem::Specification
+name: mailinator
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Alejandro Dev.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-07-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.5.4
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.16.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.16.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.3.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 12.3.1
+description: 
+email:
+- aeinformatico@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".travis.yml"
+- Gemfile
+- Gemfile.lock
+- Guardfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/mailinator.rb
+- lib/mailinator/api.rb
+- lib/mailinator/config.rb
+- lib/mailinator/email.rb
+- lib/mailinator/inbox.rb
+- lib/mailinator/model.rb
+- lib/mailinator/models/email.rb
+- lib/mailinator/models/entry.rb
+- lib/mailinator/models/inbox.rb
+- lib/mailinator/version.rb
+- mailinator.gemspec
+- spec/fixtures/delete.response
+- spec/fixtures/email-plain.response
+- spec/fixtures/email.response
+- spec/fixtures/email_private.response
+- spec/fixtures/error.response
+- spec/fixtures/inbox.response
+- spec/fixtures/inbox_private.response
+- spec/fixtures/not-found.response
+- spec/lib/mailinator/api_spec.rb
+- spec/lib/mailinator/config_spec.rb
+- spec/lib/mailinator/email_spec.rb
+- spec/lib/mailinator/inbox_private_spec.rb
+- spec/lib/mailinator/inbox_spec.rb
+- spec/lib/mailinator/model_spec.rb
+- spec/mailinator_spec.rb
+- spec/spec_helper.rb
+- spec/support/fake_web.rb
+homepage: https://github.com/ainformatico/mailinator
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.11
+signing_key: 
+specification_version: 4
+summary: Mailinator REST API wrapper
+test_files:
+- spec/fixtures/delete.response
+- spec/fixtures/email-plain.response
+- spec/fixtures/email.response
+- spec/fixtures/email_private.response
+- spec/fixtures/error.response
+- spec/fixtures/inbox.response
+- spec/fixtures/inbox_private.response
+- spec/fixtures/not-found.response
+- spec/lib/mailinator/api_spec.rb
+- spec/lib/mailinator/config_spec.rb
+- spec/lib/mailinator/email_spec.rb
+- spec/lib/mailinator/inbox_private_spec.rb
+- spec/lib/mailinator/inbox_spec.rb
+- spec/lib/mailinator/model_spec.rb
+- spec/mailinator_spec.rb
+- spec/spec_helper.rb
+- spec/support/fake_web.rb

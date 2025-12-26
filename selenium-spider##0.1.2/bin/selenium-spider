@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'selenium_spider'
+require 'optparse'
+
+options = {}
+options[:command] = ARGV[0]
+
+OptionParser.new do |parser|
+  parser.banner = "SeleniumSpider #{SeleniumSpider::VERSION}\n\n"
+  parser.separator "Usage: selenium-spider command [option]\n"
+
+  parser.separator "Commands:"
+  %w(run generate).each do |cmd|
+    parser.separator "    " + cmd
+  end
+
+  parser.separator "Options for command 'run':"
+  parser.on('-s site', '--site=site', "サイト名") { |v| options[:site] = v }
+  parser.on('--headless', 'GUI無しで動作(xvfbが必要)') { |v| options[:headless] = v }
+
+  parser.separator "Options for command 'generate':"
+  parser.on('-s site', '--site=site', "サイト名") { |v| options[:site] = v }
+
+  parser.separator "Other options"
+  parser.on('-h', '--help', "Show this message") do
+    puts parser
+    exit 1
+  end
+
+  parser.parse! ARGV
+end
+
+SeleniumSpider::CommandLine.execute options
+

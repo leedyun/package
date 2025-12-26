@@ -1,0 +1,237 @@
+--- !ruby/object:Gem::Specification
+name: dogapi
+version: !ruby/object:Gem::Version
+  version: 1.45.0
+platform: ruby
+authors:
+- Datadog, Inc.
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2021-01-27 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby bindings for Datadog's API
+email:
+- packages@datadoghq.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+files:
+- ".azure-pipelines/all.yml"
+- ".github/CODEOWNERS"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/PULL_REQUEST_TEMPLATE.md"
+- ".github/labeler.yml"
+- ".github/workflows/labeler.yml"
+- ".github/workflows/stale.yml"
+- ".gitignore"
+- ".rspec"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- ".tailor"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- DEVELOPMENT.md
+- Gemfile
+- Gemfile_1.9
+- LICENSE
+- LICENSE-3rdparty.csv
+- README.rdoc
+- RELEASING.md
+- Rakefile
+- SUPPORT.md
+- dogapi.gemspec
+- examples/Capfile
+- examples/custom_event.rb
+- examples/custom_metric.rb
+- lib/capistrano/README.md
+- lib/capistrano/datadog.rb
+- lib/capistrano/datadog/v2.rb
+- lib/capistrano/datadog/v3.rb
+- lib/dogapi.rb
+- lib/dogapi/common.rb
+- lib/dogapi/event.rb
+- lib/dogapi/facade.rb
+- lib/dogapi/metric.rb
+- lib/dogapi/v1.rb
+- lib/dogapi/v1/alert.rb
+- lib/dogapi/v1/aws_integration.rb
+- lib/dogapi/v1/aws_logs.rb
+- lib/dogapi/v1/azure_integration.rb
+- lib/dogapi/v1/comment.rb
+- lib/dogapi/v1/dash.rb
+- lib/dogapi/v1/dashboard.rb
+- lib/dogapi/v1/dashboard_list.rb
+- lib/dogapi/v1/embed.rb
+- lib/dogapi/v1/event.rb
+- lib/dogapi/v1/gcp_integration.rb
+- lib/dogapi/v1/hosts.rb
+- lib/dogapi/v1/integration.rb
+- lib/dogapi/v1/logs_pipeline.rb
+- lib/dogapi/v1/metadata.rb
+- lib/dogapi/v1/metric.rb
+- lib/dogapi/v1/monitor.rb
+- lib/dogapi/v1/screenboard.rb
+- lib/dogapi/v1/search.rb
+- lib/dogapi/v1/service_check.rb
+- lib/dogapi/v1/service_level_objective.rb
+- lib/dogapi/v1/snapshot.rb
+- lib/dogapi/v1/synthetics.rb
+- lib/dogapi/v1/tag.rb
+- lib/dogapi/v1/usage.rb
+- lib/dogapi/v1/user.rb
+- lib/dogapi/v2.rb
+- lib/dogapi/v2/dashboard_list.rb
+- lib/dogapi/version.rb
+- spec/integration/alert_spec.rb
+- spec/integration/aws_integration_spec.rb
+- spec/integration/aws_logs_spec.rb
+- spec/integration/azure_integration_spec.rb
+- spec/integration/comment_spec.rb
+- spec/integration/common_spec.rb
+- spec/integration/dash_spec.rb
+- spec/integration/dashboard_list_spec.rb
+- spec/integration/dashboard_spec.rb
+- spec/integration/embed_spec.rb
+- spec/integration/event_spec.rb
+- spec/integration/gcp_integration_spec.rb
+- spec/integration/integration_spec.rb
+- spec/integration/logs_pipeline_spec.rb
+- spec/integration/metadata_spec.rb
+- spec/integration/metric_spec.rb
+- spec/integration/monitor_spec.rb
+- spec/integration/screenboard_spec.rb
+- spec/integration/search_spec.rb
+- spec/integration/service_check_spec.rb
+- spec/integration/service_level_objective_spec.rb
+- spec/integration/snapshot_spec.rb
+- spec/integration/synthetics_spec.rb
+- spec/integration/tag_spec.rb
+- spec/integration/usage_spec.rb
+- spec/integration/user_spec.rb
+- spec/spec_helper.rb
+- spec/unit/capistrano_spec.rb
+- spec/unit/common_spec.rb
+- spec/unit/facade_spec.rb
+homepage: http://datadoghq.com/
+licenses:
+- BSD
+metadata:
+  bug_tracker_uri: https://github.com/DataDog/dogapi-rb/issues
+  changelog_uri: https://github.com/DataDog/dogapi-rb/blob/master/CHANGELOG.md
+  documentation_uri: https://docs.datadoghq.com/api/
+  source_code_uri: https://github.com/DataDog/dogapi-rb
+post_install_message:
+rdoc_options:
+- "--title"
+- DogAPI -- Datadog Client
+- "--main"
+- README.rdoc
+- "--line-numbers"
+- "--inline-source"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.6
+signing_key:
+specification_version: 4
+summary: Ruby bindings for Datadog's API
+test_files:
+- spec/integration/alert_spec.rb
+- spec/integration/aws_integration_spec.rb
+- spec/integration/aws_logs_spec.rb
+- spec/integration/azure_integration_spec.rb
+- spec/integration/comment_spec.rb
+- spec/integration/common_spec.rb
+- spec/integration/dash_spec.rb
+- spec/integration/dashboard_list_spec.rb
+- spec/integration/dashboard_spec.rb
+- spec/integration/embed_spec.rb
+- spec/integration/event_spec.rb
+- spec/integration/gcp_integration_spec.rb
+- spec/integration/integration_spec.rb
+- spec/integration/logs_pipeline_spec.rb
+- spec/integration/metadata_spec.rb
+- spec/integration/metric_spec.rb
+- spec/integration/monitor_spec.rb
+- spec/integration/screenboard_spec.rb
+- spec/integration/search_spec.rb
+- spec/integration/service_check_spec.rb
+- spec/integration/service_level_objective_spec.rb
+- spec/integration/snapshot_spec.rb
+- spec/integration/synthetics_spec.rb
+- spec/integration/tag_spec.rb
+- spec/integration/usage_spec.rb
+- spec/integration/user_spec.rb
+- spec/spec_helper.rb
+- spec/unit/capistrano_spec.rb
+- spec/unit/common_spec.rb
+- spec/unit/facade_spec.rb

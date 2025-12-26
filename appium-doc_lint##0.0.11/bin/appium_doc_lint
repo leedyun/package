@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require_relative '../lib/appium_doc_lint'
+
+def run_glob
+  lint = Appium::Lint.new
+  dir  = File.join(Dir.pwd, '**', '*.md')
+
+  lint.report lint.glob dir
+end
+
+result = run_glob
+
+if result
+  puts result
+  exit 1
+end

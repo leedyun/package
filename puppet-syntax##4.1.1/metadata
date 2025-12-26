@@ -1,0 +1,172 @@
+--- !ruby/object:Gem::Specification
+name: puppet-syntax
+version: !ruby/object:Gem::Version
+  version: 4.1.1
+platform: ruby
+authors:
+- Vox Pupuli
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-04-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: puppet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.14.2
+- !ruby/object:Gem::Dependency
+  name: rb-readline
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.5.5
+- !ruby/object:Gem::Dependency
+  name: voxpupuli-rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+description: Syntax checks for Puppet manifests and templates
+email:
+- voxpupuli@groups.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/release.yml"
+- ".github/workflows/test.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- ".rubocop_todo.yml"
+- CHANGELOG.md
+- Gemfile
+- HISTORY.md
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/puppet-syntax.rb
+- lib/puppet-syntax/hiera.rb
+- lib/puppet-syntax/manifests.rb
+- lib/puppet-syntax/tasks/puppet-syntax.rb
+- lib/puppet-syntax/templates.rb
+- lib/puppet-syntax/version.rb
+- puppet-syntax.gemspec
+- spec/fixtures/hiera/data/hiera_1.yaml
+- spec/fixtures/hiera/data/hiera_2.eyaml
+- spec/fixtures/hiera/data/test/hiera_3.yaml
+- spec/fixtures/hiera/data/test/hiera_4.eyaml
+- spec/fixtures/hiera/hiera_bad.eyaml
+- spec/fixtures/hiera/hiera_bad.yaml
+- spec/fixtures/hiera/hiera_badkey.yaml
+- spec/fixtures/hiera/hiera_good.yaml
+- spec/fixtures/hiera/hiera_key_empty.yaml
+- spec/fixtures/test_module/manifests/deprecation_notice.pp
+- spec/fixtures/test_module/manifests/fail_error.pp
+- spec/fixtures/test_module/manifests/fail_warning.pp
+- spec/fixtures/test_module/manifests/future_syntax.pp
+- spec/fixtures/test_module/manifests/pass.pp
+- spec/fixtures/test_module/manifests/pass_storeconfigs.pp
+- spec/fixtures/test_module/manifests/schedule_notice.pp
+- spec/fixtures/test_module/manifests/tag_notice.pp
+- spec/fixtures/test_module/manifests/test_app.pp
+- spec/fixtures/test_module/templates/fail_error.epp
+- spec/fixtures/test_module/templates/fail_error.erb
+- spec/fixtures/test_module/templates/fail_error_also.epp
+- spec/fixtures/test_module/templates/fail_warning.erb
+- spec/fixtures/test_module/templates/ignore.tpl
+- spec/fixtures/test_module/templates/pass.epp
+- spec/fixtures/test_module/templates/pass.erb
+- spec/fixtures/test_module/templates/pass_also.epp
+- spec/fixtures/test_module/templates/pass_unbound_var.erb
+- spec/fixtures/test_module/templates/typeerror_shouldwin.erb
+- spec/puppet-syntax/hiera_spec.rb
+- spec/puppet-syntax/manifests_spec.rb
+- spec/puppet-syntax/tasks/puppet-syntax_spec.rb
+- spec/puppet-syntax/templates_spec.rb
+- spec/puppet-syntax_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/voxpupuli/puppet-syntax
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: Syntax checks for Puppet manifests, templates, and Hiera YAML
+test_files: []

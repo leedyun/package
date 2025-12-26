@@ -1,0 +1,56 @@
+--- !ruby/object:Gem::Specification
+name: hide-asset_logs
+version: !ruby/object:Gem::Version
+  version: 1.0.0
+platform: ruby
+authors:
+- Nathan Broadbent
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2020-02-25 00:00:00.000000000 Z
+dependencies: []
+description: Stop asset requests from being logged in your terminal.
+email:
+- nathan.f77@gmail.com
+executables: []
+extensions:
+- ext/trellislike/unflaming/waffling/extconf.rb
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/trellislike/unflaming/waffling/Makefile
+- ext/trellislike/unflaming/waffling/aaa.png
+- ext/trellislike/unflaming/waffling/extconf.rb
+- hide-asset_logs.gemspec
+- lib/hide_asset_logs.rb
+- lib/hide_asset_logs/middleware.rb
+- lib/hide_asset_logs/railtie.rb
+- lib/hide_asset_logs/version.rb
+homepage: http://github.com/ndbroadbent/hide_asset_logs
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Hide asset logs
+test_files: []

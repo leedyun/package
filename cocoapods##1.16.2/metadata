@@ -1,0 +1,553 @@
+--- !ruby/object:Gem::Specification
+name: cocoapods
+version: !ruby/object:Gem::Version
+  version: 1.16.2
+platform: ruby
+authors:
+- Eloy Duran
+- Fabio Pelosin
+- Kyle Fuller
+- Samuel Giddins
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cocoapods-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 1.16.2
+- !ruby/object:Gem::Dependency
+  name: claide
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.2
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-deintegrate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.3
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-downloader
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-plugins
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-search
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-trunk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: cocoapods-try
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: molinillo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.8.0
+- !ruby/object:Gem::Dependency
+  name: xcodeproj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.27.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.27.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: colored2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+- !ruby/object:Gem::Dependency
+  name: escape
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.0.4
+- !ruby/object:Gem::Dependency
+  name: fourflusher
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: gh_inspector
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: nap
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: ruby-macho
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.3.0
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.8'
+- !ruby/object:Gem::Dependency
+  name: bacon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12.3'
+description: |-
+  CocoaPods manages library dependencies for your Xcode project.
+
+  You specify the dependencies for your project in one easy text file. CocoaPods resolves dependencies between libraries, fetches source code for the dependencies, and creates and maintains an Xcode workspace to build your project.
+
+  Ultimately, the goal is to improve discoverability of, and engagement in, third party open-source libraries, by creating a more centralized ecosystem.
+email:
+- eloy.de.enige@gmail.com
+- fabiopelosin@gmail.com
+- kyle@fuller.li
+- segiddins@segiddins.me
+executables:
+- pod
+- sandbox-pod
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- bin/pod
+- bin/sandbox-pod
+- lib/cocoapods.rb
+- lib/cocoapods/command.rb
+- lib/cocoapods/command/cache.rb
+- lib/cocoapods/command/cache/clean.rb
+- lib/cocoapods/command/cache/list.rb
+- lib/cocoapods/command/env.rb
+- lib/cocoapods/command/init.rb
+- lib/cocoapods/command/install.rb
+- lib/cocoapods/command/ipc.rb
+- lib/cocoapods/command/ipc/list.rb
+- lib/cocoapods/command/ipc/podfile.rb
+- lib/cocoapods/command/ipc/podfile_json.rb
+- lib/cocoapods/command/ipc/repl.rb
+- lib/cocoapods/command/ipc/spec.rb
+- lib/cocoapods/command/ipc/update_search_index.rb
+- lib/cocoapods/command/lib.rb
+- lib/cocoapods/command/lib/create.rb
+- lib/cocoapods/command/lib/lint.rb
+- lib/cocoapods/command/list.rb
+- lib/cocoapods/command/options/project_directory.rb
+- lib/cocoapods/command/options/repo_update.rb
+- lib/cocoapods/command/outdated.rb
+- lib/cocoapods/command/repo.rb
+- lib/cocoapods/command/repo/add.rb
+- lib/cocoapods/command/repo/add_cdn.rb
+- lib/cocoapods/command/repo/lint.rb
+- lib/cocoapods/command/repo/list.rb
+- lib/cocoapods/command/repo/push.rb
+- lib/cocoapods/command/repo/remove.rb
+- lib/cocoapods/command/repo/update.rb
+- lib/cocoapods/command/setup.rb
+- lib/cocoapods/command/spec.rb
+- lib/cocoapods/command/spec/cat.rb
+- lib/cocoapods/command/spec/create.rb
+- lib/cocoapods/command/spec/edit.rb
+- lib/cocoapods/command/spec/lint.rb
+- lib/cocoapods/command/spec/which.rb
+- lib/cocoapods/command/update.rb
+- lib/cocoapods/config.rb
+- lib/cocoapods/core_overrides.rb
+- lib/cocoapods/downloader.rb
+- lib/cocoapods/downloader/cache.rb
+- lib/cocoapods/downloader/request.rb
+- lib/cocoapods/downloader/response.rb
+- lib/cocoapods/executable.rb
+- lib/cocoapods/external_sources.rb
+- lib/cocoapods/external_sources/abstract_external_source.rb
+- lib/cocoapods/external_sources/downloader_source.rb
+- lib/cocoapods/external_sources/path_source.rb
+- lib/cocoapods/external_sources/podspec_source.rb
+- lib/cocoapods/gem_version.rb
+- lib/cocoapods/generator/acknowledgements.rb
+- lib/cocoapods/generator/acknowledgements/markdown.rb
+- lib/cocoapods/generator/acknowledgements/plist.rb
+- lib/cocoapods/generator/app_target_helper.rb
+- lib/cocoapods/generator/bridge_support.rb
+- lib/cocoapods/generator/constant.rb
+- lib/cocoapods/generator/copy_dsyms_script.rb
+- lib/cocoapods/generator/copy_resources_script.rb
+- lib/cocoapods/generator/copy_xcframework_script.rb
+- lib/cocoapods/generator/dummy_source.rb
+- lib/cocoapods/generator/embed_frameworks_script.rb
+- lib/cocoapods/generator/file_list.rb
+- lib/cocoapods/generator/header.rb
+- lib/cocoapods/generator/info_plist_file.rb
+- lib/cocoapods/generator/module_map.rb
+- lib/cocoapods/generator/prefix_header.rb
+- lib/cocoapods/generator/script_phase_constants.rb
+- lib/cocoapods/generator/umbrella_header.rb
+- lib/cocoapods/hooks_manager.rb
+- lib/cocoapods/installer.rb
+- lib/cocoapods/installer/analyzer.rb
+- lib/cocoapods/installer/analyzer/analysis_result.rb
+- lib/cocoapods/installer/analyzer/locking_dependency_analyzer.rb
+- lib/cocoapods/installer/analyzer/pod_variant.rb
+- lib/cocoapods/installer/analyzer/pod_variant_set.rb
+- lib/cocoapods/installer/analyzer/podfile_dependency_cache.rb
+- lib/cocoapods/installer/analyzer/sandbox_analyzer.rb
+- lib/cocoapods/installer/analyzer/specs_state.rb
+- lib/cocoapods/installer/analyzer/target_inspection_result.rb
+- lib/cocoapods/installer/analyzer/target_inspector.rb
+- lib/cocoapods/installer/base_install_hooks_context.rb
+- lib/cocoapods/installer/installation_options.rb
+- lib/cocoapods/installer/pod_source_downloader.rb
+- lib/cocoapods/installer/pod_source_installer.rb
+- lib/cocoapods/installer/pod_source_preparer.rb
+- lib/cocoapods/installer/podfile_validator.rb
+- lib/cocoapods/installer/post_install_hooks_context.rb
+- lib/cocoapods/installer/post_integrate_hooks_context.rb
+- lib/cocoapods/installer/pre_install_hooks_context.rb
+- lib/cocoapods/installer/pre_integrate_hooks_context.rb
+- lib/cocoapods/installer/project_cache/project_cache.rb
+- lib/cocoapods/installer/project_cache/project_cache_analysis_result.rb
+- lib/cocoapods/installer/project_cache/project_cache_analyzer.rb
+- lib/cocoapods/installer/project_cache/project_cache_version.rb
+- lib/cocoapods/installer/project_cache/project_installation_cache.rb
+- lib/cocoapods/installer/project_cache/project_metadata_cache.rb
+- lib/cocoapods/installer/project_cache/target_cache_key.rb
+- lib/cocoapods/installer/project_cache/target_metadata.rb
+- lib/cocoapods/installer/sandbox_dir_cleaner.rb
+- lib/cocoapods/installer/sandbox_header_paths_installer.rb
+- lib/cocoapods/installer/source_provider_hooks_context.rb
+- lib/cocoapods/installer/target_uuid_generator.rb
+- lib/cocoapods/installer/user_project_integrator.rb
+- lib/cocoapods/installer/user_project_integrator/target_integrator.rb
+- lib/cocoapods/installer/user_project_integrator/target_integrator/xcconfig_integrator.rb
+- lib/cocoapods/installer/xcode.rb
+- lib/cocoapods/installer/xcode/multi_pods_project_generator.rb
+- lib/cocoapods/installer/xcode/pods_project_generator.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/aggregate_target_dependency_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/aggregate_target_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/app_host_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/file_references_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/pod_target_dependency_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/pod_target_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/pod_target_integrator.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/pods_project_writer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/project_generator.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/target_installation_result.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/target_installer.rb
+- lib/cocoapods/installer/xcode/pods_project_generator/target_installer_helper.rb
+- lib/cocoapods/installer/xcode/pods_project_generator_result.rb
+- lib/cocoapods/installer/xcode/single_pods_project_generator.rb
+- lib/cocoapods/installer/xcode/target_validator.rb
+- lib/cocoapods/native_target_extension.rb
+- lib/cocoapods/open-uri.rb
+- lib/cocoapods/podfile.rb
+- lib/cocoapods/project.rb
+- lib/cocoapods/resolver.rb
+- lib/cocoapods/resolver/lazy_specification.rb
+- lib/cocoapods/resolver/resolver_specification.rb
+- lib/cocoapods/sandbox.rb
+- lib/cocoapods/sandbox/file_accessor.rb
+- lib/cocoapods/sandbox/headers_store.rb
+- lib/cocoapods/sandbox/path_list.rb
+- lib/cocoapods/sandbox/pod_dir_cleaner.rb
+- lib/cocoapods/sandbox/podspec_finder.rb
+- lib/cocoapods/sources_manager.rb
+- lib/cocoapods/target.rb
+- lib/cocoapods/target/aggregate_target.rb
+- lib/cocoapods/target/build_settings.rb
+- lib/cocoapods/target/pod_target.rb
+- lib/cocoapods/user_interface.rb
+- lib/cocoapods/user_interface/error_report.rb
+- lib/cocoapods/user_interface/inspector_reporter.rb
+- lib/cocoapods/validator.rb
+- lib/cocoapods/version_metadata.rb
+- lib/cocoapods/xcode.rb
+- lib/cocoapods/xcode/framework_paths.rb
+- lib/cocoapods/xcode/linkage_analyzer.rb
+- lib/cocoapods/xcode/xcframework.rb
+- lib/cocoapods/xcode/xcframework/xcframework_slice.rb
+homepage: https://github.com/CocoaPods/CocoaPods
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.6'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: The Cocoa library package manager.
+test_files: []

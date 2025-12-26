@@ -1,0 +1,504 @@
+--- !ruby/object:Gem::Specification
+name: activerecord
+version: !ruby/object:Gem::Version
+  version: 8.0.1
+platform: ruby
+authors:
+- David Heinemeier Hansson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 8.0.1
+- !ruby/object:Gem::Dependency
+  name: timeout
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+description: Databases on Rails. Build a persistent domain model by mapping database
+  tables to Ruby classes. Strong conventions for associations, validations, aggregations,
+  migrations, and testing come baked-in.
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.rdoc
+- examples/performance.rb
+- examples/simple.rb
+- lib/active_record.rb
+- lib/active_record/aggregations.rb
+- lib/active_record/association_relation.rb
+- lib/active_record/associations.rb
+- lib/active_record/associations/alias_tracker.rb
+- lib/active_record/associations/association.rb
+- lib/active_record/associations/association_scope.rb
+- lib/active_record/associations/belongs_to_association.rb
+- lib/active_record/associations/belongs_to_polymorphic_association.rb
+- lib/active_record/associations/builder/association.rb
+- lib/active_record/associations/builder/belongs_to.rb
+- lib/active_record/associations/builder/collection_association.rb
+- lib/active_record/associations/builder/has_and_belongs_to_many.rb
+- lib/active_record/associations/builder/has_many.rb
+- lib/active_record/associations/builder/has_one.rb
+- lib/active_record/associations/builder/singular_association.rb
+- lib/active_record/associations/collection_association.rb
+- lib/active_record/associations/collection_proxy.rb
+- lib/active_record/associations/disable_joins_association_scope.rb
+- lib/active_record/associations/errors.rb
+- lib/active_record/associations/foreign_association.rb
+- lib/active_record/associations/has_many_association.rb
+- lib/active_record/associations/has_many_through_association.rb
+- lib/active_record/associations/has_one_association.rb
+- lib/active_record/associations/has_one_through_association.rb
+- lib/active_record/associations/join_dependency.rb
+- lib/active_record/associations/join_dependency/join_association.rb
+- lib/active_record/associations/join_dependency/join_base.rb
+- lib/active_record/associations/join_dependency/join_part.rb
+- lib/active_record/associations/nested_error.rb
+- lib/active_record/associations/preloader.rb
+- lib/active_record/associations/preloader/association.rb
+- lib/active_record/associations/preloader/batch.rb
+- lib/active_record/associations/preloader/branch.rb
+- lib/active_record/associations/preloader/through_association.rb
+- lib/active_record/associations/singular_association.rb
+- lib/active_record/associations/through_association.rb
+- lib/active_record/asynchronous_queries_tracker.rb
+- lib/active_record/attribute_assignment.rb
+- lib/active_record/attribute_methods.rb
+- lib/active_record/attribute_methods/before_type_cast.rb
+- lib/active_record/attribute_methods/composite_primary_key.rb
+- lib/active_record/attribute_methods/dirty.rb
+- lib/active_record/attribute_methods/primary_key.rb
+- lib/active_record/attribute_methods/query.rb
+- lib/active_record/attribute_methods/read.rb
+- lib/active_record/attribute_methods/serialization.rb
+- lib/active_record/attribute_methods/time_zone_conversion.rb
+- lib/active_record/attribute_methods/write.rb
+- lib/active_record/attributes.rb
+- lib/active_record/autosave_association.rb
+- lib/active_record/base.rb
+- lib/active_record/callbacks.rb
+- lib/active_record/coders/column_serializer.rb
+- lib/active_record/coders/json.rb
+- lib/active_record/coders/yaml_column.rb
+- lib/active_record/connection_adapters.rb
+- lib/active_record/connection_adapters/abstract/connection_handler.rb
+- lib/active_record/connection_adapters/abstract/connection_pool.rb
+- lib/active_record/connection_adapters/abstract/connection_pool/queue.rb
+- lib/active_record/connection_adapters/abstract/connection_pool/reaper.rb
+- lib/active_record/connection_adapters/abstract/database_limits.rb
+- lib/active_record/connection_adapters/abstract/database_statements.rb
+- lib/active_record/connection_adapters/abstract/query_cache.rb
+- lib/active_record/connection_adapters/abstract/quoting.rb
+- lib/active_record/connection_adapters/abstract/savepoints.rb
+- lib/active_record/connection_adapters/abstract/schema_creation.rb
+- lib/active_record/connection_adapters/abstract/schema_definitions.rb
+- lib/active_record/connection_adapters/abstract/schema_dumper.rb
+- lib/active_record/connection_adapters/abstract/schema_statements.rb
+- lib/active_record/connection_adapters/abstract/transaction.rb
+- lib/active_record/connection_adapters/abstract_adapter.rb
+- lib/active_record/connection_adapters/abstract_mysql_adapter.rb
+- lib/active_record/connection_adapters/column.rb
+- lib/active_record/connection_adapters/deduplicable.rb
+- lib/active_record/connection_adapters/mysql/column.rb
+- lib/active_record/connection_adapters/mysql/database_statements.rb
+- lib/active_record/connection_adapters/mysql/explain_pretty_printer.rb
+- lib/active_record/connection_adapters/mysql/quoting.rb
+- lib/active_record/connection_adapters/mysql/schema_creation.rb
+- lib/active_record/connection_adapters/mysql/schema_definitions.rb
+- lib/active_record/connection_adapters/mysql/schema_dumper.rb
+- lib/active_record/connection_adapters/mysql/schema_statements.rb
+- lib/active_record/connection_adapters/mysql/type_metadata.rb
+- lib/active_record/connection_adapters/mysql2/database_statements.rb
+- lib/active_record/connection_adapters/mysql2_adapter.rb
+- lib/active_record/connection_adapters/pool_config.rb
+- lib/active_record/connection_adapters/pool_manager.rb
+- lib/active_record/connection_adapters/postgresql/column.rb
+- lib/active_record/connection_adapters/postgresql/database_statements.rb
+- lib/active_record/connection_adapters/postgresql/explain_pretty_printer.rb
+- lib/active_record/connection_adapters/postgresql/oid.rb
+- lib/active_record/connection_adapters/postgresql/oid/array.rb
+- lib/active_record/connection_adapters/postgresql/oid/bit.rb
+- lib/active_record/connection_adapters/postgresql/oid/bit_varying.rb
+- lib/active_record/connection_adapters/postgresql/oid/bytea.rb
+- lib/active_record/connection_adapters/postgresql/oid/cidr.rb
+- lib/active_record/connection_adapters/postgresql/oid/date.rb
+- lib/active_record/connection_adapters/postgresql/oid/date_time.rb
+- lib/active_record/connection_adapters/postgresql/oid/decimal.rb
+- lib/active_record/connection_adapters/postgresql/oid/enum.rb
+- lib/active_record/connection_adapters/postgresql/oid/hstore.rb
+- lib/active_record/connection_adapters/postgresql/oid/inet.rb
+- lib/active_record/connection_adapters/postgresql/oid/interval.rb
+- lib/active_record/connection_adapters/postgresql/oid/jsonb.rb
+- lib/active_record/connection_adapters/postgresql/oid/legacy_point.rb
+- lib/active_record/connection_adapters/postgresql/oid/macaddr.rb
+- lib/active_record/connection_adapters/postgresql/oid/money.rb
+- lib/active_record/connection_adapters/postgresql/oid/oid.rb
+- lib/active_record/connection_adapters/postgresql/oid/point.rb
+- lib/active_record/connection_adapters/postgresql/oid/range.rb
+- lib/active_record/connection_adapters/postgresql/oid/specialized_string.rb
+- lib/active_record/connection_adapters/postgresql/oid/timestamp.rb
+- lib/active_record/connection_adapters/postgresql/oid/timestamp_with_time_zone.rb
+- lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb
+- lib/active_record/connection_adapters/postgresql/oid/uuid.rb
+- lib/active_record/connection_adapters/postgresql/oid/vector.rb
+- lib/active_record/connection_adapters/postgresql/oid/xml.rb
+- lib/active_record/connection_adapters/postgresql/quoting.rb
+- lib/active_record/connection_adapters/postgresql/referential_integrity.rb
+- lib/active_record/connection_adapters/postgresql/schema_creation.rb
+- lib/active_record/connection_adapters/postgresql/schema_definitions.rb
+- lib/active_record/connection_adapters/postgresql/schema_dumper.rb
+- lib/active_record/connection_adapters/postgresql/schema_statements.rb
+- lib/active_record/connection_adapters/postgresql/type_metadata.rb
+- lib/active_record/connection_adapters/postgresql/utils.rb
+- lib/active_record/connection_adapters/postgresql_adapter.rb
+- lib/active_record/connection_adapters/schema_cache.rb
+- lib/active_record/connection_adapters/sql_type_metadata.rb
+- lib/active_record/connection_adapters/sqlite3/column.rb
+- lib/active_record/connection_adapters/sqlite3/database_statements.rb
+- lib/active_record/connection_adapters/sqlite3/explain_pretty_printer.rb
+- lib/active_record/connection_adapters/sqlite3/quoting.rb
+- lib/active_record/connection_adapters/sqlite3/schema_creation.rb
+- lib/active_record/connection_adapters/sqlite3/schema_definitions.rb
+- lib/active_record/connection_adapters/sqlite3/schema_dumper.rb
+- lib/active_record/connection_adapters/sqlite3/schema_statements.rb
+- lib/active_record/connection_adapters/sqlite3_adapter.rb
+- lib/active_record/connection_adapters/statement_pool.rb
+- lib/active_record/connection_adapters/trilogy/database_statements.rb
+- lib/active_record/connection_adapters/trilogy_adapter.rb
+- lib/active_record/connection_handling.rb
+- lib/active_record/core.rb
+- lib/active_record/counter_cache.rb
+- lib/active_record/database_configurations.rb
+- lib/active_record/database_configurations/connection_url_resolver.rb
+- lib/active_record/database_configurations/database_config.rb
+- lib/active_record/database_configurations/hash_config.rb
+- lib/active_record/database_configurations/url_config.rb
+- lib/active_record/delegated_type.rb
+- lib/active_record/deprecator.rb
+- lib/active_record/destroy_association_async_job.rb
+- lib/active_record/disable_joins_association_relation.rb
+- lib/active_record/dynamic_matchers.rb
+- lib/active_record/encryption.rb
+- lib/active_record/encryption/auto_filtered_parameters.rb
+- lib/active_record/encryption/cipher.rb
+- lib/active_record/encryption/cipher/aes256_gcm.rb
+- lib/active_record/encryption/config.rb
+- lib/active_record/encryption/configurable.rb
+- lib/active_record/encryption/context.rb
+- lib/active_record/encryption/contexts.rb
+- lib/active_record/encryption/derived_secret_key_provider.rb
+- lib/active_record/encryption/deterministic_key_provider.rb
+- lib/active_record/encryption/encryptable_record.rb
+- lib/active_record/encryption/encrypted_attribute_type.rb
+- lib/active_record/encryption/encrypted_fixtures.rb
+- lib/active_record/encryption/encrypting_only_encryptor.rb
+- lib/active_record/encryption/encryptor.rb
+- lib/active_record/encryption/envelope_encryption_key_provider.rb
+- lib/active_record/encryption/errors.rb
+- lib/active_record/encryption/extended_deterministic_queries.rb
+- lib/active_record/encryption/extended_deterministic_uniqueness_validator.rb
+- lib/active_record/encryption/key.rb
+- lib/active_record/encryption/key_generator.rb
+- lib/active_record/encryption/key_provider.rb
+- lib/active_record/encryption/message.rb
+- lib/active_record/encryption/message_pack_message_serializer.rb
+- lib/active_record/encryption/message_serializer.rb
+- lib/active_record/encryption/null_encryptor.rb
+- lib/active_record/encryption/properties.rb
+- lib/active_record/encryption/read_only_null_encryptor.rb
+- lib/active_record/encryption/scheme.rb
+- lib/active_record/enum.rb
+- lib/active_record/errors.rb
+- lib/active_record/explain.rb
+- lib/active_record/explain_registry.rb
+- lib/active_record/explain_subscriber.rb
+- lib/active_record/fixture_set/file.rb
+- lib/active_record/fixture_set/model_metadata.rb
+- lib/active_record/fixture_set/render_context.rb
+- lib/active_record/fixture_set/table_row.rb
+- lib/active_record/fixture_set/table_rows.rb
+- lib/active_record/fixtures.rb
+- lib/active_record/future_result.rb
+- lib/active_record/gem_version.rb
+- lib/active_record/inheritance.rb
+- lib/active_record/insert_all.rb
+- lib/active_record/integration.rb
+- lib/active_record/internal_metadata.rb
+- lib/active_record/legacy_yaml_adapter.rb
+- lib/active_record/locale/en.yml
+- lib/active_record/locking/optimistic.rb
+- lib/active_record/locking/pessimistic.rb
+- lib/active_record/log_subscriber.rb
+- lib/active_record/marshalling.rb
+- lib/active_record/message_pack.rb
+- lib/active_record/middleware/database_selector.rb
+- lib/active_record/middleware/database_selector/resolver.rb
+- lib/active_record/middleware/database_selector/resolver/session.rb
+- lib/active_record/middleware/shard_selector.rb
+- lib/active_record/migration.rb
+- lib/active_record/migration/command_recorder.rb
+- lib/active_record/migration/compatibility.rb
+- lib/active_record/migration/default_strategy.rb
+- lib/active_record/migration/execution_strategy.rb
+- lib/active_record/migration/join_table.rb
+- lib/active_record/migration/pending_migration_connection.rb
+- lib/active_record/model_schema.rb
+- lib/active_record/nested_attributes.rb
+- lib/active_record/no_touching.rb
+- lib/active_record/normalization.rb
+- lib/active_record/persistence.rb
+- lib/active_record/promise.rb
+- lib/active_record/query_cache.rb
+- lib/active_record/query_logs.rb
+- lib/active_record/query_logs_formatter.rb
+- lib/active_record/querying.rb
+- lib/active_record/railtie.rb
+- lib/active_record/railties/console_sandbox.rb
+- lib/active_record/railties/controller_runtime.rb
+- lib/active_record/railties/databases.rake
+- lib/active_record/railties/job_runtime.rb
+- lib/active_record/readonly_attributes.rb
+- lib/active_record/reflection.rb
+- lib/active_record/relation.rb
+- lib/active_record/relation/batches.rb
+- lib/active_record/relation/batches/batch_enumerator.rb
+- lib/active_record/relation/calculations.rb
+- lib/active_record/relation/delegation.rb
+- lib/active_record/relation/finder_methods.rb
+- lib/active_record/relation/from_clause.rb
+- lib/active_record/relation/merger.rb
+- lib/active_record/relation/predicate_builder.rb
+- lib/active_record/relation/predicate_builder/array_handler.rb
+- lib/active_record/relation/predicate_builder/association_query_value.rb
+- lib/active_record/relation/predicate_builder/basic_object_handler.rb
+- lib/active_record/relation/predicate_builder/polymorphic_array_value.rb
+- lib/active_record/relation/predicate_builder/range_handler.rb
+- lib/active_record/relation/predicate_builder/relation_handler.rb
+- lib/active_record/relation/query_attribute.rb
+- lib/active_record/relation/query_methods.rb
+- lib/active_record/relation/spawn_methods.rb
+- lib/active_record/relation/where_clause.rb
+- lib/active_record/result.rb
+- lib/active_record/runtime_registry.rb
+- lib/active_record/sanitization.rb
+- lib/active_record/schema.rb
+- lib/active_record/schema_dumper.rb
+- lib/active_record/schema_migration.rb
+- lib/active_record/scoping.rb
+- lib/active_record/scoping/default.rb
+- lib/active_record/scoping/named.rb
+- lib/active_record/secure_password.rb
+- lib/active_record/secure_token.rb
+- lib/active_record/serialization.rb
+- lib/active_record/signed_id.rb
+- lib/active_record/statement_cache.rb
+- lib/active_record/store.rb
+- lib/active_record/suppressor.rb
+- lib/active_record/table_metadata.rb
+- lib/active_record/tasks/database_tasks.rb
+- lib/active_record/tasks/mysql_database_tasks.rb
+- lib/active_record/tasks/postgresql_database_tasks.rb
+- lib/active_record/tasks/sqlite_database_tasks.rb
+- lib/active_record/test_databases.rb
+- lib/active_record/test_fixtures.rb
+- lib/active_record/testing/query_assertions.rb
+- lib/active_record/timestamp.rb
+- lib/active_record/token_for.rb
+- lib/active_record/touch_later.rb
+- lib/active_record/transaction.rb
+- lib/active_record/transactions.rb
+- lib/active_record/translation.rb
+- lib/active_record/type.rb
+- lib/active_record/type/adapter_specific_registry.rb
+- lib/active_record/type/date.rb
+- lib/active_record/type/date_time.rb
+- lib/active_record/type/decimal_without_scale.rb
+- lib/active_record/type/hash_lookup_type_map.rb
+- lib/active_record/type/internal/timezone.rb
+- lib/active_record/type/json.rb
+- lib/active_record/type/serialized.rb
+- lib/active_record/type/text.rb
+- lib/active_record/type/time.rb
+- lib/active_record/type/type_map.rb
+- lib/active_record/type/unsigned_integer.rb
+- lib/active_record/type_caster.rb
+- lib/active_record/type_caster/connection.rb
+- lib/active_record/type_caster/map.rb
+- lib/active_record/validations.rb
+- lib/active_record/validations/absence.rb
+- lib/active_record/validations/associated.rb
+- lib/active_record/validations/length.rb
+- lib/active_record/validations/numericality.rb
+- lib/active_record/validations/presence.rb
+- lib/active_record/validations/uniqueness.rb
+- lib/active_record/version.rb
+- lib/arel.rb
+- lib/arel/alias_predication.rb
+- lib/arel/attributes/attribute.rb
+- lib/arel/collectors/bind.rb
+- lib/arel/collectors/composite.rb
+- lib/arel/collectors/plain_string.rb
+- lib/arel/collectors/sql_string.rb
+- lib/arel/collectors/substitute_binds.rb
+- lib/arel/crud.rb
+- lib/arel/delete_manager.rb
+- lib/arel/errors.rb
+- lib/arel/expressions.rb
+- lib/arel/factory_methods.rb
+- lib/arel/filter_predications.rb
+- lib/arel/insert_manager.rb
+- lib/arel/math.rb
+- lib/arel/nodes.rb
+- lib/arel/nodes/ascending.rb
+- lib/arel/nodes/binary.rb
+- lib/arel/nodes/bind_param.rb
+- lib/arel/nodes/bound_sql_literal.rb
+- lib/arel/nodes/case.rb
+- lib/arel/nodes/casted.rb
+- lib/arel/nodes/comment.rb
+- lib/arel/nodes/count.rb
+- lib/arel/nodes/cte.rb
+- lib/arel/nodes/delete_statement.rb
+- lib/arel/nodes/descending.rb
+- lib/arel/nodes/equality.rb
+- lib/arel/nodes/extract.rb
+- lib/arel/nodes/false.rb
+- lib/arel/nodes/filter.rb
+- lib/arel/nodes/fragments.rb
+- lib/arel/nodes/full_outer_join.rb
+- lib/arel/nodes/function.rb
+- lib/arel/nodes/grouping.rb
+- lib/arel/nodes/homogeneous_in.rb
+- lib/arel/nodes/in.rb
+- lib/arel/nodes/infix_operation.rb
+- lib/arel/nodes/inner_join.rb
+- lib/arel/nodes/insert_statement.rb
+- lib/arel/nodes/join_source.rb
+- lib/arel/nodes/leading_join.rb
+- lib/arel/nodes/matches.rb
+- lib/arel/nodes/named_function.rb
+- lib/arel/nodes/nary.rb
+- lib/arel/nodes/node.rb
+- lib/arel/nodes/node_expression.rb
+- lib/arel/nodes/ordering.rb
+- lib/arel/nodes/outer_join.rb
+- lib/arel/nodes/over.rb
+- lib/arel/nodes/regexp.rb
+- lib/arel/nodes/right_outer_join.rb
+- lib/arel/nodes/select_core.rb
+- lib/arel/nodes/select_statement.rb
+- lib/arel/nodes/sql_literal.rb
+- lib/arel/nodes/string_join.rb
+- lib/arel/nodes/table_alias.rb
+- lib/arel/nodes/terminal.rb
+- lib/arel/nodes/true.rb
+- lib/arel/nodes/unary.rb
+- lib/arel/nodes/unary_operation.rb
+- lib/arel/nodes/unqualified_column.rb
+- lib/arel/nodes/update_statement.rb
+- lib/arel/nodes/values_list.rb
+- lib/arel/nodes/window.rb
+- lib/arel/nodes/with.rb
+- lib/arel/order_predications.rb
+- lib/arel/predications.rb
+- lib/arel/select_manager.rb
+- lib/arel/table.rb
+- lib/arel/tree_manager.rb
+- lib/arel/update_manager.rb
+- lib/arel/visitors.rb
+- lib/arel/visitors/dot.rb
+- lib/arel/visitors/mysql.rb
+- lib/arel/visitors/postgresql.rb
+- lib/arel/visitors/sqlite.rb
+- lib/arel/visitors/to_sql.rb
+- lib/arel/visitors/visitor.rb
+- lib/arel/window_predications.rb
+- lib/rails/generators/active_record.rb
+- lib/rails/generators/active_record/application_record/USAGE
+- lib/rails/generators/active_record/application_record/application_record_generator.rb
+- lib/rails/generators/active_record/application_record/templates/application_record.rb.tt
+- lib/rails/generators/active_record/migration.rb
+- lib/rails/generators/active_record/migration/migration_generator.rb
+- lib/rails/generators/active_record/migration/templates/create_table_migration.rb.tt
+- lib/rails/generators/active_record/migration/templates/migration.rb.tt
+- lib/rails/generators/active_record/model/USAGE
+- lib/rails/generators/active_record/model/model_generator.rb
+- lib/rails/generators/active_record/model/templates/abstract_base_class.rb.tt
+- lib/rails/generators/active_record/model/templates/model.rb.tt
+- lib/rails/generators/active_record/model/templates/module.rb.tt
+- lib/rails/generators/active_record/multi_db/multi_db_generator.rb
+- lib/rails/generators/active_record/multi_db/templates/multi_db.rb.tt
+homepage: https://rubyonrails.org
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/rails/rails/issues
+  changelog_uri: https://github.com/rails/rails/blob/v8.0.1/activerecord/CHANGELOG.md
+  documentation_uri: https://api.rubyonrails.org/v8.0.1/
+  mailing_list_uri: https://discuss.rubyonrails.org/c/rubyonrails-talk
+  source_code_uri: https://github.com/rails/rails/tree/v8.0.1/activerecord
+  rubygems_mfa_required: 'true'
+post_install_message: 
+rdoc_options:
+- "--main"
+- README.rdoc
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Object-relational mapper framework (part of Rails).
+test_files: []

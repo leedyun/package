@@ -1,0 +1,68 @@
+--- !ruby/object:Gem::Specification
+name: httpauth
+version: !ruby/object:Gem::Version
+  version: 0.2.1
+platform: ruby
+authors:
+- Manfred Stienstra
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-01-20 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+description: Library for the HTTP Authentication protocol (RFC 2617)
+email: manfred@fngtpspec.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- LICENSE
+- README.md
+- lib/httpauth.rb
+- lib/httpauth/basic.rb
+- lib/httpauth/constants.rb
+- lib/httpauth/digest.rb
+- lib/httpauth/exceptions.rb
+homepage: https://github.com/Manfred/HTTPauth
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=utf-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.0
+signing_key: 
+specification_version: 4
+summary: HTTPauth is a library supporting the full HTTP Authentication protocol as
+  specified in RFC 2617; both Digest Authentication and Basic Authentication.
+test_files: []

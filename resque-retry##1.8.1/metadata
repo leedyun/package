@@ -1,0 +1,237 @@
+--- !ruby/object:Gem::Specification
+name: resque-retry
+version: !ruby/object:Gem::Version
+  version: 1.8.1
+platform: ruby
+authors:
+- Luke Antins
+- Ryan Carver
+- Jonathan W. Zaleski
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-06-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: resque
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.25'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: resque-scheduler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '6.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.5'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.8'
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+description: |2
+    resque-retry provides retry, delay and exponential backoff support for
+    resque jobs.
+
+    Features:
+
+    * Redis backed retry count/limit.
+    * Retry on all or specific exceptions.
+    * Exponential backoff (varying the delay between retrys).
+    * Multiple failure backend with retry suppression & resque-web tab.
+    * Small & Extendable - plenty of places to override retry logic/settings.
+email:
+- luke@lividpenguin.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- Gemfile
+- HISTORY.md
+- LICENSE
+- README.md
+- Rakefile
+- bin/test-rubies.sh
+- examples/demo/Procfile
+- examples/demo/Rakefile
+- examples/demo/app.rb
+- examples/demo/config.ru
+- examples/demo/jobs.rb
+- examples/demo/tmp/.gitkeep
+- examples/demo/views/index.erb
+- lib/resque-retry.rb
+- lib/resque-retry/server.rb
+- lib/resque-retry/server/views/retry.erb
+- lib/resque-retry/server/views/retry_timestamp.erb
+- lib/resque-retry/version.rb
+- lib/resque/failure/multiple_with_retry_suppression.rb
+- lib/resque/plugins/exponential_backoff.rb
+- lib/resque/plugins/retry.rb
+- lib/resque/plugins/retry/logging.rb
+- resque-retry.gemspec
+- test/exponential_backoff_test.rb
+- test/ignore_exceptions_test.rb
+- test/multiple_failure_test.rb
+- test/redis-test.conf
+- test/resque_inline_test.rb
+- test/resque_test.rb
+- test/retry_callbacks_test.rb
+- test/retry_criteria_test.rb
+- test/retry_custom_delay_test.rb
+- test/retry_exception_delay_test.rb
+- test/retry_inheriting_checks_test.rb
+- test/retry_queue_test.rb
+- test/retry_test.rb
+- test/server_helpers_test.rb
+- test/server_test.rb
+- test/test_helper.rb
+- test/test_jobs.rb
+- tests.watchr
+homepage: http://github.com/lantins/resque-retry
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.14
+signing_key:
+specification_version: 4
+summary: A resque plugin; provides retry, delay and exponential backoff support for
+  resque jobs.
+test_files: []

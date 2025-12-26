@@ -1,0 +1,518 @@
+--- !ruby/object:Gem::Specification
+name: opensearch-transport
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- Jayesh Hathila
+- Vamshi Vijay Nakkirtha
+- Vijayan Balasubramanian
+- Yuvraj Jaiswal
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDfDCCAmSgAwIBAgIBATANBgkqhkiG9w0BAQUFADBCMRMwEQYDVQQDDApvcGVu
+  c2VhcmNoMRYwFAYKCZImiZPyLGQBGRYGYW1hem9uMRMwEQYKCZImiZPyLGQBGRYD
+  Y29tMB4XDTIyMDgxNzE3NTIzNFoXDTIzMDgxNzE3NTIzNFowQjETMBEGA1UEAwwK
+  b3BlbnNlYXJjaDEWMBQGCgmSJomT8ixkARkWBmFtYXpvbjETMBEGCgmSJomT8ixk
+  ARkWA2NvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM1z3/jcitjV
+  umXwRFn+JSBBd36qZB54Dtucf6+E2fmNPzBRhgYN5XJy/+clQJ9NIJV7C8H52P3V
+  dsce/VXcNAcgfUdlN57nM0ksjFFNlnHWXea8Ub9/6R1K0p1RBizEINzUneoJLvqe
+  7w/KfvBJStj7AmJgZmzCiu98j75YLcdLhZQykRyJdB03wZsMQUvxPFkhTZn+Qi8k
+  0U909l9JD0i1PC0xVukYlskUA2xeo36kMMllABJGN536Z0aIT2KX2XTiKK7hILoP
+  +flNmgA4eyXa5Ki9q4HBN6QhsTKdEinqGngQnUI35YTu2AHsvfjn1wP/nUa9aRVH
+  zfR37/NQFkECAwEAAaN9MHswCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAwHQYDVR0O
+  BBYEFJJ2myhLXK742btavNbG0IWrMNBIMCAGA1UdEQQZMBeBFW9wZW5zZWFyY2hA
+  YW1hem9uLmNvbTAgBgNVHRIEGTAXgRVvcGVuc2VhcmNoQGFtYXpvbi5jb20wDQYJ
+  KoZIhvcNAQEFBQADggEBAH5pWLYwKWFh1OjdCReGz/VEAiF4jXXputoN5Z8ga+1Z
+  lg8/diJf0PlP2B46PdmxH/TVc/o+qglNO2cHVEp8xZfEd83dfioOBeK90URQUpC5
+  UZmO0LZusg46SQKwKa2ukpIy2fNi3PeHRiV+W2Zv69GoWppyLun+fMez7wVoah2r
+  r5ROUYuAvFUvga1Vm+49pKiPM5n+MAYP5t/vWhgymY3SYQ1TfewkvKAFiFXikOR+
+  r+j7FLyKuk5DzIxiCp8QN5dU71BbGUmsHf/C5UV76WLPOFX/szeaHhPwpjR3sK7r
+  5zLgCV1KP7cgDdCYMlmZGeSViU8NV+Yy8/ghrzGpqVw=
+  -----END CERTIFICATE-----
+date: 2022-12-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: ansi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: curb
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: opensearch-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday-httpclient
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: net-http-persistent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday-net_http_persistent
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: patron
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: faraday-patron
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: require-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: faraday-typhoeus
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 'Ruby client for OpenSearch. See the `opensearch` gem for full integration.
+
+  '
+email:
+- jayehh@amazon.com
+- vamshin@amazon.com
+- balasvij@amazon.com
+- jaiyuvra@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".gitignore"
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/opensearch-transport.rb
+- lib/opensearch/transport.rb
+- lib/opensearch/transport/client.rb
+- lib/opensearch/transport/redacted.rb
+- lib/opensearch/transport/transport/base.rb
+- lib/opensearch/transport/transport/connections/collection.rb
+- lib/opensearch/transport/transport/connections/connection.rb
+- lib/opensearch/transport/transport/connections/selector.rb
+- lib/opensearch/transport/transport/errors.rb
+- lib/opensearch/transport/transport/http/curb.rb
+- lib/opensearch/transport/transport/http/faraday.rb
+- lib/opensearch/transport/transport/http/manticore.rb
+- lib/opensearch/transport/transport/loggable.rb
+- lib/opensearch/transport/transport/response.rb
+- lib/opensearch/transport/transport/serializer/multi_json.rb
+- lib/opensearch/transport/transport/sniffer.rb
+- lib/opensearch/transport/version.rb
+- opensearch-transport.gemspec
+- spec/opensearch/connections/collection_spec.rb
+- spec/opensearch/connections/selector_spec.rb
+- spec/opensearch/transport/base_spec.rb
+- spec/opensearch/transport/client_spec.rb
+- spec/opensearch/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb
+homepage: https://opensearch.org/docs/latest/
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://opensearch.org/docs/latest/
+  source_code_uri: https://github.com/opensearch-project/opensearch-ruby/tree/main/opensearch-transport
+  bug_tracker_uri: https://github.com/opensearch-project/opensearch-ruby/issues
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: Ruby client for OpenSearch.
+test_files:
+- spec/opensearch/connections/collection_spec.rb
+- spec/opensearch/connections/selector_spec.rb
+- spec/opensearch/transport/base_spec.rb
+- spec/opensearch/transport/client_spec.rb
+- spec/opensearch/transport/sniffer_spec.rb
+- spec/spec_helper.rb
+- test/integration/transport_test.rb
+- test/profile/client_benchmark_test.rb
+- test/test_helper.rb
+- test/unit/connection_test.rb
+- test/unit/response_test.rb
+- test/unit/serializer_test.rb
+- test/unit/transport_base_test.rb
+- test/unit/transport_curb_test.rb
+- test/unit/transport_faraday_test.rb
+- test/unit/transport_manticore_test.rb

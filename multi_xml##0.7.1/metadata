@@ -1,0 +1,79 @@
+--- !ruby/object:Gem::Specification
+name: multi_xml
+version: !ruby/object:Gem::Version
+  version: 0.7.1
+platform: ruby
+authors:
+- Erik Berlin
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-05-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+description:
+email:
+- sferik@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".rspec"
+- ".rubocop.yml"
+- ".yardopts"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.md
+- README.md
+- Rakefile
+- lib/multi_xml.rb
+- lib/multi_xml/parsers/libxml.rb
+- lib/multi_xml/parsers/libxml2_parser.rb
+- lib/multi_xml/parsers/nokogiri.rb
+- lib/multi_xml/parsers/oga.rb
+- lib/multi_xml/parsers/ox.rb
+- lib/multi_xml/parsers/rexml.rb
+- lib/multi_xml/version.rb
+homepage: https://github.com/sferik/multi_xml
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  homepage_uri: https://github.com/sferik/multi_xml
+  source_code_uri: https://github.com/sferik/multi_xml
+  changelog_uri: https://github.com/sferik/multi_xml/blob/master/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Provides swappable XML backends utilizing LibXML, Nokogiri, Ox, or REXML.
+test_files: []

@@ -1,0 +1,266 @@
+--- !ruby/object:Gem::Specification
+name: gitlab-omniauth-openid-connect
+version: !ruby/object:Gem::Version
+  version: 0.10.1
+platform: ruby
+authors:
+- John Bohn
+- Ilya Shcherbinin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-01-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+- !ruby/object:Gem::Dependency
+  name: omniauth
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3'
+- !ruby/object:Gem::Dependency
+  name: openid_connect
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: faker
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.17'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.17'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.14'
+- !ruby/object:Gem::Dependency
+  name: guard-bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: guard-minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.4'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.14'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.14'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.12'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.16'
+description: OpenID Connect Strategy for OmniAuth.
+email:
+- jjbohn@gmail.com
+- m0n9oose@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/config/rubocop_linter_action.yml"
+- ".github/stale.yml"
+- ".github/workflows/rubocop.yml"
+- ".gitignore"
+- ".gitlab-ci.yml"
+- ".rubocop.yml"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- Gemfile
+- Guardfile
+- LICENSE.txt
+- NOTICE
+- README.md
+- Rakefile
+- gitlab-omniauth-openid-connect.gemspec
+- lib/omniauth/openid_connect.rb
+- lib/omniauth/openid_connect/errors.rb
+- lib/omniauth/openid_connect/version.rb
+- lib/omniauth/strategies/openid_connect.rb
+- lib/omniauth_openid_connect.rb
+- test/fixtures/jwks.json
+- test/fixtures/test.crt
+- test/lib/omniauth/strategies/openid_connect_test.rb
+- test/strategy_test_case.rb
+- test/test_helper.rb
+homepage: https://gitlab.com/gitlab-org/gitlab-omniauth-openid-connect
+licenses:
+- MIT
+metadata: {}
+post_install_message: |
+  ############################################################
+  #  Deprecation notice for gitlab-omniauth-openid-connect gem
+  ############################################################
+
+  All changes in this gem are now upstreamed in omniauth_openid_connect
+  gem v0.6.0 under the OmniAuth group: https://github.com/omniauth/omniauth_openid_connect.
+
+  In your Gemfile, replace the line:
+
+  gem 'gitlab-omniauth-openid-connect', '~> 0.10', require: 'omniauth_openid_connect'
+
+  With:
+
+  gem 'omniauth_openid_connect', '~> 0.6'
+
+  The gitlab-omniauth-openid-connect gem is no longer updated.
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.5
+signing_key:
+specification_version: 4
+summary: OpenID Connect Strategy for OmniAuth
+test_files:
+- test/fixtures/jwks.json
+- test/fixtures/test.crt
+- test/lib/omniauth/strategies/openid_connect_test.rb
+- test/strategy_test_case.rb
+- test/test_helper.rb

@@ -1,0 +1,1235 @@
+--- !ruby/object:Gem::Specification
+name: shopify_api
+version: !ruby/object:Gem::Version
+  version: 14.8.0
+platform: ruby
+authors:
+- Shopify
+bindir: bin
+cert_chain: []
+date: 2025-01-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hash_diff
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: httparty
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jwt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: oj
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: openssl
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: securerandom
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sorbet-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.5'
+description: |
+  This gem allows Ruby developers to programmatically access the admin
+  section of Shopify stores.
+email: developers@shopify.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+files:
+- ".github/CODEOWNERS"
+- ".github/ISSUE_TEMPLATE/BUG_REPORT.md"
+- ".github/ISSUE_TEMPLATE/ENHANCEMENT.md"
+- ".github/ISSUE_TEMPLATE/FEATURE_REQUEST.md"
+- ".github/api_update_reminder.md"
+- ".github/api_update_reminder_on_release.md"
+- ".github/dependabot.yml"
+- ".github/pull_request_template.md"
+- ".github/workflows/api_update_reminder.yml"
+- ".github/workflows/api_update_reminder_on_release.yml"
+- ".github/workflows/build.yml"
+- ".github/workflows/cla.yml"
+- ".github/workflows/close-waiting-for-response-issues.yml"
+- ".github/workflows/remove-labels-on-activity.yml"
+- ".rubocop.yml"
+- ".ruby-version"
+- BREAKING_CHANGES_FOR_OLDER_VERSIONS.md
+- BREAKING_CHANGES_FOR_V10.md
+- BREAKING_CHANGES_FOR_V15.md
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- RELEASING.md
+- ROADMAP.md
+- Rakefile
+- SECURITY.md
+- bin/tapioca
+- dev.yml
+- docs/README.md
+- docs/getting_started.md
+- docs/usage/custom_apps.md
+- docs/usage/graphql.md
+- docs/usage/graphql_storefront.md
+- docs/usage/oauth.md
+- docs/usage/rest.md
+- docs/usage/webhooks.md
+- lib/shopify_api.rb
+- lib/shopify_api/admin_versions.rb
+- lib/shopify_api/auth.rb
+- lib/shopify_api/auth/associated_user.rb
+- lib/shopify_api/auth/auth_scopes.rb
+- lib/shopify_api/auth/jwt_payload.rb
+- lib/shopify_api/auth/oauth.rb
+- lib/shopify_api/auth/oauth/access_token_response.rb
+- lib/shopify_api/auth/oauth/auth_query.rb
+- lib/shopify_api/auth/oauth/session_cookie.rb
+- lib/shopify_api/auth/session.rb
+- lib/shopify_api/auth/token_exchange.rb
+- lib/shopify_api/clients/graphql/admin.rb
+- lib/shopify_api/clients/graphql/client.rb
+- lib/shopify_api/clients/graphql/storefront.rb
+- lib/shopify_api/clients/http_client.rb
+- lib/shopify_api/clients/http_request.rb
+- lib/shopify_api/clients/http_response.rb
+- lib/shopify_api/clients/rest/admin.rb
+- lib/shopify_api/context.rb
+- lib/shopify_api/errors/context_not_setup_error.rb
+- lib/shopify_api/errors/cookie_not_found_error.rb
+- lib/shopify_api/errors/disabled_resource_error.rb
+- lib/shopify_api/errors/feature_deprecated_error.rb
+- lib/shopify_api/errors/http_response_error.rb
+- lib/shopify_api/errors/invalid_graphql_request_error.rb
+- lib/shopify_api/errors/invalid_http_request_error.rb
+- lib/shopify_api/errors/invalid_jwt_token_error.rb
+- lib/shopify_api/errors/invalid_oauth_error.rb
+- lib/shopify_api/errors/invalid_webhook_error.rb
+- lib/shopify_api/errors/invalid_webhook_registration_error.rb
+- lib/shopify_api/errors/log_level_not_found_error.rb
+- lib/shopify_api/errors/max_http_retries_exceeded_error.rb
+- lib/shopify_api/errors/missing_jwt_token_error.rb
+- lib/shopify_api/errors/missing_required_argument_error.rb
+- lib/shopify_api/errors/no_active_session_error.rb
+- lib/shopify_api/errors/no_session_cookie_error.rb
+- lib/shopify_api/errors/no_webhook_handler.rb
+- lib/shopify_api/errors/private_app_error.rb
+- lib/shopify_api/errors/request_access_token_error.rb
+- lib/shopify_api/errors/session_not_found_error.rb
+- lib/shopify_api/errors/session_storage_error.rb
+- lib/shopify_api/errors/unsupported_oauth_error.rb
+- lib/shopify_api/errors/unsupported_version_error.rb
+- lib/shopify_api/errors/webhook_registration_error.rb
+- lib/shopify_api/inflector.rb
+- lib/shopify_api/logger.rb
+- lib/shopify_api/rest/base.rb
+- lib/shopify_api/rest/base_errors.rb
+- lib/shopify_api/rest/resources/2022_04/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2022_04/access_scope.rb
+- lib/shopify_api/rest/resources/2022_04/android_pay_key.rb
+- lib/shopify_api/rest/resources/2022_04/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2022_04/application_charge.rb
+- lib/shopify_api/rest/resources/2022_04/application_credit.rb
+- lib/shopify_api/rest/resources/2022_04/article.rb
+- lib/shopify_api/rest/resources/2022_04/asset.rb
+- lib/shopify_api/rest/resources/2022_04/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_04/balance.rb
+- lib/shopify_api/rest/resources/2022_04/blog.rb
+- lib/shopify_api/rest/resources/2022_04/cancellation_request.rb
+- lib/shopify_api/rest/resources/2022_04/carrier_service.rb
+- lib/shopify_api/rest/resources/2022_04/checkout.rb
+- lib/shopify_api/rest/resources/2022_04/collect.rb
+- lib/shopify_api/rest/resources/2022_04/collection.rb
+- lib/shopify_api/rest/resources/2022_04/collection_listing.rb
+- lib/shopify_api/rest/resources/2022_04/comment.rb
+- lib/shopify_api/rest/resources/2022_04/country.rb
+- lib/shopify_api/rest/resources/2022_04/currency.rb
+- lib/shopify_api/rest/resources/2022_04/custom_collection.rb
+- lib/shopify_api/rest/resources/2022_04/customer.rb
+- lib/shopify_api/rest/resources/2022_04/customer_address.rb
+- lib/shopify_api/rest/resources/2022_04/customer_saved_search.rb
+- lib/shopify_api/rest/resources/2022_04/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2022_04/discount_code.rb
+- lib/shopify_api/rest/resources/2022_04/dispute.rb
+- lib/shopify_api/rest/resources/2022_04/draft_order.rb
+- lib/shopify_api/rest/resources/2022_04/event.rb
+- lib/shopify_api/rest/resources/2022_04/fulfillment.rb
+- lib/shopify_api/rest/resources/2022_04/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2022_04/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_04/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2022_04/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2022_04/gift_card.rb
+- lib/shopify_api/rest/resources/2022_04/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2022_04/image.rb
+- lib/shopify_api/rest/resources/2022_04/inventory_item.rb
+- lib/shopify_api/rest/resources/2022_04/inventory_level.rb
+- lib/shopify_api/rest/resources/2022_04/location.rb
+- lib/shopify_api/rest/resources/2022_04/locations_for_move.rb
+- lib/shopify_api/rest/resources/2022_04/marketing_event.rb
+- lib/shopify_api/rest/resources/2022_04/metafield.rb
+- lib/shopify_api/rest/resources/2022_04/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2022_04/order.rb
+- lib/shopify_api/rest/resources/2022_04/order_risk.rb
+- lib/shopify_api/rest/resources/2022_04/page.rb
+- lib/shopify_api/rest/resources/2022_04/payment.rb
+- lib/shopify_api/rest/resources/2022_04/payment_gateway.rb
+- lib/shopify_api/rest/resources/2022_04/payment_transaction.rb
+- lib/shopify_api/rest/resources/2022_04/payout.rb
+- lib/shopify_api/rest/resources/2022_04/policy.rb
+- lib/shopify_api/rest/resources/2022_04/price_rule.rb
+- lib/shopify_api/rest/resources/2022_04/product.rb
+- lib/shopify_api/rest/resources/2022_04/product_listing.rb
+- lib/shopify_api/rest/resources/2022_04/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_04/province.rb
+- lib/shopify_api/rest/resources/2022_04/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2022_04/redirect.rb
+- lib/shopify_api/rest/resources/2022_04/refund.rb
+- lib/shopify_api/rest/resources/2022_04/report.rb
+- lib/shopify_api/rest/resources/2022_04/resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_04/script_tag.rb
+- lib/shopify_api/rest/resources/2022_04/shipping_zone.rb
+- lib/shopify_api/rest/resources/2022_04/shop.rb
+- lib/shopify_api/rest/resources/2022_04/smart_collection.rb
+- lib/shopify_api/rest/resources/2022_04/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2022_04/tender_transaction.rb
+- lib/shopify_api/rest/resources/2022_04/theme.rb
+- lib/shopify_api/rest/resources/2022_04/transaction.rb
+- lib/shopify_api/rest/resources/2022_04/usage_charge.rb
+- lib/shopify_api/rest/resources/2022_04/user.rb
+- lib/shopify_api/rest/resources/2022_04/variant.rb
+- lib/shopify_api/rest/resources/2022_04/webhook.rb
+- lib/shopify_api/rest/resources/2022_07/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2022_07/access_scope.rb
+- lib/shopify_api/rest/resources/2022_07/android_pay_key.rb
+- lib/shopify_api/rest/resources/2022_07/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2022_07/application_charge.rb
+- lib/shopify_api/rest/resources/2022_07/application_credit.rb
+- lib/shopify_api/rest/resources/2022_07/article.rb
+- lib/shopify_api/rest/resources/2022_07/asset.rb
+- lib/shopify_api/rest/resources/2022_07/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_07/balance.rb
+- lib/shopify_api/rest/resources/2022_07/blog.rb
+- lib/shopify_api/rest/resources/2022_07/cancellation_request.rb
+- lib/shopify_api/rest/resources/2022_07/carrier_service.rb
+- lib/shopify_api/rest/resources/2022_07/checkout.rb
+- lib/shopify_api/rest/resources/2022_07/collect.rb
+- lib/shopify_api/rest/resources/2022_07/collection.rb
+- lib/shopify_api/rest/resources/2022_07/collection_listing.rb
+- lib/shopify_api/rest/resources/2022_07/comment.rb
+- lib/shopify_api/rest/resources/2022_07/country.rb
+- lib/shopify_api/rest/resources/2022_07/currency.rb
+- lib/shopify_api/rest/resources/2022_07/custom_collection.rb
+- lib/shopify_api/rest/resources/2022_07/customer.rb
+- lib/shopify_api/rest/resources/2022_07/customer_address.rb
+- lib/shopify_api/rest/resources/2022_07/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2022_07/discount_code.rb
+- lib/shopify_api/rest/resources/2022_07/dispute.rb
+- lib/shopify_api/rest/resources/2022_07/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2022_07/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2022_07/draft_order.rb
+- lib/shopify_api/rest/resources/2022_07/event.rb
+- lib/shopify_api/rest/resources/2022_07/fulfillment.rb
+- lib/shopify_api/rest/resources/2022_07/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2022_07/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_07/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2022_07/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2022_07/gift_card.rb
+- lib/shopify_api/rest/resources/2022_07/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2022_07/image.rb
+- lib/shopify_api/rest/resources/2022_07/inventory_item.rb
+- lib/shopify_api/rest/resources/2022_07/inventory_level.rb
+- lib/shopify_api/rest/resources/2022_07/location.rb
+- lib/shopify_api/rest/resources/2022_07/locations_for_move.rb
+- lib/shopify_api/rest/resources/2022_07/marketing_event.rb
+- lib/shopify_api/rest/resources/2022_07/metafield.rb
+- lib/shopify_api/rest/resources/2022_07/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2022_07/order.rb
+- lib/shopify_api/rest/resources/2022_07/order_risk.rb
+- lib/shopify_api/rest/resources/2022_07/page.rb
+- lib/shopify_api/rest/resources/2022_07/payment.rb
+- lib/shopify_api/rest/resources/2022_07/payment_gateway.rb
+- lib/shopify_api/rest/resources/2022_07/payment_transaction.rb
+- lib/shopify_api/rest/resources/2022_07/payout.rb
+- lib/shopify_api/rest/resources/2022_07/policy.rb
+- lib/shopify_api/rest/resources/2022_07/price_rule.rb
+- lib/shopify_api/rest/resources/2022_07/product.rb
+- lib/shopify_api/rest/resources/2022_07/product_listing.rb
+- lib/shopify_api/rest/resources/2022_07/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_07/province.rb
+- lib/shopify_api/rest/resources/2022_07/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2022_07/redirect.rb
+- lib/shopify_api/rest/resources/2022_07/refund.rb
+- lib/shopify_api/rest/resources/2022_07/report.rb
+- lib/shopify_api/rest/resources/2022_07/resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_07/script_tag.rb
+- lib/shopify_api/rest/resources/2022_07/shipping_zone.rb
+- lib/shopify_api/rest/resources/2022_07/shop.rb
+- lib/shopify_api/rest/resources/2022_07/smart_collection.rb
+- lib/shopify_api/rest/resources/2022_07/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2022_07/tender_transaction.rb
+- lib/shopify_api/rest/resources/2022_07/theme.rb
+- lib/shopify_api/rest/resources/2022_07/transaction.rb
+- lib/shopify_api/rest/resources/2022_07/usage_charge.rb
+- lib/shopify_api/rest/resources/2022_07/user.rb
+- lib/shopify_api/rest/resources/2022_07/variant.rb
+- lib/shopify_api/rest/resources/2022_07/webhook.rb
+- lib/shopify_api/rest/resources/2022_10/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2022_10/access_scope.rb
+- lib/shopify_api/rest/resources/2022_10/android_pay_key.rb
+- lib/shopify_api/rest/resources/2022_10/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2022_10/application_charge.rb
+- lib/shopify_api/rest/resources/2022_10/application_credit.rb
+- lib/shopify_api/rest/resources/2022_10/article.rb
+- lib/shopify_api/rest/resources/2022_10/asset.rb
+- lib/shopify_api/rest/resources/2022_10/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_10/balance.rb
+- lib/shopify_api/rest/resources/2022_10/blog.rb
+- lib/shopify_api/rest/resources/2022_10/cancellation_request.rb
+- lib/shopify_api/rest/resources/2022_10/carrier_service.rb
+- lib/shopify_api/rest/resources/2022_10/checkout.rb
+- lib/shopify_api/rest/resources/2022_10/collect.rb
+- lib/shopify_api/rest/resources/2022_10/collection.rb
+- lib/shopify_api/rest/resources/2022_10/collection_listing.rb
+- lib/shopify_api/rest/resources/2022_10/comment.rb
+- lib/shopify_api/rest/resources/2022_10/country.rb
+- lib/shopify_api/rest/resources/2022_10/currency.rb
+- lib/shopify_api/rest/resources/2022_10/custom_collection.rb
+- lib/shopify_api/rest/resources/2022_10/customer.rb
+- lib/shopify_api/rest/resources/2022_10/customer_address.rb
+- lib/shopify_api/rest/resources/2022_10/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2022_10/discount_code.rb
+- lib/shopify_api/rest/resources/2022_10/dispute.rb
+- lib/shopify_api/rest/resources/2022_10/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2022_10/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2022_10/draft_order.rb
+- lib/shopify_api/rest/resources/2022_10/event.rb
+- lib/shopify_api/rest/resources/2022_10/fulfillment.rb
+- lib/shopify_api/rest/resources/2022_10/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2022_10/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2022_10/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2022_10/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2022_10/gift_card.rb
+- lib/shopify_api/rest/resources/2022_10/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2022_10/image.rb
+- lib/shopify_api/rest/resources/2022_10/inventory_item.rb
+- lib/shopify_api/rest/resources/2022_10/inventory_level.rb
+- lib/shopify_api/rest/resources/2022_10/location.rb
+- lib/shopify_api/rest/resources/2022_10/locations_for_move.rb
+- lib/shopify_api/rest/resources/2022_10/marketing_event.rb
+- lib/shopify_api/rest/resources/2022_10/metafield.rb
+- lib/shopify_api/rest/resources/2022_10/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2022_10/order.rb
+- lib/shopify_api/rest/resources/2022_10/order_risk.rb
+- lib/shopify_api/rest/resources/2022_10/page.rb
+- lib/shopify_api/rest/resources/2022_10/payment.rb
+- lib/shopify_api/rest/resources/2022_10/payment_gateway.rb
+- lib/shopify_api/rest/resources/2022_10/payment_transaction.rb
+- lib/shopify_api/rest/resources/2022_10/payout.rb
+- lib/shopify_api/rest/resources/2022_10/policy.rb
+- lib/shopify_api/rest/resources/2022_10/price_rule.rb
+- lib/shopify_api/rest/resources/2022_10/product.rb
+- lib/shopify_api/rest/resources/2022_10/product_listing.rb
+- lib/shopify_api/rest/resources/2022_10/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_10/province.rb
+- lib/shopify_api/rest/resources/2022_10/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2022_10/redirect.rb
+- lib/shopify_api/rest/resources/2022_10/refund.rb
+- lib/shopify_api/rest/resources/2022_10/report.rb
+- lib/shopify_api/rest/resources/2022_10/resource_feedback.rb
+- lib/shopify_api/rest/resources/2022_10/script_tag.rb
+- lib/shopify_api/rest/resources/2022_10/shipping_zone.rb
+- lib/shopify_api/rest/resources/2022_10/shop.rb
+- lib/shopify_api/rest/resources/2022_10/smart_collection.rb
+- lib/shopify_api/rest/resources/2022_10/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2022_10/tender_transaction.rb
+- lib/shopify_api/rest/resources/2022_10/theme.rb
+- lib/shopify_api/rest/resources/2022_10/transaction.rb
+- lib/shopify_api/rest/resources/2022_10/usage_charge.rb
+- lib/shopify_api/rest/resources/2022_10/user.rb
+- lib/shopify_api/rest/resources/2022_10/variant.rb
+- lib/shopify_api/rest/resources/2022_10/webhook.rb
+- lib/shopify_api/rest/resources/2023_01/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2023_01/access_scope.rb
+- lib/shopify_api/rest/resources/2023_01/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2023_01/application_charge.rb
+- lib/shopify_api/rest/resources/2023_01/application_credit.rb
+- lib/shopify_api/rest/resources/2023_01/article.rb
+- lib/shopify_api/rest/resources/2023_01/asset.rb
+- lib/shopify_api/rest/resources/2023_01/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_01/balance.rb
+- lib/shopify_api/rest/resources/2023_01/blog.rb
+- lib/shopify_api/rest/resources/2023_01/cancellation_request.rb
+- lib/shopify_api/rest/resources/2023_01/carrier_service.rb
+- lib/shopify_api/rest/resources/2023_01/checkout.rb
+- lib/shopify_api/rest/resources/2023_01/collect.rb
+- lib/shopify_api/rest/resources/2023_01/collection.rb
+- lib/shopify_api/rest/resources/2023_01/collection_listing.rb
+- lib/shopify_api/rest/resources/2023_01/comment.rb
+- lib/shopify_api/rest/resources/2023_01/country.rb
+- lib/shopify_api/rest/resources/2023_01/currency.rb
+- lib/shopify_api/rest/resources/2023_01/custom_collection.rb
+- lib/shopify_api/rest/resources/2023_01/customer.rb
+- lib/shopify_api/rest/resources/2023_01/customer_address.rb
+- lib/shopify_api/rest/resources/2023_01/customer_saved_search.rb
+- lib/shopify_api/rest/resources/2023_01/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2023_01/discount_code.rb
+- lib/shopify_api/rest/resources/2023_01/dispute.rb
+- lib/shopify_api/rest/resources/2023_01/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2023_01/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2023_01/draft_order.rb
+- lib/shopify_api/rest/resources/2023_01/event.rb
+- lib/shopify_api/rest/resources/2023_01/fulfillment.rb
+- lib/shopify_api/rest/resources/2023_01/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2023_01/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_01/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2023_01/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2023_01/gift_card.rb
+- lib/shopify_api/rest/resources/2023_01/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2023_01/image.rb
+- lib/shopify_api/rest/resources/2023_01/inventory_item.rb
+- lib/shopify_api/rest/resources/2023_01/inventory_level.rb
+- lib/shopify_api/rest/resources/2023_01/location.rb
+- lib/shopify_api/rest/resources/2023_01/locations_for_move.rb
+- lib/shopify_api/rest/resources/2023_01/marketing_event.rb
+- lib/shopify_api/rest/resources/2023_01/metafield.rb
+- lib/shopify_api/rest/resources/2023_01/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2023_01/order.rb
+- lib/shopify_api/rest/resources/2023_01/order_risk.rb
+- lib/shopify_api/rest/resources/2023_01/page.rb
+- lib/shopify_api/rest/resources/2023_01/payment.rb
+- lib/shopify_api/rest/resources/2023_01/payment_gateway.rb
+- lib/shopify_api/rest/resources/2023_01/payment_transaction.rb
+- lib/shopify_api/rest/resources/2023_01/payout.rb
+- lib/shopify_api/rest/resources/2023_01/policy.rb
+- lib/shopify_api/rest/resources/2023_01/price_rule.rb
+- lib/shopify_api/rest/resources/2023_01/product.rb
+- lib/shopify_api/rest/resources/2023_01/product_listing.rb
+- lib/shopify_api/rest/resources/2023_01/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_01/province.rb
+- lib/shopify_api/rest/resources/2023_01/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2023_01/redirect.rb
+- lib/shopify_api/rest/resources/2023_01/refund.rb
+- lib/shopify_api/rest/resources/2023_01/report.rb
+- lib/shopify_api/rest/resources/2023_01/resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_01/script_tag.rb
+- lib/shopify_api/rest/resources/2023_01/shipping_zone.rb
+- lib/shopify_api/rest/resources/2023_01/shop.rb
+- lib/shopify_api/rest/resources/2023_01/smart_collection.rb
+- lib/shopify_api/rest/resources/2023_01/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2023_01/tender_transaction.rb
+- lib/shopify_api/rest/resources/2023_01/theme.rb
+- lib/shopify_api/rest/resources/2023_01/transaction.rb
+- lib/shopify_api/rest/resources/2023_01/usage_charge.rb
+- lib/shopify_api/rest/resources/2023_01/user.rb
+- lib/shopify_api/rest/resources/2023_01/variant.rb
+- lib/shopify_api/rest/resources/2023_01/webhook.rb
+- lib/shopify_api/rest/resources/2023_04/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2023_04/access_scope.rb
+- lib/shopify_api/rest/resources/2023_04/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2023_04/application_charge.rb
+- lib/shopify_api/rest/resources/2023_04/application_credit.rb
+- lib/shopify_api/rest/resources/2023_04/article.rb
+- lib/shopify_api/rest/resources/2023_04/asset.rb
+- lib/shopify_api/rest/resources/2023_04/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_04/balance.rb
+- lib/shopify_api/rest/resources/2023_04/blog.rb
+- lib/shopify_api/rest/resources/2023_04/cancellation_request.rb
+- lib/shopify_api/rest/resources/2023_04/carrier_service.rb
+- lib/shopify_api/rest/resources/2023_04/checkout.rb
+- lib/shopify_api/rest/resources/2023_04/collect.rb
+- lib/shopify_api/rest/resources/2023_04/collection.rb
+- lib/shopify_api/rest/resources/2023_04/collection_listing.rb
+- lib/shopify_api/rest/resources/2023_04/comment.rb
+- lib/shopify_api/rest/resources/2023_04/country.rb
+- lib/shopify_api/rest/resources/2023_04/currency.rb
+- lib/shopify_api/rest/resources/2023_04/custom_collection.rb
+- lib/shopify_api/rest/resources/2023_04/customer.rb
+- lib/shopify_api/rest/resources/2023_04/customer_address.rb
+- lib/shopify_api/rest/resources/2023_04/customer_saved_search.rb
+- lib/shopify_api/rest/resources/2023_04/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2023_04/discount_code.rb
+- lib/shopify_api/rest/resources/2023_04/dispute.rb
+- lib/shopify_api/rest/resources/2023_04/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2023_04/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2023_04/draft_order.rb
+- lib/shopify_api/rest/resources/2023_04/event.rb
+- lib/shopify_api/rest/resources/2023_04/fulfillment.rb
+- lib/shopify_api/rest/resources/2023_04/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2023_04/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_04/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2023_04/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2023_04/gift_card.rb
+- lib/shopify_api/rest/resources/2023_04/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2023_04/image.rb
+- lib/shopify_api/rest/resources/2023_04/inventory_item.rb
+- lib/shopify_api/rest/resources/2023_04/inventory_level.rb
+- lib/shopify_api/rest/resources/2023_04/location.rb
+- lib/shopify_api/rest/resources/2023_04/locations_for_move.rb
+- lib/shopify_api/rest/resources/2023_04/marketing_event.rb
+- lib/shopify_api/rest/resources/2023_04/metafield.rb
+- lib/shopify_api/rest/resources/2023_04/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2023_04/order.rb
+- lib/shopify_api/rest/resources/2023_04/order_risk.rb
+- lib/shopify_api/rest/resources/2023_04/page.rb
+- lib/shopify_api/rest/resources/2023_04/payment.rb
+- lib/shopify_api/rest/resources/2023_04/payment_gateway.rb
+- lib/shopify_api/rest/resources/2023_04/payment_transaction.rb
+- lib/shopify_api/rest/resources/2023_04/payout.rb
+- lib/shopify_api/rest/resources/2023_04/policy.rb
+- lib/shopify_api/rest/resources/2023_04/price_rule.rb
+- lib/shopify_api/rest/resources/2023_04/product.rb
+- lib/shopify_api/rest/resources/2023_04/product_listing.rb
+- lib/shopify_api/rest/resources/2023_04/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_04/province.rb
+- lib/shopify_api/rest/resources/2023_04/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2023_04/redirect.rb
+- lib/shopify_api/rest/resources/2023_04/refund.rb
+- lib/shopify_api/rest/resources/2023_04/report.rb
+- lib/shopify_api/rest/resources/2023_04/resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_04/script_tag.rb
+- lib/shopify_api/rest/resources/2023_04/shipping_zone.rb
+- lib/shopify_api/rest/resources/2023_04/shop.rb
+- lib/shopify_api/rest/resources/2023_04/smart_collection.rb
+- lib/shopify_api/rest/resources/2023_04/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2023_04/tender_transaction.rb
+- lib/shopify_api/rest/resources/2023_04/theme.rb
+- lib/shopify_api/rest/resources/2023_04/transaction.rb
+- lib/shopify_api/rest/resources/2023_04/usage_charge.rb
+- lib/shopify_api/rest/resources/2023_04/user.rb
+- lib/shopify_api/rest/resources/2023_04/variant.rb
+- lib/shopify_api/rest/resources/2023_04/webhook.rb
+- lib/shopify_api/rest/resources/2023_07/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2023_07/access_scope.rb
+- lib/shopify_api/rest/resources/2023_07/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2023_07/application_charge.rb
+- lib/shopify_api/rest/resources/2023_07/application_credit.rb
+- lib/shopify_api/rest/resources/2023_07/article.rb
+- lib/shopify_api/rest/resources/2023_07/asset.rb
+- lib/shopify_api/rest/resources/2023_07/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_07/balance.rb
+- lib/shopify_api/rest/resources/2023_07/blog.rb
+- lib/shopify_api/rest/resources/2023_07/cancellation_request.rb
+- lib/shopify_api/rest/resources/2023_07/carrier_service.rb
+- lib/shopify_api/rest/resources/2023_07/checkout.rb
+- lib/shopify_api/rest/resources/2023_07/collect.rb
+- lib/shopify_api/rest/resources/2023_07/collection.rb
+- lib/shopify_api/rest/resources/2023_07/collection_listing.rb
+- lib/shopify_api/rest/resources/2023_07/comment.rb
+- lib/shopify_api/rest/resources/2023_07/country.rb
+- lib/shopify_api/rest/resources/2023_07/currency.rb
+- lib/shopify_api/rest/resources/2023_07/custom_collection.rb
+- lib/shopify_api/rest/resources/2023_07/customer.rb
+- lib/shopify_api/rest/resources/2023_07/customer_address.rb
+- lib/shopify_api/rest/resources/2023_07/customer_saved_search.rb
+- lib/shopify_api/rest/resources/2023_07/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2023_07/discount_code.rb
+- lib/shopify_api/rest/resources/2023_07/dispute.rb
+- lib/shopify_api/rest/resources/2023_07/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2023_07/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2023_07/draft_order.rb
+- lib/shopify_api/rest/resources/2023_07/event.rb
+- lib/shopify_api/rest/resources/2023_07/fulfillment.rb
+- lib/shopify_api/rest/resources/2023_07/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2023_07/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_07/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2023_07/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2023_07/gift_card.rb
+- lib/shopify_api/rest/resources/2023_07/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2023_07/image.rb
+- lib/shopify_api/rest/resources/2023_07/inventory_item.rb
+- lib/shopify_api/rest/resources/2023_07/inventory_level.rb
+- lib/shopify_api/rest/resources/2023_07/location.rb
+- lib/shopify_api/rest/resources/2023_07/locations_for_move.rb
+- lib/shopify_api/rest/resources/2023_07/marketing_event.rb
+- lib/shopify_api/rest/resources/2023_07/metafield.rb
+- lib/shopify_api/rest/resources/2023_07/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2023_07/order.rb
+- lib/shopify_api/rest/resources/2023_07/order_risk.rb
+- lib/shopify_api/rest/resources/2023_07/page.rb
+- lib/shopify_api/rest/resources/2023_07/payment.rb
+- lib/shopify_api/rest/resources/2023_07/payment_gateway.rb
+- lib/shopify_api/rest/resources/2023_07/payment_transaction.rb
+- lib/shopify_api/rest/resources/2023_07/payout.rb
+- lib/shopify_api/rest/resources/2023_07/policy.rb
+- lib/shopify_api/rest/resources/2023_07/price_rule.rb
+- lib/shopify_api/rest/resources/2023_07/product.rb
+- lib/shopify_api/rest/resources/2023_07/product_listing.rb
+- lib/shopify_api/rest/resources/2023_07/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_07/province.rb
+- lib/shopify_api/rest/resources/2023_07/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2023_07/redirect.rb
+- lib/shopify_api/rest/resources/2023_07/refund.rb
+- lib/shopify_api/rest/resources/2023_07/report.rb
+- lib/shopify_api/rest/resources/2023_07/resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_07/script_tag.rb
+- lib/shopify_api/rest/resources/2023_07/shipping_zone.rb
+- lib/shopify_api/rest/resources/2023_07/shop.rb
+- lib/shopify_api/rest/resources/2023_07/smart_collection.rb
+- lib/shopify_api/rest/resources/2023_07/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2023_07/tender_transaction.rb
+- lib/shopify_api/rest/resources/2023_07/theme.rb
+- lib/shopify_api/rest/resources/2023_07/transaction.rb
+- lib/shopify_api/rest/resources/2023_07/usage_charge.rb
+- lib/shopify_api/rest/resources/2023_07/user.rb
+- lib/shopify_api/rest/resources/2023_07/variant.rb
+- lib/shopify_api/rest/resources/2023_07/webhook.rb
+- lib/shopify_api/rest/resources/2023_10/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2023_10/access_scope.rb
+- lib/shopify_api/rest/resources/2023_10/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2023_10/application_charge.rb
+- lib/shopify_api/rest/resources/2023_10/application_credit.rb
+- lib/shopify_api/rest/resources/2023_10/article.rb
+- lib/shopify_api/rest/resources/2023_10/asset.rb
+- lib/shopify_api/rest/resources/2023_10/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_10/balance.rb
+- lib/shopify_api/rest/resources/2023_10/blog.rb
+- lib/shopify_api/rest/resources/2023_10/cancellation_request.rb
+- lib/shopify_api/rest/resources/2023_10/carrier_service.rb
+- lib/shopify_api/rest/resources/2023_10/checkout.rb
+- lib/shopify_api/rest/resources/2023_10/collect.rb
+- lib/shopify_api/rest/resources/2023_10/collection.rb
+- lib/shopify_api/rest/resources/2023_10/collection_listing.rb
+- lib/shopify_api/rest/resources/2023_10/comment.rb
+- lib/shopify_api/rest/resources/2023_10/country.rb
+- lib/shopify_api/rest/resources/2023_10/currency.rb
+- lib/shopify_api/rest/resources/2023_10/custom_collection.rb
+- lib/shopify_api/rest/resources/2023_10/customer.rb
+- lib/shopify_api/rest/resources/2023_10/customer_address.rb
+- lib/shopify_api/rest/resources/2023_10/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2023_10/discount_code.rb
+- lib/shopify_api/rest/resources/2023_10/dispute.rb
+- lib/shopify_api/rest/resources/2023_10/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2023_10/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2023_10/draft_order.rb
+- lib/shopify_api/rest/resources/2023_10/event.rb
+- lib/shopify_api/rest/resources/2023_10/fulfillment.rb
+- lib/shopify_api/rest/resources/2023_10/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2023_10/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2023_10/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2023_10/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2023_10/gift_card.rb
+- lib/shopify_api/rest/resources/2023_10/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2023_10/image.rb
+- lib/shopify_api/rest/resources/2023_10/inventory_item.rb
+- lib/shopify_api/rest/resources/2023_10/inventory_level.rb
+- lib/shopify_api/rest/resources/2023_10/location.rb
+- lib/shopify_api/rest/resources/2023_10/locations_for_move.rb
+- lib/shopify_api/rest/resources/2023_10/marketing_event.rb
+- lib/shopify_api/rest/resources/2023_10/metafield.rb
+- lib/shopify_api/rest/resources/2023_10/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2023_10/order.rb
+- lib/shopify_api/rest/resources/2023_10/order_risk.rb
+- lib/shopify_api/rest/resources/2023_10/page.rb
+- lib/shopify_api/rest/resources/2023_10/payment.rb
+- lib/shopify_api/rest/resources/2023_10/payment_gateway.rb
+- lib/shopify_api/rest/resources/2023_10/payment_transaction.rb
+- lib/shopify_api/rest/resources/2023_10/payout.rb
+- lib/shopify_api/rest/resources/2023_10/policy.rb
+- lib/shopify_api/rest/resources/2023_10/price_rule.rb
+- lib/shopify_api/rest/resources/2023_10/product.rb
+- lib/shopify_api/rest/resources/2023_10/product_listing.rb
+- lib/shopify_api/rest/resources/2023_10/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_10/province.rb
+- lib/shopify_api/rest/resources/2023_10/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2023_10/redirect.rb
+- lib/shopify_api/rest/resources/2023_10/refund.rb
+- lib/shopify_api/rest/resources/2023_10/report.rb
+- lib/shopify_api/rest/resources/2023_10/resource_feedback.rb
+- lib/shopify_api/rest/resources/2023_10/script_tag.rb
+- lib/shopify_api/rest/resources/2023_10/shipping_zone.rb
+- lib/shopify_api/rest/resources/2023_10/shop.rb
+- lib/shopify_api/rest/resources/2023_10/smart_collection.rb
+- lib/shopify_api/rest/resources/2023_10/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2023_10/tender_transaction.rb
+- lib/shopify_api/rest/resources/2023_10/theme.rb
+- lib/shopify_api/rest/resources/2023_10/transaction.rb
+- lib/shopify_api/rest/resources/2023_10/usage_charge.rb
+- lib/shopify_api/rest/resources/2023_10/user.rb
+- lib/shopify_api/rest/resources/2023_10/variant.rb
+- lib/shopify_api/rest/resources/2023_10/webhook.rb
+- lib/shopify_api/rest/resources/2024_01/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2024_01/access_scope.rb
+- lib/shopify_api/rest/resources/2024_01/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2024_01/application_charge.rb
+- lib/shopify_api/rest/resources/2024_01/application_credit.rb
+- lib/shopify_api/rest/resources/2024_01/article.rb
+- lib/shopify_api/rest/resources/2024_01/asset.rb
+- lib/shopify_api/rest/resources/2024_01/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_01/balance.rb
+- lib/shopify_api/rest/resources/2024_01/blog.rb
+- lib/shopify_api/rest/resources/2024_01/cancellation_request.rb
+- lib/shopify_api/rest/resources/2024_01/carrier_service.rb
+- lib/shopify_api/rest/resources/2024_01/checkout.rb
+- lib/shopify_api/rest/resources/2024_01/collect.rb
+- lib/shopify_api/rest/resources/2024_01/collection.rb
+- lib/shopify_api/rest/resources/2024_01/collection_listing.rb
+- lib/shopify_api/rest/resources/2024_01/comment.rb
+- lib/shopify_api/rest/resources/2024_01/country.rb
+- lib/shopify_api/rest/resources/2024_01/currency.rb
+- lib/shopify_api/rest/resources/2024_01/custom_collection.rb
+- lib/shopify_api/rest/resources/2024_01/customer.rb
+- lib/shopify_api/rest/resources/2024_01/customer_address.rb
+- lib/shopify_api/rest/resources/2024_01/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2024_01/discount_code.rb
+- lib/shopify_api/rest/resources/2024_01/dispute.rb
+- lib/shopify_api/rest/resources/2024_01/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2024_01/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2024_01/draft_order.rb
+- lib/shopify_api/rest/resources/2024_01/event.rb
+- lib/shopify_api/rest/resources/2024_01/fulfillment.rb
+- lib/shopify_api/rest/resources/2024_01/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2024_01/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_01/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2024_01/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2024_01/gift_card.rb
+- lib/shopify_api/rest/resources/2024_01/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2024_01/image.rb
+- lib/shopify_api/rest/resources/2024_01/inventory_item.rb
+- lib/shopify_api/rest/resources/2024_01/inventory_level.rb
+- lib/shopify_api/rest/resources/2024_01/location.rb
+- lib/shopify_api/rest/resources/2024_01/locations_for_move.rb
+- lib/shopify_api/rest/resources/2024_01/marketing_event.rb
+- lib/shopify_api/rest/resources/2024_01/metafield.rb
+- lib/shopify_api/rest/resources/2024_01/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2024_01/order.rb
+- lib/shopify_api/rest/resources/2024_01/order_risk.rb
+- lib/shopify_api/rest/resources/2024_01/page.rb
+- lib/shopify_api/rest/resources/2024_01/payment.rb
+- lib/shopify_api/rest/resources/2024_01/payment_gateway.rb
+- lib/shopify_api/rest/resources/2024_01/payment_transaction.rb
+- lib/shopify_api/rest/resources/2024_01/payout.rb
+- lib/shopify_api/rest/resources/2024_01/policy.rb
+- lib/shopify_api/rest/resources/2024_01/price_rule.rb
+- lib/shopify_api/rest/resources/2024_01/product.rb
+- lib/shopify_api/rest/resources/2024_01/product_listing.rb
+- lib/shopify_api/rest/resources/2024_01/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_01/province.rb
+- lib/shopify_api/rest/resources/2024_01/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2024_01/redirect.rb
+- lib/shopify_api/rest/resources/2024_01/refund.rb
+- lib/shopify_api/rest/resources/2024_01/report.rb
+- lib/shopify_api/rest/resources/2024_01/resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_01/script_tag.rb
+- lib/shopify_api/rest/resources/2024_01/shipping_zone.rb
+- lib/shopify_api/rest/resources/2024_01/shop.rb
+- lib/shopify_api/rest/resources/2024_01/smart_collection.rb
+- lib/shopify_api/rest/resources/2024_01/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2024_01/tender_transaction.rb
+- lib/shopify_api/rest/resources/2024_01/theme.rb
+- lib/shopify_api/rest/resources/2024_01/transaction.rb
+- lib/shopify_api/rest/resources/2024_01/usage_charge.rb
+- lib/shopify_api/rest/resources/2024_01/user.rb
+- lib/shopify_api/rest/resources/2024_01/variant.rb
+- lib/shopify_api/rest/resources/2024_01/webhook.rb
+- lib/shopify_api/rest/resources/2024_04/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2024_04/access_scope.rb
+- lib/shopify_api/rest/resources/2024_04/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2024_04/application_charge.rb
+- lib/shopify_api/rest/resources/2024_04/application_credit.rb
+- lib/shopify_api/rest/resources/2024_04/article.rb
+- lib/shopify_api/rest/resources/2024_04/asset.rb
+- lib/shopify_api/rest/resources/2024_04/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_04/balance.rb
+- lib/shopify_api/rest/resources/2024_04/blog.rb
+- lib/shopify_api/rest/resources/2024_04/cancellation_request.rb
+- lib/shopify_api/rest/resources/2024_04/carrier_service.rb
+- lib/shopify_api/rest/resources/2024_04/checkout.rb
+- lib/shopify_api/rest/resources/2024_04/collect.rb
+- lib/shopify_api/rest/resources/2024_04/collection.rb
+- lib/shopify_api/rest/resources/2024_04/collection_listing.rb
+- lib/shopify_api/rest/resources/2024_04/comment.rb
+- lib/shopify_api/rest/resources/2024_04/country.rb
+- lib/shopify_api/rest/resources/2024_04/currency.rb
+- lib/shopify_api/rest/resources/2024_04/custom_collection.rb
+- lib/shopify_api/rest/resources/2024_04/customer.rb
+- lib/shopify_api/rest/resources/2024_04/customer_address.rb
+- lib/shopify_api/rest/resources/2024_04/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2024_04/discount_code.rb
+- lib/shopify_api/rest/resources/2024_04/dispute.rb
+- lib/shopify_api/rest/resources/2024_04/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2024_04/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2024_04/draft_order.rb
+- lib/shopify_api/rest/resources/2024_04/event.rb
+- lib/shopify_api/rest/resources/2024_04/fulfillment.rb
+- lib/shopify_api/rest/resources/2024_04/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2024_04/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_04/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2024_04/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2024_04/gift_card.rb
+- lib/shopify_api/rest/resources/2024_04/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2024_04/image.rb
+- lib/shopify_api/rest/resources/2024_04/inventory_item.rb
+- lib/shopify_api/rest/resources/2024_04/inventory_level.rb
+- lib/shopify_api/rest/resources/2024_04/location.rb
+- lib/shopify_api/rest/resources/2024_04/locations_for_move.rb
+- lib/shopify_api/rest/resources/2024_04/marketing_event.rb
+- lib/shopify_api/rest/resources/2024_04/metafield.rb
+- lib/shopify_api/rest/resources/2024_04/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2024_04/order.rb
+- lib/shopify_api/rest/resources/2024_04/order_risk.rb
+- lib/shopify_api/rest/resources/2024_04/page.rb
+- lib/shopify_api/rest/resources/2024_04/payment.rb
+- lib/shopify_api/rest/resources/2024_04/payment_gateway.rb
+- lib/shopify_api/rest/resources/2024_04/payment_transaction.rb
+- lib/shopify_api/rest/resources/2024_04/payout.rb
+- lib/shopify_api/rest/resources/2024_04/policy.rb
+- lib/shopify_api/rest/resources/2024_04/price_rule.rb
+- lib/shopify_api/rest/resources/2024_04/product.rb
+- lib/shopify_api/rest/resources/2024_04/product_listing.rb
+- lib/shopify_api/rest/resources/2024_04/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_04/province.rb
+- lib/shopify_api/rest/resources/2024_04/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2024_04/redirect.rb
+- lib/shopify_api/rest/resources/2024_04/refund.rb
+- lib/shopify_api/rest/resources/2024_04/resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_04/script_tag.rb
+- lib/shopify_api/rest/resources/2024_04/shipping_zone.rb
+- lib/shopify_api/rest/resources/2024_04/shop.rb
+- lib/shopify_api/rest/resources/2024_04/smart_collection.rb
+- lib/shopify_api/rest/resources/2024_04/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2024_04/tender_transaction.rb
+- lib/shopify_api/rest/resources/2024_04/theme.rb
+- lib/shopify_api/rest/resources/2024_04/transaction.rb
+- lib/shopify_api/rest/resources/2024_04/usage_charge.rb
+- lib/shopify_api/rest/resources/2024_04/user.rb
+- lib/shopify_api/rest/resources/2024_04/variant.rb
+- lib/shopify_api/rest/resources/2024_04/webhook.rb
+- lib/shopify_api/rest/resources/2024_07/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2024_07/access_scope.rb
+- lib/shopify_api/rest/resources/2024_07/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2024_07/application_charge.rb
+- lib/shopify_api/rest/resources/2024_07/application_credit.rb
+- lib/shopify_api/rest/resources/2024_07/article.rb
+- lib/shopify_api/rest/resources/2024_07/asset.rb
+- lib/shopify_api/rest/resources/2024_07/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_07/balance.rb
+- lib/shopify_api/rest/resources/2024_07/blog.rb
+- lib/shopify_api/rest/resources/2024_07/cancellation_request.rb
+- lib/shopify_api/rest/resources/2024_07/carrier_service.rb
+- lib/shopify_api/rest/resources/2024_07/checkout.rb
+- lib/shopify_api/rest/resources/2024_07/collect.rb
+- lib/shopify_api/rest/resources/2024_07/collection.rb
+- lib/shopify_api/rest/resources/2024_07/collection_listing.rb
+- lib/shopify_api/rest/resources/2024_07/comment.rb
+- lib/shopify_api/rest/resources/2024_07/country.rb
+- lib/shopify_api/rest/resources/2024_07/currency.rb
+- lib/shopify_api/rest/resources/2024_07/custom_collection.rb
+- lib/shopify_api/rest/resources/2024_07/customer.rb
+- lib/shopify_api/rest/resources/2024_07/customer_address.rb
+- lib/shopify_api/rest/resources/2024_07/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2024_07/discount_code.rb
+- lib/shopify_api/rest/resources/2024_07/dispute.rb
+- lib/shopify_api/rest/resources/2024_07/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2024_07/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2024_07/draft_order.rb
+- lib/shopify_api/rest/resources/2024_07/event.rb
+- lib/shopify_api/rest/resources/2024_07/fulfillment.rb
+- lib/shopify_api/rest/resources/2024_07/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2024_07/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_07/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2024_07/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2024_07/gift_card.rb
+- lib/shopify_api/rest/resources/2024_07/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2024_07/image.rb
+- lib/shopify_api/rest/resources/2024_07/inventory_item.rb
+- lib/shopify_api/rest/resources/2024_07/inventory_level.rb
+- lib/shopify_api/rest/resources/2024_07/location.rb
+- lib/shopify_api/rest/resources/2024_07/locations_for_move.rb
+- lib/shopify_api/rest/resources/2024_07/marketing_event.rb
+- lib/shopify_api/rest/resources/2024_07/metafield.rb
+- lib/shopify_api/rest/resources/2024_07/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2024_07/order.rb
+- lib/shopify_api/rest/resources/2024_07/order_risk.rb
+- lib/shopify_api/rest/resources/2024_07/page.rb
+- lib/shopify_api/rest/resources/2024_07/payment.rb
+- lib/shopify_api/rest/resources/2024_07/payment_gateway.rb
+- lib/shopify_api/rest/resources/2024_07/payment_transaction.rb
+- lib/shopify_api/rest/resources/2024_07/payout.rb
+- lib/shopify_api/rest/resources/2024_07/policy.rb
+- lib/shopify_api/rest/resources/2024_07/price_rule.rb
+- lib/shopify_api/rest/resources/2024_07/product.rb
+- lib/shopify_api/rest/resources/2024_07/product_listing.rb
+- lib/shopify_api/rest/resources/2024_07/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_07/province.rb
+- lib/shopify_api/rest/resources/2024_07/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2024_07/redirect.rb
+- lib/shopify_api/rest/resources/2024_07/refund.rb
+- lib/shopify_api/rest/resources/2024_07/resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_07/script_tag.rb
+- lib/shopify_api/rest/resources/2024_07/shipping_zone.rb
+- lib/shopify_api/rest/resources/2024_07/shop.rb
+- lib/shopify_api/rest/resources/2024_07/smart_collection.rb
+- lib/shopify_api/rest/resources/2024_07/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2024_07/tender_transaction.rb
+- lib/shopify_api/rest/resources/2024_07/theme.rb
+- lib/shopify_api/rest/resources/2024_07/transaction.rb
+- lib/shopify_api/rest/resources/2024_07/usage_charge.rb
+- lib/shopify_api/rest/resources/2024_07/user.rb
+- lib/shopify_api/rest/resources/2024_07/variant.rb
+- lib/shopify_api/rest/resources/2024_07/webhook.rb
+- lib/shopify_api/rest/resources/2024_10/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2024_10/access_scope.rb
+- lib/shopify_api/rest/resources/2024_10/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2024_10/application_charge.rb
+- lib/shopify_api/rest/resources/2024_10/application_credit.rb
+- lib/shopify_api/rest/resources/2024_10/article.rb
+- lib/shopify_api/rest/resources/2024_10/asset.rb
+- lib/shopify_api/rest/resources/2024_10/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_10/balance.rb
+- lib/shopify_api/rest/resources/2024_10/blog.rb
+- lib/shopify_api/rest/resources/2024_10/cancellation_request.rb
+- lib/shopify_api/rest/resources/2024_10/carrier_service.rb
+- lib/shopify_api/rest/resources/2024_10/checkout.rb
+- lib/shopify_api/rest/resources/2024_10/collect.rb
+- lib/shopify_api/rest/resources/2024_10/collection.rb
+- lib/shopify_api/rest/resources/2024_10/collection_listing.rb
+- lib/shopify_api/rest/resources/2024_10/comment.rb
+- lib/shopify_api/rest/resources/2024_10/country.rb
+- lib/shopify_api/rest/resources/2024_10/currency.rb
+- lib/shopify_api/rest/resources/2024_10/custom_collection.rb
+- lib/shopify_api/rest/resources/2024_10/customer.rb
+- lib/shopify_api/rest/resources/2024_10/customer_address.rb
+- lib/shopify_api/rest/resources/2024_10/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2024_10/discount_code.rb
+- lib/shopify_api/rest/resources/2024_10/dispute.rb
+- lib/shopify_api/rest/resources/2024_10/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2024_10/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2024_10/draft_order.rb
+- lib/shopify_api/rest/resources/2024_10/event.rb
+- lib/shopify_api/rest/resources/2024_10/fulfillment.rb
+- lib/shopify_api/rest/resources/2024_10/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2024_10/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2024_10/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2024_10/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2024_10/gift_card.rb
+- lib/shopify_api/rest/resources/2024_10/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2024_10/image.rb
+- lib/shopify_api/rest/resources/2024_10/inventory_item.rb
+- lib/shopify_api/rest/resources/2024_10/inventory_level.rb
+- lib/shopify_api/rest/resources/2024_10/location.rb
+- lib/shopify_api/rest/resources/2024_10/locations_for_move.rb
+- lib/shopify_api/rest/resources/2024_10/marketing_event.rb
+- lib/shopify_api/rest/resources/2024_10/metafield.rb
+- lib/shopify_api/rest/resources/2024_10/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2024_10/order.rb
+- lib/shopify_api/rest/resources/2024_10/order_risk.rb
+- lib/shopify_api/rest/resources/2024_10/page.rb
+- lib/shopify_api/rest/resources/2024_10/payment.rb
+- lib/shopify_api/rest/resources/2024_10/payment_gateway.rb
+- lib/shopify_api/rest/resources/2024_10/payment_transaction.rb
+- lib/shopify_api/rest/resources/2024_10/payout.rb
+- lib/shopify_api/rest/resources/2024_10/policy.rb
+- lib/shopify_api/rest/resources/2024_10/price_rule.rb
+- lib/shopify_api/rest/resources/2024_10/product.rb
+- lib/shopify_api/rest/resources/2024_10/product_listing.rb
+- lib/shopify_api/rest/resources/2024_10/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_10/province.rb
+- lib/shopify_api/rest/resources/2024_10/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2024_10/redirect.rb
+- lib/shopify_api/rest/resources/2024_10/refund.rb
+- lib/shopify_api/rest/resources/2024_10/resource_feedback.rb
+- lib/shopify_api/rest/resources/2024_10/script_tag.rb
+- lib/shopify_api/rest/resources/2024_10/shipping_zone.rb
+- lib/shopify_api/rest/resources/2024_10/shop.rb
+- lib/shopify_api/rest/resources/2024_10/smart_collection.rb
+- lib/shopify_api/rest/resources/2024_10/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2024_10/tender_transaction.rb
+- lib/shopify_api/rest/resources/2024_10/theme.rb
+- lib/shopify_api/rest/resources/2024_10/transaction.rb
+- lib/shopify_api/rest/resources/2024_10/usage_charge.rb
+- lib/shopify_api/rest/resources/2024_10/user.rb
+- lib/shopify_api/rest/resources/2024_10/variant.rb
+- lib/shopify_api/rest/resources/2024_10/webhook.rb
+- lib/shopify_api/rest/resources/2025_01/abandoned_checkout.rb
+- lib/shopify_api/rest/resources/2025_01/access_scope.rb
+- lib/shopify_api/rest/resources/2025_01/apple_pay_certificate.rb
+- lib/shopify_api/rest/resources/2025_01/application_charge.rb
+- lib/shopify_api/rest/resources/2025_01/application_credit.rb
+- lib/shopify_api/rest/resources/2025_01/article.rb
+- lib/shopify_api/rest/resources/2025_01/asset.rb
+- lib/shopify_api/rest/resources/2025_01/assigned_fulfillment_order.rb
+- lib/shopify_api/rest/resources/2025_01/balance.rb
+- lib/shopify_api/rest/resources/2025_01/blog.rb
+- lib/shopify_api/rest/resources/2025_01/cancellation_request.rb
+- lib/shopify_api/rest/resources/2025_01/carrier_service.rb
+- lib/shopify_api/rest/resources/2025_01/checkout.rb
+- lib/shopify_api/rest/resources/2025_01/collect.rb
+- lib/shopify_api/rest/resources/2025_01/collection.rb
+- lib/shopify_api/rest/resources/2025_01/collection_listing.rb
+- lib/shopify_api/rest/resources/2025_01/comment.rb
+- lib/shopify_api/rest/resources/2025_01/country.rb
+- lib/shopify_api/rest/resources/2025_01/currency.rb
+- lib/shopify_api/rest/resources/2025_01/custom_collection.rb
+- lib/shopify_api/rest/resources/2025_01/customer.rb
+- lib/shopify_api/rest/resources/2025_01/customer_address.rb
+- lib/shopify_api/rest/resources/2025_01/deprecated_api_call.rb
+- lib/shopify_api/rest/resources/2025_01/discount_code.rb
+- lib/shopify_api/rest/resources/2025_01/dispute.rb
+- lib/shopify_api/rest/resources/2025_01/dispute_evidence.rb
+- lib/shopify_api/rest/resources/2025_01/dispute_file_upload.rb
+- lib/shopify_api/rest/resources/2025_01/draft_order.rb
+- lib/shopify_api/rest/resources/2025_01/event.rb
+- lib/shopify_api/rest/resources/2025_01/fulfillment.rb
+- lib/shopify_api/rest/resources/2025_01/fulfillment_event.rb
+- lib/shopify_api/rest/resources/2025_01/fulfillment_order.rb
+- lib/shopify_api/rest/resources/2025_01/fulfillment_request.rb
+- lib/shopify_api/rest/resources/2025_01/fulfillment_service.rb
+- lib/shopify_api/rest/resources/2025_01/gift_card.rb
+- lib/shopify_api/rest/resources/2025_01/gift_card_adjustment.rb
+- lib/shopify_api/rest/resources/2025_01/image.rb
+- lib/shopify_api/rest/resources/2025_01/inventory_item.rb
+- lib/shopify_api/rest/resources/2025_01/inventory_level.rb
+- lib/shopify_api/rest/resources/2025_01/location.rb
+- lib/shopify_api/rest/resources/2025_01/locations_for_move.rb
+- lib/shopify_api/rest/resources/2025_01/marketing_event.rb
+- lib/shopify_api/rest/resources/2025_01/metafield.rb
+- lib/shopify_api/rest/resources/2025_01/mobile_platform_application.rb
+- lib/shopify_api/rest/resources/2025_01/order.rb
+- lib/shopify_api/rest/resources/2025_01/order_risk.rb
+- lib/shopify_api/rest/resources/2025_01/page.rb
+- lib/shopify_api/rest/resources/2025_01/payment.rb
+- lib/shopify_api/rest/resources/2025_01/payment_gateway.rb
+- lib/shopify_api/rest/resources/2025_01/payment_transaction.rb
+- lib/shopify_api/rest/resources/2025_01/payout.rb
+- lib/shopify_api/rest/resources/2025_01/policy.rb
+- lib/shopify_api/rest/resources/2025_01/price_rule.rb
+- lib/shopify_api/rest/resources/2025_01/product.rb
+- lib/shopify_api/rest/resources/2025_01/product_listing.rb
+- lib/shopify_api/rest/resources/2025_01/product_resource_feedback.rb
+- lib/shopify_api/rest/resources/2025_01/province.rb
+- lib/shopify_api/rest/resources/2025_01/recurring_application_charge.rb
+- lib/shopify_api/rest/resources/2025_01/redirect.rb
+- lib/shopify_api/rest/resources/2025_01/refund.rb
+- lib/shopify_api/rest/resources/2025_01/resource_feedback.rb
+- lib/shopify_api/rest/resources/2025_01/script_tag.rb
+- lib/shopify_api/rest/resources/2025_01/shipping_zone.rb
+- lib/shopify_api/rest/resources/2025_01/shop.rb
+- lib/shopify_api/rest/resources/2025_01/smart_collection.rb
+- lib/shopify_api/rest/resources/2025_01/storefront_access_token.rb
+- lib/shopify_api/rest/resources/2025_01/tender_transaction.rb
+- lib/shopify_api/rest/resources/2025_01/theme.rb
+- lib/shopify_api/rest/resources/2025_01/transaction.rb
+- lib/shopify_api/rest/resources/2025_01/usage_charge.rb
+- lib/shopify_api/rest/resources/2025_01/user.rb
+- lib/shopify_api/rest/resources/2025_01/variant.rb
+- lib/shopify_api/rest/resources/2025_01/webhook.rb
+- lib/shopify_api/utils/attributes_comparator.rb
+- lib/shopify_api/utils/graphql_proxy.rb
+- lib/shopify_api/utils/hmac_validator.rb
+- lib/shopify_api/utils/http_utils.rb
+- lib/shopify_api/utils/session_utils.rb
+- lib/shopify_api/utils/verifiable_query.rb
+- lib/shopify_api/version.rb
+- lib/shopify_api/webhooks/handler.rb
+- lib/shopify_api/webhooks/register_result.rb
+- lib/shopify_api/webhooks/registration.rb
+- lib/shopify_api/webhooks/registrations/event_bridge.rb
+- lib/shopify_api/webhooks/registrations/http.rb
+- lib/shopify_api/webhooks/registrations/pub_sub.rb
+- lib/shopify_api/webhooks/registry.rb
+- lib/shopify_api/webhooks/request.rb
+- service.yml
+- shipit.rubygems.yml
+- shopify_api.gemspec
+- sorbet/config
+- sorbet/rbi/gems/activesupport@7.0.1.rbi
+- sorbet/rbi/gems/addressable@2.8.0.rbi
+- sorbet/rbi/gems/ast@2.4.2.rbi
+- sorbet/rbi/gems/coderay@1.1.3.rbi
+- sorbet/rbi/gems/concurrent-ruby@1.1.9.rbi
+- sorbet/rbi/gems/crack@0.4.5.rbi
+- sorbet/rbi/gems/diff-lcs@1.5.0.rbi
+- sorbet/rbi/gems/fakefs@1.4.1.rbi
+- sorbet/rbi/gems/hash_diff@1.0.0.rbi
+- sorbet/rbi/gems/hashdiff@1.0.1.rbi
+- sorbet/rbi/gems/httparty@0.20.0.rbi
+- sorbet/rbi/gems/i18n@1.8.11.rbi
+- sorbet/rbi/gems/jwt@2.3.0.rbi
+- sorbet/rbi/gems/method_source@1.0.0.rbi
+- sorbet/rbi/gems/mime-types-data@3.2022.0105.rbi
+- sorbet/rbi/gems/mime-types@3.4.1.rbi
+- sorbet/rbi/gems/minitest@5.15.0.rbi
+- sorbet/rbi/gems/mocha@1.13.0.rbi
+- sorbet/rbi/gems/multi_xml@0.6.0.rbi
+- sorbet/rbi/gems/oj@3.13.11.rbi
+- sorbet/rbi/gems/openssl@3.0.0.rbi
+- sorbet/rbi/gems/parallel@1.21.0.rbi
+- sorbet/rbi/gems/parser@3.1.0.0.rbi
+- sorbet/rbi/gems/pry@0.14.1.rbi
+- sorbet/rbi/gems/public_suffix@4.0.6.rbi
+- sorbet/rbi/gems/rainbow@3.1.1.rbi
+- sorbet/rbi/gems/rake@13.0.6.rbi
+- sorbet/rbi/gems/rbi@0.0.11.rbi
+- sorbet/rbi/gems/regexp_parser@2.2.0.rbi
+- sorbet/rbi/gems/rexml@3.2.5.rbi
+- sorbet/rbi/gems/rubocop-ast@1.15.1.rbi
+- sorbet/rbi/gems/rubocop-shopify@2.4.0.rbi
+- sorbet/rbi/gems/rubocop-sorbet@0.6.5.rbi
+- sorbet/rbi/gems/rubocop@1.25.1.rbi
+- sorbet/rbi/gems/ruby-progressbar@1.11.0.rbi
+- sorbet/rbi/gems/securerandom@0.1.1.rbi
+- sorbet/rbi/gems/spoom@1.1.8.rbi
+- sorbet/rbi/gems/tapioca@0.6.3.rbi
+- sorbet/rbi/gems/thor@1.2.1.rbi
+- sorbet/rbi/gems/tzinfo@2.0.4.rbi
+- sorbet/rbi/gems/unicode-display_width@2.1.0.rbi
+- sorbet/rbi/gems/unparser@0.6.3.rbi
+- sorbet/rbi/gems/webmock@3.14.0.rbi
+- sorbet/rbi/gems/webrick@1.7.0.rbi
+- sorbet/rbi/gems/yard-sorbet@0.6.1.rbi
+- sorbet/rbi/gems/yard@0.9.27.rbi
+- sorbet/rbi/gems/zeitwerk@2.5.4.rbi
+- sorbet/rbi/shims/fakefs.rbi
+- sorbet/rbi/shims/hash.rb
+- sorbet/rbi/shims/openssl.rb
+- sorbet/rbi/todo.rbi
+- sorbet/tapioca/config.yml
+- sorbet/tapioca/require.rb
+homepage: https://shopify.dev/docs/apps
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: The gem for accessing the Shopify API
+test_files: []

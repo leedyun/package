@@ -1,0 +1,45 @@
+dist: xenial
+compiler: clang
+language: ruby
+rvm:
+  - 2.7
+  - 2.6
+  - 2.5
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode11.6
+addons:
+  apt:
+    packages:
+      - clang
+      - pkg-config
+bundler_args: --jobs=4 --retry=3
+before_install:
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then gem update bundler; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then gem update --system; fi
+  - if [ "$TRAVIS_OS_NAME" == "osx" -a "$TRAVIS_RUBY_VERSION" == "system" ]; then sudo gem install bundler; fi
+  - if [ "$TRAVIS_OS_NAME" == "osx" -a "$TRAVIS_RUBY_VERSION" != "system" ]; then gem update --system; fi
+  - if [ "$TRAVIS_OS_NAME" == "osx" -a "$TRAVIS_RUBY_VERSION" != "system" ]; then gem update bundler; fi
+script:
+  - git submodule update --init
+  - bundle exec rake spec binary --trace
+before_deploy:
+  - bundle exec rake osx_varients --trace
+deploy:
+  provider: releases
+  file_glob: true
+  file: pkg/*.gem
+  api_key:
+    secure: "ONqUP7Unb84uQJhPCacyNdQL2JznZHIpXjXvW3Zcmvz9Hifp0Q94Kk/k7Q7jDgVZjHvqs9iI2WaXOut55Tumb9yZcMtn4ZbMCh/93MPPBYnvFGJd4qDQdiVylm+WLrg+phK/nG1259T/dX+nZKYbvKjQxQSHYaP7q6+MVvLPPcY="
+  skip_cleanup: true
+  on:
+    tags: true
+    rvm: '2.7'
+cache:
+  bundler: true
+notifications:
+  recipients:
+    - cowboyd@thefrontside.net
+    - bordjukov@gmail.com
+    - nightpool@cybre.space

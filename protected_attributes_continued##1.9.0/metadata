@@ -1,0 +1,134 @@
+--- !ruby/object:Gem::Specification
+name: protected_attributes_continued
+version: !ruby/object:Gem::Version
+  version: 1.9.0
+platform: ruby
+authors:
+- Weston Ganger
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+description: Protect attributes from mass assignment
+email:
+- weston@westonganger.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/action_controller/accessible_params_wrapper.rb
+- lib/active_model/mass_assignment_security.rb
+- lib/active_model/mass_assignment_security/permission_set.rb
+- lib/active_model/mass_assignment_security/sanitizer.rb
+- lib/active_record/mass_assignment_security.rb
+- lib/active_record/mass_assignment_security/association_relation.rb
+- lib/active_record/mass_assignment_security/associations.rb
+- lib/active_record/mass_assignment_security/attribute_assignment.rb
+- lib/active_record/mass_assignment_security/core.rb
+- lib/active_record/mass_assignment_security/inheritance.rb
+- lib/active_record/mass_assignment_security/nested_attributes.rb
+- lib/active_record/mass_assignment_security/persistence.rb
+- lib/active_record/mass_assignment_security/reflection.rb
+- lib/active_record/mass_assignment_security/relation.rb
+- lib/active_record/mass_assignment_security/validations.rb
+- lib/protected_attributes.rb
+- lib/protected_attributes/railtie.rb
+- lib/protected_attributes/version.rb
+- lib/protected_attributes_continued.rb
+homepage: https://github.com/westonganger/protected_attributes_continued
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.6
+signing_key:
+specification_version: 4
+summary: Protect attributes from mass assignment in Active Record models
+test_files: []

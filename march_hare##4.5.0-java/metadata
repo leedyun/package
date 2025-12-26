@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: march_hare
+version: !ruby/object:Gem::Version
+  version: 4.5.0
+platform: java
+authors:
+- Theo Hultberg
+- Michael S. Klishin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-09-11 00:00:00.000000000 Z
+dependencies: []
+description: RabbitMQ client for JRuby built around the official RabbitMQ Java client
+email:
+- theo@burtcorp.com
+- michael@rabbitmq.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/ext/rabbitmq-client.jar
+- lib/ext/slf4j-api.jar
+- lib/ext/slf4j-simple.jar
+- lib/march_hare.rb
+- lib/march_hare/channel.rb
+- lib/march_hare/consumers.rb
+- lib/march_hare/consumers/base.rb
+- lib/march_hare/consumers/blocking.rb
+- lib/march_hare/exception_handler.rb
+- lib/march_hare/exceptions.rb
+- lib/march_hare/exchange.rb
+- lib/march_hare/juc.rb
+- lib/march_hare/metadata.rb
+- lib/march_hare/queue.rb
+- lib/march_hare/session.rb
+- lib/march_hare/shutdown_listener.rb
+- lib/march_hare/thread_pools.rb
+- lib/march_hare/version.rb
+- lib/march_hare/versioned_delivery_tag.rb
+homepage: https://github.com/ruby-amqp/march_hare
+licenses: []
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.2.29
+signing_key:
+specification_version: 4
+summary: RabbitMQ client for JRuby built around the official RabbitMQ Java client
+test_files: []

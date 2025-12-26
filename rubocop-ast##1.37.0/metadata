@@ -1,0 +1,169 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-ast
+version: !ruby/object:Gem::Version
+  version: 1.37.0
+platform: ruby
+authors:
+- Bozhidar Batsov
+- Jonas Arvidsson
+- Yuji Nakayama
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-13 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.1.0
+description: "    RuboCop's Node and NodePattern classes.\n"
+email: rubocop@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- README.md
+files:
+- LICENSE.txt
+- README.md
+- lib/rubocop-ast.rb
+- lib/rubocop/ast.rb
+- lib/rubocop/ast/builder.rb
+- lib/rubocop/ast/ext/range.rb
+- lib/rubocop/ast/node.rb
+- lib/rubocop/ast/node/alias_node.rb
+- lib/rubocop/ast/node/and_asgn_node.rb
+- lib/rubocop/ast/node/and_node.rb
+- lib/rubocop/ast/node/arg_node.rb
+- lib/rubocop/ast/node/args_node.rb
+- lib/rubocop/ast/node/array_node.rb
+- lib/rubocop/ast/node/asgn_node.rb
+- lib/rubocop/ast/node/block_node.rb
+- lib/rubocop/ast/node/break_node.rb
+- lib/rubocop/ast/node/case_match_node.rb
+- lib/rubocop/ast/node/case_node.rb
+- lib/rubocop/ast/node/casgn_node.rb
+- lib/rubocop/ast/node/class_node.rb
+- lib/rubocop/ast/node/const_node.rb
+- lib/rubocop/ast/node/csend_node.rb
+- lib/rubocop/ast/node/def_node.rb
+- lib/rubocop/ast/node/defined_node.rb
+- lib/rubocop/ast/node/dstr_node.rb
+- lib/rubocop/ast/node/ensure_node.rb
+- lib/rubocop/ast/node/float_node.rb
+- lib/rubocop/ast/node/for_node.rb
+- lib/rubocop/ast/node/forward_args_node.rb
+- lib/rubocop/ast/node/hash_node.rb
+- lib/rubocop/ast/node/if_node.rb
+- lib/rubocop/ast/node/in_pattern_node.rb
+- lib/rubocop/ast/node/index_node.rb
+- lib/rubocop/ast/node/indexasgn_node.rb
+- lib/rubocop/ast/node/int_node.rb
+- lib/rubocop/ast/node/keyword_begin_node.rb
+- lib/rubocop/ast/node/keyword_splat_node.rb
+- lib/rubocop/ast/node/lambda_node.rb
+- lib/rubocop/ast/node/masgn_node.rb
+- lib/rubocop/ast/node/mixin/basic_literal_node.rb
+- lib/rubocop/ast/node/mixin/binary_operator_node.rb
+- lib/rubocop/ast/node/mixin/collection_node.rb
+- lib/rubocop/ast/node/mixin/conditional_node.rb
+- lib/rubocop/ast/node/mixin/constant_node.rb
+- lib/rubocop/ast/node/mixin/descendence.rb
+- lib/rubocop/ast/node/mixin/hash_element_node.rb
+- lib/rubocop/ast/node/mixin/method_dispatch_node.rb
+- lib/rubocop/ast/node/mixin/method_identifier_predicates.rb
+- lib/rubocop/ast/node/mixin/modifier_node.rb
+- lib/rubocop/ast/node/mixin/numeric_node.rb
+- lib/rubocop/ast/node/mixin/parameterized_node.rb
+- lib/rubocop/ast/node/mixin/predicate_operator_node.rb
+- lib/rubocop/ast/node/mlhs_node.rb
+- lib/rubocop/ast/node/module_node.rb
+- lib/rubocop/ast/node/next_node.rb
+- lib/rubocop/ast/node/op_asgn_node.rb
+- lib/rubocop/ast/node/or_asgn_node.rb
+- lib/rubocop/ast/node/or_node.rb
+- lib/rubocop/ast/node/pair_node.rb
+- lib/rubocop/ast/node/procarg0_node.rb
+- lib/rubocop/ast/node/range_node.rb
+- lib/rubocop/ast/node/rational_node.rb
+- lib/rubocop/ast/node/regexp_node.rb
+- lib/rubocop/ast/node/resbody_node.rb
+- lib/rubocop/ast/node/rescue_node.rb
+- lib/rubocop/ast/node/return_node.rb
+- lib/rubocop/ast/node/self_class_node.rb
+- lib/rubocop/ast/node/send_node.rb
+- lib/rubocop/ast/node/str_node.rb
+- lib/rubocop/ast/node/super_node.rb
+- lib/rubocop/ast/node/symbol_node.rb
+- lib/rubocop/ast/node/until_node.rb
+- lib/rubocop/ast/node/var_node.rb
+- lib/rubocop/ast/node/when_node.rb
+- lib/rubocop/ast/node/while_node.rb
+- lib/rubocop/ast/node/yield_node.rb
+- lib/rubocop/ast/node_pattern.rb
+- lib/rubocop/ast/node_pattern/builder.rb
+- lib/rubocop/ast/node_pattern/comment.rb
+- lib/rubocop/ast/node_pattern/compiler.rb
+- lib/rubocop/ast/node_pattern/compiler/atom_subcompiler.rb
+- lib/rubocop/ast/node_pattern/compiler/binding.rb
+- lib/rubocop/ast/node_pattern/compiler/debug.rb
+- lib/rubocop/ast/node_pattern/compiler/node_pattern_subcompiler.rb
+- lib/rubocop/ast/node_pattern/compiler/sequence_subcompiler.rb
+- lib/rubocop/ast/node_pattern/compiler/subcompiler.rb
+- lib/rubocop/ast/node_pattern/lexer.rb
+- lib/rubocop/ast/node_pattern/lexer.rex
+- lib/rubocop/ast/node_pattern/lexer.rex.rb
+- lib/rubocop/ast/node_pattern/method_definer.rb
+- lib/rubocop/ast/node_pattern/node.rb
+- lib/rubocop/ast/node_pattern/parser.racc.rb
+- lib/rubocop/ast/node_pattern/parser.rb
+- lib/rubocop/ast/node_pattern/parser.y
+- lib/rubocop/ast/node_pattern/sets.rb
+- lib/rubocop/ast/node_pattern/with_meta.rb
+- lib/rubocop/ast/processed_source.rb
+- lib/rubocop/ast/rubocop_compatibility.rb
+- lib/rubocop/ast/sexp.rb
+- lib/rubocop/ast/token.rb
+- lib/rubocop/ast/traversal.rb
+- lib/rubocop/ast/utilities/simple_forwardable.rb
+- lib/rubocop/ast/version.rb
+homepage: https://github.com/rubocop/rubocop-ast
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://www.rubocop.org/
+  changelog_uri: https://github.com/rubocop/rubocop-ast/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/rubocop/rubocop-ast/
+  documentation_uri: https://docs.rubocop.org/rubocop-ast/
+  bug_tracker_uri: https://github.com/rubocop/rubocop-ast/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.11
+signing_key:
+specification_version: 4
+summary: RuboCop tools to deal with Ruby code AST.
+test_files: []

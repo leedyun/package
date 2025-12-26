@@ -1,0 +1,21 @@
+== Description
+
+Allows serialization of ruby data structures into text columns before Rails
+version 3.1.
+
+== Installation
+
+You can use rubygems to fetch the gem and install it for you:
+
+  # gem install active_record_serialize_json
+
+You can also put this line into your Rails Gemfile file
+
+  gem 'active_record_serialize_json'
+
+and install the gem via
+
+  $ bundle
+
+== Usage
+

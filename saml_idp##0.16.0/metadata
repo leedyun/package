@@ -1,0 +1,502 @@
+--- !ruby/object:Gem::Specification
+name: saml_idp
+version: !ruby/object:Gem::Version
+  version: 0.16.0
+platform: ruby
+authors:
+- Jon Phenow
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: builder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.2
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: xmlenc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.7.1
+- !ruby/object:Gem::Dependency
+  name: activeresource
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: appraisal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.16'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.16'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.7.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.7.0
+- !ruby/object:Gem::Dependency
+  name: ruby-saml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.2
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: timecop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.8'
+description: SAML IdP (Identity Provider) Library for Ruby
+email: jon.phenow@sportngin.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- LICENSE
+- README.md
+- lib/saml_idp.rb
+- lib/saml_idp/algorithmable.rb
+- lib/saml_idp/assertion_builder.rb
+- lib/saml_idp/attribute_decorator.rb
+- lib/saml_idp/attributeable.rb
+- lib/saml_idp/configurator.rb
+- lib/saml_idp/controller.rb
+- lib/saml_idp/default.rb
+- lib/saml_idp/encryptor.rb
+- lib/saml_idp/engine.rb
+- lib/saml_idp/fingerprint.rb
+- lib/saml_idp/hashable.rb
+- lib/saml_idp/incoming_metadata.rb
+- lib/saml_idp/logout_builder.rb
+- lib/saml_idp/logout_request_builder.rb
+- lib/saml_idp/logout_response_builder.rb
+- lib/saml_idp/metadata_builder.rb
+- lib/saml_idp/name_id_formatter.rb
+- lib/saml_idp/persisted_metadata.rb
+- lib/saml_idp/request.rb
+- lib/saml_idp/response_builder.rb
+- lib/saml_idp/saml_response.rb
+- lib/saml_idp/service_provider.rb
+- lib/saml_idp/signable.rb
+- lib/saml_idp/signature_builder.rb
+- lib/saml_idp/signed_info_builder.rb
+- lib/saml_idp/version.rb
+- lib/saml_idp/xml_security.rb
+- saml_idp.gemspec
+- spec/acceptance/acceptance_helper.rb
+- spec/acceptance/idp_controller_spec.rb
+- spec/lib/saml_idp/algorithmable_spec.rb
+- spec/lib/saml_idp/assertion_builder_spec.rb
+- spec/lib/saml_idp/attribute_decorator_spec.rb
+- spec/lib/saml_idp/configurator_spec.rb
+- spec/lib/saml_idp/controller_spec.rb
+- spec/lib/saml_idp/encryptor_spec.rb
+- spec/lib/saml_idp/fingerprint_spec.rb
+- spec/lib/saml_idp/incoming_metadata_spec.rb
+- spec/lib/saml_idp/logout_request_builder_spec.rb
+- spec/lib/saml_idp/logout_response_builder_spec.rb
+- spec/lib/saml_idp/metadata_builder_spec.rb
+- spec/lib/saml_idp/name_id_formatter_spec.rb
+- spec/lib/saml_idp/request_spec.rb
+- spec/lib/saml_idp/response_builder_spec.rb
+- spec/lib/saml_idp/saml_response_spec.rb
+- spec/lib/saml_idp/service_provider_spec.rb
+- spec/lib/saml_idp/signable_spec.rb
+- spec/lib/saml_idp/signature_builder_spec.rb
+- spec/lib/saml_idp/signed_info_builder_spec.rb
+- spec/rails_app/.gitignore
+- spec/rails_app/README.rdoc
+- spec/rails_app/Rakefile
+- spec/rails_app/app/assets/images/rails.png
+- spec/rails_app/app/assets/javascripts/application.js
+- spec/rails_app/app/assets/stylesheets/application.css
+- spec/rails_app/app/controllers/application_controller.rb
+- spec/rails_app/app/controllers/saml_controller.rb
+- spec/rails_app/app/controllers/saml_idp_controller.rb
+- spec/rails_app/app/helpers/application_helper.rb
+- spec/rails_app/app/mailers/.gitkeep
+- spec/rails_app/app/models/.gitkeep
+- spec/rails_app/app/views/layouts/application.html.erb
+- spec/rails_app/app/views/saml_idp/idp/new.html.erb
+- spec/rails_app/app/views/saml_idp/idp/saml_post.html.erb
+- spec/rails_app/config.ru
+- spec/rails_app/config/application.rb
+- spec/rails_app/config/boot.rb
+- spec/rails_app/config/database.yml
+- spec/rails_app/config/environment.rb
+- spec/rails_app/config/environments/development.rb
+- spec/rails_app/config/environments/production.rb
+- spec/rails_app/config/environments/test.rb
+- spec/rails_app/config/initializers/backtrace_silencers.rb
+- spec/rails_app/config/initializers/inflections.rb
+- spec/rails_app/config/initializers/mime_types.rb
+- spec/rails_app/config/initializers/secret_token.rb
+- spec/rails_app/config/initializers/session_store.rb
+- spec/rails_app/config/initializers/wrap_parameters.rb
+- spec/rails_app/config/locales/en.yml
+- spec/rails_app/config/routes.rb
+- spec/rails_app/db/seeds.rb
+- spec/rails_app/doc/README_FOR_APP
+- spec/rails_app/lib/assets/.gitkeep
+- spec/rails_app/lib/tasks/.gitkeep
+- spec/rails_app/log/.gitkeep
+- spec/rails_app/public/404.html
+- spec/rails_app/public/422.html
+- spec/rails_app/public/500.html
+- spec/rails_app/public/favicon.ico
+- spec/rails_app/public/index.html
+- spec/rails_app/public/robots.txt
+- spec/rails_app/script/rails
+- spec/rails_app/test/fixtures/.gitkeep
+- spec/rails_app/test/functional/.gitkeep
+- spec/rails_app/test/integration/.gitkeep
+- spec/rails_app/test/performance/browsing_test.rb
+- spec/rails_app/test/test_helper.rb
+- spec/rails_app/test/unit/.gitkeep
+- spec/rails_app/vendor/assets/javascripts/.gitkeep
+- spec/rails_app/vendor/assets/stylesheets/.gitkeep
+- spec/rails_app/vendor/plugins/.gitkeep
+- spec/spec_helper.rb
+- spec/support/certificates/certificate1
+- spec/support/certificates/r1_certificate2_base64
+- spec/support/certificates/sp_cert_req.csr
+- spec/support/certificates/sp_private_key.pem
+- spec/support/certificates/sp_x509_cert.crt
+- spec/support/responses/adfs_response_sha1.xml
+- spec/support/responses/adfs_response_sha256.xml
+- spec/support/responses/adfs_response_sha384.xml
+- spec/support/responses/adfs_response_sha512.xml
+- spec/support/responses/logoutresponse_fixtures.rb
+- spec/support/responses/no_signature_ns.xml
+- spec/support/responses/open_saml_response.xml
+- spec/support/responses/r1_response6.xml.base64
+- spec/support/responses/response1.xml.base64
+- spec/support/responses/response2.xml.base64
+- spec/support/responses/response3.xml.base64
+- spec/support/responses/response4.xml.base64
+- spec/support/responses/response5.xml.base64
+- spec/support/responses/response_with_ampersands.xml
+- spec/support/responses/response_with_ampersands.xml.base64
+- spec/support/responses/simple_saml_php.xml
+- spec/support/responses/starfield_response.xml.base64
+- spec/support/responses/wrapped_response_2.xml.base64
+- spec/support/saml_request_macros.rb
+- spec/support/security_helpers.rb
+- spec/xml_security_spec.rb
+homepage: https://github.com/saml-idp/saml_idp
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/saml-idp/saml_idp
+  source_code_uri: https://github.com/saml-idp/saml_idp
+  bug_tracker_uri: https://github.com/saml-idp/saml_idp/issues
+  documentation_uri: http://rdoc.info/gems/saml_idp/0.16.0
+post_install_message: |2
+      If you're just recently updating saml_idp - please be aware we've changed the default
+      certificate. See the PR and a description of why we've done this here:
+      https://github.com/saml-idp/saml_idp/pull/29
+
+      If you just need to see the certificate `bundle open saml_idp` and go to
+      `lib/saml_idp/default.rb`
+
+      Similarly, please see the README about certificates - you should avoid using the
+      defaults in a Production environment. Post any issues you to github.
+
+      ** New in Version 0.3.0 **
+      Encrypted Assertions require the xmlenc gem. See the example in the Controller
+      section of the README.
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: SAML Indentity Provider for Ruby
+test_files:
+- spec/acceptance/acceptance_helper.rb
+- spec/acceptance/idp_controller_spec.rb
+- spec/lib/saml_idp/algorithmable_spec.rb
+- spec/lib/saml_idp/assertion_builder_spec.rb
+- spec/lib/saml_idp/attribute_decorator_spec.rb
+- spec/lib/saml_idp/configurator_spec.rb
+- spec/lib/saml_idp/controller_spec.rb
+- spec/lib/saml_idp/encryptor_spec.rb
+- spec/lib/saml_idp/fingerprint_spec.rb
+- spec/lib/saml_idp/incoming_metadata_spec.rb
+- spec/lib/saml_idp/logout_request_builder_spec.rb
+- spec/lib/saml_idp/logout_response_builder_spec.rb
+- spec/lib/saml_idp/metadata_builder_spec.rb
+- spec/lib/saml_idp/name_id_formatter_spec.rb
+- spec/lib/saml_idp/request_spec.rb
+- spec/lib/saml_idp/response_builder_spec.rb
+- spec/lib/saml_idp/saml_response_spec.rb
+- spec/lib/saml_idp/service_provider_spec.rb
+- spec/lib/saml_idp/signable_spec.rb
+- spec/lib/saml_idp/signature_builder_spec.rb
+- spec/lib/saml_idp/signed_info_builder_spec.rb
+- spec/rails_app/.gitignore
+- spec/rails_app/README.rdoc
+- spec/rails_app/Rakefile
+- spec/rails_app/app/assets/images/rails.png
+- spec/rails_app/app/assets/javascripts/application.js
+- spec/rails_app/app/assets/stylesheets/application.css
+- spec/rails_app/app/controllers/application_controller.rb
+- spec/rails_app/app/controllers/saml_controller.rb
+- spec/rails_app/app/controllers/saml_idp_controller.rb
+- spec/rails_app/app/helpers/application_helper.rb
+- spec/rails_app/app/mailers/.gitkeep
+- spec/rails_app/app/models/.gitkeep
+- spec/rails_app/app/views/layouts/application.html.erb
+- spec/rails_app/app/views/saml_idp/idp/new.html.erb
+- spec/rails_app/app/views/saml_idp/idp/saml_post.html.erb
+- spec/rails_app/config.ru
+- spec/rails_app/config/application.rb
+- spec/rails_app/config/boot.rb
+- spec/rails_app/config/database.yml
+- spec/rails_app/config/environment.rb
+- spec/rails_app/config/environments/development.rb
+- spec/rails_app/config/environments/production.rb
+- spec/rails_app/config/environments/test.rb
+- spec/rails_app/config/initializers/backtrace_silencers.rb
+- spec/rails_app/config/initializers/inflections.rb
+- spec/rails_app/config/initializers/mime_types.rb
+- spec/rails_app/config/initializers/secret_token.rb
+- spec/rails_app/config/initializers/session_store.rb
+- spec/rails_app/config/initializers/wrap_parameters.rb
+- spec/rails_app/config/locales/en.yml
+- spec/rails_app/config/routes.rb
+- spec/rails_app/db/seeds.rb
+- spec/rails_app/doc/README_FOR_APP
+- spec/rails_app/lib/assets/.gitkeep
+- spec/rails_app/lib/tasks/.gitkeep
+- spec/rails_app/log/.gitkeep
+- spec/rails_app/public/404.html
+- spec/rails_app/public/422.html
+- spec/rails_app/public/500.html
+- spec/rails_app/public/favicon.ico
+- spec/rails_app/public/index.html
+- spec/rails_app/public/robots.txt
+- spec/rails_app/script/rails
+- spec/rails_app/test/fixtures/.gitkeep
+- spec/rails_app/test/functional/.gitkeep
+- spec/rails_app/test/integration/.gitkeep
+- spec/rails_app/test/performance/browsing_test.rb
+- spec/rails_app/test/test_helper.rb
+- spec/rails_app/test/unit/.gitkeep
+- spec/rails_app/vendor/assets/javascripts/.gitkeep
+- spec/rails_app/vendor/assets/stylesheets/.gitkeep
+- spec/rails_app/vendor/plugins/.gitkeep
+- spec/spec_helper.rb
+- spec/support/certificates/certificate1
+- spec/support/certificates/r1_certificate2_base64
+- spec/support/certificates/sp_cert_req.csr
+- spec/support/certificates/sp_private_key.pem
+- spec/support/certificates/sp_x509_cert.crt
+- spec/support/responses/adfs_response_sha1.xml
+- spec/support/responses/adfs_response_sha256.xml
+- spec/support/responses/adfs_response_sha384.xml
+- spec/support/responses/adfs_response_sha512.xml
+- spec/support/responses/logoutresponse_fixtures.rb
+- spec/support/responses/no_signature_ns.xml
+- spec/support/responses/open_saml_response.xml
+- spec/support/responses/r1_response6.xml.base64
+- spec/support/responses/response1.xml.base64
+- spec/support/responses/response2.xml.base64
+- spec/support/responses/response3.xml.base64
+- spec/support/responses/response4.xml.base64
+- spec/support/responses/response5.xml.base64
+- spec/support/responses/response_with_ampersands.xml
+- spec/support/responses/response_with_ampersands.xml.base64
+- spec/support/responses/simple_saml_php.xml
+- spec/support/responses/starfield_response.xml.base64
+- spec/support/responses/wrapped_response_2.xml.base64
+- spec/support/saml_request_macros.rb
+- spec/support/security_helpers.rb
+- spec/xml_security_spec.rb

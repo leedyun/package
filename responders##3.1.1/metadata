@@ -1,0 +1,91 @@
+--- !ruby/object:Gem::Specification
+name: responders
+version: !ruby/object:Gem::Version
+  version: 3.1.1
+platform: ruby
+authors:
+- José Valim
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2023-10-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '5.2'
+description: A set of Rails responders to dry up your application
+email: heartcombo@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- MIT-LICENSE
+- README.md
+- lib/action_controller/respond_with.rb
+- lib/action_controller/responder.rb
+- lib/generators/rails/USAGE
+- lib/generators/rails/responders_controller_generator.rb
+- lib/generators/rails/templates/api_controller.rb.tt
+- lib/generators/rails/templates/controller.rb.tt
+- lib/generators/responders/install_generator.rb
+- lib/responders.rb
+- lib/responders/collection_responder.rb
+- lib/responders/controller_method.rb
+- lib/responders/flash_responder.rb
+- lib/responders/http_cache_responder.rb
+- lib/responders/locales/en.yml
+- lib/responders/version.rb
+homepage: https://github.com/heartcombo/responders
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/heartcombo/responders
+  changelog_uri: https://github.com/heartcombo/responders/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/heartcombo/responders
+  bug_tracker_uri: https://github.com/heartcombo/responders/issues
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: A set of Rails responders to dry up your application
+test_files: []

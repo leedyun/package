@@ -1,0 +1,268 @@
+--- !ruby/object:Gem::Specification
+name: fog-ovirt
+version: !ruby/object:Gem::Version
+  version: 2.0.3
+platform: ruby
+authors:
+- Ori Rabin
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-10-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-xml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ovirt-engine-sdk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 4.3.1
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.65.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.65.1
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: This library can be used as a module for `fog`.
+email:
+- orabin@redhat.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CONTRIBUTORS.md
+- LICENSE.md
+- README.md
+- Rakefile
+- lib/fog/bin/ovirt.rb
+- lib/fog/ovirt.rb
+- lib/fog/ovirt/compute.rb
+- lib/fog/ovirt/compute/v4.rb
+- lib/fog/ovirt/models/compute/affinity_group.rb
+- lib/fog/ovirt/models/compute/affinity_groups.rb
+- lib/fog/ovirt/models/compute/cluster.rb
+- lib/fog/ovirt/models/compute/clusters.rb
+- lib/fog/ovirt/models/compute/instance_type.rb
+- lib/fog/ovirt/models/compute/instance_types.rb
+- lib/fog/ovirt/models/compute/interface.rb
+- lib/fog/ovirt/models/compute/interfaces.rb
+- lib/fog/ovirt/models/compute/operating_system.rb
+- lib/fog/ovirt/models/compute/operating_systems.rb
+- lib/fog/ovirt/models/compute/quota.rb
+- lib/fog/ovirt/models/compute/quotas.rb
+- lib/fog/ovirt/models/compute/server.rb
+- lib/fog/ovirt/models/compute/servers.rb
+- lib/fog/ovirt/models/compute/template.rb
+- lib/fog/ovirt/models/compute/templates.rb
+- lib/fog/ovirt/models/compute/volume.rb
+- lib/fog/ovirt/models/compute/volumes.rb
+- lib/fog/ovirt/requests/compute/v4/add_interface.rb
+- lib/fog/ovirt/requests/compute/v4/add_volume.rb
+- lib/fog/ovirt/requests/compute/v4/create_vm.rb
+- lib/fog/ovirt/requests/compute/v4/datacenters.rb
+- lib/fog/ovirt/requests/compute/v4/destroy_interface.rb
+- lib/fog/ovirt/requests/compute/v4/destroy_vm.rb
+- lib/fog/ovirt/requests/compute/v4/destroy_volume.rb
+- lib/fog/ovirt/requests/compute/v4/get_api_version.rb
+- lib/fog/ovirt/requests/compute/v4/get_cluster.rb
+- lib/fog/ovirt/requests/compute/v4/get_instance_type.rb
+- lib/fog/ovirt/requests/compute/v4/get_quota.rb
+- lib/fog/ovirt/requests/compute/v4/get_template.rb
+- lib/fog/ovirt/requests/compute/v4/get_virtual_machine.rb
+- lib/fog/ovirt/requests/compute/v4/get_volume.rb
+- lib/fog/ovirt/requests/compute/v4/list_clusters.rb
+- lib/fog/ovirt/requests/compute/v4/list_instance_types.rb
+- lib/fog/ovirt/requests/compute/v4/list_networks.rb
+- lib/fog/ovirt/requests/compute/v4/list_operating_systems.rb
+- lib/fog/ovirt/requests/compute/v4/list_quotas.rb
+- lib/fog/ovirt/requests/compute/v4/list_template_interfaces.rb
+- lib/fog/ovirt/requests/compute/v4/list_template_volumes.rb
+- lib/fog/ovirt/requests/compute/v4/list_templates.rb
+- lib/fog/ovirt/requests/compute/v4/list_virtual_machines.rb
+- lib/fog/ovirt/requests/compute/v4/list_vm_interfaces.rb
+- lib/fog/ovirt/requests/compute/v4/list_vm_volumes.rb
+- lib/fog/ovirt/requests/compute/v4/list_vnic_profiles.rb
+- lib/fog/ovirt/requests/compute/v4/list_volumes.rb
+- lib/fog/ovirt/requests/compute/v4/mock_files/affinitygroup.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/affinitygroup_vms.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/affinitygroups.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/cluster.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/clusters.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/data_centers.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/disk.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/disks.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/instance_type.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/instance_types.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/nics.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/operating_systems.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/quotas.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/storage_domains.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/template.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/templates.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/vm.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/vms.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/vnic_profile.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/vnic_profiles.xml
+- lib/fog/ovirt/requests/compute/v4/mock_files/volumes.xml
+- lib/fog/ovirt/requests/compute/v4/storage_domains.rb
+- lib/fog/ovirt/requests/compute/v4/update_interface.rb
+- lib/fog/ovirt/requests/compute/v4/update_vm.rb
+- lib/fog/ovirt/requests/compute/v4/update_volume.rb
+- lib/fog/ovirt/requests/compute/v4/vm_action.rb
+- lib/fog/ovirt/requests/compute/v4/vm_start_with_cloudinit.rb
+- lib/fog/ovirt/requests/compute/v4/vm_ticket.rb
+- lib/fog/ovirt/version.rb
+- spec/fog/bin/ovirt_spec.rb
+- spec/fog/bin_spec.rb
+homepage: https://github.com/fog/fog-ovirt
+licenses:
+- MIT
+metadata:
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: Module for the 'fog' gem to support Ovirt.
+test_files: []

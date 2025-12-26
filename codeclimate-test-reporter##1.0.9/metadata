@@ -1,0 +1,157 @@
+--- !ruby/object:Gem::Specification
+name: codeclimate-test-reporter
+version: !ruby/object:Gem::Version
+  version: 1.0.9
+platform: ruby
+authors:
+- Bryan Helmkamp
+- Code Climate
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-10-08 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '0.13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<="
+      - !ruby/object:Gem::Version
+        version: '0.13'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Collects test coverage data from your Ruby test suite and sends it to
+  Code Climate's hosted, automated code review service. Based on SimpleCov.
+email:
+- bryan@brynary.com
+- hello@codeclimate.com
+executables:
+- cc-tddium-post-worker
+- codeclimate-test-reporter
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- bin/cc-tddium-post-worker
+- bin/ci
+- bin/codeclimate-test-reporter
+- config/cacert.pem
+- lib/code_climate/test_reporter.rb
+- lib/code_climate/test_reporter/calculate_blob.rb
+- lib/code_climate/test_reporter/ci.rb
+- lib/code_climate/test_reporter/client.rb
+- lib/code_climate/test_reporter/configuration.rb
+- lib/code_climate/test_reporter/exception_message.rb
+- lib/code_climate/test_reporter/formatter.rb
+- lib/code_climate/test_reporter/git.rb
+- lib/code_climate/test_reporter/payload_validator.rb
+- lib/code_climate/test_reporter/post_results.rb
+- lib/code_climate/test_reporter/shorten_filename.rb
+- lib/code_climate/test_reporter/version.rb
+- lib/codeclimate-test-reporter.rb
+homepage: https://github.com/codeclimate/ruby-test-reporter
+licenses:
+- MIT
+metadata: {}
+post_install_message: "\n  Code Climate's codeclimate-test-reporter gem has been deprecated
+  in favor of\n  our language-agnostic unified test reporter. The new test reporter
+  is faster,\n  distributed as a static binary so dependency conflicts never occur,
+  and\n  supports parallelized CI builds & multi-language CI configurations.\n\n  Please
+  visit https://docs.codeclimate.com/v1.0/docs/configuring-test-coverage\n  for help
+  setting up your CI process with our new test reporter.\n  "
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '1.9'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.6.8
+signing_key: 
+specification_version: 4
+summary: Uploads Ruby test coverage data to Code Climate.
+test_files: []

@@ -1,0 +1,226 @@
+--- !ruby/object:Gem::Specification
+name: mustache
+version: !ruby/object:Gem::Version
+  version: 1.1.1
+platform: ruby
+authors:
+- Chris Wanstrath
+- Magnus Holm
+- Pieter van de Bruggen
+- Ricardo Mendes
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-12-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.3'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.4'
+- !ruby/object:Gem::Dependency
+  name: benchmark-ips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rdoc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.1'
+- !ruby/object:Gem::Dependency
+  name: ronn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+description: |
+  Inspired by ctemplate, Mustache is a framework-agnostic way to render
+  logic-free views.
+
+  As ctemplates says, "It emphasizes separating logic from presentation:
+  it is impossible to embed application logic in this template
+  language.
+
+  Think of Mustache as a replacement for your views. Instead of views
+  consisting of ERB or HAML with random helpers and arbitrary logic,
+  your views are broken into two parts: a Ruby class and an HTML
+  template.
+email: rokusu@gmail.com
+executables:
+- mustache
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- Rakefile
+- bin/mustache
+- lib/mustache.rb
+- lib/mustache/context.rb
+- lib/mustache/context_miss.rb
+- lib/mustache/enumerable.rb
+- lib/mustache/generator.rb
+- lib/mustache/parser.rb
+- lib/mustache/settings.rb
+- lib/mustache/template.rb
+- lib/mustache/utils.rb
+- lib/mustache/version.rb
+- man/mustache.1
+- man/mustache.1.html
+- man/mustache.1.ron
+- man/mustache.5
+- man/mustache.5.html
+- man/mustache.5.ron
+- test/autoloading_test.rb
+- test/fixtures/comments.mustache
+- test/fixtures/comments.rb
+- test/fixtures/complex_view.mustache
+- test/fixtures/complex_view.rb
+- test/fixtures/crazy_recursive.mustache
+- test/fixtures/crazy_recursive.rb
+- test/fixtures/delimiters.mustache
+- test/fixtures/delimiters.rb
+- test/fixtures/dot_notation.mustache
+- test/fixtures/dot_notation.rb
+- test/fixtures/double_section.mustache
+- test/fixtures/double_section.rb
+- test/fixtures/escaped.mustache
+- test/fixtures/escaped.rb
+- test/fixtures/inner_partial.mustache
+- test/fixtures/inner_partial.txt
+- test/fixtures/inverted_section.mustache
+- test/fixtures/inverted_section.rb
+- test/fixtures/lambda.mustache
+- test/fixtures/lambda.rb
+- test/fixtures/liberal.mustache
+- test/fixtures/liberal.rb
+- test/fixtures/method_missing.rb
+- test/fixtures/namespaced.mustache
+- test/fixtures/namespaced.rb
+- test/fixtures/nested_objects.mustache
+- test/fixtures/nested_objects.rb
+- test/fixtures/node.mustache
+- test/fixtures/partial_with_module.mustache
+- test/fixtures/partial_with_module.rb
+- test/fixtures/passenger.conf
+- test/fixtures/passenger.rb
+- test/fixtures/recursive.mustache
+- test/fixtures/recursive.rb
+- test/fixtures/simple.mustache
+- test/fixtures/simple.rb
+- test/fixtures/simply_complicated.mustache
+- test/fixtures/template_partial.mustache
+- test/fixtures/template_partial.rb
+- test/fixtures/template_partial.txt
+- test/fixtures/unescaped.mustache
+- test/fixtures/unescaped.rb
+- test/fixtures/utf8.mustache
+- test/fixtures/utf8_partial.mustache
+- test/helper.rb
+- test/mustache_test.rb
+- test/parser_test.rb
+- test/partial_test.rb
+- test/spec_test.rb
+- test/template_test.rb
+homepage: https://github.com/mustache/mustache
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: Mustache is a framework-agnostic way to render logic-free views.
+test_files: []

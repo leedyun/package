@@ -1,0 +1,181 @@
+--- !ruby/object:Gem::Specification
+name: xmldsig
+version: !ruby/object:Gem::Version
+  version: 0.7.0
+platform: ruby
+authors:
+- benoist
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-06-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.8
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.8
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.0.0
+description: This gem is a (partial) implementation of the XMLDsig specification
+email:
+- benoist.claassen@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- CHANGELOG.md
+- Gemfile
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- lib/xmldsig.rb
+- lib/xmldsig/canonicalizer.rb
+- lib/xmldsig/reference.rb
+- lib/xmldsig/signature.rb
+- lib/xmldsig/signed_document.rb
+- lib/xmldsig/transforms.rb
+- lib/xmldsig/transforms/canonicalize.rb
+- lib/xmldsig/transforms/enveloped_signature.rb
+- lib/xmldsig/transforms/transform.rb
+- lib/xmldsig/transforms/xpath.rb
+- lib/xmldsig/version.rb
+- lib/xmldsig/xmldsig-core-schema-x509-serial-fix.xsd
+- lib/xmldsig/xmldsig-core-schema.xsd
+- signing_service.rb
+- spec/fixtures/certificate.cer
+- spec/fixtures/certificate2.cer
+- spec/fixtures/key.pem
+- spec/fixtures/signed-with-xsd-error.xml
+- spec/fixtures/signed.xml
+- spec/fixtures/signed/ideal.cert
+- spec/fixtures/signed/ideal.txt
+- spec/fixtures/signed/shib.cert
+- spec/fixtures/signed/shib.xml
+- spec/fixtures/signed_custom_attribute_id.xml
+- spec/fixtures/signed_signature_namespace.xml
+- spec/fixtures/signed_with_cid_reference.xml
+- spec/fixtures/signed_xml-exc-c14n#with_comments.xml
+- spec/fixtures/unsigned-invalid.xml
+- spec/fixtures/unsigned-malicious.xml
+- spec/fixtures/unsigned-sha1.xml
+- spec/fixtures/unsigned-sha256.xml
+- spec/fixtures/unsigned-sha384.xml
+- spec/fixtures/unsigned-sha512.xml
+- spec/fixtures/unsigned-x509-serial-fix.xml
+- spec/fixtures/unsigned-xmlenc-sha1.xml
+- spec/fixtures/unsigned.xml
+- spec/fixtures/unsigned/canonicalizer_1_0.xml
+- spec/fixtures/unsigned/canonicalizer_1_1.xml
+- spec/fixtures/unsigned/canonicalizer_exc.xml
+- spec/fixtures/unsigned/digest_sha1.xml
+- spec/fixtures/unsigned/unsigned_nested_signature_at_bottom.xml
+- spec/fixtures/unsigned/unsigned_nested_signature_at_top.xml
+- spec/fixtures/unsigned/with_soap_envelope.xml
+- spec/fixtures/unsigned/with_xpath_algorithm.xml
+- spec/fixtures/unsigned/without_canonicalization.xml
+- spec/fixtures/unsigned/without_namespace_prefix.xml
+- spec/fixtures/unsigned/without_reference_uri.xml
+- spec/fixtures/unsigned_custom_attribute_id.xml
+- spec/fixtures/unsigned_multiple_references.xml
+- spec/fixtures/unsigned_nested_signature.xml
+- spec/fixtures/unsigned_nested_signed_signature.xml
+- spec/fixtures/unsigned_signature_namespace.xml
+- spec/fixtures/unsigned_with_cid_reference.xml
+- spec/lib/xmldsig/reference_spec.rb
+- spec/lib/xmldsig/signature_spec.rb
+- spec/lib/xmldsig/signed_document_spec.rb
+- spec/lib/xmldsig/transforms/enveloped_signature_spec.rb
+- spec/lib/xmldsig/transforms/transform_spec.rb
+- spec/lib/xmldsig/transforms/xpath_spec.rb
+- spec/lib/xmldsig_spec.rb
+- spec/spec_helper.rb
+- xmldsig.gemspec
+homepage: https://github.com/benoist/xmldsig
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: This gem is a (partial) implementation of the XMLDsig specification (http://www.w3.org/TR/xmldsig-core)
+test_files:
+- spec/fixtures/certificate.cer
+- spec/fixtures/certificate2.cer
+- spec/fixtures/key.pem
+- spec/fixtures/signed-with-xsd-error.xml
+- spec/fixtures/signed.xml
+- spec/fixtures/signed/ideal.cert
+- spec/fixtures/signed/ideal.txt
+- spec/fixtures/signed/shib.cert
+- spec/fixtures/signed/shib.xml
+- spec/fixtures/signed_custom_attribute_id.xml
+- spec/fixtures/signed_signature_namespace.xml
+- spec/fixtures/signed_with_cid_reference.xml
+- spec/fixtures/signed_xml-exc-c14n#with_comments.xml
+- spec/fixtures/unsigned-invalid.xml
+- spec/fixtures/unsigned-malicious.xml
+- spec/fixtures/unsigned-sha1.xml
+- spec/fixtures/unsigned-sha256.xml
+- spec/fixtures/unsigned-sha384.xml
+- spec/fixtures/unsigned-sha512.xml
+- spec/fixtures/unsigned-x509-serial-fix.xml
+- spec/fixtures/unsigned-xmlenc-sha1.xml
+- spec/fixtures/unsigned.xml
+- spec/fixtures/unsigned/canonicalizer_1_0.xml
+- spec/fixtures/unsigned/canonicalizer_1_1.xml
+- spec/fixtures/unsigned/canonicalizer_exc.xml
+- spec/fixtures/unsigned/digest_sha1.xml
+- spec/fixtures/unsigned/unsigned_nested_signature_at_bottom.xml
+- spec/fixtures/unsigned/unsigned_nested_signature_at_top.xml
+- spec/fixtures/unsigned/with_soap_envelope.xml
+- spec/fixtures/unsigned/with_xpath_algorithm.xml
+- spec/fixtures/unsigned/without_canonicalization.xml
+- spec/fixtures/unsigned/without_namespace_prefix.xml
+- spec/fixtures/unsigned/without_reference_uri.xml
+- spec/fixtures/unsigned_custom_attribute_id.xml
+- spec/fixtures/unsigned_multiple_references.xml
+- spec/fixtures/unsigned_nested_signature.xml
+- spec/fixtures/unsigned_nested_signed_signature.xml
+- spec/fixtures/unsigned_signature_namespace.xml
+- spec/fixtures/unsigned_with_cid_reference.xml
+- spec/lib/xmldsig/reference_spec.rb
+- spec/lib/xmldsig/signature_spec.rb
+- spec/lib/xmldsig/signed_document_spec.rb
+- spec/lib/xmldsig/transforms/enveloped_signature_spec.rb
+- spec/lib/xmldsig/transforms/transform_spec.rb
+- spec/lib/xmldsig/transforms/xpath_spec.rb
+- spec/lib/xmldsig_spec.rb
+- spec/spec_helper.rb

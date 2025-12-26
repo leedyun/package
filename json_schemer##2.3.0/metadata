@@ -1,0 +1,276 @@
+--- !ruby/object:Gem::Specification
+name: json_schemer
+version: !ruby/object:Gem::Version
+  version: 2.3.0
+platform: ruby
+authors:
+- David Harsha
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-05-30 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: base64
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.22'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.22'
+- !ruby/object:Gem::Dependency
+  name: csv
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: i18n-debug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bigdecimal
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hana
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: regexp_parser
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: simpleidn
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+description:
+email:
+- davishmcclurg@gmail.com
+executables:
+- json_schemer
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/hostname_character_classes
+- bin/rake
+- bin/setup
+- exe/json_schemer
+- json_schemer.gemspec
+- lib/json_schemer.rb
+- lib/json_schemer/cached_resolver.rb
+- lib/json_schemer/configuration.rb
+- lib/json_schemer/content.rb
+- lib/json_schemer/draft201909/meta.rb
+- lib/json_schemer/draft201909/vocab.rb
+- lib/json_schemer/draft201909/vocab/applicator.rb
+- lib/json_schemer/draft201909/vocab/core.rb
+- lib/json_schemer/draft202012/meta.rb
+- lib/json_schemer/draft202012/vocab.rb
+- lib/json_schemer/draft202012/vocab/applicator.rb
+- lib/json_schemer/draft202012/vocab/content.rb
+- lib/json_schemer/draft202012/vocab/core.rb
+- lib/json_schemer/draft202012/vocab/format_annotation.rb
+- lib/json_schemer/draft202012/vocab/format_assertion.rb
+- lib/json_schemer/draft202012/vocab/meta_data.rb
+- lib/json_schemer/draft202012/vocab/unevaluated.rb
+- lib/json_schemer/draft202012/vocab/validation.rb
+- lib/json_schemer/draft4/meta.rb
+- lib/json_schemer/draft4/vocab.rb
+- lib/json_schemer/draft4/vocab/validation.rb
+- lib/json_schemer/draft6/meta.rb
+- lib/json_schemer/draft6/vocab.rb
+- lib/json_schemer/draft7/meta.rb
+- lib/json_schemer/draft7/vocab.rb
+- lib/json_schemer/draft7/vocab/validation.rb
+- lib/json_schemer/ecma_regexp.rb
+- lib/json_schemer/errors.rb
+- lib/json_schemer/format.rb
+- lib/json_schemer/format/duration.rb
+- lib/json_schemer/format/email.rb
+- lib/json_schemer/format/hostname.rb
+- lib/json_schemer/format/json_pointer.rb
+- lib/json_schemer/format/uri_template.rb
+- lib/json_schemer/keyword.rb
+- lib/json_schemer/location.rb
+- lib/json_schemer/openapi.rb
+- lib/json_schemer/openapi30/document.rb
+- lib/json_schemer/openapi30/meta.rb
+- lib/json_schemer/openapi30/vocab.rb
+- lib/json_schemer/openapi30/vocab/base.rb
+- lib/json_schemer/openapi31/document.rb
+- lib/json_schemer/openapi31/meta.rb
+- lib/json_schemer/openapi31/vocab.rb
+- lib/json_schemer/openapi31/vocab/base.rb
+- lib/json_schemer/output.rb
+- lib/json_schemer/result.rb
+- lib/json_schemer/schema.rb
+- lib/json_schemer/version.rb
+homepage: https://github.com/davishmcclurg/json_schemer
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: JSON Schema validator. Supports drafts 4, 6, 7, 2019-09, 2020-12, OpenAPI
+  3.0, and OpenAPI 3.1.
+test_files: []

@@ -1,0 +1,262 @@
+--- !ruby/object:Gem::Specification
+name: vite_ruby
+version: !ruby/object:Gem::Version
+  version: 3.9.1
+platform: ruby
+authors:
+- Máximo Mussini
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-11-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: dry-cli
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.7'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: mutex_m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rack-proxy
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.6.1
+- !ruby/object:Gem::Dependency
+  name: zeitwerk
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: m
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+- !ruby/object:Gem::Dependency
+  name: minitest-stub_any_instance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.9'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '0.18'
+description:
+email:
+- maximomussini@gmail.com
+executables:
+- vite
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- default.vite.json
+- exe/vite
+- lib/tasks/vite.rake
+- lib/vite_ruby.rb
+- lib/vite_ruby/build.rb
+- lib/vite_ruby/builder.rb
+- lib/vite_ruby/cli.rb
+- lib/vite_ruby/cli/build.rb
+- lib/vite_ruby/cli/clobber.rb
+- lib/vite_ruby/cli/dev.rb
+- lib/vite_ruby/cli/file_utils.rb
+- lib/vite_ruby/cli/install.rb
+- lib/vite_ruby/cli/ssr.rb
+- lib/vite_ruby/cli/upgrade.rb
+- lib/vite_ruby/cli/upgrade_packages.rb
+- lib/vite_ruby/cli/version.rb
+- lib/vite_ruby/cli/vite.rb
+- lib/vite_ruby/commands.rb
+- lib/vite_ruby/compatibility_check.rb
+- lib/vite_ruby/config.rb
+- lib/vite_ruby/dev_server_proxy.rb
+- lib/vite_ruby/error.rb
+- lib/vite_ruby/io.rb
+- lib/vite_ruby/manifest.rb
+- lib/vite_ruby/missing_entrypoint_error.rb
+- lib/vite_ruby/missing_executable_error.rb
+- lib/vite_ruby/runner.rb
+- lib/vite_ruby/version.rb
+- templates/config/vite.config.ts
+- templates/config/vite.json
+- templates/entrypoints/application.js
+homepage: https://github.com/ElMassimo/vite_ruby
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/ElMassimo/vite_ruby/tree/vite_ruby@3.9.1/vite_ruby
+  changelog_uri: https://github.com/ElMassimo/vite_ruby/blob/vite_ruby@3.9.1/vite_ruby/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+post_install_message: "Thanks for installing Vite Ruby!\n\nIf you upgraded the gem
+  manually, please run:\n\tbundle exec vite upgrade"
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Use Vite in Ruby and bring joy to your JavaScript experience
+test_files: []

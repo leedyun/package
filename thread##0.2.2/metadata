@@ -1,0 +1,104 @@
+--- !ruby/object:Gem::Specification
+name: thread
+version: !ruby/object:Gem::Version
+  version: 0.2.2
+platform: ruby
+authors:
+- meh.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-07-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Includes a thread pool, message passing capabilities, a recursive mutex,
+  promise, future and delay.
+email:
+- meh@schizofreni.co
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- lib/thread/channel.rb
+- lib/thread/delay.rb
+- lib/thread/every.rb
+- lib/thread/future.rb
+- lib/thread/pipe.rb
+- lib/thread/pool.rb
+- lib/thread/process.rb
+- lib/thread/promise.rb
+- lib/thread/recursive_mutex.rb
+- spec/thread/channel_spec.rb
+- spec/thread/delay_spec.rb
+- spec/thread/every_spec.rb
+- spec/thread/future_spec.rb
+- spec/thread/pipe_spec.rb
+- spec/thread/pool_spec.rb
+- spec/thread/promise_spec.rb
+- thread.gemspec
+homepage: http://github.com/meh/ruby-thread
+licenses:
+- WTFPL
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5
+signing_key: 
+specification_version: 4
+summary: Various extensions to the base thread library.
+test_files:
+- spec/thread/channel_spec.rb
+- spec/thread/delay_spec.rb
+- spec/thread/every_spec.rb
+- spec/thread/future_spec.rb
+- spec/thread/pipe_spec.rb
+- spec/thread/pool_spec.rb
+- spec/thread/promise_spec.rb

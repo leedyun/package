@@ -1,0 +1,154 @@
+--- !ruby/object:Gem::Specification
+name: sorbet-coerce
+version: !ruby/object:Gem::Version
+  version: 0.7.0
+platform: ruby
+authors:
+- Chan Zuckerberg Initiative
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-10-04 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: polyfill
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+- !ruby/object:Gem::Dependency
+  name: safe_type
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.1
+- !ruby/object:Gem::Dependency
+  name: sorbet-runtime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.4704
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.4704
+- !ruby/object:Gem::Dependency
+  name: sorbet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.4704
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.4704
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.8'
+- !ruby/object:Gem::Dependency
+  name: byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 11.0.1
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 11.0.1
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 11.0.1
+description: 
+email: opensource@chanzuckerberg.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/bundled_rbi/sorbet-coerce.rbi
+- lib/sorbet-coerce.rb
+- lib/sorbet-coerce/configuration.rb
+- lib/sorbet-coerce/converter.rb
+- spec/coerce_spec.rb
+- spec/nested_spec.rb
+- spec/soft_error_spec.rb
+- spec/sorbet_test_cases.rb
+- spec/spec_helper.rb
+homepage: https://github.com/chanzuckerberg/sorbet-coerce
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.6
+signing_key: 
+specification_version: 4
+summary: A type coercion lib works with Sorbet's static type checker and type definitions;
+  raises an error if the coercion fails.
+test_files: []

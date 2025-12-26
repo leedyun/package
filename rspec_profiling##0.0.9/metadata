@@ -1,0 +1,187 @@
+--- !ruby/object:Gem::Specification
+name: rspec_profiling
+version: !ruby/object:Gem::Version
+  version: 0.0.9
+platform: ruby
+authors:
+- Procore Technologies, Inc.
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-03-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: get_process_mem
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Profile RSpec test suites
+email:
+- opensource@procore.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/CODEOWNERS"
+- ".github/ISSUE_TEMPLATE/bug.yml"
+- ".github/ISSUE_TEMPLATE/config.yml"
+- ".github/ISSUE_TEMPLATE/docs.yml"
+- ".github/ISSUE_TEMPLATE/feature-request.yml"
+- ".github/ISSUE_TEMPLATE/question-support.yml"
+- ".github/PULL_REQUEST_TEMPLATE.md"
+- ".github/dependabot.yaml"
+- ".github/workflows/auto-assign-author.yaml"
+- ".github/workflows/codeql.yaml"
+- ".github/workflows/release.yaml"
+- ".github/workflows/stale.yaml"
+- ".github/workflows/test.yaml"
+- ".gitignore"
+- ".ruby-version"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- EMERITUS.md
+- Gemfile
+- LICENSE.md
+- Makefile
+- README.md
+- Rakefile
+- SECURITY.md
+- docker-compose.yml
+- lib/rspec_profiling.rb
+- lib/rspec_profiling/collectors/csv.rb
+- lib/rspec_profiling/collectors/json.rb
+- lib/rspec_profiling/collectors/psql.rb
+- lib/rspec_profiling/collectors/sql.rb
+- lib/rspec_profiling/config.rb
+- lib/rspec_profiling/console.rb
+- lib/rspec_profiling/example.rb
+- lib/rspec_profiling/rspec.rb
+- lib/rspec_profiling/run.rb
+- lib/rspec_profiling/vcs/git.rb
+- lib/rspec_profiling/vcs/git_svn.rb
+- lib/rspec_profiling/vcs/svn.rb
+- lib/rspec_profiling/version.rb
+- lib/tasks/rspec_profiling.rake
+- rspec_profiling.gemspec
+homepage: https://github.com/procore-oss/rspec_profiling
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  rubygems_mfa_required: 'true'
+  homepage_uri: https://github.com/procore-oss/rspec_profiling
+  source_code_uri: https://github.com/procore-oss/rspec_profiling
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key: 
+specification_version: 4
+summary: Profile RSpec test suites
+test_files: []

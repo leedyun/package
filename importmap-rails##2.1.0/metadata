@@ -1,0 +1,104 @@
+--- !ruby/object:Gem::Specification
+name: importmap-rails
+version: !ruby/object:Gem::Version
+  version: 2.1.0
+platform: ruby
+authors:
+- David Heinemeier Hansson
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: actionpack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+description:
+email: david@loudthinking.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- Rakefile
+- app/controllers/importmap/freshness.rb
+- app/helpers/importmap/importmap_tags_helper.rb
+- lib/importmap-rails.rb
+- lib/importmap/commands.rb
+- lib/importmap/engine.rb
+- lib/importmap/map.rb
+- lib/importmap/npm.rb
+- lib/importmap/packager.rb
+- lib/importmap/reloader.rb
+- lib/importmap/version.rb
+- lib/install/bin/importmap
+- lib/install/config/importmap.rb
+- lib/install/install.rb
+- lib/tasks/importmap_tasks.rake
+homepage: https://github.com/rails/importmap-rails
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/rails/importmap-rails
+  source_code_uri: https://github.com/rails/importmap-rails
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Use ESM with importmap to manage modern JavaScript in Rails without transpiling
+  or bundling.
+test_files: []

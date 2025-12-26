@@ -1,0 +1,152 @@
+--- !ruby/object:Gem::Specification
+name: karafka-core
+version: !ruby/object:Gem::Version
+  version: 2.4.8
+platform: ruby
+authors:
+- Maciej Mensfeld
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIEcDCCAtigAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MRAwDgYDVQQDDAdjb250
+  YWN0MRcwFQYKCZImiZPyLGQBGRYHa2FyYWZrYTESMBAGCgmSJomT8ixkARkWAmlv
+  MB4XDTI0MDgyMzEwMTkyMFoXDTQ5MDgxNzEwMTkyMFowPzEQMA4GA1UEAwwHY29u
+  dGFjdDEXMBUGCgmSJomT8ixkARkWB2thcmFma2ExEjAQBgoJkiaJk/IsZAEZFgJp
+  bzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKjLhLjQqUlNayxkXnO+
+  PsmCDs/KFIzhrsYMfLZRZNaWmzV3ujljMOdDjd4snM2X06C41iVdQPWjpe3j8vVe
+  ZXEWR/twSbOP6Eeg8WVH2wCOo0x5i7yhVn4UBLH4JpfEMCbemVcWQ9ry9OMg4WpH
+  Uu4dRwxFV7hzCz3p0QfNLRI4miAxnGWcnlD98IJRjBAksTuR1Llj0vbOrDGsL9ZT
+  JeXP2gdRLd8SqzAFJEWrbeTBCBU7gfSh3oMg5SVDLjaqf7Kz5wC/8bDZydzanOxB
+  T6CDXPsCnllmvTNx2ei2T5rGYJOzJeNTmJLLK6hJWUlAvaQSvCwZRvFJ0tVGLEoS
+  flqSr6uGyyl1eMUsNmsH4BqPEYcAV6P2PKTv2vUR8AP0raDvZ3xL1TKvfRb8xRpo
+  vPopCGlY5XBWEc6QERHfVLTIVsjnls2/Ujj4h8/TSfqqYnaHKefIMLbuD/tquMjD
+  iWQsW2qStBV0T+U7FijKxVfrfqZP7GxQmDAc9o1iiyAa3QIDAQABo3cwdTAJBgNV
+  HRMEAjAAMAsGA1UdDwQEAwIEsDAdBgNVHQ4EFgQU3O4dTXmvE7YpAkszGzR9DdL9
+  sbEwHQYDVR0RBBYwFIESY29udGFjdEBrYXJhZmthLmlvMB0GA1UdEgQWMBSBEmNv
+  bnRhY3RAa2FyYWZrYS5pbzANBgkqhkiG9w0BAQsFAAOCAYEAVKTfoLXn7mqdSxIR
+  eqxcR6Huudg1jes81s1+X0uiRTR3hxxKZ3Y82cPsee9zYWyBrN8TA4KA0WILTru7
+  Ygxvzha0SRPsSiaKLmgOJ+61ebI4+bOORzIJLpD6GxCxu1r7MI4+0r1u1xe0EWi8
+  agkVo1k4Vi8cKMLm6Gl9b3wG9zQBw6fcgKwmpjKiNnOLP+OytzUANrIUJjoq6oal
+  TC+f/Uc0TLaRqUaW/bejxzDWWHoM3SU6aoLPuerglzp9zZVzihXwx3jPLUVKDFpF
+  Rl2lcBDxlpYGueGo0/oNzGJAAy6js8jhtHC9+19PD53vk7wHtFTZ/0ugDQYnwQ+x
+  oml2fAAuVWpTBCgOVFe6XCQpMKopzoxQ1PjKztW2KYxgJdIBX87SnL3aWuBQmhRd
+  i9zWxov0mr44TWegTVeypcWGd/0nxu1+QHVNHJrpqlPBRvwQsUm7fwmRInGpcaB8
+  ap8wNYvryYzrzvzUxIVFBVM5PacgkFqRmolCa8I7tdKQN+R1
+  -----END CERTIFICATE-----
+date: 2024-12-26 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: karafka-rdkafka
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.19.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.17.6
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 0.19.0
+- !ruby/object:Gem::Dependency
+  name: logger
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.0
+description: A toolset of small support modules used throughout the Karafka ecosystem
+email:
+- contact@karafka.io
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".coditsu/ci.yml"
+- ".console_irbrc"
+- ".diffend.yml"
+- ".github/FUNDING.yml"
+- ".github/ISSUE_TEMPLATE/bug_report.md"
+- ".github/ISSUE_TEMPLATE/feature_request.md"
+- ".github/workflows/ci.yml"
+- ".gitignore"
+- ".rspec"
+- ".ruby-gemset"
+- ".ruby-version"
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- Gemfile
+- Gemfile.lock
+- MIT-LICENSE
+- README.md
+- certs/cert.pem
+- config/locales/errors.yml
+- karafka-core.gemspec
+- lib/karafka-core.rb
+- lib/karafka/core.rb
+- lib/karafka/core/configurable.rb
+- lib/karafka/core/configurable/leaf.rb
+- lib/karafka/core/configurable/node.rb
+- lib/karafka/core/contractable.rb
+- lib/karafka/core/contractable/contract.rb
+- lib/karafka/core/contractable/result.rb
+- lib/karafka/core/contractable/rule.rb
+- lib/karafka/core/helpers/rspec_locator.rb
+- lib/karafka/core/helpers/time.rb
+- lib/karafka/core/instrumentation.rb
+- lib/karafka/core/instrumentation/callbacks_manager.rb
+- lib/karafka/core/monitoring.rb
+- lib/karafka/core/monitoring/event.rb
+- lib/karafka/core/monitoring/monitor.rb
+- lib/karafka/core/monitoring/notifications.rb
+- lib/karafka/core/monitoring/statistics_decorator.rb
+- lib/karafka/core/patches/rdkafka/bindings.rb
+- lib/karafka/core/taggable.rb
+- lib/karafka/core/taggable/tags.rb
+- lib/karafka/core/version.rb
+- log/.gitkeep
+- renovate.json
+homepage: https://karafka.io
+licenses:
+- MIT
+metadata:
+  funding_uri: https://karafka.io/#become-pro
+  homepage_uri: https://karafka.io
+  changelog_uri: https://karafka.io/docs/Changelog-Karafka-Core
+  bug_tracker_uri: https://github.com/karafka/karafka-core/issues
+  source_code_uri: https://github.com/karafka/karafka-core
+  documentation_uri: https://karafka.io/docs
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.1.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Karafka ecosystem core modules
+test_files: []

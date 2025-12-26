@@ -1,0 +1,60 @@
+<% if command_message.is_a?(Array) %>
+  <%== partial 'shared/not_a_message' %>
+<% else %>
+  <% command = command_message.payload %>
+
+  <% if command[:schema_version] == @schema_version %>
+    <tr>
+      <td>
+        <% color = command[:type] == 'result' ? 'success' : 'primary' %>
+        <span class="badge badge-<%= color %>">
+          <%= command[:type] %>
+        </span>
+      </td>
+
+      <td>
+        <%
+          color = case command[:command][:name]
+                  when 'trace'
+                    'info'
+                  when 'quiet'
+                    'warning'
+                  when 'stop'
+                    'error'
+                  else
+                    'secondary'
+                  end
+        %>
+        <span class="badge badge-<%= color %>">
+          <%= command[:command][:name] %>
+        </span>
+      </td>
+
+      <td>
+        <% if command[:process][:id] == '*' %>
+          *
+        <% else %>
+          <a href="<%= root_path('consumers', command[:process][:id], 'subscriptions') %>">
+            <%= truncate(command[:process][:id], strategy: :middle) %>
+          </a>
+        <% end %>
+      </td>
+
+      <td>
+        <%== relative_time command[:dispatched_at] %>
+      </td>
+
+      <td>
+        <a href="<%= root_path('commands', command_message.offset) %>" class="btn btn-sm btn-primary">
+          Details
+        </a>
+      </td>
+    </tr>
+  <% else %>
+    <tr>
+      <td colspan="100" class="text-center text-muted">
+       Incompatible command schema. This command message schema does not match the Karafka Web UI schema.
+      </td>
+    </tr>
+  <% end %>
+<% end %>

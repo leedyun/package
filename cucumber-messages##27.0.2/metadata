@@ -1,0 +1,220 @@
+--- !ruby/object:Gem::Specification
+name: cucumber-messages
+version: !ruby/object:Gem::Version
+  version: 27.0.2
+platform: ruby
+authors:
+- Aslak Hellesøy
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-11-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: cucumber-compatibility-kit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '15.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '15.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.1'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.13'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.50.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.50.2
+- !ruby/object:Gem::Dependency
+  name: rubocop-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.21.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.0
+- !ruby/object:Gem::Dependency
+  name: rubocop-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.25.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.25.0
+description: JSON schema-based messages for Cucumber's inter-process communication
+email: cukes@googlegroups.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- VERSION
+- lib/cucumber/messages.rb
+- lib/cucumber/messages/attachment.rb
+- lib/cucumber/messages/attachment_content_encoding.rb
+- lib/cucumber/messages/background.rb
+- lib/cucumber/messages/ci.rb
+- lib/cucumber/messages/comment.rb
+- lib/cucumber/messages/data_table.rb
+- lib/cucumber/messages/doc_string.rb
+- lib/cucumber/messages/duration.rb
+- lib/cucumber/messages/envelope.rb
+- lib/cucumber/messages/examples.rb
+- lib/cucumber/messages/exception.rb
+- lib/cucumber/messages/feature.rb
+- lib/cucumber/messages/feature_child.rb
+- lib/cucumber/messages/gherkin_document.rb
+- lib/cucumber/messages/git.rb
+- lib/cucumber/messages/group.rb
+- lib/cucumber/messages/helpers/id_generator.rb
+- lib/cucumber/messages/helpers/id_generator/incrementing.rb
+- lib/cucumber/messages/helpers/id_generator/uuid.rb
+- lib/cucumber/messages/helpers/ndjson_to_message_enumerator.rb
+- lib/cucumber/messages/helpers/time_conversion.rb
+- lib/cucumber/messages/hook.rb
+- lib/cucumber/messages/hook_type.rb
+- lib/cucumber/messages/java_method.rb
+- lib/cucumber/messages/java_stack_trace_element.rb
+- lib/cucumber/messages/location.rb
+- lib/cucumber/messages/message.rb
+- lib/cucumber/messages/meta.rb
+- lib/cucumber/messages/parameter_type.rb
+- lib/cucumber/messages/parse_error.rb
+- lib/cucumber/messages/pickle.rb
+- lib/cucumber/messages/pickle_doc_string.rb
+- lib/cucumber/messages/pickle_step.rb
+- lib/cucumber/messages/pickle_step_argument.rb
+- lib/cucumber/messages/pickle_step_type.rb
+- lib/cucumber/messages/pickle_table.rb
+- lib/cucumber/messages/pickle_table_cell.rb
+- lib/cucumber/messages/pickle_table_row.rb
+- lib/cucumber/messages/pickle_tag.rb
+- lib/cucumber/messages/product.rb
+- lib/cucumber/messages/rule.rb
+- lib/cucumber/messages/rule_child.rb
+- lib/cucumber/messages/scenario.rb
+- lib/cucumber/messages/source.rb
+- lib/cucumber/messages/source_media_type.rb
+- lib/cucumber/messages/source_reference.rb
+- lib/cucumber/messages/step.rb
+- lib/cucumber/messages/step_definition.rb
+- lib/cucumber/messages/step_definition_pattern.rb
+- lib/cucumber/messages/step_definition_pattern_type.rb
+- lib/cucumber/messages/step_keyword_type.rb
+- lib/cucumber/messages/step_match_argument.rb
+- lib/cucumber/messages/step_match_arguments_list.rb
+- lib/cucumber/messages/table_cell.rb
+- lib/cucumber/messages/table_row.rb
+- lib/cucumber/messages/tag.rb
+- lib/cucumber/messages/test_case.rb
+- lib/cucumber/messages/test_case_finished.rb
+- lib/cucumber/messages/test_case_started.rb
+- lib/cucumber/messages/test_run_finished.rb
+- lib/cucumber/messages/test_run_hook_finished.rb
+- lib/cucumber/messages/test_run_hook_started.rb
+- lib/cucumber/messages/test_run_started.rb
+- lib/cucumber/messages/test_step.rb
+- lib/cucumber/messages/test_step_finished.rb
+- lib/cucumber/messages/test_step_result.rb
+- lib/cucumber/messages/test_step_result_status.rb
+- lib/cucumber/messages/test_step_started.rb
+- lib/cucumber/messages/timestamp.rb
+- lib/cucumber/messages/undefined_parameter_type.rb
+homepage: https://github.com/cucumber/messages#readme
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/cucumber/messages/issues
+  changelog_uri: https://github.com/cucumber/messages/blob/main/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/github/cucumber/messages
+  mailing_list_uri: https://groups.google.com/forum/#!forum/cukes
+  source_code_uri: https://github.com/cucumber/messages
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.2.3
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: cucumber-messages-27.0.2
+test_files: []

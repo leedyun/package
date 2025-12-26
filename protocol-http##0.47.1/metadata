@@ -1,0 +1,127 @@
+--- !ruby/object:Gem::Specification
+name: protocol-http
+version: !ruby/object:Gem::Version
+  version: 0.47.1
+platform: ruby
+authors:
+- Samuel Williams
+- Thomas Morgan
+- Bruno Sutic
+- Herrick Fang
+- Bryan Powell
+- Dan Olson
+- Earlopain
+- Genki Takiuchi
+- Marcelo Junior
+- Olle Jonsson
+- Yuta Iwama
+autorequire:
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIE2DCCA0CgAwIBAgIBATANBgkqhkiG9w0BAQsFADBhMRgwFgYDVQQDDA9zYW11
+  ZWwud2lsbGlhbXMxHTAbBgoJkiaJk/IsZAEZFg1vcmlvbnRyYW5zZmVyMRIwEAYK
+  CZImiZPyLGQBGRYCY28xEjAQBgoJkiaJk/IsZAEZFgJuejAeFw0yMjA4MDYwNDUz
+  MjRaFw0zMjA4MDMwNDUzMjRaMGExGDAWBgNVBAMMD3NhbXVlbC53aWxsaWFtczEd
+  MBsGCgmSJomT8ixkARkWDW9yaW9udHJhbnNmZXIxEjAQBgoJkiaJk/IsZAEZFgJj
+  bzESMBAGCgmSJomT8ixkARkWAm56MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIB
+  igKCAYEAomvSopQXQ24+9DBB6I6jxRI2auu3VVb4nOjmmHq7XWM4u3HL+pni63X2
+  9qZdoq9xt7H+RPbwL28LDpDNflYQXoOhoVhQ37Pjn9YDjl8/4/9xa9+NUpl9XDIW
+  sGkaOY0eqsQm1pEWkHJr3zn/fxoKPZPfaJOglovdxf7dgsHz67Xgd/ka+Wo1YqoE
+  e5AUKRwUuvaUaumAKgPH+4E4oiLXI4T1Ff5Q7xxv6yXvHuYtlMHhYfgNn8iiW8WN
+  XibYXPNP7NtieSQqwR/xM6IRSoyXKuS+ZNGDPUUGk8RoiV/xvVN4LrVm9upSc0ss
+  RZ6qwOQmXCo/lLcDUxJAgG95cPw//sI00tZan75VgsGzSWAOdjQpFM0l4dxvKwHn
+  tUeT3ZsAgt0JnGqNm2Bkz81kG4A2hSyFZTFA8vZGhp+hz+8Q573tAR89y9YJBdYM
+  zp0FM4zwMNEUwgfRzv1tEVVUEXmoFCyhzonUUw4nE4CFu/sE3ffhjKcXcY//qiSW
+  xm4erY3XAgMBAAGjgZowgZcwCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAwHQYDVR0O
+  BBYEFO9t7XWuFf2SKLmuijgqR4sGDlRsMC4GA1UdEQQnMCWBI3NhbXVlbC53aWxs
+  aWFtc0BvcmlvbnRyYW5zZmVyLmNvLm56MC4GA1UdEgQnMCWBI3NhbXVlbC53aWxs
+  aWFtc0BvcmlvbnRyYW5zZmVyLmNvLm56MA0GCSqGSIb3DQEBCwUAA4IBgQB5sxkE
+  cBsSYwK6fYpM+hA5B5yZY2+L0Z+27jF1pWGgbhPH8/FjjBLVn+VFok3CDpRqwXCl
+  xCO40JEkKdznNy2avOMra6PFiQyOE74kCtv7P+Fdc+FhgqI5lMon6tt9rNeXmnW/
+  c1NaMRdxy999hmRGzUSFjozcCwxpy/LwabxtdXwXgSay4mQ32EDjqR1TixS1+smp
+  8C/NCWgpIfzpHGJsjvmH2wAfKtTTqB9CVKLCWEnCHyCaRVuKkrKjqhYCdmMBqCws
+  JkxfQWC+jBVeG9ZtPhQgZpfhvh+6hMhraUYRQ6XGyvBqEUe+yo6DKIT3MtGE2+CP
+  eX9i9ZWBydWb8/rvmwmX2kkcBbX0hZS1rcR593hGc61JR6lvkGYQ2MYskBveyaxt
+  Q2K9NVun/S785AP05vKkXZEFYxqG6EW012U4oLcFl5MySFajYXRYbuUpH6AY+HP8
+  voD0MPg1DssDLKwXyt1eKD/+Fq0bFWhwVM/1XiAXL7lyYUyOq24KHgQ2Csg=
+  -----END CERTIFICATE-----
+date: 2024-12-04 00:00:00.000000000 Z
+dependencies: []
+description:
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/protocol/http.rb
+- lib/protocol/http/accept_encoding.rb
+- lib/protocol/http/body.rb
+- lib/protocol/http/body/buffered.rb
+- lib/protocol/http/body/completable.rb
+- lib/protocol/http/body/deflate.rb
+- lib/protocol/http/body/digestable.rb
+- lib/protocol/http/body/file.rb
+- lib/protocol/http/body/head.rb
+- lib/protocol/http/body/inflate.rb
+- lib/protocol/http/body/readable.rb
+- lib/protocol/http/body/reader.rb
+- lib/protocol/http/body/rewindable.rb
+- lib/protocol/http/body/stream.rb
+- lib/protocol/http/body/streamable.rb
+- lib/protocol/http/body/wrapper.rb
+- lib/protocol/http/body/writable.rb
+- lib/protocol/http/content_encoding.rb
+- lib/protocol/http/cookie.rb
+- lib/protocol/http/error.rb
+- lib/protocol/http/header/authorization.rb
+- lib/protocol/http/header/cache_control.rb
+- lib/protocol/http/header/connection.rb
+- lib/protocol/http/header/cookie.rb
+- lib/protocol/http/header/date.rb
+- lib/protocol/http/header/etag.rb
+- lib/protocol/http/header/etags.rb
+- lib/protocol/http/header/multiple.rb
+- lib/protocol/http/header/priority.rb
+- lib/protocol/http/header/split.rb
+- lib/protocol/http/header/vary.rb
+- lib/protocol/http/headers.rb
+- lib/protocol/http/methods.rb
+- lib/protocol/http/middleware.rb
+- lib/protocol/http/middleware/builder.rb
+- lib/protocol/http/peer.rb
+- lib/protocol/http/reference.rb
+- lib/protocol/http/request.rb
+- lib/protocol/http/response.rb
+- lib/protocol/http/url.rb
+- lib/protocol/http/version.rb
+- license.md
+- readme.md
+- releases.md
+homepage: https://github.com/socketry/protocol-http
+licenses:
+- MIT
+metadata:
+  documentation_uri: https://socketry.github.io/protocol-http/
+  source_code_uri: https://github.com/socketry/protocol-http.git
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Provides abstractions to handle HTTP protocols.
+test_files: []

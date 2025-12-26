@@ -1,0 +1,170 @@
+--- !ruby/object:Gem::Specification
+name: jenkins_api_client
+version: !ruby/object:Gem::Version
+  version: 2.2.0
+platform: ruby
+authors:
+- Kannan Manickam
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-11 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.16.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.16.0
+- !ruby/object:Gem::Dependency
+  name: terminal-table
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.0
+- !ruby/object:Gem::Dependency
+  name: mixlib-shellout
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.1.0
+- !ruby/object:Gem::Dependency
+  name: socksify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.7.0
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: addressable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.7'
+description: |2-
+
+  This is a simple and easy-to-use Jenkins Api client with features focused on
+  automating Job configuration programaticaly and so forth
+email:
+- arangamani.kannan@gmail.com
+executables:
+- jenkinscli
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/jenkinscli
+- java_deps/jenkins-cli.jar
+- jenkins_api_client.gemspec
+- lib/jenkins_api_client.rb
+- lib/jenkins_api_client/build_queue.rb
+- lib/jenkins_api_client/cli/base.rb
+- lib/jenkins_api_client/cli/helper.rb
+- lib/jenkins_api_client/cli/job.rb
+- lib/jenkins_api_client/cli/node.rb
+- lib/jenkins_api_client/cli/system.rb
+- lib/jenkins_api_client/client.rb
+- lib/jenkins_api_client/exceptions.rb
+- lib/jenkins_api_client/job.rb
+- lib/jenkins_api_client/node.rb
+- lib/jenkins_api_client/plugin_manager.rb
+- lib/jenkins_api_client/plugin_settings/base.rb
+- lib/jenkins_api_client/plugin_settings/collection.rb
+- lib/jenkins_api_client/plugin_settings/hipchat.rb
+- lib/jenkins_api_client/plugin_settings/workspace_cleanup.rb
+- lib/jenkins_api_client/root.rb
+- lib/jenkins_api_client/system.rb
+- lib/jenkins_api_client/urihelper.rb
+- lib/jenkins_api_client/user.rb
+- lib/jenkins_api_client/version.rb
+- lib/jenkins_api_client/view.rb
+homepage: https://github.com/arangamani/jenkins_api_client
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key:
+specification_version: 4
+summary: Jenkins JSON API Client
+test_files: []

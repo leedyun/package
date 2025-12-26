@@ -1,0 +1,148 @@
+--- !ruby/object:Gem::Specification
+name: sass-embedded
+version: !ruby/object:Gem::Version
+  version: 1.83.4
+platform: ruby
+authors:
+- なつき
+bindir: exe
+cert_chain: []
+date: 2025-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: google-protobuf
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.29'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.29'
+description: A Ruby library that will communicate with Embedded Dart Sass using the
+  Embedded Sass protocol.
+email:
+- i@ntk.me
+executables:
+- sass
+extensions:
+- ext/sass/Rakefile
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- exe/sass
+- ext/sass/Rakefile
+- ext/sass/embedded_sass_pb.rb
+- ext/sass/expand-archive.ps1
+- ext/sass/package.json
+- lib/sass-embedded.rb
+- lib/sass/calculation_value.rb
+- lib/sass/calculation_value/calculation_operation.rb
+- lib/sass/canonicalize_context.rb
+- lib/sass/compile_result.rb
+- lib/sass/compiler.rb
+- lib/sass/compiler/channel.rb
+- lib/sass/compiler/connection.rb
+- lib/sass/compiler/dispatcher.rb
+- lib/sass/compiler/host.rb
+- lib/sass/compiler/host/function_registry.rb
+- lib/sass/compiler/host/importer_registry.rb
+- lib/sass/compiler/host/logger_registry.rb
+- lib/sass/compiler/host/protofier.rb
+- lib/sass/compiler/host/structifier.rb
+- lib/sass/compiler/varint.rb
+- lib/sass/elf.rb
+- lib/sass/embedded.rb
+- lib/sass/embedded/version.rb
+- lib/sass/embedded_protocol.rb
+- lib/sass/exception.rb
+- lib/sass/fork_tracker.rb
+- lib/sass/logger/silent.rb
+- lib/sass/logger/source_location.rb
+- lib/sass/logger/source_span.rb
+- lib/sass/node_package_importer.rb
+- lib/sass/serializer.rb
+- lib/sass/value.rb
+- lib/sass/value/argument_list.rb
+- lib/sass/value/boolean.rb
+- lib/sass/value/calculation.rb
+- lib/sass/value/color.rb
+- lib/sass/value/color/channel.rb
+- lib/sass/value/color/conversions.rb
+- lib/sass/value/color/gamut_map_method.rb
+- lib/sass/value/color/gamut_map_method/clip.rb
+- lib/sass/value/color/gamut_map_method/local_minde.rb
+- lib/sass/value/color/interpolation_method.rb
+- lib/sass/value/color/space.rb
+- lib/sass/value/color/space/a98_rgb.rb
+- lib/sass/value/color/space/display_p3.rb
+- lib/sass/value/color/space/hsl.rb
+- lib/sass/value/color/space/hwb.rb
+- lib/sass/value/color/space/lab.rb
+- lib/sass/value/color/space/lch.rb
+- lib/sass/value/color/space/lms.rb
+- lib/sass/value/color/space/oklab.rb
+- lib/sass/value/color/space/oklch.rb
+- lib/sass/value/color/space/prophoto_rgb.rb
+- lib/sass/value/color/space/rec2020.rb
+- lib/sass/value/color/space/rgb.rb
+- lib/sass/value/color/space/srgb.rb
+- lib/sass/value/color/space/srgb_linear.rb
+- lib/sass/value/color/space/utils.rb
+- lib/sass/value/color/space/xyz_d50.rb
+- lib/sass/value/color/space/xyz_d65.rb
+- lib/sass/value/function.rb
+- lib/sass/value/fuzzy_math.rb
+- lib/sass/value/list.rb
+- lib/sass/value/map.rb
+- lib/sass/value/mixin.rb
+- lib/sass/value/null.rb
+- lib/sass/value/number.rb
+- lib/sass/value/number/unit.rb
+- lib/sass/value/string.rb
+homepage: https://github.com/sass-contrib/sass-embedded-host-ruby
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/sass-contrib/sass-embedded-host-ruby/issues
+  documentation_uri: https://rubydoc.info/gems/sass-embedded/1.83.4
+  source_code_uri: https://github.com/sass-contrib/sass-embedded-host-ruby/tree/v1.83.4
+  funding_uri: https://github.com/sponsors/ntkme
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Use dart-sass with Ruby!
+test_files: []

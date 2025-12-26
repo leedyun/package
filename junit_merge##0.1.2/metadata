@@ -1,0 +1,95 @@
+--- !ruby/object:Gem::Specification
+name: junit_merge
+version: !ruby/object:Gem::Version
+  version: 0.1.2
+platform: ruby
+authors:
+- George Ogata
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-05-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: ritual
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+description: Tool to merge JUnit XML reports.
+email:
+- george.ogata@gmail.com
+executables:
+- junit_merge
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- CHANGELOG
+- Gemfile
+- LICENSE
+- README.markdown
+- Rakefile
+- bin/junit_merge
+- junit_merge.gemspec
+- lib/junit_merge.rb
+- lib/junit_merge/app.rb
+- lib/junit_merge/version.rb
+- test/junit_merge/test_app.rb
+- test/template.xml.erb
+- test/test_helper.rb
+homepage: https://github.com/oggy/junit_merge
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: ''
+test_files:
+- test/junit_merge/test_app.rb
+- test/template.xml.erb
+- test/test_helper.rb

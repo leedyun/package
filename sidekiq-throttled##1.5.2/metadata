@@ -1,0 +1,116 @@
+--- !ruby/object:Gem::Specification
+name: sidekiq-throttled
+version: !ruby/object:Gem::Version
+  version: 1.5.2
+platform: ruby
+authors:
+- Alexey Zapparov
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-12 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.2.0
+- !ruby/object:Gem::Dependency
+  name: redis-prescription
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: sidekiq
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6.5'
+description:
+email:
+- alexey@zapparov.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.adoc
+- lib/sidekiq/throttled.rb
+- lib/sidekiq/throttled/config.rb
+- lib/sidekiq/throttled/cooldown.rb
+- lib/sidekiq/throttled/errors.rb
+- lib/sidekiq/throttled/expirable_set.rb
+- lib/sidekiq/throttled/job.rb
+- lib/sidekiq/throttled/message.rb
+- lib/sidekiq/throttled/middlewares/server.rb
+- lib/sidekiq/throttled/patches/basic_fetch.rb
+- lib/sidekiq/throttled/patches/super_fetch.rb
+- lib/sidekiq/throttled/patches/throttled_retriever.rb
+- lib/sidekiq/throttled/registry.rb
+- lib/sidekiq/throttled/strategy.rb
+- lib/sidekiq/throttled/strategy/base.rb
+- lib/sidekiq/throttled/strategy/concurrency.lua
+- lib/sidekiq/throttled/strategy/concurrency.rb
+- lib/sidekiq/throttled/strategy/threshold.lua
+- lib/sidekiq/throttled/strategy/threshold.rb
+- lib/sidekiq/throttled/strategy_collection.rb
+- lib/sidekiq/throttled/version.rb
+- lib/sidekiq/throttled/web.rb
+- lib/sidekiq/throttled/web/stats.rb
+- lib/sidekiq/throttled/web/throttled.html.erb
+- lib/sidekiq/throttled/worker.rb
+homepage: https://github.com/ixti/sidekiq-throttled
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://github.com/ixti/sidekiq-throttled
+  source_code_uri: https://github.com/ixti/sidekiq-throttled/tree/v1.5.2
+  bug_tracker_uri: https://github.com/ixti/sidekiq-throttled/issues
+  changelog_uri: https://github.com/ixti/sidekiq-throttled/blob/v1.5.2/CHANGES.md
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key:
+specification_version: 4
+summary: Concurrency and rate-limit throttling for Sidekiq
+test_files: []

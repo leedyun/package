@@ -1,0 +1,45 @@
+--- !ruby/object:Gem::Specification
+name: TacoBell
+version: !ruby/object:Gem::Version
+  version: 0.1.0
+platform: ruby
+authors:
+- Ruby Coder
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-04-14 00:00:00.000000000 Z
+dependencies: []
+description: Much longer explanation of the example!
+email: rubycoder@example.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- TacoBell.gemspec
+- pBot.tar
+homepage: https://rubygems.org/gems/example
+licenses:
+- MIT
+metadata:
+  source_code_uri: https://github.com/example/example
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.0.3
+signing_key: 
+specification_version: 4
+summary: This is an example!
+test_files: []

@@ -1,0 +1,65 @@
+--- !ruby/object:Gem::Specification
+name: json-diff
+version: !ruby/object:Gem::Version
+  version: 0.4.1
+platform: ruby
+authors:
+- Thaddée Tyl
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-05-04 00:00:00.000000000 Z
+dependencies: []
+description: Take two Ruby objects that can be serialized to JSON. Output an array
+  of operations (additions, deletions, moves) that would convert the first one to
+  the second one.
+email:
+- thaddee.tyl@gmail.com
+executables:
+- json-diff
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- Gemfile
+- LICENSE
+- Makefile
+- README.md
+- Rakefile
+- bin/json-diff
+- json-diff.gemspec
+- lib/json-diff.rb
+- lib/json-diff/diff.rb
+- lib/json-diff/index-map.rb
+- lib/json-diff/operation.rb
+- lib/json-diff/version.rb
+- spec/json-diff/diff_spec.rb
+- spec/json-diff/index-map_spec.rb
+- spec/json-diff/operation_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/espadrine/json-diff
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: Compute the difference between two JSON-serializable Ruby objects.
+test_files: []

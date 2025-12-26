@@ -1,0 +1,259 @@
+--- !ruby/object:Gem::Specification
+name: excon
+version: !ruby/object:Gem::Version
+  version: 1.2.3
+platform: ruby
+authors:
+- dpiddy (Dan Peterson)
+- geemus (Wesley Beary)
+- nextmat (Matt Sanders)
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: delorean
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: eventmachine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.4
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.5
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.5
+- !ruby/object:Gem::Dependency
+  name: open4
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.5.0
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sinatra-contrib
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webrick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: EXtended http(s) CONnections
+email: geemus@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- CONTRIBUTORS.md
+- CONTRIBUTING.md
+files:
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- LICENSE.md
+- README.md
+- data/cacert.pem
+- excon.gemspec
+- lib/excon.rb
+- lib/excon/connection.rb
+- lib/excon/constants.rb
+- lib/excon/error.rb
+- lib/excon/extensions/uri.rb
+- lib/excon/headers.rb
+- lib/excon/instrumentors/logging_instrumentor.rb
+- lib/excon/instrumentors/standard_instrumentor.rb
+- lib/excon/middlewares/base.rb
+- lib/excon/middlewares/capture_cookies.rb
+- lib/excon/middlewares/decompress.rb
+- lib/excon/middlewares/escape_path.rb
+- lib/excon/middlewares/expects.rb
+- lib/excon/middlewares/idempotent.rb
+- lib/excon/middlewares/instrumentor.rb
+- lib/excon/middlewares/mock.rb
+- lib/excon/middlewares/redirect_follower.rb
+- lib/excon/middlewares/response_parser.rb
+- lib/excon/pretty_printer.rb
+- lib/excon/response.rb
+- lib/excon/socket.rb
+- lib/excon/ssl_socket.rb
+- lib/excon/test/plugin/server/exec.rb
+- lib/excon/test/plugin/server/puma.rb
+- lib/excon/test/plugin/server/unicorn.rb
+- lib/excon/test/plugin/server/webrick.rb
+- lib/excon/test/server.rb
+- lib/excon/unix_socket.rb
+- lib/excon/utils.rb
+- lib/excon/version.rb
+homepage: https://github.com/excon/excon
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/excon/excon/issues
+  changelog_uri: https://github.com/excon/excon/blob/master/changelog.txt
+  documentation_uri: https://github.com/excon/excon/blob/master/README.md
+  funding_uri: https://github.com/sponsors/geemus
+  homepage_uri: https://github.com/excon/excon
+  source_code_uri: https://github.com/excon/excon
+  wiki_uri: https://github.com/excon/excon/wiki
+post_install_message:
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.18
+signing_key:
+specification_version: 4
+summary: speed, persistence, http(s)
+test_files: []

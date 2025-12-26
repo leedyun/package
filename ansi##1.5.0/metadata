@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification
+name: ansi
+version: !ruby/object:Gem::Version
+  version: 1.5.0
+platform: ruby
+authors:
+- Thomas Sawyer
+- Florian Frank
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-01-17 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: mast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: indexer
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ergo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: qed
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ae
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: lemon
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: The ANSI project is a superlative collection of ANSI escape code related
+  libraries eabling ANSI colorization and stylization of console output. Byte for
+  byte ANSI is the best ANSI code library available for the Ruby programming language.
+email:
+- transfire@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE.txt
+- NOTICE.md
+- README.md
+- HISTORY.md
+- DEMO.md
+files:
+- .index
+- .yardopts
+- lib/ansi/bbcode.rb
+- lib/ansi/chain.rb
+- lib/ansi/chart.rb
+- lib/ansi/code.rb
+- lib/ansi/columns.rb
+- lib/ansi/constants.rb
+- lib/ansi/core.rb
+- lib/ansi/diff.rb
+- lib/ansi/hexdump.rb
+- lib/ansi/logger.rb
+- lib/ansi/mixin.rb
+- lib/ansi/progressbar.rb
+- lib/ansi/string.rb
+- lib/ansi/table.rb
+- lib/ansi/terminal/curses.rb
+- lib/ansi/terminal/stty.rb
+- lib/ansi/terminal/termios.rb
+- lib/ansi/terminal/win32.rb
+- lib/ansi/terminal.rb
+- lib/ansi/version.rb
+- lib/ansi.rb
+- lib/ansi.yml
+- demo/01_ansicode.md
+- demo/02_core.md
+- demo/03_logger.md
+- demo/04_progressbar.md
+- demo/05_mixin.md
+- demo/06_string.md
+- demo/07_columns.md
+- demo/08_table.md
+- demo/09_diff.md
+- demo/10_bbcode.md
+- demo/11_terminal.md
+- demo/applique/ae.rb
+- demo/applique/output.rb
+- test/case_ansicode.rb
+- test/case_bbcode.rb
+- test/case_mixin.rb
+- test/case_progressbar.rb
+- test/test_helper.rb
+- NOTICE.md
+- README.md
+- HISTORY.md
+- DEMO.md
+- LICENSE.txt
+homepage: http://rubyworks.github.com/ansi
+licenses:
+- BSD-2-Clause
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.3
+signing_key: 
+specification_version: 4
+summary: ANSI at your fingertips!
+test_files:
+- test/case_bbcode.rb
+- test/case_progressbar.rb
+- test/case_ansicode.rb
+- test/case_mixin.rb
+- test/test_helper.rb
+has_rdoc: 

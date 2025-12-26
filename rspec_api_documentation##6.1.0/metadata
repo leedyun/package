@@ -1,0 +1,399 @@
+--- !ruby/object:Gem::Specification
+name: rspec_api_documentation
+version: !ruby/object:Gem::Version
+  version: 6.1.0
+platform: ruby
+authors:
+- Chris Cahoon
+- Sam Goldman
+- Eric Oestrich
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2018-10-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: mustache
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.99.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.99.4
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: fakefs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.4'
+- !ruby/object:Gem::Dependency
+  name: sinatra
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.4.4
+- !ruby/object:Gem::Dependency
+  name: aruba
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.5'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.1'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.6.2
+- !ruby/object:Gem::Dependency
+  name: rack-oauth2
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.7
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.2.2
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.0.7
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: rspec-its
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: faraday
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.0
+- !ruby/object:Gem::Dependency
+  name: thin
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.3
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.3
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.2
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.9.11
+description: Generate API docs from your test suite
+email:
+- chris@smartlogicsolutions.com
+- sam@smartlogicsolutions.com
+- eric@smartlogicsolutions.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- lib/rspec_api_documentation.rb
+- lib/rspec_api_documentation/api_documentation.rb
+- lib/rspec_api_documentation/api_formatter.rb
+- lib/rspec_api_documentation/assets/stylesheets/rspec_api_documentation/styles.css
+- lib/rspec_api_documentation/client_base.rb
+- lib/rspec_api_documentation/configuration.rb
+- lib/rspec_api_documentation/curl.rb
+- lib/rspec_api_documentation/dsl.rb
+- lib/rspec_api_documentation/dsl/callback.rb
+- lib/rspec_api_documentation/dsl/endpoint.rb
+- lib/rspec_api_documentation/dsl/endpoint/params.rb
+- lib/rspec_api_documentation/dsl/endpoint/set_param.rb
+- lib/rspec_api_documentation/dsl/resource.rb
+- lib/rspec_api_documentation/example.rb
+- lib/rspec_api_documentation/headers.rb
+- lib/rspec_api_documentation/http_test_client.rb
+- lib/rspec_api_documentation/index.rb
+- lib/rspec_api_documentation/oauth2_mac_client.rb
+- lib/rspec_api_documentation/open_api/contact.rb
+- lib/rspec_api_documentation/open_api/example.rb
+- lib/rspec_api_documentation/open_api/header.rb
+- lib/rspec_api_documentation/open_api/headers.rb
+- lib/rspec_api_documentation/open_api/helper.rb
+- lib/rspec_api_documentation/open_api/info.rb
+- lib/rspec_api_documentation/open_api/license.rb
+- lib/rspec_api_documentation/open_api/node.rb
+- lib/rspec_api_documentation/open_api/operation.rb
+- lib/rspec_api_documentation/open_api/parameter.rb
+- lib/rspec_api_documentation/open_api/path.rb
+- lib/rspec_api_documentation/open_api/paths.rb
+- lib/rspec_api_documentation/open_api/response.rb
+- lib/rspec_api_documentation/open_api/responses.rb
+- lib/rspec_api_documentation/open_api/root.rb
+- lib/rspec_api_documentation/open_api/schema.rb
+- lib/rspec_api_documentation/open_api/security_definitions.rb
+- lib/rspec_api_documentation/open_api/security_schema.rb
+- lib/rspec_api_documentation/open_api/tag.rb
+- lib/rspec_api_documentation/rack_test_client.rb
+- lib/rspec_api_documentation/railtie.rb
+- lib/rspec_api_documentation/test_server.rb
+- lib/rspec_api_documentation/views/api_blueprint_example.rb
+- lib/rspec_api_documentation/views/api_blueprint_index.rb
+- lib/rspec_api_documentation/views/html_example.rb
+- lib/rspec_api_documentation/views/html_index.rb
+- lib/rspec_api_documentation/views/markdown_example.rb
+- lib/rspec_api_documentation/views/markdown_index.rb
+- lib/rspec_api_documentation/views/markup_example.rb
+- lib/rspec_api_documentation/views/markup_index.rb
+- lib/rspec_api_documentation/views/slate_example.rb
+- lib/rspec_api_documentation/views/slate_index.rb
+- lib/rspec_api_documentation/views/textile_example.rb
+- lib/rspec_api_documentation/views/textile_index.rb
+- lib/rspec_api_documentation/writers/api_blueprint_writer.rb
+- lib/rspec_api_documentation/writers/append_json_writer.rb
+- lib/rspec_api_documentation/writers/combined_json_writer.rb
+- lib/rspec_api_documentation/writers/combined_text_writer.rb
+- lib/rspec_api_documentation/writers/formatter.rb
+- lib/rspec_api_documentation/writers/general_markup_writer.rb
+- lib/rspec_api_documentation/writers/html_writer.rb
+- lib/rspec_api_documentation/writers/index_helper.rb
+- lib/rspec_api_documentation/writers/json_iodocs_writer.rb
+- lib/rspec_api_documentation/writers/json_writer.rb
+- lib/rspec_api_documentation/writers/markdown_writer.rb
+- lib/rspec_api_documentation/writers/open_api_writer.rb
+- lib/rspec_api_documentation/writers/slate_writer.rb
+- lib/rspec_api_documentation/writers/textile_writer.rb
+- lib/rspec_api_documentation/writers/writer.rb
+- lib/tasks/docs.rake
+- templates/rspec_api_documentation/api_blueprint_index.mustache
+- templates/rspec_api_documentation/html_example.mustache
+- templates/rspec_api_documentation/html_index.mustache
+- templates/rspec_api_documentation/markdown_example.mustache
+- templates/rspec_api_documentation/markdown_index.mustache
+- templates/rspec_api_documentation/slate_example.mustache
+- templates/rspec_api_documentation/slate_index.mustache
+- templates/rspec_api_documentation/textile_example.mustache
+- templates/rspec_api_documentation/textile_index.mustache
+homepage: http://smartlogicsolutions.com
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: A double black belt for your docs
+test_files: []

@@ -1,0 +1,202 @@
+--- !ruby/object:Gem::Specification
+name: json_matchers
+version: !ruby/object:Gem::Version
+  version: 0.11.1
+platform: ruby
+authors:
+- Sean Doyle
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2019-07-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: json_schema
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.7'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: factory_bot
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '4.8'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Validate your Rails JSON API's JSON
+email:
+- sean.p.doyle24@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".hound.yml"
+- ".rspec"
+- ".rubocop.yml"
+- ".ruby-version"
+- ".thoughtbot.rubocop.yml"
+- ".travis.yml"
+- CONTRIBUTING.md
+- Gemfile
+- LICENSE.txt
+- NEWS.md
+- README.md
+- Rakefile
+- json_matchers.gemspec
+- lib/json_matchers.rb
+- lib/json_matchers/assertion.rb
+- lib/json_matchers/errors.rb
+- lib/json_matchers/matcher.rb
+- lib/json_matchers/minitest/assertions.rb
+- lib/json_matchers/parser.rb
+- lib/json_matchers/payload.rb
+- lib/json_matchers/rspec.rb
+- lib/json_matchers/validator.rb
+- lib/json_matchers/version.rb
+- spec/factories.rb
+- spec/json_matchers/match_json_schema_spec.rb
+- spec/spec_helper.rb
+- spec/support/factory_bot.rb
+- spec/support/fake_response.rb
+- spec/support/fake_schema.rb
+- spec/support/file_helpers.rb
+- test/json_matchers/minitest/assertions_test.rb
+- test/support/factory_bot.rb
+- test/support/json_matchers/test_case.rb
+- test/test_helper.rb
+homepage: https://github.com/thoughtbot/json_matchers
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.7.7
+signing_key: 
+specification_version: 4
+summary: Validate your Rails JSON API's JSON
+test_files:
+- spec/factories.rb
+- spec/json_matchers/match_json_schema_spec.rb
+- spec/spec_helper.rb
+- spec/support/factory_bot.rb
+- spec/support/fake_response.rb
+- spec/support/fake_schema.rb
+- spec/support/file_helpers.rb
+- test/json_matchers/minitest/assertions_test.rb
+- test/support/factory_bot.rb
+- test/support/json_matchers/test_case.rb
+- test/test_helper.rb

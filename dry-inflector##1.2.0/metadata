@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: dry-inflector
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Luca Guidi
+- Andrii Savchenko
+- Abinoam P. Marques Jr.
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-04 00:00:00.000000000 Z
+dependencies: []
+description: String inflections for dry-rb
+email:
+- me@lucaguidi.com
+- andrey@aejis.eu
+- abinoam@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE
+- README.md
+- dry-inflector.gemspec
+- lib/dry-inflector.rb
+- lib/dry/inflector.rb
+- lib/dry/inflector/acronyms.rb
+- lib/dry/inflector/inflections.rb
+- lib/dry/inflector/inflections/defaults.rb
+- lib/dry/inflector/rules.rb
+- lib/dry/inflector/version.rb
+homepage: https://dry-rb.org/gems/dry-inflector
+licenses:
+- MIT
+metadata:
+  allowed_push_host: https://rubygems.org
+  changelog_uri: https://github.com/dry-rb/dry-inflector/blob/main/CHANGELOG.md
+  source_code_uri: https://github.com/dry-rb/dry-inflector
+  bug_tracker_uri: https://github.com/dry-rb/dry-inflector/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.1'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.27
+signing_key:
+specification_version: 4
+summary: String inflections for dry-rb
+test_files: []

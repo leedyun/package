@@ -1,0 +1,331 @@
+--- !ruby/object:Gem::Specification
+name: email_reply_trimmer
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Régis Hanol
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-11-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '12'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-discourse
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: EmailReplyTrimmer is a small library to trim replies from plain text
+  email.
+email:
+- rubygems@hanol.fr
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- devenv.lock
+- devenv.nix
+- devenv.yaml
+- email_reply_trimmer.gemspec
+- lib/email_reply_trimmer.rb
+- lib/email_reply_trimmer/delimiter_matcher.rb
+- lib/email_reply_trimmer/email_header_matcher.rb
+- lib/email_reply_trimmer/embedded_email_matcher.rb
+- lib/email_reply_trimmer/empty_line_matcher.rb
+- lib/email_reply_trimmer/quote_matcher.rb
+- lib/email_reply_trimmer/signature_matcher.rb
+- test/before/email_headers_1.txt
+- test/before/email_headers_2.txt
+- test/before/email_headers_3.txt
+- test/before/email_headers_4.txt
+- test/before/embedded_email_10.txt
+- test/before/embedded_email_german_3.txt
+- test/before/embedded_email_spanish_2.txt
+- test/before/forwarded_apple.txt
+- test/before/forwarded_gmail.txt
+- test/before/forwarded_message.txt
+- test/elided/block_code_spacers.txt
+- test/elided/delimiters.txt
+- test/elided/dual_embedded.txt
+- test/elided/email_headers_1.txt
+- test/elided/email_headers_2.txt
+- test/elided/email_headers_3.txt
+- test/elided/email_headers_4.txt
+- test/elided/email_headers_5.txt
+- test/elided/embedded_ception.txt
+- test/elided/embedded_email_1.txt
+- test/elided/embedded_email_10.txt
+- test/elided/embedded_email_11.txt
+- test/elided/embedded_email_12.txt
+- test/elided/embedded_email_13.txt
+- test/elided/embedded_email_14.txt
+- test/elided/embedded_email_15.txt
+- test/elided/embedded_email_16.txt
+- test/elided/embedded_email_17.txt
+- test/elided/embedded_email_18.txt
+- test/elided/embedded_email_19.txt
+- test/elided/embedded_email_2.txt
+- test/elided/embedded_email_3.txt
+- test/elided/embedded_email_4.txt
+- test/elided/embedded_email_5.txt
+- test/elided/embedded_email_6.txt
+- test/elided/embedded_email_7.txt
+- test/elided/embedded_email_8.txt
+- test/elided/embedded_email_9.txt
+- test/elided/embedded_email_chinese.txt
+- test/elided/embedded_email_dutch_1.txt
+- test/elided/embedded_email_dutch_2.txt
+- test/elided/embedded_email_french_1.txt
+- test/elided/embedded_email_french_2.txt
+- test/elided/embedded_email_german_1.txt
+- test/elided/embedded_email_german_2.txt
+- test/elided/embedded_email_german_3.txt
+- test/elided/embedded_email_german_4.txt
+- test/elided/embedded_email_german_5.txt
+- test/elided/embedded_email_german_6.txt
+- test/elided/embedded_email_italian.txt
+- test/elided/embedded_email_norwegian.txt
+- test/elided/embedded_email_polish_1.txt
+- test/elided/embedded_email_polish_2.txt
+- test/elided/embedded_email_portuguese.txt
+- test/elided/embedded_email_quote_text.txt
+- test/elided/embedded_email_russian_1.txt
+- test/elided/embedded_email_russian_2.txt
+- test/elided/embedded_email_spanish_1.txt
+- test/elided/embedded_email_spanish_2.txt
+- test/elided/embedded_email_swedish.txt
+- test/elided/embedded_email_ukrainian.txt
+- test/elided/forwarded_apple.txt
+- test/elided/forwarded_gmail.txt
+- test/elided/forwarded_message.txt
+- test/elided/normalize_line_endings.txt
+- test/elided/quote_and_text.txt
+- test/elided/quote_only.txt
+- test/elided/retains_spaces_and_formatting.txt
+- test/elided/signatures.txt
+- test/elided/spam_1.txt
+- test/elided/spam_2.txt
+- test/elided/strip.txt
+- test/elided/text_only.txt
+- test/elided/usenet.txt
+- test/emails/block_code_spacers.txt
+- test/emails/delimiters.txt
+- test/emails/dual_embedded.txt
+- test/emails/email_headers_1.txt
+- test/emails/email_headers_2.txt
+- test/emails/email_headers_3.txt
+- test/emails/email_headers_4.txt
+- test/emails/email_headers_5.txt
+- test/emails/embedded_ception.txt
+- test/emails/embedded_email_1.txt
+- test/emails/embedded_email_10.txt
+- test/emails/embedded_email_11.txt
+- test/emails/embedded_email_12.txt
+- test/emails/embedded_email_13.txt
+- test/emails/embedded_email_14.txt
+- test/emails/embedded_email_15.txt
+- test/emails/embedded_email_16.txt
+- test/emails/embedded_email_17.txt
+- test/emails/embedded_email_18.txt
+- test/emails/embedded_email_19.txt
+- test/emails/embedded_email_2.txt
+- test/emails/embedded_email_3.txt
+- test/emails/embedded_email_4.txt
+- test/emails/embedded_email_5.txt
+- test/emails/embedded_email_6.txt
+- test/emails/embedded_email_7.txt
+- test/emails/embedded_email_8.txt
+- test/emails/embedded_email_9.txt
+- test/emails/embedded_email_chinese.txt
+- test/emails/embedded_email_dutch_1.txt
+- test/emails/embedded_email_dutch_2.txt
+- test/emails/embedded_email_french_1.txt
+- test/emails/embedded_email_french_2.txt
+- test/emails/embedded_email_german_1.txt
+- test/emails/embedded_email_german_2.txt
+- test/emails/embedded_email_german_3.txt
+- test/emails/embedded_email_german_4.txt
+- test/emails/embedded_email_german_5.txt
+- test/emails/embedded_email_german_6.txt
+- test/emails/embedded_email_italian.txt
+- test/emails/embedded_email_norwegian.txt
+- test/emails/embedded_email_polish_1.txt
+- test/emails/embedded_email_polish_2.txt
+- test/emails/embedded_email_portuguese.txt
+- test/emails/embedded_email_quote_text.txt
+- test/emails/embedded_email_russian_1.txt
+- test/emails/embedded_email_russian_2.txt
+- test/emails/embedded_email_spanish_1.txt
+- test/emails/embedded_email_spanish_2.txt
+- test/emails/embedded_email_swedish.txt
+- test/emails/embedded_email_ukrainian.txt
+- test/emails/forwarded_apple.txt
+- test/emails/forwarded_gmail.txt
+- test/emails/forwarded_message.txt
+- test/emails/normalize_line_endings.txt
+- test/emails/quote_and_text.txt
+- test/emails/quote_only.txt
+- test/emails/retains_spaces_and_formatting.txt
+- test/emails/signatures.txt
+- test/emails/spam_1.txt
+- test/emails/spam_2.txt
+- test/emails/strip.txt
+- test/emails/text_only.txt
+- test/emails/usenet.txt
+- test/embedded/email_headers_1.txt
+- test/embedded/email_headers_2.txt
+- test/embedded/email_headers_3.txt
+- test/embedded/email_headers_4.txt
+- test/embedded/embedded_email_10.txt
+- test/embedded/embedded_email_german_3.txt
+- test/embedded/embedded_email_spanish_2.txt
+- test/embedded/forwarded_apple.txt
+- test/embedded/forwarded_gmail.txt
+- test/embedded/forwarded_message.txt
+- test/matchers/does_not_contain_embedded_email.txt
+- test/test_email_matcher.rb
+- test/test_email_reply_trimmer.rb
+- test/trimmed/block_code_spacers.txt
+- test/trimmed/delimiters.txt
+- test/trimmed/dual_embedded.txt
+- test/trimmed/email_headers_1.txt
+- test/trimmed/email_headers_2.txt
+- test/trimmed/email_headers_3.txt
+- test/trimmed/email_headers_4.txt
+- test/trimmed/email_headers_5.txt
+- test/trimmed/embedded_ception.txt
+- test/trimmed/embedded_email_1.txt
+- test/trimmed/embedded_email_10.txt
+- test/trimmed/embedded_email_11.txt
+- test/trimmed/embedded_email_12.txt
+- test/trimmed/embedded_email_13.txt
+- test/trimmed/embedded_email_14.txt
+- test/trimmed/embedded_email_15.txt
+- test/trimmed/embedded_email_16.txt
+- test/trimmed/embedded_email_17.txt
+- test/trimmed/embedded_email_18.txt
+- test/trimmed/embedded_email_19.txt
+- test/trimmed/embedded_email_2.txt
+- test/trimmed/embedded_email_3.txt
+- test/trimmed/embedded_email_4.txt
+- test/trimmed/embedded_email_5.txt
+- test/trimmed/embedded_email_6.txt
+- test/trimmed/embedded_email_7.txt
+- test/trimmed/embedded_email_8.txt
+- test/trimmed/embedded_email_9.txt
+- test/trimmed/embedded_email_chinese.txt
+- test/trimmed/embedded_email_dutch_1.txt
+- test/trimmed/embedded_email_dutch_2.txt
+- test/trimmed/embedded_email_french_1.txt
+- test/trimmed/embedded_email_french_2.txt
+- test/trimmed/embedded_email_german_1.txt
+- test/trimmed/embedded_email_german_2.txt
+- test/trimmed/embedded_email_german_3.txt
+- test/trimmed/embedded_email_german_4.txt
+- test/trimmed/embedded_email_german_5.txt
+- test/trimmed/embedded_email_german_6.txt
+- test/trimmed/embedded_email_italian.txt
+- test/trimmed/embedded_email_norwegian.txt
+- test/trimmed/embedded_email_polish_1.txt
+- test/trimmed/embedded_email_polish_2.txt
+- test/trimmed/embedded_email_portuguese.txt
+- test/trimmed/embedded_email_quote_text.txt
+- test/trimmed/embedded_email_russian_1.txt
+- test/trimmed/embedded_email_russian_2.txt
+- test/trimmed/embedded_email_spanish_1.txt
+- test/trimmed/embedded_email_spanish_2.txt
+- test/trimmed/embedded_email_swedish.txt
+- test/trimmed/embedded_email_ukrainian.txt
+- test/trimmed/forwarded_apple.txt
+- test/trimmed/forwarded_gmail.txt
+- test/trimmed/forwarded_message.txt
+- test/trimmed/normalize_line_endings.txt
+- test/trimmed/quote_and_text.txt
+- test/trimmed/quote_only.txt
+- test/trimmed/retains_spaces_and_formatting.txt
+- test/trimmed/signatures.txt
+- test/trimmed/spam_1.txt
+- test/trimmed/spam_2.txt
+- test/trimmed/strip.txt
+- test/trimmed/text_only.txt
+- test/trimmed/usenet.txt
+homepage: https://github.com/discourse/email_reply_trimmer
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: Library to trim replies from plain text email.
+test_files: []

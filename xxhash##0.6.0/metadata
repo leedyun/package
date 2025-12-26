@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: xxhash
+version: !ruby/object:Gem::Version
+  version: 0.6.0
+platform: ruby
+authors:
+- Vasiliy Ermolovich
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-19 00:00:00.000000000 Z
+dependencies: []
+description: Ruby wrapper for xxHash lib
+email:
+- younash@gmail.com
+executables: []
+extensions:
+- ext/xxhash/extconf.rb
+extra_rdoc_files: []
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- ext/xxhash/extconf.rb
+- ext/xxhash/libxxhash.c
+- ext/xxhash/libxxhash.h
+- ext/xxhash/xxhash.c
+- ext/xxhash/xxhash.h
+- lib/xxhash.rb
+- lib/xxhash/version.rb
+- test/test_helper.rb
+- test/xxhash_test.rb
+- xxhash.gemspec
+homepage: http://github.com/nashby/xxhash
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.16
+signing_key:
+specification_version: 4
+summary: Ruby wrapper for xxHash lib
+test_files:
+- test/test_helper.rb
+- test/xxhash_test.rb

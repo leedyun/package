@@ -1,0 +1,145 @@
+--- !ruby/object:Gem::Specification
+name: web-console
+version: !ruby/object:Gem::Version
+  version: 4.2.1
+platform: ruby
+authors:
+- Hailey Somerville
+- Genadi Samokovarov
+- Guillermo Iguaran
+- Ryan Dao
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-09-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: activemodel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: actionview
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.0.0
+- !ruby/object:Gem::Dependency
+  name: bindex
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+description: 
+email:
+- hailey@hailey.lol
+- gsamokovarov@gmail.com
+- guilleiguaran@gmail.com
+- daoduyducduong@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.markdown
+- MIT-LICENSE
+- README.markdown
+- Rakefile
+- lib/web-console.rb
+- lib/web_console.rb
+- lib/web_console/context.rb
+- lib/web_console/errors.rb
+- lib/web_console/evaluator.rb
+- lib/web_console/exception_mapper.rb
+- lib/web_console/extensions.rb
+- lib/web_console/injector.rb
+- lib/web_console/interceptor.rb
+- lib/web_console/locales/en.yml
+- lib/web_console/middleware.rb
+- lib/web_console/permissions.rb
+- lib/web_console/railtie.rb
+- lib/web_console/request.rb
+- lib/web_console/session.rb
+- lib/web_console/source_location.rb
+- lib/web_console/tasks/extensions.rake
+- lib/web_console/tasks/templates.rake
+- lib/web_console/template.rb
+- lib/web_console/templates/_inner_console_markup.html.erb
+- lib/web_console/templates/_markup.html.erb
+- lib/web_console/templates/_prompt_box_markup.html.erb
+- lib/web_console/templates/console.js.erb
+- lib/web_console/templates/error_page.js.erb
+- lib/web_console/templates/index.html.erb
+- lib/web_console/templates/layouts/inlined_string.erb
+- lib/web_console/templates/layouts/javascript.erb
+- lib/web_console/templates/main.js.erb
+- lib/web_console/templates/regular_page.js.erb
+- lib/web_console/templates/style.css.erb
+- lib/web_console/testing/erb_precompiler.rb
+- lib/web_console/testing/fake_middleware.rb
+- lib/web_console/testing/helper.rb
+- lib/web_console/version.rb
+- lib/web_console/view.rb
+- lib/web_console/whiny_request.rb
+homepage: https://github.com/rails/web-console
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.5'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.10
+signing_key: 
+specification_version: 4
+summary: A debugging tool for your Ruby on Rails applications.
+test_files: []

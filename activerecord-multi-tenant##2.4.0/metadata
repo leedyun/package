@@ -1,0 +1,320 @@
+--- !ruby/object:Gem::Specification
+name: activerecord-multi-tenant
+version: !ruby/object:Gem::Version
+  version: 2.4.0
+platform: ruby
+authors:
+- Citus Data
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-09-22 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '6'
+- !ruby/object:Gem::Dependency
+  name: anbt-sql-formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: codecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pg
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-byebug
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sidekiq
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: ''
+email: engage@citusdata.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/active-record-multi-tenant-tests.yml"
+- ".gitignore"
+- ".readthedocs.yaml"
+- ".rspec"
+- ".rubocop.yml"
+- Appraisals
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- activerecord-multi-tenant.gemspec
+- docker-compose.yml
+- docs/.gitignore
+- docs/Makefile
+- docs/api-reference.sh
+- docs/requirements.in
+- docs/requirements.txt
+- docs/source/_static/api-reference/ActiveRecord.html
+- docs/source/_static/api-reference/ActiveRecord/Associations.html
+- docs/source/_static/api-reference/ActiveRecord/Associations/Association.html
+- docs/source/_static/api-reference/ActiveRecord/Associations/ClassMethods.html
+- docs/source/_static/api-reference/ActiveRecord/ConnectionAdapters.html
+- docs/source/_static/api-reference/ActiveRecord/ConnectionAdapters/SchemaStatements.html
+- docs/source/_static/api-reference/ActiveRecord/QueryMethods.html
+- docs/source/_static/api-reference/ActiveRecord/SchemaDumper.html
+- docs/source/_static/api-reference/MultiTenant.html
+- docs/source/_static/api-reference/MultiTenant/ArelTenantVisitor.html
+- docs/source/_static/api-reference/MultiTenant/ArelVisitorsDepthFirst.html
+- docs/source/_static/api-reference/MultiTenant/BaseTenantEnforcementClause.html
+- docs/source/_static/api-reference/MultiTenant/Context.html
+- docs/source/_static/api-reference/MultiTenant/ControllerExtensions.html
+- docs/source/_static/api-reference/MultiTenant/CopyFromClient.html
+- docs/source/_static/api-reference/MultiTenant/CopyFromClientHelper.html
+- docs/source/_static/api-reference/MultiTenant/Current.html
+- docs/source/_static/api-reference/MultiTenant/DatabaseStatements.html
+- docs/source/_static/api-reference/MultiTenant/FastTruncate.html
+- docs/source/_static/api-reference/MultiTenant/MigrationExtensions.html
+- docs/source/_static/api-reference/MultiTenant/MissingTenantError.html
+- docs/source/_static/api-reference/MultiTenant/ModelExtensionsClassMethods.html
+- docs/source/_static/api-reference/MultiTenant/QueryMonitor.html
+- docs/source/_static/api-reference/MultiTenant/Table.html
+- docs/source/_static/api-reference/MultiTenant/TenantEnforcementClause.html
+- docs/source/_static/api-reference/MultiTenant/TenantIsImmutable.html
+- docs/source/_static/api-reference/MultiTenant/TenantJoinEnforcementClause.html
+- docs/source/_static/api-reference/MultiTenant/TenantValueVisitor.html
+- docs/source/_static/api-reference/MultiTenantFindBy.html
+- docs/source/_static/api-reference/Sidekiq.html
+- docs/source/_static/api-reference/Sidekiq/Client.html
+- docs/source/_static/api-reference/Sidekiq/Middleware/MultiTenant.html
+- docs/source/_static/api-reference/Sidekiq/Middleware/MultiTenant/Client.html
+- docs/source/_static/api-reference/Sidekiq/Middleware/MultiTenant/Server.html
+- docs/source/_static/api-reference/_index.html
+- docs/source/_static/api-reference/class_list.html
+- docs/source/_static/api-reference/css/common.css
+- docs/source/_static/api-reference/css/full_list.css
+- docs/source/_static/api-reference/css/style.css
+- docs/source/_static/api-reference/file.README.html
+- docs/source/_static/api-reference/file_list.html
+- docs/source/_static/api-reference/frames.html
+- docs/source/_static/api-reference/index.html
+- docs/source/_static/api-reference/js/app.js
+- docs/source/_static/api-reference/js/full_list.js
+- docs/source/_static/api-reference/js/jquery.js
+- docs/source/_static/api-reference/method_list.html
+- docs/source/_static/api-reference/top-level-namespace.html
+- docs/source/_templates/.gitignore
+- docs/source/api-reference.rst
+- docs/source/appendix.rst
+- docs/source/changelog.rst
+- docs/source/community-and-support.rst
+- docs/source/conf.py
+- docs/source/contributing.rst
+- docs/source/getting-started.rst
+- docs/source/guides-and-tutorials.rst
+- docs/source/index.rst
+- docs/source/introduction.rst
+- docs/source/license.rst
+- docs/source/troubleshooting.rst
+- docs/source/usage-guide.rst
+- lib/activerecord-multi-tenant.rb
+- lib/activerecord-multi-tenant/arel_visitors_depth_first.rb
+- lib/activerecord-multi-tenant/controller_extensions.rb
+- lib/activerecord-multi-tenant/copy_from_client.rb
+- lib/activerecord-multi-tenant/fast_truncate.rb
+- lib/activerecord-multi-tenant/habtm.rb
+- lib/activerecord-multi-tenant/migrations.rb
+- lib/activerecord-multi-tenant/model_extensions.rb
+- lib/activerecord-multi-tenant/multi_tenant.rb
+- lib/activerecord-multi-tenant/query_monitor.rb
+- lib/activerecord-multi-tenant/query_rewriter.rb
+- lib/activerecord-multi-tenant/sidekiq.rb
+- lib/activerecord-multi-tenant/table_node.rb
+- lib/activerecord-multi-tenant/version.rb
+- lib/activerecord_multi_tenant.rb
+- spec/activerecord-multi-tenant/associations_spec.rb
+- spec/activerecord-multi-tenant/controller_extensions_spec.rb
+- spec/activerecord-multi-tenant/fast_truncate_spec.rb
+- spec/activerecord-multi-tenant/model_extensions_spec.rb
+- spec/activerecord-multi-tenant/multi_tenant_spec.rb
+- spec/activerecord-multi-tenant/query_rewriter_spec.rb
+- spec/activerecord-multi-tenant/record_callback_spec.rb
+- spec/activerecord-multi-tenant/record_finding_spec.rb
+- spec/activerecord-multi-tenant/record_modifications_spec.rb
+- spec/activerecord-multi-tenant/sidekiq_spec.rb
+- spec/database.yml
+- spec/schema.rb
+- spec/spec_helper.rb
+- spec/support/format_sql.rb
+homepage: https://github.com/citusdata/activerecord-multi-tenant
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.13
+signing_key: 
+specification_version: 4
+summary: ActiveRecord/Rails integration for multi-tenant databases, in particular
+  the Citus extension for PostgreSQL
+test_files: []

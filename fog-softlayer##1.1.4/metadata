@@ -1,0 +1,453 @@
+--- !ruby/object:Gem::Specification
+name: fog-softlayer
+version: !ruby/object:Gem::Version
+  version: 1.1.4
+platform: ruby
+authors:
+- Matt Eldridge
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-08-28 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rbvmomi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: thor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rbovirt
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.0.24
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.0.24
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.4
+- !ruby/object:Gem::Dependency
+  name: fission
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: osrcry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Module for the 'fog' gem to support SoftLayer Cloud
+email:
+- matt.eldridge@us.ibm.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".editorconfig"
+- ".gitignore"
+- ".travis.yml"
+- CHANGELOG.md
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- docs/cla-corporate.md
+- docs/cla-individual.md
+- docs/fog-softlayer-CCLA.pdf
+- docs/fog-softlayer-CLA.pdf
+- examples/README.md
+- examples/account.md
+- examples/compute.md
+- examples/dns.md
+- examples/getting_started.md
+- examples/global_ip_address.md
+- examples/key_pairs.md
+- examples/network.md
+- examples/product.md
+- examples/storage.md
+- examples/tags.md
+- fog-softlayer.gemspec
+- gemfiles/Gemfile-edge
+- gemfiles/Gemfile-ruby-1.8.7
+- lib/fog/softlayer.rb
+- lib/fog/softlayer/account.rb
+- lib/fog/softlayer/compute.rb
+- lib/fog/softlayer/compute/shared.rb
+- lib/fog/softlayer/dns.rb
+- lib/fog/softlayer/ext/hash.rb
+- lib/fog/softlayer/ext/string.rb
+- lib/fog/softlayer/models/account/brand.rb
+- lib/fog/softlayer/models/account/brands.rb
+- lib/fog/softlayer/models/compute/flavor.rb
+- lib/fog/softlayer/models/compute/flavors.rb
+- lib/fog/softlayer/models/compute/image.rb
+- lib/fog/softlayer/models/compute/images.rb
+- lib/fog/softlayer/models/compute/key_pair.rb
+- lib/fog/softlayer/models/compute/key_pairs.rb
+- lib/fog/softlayer/models/compute/network_component.rb
+- lib/fog/softlayer/models/compute/network_components.rb
+- lib/fog/softlayer/models/compute/server.rb
+- lib/fog/softlayer/models/compute/servers.rb
+- lib/fog/softlayer/models/compute/tag.rb
+- lib/fog/softlayer/models/compute/tags.rb
+- lib/fog/softlayer/models/dns/domain.rb
+- lib/fog/softlayer/models/dns/domains.rb
+- lib/fog/softlayer/models/dns/record.rb
+- lib/fog/softlayer/models/dns/records.rb
+- lib/fog/softlayer/models/network/datacenter.rb
+- lib/fog/softlayer/models/network/datacenters.rb
+- lib/fog/softlayer/models/network/ip.rb
+- lib/fog/softlayer/models/network/ips.rb
+- lib/fog/softlayer/models/network/network.rb
+- lib/fog/softlayer/models/network/networks.rb
+- lib/fog/softlayer/models/network/subnet.rb
+- lib/fog/softlayer/models/network/subnets.rb
+- lib/fog/softlayer/models/network/tag.rb
+- lib/fog/softlayer/models/network/tags.rb
+- lib/fog/softlayer/models/product/item.rb
+- lib/fog/softlayer/models/product/items.rb
+- lib/fog/softlayer/models/product/package.rb
+- lib/fog/softlayer/models/product/packages.rb
+- lib/fog/softlayer/models/storage/directories.rb
+- lib/fog/softlayer/models/storage/directory.rb
+- lib/fog/softlayer/models/storage/file.rb
+- lib/fog/softlayer/models/storage/files.rb
+- lib/fog/softlayer/network.rb
+- lib/fog/softlayer/product.rb
+- lib/fog/softlayer/requests/account/create_brand.rb
+- lib/fog/softlayer/requests/account/get_account_owned_brands.rb
+- lib/fog/softlayer/requests/account/get_brand.rb
+- lib/fog/softlayer/requests/account/get_brand_owned_accounts.rb
+- lib/fog/softlayer/requests/compute/create_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/create_bare_metal_tags.rb
+- lib/fog/softlayer/requests/compute/create_key_pair.rb
+- lib/fog/softlayer/requests/compute/create_vm.rb
+- lib/fog/softlayer/requests/compute/create_vm_tags.rb
+- lib/fog/softlayer/requests/compute/create_vms.rb
+- lib/fog/softlayer/requests/compute/delete_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/delete_bare_metal_tags.rb
+- lib/fog/softlayer/requests/compute/delete_key_pair.rb
+- lib/fog/softlayer/requests/compute/delete_vm.rb
+- lib/fog/softlayer/requests/compute/delete_vm_tags.rb
+- lib/fog/softlayer/requests/compute/describe_tags.rb
+- lib/fog/softlayer/requests/compute/generate_bare_metal_order_template.rb
+- lib/fog/softlayer/requests/compute/generate_virtual_guest_order_template.rb
+- lib/fog/softlayer/requests/compute/get_available_preset_codes.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_active_tickets.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_create_options.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_server_by_ip.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_servers.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_tags.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_upgrade_item_prices.rb
+- lib/fog/softlayer/requests/compute/get_bare_metal_users.rb
+- lib/fog/softlayer/requests/compute/get_key_pair.rb
+- lib/fog/softlayer/requests/compute/get_key_pairs.rb
+- lib/fog/softlayer/requests/compute/get_references_by_tag_name.rb
+- lib/fog/softlayer/requests/compute/get_tag.rb
+- lib/fog/softlayer/requests/compute/get_virtual_guest_active_tickets.rb
+- lib/fog/softlayer/requests/compute/get_virtual_guest_by_ip.rb
+- lib/fog/softlayer/requests/compute/get_virtual_guest_create_options.rb
+- lib/fog/softlayer/requests/compute/get_virtual_guest_upgrade_item_prices.rb
+- lib/fog/softlayer/requests/compute/get_virtual_guest_users.rb
+- lib/fog/softlayer/requests/compute/get_vm.rb
+- lib/fog/softlayer/requests/compute/get_vm_tags.rb
+- lib/fog/softlayer/requests/compute/get_vms.rb
+- lib/fog/softlayer/requests/compute/power_off_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/power_off_vm.rb
+- lib/fog/softlayer/requests/compute/power_on_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/power_on_vm.rb
+- lib/fog/softlayer/requests/compute/reboot_bare_metal_server.rb
+- lib/fog/softlayer/requests/compute/reboot_vm.rb
+- lib/fog/softlayer/requests/compute/update_key_pair.rb
+- lib/fog/softlayer/requests/dns/create_domain.rb
+- lib/fog/softlayer/requests/dns/create_record.rb
+- lib/fog/softlayer/requests/dns/delete_domain.rb
+- lib/fog/softlayer/requests/dns/delete_record.rb
+- lib/fog/softlayer/requests/dns/get_domain.rb
+- lib/fog/softlayer/requests/dns/get_domain_by_name.rb
+- lib/fog/softlayer/requests/dns/get_domains.rb
+- lib/fog/softlayer/requests/dns/get_record.rb
+- lib/fog/softlayer/requests/dns/get_records.rb
+- lib/fog/softlayer/requests/dns/update_record.rb
+- lib/fog/softlayer/requests/network/create_network.rb
+- lib/fog/softlayer/requests/network/create_network_tags.rb
+- lib/fog/softlayer/requests/network/create_subnet.rb
+- lib/fog/softlayer/requests/network/delete_global_ip_address.rb
+- lib/fog/softlayer/requests/network/delete_network.rb
+- lib/fog/softlayer/requests/network/delete_network_tags.rb
+- lib/fog/softlayer/requests/network/get_datacenter_routers.rb
+- lib/fog/softlayer/requests/network/get_datacenters.rb
+- lib/fog/softlayer/requests/network/get_global_ip_address.rb
+- lib/fog/softlayer/requests/network/get_global_ip_records.rb
+- lib/fog/softlayer/requests/network/get_ip_address.rb
+- lib/fog/softlayer/requests/network/get_ip_addresses.rb
+- lib/fog/softlayer/requests/network/get_maintenance_windows.rb
+- lib/fog/softlayer/requests/network/get_network.rb
+- lib/fog/softlayer/requests/network/get_network_tags.rb
+- lib/fog/softlayer/requests/network/get_portable_subnet_package_id.rb
+- lib/fog/softlayer/requests/network/get_portable_subnet_price_code.rb
+- lib/fog/softlayer/requests/network/get_private_vlan_price_code.rb
+- lib/fog/softlayer/requests/network/get_public_vlan_price_code.rb
+- lib/fog/softlayer/requests/network/get_references_by_tag_name.rb
+- lib/fog/softlayer/requests/network/get_subnet.rb
+- lib/fog/softlayer/requests/network/get_subnet_package_id.rb
+- lib/fog/softlayer/requests/network/get_subnet_price_code.rb
+- lib/fog/softlayer/requests/network/list_networks.rb
+- lib/fog/softlayer/requests/network/list_subnets.rb
+- lib/fog/softlayer/requests/network/route_global_ip.rb
+- lib/fog/softlayer/requests/network/unroute_global_ip.rb
+- lib/fog/softlayer/requests/product/get_package_item.rb
+- lib/fog/softlayer/requests/product/get_package_items.rb
+- lib/fog/softlayer/requests/product/get_packages.rb
+- lib/fog/softlayer/requests/product/place_order.rb
+- lib/fog/softlayer/requests/storage/copy_object.rb
+- lib/fog/softlayer/requests/storage/delete_container.rb
+- lib/fog/softlayer/requests/storage/delete_multiple_objects.rb
+- lib/fog/softlayer/requests/storage/delete_object.rb
+- lib/fog/softlayer/requests/storage/delete_static_large_object.rb
+- lib/fog/softlayer/requests/storage/get_container.rb
+- lib/fog/softlayer/requests/storage/get_containers.rb
+- lib/fog/softlayer/requests/storage/get_object.rb
+- lib/fog/softlayer/requests/storage/get_object_https_url.rb
+- lib/fog/softlayer/requests/storage/head_container.rb
+- lib/fog/softlayer/requests/storage/head_containers.rb
+- lib/fog/softlayer/requests/storage/head_object.rb
+- lib/fog/softlayer/requests/storage/post_set_meta_temp_url_key.rb
+- lib/fog/softlayer/requests/storage/put_container.rb
+- lib/fog/softlayer/requests/storage/put_dynamic_obj_manifest.rb
+- lib/fog/softlayer/requests/storage/put_object.rb
+- lib/fog/softlayer/requests/storage/put_object_manifest.rb
+- lib/fog/softlayer/requests/storage/put_static_obj_manifest.rb
+- lib/fog/softlayer/slapi.rb
+- lib/fog/softlayer/storage.rb
+- lib/fog/softlayer/version.rb
+- spec/fog/compute/softlayer_spec.rb
+- tests/compute/flavors_helper.rb
+- tests/compute/server_helper.rb
+- tests/compute/servers_helper.rb
+- tests/helper.rb
+- tests/helpers/collection_helper.rb
+- tests/helpers/compute/flavors_helper.rb
+- tests/helpers/compute/server_helper.rb
+- tests/helpers/compute/servers_helper.rb
+- tests/helpers/formats_helper.rb
+- tests/helpers/formats_helper_tests.rb
+- tests/helpers/mock_helper.rb
+- tests/helpers/model_helper.rb
+- tests/helpers/responds_to_helper.rb
+- tests/helpers/schema_validator_tests.rb
+- tests/helpers/succeeds_helper.rb
+- tests/lorem.txt
+- tests/softlayer/account/helper.rb
+- tests/softlayer/account/schema.rb
+- tests/softlayer/compute/helper.rb
+- tests/softlayer/compute/schema.rb
+- tests/softlayer/compute_tests.rb
+- tests/softlayer/helper.rb
+- tests/softlayer/models/account/brand_tests.rb
+- tests/softlayer/models/compute/flavor_tests.rb
+- tests/softlayer/models/compute/image_tests.rb
+- tests/softlayer/models/compute/key_pair_tests.rb
+- tests/softlayer/models/compute/server_tests.rb
+- tests/softlayer/models/dns/domain_tests.rb
+- tests/softlayer/models/dns/domains_tests.rb
+- tests/softlayer/models/dns/record_tests.rb
+- tests/softlayer/models/dns/records_tests.rb
+- tests/softlayer/models/network/datacenter_tests.rb
+- tests/softlayer/models/product/item_tests.rb
+- tests/softlayer/models/product/items_tests.rb
+- tests/softlayer/models/product/package_tests.rb
+- tests/softlayer/models/product/packages_tests.rb
+- tests/softlayer/models/storage/directory_tests.rb
+- tests/softlayer/models/storage/file_tests.rb
+- tests/softlayer/network/helper.rb
+- tests/softlayer/network/schema.rb
+- tests/softlayer/requests/account/account_tests.rb
+- tests/softlayer/requests/account/brand_tests.rb
+- tests/softlayer/requests/compute/bmc_tests.rb
+- tests/softlayer/requests/compute/key_pair_tests.rb
+- tests/softlayer/requests/compute/tag_tests.rb
+- tests/softlayer/requests/compute/vm_tests.rb
+- tests/softlayer/requests/network/datacenter_tests.rb
+- tests/softlayer/requests/network/network_tests.rb
+- tests/softlayer/requests/product/get_package_item.rb
+- tests/softlayer/requests/product/get_package_items.rb
+- tests/softlayer/requests/product/get_packages.rb
+- tests/softlayer/requests/product/place_order.rb
+- tests/softlayer/requests/storage/auth_tests.rb
+- tests/softlayer/requests/storage/container_tests.rb
+- tests/softlayer/requests/storage/object_tests.rb
+- tests/softlayer/storage_tests.rb
+homepage: https://github.com/fog/fog-softlayer
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.5.1
+signing_key: 
+specification_version: 4
+summary: This library can be used as a module for `fog` or as standalone provider
+  to use the SoftLayer Cloud in applications
+test_files:
+- spec/fog/compute/softlayer_spec.rb
+has_rdoc: 

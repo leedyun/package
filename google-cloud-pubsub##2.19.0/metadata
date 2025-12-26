@@ -1,0 +1,150 @@
+--- !ruby/object:Gem::Specification
+name: google-cloud-pubsub
+version: !ruby/object:Gem::Version
+  version: 2.19.0
+platform: ruby
+authors:
+- Mike Moore
+- Chris Smith
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-07-09 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: concurrent-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.1'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: google-cloud-pubsub-v1
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.20'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0.20'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 2.a
+- !ruby/object:Gem::Dependency
+  name: retriable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.1'
+description: google-cloud-pubsub is the official library for Google Cloud Pub/Sub.
+email:
+- mike@blowmage.com
+- quartzmo@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- AUTHENTICATION.md
+- CHANGELOG.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- EMULATOR.md
+- LICENSE
+- LOGGING.md
+- OVERVIEW.md
+- TROUBLESHOOTING.md
+- lib/google-cloud-pubsub.rb
+- lib/google/cloud/pubsub.rb
+- lib/google/cloud/pubsub/acknowledge_result.rb
+- lib/google/cloud/pubsub/async_publisher.rb
+- lib/google/cloud/pubsub/async_publisher/batch.rb
+- lib/google/cloud/pubsub/batch_publisher.rb
+- lib/google/cloud/pubsub/convert.rb
+- lib/google/cloud/pubsub/credentials.rb
+- lib/google/cloud/pubsub/errors.rb
+- lib/google/cloud/pubsub/flow_controller.rb
+- lib/google/cloud/pubsub/message.rb
+- lib/google/cloud/pubsub/policy.rb
+- lib/google/cloud/pubsub/project.rb
+- lib/google/cloud/pubsub/publish_result.rb
+- lib/google/cloud/pubsub/received_message.rb
+- lib/google/cloud/pubsub/retry_policy.rb
+- lib/google/cloud/pubsub/schema.rb
+- lib/google/cloud/pubsub/schema/list.rb
+- lib/google/cloud/pubsub/service.rb
+- lib/google/cloud/pubsub/snapshot.rb
+- lib/google/cloud/pubsub/snapshot/list.rb
+- lib/google/cloud/pubsub/subscriber.rb
+- lib/google/cloud/pubsub/subscriber/enumerator_queue.rb
+- lib/google/cloud/pubsub/subscriber/inventory.rb
+- lib/google/cloud/pubsub/subscriber/sequencer.rb
+- lib/google/cloud/pubsub/subscriber/stream.rb
+- lib/google/cloud/pubsub/subscriber/timed_unary_buffer.rb
+- lib/google/cloud/pubsub/subscription.rb
+- lib/google/cloud/pubsub/subscription/list.rb
+- lib/google/cloud/pubsub/subscription/push_config.rb
+- lib/google/cloud/pubsub/topic.rb
+- lib/google/cloud/pubsub/topic/list.rb
+- lib/google/cloud/pubsub/version.rb
+homepage: https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-pubsub
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.6
+signing_key: 
+specification_version: 4
+summary: API Client library for Google Cloud Pub/Sub
+test_files: []

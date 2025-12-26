@@ -1,0 +1,104 @@
+--- !ruby/object:Gem::Specification
+name: rack-accept
+version: !ruby/object:Gem::Version
+  version: 0.4.5
+  prerelease: 
+platform: ruby
+authors:
+- Michael Jackson
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2012-06-15 00:00:00.000000000Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: &70171348874000 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0.4'
+  type: :runtime
+  prerelease: false
+  version_requirements: *70171348874000
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: &70171348873580 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *70171348873580
+description: HTTP Accept, Accept-Charset, Accept-Encoding, and Accept-Language for
+  Ruby/Rack
+email: mjijackson@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- CHANGES
+- README.md
+files:
+- lib/rack/accept/charset.rb
+- lib/rack/accept/context.rb
+- lib/rack/accept/encoding.rb
+- lib/rack/accept/header.rb
+- lib/rack/accept/language.rb
+- lib/rack/accept/media_type.rb
+- lib/rack/accept/request.rb
+- lib/rack/accept/response.rb
+- lib/rack/accept/version.rb
+- lib/rack/accept.rb
+- test/charset_test.rb
+- test/context_test.rb
+- test/encoding_test.rb
+- test/header_test.rb
+- test/helper.rb
+- test/language_test.rb
+- test/media_type_test.rb
+- test/request_test.rb
+- CHANGES
+- rack-accept.gemspec
+- Rakefile
+- README.md
+homepage: http://mjijackson.github.com/rack-accept
+licenses: []
+post_install_message: 
+rdoc_options:
+- --line-numbers
+- --inline-source
+- --title
+- Rack::Accept
+- --main
+- Rack::Accept
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.17
+signing_key: 
+specification_version: 3
+summary: HTTP Accept* for Ruby/Rack
+test_files:
+- test/charset_test.rb
+- test/context_test.rb
+- test/encoding_test.rb
+- test/header_test.rb
+- test/language_test.rb
+- test/media_type_test.rb
+- test/request_test.rb

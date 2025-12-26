@@ -1,0 +1,67 @@
+--- !ruby/object:Gem::Specification
+name: netaddr
+version: !ruby/object:Gem::Version
+  version: 2.0.6
+platform: ruby
+authors:
+- Dustin Spinhirne
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-07-08 00:00:00.000000000 Z
+dependencies: []
+description: 
+email: 
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- LICENSE
+- README.md
+- lib/eui48.rb
+- lib/eui64.rb
+- lib/ipv4.rb
+- lib/ipv4net.rb
+- lib/ipv6.rb
+- lib/ipv6net.rb
+- lib/mask128.rb
+- lib/mask32.rb
+- lib/netaddr.rb
+- lib/util.rb
+- test/eui48_test.rb
+- test/eui64_test.rb
+- test/examples.rb
+- test/ipv4_test.rb
+- test/ipv4net_test.rb
+- test/ipv6_test.rb
+- test/ipv6net_test.rb
+- test/mask128_test.rb
+- test/mask32_test.rb
+- test/netaddr_test.rb
+- test/run_all.rb
+homepage: https://github.com/dspinhirne/netaddr-rb
+licenses:
+- Apache-2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.5
+signing_key: 
+specification_version: 4
+summary: A Ruby library for performing calculations on IPv4 and IPv6 subnets.
+test_files: []

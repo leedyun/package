@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification
+name: phony
+version: !ruby/object:Gem::Version
+  version: 2.21.1
+platform: ruby
+authors:
+- Florian Hanke
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-03 00:00:00.000000000 Z
+dependencies: []
+description: 'Fast international phone number (E164 standard) normalizing, splitting
+  and formatting. Lots of formatting options: International (+.., 00..), national
+  (0..), and local.'
+email: florian.hanke+phony@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.textile
+files:
+- README.textile
+- lib/phony.rb
+- lib/phony/config.rb
+- lib/phony/countries.rb
+- lib/phony/countries/argentina.rb
+- lib/phony/countries/austria.rb
+- lib/phony/countries/bangladesh.rb
+- lib/phony/countries/belarus.rb
+- lib/phony/countries/brazil.rb
+- lib/phony/countries/cambodia.rb
+- lib/phony/countries/china.rb
+- lib/phony/countries/croatia.rb
+- lib/phony/countries/georgia.rb
+- lib/phony/countries/germany.rb
+- lib/phony/countries/guinea.rb
+- lib/phony/countries/india.rb
+- lib/phony/countries/indonesia.rb
+- lib/phony/countries/ireland.rb
+- lib/phony/countries/italy.rb
+- lib/phony/countries/japan.rb
+- lib/phony/countries/kyrgyzstan.rb
+- lib/phony/countries/latvia.rb
+- lib/phony/countries/libya.rb
+- lib/phony/countries/malaysia.rb
+- lib/phony/countries/moldova.rb
+- lib/phony/countries/montenegro.rb
+- lib/phony/countries/myanmar.rb
+- lib/phony/countries/namibia.rb
+- lib/phony/countries/nepal.rb
+- lib/phony/countries/netherlands.rb
+- lib/phony/countries/pakistan.rb
+- lib/phony/countries/paraguay.rb
+- lib/phony/countries/russia_kazakhstan_abkhasia_south_ossetia.rb
+- lib/phony/countries/saudi_arabia.rb
+- lib/phony/countries/serbia.rb
+- lib/phony/countries/somalia.rb
+- lib/phony/countries/south_korea.rb
+- lib/phony/countries/sweden.rb
+- lib/phony/countries/taiwan.rb
+- lib/phony/countries/tajikistan.rb
+- lib/phony/countries/turkmenistan.rb
+- lib/phony/countries/ukraine.rb
+- lib/phony/countries/united_kingdom.rb
+- lib/phony/countries/uruguay.rb
+- lib/phony/countries/vietnam.rb
+- lib/phony/countries/zimbabwe.rb
+- lib/phony/country.rb
+- lib/phony/country_codes.rb
+- lib/phony/dsl.rb
+- lib/phony/local_splitters/fixed.rb
+- lib/phony/local_splitters/regex.rb
+- lib/phony/national_code.rb
+- lib/phony/national_splitters/default.rb
+- lib/phony/national_splitters/dsl.rb
+- lib/phony/national_splitters/fixed.rb
+- lib/phony/national_splitters/none.rb
+- lib/phony/national_splitters/regex.rb
+- lib/phony/national_splitters/variable.rb
+- lib/phony/trunk_code.rb
+- lib/phony/vanity.rb
+homepage: https://github.com/floere/phony
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.7'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.21
+signing_key:
+specification_version: 4
+summary: Fast international phone number (E164 standard) normalizing, splitting and
+  formatting.
+test_files: []

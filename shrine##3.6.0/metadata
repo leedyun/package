@@ -1,0 +1,583 @@
+--- !ruby/object:Gem::Specification
+name: shrine
+version: !ruby/object:Gem::Version
+  version: 3.6.0
+platform: ruby
+authors:
+- Janko Marohnić
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-04-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: down
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.1'
+- !ruby/object:Gem::Dependency
+  name: content_disposition
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '11.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '11.1'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.8'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.11'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '4'
+- !ruby/object:Gem::Dependency
+  name: http-form_data
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.2'
+- !ruby/object:Gem::Dependency
+  name: rack-test
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.1'
+- !ruby/object:Gem::Dependency
+  name: mimemagic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+- !ruby/object:Gem::Dependency
+  name: marcel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ruby-filemagic
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.7'
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mini_mime
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: fastimage
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mini_magick
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.0'
+- !ruby/object:Gem::Dependency
+  name: ruby-vips
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-s3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.69'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.69'
+- !ruby/object:Gem::Dependency
+  name: aws-sdk-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.23'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.23'
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dry-monitor
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activesupport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: sequel
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.4'
+description: |
+  Shrine is a toolkit for file attachments in Ruby applications. It supports
+  uploading, downloading, processing and deleting IO objects, backed by various
+  storage engines. It uses efficient streaming for low memory usage.
+
+  Shrine comes with a high-level interface for attaching uploaded files to
+  database records, saving their location and metadata to a database column, and
+  tying them to record's lifecycle. It natively supports background jobs and
+  direct uploads for fully asynchronous user experience.
+email:
+- janko.marohnic@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- CHANGELOG.md
+- LICENSE.txt
+- README.md
+- doc/advantages.md
+- doc/attacher.md
+- doc/carrierwave.md
+- doc/changing_derivatives.md
+- doc/changing_location.md
+- doc/changing_storage.md
+- doc/creating_persistence_plugins.md
+- doc/creating_plugins.md
+- doc/creating_storages.md
+- doc/design.md
+- doc/direct_s3.md
+- doc/external/articles.md
+- doc/external/extensions.md
+- doc/external/misc.md
+- doc/getting_started.md
+- doc/metadata.md
+- doc/multiple_files.md
+- doc/paperclip.md
+- doc/plugins/activerecord.md
+- doc/plugins/add_metadata.md
+- doc/plugins/atomic_helpers.md
+- doc/plugins/backgrounding.md
+- doc/plugins/cached_attachment_data.md
+- doc/plugins/column.md
+- doc/plugins/data_uri.md
+- doc/plugins/default_storage.md
+- doc/plugins/default_url.md
+- doc/plugins/delete_raw.md
+- doc/plugins/derivation_endpoint.md
+- doc/plugins/derivatives.md
+- doc/plugins/determine_mime_type.md
+- doc/plugins/download_endpoint.md
+- doc/plugins/dynamic_storage.md
+- doc/plugins/entity.md
+- doc/plugins/form_assign.md
+- doc/plugins/included.md
+- doc/plugins/infer_extension.md
+- doc/plugins/instrumentation.md
+- doc/plugins/keep_files.md
+- doc/plugins/metadata_attributes.md
+- doc/plugins/mirroring.md
+- doc/plugins/model.md
+- doc/plugins/module_include.md
+- doc/plugins/multi_cache.md
+- doc/plugins/persistence.md
+- doc/plugins/presign_endpoint.md
+- doc/plugins/pretty_location.md
+- doc/plugins/processing.md
+- doc/plugins/rack_file.md
+- doc/plugins/rack_response.md
+- doc/plugins/recache.md
+- doc/plugins/refresh_metadata.md
+- doc/plugins/remote_url.md
+- doc/plugins/remove_attachment.md
+- doc/plugins/remove_invalid.md
+- doc/plugins/restore_cached_data.md
+- doc/plugins/sequel.md
+- doc/plugins/signature.md
+- doc/plugins/store_dimensions.md
+- doc/plugins/tempfile.md
+- doc/plugins/type_predicates.md
+- doc/plugins/upload_endpoint.md
+- doc/plugins/upload_options.md
+- doc/plugins/url_options.md
+- doc/plugins/validation.md
+- doc/plugins/validation_helpers.md
+- doc/plugins/versions.md
+- doc/processing.md
+- doc/refile.md
+- doc/release_notes/1.0.0.md
+- doc/release_notes/1.1.0.md
+- doc/release_notes/1.2.0.md
+- doc/release_notes/1.3.0.md
+- doc/release_notes/1.4.0.md
+- doc/release_notes/1.4.1.md
+- doc/release_notes/1.4.2.md
+- doc/release_notes/2.0.0.md
+- doc/release_notes/2.0.1.md
+- doc/release_notes/2.1.0.md
+- doc/release_notes/2.1.1.md
+- doc/release_notes/2.10.0.md
+- doc/release_notes/2.10.1.md
+- doc/release_notes/2.11.0.md
+- doc/release_notes/2.12.0.md
+- doc/release_notes/2.13.0.md
+- doc/release_notes/2.14.0.md
+- doc/release_notes/2.15.0.md
+- doc/release_notes/2.16.0.md
+- doc/release_notes/2.17.0.md
+- doc/release_notes/2.18.0.md
+- doc/release_notes/2.19.0.md
+- doc/release_notes/2.2.0.md
+- doc/release_notes/2.3.0.md
+- doc/release_notes/2.3.1.md
+- doc/release_notes/2.4.0.md
+- doc/release_notes/2.4.1.md
+- doc/release_notes/2.5.0.md
+- doc/release_notes/2.6.0.md
+- doc/release_notes/2.6.1.md
+- doc/release_notes/2.7.0.md
+- doc/release_notes/2.8.0.md
+- doc/release_notes/2.9.0.md
+- doc/release_notes/3.0.0.md
+- doc/release_notes/3.0.1.md
+- doc/release_notes/3.1.0.md
+- doc/release_notes/3.2.0.md
+- doc/release_notes/3.2.1.md
+- doc/release_notes/3.2.2.md
+- doc/release_notes/3.3.0.md
+- doc/release_notes/3.4.0.md
+- doc/release_notes/3.5.0.md
+- doc/release_notes/3.6.0.md
+- doc/retrieving_uploads.md
+- doc/securing_uploads.md
+- doc/storage/file_system.md
+- doc/storage/memory.md
+- doc/storage/s3.md
+- doc/testing.md
+- doc/upgrading_to_3.md
+- doc/validation.md
+- lib/shrine.rb
+- lib/shrine/attacher.rb
+- lib/shrine/attachment.rb
+- lib/shrine/plugins.rb
+- lib/shrine/plugins/_persistence.rb
+- lib/shrine/plugins/_urlsafe_serialization.rb
+- lib/shrine/plugins/activerecord.rb
+- lib/shrine/plugins/add_metadata.rb
+- lib/shrine/plugins/atomic_helpers.rb
+- lib/shrine/plugins/backgrounding.rb
+- lib/shrine/plugins/cached_attachment_data.rb
+- lib/shrine/plugins/column.rb
+- lib/shrine/plugins/data_uri.rb
+- lib/shrine/plugins/default_storage.rb
+- lib/shrine/plugins/default_url.rb
+- lib/shrine/plugins/default_url_options.rb
+- lib/shrine/plugins/delete_raw.rb
+- lib/shrine/plugins/derivation_endpoint.rb
+- lib/shrine/plugins/derivatives.rb
+- lib/shrine/plugins/determine_mime_type.rb
+- lib/shrine/plugins/download_endpoint.rb
+- lib/shrine/plugins/dynamic_storage.rb
+- lib/shrine/plugins/entity.rb
+- lib/shrine/plugins/form_assign.rb
+- lib/shrine/plugins/included.rb
+- lib/shrine/plugins/infer_extension.rb
+- lib/shrine/plugins/instrumentation.rb
+- lib/shrine/plugins/keep_files.rb
+- lib/shrine/plugins/metadata_attributes.rb
+- lib/shrine/plugins/mirroring.rb
+- lib/shrine/plugins/model.rb
+- lib/shrine/plugins/module_include.rb
+- lib/shrine/plugins/multi_cache.rb
+- lib/shrine/plugins/presign_endpoint.rb
+- lib/shrine/plugins/pretty_location.rb
+- lib/shrine/plugins/processing.rb
+- lib/shrine/plugins/rack_file.rb
+- lib/shrine/plugins/rack_response.rb
+- lib/shrine/plugins/recache.rb
+- lib/shrine/plugins/refresh_metadata.rb
+- lib/shrine/plugins/remote_url.rb
+- lib/shrine/plugins/remove_attachment.rb
+- lib/shrine/plugins/remove_invalid.rb
+- lib/shrine/plugins/restore_cached_data.rb
+- lib/shrine/plugins/sequel.rb
+- lib/shrine/plugins/signature.rb
+- lib/shrine/plugins/store_dimensions.rb
+- lib/shrine/plugins/tempfile.rb
+- lib/shrine/plugins/type_predicates.rb
+- lib/shrine/plugins/upload_endpoint.rb
+- lib/shrine/plugins/upload_options.rb
+- lib/shrine/plugins/url_options.rb
+- lib/shrine/plugins/validation.rb
+- lib/shrine/plugins/validation_helpers.rb
+- lib/shrine/plugins/versions.rb
+- lib/shrine/storage/file_system.rb
+- lib/shrine/storage/linter.rb
+- lib/shrine/storage/memory.rb
+- lib/shrine/storage/s3.rb
+- lib/shrine/uploaded_file.rb
+- lib/shrine/version.rb
+- shrine.gemspec
+homepage: https://shrinerb.com
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/shrinerb/shrine/issues
+  changelog_uri: https://github.com/shrinerb/shrine/blob/master/CHANGELOG.md
+  documentation_uri: https://shrinerb.com
+  mailing_list_uri: https://discourse.shrinerb.com
+  source_code_uri: https://github.com/shrinerb/shrine
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.3'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.9
+signing_key:
+specification_version: 4
+summary: Toolkit for file attachments in Ruby applications
+test_files: []

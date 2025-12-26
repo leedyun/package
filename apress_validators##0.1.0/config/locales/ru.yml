@@ -1,0 +1,12 @@
+ru:
+  errors:
+    messages:
+      count_less_than_or_equal_to:
+        one: Количество должно быть меньше одного
+        other: Количество должно быть %{count} или меньше
+      count_greater_than_or_equal_to:
+        one: Количество должно быть больше одного
+        other: Количество должно быть больше %{count}
+      count_invalid:
+        one: Неверное количество (должно быть 1)
+        other: Неверное количество (должно быть %{count})

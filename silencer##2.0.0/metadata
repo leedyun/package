@@ -1,0 +1,63 @@
+--- !ruby/object:Gem::Specification
+name: silencer
+version: !ruby/object:Gem::Version
+  version: 2.0.0
+platform: ruby
+authors:
+- Steve Agalloco
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2022-04-24 00:00:00.000000000 Z
+dependencies: []
+description: Selectively quiet your Rails/Rack logger on a per-route basis
+email:
+- steve.agalloco@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".yardopts"
+- LICENSE.md
+- README.md
+- Rakefile
+- lib/silencer.rb
+- lib/silencer/hush.rb
+- lib/silencer/methods.rb
+- lib/silencer/rack/logger.rb
+- lib/silencer/rails/environment.rb
+- lib/silencer/rails/logger.rb
+- lib/silencer/util.rb
+- lib/silencer/version.rb
+- silencer.gemspec
+- spec/log/test.log
+- spec/silencer/rack/logger_spec.rb
+- spec/silencer/rails/logger_spec.rb
+- spec/spec_helper.rb
+homepage: http://github.com/spagalloco/silencer
+licenses: []
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.7
+signing_key:
+specification_version: 4
+summary: Selectively quiet your Rails/Rack logger on a per-route basis
+test_files:
+- spec/log/test.log
+- spec/silencer/rack/logger_spec.rb
+- spec/silencer/rails/logger_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,225 @@
+--- !ruby/object:Gem::Specification
+name: cfn-model
+version: !ruby/object:Gem::Version
+  version: 0.6.9
+platform: ruby
+authors:
+- Eric Kascic
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2022-06-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.4'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.11'
+- !ruby/object:Gem::Dependency
+  name: kwalify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '='
+      - !ruby/object:Gem::Version
+        version: 0.7.2
+- !ruby/object:Gem::Dependency
+  name: psych
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '3.1'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '5'
+description: An object model for CloudFormation templates
+email: 
+executables:
+- cfn_parse
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/cfn_parse
+- lib/cfn-model.rb
+- lib/cfn-model/model/api_gateway_deployment.rb
+- lib/cfn-model/model/api_gateway_stage.rb
+- lib/cfn-model/model/bucket_policy.rb
+- lib/cfn-model/model/cfn_model.rb
+- lib/cfn-model/model/ec2_instance.rb
+- lib/cfn-model/model/ec2_network_acl.rb
+- lib/cfn-model/model/ec2_network_acl_entry.rb
+- lib/cfn-model/model/ec2_network_interface.rb
+- lib/cfn-model/model/iam_group.rb
+- lib/cfn-model/model/iam_managed_policy.rb
+- lib/cfn-model/model/iam_policy.rb
+- lib/cfn-model/model/iam_role.rb
+- lib/cfn-model/model/iam_user.rb
+- lib/cfn-model/model/kms_key.rb
+- lib/cfn-model/model/lambda_function.rb
+- lib/cfn-model/model/lambda_principal.rb
+- lib/cfn-model/model/load_balancer.rb
+- lib/cfn-model/model/model_element.rb
+- lib/cfn-model/model/parameter.rb
+- lib/cfn-model/model/policy.rb
+- lib/cfn-model/model/policy_document.rb
+- lib/cfn-model/model/principal.rb
+- lib/cfn-model/model/queue_policy.rb
+- lib/cfn-model/model/references.rb
+- lib/cfn-model/model/security_group.rb
+- lib/cfn-model/model/security_group_egress.rb
+- lib/cfn-model/model/security_group_ingress.rb
+- lib/cfn-model/model/statement.rb
+- lib/cfn-model/model/topic_policy.rb
+- lib/cfn-model/monkey_patches/psych/nodes/node.rb
+- lib/cfn-model/parser/api_gateway_deployment_parser.rb
+- lib/cfn-model/parser/api_gateway_stage_parser.rb
+- lib/cfn-model/parser/cfn_parser.rb
+- lib/cfn-model/parser/ec2_instance_parser.rb
+- lib/cfn-model/parser/ec2_network_acl_parser.rb
+- lib/cfn-model/parser/ec2_network_interface_parser.rb
+- lib/cfn-model/parser/expression_evaluator.rb
+- lib/cfn-model/parser/iam_group_parser.rb
+- lib/cfn-model/parser/iam_role_parser.rb
+- lib/cfn-model/parser/iam_user_parser.rb
+- lib/cfn-model/parser/kms_key_parser.rb
+- lib/cfn-model/parser/lambda_function_parser.rb
+- lib/cfn-model/parser/load_balancer_parser.rb
+- lib/cfn-model/parser/load_balancer_v2_parser.rb
+- lib/cfn-model/parser/parameter_substitution.rb
+- lib/cfn-model/parser/parser_error.rb
+- lib/cfn-model/parser/parser_registry.rb
+- lib/cfn-model/parser/policy_document_parser.rb
+- lib/cfn-model/parser/security_group_parser.rb
+- lib/cfn-model/parser/transform_registry.rb
+- lib/cfn-model/parser/with_policy_document_parser.rb
+- lib/cfn-model/psych/handlers/line_number_handler.rb
+- lib/cfn-model/psych/visitors/to_ruby_with_line_numbers.rb
+- lib/cfn-model/schema/AWS_CloudFront_Distribution.yml
+- lib/cfn-model/schema/AWS_EC2_Instance.yml
+- lib/cfn-model/schema/AWS_EC2_NetworkAcl.yml
+- lib/cfn-model/schema/AWS_EC2_NetworkAclEntry.yml
+- lib/cfn-model/schema/AWS_EC2_NetworkInterface.yml
+- lib/cfn-model/schema/AWS_EC2_NetworkInterfaceAttachment.yml
+- lib/cfn-model/schema/AWS_EC2_SecurityGroup.yml
+- lib/cfn-model/schema/AWS_EC2_SecurityGroupEgress.yml
+- lib/cfn-model/schema/AWS_EC2_SecurityGroupIngress.yml
+- lib/cfn-model/schema/AWS_ElasticLoadBalancingV2_LoadBalancer.yml
+- lib/cfn-model/schema/AWS_ElasticLoadBalancing_LoadBalancer.yml
+- lib/cfn-model/schema/AWS_IAM_Group.yml
+- lib/cfn-model/schema/AWS_IAM_ManagedPolicy.yml
+- lib/cfn-model/schema/AWS_IAM_Policy.yml
+- lib/cfn-model/schema/AWS_IAM_Role.yml
+- lib/cfn-model/schema/AWS_IAM_User.yml
+- lib/cfn-model/schema/AWS_IAM_UserToGroupAddition.yml
+- lib/cfn-model/schema/AWS_KMS_Key.yml
+- lib/cfn-model/schema/AWS_Lambda_Function.yml
+- lib/cfn-model/schema/AWS_Lambda_Permission.yml
+- lib/cfn-model/schema/AWS_S3_BucketPolicy.yml
+- lib/cfn-model/schema/AWS_SNS_TopicPolicy.yml
+- lib/cfn-model/schema/AWS_SQS_QueuePolicy.yml
+- lib/cfn-model/schema/schema.yml.erb
+- lib/cfn-model/transforms/serverless.rb
+- lib/cfn-model/util/truthy.rb
+- lib/cfn-model/util/wildcard_patterns.rb
+- lib/cfn-model/validator/cloudformation_validator.rb
+- lib/cfn-model/validator/reference_validator.rb
+- lib/cfn-model/validator/resource_type_validator.rb
+- lib/cfn-model/validator/schema_generator.rb
+homepage: https://github.com/stelligent/cfn-model
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/stelligent/cfn-model/issues
+  changelog_uri: https://github.com/stelligent/cfn-model/releases
+  documentation_uri: https://www.rubydoc.info/gems/cfn-model/0.6.9
+  homepage_uri: https://github.com/stelligent/cfn-model
+  source_code_uri: https://github.com/stelligent/cfn-model/tree/v0.6.9
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.5.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.1.2
+signing_key: 
+specification_version: 4
+summary: cfn-model
+test_files: []

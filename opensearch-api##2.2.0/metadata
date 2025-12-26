@@ -1,0 +1,857 @@
+--- !ruby/object:Gem::Specification
+name: opensearch-api
+version: !ruby/object:Gem::Version
+  version: 2.2.0
+platform: ruby
+authors:
+- Jayesh Hathila
+- Vamshi Vijay Nakkirtha
+- Vijayan Balasubramanian
+- Yuvraj Jaiswal
+autorequire: 
+bindir: bin
+cert_chain:
+- |
+  -----BEGIN CERTIFICATE-----
+  MIIDfDCCAmSgAwIBAgIBATANBgkqhkiG9w0BAQUFADBCMRMwEQYDVQQDDApvcGVu
+  c2VhcmNoMRYwFAYKCZImiZPyLGQBGRYGYW1hem9uMRMwEQYKCZImiZPyLGQBGRYD
+  Y29tMB4XDTIyMDgxNzE3NTIzNFoXDTIzMDgxNzE3NTIzNFowQjETMBEGA1UEAwwK
+  b3BlbnNlYXJjaDEWMBQGCgmSJomT8ixkARkWBmFtYXpvbjETMBEGCgmSJomT8ixk
+  ARkWA2NvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM1z3/jcitjV
+  umXwRFn+JSBBd36qZB54Dtucf6+E2fmNPzBRhgYN5XJy/+clQJ9NIJV7C8H52P3V
+  dsce/VXcNAcgfUdlN57nM0ksjFFNlnHWXea8Ub9/6R1K0p1RBizEINzUneoJLvqe
+  7w/KfvBJStj7AmJgZmzCiu98j75YLcdLhZQykRyJdB03wZsMQUvxPFkhTZn+Qi8k
+  0U909l9JD0i1PC0xVukYlskUA2xeo36kMMllABJGN536Z0aIT2KX2XTiKK7hILoP
+  +flNmgA4eyXa5Ki9q4HBN6QhsTKdEinqGngQnUI35YTu2AHsvfjn1wP/nUa9aRVH
+  zfR37/NQFkECAwEAAaN9MHswCQYDVR0TBAIwADALBgNVHQ8EBAMCBLAwHQYDVR0O
+  BBYEFJJ2myhLXK742btavNbG0IWrMNBIMCAGA1UdEQQZMBeBFW9wZW5zZWFyY2hA
+  YW1hem9uLmNvbTAgBgNVHRIEGTAXgRVvcGVuc2VhcmNoQGFtYXpvbi5jb20wDQYJ
+  KoZIhvcNAQEFBQADggEBAH5pWLYwKWFh1OjdCReGz/VEAiF4jXXputoN5Z8ga+1Z
+  lg8/diJf0PlP2B46PdmxH/TVc/o+qglNO2cHVEp8xZfEd83dfioOBeK90URQUpC5
+  UZmO0LZusg46SQKwKa2ukpIy2fNi3PeHRiV+W2Zv69GoWppyLun+fMez7wVoah2r
+  r5ROUYuAvFUvga1Vm+49pKiPM5n+MAYP5t/vWhgymY3SYQ1TfewkvKAFiFXikOR+
+  r+j7FLyKuk5DzIxiCp8QN5dU71BbGUmsHf/C5UV76WLPOFX/szeaHhPwpjR3sK7r
+  5zLgCV1KP7cgDdCYMlmZGeSViU8NV+Yy8/ghrzGpqVw=
+  -----END CERTIFICATE-----
+date: 2023-03-29 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: multi_json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: ansi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: opensearch-ruby
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: opensearch-transport
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest-reporters
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: mocha
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13'
+- !ruby/object:Gem::Dependency
+  name: shoulda-context
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jsonify
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: hashie
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: cane
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: jbuilder
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: require-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2'
+- !ruby/object:Gem::Dependency
+  name: ruby-prof
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 'Ruby API for OpenSearch. See the `opensearch-ruby` gem for full integration.
+
+  '
+email:
+- jayehh@amazon.com
+- vamshin@amazon.com
+- balasvij@amazon.com
+- jaiyuvra@amazon.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.md
+- LICENSE
+files:
+- ".gitignore"
+- CHANGELOG.md
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- USER_GUIDE.md
+- lib/opensearch-api.rb
+- lib/opensearch/api.rb
+- lib/opensearch/api/actions/abort_benchmark.rb
+- lib/opensearch/api/actions/benchmark.rb
+- lib/opensearch/api/actions/bulk.rb
+- lib/opensearch/api/actions/cat/aliases.rb
+- lib/opensearch/api/actions/cat/all_pit_segments.rb
+- lib/opensearch/api/actions/cat/allocation.rb
+- lib/opensearch/api/actions/cat/cluster_manager.rb
+- lib/opensearch/api/actions/cat/count.rb
+- lib/opensearch/api/actions/cat/fielddata.rb
+- lib/opensearch/api/actions/cat/health.rb
+- lib/opensearch/api/actions/cat/help.rb
+- lib/opensearch/api/actions/cat/indices.rb
+- lib/opensearch/api/actions/cat/master.rb
+- lib/opensearch/api/actions/cat/nodeattrs.rb
+- lib/opensearch/api/actions/cat/nodes.rb
+- lib/opensearch/api/actions/cat/params_registry.rb
+- lib/opensearch/api/actions/cat/pending_tasks.rb
+- lib/opensearch/api/actions/cat/pit_segments.rb
+- lib/opensearch/api/actions/cat/plugins.rb
+- lib/opensearch/api/actions/cat/recovery.rb
+- lib/opensearch/api/actions/cat/repositories.rb
+- lib/opensearch/api/actions/cat/segments.rb
+- lib/opensearch/api/actions/cat/shards.rb
+- lib/opensearch/api/actions/cat/snapshots.rb
+- lib/opensearch/api/actions/cat/tasks.rb
+- lib/opensearch/api/actions/cat/templates.rb
+- lib/opensearch/api/actions/cat/thread_pool.rb
+- lib/opensearch/api/actions/clear_scroll.rb
+- lib/opensearch/api/actions/cluster/allocation_explain.rb
+- lib/opensearch/api/actions/cluster/delete_component_template.rb
+- lib/opensearch/api/actions/cluster/delete_voting_config_exclusions.rb
+- lib/opensearch/api/actions/cluster/exists_component_template.rb
+- lib/opensearch/api/actions/cluster/get_component_template.rb
+- lib/opensearch/api/actions/cluster/get_settings.rb
+- lib/opensearch/api/actions/cluster/health.rb
+- lib/opensearch/api/actions/cluster/params_registry.rb
+- lib/opensearch/api/actions/cluster/pending_tasks.rb
+- lib/opensearch/api/actions/cluster/post_voting_config_exclusions.rb
+- lib/opensearch/api/actions/cluster/put_component_template.rb
+- lib/opensearch/api/actions/cluster/put_settings.rb
+- lib/opensearch/api/actions/cluster/remote_info.rb
+- lib/opensearch/api/actions/cluster/reroute.rb
+- lib/opensearch/api/actions/cluster/state.rb
+- lib/opensearch/api/actions/cluster/stats.rb
+- lib/opensearch/api/actions/count.rb
+- lib/opensearch/api/actions/create.rb
+- lib/opensearch/api/actions/create_pit.rb
+- lib/opensearch/api/actions/dangling_indices/delete_dangling_index.rb
+- lib/opensearch/api/actions/dangling_indices/import_dangling_index.rb
+- lib/opensearch/api/actions/dangling_indices/list_dangling_indices.rb
+- lib/opensearch/api/actions/dangling_indices/params_registry.rb
+- lib/opensearch/api/actions/delete.rb
+- lib/opensearch/api/actions/delete_all_pits.rb
+- lib/opensearch/api/actions/delete_by_query.rb
+- lib/opensearch/api/actions/delete_by_query_rethrottle.rb
+- lib/opensearch/api/actions/delete_by_rethrottle.rb
+- lib/opensearch/api/actions/delete_pit.rb
+- lib/opensearch/api/actions/delete_script.rb
+- lib/opensearch/api/actions/exists.rb
+- lib/opensearch/api/actions/exists_source.rb
+- lib/opensearch/api/actions/explain.rb
+- lib/opensearch/api/actions/features/get_features.rb
+- lib/opensearch/api/actions/features/params_registry.rb
+- lib/opensearch/api/actions/features/reset_features.rb
+- lib/opensearch/api/actions/field_caps.rb
+- lib/opensearch/api/actions/get.rb
+- lib/opensearch/api/actions/get_all_pits.rb
+- lib/opensearch/api/actions/get_script.rb
+- lib/opensearch/api/actions/get_script_context.rb
+- lib/opensearch/api/actions/get_script_languages.rb
+- lib/opensearch/api/actions/get_source.rb
+- lib/opensearch/api/actions/index.rb
+- lib/opensearch/api/actions/indices/add_block.rb
+- lib/opensearch/api/actions/indices/analyze.rb
+- lib/opensearch/api/actions/indices/clear_cache.rb
+- lib/opensearch/api/actions/indices/clone.rb
+- lib/opensearch/api/actions/indices/close.rb
+- lib/opensearch/api/actions/indices/create.rb
+- lib/opensearch/api/actions/indices/delete.rb
+- lib/opensearch/api/actions/indices/delete_alias.rb
+- lib/opensearch/api/actions/indices/delete_index_template.rb
+- lib/opensearch/api/actions/indices/delete_template.rb
+- lib/opensearch/api/actions/indices/disk_usage.rb
+- lib/opensearch/api/actions/indices/exists.rb
+- lib/opensearch/api/actions/indices/exists_alias.rb
+- lib/opensearch/api/actions/indices/exists_index_template.rb
+- lib/opensearch/api/actions/indices/exists_template.rb
+- lib/opensearch/api/actions/indices/field_usage_stats.rb
+- lib/opensearch/api/actions/indices/flush.rb
+- lib/opensearch/api/actions/indices/forcemerge.rb
+- lib/opensearch/api/actions/indices/get.rb
+- lib/opensearch/api/actions/indices/get_alias.rb
+- lib/opensearch/api/actions/indices/get_field_mapping.rb
+- lib/opensearch/api/actions/indices/get_index_template.rb
+- lib/opensearch/api/actions/indices/get_mapping.rb
+- lib/opensearch/api/actions/indices/get_settings.rb
+- lib/opensearch/api/actions/indices/get_template.rb
+- lib/opensearch/api/actions/indices/get_upgrade.rb
+- lib/opensearch/api/actions/indices/open.rb
+- lib/opensearch/api/actions/indices/params_registry.rb
+- lib/opensearch/api/actions/indices/put_alias.rb
+- lib/opensearch/api/actions/indices/put_index_template.rb
+- lib/opensearch/api/actions/indices/put_mapping.rb
+- lib/opensearch/api/actions/indices/put_settings.rb
+- lib/opensearch/api/actions/indices/put_template.rb
+- lib/opensearch/api/actions/indices/recovery.rb
+- lib/opensearch/api/actions/indices/refresh.rb
+- lib/opensearch/api/actions/indices/resolve_index.rb
+- lib/opensearch/api/actions/indices/rollover.rb
+- lib/opensearch/api/actions/indices/segments.rb
+- lib/opensearch/api/actions/indices/shard_stores.rb
+- lib/opensearch/api/actions/indices/shrink.rb
+- lib/opensearch/api/actions/indices/simulate_index_template.rb
+- lib/opensearch/api/actions/indices/simulate_template.rb
+- lib/opensearch/api/actions/indices/split.rb
+- lib/opensearch/api/actions/indices/stats.rb
+- lib/opensearch/api/actions/indices/update_aliases.rb
+- lib/opensearch/api/actions/indices/upgrade.rb
+- lib/opensearch/api/actions/indices/validate_query.rb
+- lib/opensearch/api/actions/info.rb
+- lib/opensearch/api/actions/ingest/delete_pipeline.rb
+- lib/opensearch/api/actions/ingest/geo_ip_stats.rb
+- lib/opensearch/api/actions/ingest/get_pipeline.rb
+- lib/opensearch/api/actions/ingest/params_registry.rb
+- lib/opensearch/api/actions/ingest/processor_grok.rb
+- lib/opensearch/api/actions/ingest/put_pipeline.rb
+- lib/opensearch/api/actions/ingest/simulate.rb
+- lib/opensearch/api/actions/mget.rb
+- lib/opensearch/api/actions/msearch.rb
+- lib/opensearch/api/actions/msearch_template.rb
+- lib/opensearch/api/actions/mtermvectors.rb
+- lib/opensearch/api/actions/nodes/hot_threads.rb
+- lib/opensearch/api/actions/nodes/info.rb
+- lib/opensearch/api/actions/nodes/params_registry.rb
+- lib/opensearch/api/actions/nodes/reload_secure_settings.rb
+- lib/opensearch/api/actions/nodes/shutdown.rb
+- lib/opensearch/api/actions/nodes/stats.rb
+- lib/opensearch/api/actions/nodes/usage.rb
+- lib/opensearch/api/actions/params_registry.rb
+- lib/opensearch/api/actions/ping.rb
+- lib/opensearch/api/actions/put_script.rb
+- lib/opensearch/api/actions/rank_eval.rb
+- lib/opensearch/api/actions/reindex.rb
+- lib/opensearch/api/actions/reindex_rethrottle.rb
+- lib/opensearch/api/actions/remote/info.rb
+- lib/opensearch/api/actions/render_search_template.rb
+- lib/opensearch/api/actions/scripts_painless_execute.rb
+- lib/opensearch/api/actions/scroll.rb
+- lib/opensearch/api/actions/search.rb
+- lib/opensearch/api/actions/search_shards.rb
+- lib/opensearch/api/actions/search_template.rb
+- lib/opensearch/api/actions/shutdown/delete_node.rb
+- lib/opensearch/api/actions/shutdown/get_node.rb
+- lib/opensearch/api/actions/shutdown/params_registry.rb
+- lib/opensearch/api/actions/shutdown/put_node.rb
+- lib/opensearch/api/actions/snapshot/cleanup_repository.rb
+- lib/opensearch/api/actions/snapshot/clone.rb
+- lib/opensearch/api/actions/snapshot/create.rb
+- lib/opensearch/api/actions/snapshot/create_repository.rb
+- lib/opensearch/api/actions/snapshot/delete.rb
+- lib/opensearch/api/actions/snapshot/delete_repository.rb
+- lib/opensearch/api/actions/snapshot/get.rb
+- lib/opensearch/api/actions/snapshot/get_features.rb
+- lib/opensearch/api/actions/snapshot/get_repository.rb
+- lib/opensearch/api/actions/snapshot/params_registry.rb
+- lib/opensearch/api/actions/snapshot/repository_analyze.rb
+- lib/opensearch/api/actions/snapshot/restore.rb
+- lib/opensearch/api/actions/snapshot/status.rb
+- lib/opensearch/api/actions/snapshot/verify_repository.rb
+- lib/opensearch/api/actions/tasks/cancel.rb
+- lib/opensearch/api/actions/tasks/get.rb
+- lib/opensearch/api/actions/tasks/list.rb
+- lib/opensearch/api/actions/tasks/params_registry.rb
+- lib/opensearch/api/actions/termvectors.rb
+- lib/opensearch/api/actions/update.rb
+- lib/opensearch/api/actions/update_by_query.rb
+- lib/opensearch/api/actions/update_by_query_rethrottle.rb
+- lib/opensearch/api/namespace/cat.rb
+- lib/opensearch/api/namespace/cluster.rb
+- lib/opensearch/api/namespace/common.rb
+- lib/opensearch/api/namespace/dangling_indices.rb
+- lib/opensearch/api/namespace/features.rb
+- lib/opensearch/api/namespace/indices.rb
+- lib/opensearch/api/namespace/ingest.rb
+- lib/opensearch/api/namespace/nodes.rb
+- lib/opensearch/api/namespace/remote.rb
+- lib/opensearch/api/namespace/security.rb
+- lib/opensearch/api/namespace/shutdown.rb
+- lib/opensearch/api/namespace/snapshot.rb
+- lib/opensearch/api/namespace/tasks.rb
+- lib/opensearch/api/utils.rb
+- lib/opensearch/api/version.rb
+- opensearch-api.gemspec
+- spec/opensearch/api/actions/abort_benchmark_spec.rb
+- spec/opensearch/api/actions/benchmark_spec.rb
+- spec/opensearch/api/actions/bulk_spec.rb
+- spec/opensearch/api/actions/cat/aliases_spec.rb
+- spec/opensearch/api/actions/cat/all_pit_segments_spec.rb
+- spec/opensearch/api/actions/cat/allocation_spec.rb
+- spec/opensearch/api/actions/cat/cluster_manager_spec.rb
+- spec/opensearch/api/actions/cat/count_spec.rb
+- spec/opensearch/api/actions/cat/fielddata_spec.rb
+- spec/opensearch/api/actions/cat/health_spec.rb
+- spec/opensearch/api/actions/cat/help_spec.rb
+- spec/opensearch/api/actions/cat/indices_spec.rb
+- spec/opensearch/api/actions/cat/master_spec.rb
+- spec/opensearch/api/actions/cat/nodeattrs_spec.rb
+- spec/opensearch/api/actions/cat/nodes_spec.rb
+- spec/opensearch/api/actions/cat/pending_tasks_spec.rb
+- spec/opensearch/api/actions/cat/pit_segments_spec.rb
+- spec/opensearch/api/actions/cat/plugins_spec.rb
+- spec/opensearch/api/actions/cat/recovery_spec.rb
+- spec/opensearch/api/actions/cat/repositories_spec.rb
+- spec/opensearch/api/actions/cat/segments_spec.rb
+- spec/opensearch/api/actions/cat/shards_spec.rb
+- spec/opensearch/api/actions/cat/snapshot_spec.rb
+- spec/opensearch/api/actions/cat/tasks_spec.rb
+- spec/opensearch/api/actions/cat/templates_spec.rb
+- spec/opensearch/api/actions/cat/thread_pool_spec.rb
+- spec/opensearch/api/actions/clear_scroll_spec.rb
+- spec/opensearch/api/actions/cluster/allocation_explain_spec.rb
+- spec/opensearch/api/actions/cluster/get_settings_spec.rb
+- spec/opensearch/api/actions/cluster/health_spec.rb
+- spec/opensearch/api/actions/cluster/pending_tasks_spec.rb
+- spec/opensearch/api/actions/cluster/put_settings_spec.rb
+- spec/opensearch/api/actions/cluster/remote_info_spec.rb
+- spec/opensearch/api/actions/cluster/reroute_spec.rb
+- spec/opensearch/api/actions/cluster/state_spec.rb
+- spec/opensearch/api/actions/cluster/stats_spec.rb
+- spec/opensearch/api/actions/count_spec.rb
+- spec/opensearch/api/actions/create_document_spec.rb
+- spec/opensearch/api/actions/create_pit_spec.rb
+- spec/opensearch/api/actions/dangling_indices/delete_dangling_indices_spec.rb
+- spec/opensearch/api/actions/dangling_indices/import_dangling_indices_spec.rb
+- spec/opensearch/api/actions/dangling_indices/list_dangling_indices_spec.rb
+- spec/opensearch/api/actions/delete_all_pits_spec.rb
+- spec/opensearch/api/actions/delete_by_query_spec.rb
+- spec/opensearch/api/actions/delete_document_spec.rb
+- spec/opensearch/api/actions/delete_pit_spec.rb
+- spec/opensearch/api/actions/delete_script_spec.rb
+- spec/opensearch/api/actions/exists_document_spec.rb
+- spec/opensearch/api/actions/explain_document_spec.rb
+- spec/opensearch/api/actions/features/get_features_spec.rb
+- spec/opensearch/api/actions/features/reset_features_spec.rb
+- spec/opensearch/api/actions/field_caps_spec.rb
+- spec/opensearch/api/actions/get_all_pits_spec.rb
+- spec/opensearch/api/actions/get_document_source_spec.rb
+- spec/opensearch/api/actions/get_document_spec.rb
+- spec/opensearch/api/actions/get_script_spec.rb
+- spec/opensearch/api/actions/hashie_spec.rb
+- spec/opensearch/api/actions/index_document_spec.rb
+- spec/opensearch/api/actions/indices/add_block_spec.rb
+- spec/opensearch/api/actions/indices/analyze_spec.rb
+- spec/opensearch/api/actions/indices/clear_cache_spec.rb
+- spec/opensearch/api/actions/indices/clone_spec.rb
+- spec/opensearch/api/actions/indices/close_spec.rb
+- spec/opensearch/api/actions/indices/create_spec.rb
+- spec/opensearch/api/actions/indices/delete_alias_spec.rb
+- spec/opensearch/api/actions/indices/delete_spec.rb
+- spec/opensearch/api/actions/indices/delete_template_spec.rb
+- spec/opensearch/api/actions/indices/disk_usage_spec.rb
+- spec/opensearch/api/actions/indices/exists_alias_spec.rb
+- spec/opensearch/api/actions/indices/exists_spec.rb
+- spec/opensearch/api/actions/indices/exists_template_spec.rb
+- spec/opensearch/api/actions/indices/field_usage_stats_spec.rb
+- spec/opensearch/api/actions/indices/flush_spec.rb
+- spec/opensearch/api/actions/indices/forcemerge_spec.rb
+- spec/opensearch/api/actions/indices/get_alias_spec.rb
+- spec/opensearch/api/actions/indices/get_field_mapping_spec.rb
+- spec/opensearch/api/actions/indices/get_mapping_spec.rb
+- spec/opensearch/api/actions/indices/get_settings_spec.rb
+- spec/opensearch/api/actions/indices/get_spec.rb
+- spec/opensearch/api/actions/indices/open_spec.rb
+- spec/opensearch/api/actions/indices/put_alias_spec.rb
+- spec/opensearch/api/actions/indices/put_mapping_spec.rb
+- spec/opensearch/api/actions/indices/put_settings_spec.rb
+- spec/opensearch/api/actions/indices/put_template_spec.rb
+- spec/opensearch/api/actions/indices/recovery_spec.rb
+- spec/opensearch/api/actions/indices/refresh_spec.rb
+- spec/opensearch/api/actions/indices/rollover_spec.rb
+- spec/opensearch/api/actions/indices/segments_spec.rb
+- spec/opensearch/api/actions/indices/shard_stores_spec.rb
+- spec/opensearch/api/actions/indices/shrink_spec.rb
+- spec/opensearch/api/actions/indices/split_spec.rb
+- spec/opensearch/api/actions/indices/stats_spec.rb
+- spec/opensearch/api/actions/indices/update_aliases_spec.rb
+- spec/opensearch/api/actions/indices/upgrade_spec.rb
+- spec/opensearch/api/actions/indices/validate_query_spec.rb
+- spec/opensearch/api/actions/info_spec.rb
+- spec/opensearch/api/actions/ingest/delete_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/geo_ip_stats_spec.rb
+- spec/opensearch/api/actions/ingest/get_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/put_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/simulate_spec.rb
+- spec/opensearch/api/actions/json_builders_spec.rb
+- spec/opensearch/api/actions/mget_spec.rb
+- spec/opensearch/api/actions/msearch_spec.rb
+- spec/opensearch/api/actions/msearch_template_spec.rb
+- spec/opensearch/api/actions/mtermvectors_spec.rb
+- spec/opensearch/api/actions/nodes/hot_threads_spec.rb
+- spec/opensearch/api/actions/nodes/info_spec.rb
+- spec/opensearch/api/actions/nodes/reload_secure_settings_spec.rb
+- spec/opensearch/api/actions/nodes/shutdown_spec.rb
+- spec/opensearch/api/actions/nodes/stats_spec.rb
+- spec/opensearch/api/actions/ping_spec.rb
+- spec/opensearch/api/actions/put_script_spec.rb
+- spec/opensearch/api/actions/reindex_spec.rb
+- spec/opensearch/api/actions/remote/info_spec.rb
+- spec/opensearch/api/actions/render_search_template_spec.rb
+- spec/opensearch/api/actions/scroll_spec.rb
+- spec/opensearch/api/actions/search_shards_spec.rb
+- spec/opensearch/api/actions/search_spec.rb
+- spec/opensearch/api/actions/search_template_spec.rb
+- spec/opensearch/api/actions/shutdown/delete_node_spec.rb
+- spec/opensearch/api/actions/shutdown/get_node_spec.rb
+- spec/opensearch/api/actions/shutdown/put_node_spec.rb
+- spec/opensearch/api/actions/snapshot/clone_spec.rb
+- spec/opensearch/api/actions/snapshot/create_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/create_spec.rb
+- spec/opensearch/api/actions/snapshot/delete_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/delete_spec.rb
+- spec/opensearch/api/actions/snapshot/get_features_spec.rb
+- spec/opensearch/api/actions/snapshot/get_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/get_spec.rb
+- spec/opensearch/api/actions/snapshot/repository_analize_spec.rb
+- spec/opensearch/api/actions/snapshot/restore_spec.rb
+- spec/opensearch/api/actions/snapshot/status_spec.rb
+- spec/opensearch/api/actions/snapshot/verify_repository_spec.rb
+- spec/opensearch/api/actions/tasks/cancel_spec.rb
+- spec/opensearch/api/actions/tasks/get_spec.rb
+- spec/opensearch/api/actions/tasks/list_spec.rb
+- spec/opensearch/api/actions/termvectors_spec.rb
+- spec/opensearch/api/actions/update_by_query_spec.rb
+- spec/opensearch/api/actions/update_document_spec.rb
+- spec/opensearch/api/api_spec.rb
+- spec/opensearch/api/client_spec.rb
+- spec/opensearch/api/rest_api_yaml_spec.rb
+- spec/opensearch/api/utils_spec.rb
+- spec/rest_yaml_tests_helper.rb
+- spec/skipped_tests.yml
+- spec/spec_helper.rb
+homepage: https://opensearch.org/docs/latest/
+licenses:
+- Apache-2.0
+metadata:
+  homepage_uri: https://opensearch.org/docs/latest/
+  source_code_uri: https://github.com/opensearch-project/opensearch-ruby/tree/main/opensearch-api
+  bug_tracker_uri: https://github.com/opensearch-project/opensearch-ruby/issues
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.4'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.3.26
+signing_key: 
+specification_version: 4
+summary: Ruby API for OpenSearch.
+test_files:
+- spec/opensearch/api/actions/abort_benchmark_spec.rb
+- spec/opensearch/api/actions/benchmark_spec.rb
+- spec/opensearch/api/actions/bulk_spec.rb
+- spec/opensearch/api/actions/cat/aliases_spec.rb
+- spec/opensearch/api/actions/cat/all_pit_segments_spec.rb
+- spec/opensearch/api/actions/cat/allocation_spec.rb
+- spec/opensearch/api/actions/cat/cluster_manager_spec.rb
+- spec/opensearch/api/actions/cat/count_spec.rb
+- spec/opensearch/api/actions/cat/fielddata_spec.rb
+- spec/opensearch/api/actions/cat/health_spec.rb
+- spec/opensearch/api/actions/cat/help_spec.rb
+- spec/opensearch/api/actions/cat/indices_spec.rb
+- spec/opensearch/api/actions/cat/master_spec.rb
+- spec/opensearch/api/actions/cat/nodeattrs_spec.rb
+- spec/opensearch/api/actions/cat/nodes_spec.rb
+- spec/opensearch/api/actions/cat/pending_tasks_spec.rb
+- spec/opensearch/api/actions/cat/pit_segments_spec.rb
+- spec/opensearch/api/actions/cat/plugins_spec.rb
+- spec/opensearch/api/actions/cat/recovery_spec.rb
+- spec/opensearch/api/actions/cat/repositories_spec.rb
+- spec/opensearch/api/actions/cat/segments_spec.rb
+- spec/opensearch/api/actions/cat/shards_spec.rb
+- spec/opensearch/api/actions/cat/snapshot_spec.rb
+- spec/opensearch/api/actions/cat/tasks_spec.rb
+- spec/opensearch/api/actions/cat/templates_spec.rb
+- spec/opensearch/api/actions/cat/thread_pool_spec.rb
+- spec/opensearch/api/actions/clear_scroll_spec.rb
+- spec/opensearch/api/actions/cluster/allocation_explain_spec.rb
+- spec/opensearch/api/actions/cluster/get_settings_spec.rb
+- spec/opensearch/api/actions/cluster/health_spec.rb
+- spec/opensearch/api/actions/cluster/pending_tasks_spec.rb
+- spec/opensearch/api/actions/cluster/put_settings_spec.rb
+- spec/opensearch/api/actions/cluster/remote_info_spec.rb
+- spec/opensearch/api/actions/cluster/reroute_spec.rb
+- spec/opensearch/api/actions/cluster/state_spec.rb
+- spec/opensearch/api/actions/cluster/stats_spec.rb
+- spec/opensearch/api/actions/count_spec.rb
+- spec/opensearch/api/actions/create_document_spec.rb
+- spec/opensearch/api/actions/create_pit_spec.rb
+- spec/opensearch/api/actions/dangling_indices/delete_dangling_indices_spec.rb
+- spec/opensearch/api/actions/dangling_indices/import_dangling_indices_spec.rb
+- spec/opensearch/api/actions/dangling_indices/list_dangling_indices_spec.rb
+- spec/opensearch/api/actions/delete_all_pits_spec.rb
+- spec/opensearch/api/actions/delete_by_query_spec.rb
+- spec/opensearch/api/actions/delete_document_spec.rb
+- spec/opensearch/api/actions/delete_pit_spec.rb
+- spec/opensearch/api/actions/delete_script_spec.rb
+- spec/opensearch/api/actions/exists_document_spec.rb
+- spec/opensearch/api/actions/explain_document_spec.rb
+- spec/opensearch/api/actions/features/get_features_spec.rb
+- spec/opensearch/api/actions/features/reset_features_spec.rb
+- spec/opensearch/api/actions/field_caps_spec.rb
+- spec/opensearch/api/actions/get_all_pits_spec.rb
+- spec/opensearch/api/actions/get_document_source_spec.rb
+- spec/opensearch/api/actions/get_document_spec.rb
+- spec/opensearch/api/actions/get_script_spec.rb
+- spec/opensearch/api/actions/hashie_spec.rb
+- spec/opensearch/api/actions/index_document_spec.rb
+- spec/opensearch/api/actions/indices/add_block_spec.rb
+- spec/opensearch/api/actions/indices/analyze_spec.rb
+- spec/opensearch/api/actions/indices/clear_cache_spec.rb
+- spec/opensearch/api/actions/indices/clone_spec.rb
+- spec/opensearch/api/actions/indices/close_spec.rb
+- spec/opensearch/api/actions/indices/create_spec.rb
+- spec/opensearch/api/actions/indices/delete_alias_spec.rb
+- spec/opensearch/api/actions/indices/delete_spec.rb
+- spec/opensearch/api/actions/indices/delete_template_spec.rb
+- spec/opensearch/api/actions/indices/disk_usage_spec.rb
+- spec/opensearch/api/actions/indices/exists_alias_spec.rb
+- spec/opensearch/api/actions/indices/exists_spec.rb
+- spec/opensearch/api/actions/indices/exists_template_spec.rb
+- spec/opensearch/api/actions/indices/field_usage_stats_spec.rb
+- spec/opensearch/api/actions/indices/flush_spec.rb
+- spec/opensearch/api/actions/indices/forcemerge_spec.rb
+- spec/opensearch/api/actions/indices/get_alias_spec.rb
+- spec/opensearch/api/actions/indices/get_field_mapping_spec.rb
+- spec/opensearch/api/actions/indices/get_mapping_spec.rb
+- spec/opensearch/api/actions/indices/get_settings_spec.rb
+- spec/opensearch/api/actions/indices/get_spec.rb
+- spec/opensearch/api/actions/indices/open_spec.rb
+- spec/opensearch/api/actions/indices/put_alias_spec.rb
+- spec/opensearch/api/actions/indices/put_mapping_spec.rb
+- spec/opensearch/api/actions/indices/put_settings_spec.rb
+- spec/opensearch/api/actions/indices/put_template_spec.rb
+- spec/opensearch/api/actions/indices/recovery_spec.rb
+- spec/opensearch/api/actions/indices/refresh_spec.rb
+- spec/opensearch/api/actions/indices/rollover_spec.rb
+- spec/opensearch/api/actions/indices/segments_spec.rb
+- spec/opensearch/api/actions/indices/shard_stores_spec.rb
+- spec/opensearch/api/actions/indices/shrink_spec.rb
+- spec/opensearch/api/actions/indices/split_spec.rb
+- spec/opensearch/api/actions/indices/stats_spec.rb
+- spec/opensearch/api/actions/indices/update_aliases_spec.rb
+- spec/opensearch/api/actions/indices/upgrade_spec.rb
+- spec/opensearch/api/actions/indices/validate_query_spec.rb
+- spec/opensearch/api/actions/info_spec.rb
+- spec/opensearch/api/actions/ingest/delete_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/geo_ip_stats_spec.rb
+- spec/opensearch/api/actions/ingest/get_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/put_pipeline_spec.rb
+- spec/opensearch/api/actions/ingest/simulate_spec.rb
+- spec/opensearch/api/actions/json_builders_spec.rb
+- spec/opensearch/api/actions/mget_spec.rb
+- spec/opensearch/api/actions/msearch_spec.rb
+- spec/opensearch/api/actions/msearch_template_spec.rb
+- spec/opensearch/api/actions/mtermvectors_spec.rb
+- spec/opensearch/api/actions/nodes/hot_threads_spec.rb
+- spec/opensearch/api/actions/nodes/info_spec.rb
+- spec/opensearch/api/actions/nodes/reload_secure_settings_spec.rb
+- spec/opensearch/api/actions/nodes/shutdown_spec.rb
+- spec/opensearch/api/actions/nodes/stats_spec.rb
+- spec/opensearch/api/actions/ping_spec.rb
+- spec/opensearch/api/actions/put_script_spec.rb
+- spec/opensearch/api/actions/reindex_spec.rb
+- spec/opensearch/api/actions/remote/info_spec.rb
+- spec/opensearch/api/actions/render_search_template_spec.rb
+- spec/opensearch/api/actions/scroll_spec.rb
+- spec/opensearch/api/actions/search_shards_spec.rb
+- spec/opensearch/api/actions/search_spec.rb
+- spec/opensearch/api/actions/search_template_spec.rb
+- spec/opensearch/api/actions/shutdown/delete_node_spec.rb
+- spec/opensearch/api/actions/shutdown/get_node_spec.rb
+- spec/opensearch/api/actions/shutdown/put_node_spec.rb
+- spec/opensearch/api/actions/snapshot/clone_spec.rb
+- spec/opensearch/api/actions/snapshot/create_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/create_spec.rb
+- spec/opensearch/api/actions/snapshot/delete_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/delete_spec.rb
+- spec/opensearch/api/actions/snapshot/get_features_spec.rb
+- spec/opensearch/api/actions/snapshot/get_repository_spec.rb
+- spec/opensearch/api/actions/snapshot/get_spec.rb
+- spec/opensearch/api/actions/snapshot/repository_analize_spec.rb
+- spec/opensearch/api/actions/snapshot/restore_spec.rb
+- spec/opensearch/api/actions/snapshot/status_spec.rb
+- spec/opensearch/api/actions/snapshot/verify_repository_spec.rb
+- spec/opensearch/api/actions/tasks/cancel_spec.rb
+- spec/opensearch/api/actions/tasks/get_spec.rb
+- spec/opensearch/api/actions/tasks/list_spec.rb
+- spec/opensearch/api/actions/termvectors_spec.rb
+- spec/opensearch/api/actions/update_by_query_spec.rb
+- spec/opensearch/api/actions/update_document_spec.rb
+- spec/opensearch/api/api_spec.rb
+- spec/opensearch/api/client_spec.rb
+- spec/opensearch/api/rest_api_yaml_spec.rb
+- spec/opensearch/api/utils_spec.rb
+- spec/rest_yaml_tests_helper.rb
+- spec/skipped_tests.yml
+- spec/spec_helper.rb

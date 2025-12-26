@@ -1,0 +1,93 @@
+--- !ruby/object:Gem::Specification
+name: tilt
+version: !ruby/object:Gem::Version
+  version: 2.6.0
+platform: ruby
+authors:
+- Ryan Tomayko
+- Magnus Holm
+- Jeremy Evans
+bindir: bin
+cert_chain: []
+date: 2025-01-13 00:00:00.000000000 Z
+dependencies: []
+description: Generic interface to multiple Ruby template engines
+email: code@jeremyevans.net
+executables:
+- tilt
+extensions: []
+extra_rdoc_files: []
+files:
+- COPYING
+- bin/tilt
+- lib/tilt.rb
+- lib/tilt/_emacs_org.rb
+- lib/tilt/_handlebars.rb
+- lib/tilt/_jbuilder.rb
+- lib/tilt/_org.rb
+- lib/tilt/asciidoc.rb
+- lib/tilt/babel.rb
+- lib/tilt/builder.rb
+- lib/tilt/cli.rb
+- lib/tilt/coffee.rb
+- lib/tilt/commonmarker.rb
+- lib/tilt/creole.rb
+- lib/tilt/csv.rb
+- lib/tilt/erb.rb
+- lib/tilt/erubi.rb
+- lib/tilt/etanni.rb
+- lib/tilt/haml.rb
+- lib/tilt/kramdown.rb
+- lib/tilt/liquid.rb
+- lib/tilt/livescript.rb
+- lib/tilt/mapping.rb
+- lib/tilt/markaby.rb
+- lib/tilt/nokogiri.rb
+- lib/tilt/pandoc.rb
+- lib/tilt/pipeline.rb
+- lib/tilt/plain.rb
+- lib/tilt/prawn.rb
+- lib/tilt/radius.rb
+- lib/tilt/rdiscount.rb
+- lib/tilt/rdoc.rb
+- lib/tilt/redcarpet.rb
+- lib/tilt/redcloth.rb
+- lib/tilt/rst-pandoc.rb
+- lib/tilt/sass.rb
+- lib/tilt/slim.rb
+- lib/tilt/string.rb
+- lib/tilt/template.rb
+- lib/tilt/typescript.rb
+- lib/tilt/yajl.rb
+homepage: https://github.com/jeremyevans/tilt
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/jeremyevans/tilt/issues
+  changelog_uri: https://github.com/jeremyevans/tilt/blob/master/CHANGELOG.md
+  mailing_list_uri: https://github.com/jeremyevans/tilt/discussions
+  source_code_uri: https://github.com/jeremyevans/tilt
+rdoc_options:
+- "--line-numbers"
+- "--inline-source"
+- "--title"
+- Tilt
+- "--main"
+- Tilt
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Generic interface to multiple Ruby template engines
+test_files: []

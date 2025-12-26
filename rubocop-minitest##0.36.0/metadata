@@ -1,0 +1,165 @@
+--- !ruby/object:Gem::Specification
+name: rubocop-minitest
+version: !ruby/object:Gem::Version
+  version: 0.36.0
+platform: ruby
+authors:
+- Bozhidar Batsov
+- Jonas Arvidsson
+- Koichi ITO
+autorequire:
+bindir: exe
+cert_chain: []
+date: 2024-08-31 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.61'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.61'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rubocop-ast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.31.1
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description: |
+  Automatic Minitest code style checking tool.
+  A RuboCop extension focused on enforcing Minitest best practices and coding conventions.
+email:
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- config/default.yml
+- lib/rubocop-minitest.rb
+- lib/rubocop/cop/generator.rb
+- lib/rubocop/cop/minitest/assert_empty.rb
+- lib/rubocop/cop/minitest/assert_empty_literal.rb
+- lib/rubocop/cop/minitest/assert_equal.rb
+- lib/rubocop/cop/minitest/assert_in_delta.rb
+- lib/rubocop/cop/minitest/assert_includes.rb
+- lib/rubocop/cop/minitest/assert_instance_of.rb
+- lib/rubocop/cop/minitest/assert_kind_of.rb
+- lib/rubocop/cop/minitest/assert_match.rb
+- lib/rubocop/cop/minitest/assert_nil.rb
+- lib/rubocop/cop/minitest/assert_operator.rb
+- lib/rubocop/cop/minitest/assert_output.rb
+- lib/rubocop/cop/minitest/assert_path_exists.rb
+- lib/rubocop/cop/minitest/assert_predicate.rb
+- lib/rubocop/cop/minitest/assert_raises_compound_body.rb
+- lib/rubocop/cop/minitest/assert_raises_with_regexp_argument.rb
+- lib/rubocop/cop/minitest/assert_respond_to.rb
+- lib/rubocop/cop/minitest/assert_same.rb
+- lib/rubocop/cop/minitest/assert_silent.rb
+- lib/rubocop/cop/minitest/assert_truthy.rb
+- lib/rubocop/cop/minitest/assert_with_expected_argument.rb
+- lib/rubocop/cop/minitest/assertion_in_lifecycle_hook.rb
+- lib/rubocop/cop/minitest/duplicate_test_run.rb
+- lib/rubocop/cop/minitest/empty_line_before_assertion_methods.rb
+- lib/rubocop/cop/minitest/focus.rb
+- lib/rubocop/cop/minitest/global_expectations.rb
+- lib/rubocop/cop/minitest/lifecycle_hooks_order.rb
+- lib/rubocop/cop/minitest/literal_as_actual_argument.rb
+- lib/rubocop/cop/minitest/multiple_assertions.rb
+- lib/rubocop/cop/minitest/no_assertions.rb
+- lib/rubocop/cop/minitest/no_test_cases.rb
+- lib/rubocop/cop/minitest/non_executable_test_method.rb
+- lib/rubocop/cop/minitest/non_public_test_method.rb
+- lib/rubocop/cop/minitest/redundant_message_argument.rb
+- lib/rubocop/cop/minitest/refute_empty.rb
+- lib/rubocop/cop/minitest/refute_equal.rb
+- lib/rubocop/cop/minitest/refute_false.rb
+- lib/rubocop/cop/minitest/refute_in_delta.rb
+- lib/rubocop/cop/minitest/refute_includes.rb
+- lib/rubocop/cop/minitest/refute_instance_of.rb
+- lib/rubocop/cop/minitest/refute_kind_of.rb
+- lib/rubocop/cop/minitest/refute_match.rb
+- lib/rubocop/cop/minitest/refute_nil.rb
+- lib/rubocop/cop/minitest/refute_operator.rb
+- lib/rubocop/cop/minitest/refute_path_exists.rb
+- lib/rubocop/cop/minitest/refute_predicate.rb
+- lib/rubocop/cop/minitest/refute_respond_to.rb
+- lib/rubocop/cop/minitest/refute_same.rb
+- lib/rubocop/cop/minitest/return_in_test_method.rb
+- lib/rubocop/cop/minitest/skip_ensure.rb
+- lib/rubocop/cop/minitest/skip_without_reason.rb
+- lib/rubocop/cop/minitest/test_file_name.rb
+- lib/rubocop/cop/minitest/test_method_name.rb
+- lib/rubocop/cop/minitest/unreachable_assertion.rb
+- lib/rubocop/cop/minitest/unspecified_exception.rb
+- lib/rubocop/cop/minitest/useless_assertion.rb
+- lib/rubocop/cop/minitest_cops.rb
+- lib/rubocop/cop/mixin/argument_range_helper.rb
+- lib/rubocop/cop/mixin/in_delta_mixin.rb
+- lib/rubocop/cop/mixin/instance_of_assertion_handleable.rb
+- lib/rubocop/cop/mixin/minitest_cop_rule.rb
+- lib/rubocop/cop/mixin/minitest_exploration_helpers.rb
+- lib/rubocop/cop/mixin/nil_assertion_handleable.rb
+- lib/rubocop/cop/mixin/predicate_assertion_handleable.rb
+- lib/rubocop/minitest.rb
+- lib/rubocop/minitest/assert_offense.rb
+- lib/rubocop/minitest/inject.rb
+- lib/rubocop/minitest/support.rb
+- lib/rubocop/minitest/version.rb
+homepage:
+licenses:
+- MIT
+metadata:
+  homepage_uri: https://docs.rubocop.org/rubocop-minitest/
+  changelog_uri: https://github.com/rubocop/rubocop-minitest/blob/master/CHANGELOG.md
+  source_code_uri: https://github.com/rubocop/rubocop-minitest
+  documentation_uri: https://docs.rubocop.org/rubocop-minitest/0.36
+  bug_tracker_uri: https://github.com/rubocop/rubocop-minitest/issues
+  rubygems_mfa_required: 'true'
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.7.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: Automatic Minitest code style checking tool.
+test_files: []

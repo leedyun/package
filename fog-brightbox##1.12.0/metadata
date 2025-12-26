@@ -1,0 +1,564 @@
+--- !ruby/object:Gem::Specification
+name: fog-brightbox
+version: !ruby/object:Gem::Version
+  version: 1.12.0
+platform: ruby
+authors:
+- Paul Thornthwaite
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-12-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: fog-core
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.45'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.45'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: fog-json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: dry-inflector
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shindo
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Module for the 'fog' gem to support Brightbox Cloud
+email:
+- tokengeek@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/workflows/ruby.yml"
+- ".gitignore"
+- ".rubocop.yml"
+- CHANGELOG.md
+- Gemfile
+- LICENSE.txt
+- README.md
+- Rakefile
+- fog-brightbox.gemspec
+- lib/fog/brightbox.rb
+- lib/fog/brightbox/compute.rb
+- lib/fog/brightbox/compute/config.rb
+- lib/fog/brightbox/compute/image_selector.rb
+- lib/fog/brightbox/compute/resource_locking.rb
+- lib/fog/brightbox/compute/shared.rb
+- lib/fog/brightbox/config.rb
+- lib/fog/brightbox/link_helper.rb
+- lib/fog/brightbox/model.rb
+- lib/fog/brightbox/model_helper.rb
+- lib/fog/brightbox/models/compute/account.rb
+- lib/fog/brightbox/models/compute/accounts.rb
+- lib/fog/brightbox/models/compute/api_client.rb
+- lib/fog/brightbox/models/compute/api_clients.rb
+- lib/fog/brightbox/models/compute/application.rb
+- lib/fog/brightbox/models/compute/applications.rb
+- lib/fog/brightbox/models/compute/cloud_ip.rb
+- lib/fog/brightbox/models/compute/cloud_ips.rb
+- lib/fog/brightbox/models/compute/collaboration.rb
+- lib/fog/brightbox/models/compute/collaborations.rb
+- lib/fog/brightbox/models/compute/config_map.rb
+- lib/fog/brightbox/models/compute/config_maps.rb
+- lib/fog/brightbox/models/compute/database_server.rb
+- lib/fog/brightbox/models/compute/database_servers.rb
+- lib/fog/brightbox/models/compute/database_snapshot.rb
+- lib/fog/brightbox/models/compute/database_snapshots.rb
+- lib/fog/brightbox/models/compute/database_type.rb
+- lib/fog/brightbox/models/compute/database_types.rb
+- lib/fog/brightbox/models/compute/event.rb
+- lib/fog/brightbox/models/compute/events.rb
+- lib/fog/brightbox/models/compute/firewall_policies.rb
+- lib/fog/brightbox/models/compute/firewall_policy.rb
+- lib/fog/brightbox/models/compute/firewall_rule.rb
+- lib/fog/brightbox/models/compute/firewall_rules.rb
+- lib/fog/brightbox/models/compute/flavor.rb
+- lib/fog/brightbox/models/compute/flavors.rb
+- lib/fog/brightbox/models/compute/image.rb
+- lib/fog/brightbox/models/compute/images.rb
+- lib/fog/brightbox/models/compute/load_balancer.rb
+- lib/fog/brightbox/models/compute/load_balancers.rb
+- lib/fog/brightbox/models/compute/server.rb
+- lib/fog/brightbox/models/compute/server_group.rb
+- lib/fog/brightbox/models/compute/server_groups.rb
+- lib/fog/brightbox/models/compute/servers.rb
+- lib/fog/brightbox/models/compute/user.rb
+- lib/fog/brightbox/models/compute/user_collaboration.rb
+- lib/fog/brightbox/models/compute/user_collaborations.rb
+- lib/fog/brightbox/models/compute/users.rb
+- lib/fog/brightbox/models/compute/volume.rb
+- lib/fog/brightbox/models/compute/volumes.rb
+- lib/fog/brightbox/models/compute/zone.rb
+- lib/fog/brightbox/models/compute/zones.rb
+- lib/fog/brightbox/models/storage/directories.rb
+- lib/fog/brightbox/models/storage/directory.rb
+- lib/fog/brightbox/models/storage/file.rb
+- lib/fog/brightbox/models/storage/files.rb
+- lib/fog/brightbox/oauth2.rb
+- lib/fog/brightbox/requests/compute/accept_user_collaboration.rb
+- lib/fog/brightbox/requests/compute/activate_console_server.rb
+- lib/fog/brightbox/requests/compute/add_listeners_load_balancer.rb
+- lib/fog/brightbox/requests/compute/add_nodes_load_balancer.rb
+- lib/fog/brightbox/requests/compute/add_servers_server_group.rb
+- lib/fog/brightbox/requests/compute/apply_to_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/attach_volume.rb
+- lib/fog/brightbox/requests/compute/copy_volume.rb
+- lib/fog/brightbox/requests/compute/create_api_client.rb
+- lib/fog/brightbox/requests/compute/create_application.rb
+- lib/fog/brightbox/requests/compute/create_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/create_collaboration.rb
+- lib/fog/brightbox/requests/compute/create_config_map.rb
+- lib/fog/brightbox/requests/compute/create_database_server.rb
+- lib/fog/brightbox/requests/compute/create_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/create_firewall_rule.rb
+- lib/fog/brightbox/requests/compute/create_image.rb
+- lib/fog/brightbox/requests/compute/create_load_balancer.rb
+- lib/fog/brightbox/requests/compute/create_server.rb
+- lib/fog/brightbox/requests/compute/create_server_group.rb
+- lib/fog/brightbox/requests/compute/create_volume.rb
+- lib/fog/brightbox/requests/compute/delete_api_client.rb
+- lib/fog/brightbox/requests/compute/delete_application.rb
+- lib/fog/brightbox/requests/compute/delete_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/delete_collaboration.rb
+- lib/fog/brightbox/requests/compute/delete_config_map.rb
+- lib/fog/brightbox/requests/compute/delete_database_server.rb
+- lib/fog/brightbox/requests/compute/delete_database_snapshot.rb
+- lib/fog/brightbox/requests/compute/delete_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/delete_firewall_rule.rb
+- lib/fog/brightbox/requests/compute/delete_image.rb
+- lib/fog/brightbox/requests/compute/delete_load_balancer.rb
+- lib/fog/brightbox/requests/compute/delete_server.rb
+- lib/fog/brightbox/requests/compute/delete_server_group.rb
+- lib/fog/brightbox/requests/compute/delete_user_collaboration.rb
+- lib/fog/brightbox/requests/compute/delete_volume.rb
+- lib/fog/brightbox/requests/compute/detach_volume.rb
+- lib/fog/brightbox/requests/compute/get_account.rb
+- lib/fog/brightbox/requests/compute/get_api_client.rb
+- lib/fog/brightbox/requests/compute/get_application.rb
+- lib/fog/brightbox/requests/compute/get_authenticated_user.rb
+- lib/fog/brightbox/requests/compute/get_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/get_collaboration.rb
+- lib/fog/brightbox/requests/compute/get_config_map.rb
+- lib/fog/brightbox/requests/compute/get_database_server.rb
+- lib/fog/brightbox/requests/compute/get_database_snapshot.rb
+- lib/fog/brightbox/requests/compute/get_database_type.rb
+- lib/fog/brightbox/requests/compute/get_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/get_firewall_rule.rb
+- lib/fog/brightbox/requests/compute/get_image.rb
+- lib/fog/brightbox/requests/compute/get_interface.rb
+- lib/fog/brightbox/requests/compute/get_load_balancer.rb
+- lib/fog/brightbox/requests/compute/get_scoped_account.rb
+- lib/fog/brightbox/requests/compute/get_server.rb
+- lib/fog/brightbox/requests/compute/get_server_group.rb
+- lib/fog/brightbox/requests/compute/get_server_type.rb
+- lib/fog/brightbox/requests/compute/get_user.rb
+- lib/fog/brightbox/requests/compute/get_user_collaboration.rb
+- lib/fog/brightbox/requests/compute/get_volume.rb
+- lib/fog/brightbox/requests/compute/get_zone.rb
+- lib/fog/brightbox/requests/compute/list_accounts.rb
+- lib/fog/brightbox/requests/compute/list_api_clients.rb
+- lib/fog/brightbox/requests/compute/list_applications.rb
+- lib/fog/brightbox/requests/compute/list_cloud_ips.rb
+- lib/fog/brightbox/requests/compute/list_collaborations.rb
+- lib/fog/brightbox/requests/compute/list_config_maps.rb
+- lib/fog/brightbox/requests/compute/list_database_servers.rb
+- lib/fog/brightbox/requests/compute/list_database_snapshots.rb
+- lib/fog/brightbox/requests/compute/list_database_types.rb
+- lib/fog/brightbox/requests/compute/list_events.rb
+- lib/fog/brightbox/requests/compute/list_firewall_policies.rb
+- lib/fog/brightbox/requests/compute/list_images.rb
+- lib/fog/brightbox/requests/compute/list_load_balancers.rb
+- lib/fog/brightbox/requests/compute/list_server_groups.rb
+- lib/fog/brightbox/requests/compute/list_server_types.rb
+- lib/fog/brightbox/requests/compute/list_servers.rb
+- lib/fog/brightbox/requests/compute/list_user_collaborations.rb
+- lib/fog/brightbox/requests/compute/list_users.rb
+- lib/fog/brightbox/requests/compute/list_volumes.rb
+- lib/fog/brightbox/requests/compute/list_zones.rb
+- lib/fog/brightbox/requests/compute/lock_resource_database_server.rb
+- lib/fog/brightbox/requests/compute/lock_resource_database_snapshot.rb
+- lib/fog/brightbox/requests/compute/lock_resource_image.rb
+- lib/fog/brightbox/requests/compute/lock_resource_load_balancer.rb
+- lib/fog/brightbox/requests/compute/lock_resource_server.rb
+- lib/fog/brightbox/requests/compute/lock_resource_volume.rb
+- lib/fog/brightbox/requests/compute/map_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/move_servers_server_group.rb
+- lib/fog/brightbox/requests/compute/reboot_server.rb
+- lib/fog/brightbox/requests/compute/reject_user_collaboration.rb
+- lib/fog/brightbox/requests/compute/remove_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/remove_listeners_load_balancer.rb
+- lib/fog/brightbox/requests/compute/remove_nodes_load_balancer.rb
+- lib/fog/brightbox/requests/compute/remove_servers_server_group.rb
+- lib/fog/brightbox/requests/compute/resend_collaboration.rb
+- lib/fog/brightbox/requests/compute/reset_database_server.rb
+- lib/fog/brightbox/requests/compute/reset_ftp_password_account.rb
+- lib/fog/brightbox/requests/compute/reset_ftp_password_scoped_account.rb
+- lib/fog/brightbox/requests/compute/reset_password_database_server.rb
+- lib/fog/brightbox/requests/compute/reset_secret_api_client.rb
+- lib/fog/brightbox/requests/compute/reset_secret_application.rb
+- lib/fog/brightbox/requests/compute/reset_server.rb
+- lib/fog/brightbox/requests/compute/resize_database_server.rb
+- lib/fog/brightbox/requests/compute/resize_volume.rb
+- lib/fog/brightbox/requests/compute/shutdown_server.rb
+- lib/fog/brightbox/requests/compute/snapshot_database_server.rb
+- lib/fog/brightbox/requests/compute/snapshot_server.rb
+- lib/fog/brightbox/requests/compute/start_server.rb
+- lib/fog/brightbox/requests/compute/stop_server.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_database_server.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_database_snapshot.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_image.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_load_balancer.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_server.rb
+- lib/fog/brightbox/requests/compute/unlock_resource_volume.rb
+- lib/fog/brightbox/requests/compute/unmap_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/update_account.rb
+- lib/fog/brightbox/requests/compute/update_api_client.rb
+- lib/fog/brightbox/requests/compute/update_application.rb
+- lib/fog/brightbox/requests/compute/update_cloud_ip.rb
+- lib/fog/brightbox/requests/compute/update_config_map.rb
+- lib/fog/brightbox/requests/compute/update_database_server.rb
+- lib/fog/brightbox/requests/compute/update_database_snapshot.rb
+- lib/fog/brightbox/requests/compute/update_firewall_policy.rb
+- lib/fog/brightbox/requests/compute/update_firewall_rule.rb
+- lib/fog/brightbox/requests/compute/update_image.rb
+- lib/fog/brightbox/requests/compute/update_load_balancer.rb
+- lib/fog/brightbox/requests/compute/update_scoped_account.rb
+- lib/fog/brightbox/requests/compute/update_server.rb
+- lib/fog/brightbox/requests/compute/update_server_group.rb
+- lib/fog/brightbox/requests/compute/update_user.rb
+- lib/fog/brightbox/requests/compute/update_volume.rb
+- lib/fog/brightbox/requests/storage/copy_object.rb
+- lib/fog/brightbox/requests/storage/delete_container.rb
+- lib/fog/brightbox/requests/storage/delete_multiple_objects.rb
+- lib/fog/brightbox/requests/storage/delete_object.rb
+- lib/fog/brightbox/requests/storage/delete_static_large_object.rb
+- lib/fog/brightbox/requests/storage/get_container.rb
+- lib/fog/brightbox/requests/storage/get_containers.rb
+- lib/fog/brightbox/requests/storage/get_object.rb
+- lib/fog/brightbox/requests/storage/get_object_http_url.rb
+- lib/fog/brightbox/requests/storage/get_object_https_url.rb
+- lib/fog/brightbox/requests/storage/head_container.rb
+- lib/fog/brightbox/requests/storage/head_containers.rb
+- lib/fog/brightbox/requests/storage/head_object.rb
+- lib/fog/brightbox/requests/storage/post_set_meta_temp_url_key.rb
+- lib/fog/brightbox/requests/storage/put_container.rb
+- lib/fog/brightbox/requests/storage/put_dynamic_obj_manifest.rb
+- lib/fog/brightbox/requests/storage/put_object.rb
+- lib/fog/brightbox/requests/storage/put_object_manifest.rb
+- lib/fog/brightbox/requests/storage/put_static_obj_manifest.rb
+- lib/fog/brightbox/storage.rb
+- lib/fog/brightbox/storage/authentication_request.rb
+- lib/fog/brightbox/storage/authentication_required.rb
+- lib/fog/brightbox/storage/config.rb
+- lib/fog/brightbox/storage/connection.rb
+- lib/fog/brightbox/storage/management_url_unknown.rb
+- lib/fog/brightbox/storage/not_found.rb
+- lib/fog/brightbox/version.rb
+- spec/fog/brightbox/compute/config_spec.rb
+- spec/fog/brightbox/compute/credentials_spec.rb
+- spec/fog/brightbox/compute/get_access_token_spec.rb
+- spec/fog/brightbox/compute/two_factor_spec.rb
+- spec/fog/brightbox/compute/wrapped_request_spec.rb
+- spec/fog/brightbox/config_spec.rb
+- spec/fog/brightbox/link_helper_spec.rb
+- spec/fog/brightbox/oauth2/client_credentials_strategy_spec.rb
+- spec/fog/brightbox/oauth2/credential_set_spec.rb
+- spec/fog/brightbox/oauth2/grant_type_strategy_spec.rb
+- spec/fog/brightbox/oauth2/refresh_token_strategy_spec.rb
+- spec/fog/brightbox/oauth2/user_credentials_strategy_spec.rb
+- spec/fog/brightbox/storage/authentication_request_spec.rb
+- spec/fog/brightbox/storage/config_spec.rb
+- spec/fog/brightbox/storage/connection_errors_spec.rb
+- spec/fog/brightbox/storage/connection_spec.rb
+- spec/fog/brightbox/storage/directory_spec.rb
+- spec/fog/brightbox/storage/escape_spec.rb
+- spec/fog/brightbox/storage/files_spec.rb
+- spec/fog/brightbox/storage_spec.rb
+- spec/fog/compute/brightbox/account_spec.rb
+- spec/fog/compute/brightbox/api_client_spec.rb
+- spec/fog/compute/brightbox/application_spec.rb
+- spec/fog/compute/brightbox/cloud_ip_spec.rb
+- spec/fog/compute/brightbox/collaboration_spec.rb
+- spec/fog/compute/brightbox/database_server_spec.rb
+- spec/fog/compute/brightbox/database_snapshot_spec.rb
+- spec/fog/compute/brightbox/database_type_spec.rb
+- spec/fog/compute/brightbox/event_spec.rb
+- spec/fog/compute/brightbox/firewall_policy_spec.rb
+- spec/fog/compute/brightbox/flavor_spec.rb
+- spec/fog/compute/brightbox/image_selector_spec.rb
+- spec/fog/compute/brightbox/image_spec.rb
+- spec/fog/compute/brightbox/load_balancer_spec.rb
+- spec/fog/compute/brightbox/server_group_spec.rb
+- spec/fog/compute/brightbox/server_spec.rb
+- spec/fog/compute/brightbox/user_collaboration_spec.rb
+- spec/fog/compute/brightbox/user_spec.rb
+- spec/fog/compute/brightbox/volume_spec.rb
+- spec/fog/compute/brightbox/zone_spec.rb
+- spec/fog/compute/brightbox_spec.rb
+- spec/fog/storage/brightbox_spec.rb
+- spec/model_setup.rb
+- spec/spec_helper.rb
+- spec/stock_storage_responses.rb
+- spec/supports_resource_locking.rb
+- tests/brightbox/compute/helper.rb
+- tests/brightbox/compute/schema.rb
+- tests/brightbox/compute_tests.rb
+- tests/brightbox/helper.rb
+- tests/brightbox/models/compute/account_tests.rb
+- tests/brightbox/models/compute/cloud_ip_tests.rb
+- tests/brightbox/models/compute/database_server_tests.rb
+- tests/brightbox/models/compute/database_snapshot_tests.rb
+- tests/brightbox/models/compute/database_type_tests.rb
+- tests/brightbox/models/compute/server_tests.rb
+- tests/brightbox/requests/compute/account_tests.rb
+- tests/brightbox/requests/compute/api_client_tests.rb
+- tests/brightbox/requests/compute/application_test.rb
+- tests/brightbox/requests/compute/cloud_ip_tests.rb
+- tests/brightbox/requests/compute/collaboration_tests.rb
+- tests/brightbox/requests/compute/database_server_tests.rb
+- tests/brightbox/requests/compute/database_snapsnot_tests.rb
+- tests/brightbox/requests/compute/database_type_tests.rb
+- tests/brightbox/requests/compute/firewall_policy_tests.rb
+- tests/brightbox/requests/compute/firewall_rule_tests.rb
+- tests/brightbox/requests/compute/helper.rb
+- tests/brightbox/requests/compute/image_tests.rb
+- tests/brightbox/requests/compute/interface_tests.rb
+- tests/brightbox/requests/compute/load_balancer_tests.rb
+- tests/brightbox/requests/compute/server_group_tests.rb
+- tests/brightbox/requests/compute/server_tests.rb
+- tests/brightbox/requests/compute/server_type_tests.rb
+- tests/brightbox/requests/compute/user_collaboration_tests.rb
+- tests/brightbox/requests/compute/user_tests.rb
+- tests/brightbox/requests/compute/volume_tests.rb
+- tests/brightbox/requests/compute/zone_tests.rb
+- tests/helper.rb
+- tests/helpers/collection_helper.rb
+- tests/helpers/compute/flavors_helper.rb
+- tests/helpers/compute/server_helper.rb
+- tests/helpers/compute/servers_helper.rb
+- tests/helpers/formats_helper.rb
+- tests/helpers/formats_helper_tests.rb
+- tests/helpers/mock_helper.rb
+- tests/helpers/model_helper.rb
+- tests/helpers/responds_to_helper.rb
+- tests/helpers/schema_validator_tests.rb
+- tests/helpers/succeeds_helper.rb
+homepage: https://github.com/fog/fog-brightbox
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '2.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.19
+signing_key:
+specification_version: 4
+summary: This library can be used as a module for `fog` or as standalone provider
+  to use the Brightbox Cloud in applications
+test_files:
+- spec/fog/brightbox/compute/config_spec.rb
+- spec/fog/brightbox/compute/credentials_spec.rb
+- spec/fog/brightbox/compute/get_access_token_spec.rb
+- spec/fog/brightbox/compute/two_factor_spec.rb
+- spec/fog/brightbox/compute/wrapped_request_spec.rb
+- spec/fog/brightbox/config_spec.rb
+- spec/fog/brightbox/link_helper_spec.rb
+- spec/fog/brightbox/oauth2/client_credentials_strategy_spec.rb
+- spec/fog/brightbox/oauth2/credential_set_spec.rb
+- spec/fog/brightbox/oauth2/grant_type_strategy_spec.rb
+- spec/fog/brightbox/oauth2/refresh_token_strategy_spec.rb
+- spec/fog/brightbox/oauth2/user_credentials_strategy_spec.rb
+- spec/fog/brightbox/storage/authentication_request_spec.rb
+- spec/fog/brightbox/storage/config_spec.rb
+- spec/fog/brightbox/storage/connection_errors_spec.rb
+- spec/fog/brightbox/storage/connection_spec.rb
+- spec/fog/brightbox/storage/directory_spec.rb
+- spec/fog/brightbox/storage/escape_spec.rb
+- spec/fog/brightbox/storage/files_spec.rb
+- spec/fog/brightbox/storage_spec.rb
+- spec/fog/compute/brightbox/account_spec.rb
+- spec/fog/compute/brightbox/api_client_spec.rb
+- spec/fog/compute/brightbox/application_spec.rb
+- spec/fog/compute/brightbox/cloud_ip_spec.rb
+- spec/fog/compute/brightbox/collaboration_spec.rb
+- spec/fog/compute/brightbox/database_server_spec.rb
+- spec/fog/compute/brightbox/database_snapshot_spec.rb
+- spec/fog/compute/brightbox/database_type_spec.rb
+- spec/fog/compute/brightbox/event_spec.rb
+- spec/fog/compute/brightbox/firewall_policy_spec.rb
+- spec/fog/compute/brightbox/flavor_spec.rb
+- spec/fog/compute/brightbox/image_selector_spec.rb
+- spec/fog/compute/brightbox/image_spec.rb
+- spec/fog/compute/brightbox/load_balancer_spec.rb
+- spec/fog/compute/brightbox/server_group_spec.rb
+- spec/fog/compute/brightbox/server_spec.rb
+- spec/fog/compute/brightbox/user_collaboration_spec.rb
+- spec/fog/compute/brightbox/user_spec.rb
+- spec/fog/compute/brightbox/volume_spec.rb
+- spec/fog/compute/brightbox/zone_spec.rb
+- spec/fog/compute/brightbox_spec.rb
+- spec/fog/storage/brightbox_spec.rb
+- spec/model_setup.rb
+- spec/spec_helper.rb
+- spec/stock_storage_responses.rb
+- spec/supports_resource_locking.rb

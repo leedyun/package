@@ -1,0 +1,42 @@
+- commits = Hash[(0..23).to_a.zip([0]*24)].merge(Hash[stats.hour_stats.map { |month,s| [month,s.commits] }])
+
+- block(:activity_per_hour) do
+  #chart_activity_per_hour{:style => "height: 500px"}
+
+  %div.panel.panel-default
+    %div.panel-heading{"data-toggle" => "collapse", "data-target" => "#activity_per_hour_box"} Table
+    %div.panel-body.collapse#activity_per_hour_box
+      %table.table.table-striped.table-hover#activity_per_hour_table
+        %thead
+          %tr
+            %th Hour
+            %th Commits
+            %th Files added
+            %th Files deleted
+            %th Lines added
+            %th Lines deleted
+        %tbody
+          - stats.hour_stats.each do |hour, commits|
+            %tr
+              %td&= hour
+              %td&= commits.commits
+              %td&= commits.files_added
+              %td&= commits.files_deleted
+              %td&= commits.lines_added
+              %td&= commits.lines_deleted
+
+  %script
+    var chart_activity_per_hour           = new Object();
+    chart_activity_per_hour.label         = '#{label(:activity_per_hour)}';
+    chart_activity_per_hour.label_y_axis  = "Hour";
+    chart_activity_per_hour.label_x_axis  = "Number of commits";
+    chart_activity_per_hour.target        = '#chart_activity_per_hour';
+    chart_activity_per_hour.categories    = #{(0..23).map{|v| v.to_s+'h'}};
+    chart_activity_per_hour.series        = [{"name":"Commits","data":#{commits.values}}];
+
+    $(document).ready(function() {
+    createBarChart(chart_activity_per_hour);
+    $('#activity_per_hour_table').DataTable({
+    "order": [[ 0, "asc" ]]
+    });
+    });

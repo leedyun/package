@@ -1,0 +1,175 @@
+--- !ruby/object:Gem::Specification
+name: adamantium
+version: !ruby/object:Gem::Version
+  version: 0.2.0
+platform: ruby
+authors:
+- Dan Kubb
+- Markus Schirp
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-01-21 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ice_nine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.11.0
+- !ruby/object:Gem::Dependency
+  name: memoizable
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 0.4.0
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: 1.5.2
+description: Immutable extensions to objects
+email:
+- dan.kubb@gmail.com
+- mbj@seonic.net
+executables: []
+extensions: []
+extra_rdoc_files:
+- LICENSE
+- README.md
+- CONTRIBUTING.md
+- TODO
+files:
+- .gitignore
+- .rspec
+- .rubocop.yml
+- .ruby-gemset
+- .travis.yml
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.devtools
+- Guardfile
+- LICENSE
+- README.md
+- Rakefile
+- TODO
+- adamantium.gemspec
+- config/devtools.yml
+- config/flay.yml
+- config/flog.yml
+- config/heckle.yml
+- config/mutant.yml
+- config/reek.yml
+- config/roodi.yml
+- config/rubocop.yml
+- config/yardstick.yml
+- lib/adamantium.rb
+- lib/adamantium/class_methods.rb
+- lib/adamantium/freezer.rb
+- lib/adamantium/module_methods.rb
+- lib/adamantium/mutable.rb
+- lib/adamantium/version.rb
+- spec/integration/adamantium_spec.rb
+- spec/rcov.opts
+- spec/spec_helper.rb
+- spec/support/config_alias.rb
+- spec/unit/adamantium/class_methods/new_spec.rb
+- spec/unit/adamantium/dup_spec.rb
+- spec/unit/adamantium/fixtures/classes.rb
+- spec/unit/adamantium/flat/class_methods/included_spec.rb
+- spec/unit/adamantium/flat/freezer_spec.rb
+- spec/unit/adamantium/freeze_spec.rb
+- spec/unit/adamantium/freezer/class_methods/get_spec.rb
+- spec/unit/adamantium/freezer/class_methods/parse_spec.rb
+- spec/unit/adamantium/freezer/deep/class_methods/call_spec.rb
+- spec/unit/adamantium/freezer/deep/class_methods/freeze_spec.rb
+- spec/unit/adamantium/freezer/flat/class_methods/call_spec.rb
+- spec/unit/adamantium/freezer/flat/class_methods/freeze_spec.rb
+- spec/unit/adamantium/memoize_spec.rb
+- spec/unit/adamantium/module_methods/freezer_spec.rb
+- spec/unit/adamantium/module_methods/included_spec.rb
+- spec/unit/adamantium/module_methods/memoize_spec.rb
+- spec/unit/adamantium/module_methods/memoized_predicate_spec.rb
+- spec/unit/adamantium/mutable/freeze_spec.rb
+- spec/unit/adamantium/mutable/frozen_predicate_spec.rb
+- spec/unit/adamantium/transform_spec.rb
+- spec/unit/adamantium/transform_unless_spec.rb
+homepage: https://github.com/dkubb/adamantium
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.1.11
+signing_key: 
+specification_version: 4
+summary: Immutable extensions to objects
+test_files:
+- spec/integration/adamantium_spec.rb
+- spec/unit/adamantium/class_methods/new_spec.rb
+- spec/unit/adamantium/dup_spec.rb
+- spec/unit/adamantium/fixtures/classes.rb
+- spec/unit/adamantium/flat/class_methods/included_spec.rb
+- spec/unit/adamantium/flat/freezer_spec.rb
+- spec/unit/adamantium/freeze_spec.rb
+- spec/unit/adamantium/freezer/class_methods/get_spec.rb
+- spec/unit/adamantium/freezer/class_methods/parse_spec.rb
+- spec/unit/adamantium/freezer/deep/class_methods/call_spec.rb
+- spec/unit/adamantium/freezer/deep/class_methods/freeze_spec.rb
+- spec/unit/adamantium/freezer/flat/class_methods/call_spec.rb
+- spec/unit/adamantium/freezer/flat/class_methods/freeze_spec.rb
+- spec/unit/adamantium/memoize_spec.rb
+- spec/unit/adamantium/module_methods/freezer_spec.rb
+- spec/unit/adamantium/module_methods/included_spec.rb
+- spec/unit/adamantium/module_methods/memoize_spec.rb
+- spec/unit/adamantium/module_methods/memoized_predicate_spec.rb
+- spec/unit/adamantium/mutable/freeze_spec.rb
+- spec/unit/adamantium/mutable/frozen_predicate_spec.rb
+- spec/unit/adamantium/transform_spec.rb
+- spec/unit/adamantium/transform_unless_spec.rb
+has_rdoc: 

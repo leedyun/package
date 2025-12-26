@@ -1,0 +1,17 @@
+default:
+  image: "ruby:${RUBY_VERSION}"
+
+stages:
+  - test
+
+.test-template: &test
+  before_script:
+    - bundle install
+  script:
+    - bundle exec rake spec
+
+rspec:
+  parallel:
+    matrix:
+      - RUBY_VERSION: [ "2.7", "3.0" ]
+  <<: *test

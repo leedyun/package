@@ -1,0 +1,276 @@
+--- !ruby/object:Gem::Specification
+name: super_diff
+version: !ruby/object:Gem::Version
+  version: 0.15.0
+platform: ruby
+authors:
+- Elliot Winkler
+- Splitwise, Inc.
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: attr_extras
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.2.4
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.2.4
+- !ruby/object:Gem::Dependency
+  name: diff-lcs
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: patience_diff
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: |
+  SuperDiff is a gem that hooks into RSpec to intelligently display the
+  differences between two data structures of any type.
+email:
+- oss-community@splitwise.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- README.md
+- lib/super_diff.rb
+- lib/super_diff/active_record.rb
+- lib/super_diff/active_record/differs.rb
+- lib/super_diff/active_record/differs/active_record_relation.rb
+- lib/super_diff/active_record/inspection_tree_builders.rb
+- lib/super_diff/active_record/inspection_tree_builders/active_record_model.rb
+- lib/super_diff/active_record/inspection_tree_builders/active_record_relation.rb
+- lib/super_diff/active_record/monkey_patches.rb
+- lib/super_diff/active_record/object_inspection.rb
+- lib/super_diff/active_record/operation_tree_builders.rb
+- lib/super_diff/active_record/operation_tree_builders/active_record_model.rb
+- lib/super_diff/active_record/operation_tree_builders/active_record_relation.rb
+- lib/super_diff/active_record/operation_tree_flatteners.rb
+- lib/super_diff/active_record/operation_tree_flatteners/active_record_relation.rb
+- lib/super_diff/active_record/operation_trees.rb
+- lib/super_diff/active_record/operation_trees/active_record_relation.rb
+- lib/super_diff/active_support.rb
+- lib/super_diff/active_support/differs.rb
+- lib/super_diff/active_support/differs/hash_with_indifferent_access.rb
+- lib/super_diff/active_support/inspection_tree_builders.rb
+- lib/super_diff/active_support/inspection_tree_builders/hash_with_indifferent_access.rb
+- lib/super_diff/active_support/inspection_tree_builders/ordered_options.rb
+- lib/super_diff/active_support/object_inspection.rb
+- lib/super_diff/active_support/operation_tree_builders.rb
+- lib/super_diff/active_support/operation_tree_builders/hash_with_indifferent_access.rb
+- lib/super_diff/active_support/operation_tree_flatteners.rb
+- lib/super_diff/active_support/operation_tree_flatteners/hash_with_indifferent_access.rb
+- lib/super_diff/active_support/operation_trees.rb
+- lib/super_diff/active_support/operation_trees/hash_with_indifferent_access.rb
+- lib/super_diff/basic.rb
+- lib/super_diff/basic/diff_formatters.rb
+- lib/super_diff/basic/diff_formatters/collection.rb
+- lib/super_diff/basic/diff_formatters/multiline_string.rb
+- lib/super_diff/basic/differs.rb
+- lib/super_diff/basic/differs/array.rb
+- lib/super_diff/basic/differs/custom_object.rb
+- lib/super_diff/basic/differs/date_like.rb
+- lib/super_diff/basic/differs/default_object.rb
+- lib/super_diff/basic/differs/hash.rb
+- lib/super_diff/basic/differs/multiline_string.rb
+- lib/super_diff/basic/differs/time_like.rb
+- lib/super_diff/basic/inspection_tree_builders.rb
+- lib/super_diff/basic/inspection_tree_builders/array.rb
+- lib/super_diff/basic/inspection_tree_builders/custom_object.rb
+- lib/super_diff/basic/inspection_tree_builders/data_object.rb
+- lib/super_diff/basic/inspection_tree_builders/date_like.rb
+- lib/super_diff/basic/inspection_tree_builders/default_object.rb
+- lib/super_diff/basic/inspection_tree_builders/hash.rb
+- lib/super_diff/basic/inspection_tree_builders/primitive.rb
+- lib/super_diff/basic/inspection_tree_builders/range_object.rb
+- lib/super_diff/basic/inspection_tree_builders/time_like.rb
+- lib/super_diff/basic/operation_tree_builders.rb
+- lib/super_diff/basic/operation_tree_builders/array.rb
+- lib/super_diff/basic/operation_tree_builders/custom_object.rb
+- lib/super_diff/basic/operation_tree_builders/data_object.rb
+- lib/super_diff/basic/operation_tree_builders/date_like.rb
+- lib/super_diff/basic/operation_tree_builders/default_object.rb
+- lib/super_diff/basic/operation_tree_builders/hash.rb
+- lib/super_diff/basic/operation_tree_builders/multiline_string.rb
+- lib/super_diff/basic/operation_tree_builders/time_like.rb
+- lib/super_diff/basic/operation_tree_flatteners.rb
+- lib/super_diff/basic/operation_tree_flatteners/array.rb
+- lib/super_diff/basic/operation_tree_flatteners/collection.rb
+- lib/super_diff/basic/operation_tree_flatteners/custom_object.rb
+- lib/super_diff/basic/operation_tree_flatteners/default_object.rb
+- lib/super_diff/basic/operation_tree_flatteners/hash.rb
+- lib/super_diff/basic/operation_tree_flatteners/multiline_string.rb
+- lib/super_diff/basic/operation_trees.rb
+- lib/super_diff/basic/operation_trees/array.rb
+- lib/super_diff/basic/operation_trees/custom_object.rb
+- lib/super_diff/basic/operation_trees/default_object.rb
+- lib/super_diff/basic/operation_trees/hash.rb
+- lib/super_diff/basic/operation_trees/multiline_string.rb
+- lib/super_diff/core.rb
+- lib/super_diff/core/abstract_differ.rb
+- lib/super_diff/core/abstract_inspection_tree_builder.rb
+- lib/super_diff/core/abstract_operation_tree.rb
+- lib/super_diff/core/abstract_operation_tree_builder.rb
+- lib/super_diff/core/abstract_operation_tree_flattener.rb
+- lib/super_diff/core/binary_operation.rb
+- lib/super_diff/core/colorized_document_extensions.rb
+- lib/super_diff/core/configuration.rb
+- lib/super_diff/core/differ_dispatcher.rb
+- lib/super_diff/core/gem_version.rb
+- lib/super_diff/core/helpers.rb
+- lib/super_diff/core/implementation_checks.rb
+- lib/super_diff/core/inspection_tree.rb
+- lib/super_diff/core/inspection_tree_builder_dispatcher.rb
+- lib/super_diff/core/inspection_tree_nodes.rb
+- lib/super_diff/core/inspection_tree_nodes/as_lines_when_rendering_to_lines.rb
+- lib/super_diff/core/inspection_tree_nodes/as_prefix_when_rendering_to_lines.rb
+- lib/super_diff/core/inspection_tree_nodes/as_prelude_when_rendering_to_lines.rb
+- lib/super_diff/core/inspection_tree_nodes/as_single_line.rb
+- lib/super_diff/core/inspection_tree_nodes/base.rb
+- lib/super_diff/core/inspection_tree_nodes/inspection.rb
+- lib/super_diff/core/inspection_tree_nodes/nesting.rb
+- lib/super_diff/core/inspection_tree_nodes/only_when.rb
+- lib/super_diff/core/inspection_tree_nodes/text.rb
+- lib/super_diff/core/inspection_tree_nodes/when_empty.rb
+- lib/super_diff/core/inspection_tree_nodes/when_non_empty.rb
+- lib/super_diff/core/inspection_tree_nodes/when_rendering_to_lines.rb
+- lib/super_diff/core/inspection_tree_nodes/when_rendering_to_string.rb
+- lib/super_diff/core/line.rb
+- lib/super_diff/core/no_differ_available_error.rb
+- lib/super_diff/core/no_inspection_tree_builder_available_error.rb
+- lib/super_diff/core/no_operation_tree_available_error.rb
+- lib/super_diff/core/no_operation_tree_builder_available_error.rb
+- lib/super_diff/core/operation_tree_builder_dispatcher.rb
+- lib/super_diff/core/operation_tree_finder.rb
+- lib/super_diff/core/prefix_for_next_inspection_tree_node.rb
+- lib/super_diff/core/prelude_for_next_inspection_tree_node.rb
+- lib/super_diff/core/recursion_guard.rb
+- lib/super_diff/core/tiered_lines.rb
+- lib/super_diff/core/tiered_lines_elider.rb
+- lib/super_diff/core/tiered_lines_formatter.rb
+- lib/super_diff/core/unary_operation.rb
+- lib/super_diff/csi.rb
+- lib/super_diff/csi/bold_sequence.rb
+- lib/super_diff/csi/color.rb
+- lib/super_diff/csi/color_sequence_block.rb
+- lib/super_diff/csi/colorized_document.rb
+- lib/super_diff/csi/document.rb
+- lib/super_diff/csi/eight_bit_color.rb
+- lib/super_diff/csi/four_bit_color.rb
+- lib/super_diff/csi/reset_sequence.rb
+- lib/super_diff/csi/twenty_four_bit_color.rb
+- lib/super_diff/csi/uncolorized_document.rb
+- lib/super_diff/differs.rb
+- lib/super_diff/equality_matchers.rb
+- lib/super_diff/equality_matchers/array.rb
+- lib/super_diff/equality_matchers/base.rb
+- lib/super_diff/equality_matchers/default.rb
+- lib/super_diff/equality_matchers/defaults.rb
+- lib/super_diff/equality_matchers/hash.rb
+- lib/super_diff/equality_matchers/main.rb
+- lib/super_diff/equality_matchers/multiline_string.rb
+- lib/super_diff/equality_matchers/primitive.rb
+- lib/super_diff/equality_matchers/singleline_string.rb
+- lib/super_diff/errors.rb
+- lib/super_diff/object_inspection.rb
+- lib/super_diff/operation_tree_builders.rb
+- lib/super_diff/operation_tree_flatteners.rb
+- lib/super_diff/operation_trees.rb
+- lib/super_diff/operations.rb
+- lib/super_diff/rails.rb
+- lib/super_diff/rspec-rails.rb
+- lib/super_diff/rspec.rb
+- lib/super_diff/rspec/augmented_matcher.rb
+- lib/super_diff/rspec/differ.rb
+- lib/super_diff/rspec/differs.rb
+- lib/super_diff/rspec/differs/collection_containing_exactly.rb
+- lib/super_diff/rspec/differs/collection_including.rb
+- lib/super_diff/rspec/differs/hash_including.rb
+- lib/super_diff/rspec/differs/object_having_attributes.rb
+- lib/super_diff/rspec/inspection_tree_builders.rb
+- lib/super_diff/rspec/inspection_tree_builders/collection_containing_exactly.rb
+- lib/super_diff/rspec/inspection_tree_builders/collection_including.rb
+- lib/super_diff/rspec/inspection_tree_builders/double.rb
+- lib/super_diff/rspec/inspection_tree_builders/generic_describable_matcher.rb
+- lib/super_diff/rspec/inspection_tree_builders/hash_including.rb
+- lib/super_diff/rspec/inspection_tree_builders/instance_of.rb
+- lib/super_diff/rspec/inspection_tree_builders/kind_of.rb
+- lib/super_diff/rspec/inspection_tree_builders/object_having_attributes.rb
+- lib/super_diff/rspec/inspection_tree_builders/primitive.rb
+- lib/super_diff/rspec/inspection_tree_builders/value_within.rb
+- lib/super_diff/rspec/matcher_text_builders.rb
+- lib/super_diff/rspec/matcher_text_builders/base.rb
+- lib/super_diff/rspec/matcher_text_builders/be_predicate.rb
+- lib/super_diff/rspec/matcher_text_builders/contain_exactly.rb
+- lib/super_diff/rspec/matcher_text_builders/have_predicate.rb
+- lib/super_diff/rspec/matcher_text_builders/match.rb
+- lib/super_diff/rspec/matcher_text_builders/raise_error.rb
+- lib/super_diff/rspec/matcher_text_builders/respond_to.rb
+- lib/super_diff/rspec/matcher_text_template.rb
+- lib/super_diff/rspec/monkey_patches.rb
+- lib/super_diff/rspec/object_inspection.rb
+- lib/super_diff/rspec/operation_tree_builders.rb
+- lib/super_diff/rspec/operation_tree_builders/collection_containing_exactly.rb
+- lib/super_diff/rspec/operation_tree_builders/collection_including.rb
+- lib/super_diff/rspec/operation_tree_builders/hash_including.rb
+- lib/super_diff/rspec/operation_tree_builders/object_having_attributes.rb
+- lib/super_diff/version.rb
+- super_diff.gemspec
+homepage: https://github.com/splitwise/super_diff
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/splitwise/super_diff/issues
+  changelog_uri: https://github.com/splitwise/super_diff/blob/main/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+  source_code_uri: https://github.com/splitwise/super_diff
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '3.0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.20
+signing_key:
+specification_version: 4
+summary: A better way to view differences between complex data structures in RSpec.
+test_files: []

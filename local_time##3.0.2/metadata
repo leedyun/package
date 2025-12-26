@@ -1,0 +1,122 @@
+--- !ruby/object:Gem::Specification
+name: local_time
+version: !ruby/object:Gem::Version
+  version: 3.0.2
+platform: ruby
+authors:
+- Javan Makhmali
+- Sam Stephenson
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2024-01-15 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '13.0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '7.0'
+- !ruby/object:Gem::Dependency
+  name: rails-dom-testing
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+description:
+email: javan@basecamp.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- README.md
+- app/assets/javascripts/local-time.es2017-esm.js
+- app/assets/javascripts/local-time.es2017-umd.js
+- app/helpers/local_time_helper.rb
+- lib/local_time.rb
+- lib/local_time/version.rb
+- test/helpers/local_time_helper_test.rb
+- test/javascripts/builds/index.js
+- test/javascripts/fixtures/index.html
+- test/javascripts/fixtures/time_zone_check.html
+- test/javascripts/server.mjs
+- test/javascripts/src/format24_test.coffee
+- test/javascripts/src/i18n_test.coffee
+- test/javascripts/src/index.coffee
+- test/javascripts/src/local_time_test.coffee
+- test/javascripts/src/relative_date_test.coffee
+- test/javascripts/src/strftime_test.coffee
+- test/javascripts/src/test_helpers.coffee
+- test/javascripts/src/time_ago_test.coffee
+- test/javascripts/vendor/moment.js
+- test/javascripts/vendor/sinon.js
+homepage: https://github.com/basecamp/local_time
+licenses:
+- MIT
+metadata: {}
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.21
+signing_key:
+specification_version: 4
+summary: Rails engine for cache-friendly, client-side local time
+test_files:
+- test/javascripts/builds/index.js
+- test/javascripts/server.mjs
+- test/javascripts/fixtures/index.html
+- test/javascripts/fixtures/time_zone_check.html
+- test/javascripts/vendor/moment.js
+- test/javascripts/vendor/sinon.js
+- test/javascripts/src/strftime_test.coffee
+- test/javascripts/src/index.coffee
+- test/javascripts/src/i18n_test.coffee
+- test/javascripts/src/local_time_test.coffee
+- test/javascripts/src/time_ago_test.coffee
+- test/javascripts/src/format24_test.coffee
+- test/javascripts/src/relative_date_test.coffee
+- test/javascripts/src/test_helpers.coffee
+- test/helpers/local_time_helper_test.rb

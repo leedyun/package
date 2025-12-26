@@ -1,0 +1,276 @@
+--- !ruby/object:Gem::Specification
+name: parser
+version: !ruby/object:Gem::Version
+  version: 3.3.7.0
+platform: ruby
+authors:
+- whitequark
+autorequire:
+bindir: bin
+cert_chain: []
+date: 2025-01-16 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: ast
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.4.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.4.1
+- !ruby/object:Gem::Dependency
+  name: racc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.15'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.15'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: 3.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 13.0.1
+- !ruby/object:Gem::Dependency
+  name: cliver
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.3.2
+- !ruby/object:Gem::Dependency
+  name: yard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: kramdown
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '5.10'
+- !ruby/object:Gem::Dependency
+  name: simplecov
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.15.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.15.1
+- !ruby/object:Gem::Dependency
+  name: gauntlet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Ruby parser written in pure Ruby.
+email:
+- whitequark@whitequark.org
+executables:
+- ruby-parse
+- ruby-rewrite
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- bin/ruby-parse
+- bin/ruby-rewrite
+- lib/gauntlet_parser.rb
+- lib/parser.rb
+- lib/parser/all.rb
+- lib/parser/ast/node.rb
+- lib/parser/ast/processor.rb
+- lib/parser/base.rb
+- lib/parser/builders/default.rb
+- lib/parser/clobbering_error.rb
+- lib/parser/color.rb
+- lib/parser/context.rb
+- lib/parser/current.rb
+- lib/parser/current_arg_stack.rb
+- lib/parser/deprecation.rb
+- lib/parser/diagnostic.rb
+- lib/parser/diagnostic/engine.rb
+- lib/parser/lexer-F0.rb
+- lib/parser/lexer-F1.rb
+- lib/parser/lexer-strings.rb
+- lib/parser/lexer/dedenter.rb
+- lib/parser/lexer/explanation.rb
+- lib/parser/lexer/literal.rb
+- lib/parser/lexer/stack_state.rb
+- lib/parser/macruby.rb
+- lib/parser/max_numparam_stack.rb
+- lib/parser/messages.rb
+- lib/parser/meta.rb
+- lib/parser/rewriter.rb
+- lib/parser/ruby18.rb
+- lib/parser/ruby19.rb
+- lib/parser/ruby20.rb
+- lib/parser/ruby21.rb
+- lib/parser/ruby22.rb
+- lib/parser/ruby23.rb
+- lib/parser/ruby24.rb
+- lib/parser/ruby25.rb
+- lib/parser/ruby26.rb
+- lib/parser/ruby27.rb
+- lib/parser/ruby28.rb
+- lib/parser/ruby30.rb
+- lib/parser/ruby31.rb
+- lib/parser/ruby32.rb
+- lib/parser/ruby33.rb
+- lib/parser/ruby34.rb
+- lib/parser/rubymotion.rb
+- lib/parser/runner.rb
+- lib/parser/runner/ruby_parse.rb
+- lib/parser/runner/ruby_rewrite.rb
+- lib/parser/source/buffer.rb
+- lib/parser/source/comment.rb
+- lib/parser/source/comment/associator.rb
+- lib/parser/source/map.rb
+- lib/parser/source/map/collection.rb
+- lib/parser/source/map/condition.rb
+- lib/parser/source/map/constant.rb
+- lib/parser/source/map/definition.rb
+- lib/parser/source/map/for.rb
+- lib/parser/source/map/heredoc.rb
+- lib/parser/source/map/index.rb
+- lib/parser/source/map/keyword.rb
+- lib/parser/source/map/method_definition.rb
+- lib/parser/source/map/objc_kwarg.rb
+- lib/parser/source/map/operator.rb
+- lib/parser/source/map/rescue_body.rb
+- lib/parser/source/map/send.rb
+- lib/parser/source/map/ternary.rb
+- lib/parser/source/map/variable.rb
+- lib/parser/source/range.rb
+- lib/parser/source/rewriter.rb
+- lib/parser/source/rewriter/action.rb
+- lib/parser/source/tree_rewriter.rb
+- lib/parser/source/tree_rewriter/action.rb
+- lib/parser/static_environment.rb
+- lib/parser/syntax_error.rb
+- lib/parser/tree_rewriter.rb
+- lib/parser/unknown_encoding_in_magic_comment_error.rb
+- lib/parser/variables_stack.rb
+- lib/parser/version.rb
+- parser.gemspec
+homepage: https://github.com/whitequark/parser
+licenses:
+- MIT
+metadata:
+  bug_tracker_uri: https://github.com/whitequark/parser/issues
+  changelog_uri: https://github.com/whitequark/parser/blob/v3.3.7.0/CHANGELOG.md
+  documentation_uri: https://www.rubydoc.info/gems/parser/3.3.7.0
+  source_code_uri: https://github.com/whitequark/parser/tree/v3.3.7.0
+post_install_message:
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.3
+signing_key:
+specification_version: 4
+summary: A Ruby parser written in pure Ruby.
+test_files: []

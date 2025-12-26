@@ -1,0 +1,631 @@
+--- !ruby/object:Gem::Specification
+name: activeadmin_addons
+version: !ruby/object:Gem::Version
+  version: 1.10.2
+platform: ruby
+authors:
+- Platanus
+- Julio García
+- Emilio Blanco
+- Leandro Segovia
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2024-12-06 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: active_material
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.5'
+- !ruby/object:Gem::Dependency
+  name: railties
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: redcarpet
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: require_all
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sassc
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: sassc-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: xdan-datetimepicker-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.5.1
+- !ruby/object:Gem::Dependency
+  name: aasm
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: capybara
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: database_cleaner
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: enumerize
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: factory_bot_rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: image_processing
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: matrix
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: paperclip
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: pry-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: puma
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.4.4
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '6.1'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 6.1.4.4
+- !ruby/object:Gem::Dependency
+  name: rexml
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec-rails
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec_junit_formatter
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.65.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 0.65.0
+- !ruby/object:Gem::Dependency
+  name: selenium-webdriver
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.10'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '4.10'
+- !ruby/object:Gem::Dependency
+  name: shoulda-matchers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: shrine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: sqlite3
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Set of addons to help with the activeadmin ui
+email:
+- rubygems@platan.us
+- julioggonz@gmail.com
+- emilioeduardob@gmail.com
+- ldlsegovia@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- MIT-LICENSE
+- Rakefile
+- app/assets/images/fileicons/file_extension_3gp.png
+- app/assets/images/fileicons/file_extension_7z.png
+- app/assets/images/fileicons/file_extension_ace.png
+- app/assets/images/fileicons/file_extension_ai.png
+- app/assets/images/fileicons/file_extension_aif.png
+- app/assets/images/fileicons/file_extension_aiff.png
+- app/assets/images/fileicons/file_extension_amr.png
+- app/assets/images/fileicons/file_extension_asf.png
+- app/assets/images/fileicons/file_extension_asx.png
+- app/assets/images/fileicons/file_extension_bat.png
+- app/assets/images/fileicons/file_extension_bin.png
+- app/assets/images/fileicons/file_extension_bmp.png
+- app/assets/images/fileicons/file_extension_bup.png
+- app/assets/images/fileicons/file_extension_cab.png
+- app/assets/images/fileicons/file_extension_cbr.png
+- app/assets/images/fileicons/file_extension_cda.png
+- app/assets/images/fileicons/file_extension_cdl.png
+- app/assets/images/fileicons/file_extension_cdr.png
+- app/assets/images/fileicons/file_extension_chm.png
+- app/assets/images/fileicons/file_extension_dat.png
+- app/assets/images/fileicons/file_extension_divx.png
+- app/assets/images/fileicons/file_extension_dll.png
+- app/assets/images/fileicons/file_extension_dmg.png
+- app/assets/images/fileicons/file_extension_doc.png
+- app/assets/images/fileicons/file_extension_docx.png
+- app/assets/images/fileicons/file_extension_dss.png
+- app/assets/images/fileicons/file_extension_dvf.png
+- app/assets/images/fileicons/file_extension_dwg.png
+- app/assets/images/fileicons/file_extension_eml.png
+- app/assets/images/fileicons/file_extension_eps.png
+- app/assets/images/fileicons/file_extension_exe.png
+- app/assets/images/fileicons/file_extension_fla.png
+- app/assets/images/fileicons/file_extension_flv.png
+- app/assets/images/fileicons/file_extension_gif.png
+- app/assets/images/fileicons/file_extension_gz.png
+- app/assets/images/fileicons/file_extension_hqx.png
+- app/assets/images/fileicons/file_extension_htm.png
+- app/assets/images/fileicons/file_extension_html.png
+- app/assets/images/fileicons/file_extension_ifo.png
+- app/assets/images/fileicons/file_extension_indd.png
+- app/assets/images/fileicons/file_extension_iso.png
+- app/assets/images/fileicons/file_extension_jar.png
+- app/assets/images/fileicons/file_extension_jpeg.png
+- app/assets/images/fileicons/file_extension_jpg.png
+- app/assets/images/fileicons/file_extension_lnk.png
+- app/assets/images/fileicons/file_extension_log.png
+- app/assets/images/fileicons/file_extension_m4a.png
+- app/assets/images/fileicons/file_extension_m4b.png
+- app/assets/images/fileicons/file_extension_m4p.png
+- app/assets/images/fileicons/file_extension_m4v.png
+- app/assets/images/fileicons/file_extension_mcd.png
+- app/assets/images/fileicons/file_extension_mdb.png
+- app/assets/images/fileicons/file_extension_mid.png
+- app/assets/images/fileicons/file_extension_mov.png
+- app/assets/images/fileicons/file_extension_mp2.png
+- app/assets/images/fileicons/file_extension_mp3.png
+- app/assets/images/fileicons/file_extension_mp4.png
+- app/assets/images/fileicons/file_extension_mpeg.png
+- app/assets/images/fileicons/file_extension_mpg.png
+- app/assets/images/fileicons/file_extension_msi.png
+- app/assets/images/fileicons/file_extension_mswmm.png
+- app/assets/images/fileicons/file_extension_ogg.png
+- app/assets/images/fileicons/file_extension_pdf.png
+- app/assets/images/fileicons/file_extension_png.png
+- app/assets/images/fileicons/file_extension_pps.png
+- app/assets/images/fileicons/file_extension_ppt.png
+- app/assets/images/fileicons/file_extension_pptx.png
+- app/assets/images/fileicons/file_extension_ps.png
+- app/assets/images/fileicons/file_extension_psd.png
+- app/assets/images/fileicons/file_extension_pst.png
+- app/assets/images/fileicons/file_extension_ptb.png
+- app/assets/images/fileicons/file_extension_pub.png
+- app/assets/images/fileicons/file_extension_qbb.png
+- app/assets/images/fileicons/file_extension_qbw.png
+- app/assets/images/fileicons/file_extension_qxd.png
+- app/assets/images/fileicons/file_extension_ram.png
+- app/assets/images/fileicons/file_extension_rar.png
+- app/assets/images/fileicons/file_extension_rm.png
+- app/assets/images/fileicons/file_extension_rmvb.png
+- app/assets/images/fileicons/file_extension_rtf.png
+- app/assets/images/fileicons/file_extension_sea.png
+- app/assets/images/fileicons/file_extension_ses.png
+- app/assets/images/fileicons/file_extension_sit.png
+- app/assets/images/fileicons/file_extension_sitx.png
+- app/assets/images/fileicons/file_extension_ss.png
+- app/assets/images/fileicons/file_extension_swf.png
+- app/assets/images/fileicons/file_extension_tgz.png
+- app/assets/images/fileicons/file_extension_thm.png
+- app/assets/images/fileicons/file_extension_tif.png
+- app/assets/images/fileicons/file_extension_tmp.png
+- app/assets/images/fileicons/file_extension_torrent.png
+- app/assets/images/fileicons/file_extension_ttf.png
+- app/assets/images/fileicons/file_extension_txt.png
+- app/assets/images/fileicons/file_extension_unknown.png
+- app/assets/images/fileicons/file_extension_vcd.png
+- app/assets/images/fileicons/file_extension_vob.png
+- app/assets/images/fileicons/file_extension_wav.png
+- app/assets/images/fileicons/file_extension_wma.png
+- app/assets/images/fileicons/file_extension_wmv.png
+- app/assets/images/fileicons/file_extension_wps.png
+- app/assets/images/fileicons/file_extension_xls.png
+- app/assets/images/fileicons/file_extension_xlsx.png
+- app/assets/images/fileicons/file_extension_xpi.png
+- app/assets/images/fileicons/file_extension_zip.png
+- app/assets/images/material/icons/keyboard_arrow_down.svg
+- app/assets/images/material/icons/keyboard_arrow_left.svg
+- app/assets/images/material/icons/keyboard_arrow_right.svg
+- app/assets/images/material/icons/keyboard_arrow_up.svg
+- app/assets/images/material/icons/today.svg
+- app/assets/javascripts/activeadmin_addons/all.js
+- app/assets/stylesheets/activeadmin_addons/addons/interactive_select_tag.scss
+- app/assets/stylesheets/activeadmin_addons/addons/material-datepicker.scss
+- app/assets/stylesheets/activeadmin_addons/addons/material-toggle_bool.scss
+- app/assets/stylesheets/activeadmin_addons/addons/toggle_bool.scss
+- app/assets/stylesheets/activeadmin_addons/all.scss
+- app/assets/stylesheets/activeadmin_addons/imports/jquery-datepicker.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/color-picker.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/date-time-picker-filter.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/date-time-picker.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/numeric-range-filter.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/select2.scss
+- app/assets/stylesheets/activeadmin_addons/inputs/selected-list.scss
+- app/assets/stylesheets/activeadmin_addons/material.scss
+- app/assets/stylesheets/activeadmin_addons/vendor/palette-color-picker.scss
+- app/inputs/active_admin/inputs/select_input.rb
+- app/inputs/ajax_filter_input.rb
+- app/inputs/color_picker_input.rb
+- app/inputs/date_range_input.rb
+- app/inputs/date_time_picker_filter_input.rb
+- app/inputs/date_time_picker_input.rb
+- app/inputs/nested_level_input.rb
+- app/inputs/nested_select_input.rb
+- app/inputs/numeric_range_filter_input.rb
+- app/inputs/range_select_input.rb
+- app/inputs/search_select_filter_input.rb
+- app/inputs/search_select_input.rb
+- app/inputs/selected_list_input.rb
+- app/inputs/tags_input.rb
+- app/javascript/activeadmin_addons/addons/interactive_select_tag.js
+- app/javascript/activeadmin_addons/addons/toggle_bool.js
+- app/javascript/activeadmin_addons/all.js
+- app/javascript/activeadmin_addons/config.js
+- app/javascript/activeadmin_addons/inputs/color-picker.js
+- app/javascript/activeadmin_addons/inputs/date-time-picker.js
+- app/javascript/activeadmin_addons/inputs/nested-select.js
+- app/javascript/activeadmin_addons/inputs/search-select.js
+- app/javascript/activeadmin_addons/inputs/select2.js
+- app/javascript/activeadmin_addons/inputs/selected-list.js
+- app/javascript/activeadmin_addons/inputs/tags.js
+- app/javascript/activeadmin_addons/vendor/jquery_palette_color_picker/palette-color-picker.js
+- lib/activeadmin_addons.rb
+- lib/activeadmin_addons/active_admin_config.rb
+- lib/activeadmin_addons/addons/attachment_builder.rb
+- lib/activeadmin_addons/addons/bool_builder.rb
+- lib/activeadmin_addons/addons/image_builder.rb
+- lib/activeadmin_addons/addons/list_builder.rb
+- lib/activeadmin_addons/addons/markdown_builder.rb
+- lib/activeadmin_addons/addons/number_builder.rb
+- lib/activeadmin_addons/addons/state_builder.rb
+- lib/activeadmin_addons/addons/tag_builder.rb
+- lib/activeadmin_addons/addons/toggle_bool_builder.rb
+- lib/activeadmin_addons/engine.rb
+- lib/activeadmin_addons/support/custom_builder.rb
+- lib/activeadmin_addons/support/enum_utils.rb
+- lib/activeadmin_addons/support/enumerize_formtastic_support.rb
+- lib/activeadmin_addons/support/input_base.rb
+- lib/activeadmin_addons/support/input_helpers/filter_input.rb
+- lib/activeadmin_addons/support/input_helpers/filter_input_methods.rb
+- lib/activeadmin_addons/support/input_helpers/input_html_helpers.rb
+- lib/activeadmin_addons/support/input_helpers/input_methods.rb
+- lib/activeadmin_addons/support/input_helpers/input_options_handler.rb
+- lib/activeadmin_addons/support/input_helpers/select_helpers.rb
+- lib/activeadmin_addons/support/select_filter_input_extension.rb
+- lib/activeadmin_addons/support/set_datepicker.rb
+- lib/activeadmin_addons/version.rb
+- lib/generators/activeadmin_addons/assets/assets_generator.rb
+- lib/generators/activeadmin_addons/install/install_generator.rb
+- lib/generators/activeadmin_addons/install/templates/initializer.rb
+- lib/generators/activeadmin_addons/webpacker/webpacker_generator.rb
+- lib/tasks/activeadmin_addons_tasks.rake
+- vendor/assets/select2/select2.css
+- vendor/assets/select2/select2.full.js
+homepage: https://github.com/platanus/activeadmin_addons
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.5.22
+signing_key: 
+specification_version: 4
+summary: Set of addons to help with the activeadmin ui
+test_files: []

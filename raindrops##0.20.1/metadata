@@ -1,0 +1,193 @@
+--- !ruby/object:Gem::Specification
+name: raindrops
+version: !ruby/object:Gem::Version
+  version: 0.20.1
+platform: ruby
+authors:
+- raindrops hackers
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2023-02-25 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: aggregate
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '0.2'
+- !ruby/object:Gem::Dependency
+  name: test-unit
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+- !ruby/object:Gem::Dependency
+  name: posix_mq
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.0'
+- !ruby/object:Gem::Dependency
+  name: rack
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '1.2'
+    - - "<"
+      - !ruby/object:Gem::Version
+        version: '3.0'
+description: |-
+  raindrops is a real-time stats toolkit to show statistics for Rack HTTP
+  servers.  It is designed for preforking servers such as unicorn, but
+  should support any Rack HTTP server on platforms supporting POSIX shared
+  memory.  It may also be used as a generic scoreboard for sharing atomic
+  counters across multiple processes.
+email: raindrops-public@yhbt.net
+executables: []
+extensions:
+- ext/raindrops/extconf.rb
+extra_rdoc_files:
+- README
+- LICENSE
+- NEWS
+- ext/raindrops/raindrops.c
+- ext/raindrops/linux_inet_diag.c
+- ext/raindrops/tcp_info.c
+files:
+- ".document"
+- ".gitattributes"
+- ".gitignore"
+- ".manifest"
+- ".olddoc.yml"
+- COPYING
+- GIT-VERSION-FILE
+- GIT-VERSION-GEN
+- GNUmakefile
+- LATEST
+- LICENSE
+- NEWS
+- README
+- TODO
+- archive/.gitignore
+- archive/slrnpull.conf
+- examples/linux-listener-stats.rb
+- examples/middleware.ru
+- examples/watcher.ru
+- examples/watcher_demo.ru
+- examples/yahns.conf.rb
+- examples/zbatery.conf.rb
+- ext/raindrops/extconf.rb
+- ext/raindrops/linux_inet_diag.c
+- ext/raindrops/my_fileno.h
+- ext/raindrops/raindrops.c
+- ext/raindrops/raindrops_atomic.h
+- ext/raindrops/tcp_info.c
+- lib/raindrops.rb
+- lib/raindrops/aggregate.rb
+- lib/raindrops/aggregate/last_data_recv.rb
+- lib/raindrops/aggregate/pmq.rb
+- lib/raindrops/last_data_recv.rb
+- lib/raindrops/linux.rb
+- lib/raindrops/middleware.rb
+- lib/raindrops/middleware/proxy.rb
+- lib/raindrops/struct.rb
+- lib/raindrops/watcher.rb
+- pkg.mk
+- raindrops.gemspec
+- setup.rb
+- test/ipv6_enabled.rb
+- test/rack_unicorn.rb
+- test/test_aggregate_pmq.rb
+- test/test_inet_diag_socket.rb
+- test/test_last_data_recv_unicorn.rb
+- test/test_linux.rb
+- test/test_linux_all_tcp_listen_stats.rb
+- test/test_linux_all_tcp_listen_stats_leak.rb
+- test/test_linux_ipv6.rb
+- test/test_linux_middleware.rb
+- test/test_linux_reuseport_tcp_listen_stats.rb
+- test/test_middleware.rb
+- test/test_middleware_unicorn.rb
+- test/test_middleware_unicorn_ipv6.rb
+- test/test_raindrops.rb
+- test/test_raindrops_gc.rb
+- test/test_struct.rb
+- test/test_tcp_info.rb
+- test/test_watcher.rb
+homepage: https://yhbt.net/raindrops/
+licenses:
+- LGPL-2.1+
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.3
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.4.1
+signing_key: 
+specification_version: 4
+summary: real-time stats for preforking Rack servers
+test_files:
+- test/test_aggregate_pmq.rb
+- test/test_inet_diag_socket.rb
+- test/test_last_data_recv_unicorn.rb
+- test/test_linux.rb
+- test/test_linux_all_tcp_listen_stats.rb
+- test/test_linux_all_tcp_listen_stats_leak.rb
+- test/test_linux_ipv6.rb
+- test/test_linux_middleware.rb
+- test/test_linux_reuseport_tcp_listen_stats.rb
+- test/test_middleware.rb
+- test/test_middleware_unicorn.rb
+- test/test_middleware_unicorn_ipv6.rb
+- test/test_raindrops.rb
+- test/test_raindrops_gc.rb
+- test/test_struct.rb
+- test/test_tcp_info.rb
+- test/test_watcher.rb

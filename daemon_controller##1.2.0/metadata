@@ -1,0 +1,66 @@
+--- !ruby/object:Gem::Specification
+name: daemon_controller
+version: !ruby/object:Gem::Version
+  version: 1.2.0
+platform: ruby
+authors:
+- Hongli Lai
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-03-03 00:00:00.000000000 Z
+dependencies: []
+description: A library for robust daemon management.
+email: software-signing@phusion.nl
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.markdown
+- Rakefile
+- daemon_controller.gemspec
+- debian.template/changelog
+- debian.template/compat
+- debian.template/control.template
+- debian.template/copyright
+- debian.template/ruby-daemon-controller.install
+- debian.template/rules
+- debian.template/source/format
+- lib/daemon_controller.rb
+- lib/daemon_controller/lock_file.rb
+- lib/daemon_controller/packaging.rb
+- lib/daemon_controller/spawn.rb
+- lib/daemon_controller/version.rb
+- rpm/get_distro_id.py
+- rpm/rubygem-daemon_controller.spec.template
+- spec/daemon_controller_spec.rb
+- spec/echo_server.rb
+- spec/run_echo_server
+- spec/test_helper.rb
+- spec/unresponsive_daemon.rb
+homepage: https://github.com/FooBarWidget/daemon_controller
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.0
+signing_key: 
+specification_version: 4
+summary: A library for implementing daemon management capabilities
+test_files: []

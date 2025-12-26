@@ -1,0 +1,192 @@
+--- !ruby/object:Gem::Specification
+name: standard
+version: !ruby/object:Gem::Version
+  version: 1.44.0
+platform: ruby
+authors:
+- Justin Searls
+bindir: exe
+cert_chain: []
+date: 2025-01-14 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.70.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.70.0
+- !ruby/object:Gem::Dependency
+  name: lint_roller
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.0'
+- !ruby/object:Gem::Dependency
+  name: standard-custom
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.0.0
+- !ruby/object:Gem::Dependency
+  name: standard-performance
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+- !ruby/object:Gem::Dependency
+  name: language_server-protocol
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.17.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 3.17.0.2
+email:
+- searls@gmail.com
+executables:
+- standardrb
+extensions: []
+extra_rdoc_files: []
+files:
+- ".github/dependabot.yml"
+- ".github/workflows/test.yml"
+- ".github/workflows/update.yml"
+- ".gitignore"
+- ".standard.yml"
+- CHANGELOG.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+- Rakefile
+- bin/console
+- bin/rake
+- bin/run
+- bin/setup
+- config/base.yml
+- config/default.yml
+- config/ruby-1.8.yml
+- config/ruby-1.9.yml
+- config/ruby-2.0.yml
+- config/ruby-2.1.yml
+- config/ruby-2.2.yml
+- config/ruby-2.3.yml
+- config/ruby-2.4.yml
+- config/ruby-2.5.yml
+- config/ruby-2.6.yml
+- config/ruby-2.7.yml
+- config/ruby-3.0.yml
+- config/ruby-3.1.yml
+- config/ruby-3.2.yml
+- config/ruby-3.3.yml
+- docs/ARCHITECTURE.md
+- docs/RELEASE.md
+- docs/RUBY_VERSIONS.md
+- docs/UPGRADING.md
+- exe/standardrb
+- lib/ruby_lsp/standard/addon.rb
+- lib/ruby_lsp/standard/wraps_built_in_lsp_standardizer.rb
+- lib/standard.rb
+- lib/standard/base.rb
+- lib/standard/base/plugin.rb
+- lib/standard/builds_config.rb
+- lib/standard/cli.rb
+- lib/standard/creates_config_store.rb
+- lib/standard/creates_config_store/assigns_rubocop_yaml.rb
+- lib/standard/creates_config_store/configures_ignored_paths.rb
+- lib/standard/creates_config_store/merges_user_config_extensions.rb
+- lib/standard/creates_config_store/sets_target_ruby_version.rb
+- lib/standard/file_finder.rb
+- lib/standard/formatter.rb
+- lib/standard/loads_runner.rb
+- lib/standard/loads_yaml_config.rb
+- lib/standard/lsp/diagnostic.rb
+- lib/standard/lsp/kills_server.rb
+- lib/standard/lsp/logger.rb
+- lib/standard/lsp/routes.rb
+- lib/standard/lsp/server.rb
+- lib/standard/lsp/standardizer.rb
+- lib/standard/lsp/stdin_rubocop_runner.rb
+- lib/standard/merges_settings.rb
+- lib/standard/plugin.rb
+- lib/standard/plugin/combines_plugin_configs.rb
+- lib/standard/plugin/creates_runner_context.rb
+- lib/standard/plugin/determines_class_constant.rb
+- lib/standard/plugin/initializes_plugins.rb
+- lib/standard/plugin/merges_plugins_into_rubocop_config.rb
+- lib/standard/plugin/standardizes_configured_plugins.rb
+- lib/standard/railtie.rb
+- lib/standard/rake.rb
+- lib/standard/resolves_yaml_option.rb
+- lib/standard/rubocop/ext.rb
+- lib/standard/runners/genignore.rb
+- lib/standard/runners/help.rb
+- lib/standard/runners/lsp.rb
+- lib/standard/runners/rubocop.rb
+- lib/standard/runners/verbose_version.rb
+- lib/standard/runners/version.rb
+- lib/standard/version.rb
+- standard.gemspec
+homepage: https://github.com/standardrb/standard
+licenses: []
+metadata:
+  homepage_uri: https://github.com/standardrb/standard
+  source_code_uri: https://github.com/standardrb/standard
+  changelog_uri: https://github.com/standardrb/standard/blob/main/CHANGELOG.md
+  rubygems_mfa_required: 'true'
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 3.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubygems_version: 3.6.2
+specification_version: 4
+summary: Ruby Style Guide, with linter & automatic code fixer
+test_files: []
